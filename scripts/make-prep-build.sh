@@ -3,5 +3,5 @@
 set -e
 source build/envsetup.sh
 export OFFICIAL_BUILD=true
-lunch ${1}-ap1a-user
+lunch ${1}-ap2a-user
 m
