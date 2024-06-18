@@ -31,6 +31,29 @@ filters:
       - system_ext/priv-app/AccessibilityMenu/AccessibilityMenu.apk
       - system/bin/badblocks
       - product/app/PixelCameraServicesRedfin/PixelCameraServicesRedfin.apk
+      # dont build OMX codecs
+      # https://android-review.googlesource.com/c/platform/frameworks/av/+/2898992
+      - vendor/lib/libstagefright_soft_vpxdec.so
+      - vendor/lib/libstagefright_soft_mp3dec.so
+      - vendor/lib/libstagefright_soft_avcenc.so
+      - vendor/lib/libstagefright_soft_mpeg2dec.so
+      - vendor/lib/libstagefright_soft_mpeg4dec.so
+      - vendor/lib/libstagefright_soft_amrdec.so
+      - vendor/lib/libstagefright_soft_opusdec.so
+      - vendor/lib/libstagefright_soft_amrwbenc.so
+      - vendor/lib/libstagefright_soft_amrnbenc.so
+      - vendor/lib/libstagefright_soft_rawdec.so
+      - vendor/lib/libstagefright_soft_flacdec.so
+      - vendor/lib/libstagefright_soft_aacenc.so
+      - vendor/lib/libstagefright_soft_mpeg4enc.so
+      - vendor/lib/libstagefright_soft_flacenc.so
+      - vendor/lib/libstagefright_soft_vorbisdec.so
+      - vendor/lib/libstagefright_soft_avcdec.so
+      - vendor/lib/libstagefright_soft_aacdec.so
+      - vendor/lib/libstagefright_soft_g711dec.so
+      - vendor/lib/libstagefright_soft_vpxenc.so
+      - vendor/lib/libstagefright_soft_gsmdec.so
+      - vendor/lib/libstagefright_soft_hevcdec.so
 
   props:
     match:
