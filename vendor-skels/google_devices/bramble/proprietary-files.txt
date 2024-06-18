@@ -75,7 +75,6 @@ system/system/etc/security/cacerts_google/ed39abd0.0
 system/system/etc/security/cacerts_google/facacbc6.0
 system/system/etc/security/cacerts_google/ff783690.0
 system/system/etc/vintf/compatibility_matrix.4.xml
-system/system/etc/vintf/manifest/manifest_media_c2_software.xml
 system/system/framework/locksettings.jar
 system/system/lib/android.hardware.power-V4-cpp.so
 system/system/lib/libaudiohal@4.0.so

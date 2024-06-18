@@ -1044,7 +1044,6 @@ PRODUCT_PACKAGES += \
     lowi-server \
     manifest_android.hardware.drm-service.widevine-v17 \
     manifest_input.processor-service \
-    manifest_media_c2_software \
     memtrack.lito \
     modem_svc \
     motiondetector \

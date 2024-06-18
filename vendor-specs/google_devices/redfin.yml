@@ -70,10 +70,10 @@ overlays/product_org.codeaurora.ims/res: dir
 overlays/product_org.codeaurora.ims/res/values: dir
 overlays/product_org.codeaurora.ims/res/values/values.xml: d740f1e01a2535a2382a3f40920d7ac4b90be155ce5726962b1f2041e40daca6
 proprietary: dir
-proprietary-files.txt: 7bed505e8f7554965ca9298746bbce22e8cc4151485669b7e4d975919653ae7a
-proprietary/Android.bp: 0c14ccdcff788d03bffc64901c611b218098495c5c6d136b68a4a0f05f145de3
+proprietary-files.txt: e7243d026df43dc8572f6b21dbd2060afe3391e73b261ca613b867434bfb24a4
+proprietary/Android.bp: dca397dac4a478d6f5b036eeecf8ccb4486db3b85dd51ad83a657323e0264e44
 proprietary/BoardConfigVendor.mk: 1c5c985ee11a79efaed0ea8b90181cdae9d2627f2316522ca1f3e3cb4464d0c6
-proprietary/device-vendor.mk: a5ea436b826f2fccdc52c7413b168727ffb08a6c6ee051562d17ce4eb3abb966
+proprietary/device-vendor.mk: 4ed21d2878bd5abb796264e347f178f3f80f53982d1344aaf585ae44e88667a1
 proprietary/product: dir
 proprietary/product/app: dir
 proprietary/product/app/uimremoteclient: dir
@@ -477,8 +477,6 @@ proprietary/system/system/etc/security/cacerts_google/facacbc6.0: a506e7b296a676
 proprietary/system/system/etc/security/cacerts_google/ff783690.0: 83aa42b948971490d2ad6303317a71a9134ea8135e38f6b40d8a688f3c15e2fa
 proprietary/system/system/etc/vintf: dir
 proprietary/system/system/etc/vintf/compatibility_matrix.4.xml: 15c2d1dda445ec86ebbfe9086b517bc6ee1c14c905423451b4e4c131656468c4
-proprietary/system/system/etc/vintf/manifest: dir
-proprietary/system/system/etc/vintf/manifest/manifest_media_c2_software.xml: f0f1200643774e9d3e5cadd78a9266c26a48612f1688bf157dfbd9b57af6e9ca
 proprietary/system/system/lib: dir
 proprietary/system/system/lib/android.hardware.power-V4-cpp.so: ab03adbbdbf0fc8edfacfe899502cdbc9f2dfc01c90c1b68811bcdf0e02b0210
 proprietary/system/system/lib/libaudiohal@4.0.so: 800be9db676cb0d8d8796d5b95b0bab7ddc3aabff273b7c7cb6b060afc0e638f

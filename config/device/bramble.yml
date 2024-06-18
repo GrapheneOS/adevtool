@@ -25,6 +25,7 @@ filters:
       - system/lib64/libclcore_neon.bc
       - system_ext/priv-app/AccessibilityMenu/AccessibilityMenu.apk
       - product/app/PixelCameraServicesBramble/PixelCameraServicesBramble.apk
+      - system/etc/vintf/manifest/manifest_media_c2_software.xml
       # dont build OMX codecs
       # https://android-review.googlesource.com/c/platform/frameworks/av/+/2898992
       - vendor/lib/libstagefright_soft_vpxdec.so

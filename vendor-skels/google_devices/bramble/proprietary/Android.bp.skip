@@ -14959,14 +14959,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "manifest_media_c2_software",
-    owner: "google_devices",
-    src: "system/system/etc/vintf/manifest/manifest_media_c2_software.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.authsecret-service.citadel__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.authsecret-service.citadel.xml",
