@@ -18,7 +18,7 @@
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.13",
     "ora": "5.4.1",
-    "protobufjs": "^7.2.4",
+    "protobufjs": "^7.3.2",
     "ts-proto": "^1.156.7",
     "tslib": "^1",
     "unzipit": "^1.4.3",
