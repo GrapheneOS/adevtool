@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import path from 'path'
 
 import { DEVICE_CONFIG_FLAGS, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
@@ -14,18 +14,18 @@ export default class DumpCarrierSettings extends Command {
   static description = 'generate protoc dumps of configs from factory image.'
 
   static flags = {
-    buildId: flags.string({
+    buildId: Flags.string({
       description: 'specify build ID',
       char: 'b',
     }),
-    out: flags.string({
+    out: Flags.string({
       char: 'o',
     }),
     ...DEVICE_CONFIG_FLAGS,
   }
 
   async run() {
-    let { flags } = this.parse(DumpCarrierSettings)
+    let { flags } = await this.parse(DumpCarrierSettings)
     let index: BuildIndex = await loadBuildIndex()
     let devices = await loadDeviceConfigs(flags.devices)
     await forEachDevice(

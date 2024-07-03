@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 import chalk from 'chalk'
 import { CopyOptions, promises as fs } from 'fs'
@@ -193,47 +193,47 @@ export default class GenerateFull extends Command {
   static description = 'generate all vendor parts automatically'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    aapt2: flags.string({
+    help: Flags.help({ char: 'h' }),
+    aapt2: Flags.string({
       char: 'a',
       description: 'path to aapt2 executable',
       default: 'out/host/linux-x86/bin/aapt2',
     }),
-    customSrc: flags.string({
+    customSrc: Flags.string({
       char: 'c',
       description: 'path to AOSP build output directory (out/) or (directory containing) JSON state file',
       default: COLLECTED_SYSTEM_STATE_DIR,
     }),
-    factoryPath: flags.string({
+    factoryPath: Flags.string({
       char: 'f',
       description: 'path to stock factory images zip (for extracting firmware if stockSrc is not factory images)',
     }),
-    otaPath: flags.string({
+    otaPath: Flags.string({
       char: 'o',
       description: 'path to OTA image, used only for extract_android_ota_payload.py',
     }),
-    skipCopy: flags.boolean({
+    skipCopy: Flags.boolean({
       char: 'k',
       description: 'skip file copying and only generate build files',
       default: false,
     }),
-    parallel: flags.boolean({
+    parallel: Flags.boolean({
       char: 'p',
       description: 'generate devices in parallel (causes buggy progress spinners)',
       default: false,
     }),
 
-    skipOtaExtraction: flags.boolean({
+    skipOtaExtraction: Flags.boolean({
       description:
         'skip extract_android_ota_payload.py step. Allows to skip downloading OTA image when OTA generation is not needed',
     }),
 
-    updateSpec: flags.boolean({
+    updateSpec: Flags.boolean({
       description:
         'update vendor module FileTreeSpec in vendor-specs/ instead of requiring it to be equal to the reference (current) spec',
     }),
 
-    doNotReplaceCarrierSettings: flags.boolean({
+    doNotReplaceCarrierSettings: Flags.boolean({
       description: `do not replace carrier settings with updated ones from ${CARRIER_SETTINGS_DIR}`,
     }),
 
@@ -246,7 +246,7 @@ export default class GenerateFull extends Command {
   }
 
   async run() {
-    let { flags } = this.parse(GenerateFull)
+    let { flags } = await this.parse(GenerateFull)
 
     let devices = await loadDeviceConfigs(flags.devices)
 

@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Args, Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 
 import { diffLists, listPart } from '../blobs/file-list'
@@ -8,24 +8,30 @@ export default class DiffFiles extends Command {
   static description = 'find missing system files compared to a reference system'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    all: flags.boolean({
+    help: Flags.help({ char: 'h' }),
+    all: Flags.boolean({
       char: 'a',
       description: 'show all differences, not only missing/removed files',
       default: false,
     }),
   }
 
-  static args = [
-    { name: 'sourceRef', description: 'path to root of reference system', required: true },
-    { name: 'sourceNew', description: 'path to root of new system', required: true },
-  ]
+  static args = {
+    sourceRef: Args.string({
+      description: 'path to root of reference system',
+      required: true,
+    }),
+    sourceNew: Args.string({
+      description: 'path to root of new system',
+      required: true,
+    }),
+  }
 
   async run() {
     let {
       flags: { all },
       args: { sourceRef, sourceNew },
-    } = this.parse(DiffFiles)
+    } = await this.parse(DiffFiles)
 
     for (let partition of ALL_SYS_PARTITIONS) {
       let filesRef = await listPart(partition, sourceRef)

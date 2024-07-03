@@ -25,6 +25,7 @@ if (!validCwd) {
   process.exit(1)
 }
 
-require('@oclif/command').run()
-.then(require('@oclif/command/flush'))
-.catch(require('@oclif/errors/handle'))
+void (async () => {
+  const oclif = await import('@oclif/core')
+  await oclif.execute({dir: __dirname, development: true}, )
+})()

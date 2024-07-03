@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import { YAMLMap } from 'yaml/types'
 
 import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
@@ -10,14 +10,14 @@ export default class FetchBuildIndex extends Command {
 
   static flags = {
     ...DEVICE_CONFIG_FLAGS,
-    beta: flags.string({
+    beta: Flags.string({
       char: 'b',
       description: 'Fetch index of beta builds for the specified major OS version (e.g. -b 14)',
     }),
   }
 
   async run() {
-    let { flags } = this.parse(FetchBuildIndex)
+    let { flags } = await this.parse(FetchBuildIndex)
     let devices = await loadDeviceConfigs(flags.devices)
 
     let index: YAMLMap

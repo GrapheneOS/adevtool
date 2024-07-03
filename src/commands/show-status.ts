@@ -1,4 +1,4 @@
-import { Command } from '@oclif/command'
+import { Command } from '@oclif/core'
 import chalk from 'chalk'
 
 import { DEVICE_CONFIG_FLAGS, DeviceConfig, getDeviceNames, loadDeviceConfigs } from '../config/device'
@@ -9,11 +9,11 @@ import { loadBuildIdToTagMap } from './update-aosp-tag-index'
 
 export default class ShowStatus extends Command {
   static flags = {
-    ...DEVICE_CONFIG_FLAGS
+    ...DEVICE_CONFIG_FLAGS,
   }
 
   async run() {
-    let { flags } = this.parse(ShowStatus)
+    let { flags } = await this.parse(ShowStatus)
     let configs = await loadDeviceConfigs(flags.devices)
 
     let buildIdMap = new Map<string, DeviceConfig[]>()

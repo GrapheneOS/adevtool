@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 
 import { createVendorDirs } from '../blobs/build'
@@ -81,13 +81,13 @@ export default class GeneratePrep extends Command {
   static description = 'generate vendor parts to prepare for reference AOSP build (e.g. for collect-state)'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    skipCopy: flags.boolean({
+    help: Flags.help({ char: 'h' }),
+    skipCopy: Flags.boolean({
       char: 'k',
       description: 'skip file copying and only generate build files',
       default: false,
     }),
-    parallel: flags.boolean({
+    parallel: Flags.boolean({
       char: 'p',
       description: 'generate devices in parallel (causes buggy progress spinners)',
       default: false,
@@ -102,7 +102,7 @@ export default class GeneratePrep extends Command {
   }
 
   async run() {
-    let { flags } = this.parse(GeneratePrep)
+    let { flags } = await this.parse(GeneratePrep)
     let devices = await loadDeviceConfigs(flags.devices)
 
     let useImagesFromConfig = flags.stockSrc === undefined

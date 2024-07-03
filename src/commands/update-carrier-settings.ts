@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 
 import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
 import { downloadAllConfigs, fetchUpdateConfig, getCarrierSettingsUpdatesDir } from '../blobs/carrier'
@@ -8,15 +8,15 @@ export default class UpdateCarrierSettings extends Command {
   static description = 'download updated carrier protobuf configs.'
 
   static flags = {
-    out: flags.string({
+    out: Flags.string({
       char: 'o',
       description: 'override output directory',
     }),
-    debug: flags.boolean({
+    debug: Flags.boolean({
       description: 'enable debug output',
       default: false,
     }),
-    buildId: flags.string({
+    buildId: Flags.string({
       description: 'override build ID',
       char: 'b',
     }),
@@ -24,7 +24,7 @@ export default class UpdateCarrierSettings extends Command {
   }
 
   async run() {
-    let { flags } = this.parse(UpdateCarrierSettings)
+    let { flags } = await this.parse(UpdateCarrierSettings)
     let devices = await loadDeviceConfigs(flags.devices)
     await forEachDevice(
       devices,

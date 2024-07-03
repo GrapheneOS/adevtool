@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Args, Command, Flags } from '@oclif/core'
 
 import { serializeDeviceMakefile } from '../build/make'
 import { findOverrideModules, parseOverrides } from '../build/overrides'
@@ -9,26 +9,24 @@ export default class ResolveOverrides extends Command {
   static description = 'resolve packages to build from a list of overridden targets'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: Flags.help({ char: 'h' }),
   }
 
-  static args = [
-    {
-      name: 'overrideList',
+  static args = {
+    overrideList: Args.string({
       description: 'path to file containing build output with override warnings',
       required: true,
-    },
-    {
-      name: 'moduleInfo',
+    }),
+    moduleInfo: Args.string({
       description: 'path to Soong module-info.json (out/target/product/$device/module-info.json)',
       required: true,
-    },
-  ]
+    }),
+  }
 
   async run() {
     let {
       args: { overrideList: listPath, moduleInfo },
-    } = this.parse(ResolveOverrides)
+    } = await this.parse(ResolveOverrides)
 
     let overridesList = await readFile(listPath)
     let overrides = parseOverrides(overridesList)

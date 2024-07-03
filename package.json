@@ -8,9 +8,8 @@
   },
   "bugs": "https://github.com/kdrag0n/adevtool/issues",
   "dependencies": {
-    "@oclif/command": "^1",
-    "@oclif/config": "^1",
-    "@oclif/plugin-help": "^3",
+    "@oclif/core": "^4.0.8",
+    "@oclif/plugin-help": "^6.2.4",
     "chalk": "^4.1.2",
     "cli-progress": "^3.9.1",
     "hasha": "^5.2.2",
@@ -27,8 +26,6 @@
     "yauzl-promise": "^4.0.0"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1",
-    "@oclif/test": "^1",
     "@types/chai": "^4.3.16",
     "@types/cli-progress": "^3.11.5",
     "@types/jsdom": "^21.1.7",
@@ -46,6 +43,7 @@
     "eslint-plugin-prettier": "^5.1.3",
     "globby": "^10",
     "nyc": "^14",
+    "oclif": "^4.13.12",
     "prettier": "^3.3.2",
     "ts-node": "^8",
     "typescript": "^5.5.3"
@@ -70,16 +68,18 @@
   "oclif": {
     "commands": "./lib/commands",
     "bin": "adevtool",
+    "dirname": "adevtool",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
   "repository": "kdrag0n/adevtool",
   "scripts": {
+    "build": "rm -rf lib && tsc -b",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "version": "oclif-dev readme && git add README.md",
+    "prepack": "rm -rf lib && tsc -b && oclif manifest && oclif readme",
+    "version": "oclif readme && git add README.md",
     "format": "prettier --write 'src/**/*.ts'",
     "lint": "eslint --fix 'src/**/*.ts'"
   },

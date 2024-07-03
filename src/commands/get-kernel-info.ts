@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 import chalk from 'chalk'
 import { existsSync, promises as fs } from 'fs'
@@ -18,7 +18,7 @@ export default class GetKernelInfo extends Command {
   static description = 'get info about stock OS kernel: version, tag, branch, etc'
 
   static flags = {
-    buildIds: flags.string({
+    buildIds: Flags.string({
       char: 'b',
       multiple: true,
       default: ['cur'],
@@ -27,7 +27,7 @@ export default class GetKernelInfo extends Command {
   }
 
   async run() {
-    let { flags } = this.parse(GetKernelInfo)
+    let { flags } = await this.parse(GetKernelInfo)
     let devices = await loadDeviceConfigs(flags.devices)
     let res = await prepareFactoryImages(await loadBuildIndex(), devices, flags.buildIds)
 
@@ -189,7 +189,7 @@ async function loadTagInfo(gitilesUrl: string, name: string) {
   let date = tagger.cells[2].textContent
   let author = tagger.cells[1].textContent
 
-  return { name, annotation, date, author, } as TagInfo
+  return { name, annotation, date, author } as TagInfo
 }
 
 function getDeviceBuildIds(images: DeviceImage[], buildIdsFromFlags: string[]) {

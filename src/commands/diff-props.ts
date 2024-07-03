@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Args, Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 
 import { diffPartitionProps, loadPartitionProps, PartitionProps } from '../blobs/props'
@@ -31,21 +31,27 @@ export default class DiffProps extends Command {
   static description = 'find missing and different properties compared to a reference system'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    all: flags.boolean({ char: 'a', description: 'show all differences, not only missing props', default: false }),
-    includeBuild: flags.boolean({ char: 'b', description: 'include build props', default: false }),
+    help: Flags.help({ char: 'h' }),
+    all: Flags.boolean({ char: 'a', description: 'show all differences, not only missing props', default: false }),
+    includeBuild: Flags.boolean({ char: 'b', description: 'include build props', default: false }),
   }
 
-  static args = [
-    { name: 'sourceRef', description: 'path to root of reference system', required: true },
-    { name: 'sourceNew', description: 'path to root of new system', required: true },
-  ]
+  static args = {
+    sourceRef: Args.string({
+      description: 'path to root of reference system',
+      required: true,
+    }),
+    sourceNew: Args.string({
+      description: 'path to root of new system',
+      required: true,
+    }),
+  }
 
   async run() {
     let {
       flags: { all, includeBuild },
       args: { sourceRef, sourceNew },
-    } = this.parse(DiffProps)
+    } = await this.parse(DiffProps)
 
     let propsRef = await loadPartitionProps(sourceRef)
     let propsNew = await loadPartitionProps(sourceNew)

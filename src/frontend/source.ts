@@ -1,4 +1,4 @@
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import assert from 'assert'
 import { createReadStream, promises as fs } from 'fs'
 import { FileHandle, FileReadOptions } from 'fs/promises'
@@ -21,17 +21,17 @@ import { isSparseImage } from '../util/sparse'
 import { listZipFiles } from '../util/zip'
 
 export const WRAPPED_SOURCE_FLAGS = {
-  stockSrc: flags.string({
+  stockSrc: Flags.string({
     char: 's',
     description:
       'path to (extracted) factory images, (mounted) images, (extracted) OTA package, OTA payload, or directory containing any such files (optionally under device and/or build ID directory)',
     required: true,
   }),
-  buildId: flags.string({
+  buildId: Flags.string({
     char: 'b',
-    description: 'stock OS build ID, defaults to build_id value from device config'
+    description: 'stock OS build ID, defaults to build_id value from device config',
   }),
-  useTemp: flags.boolean({
+  useTemp: Flags.boolean({
     char: 't',
     description: 'use a temporary directory for all extraction (prevents reusing extracted files across runs)',
     default: false,
@@ -305,7 +305,7 @@ export async function prepareDeviceImages(
   types: ImageType[],
   devices: DeviceConfig[],
   // if not specified, current build ID is used for each device
-  maybeBuildIds?: string[]
+  maybeBuildIds?: string[],
 ) {
   let allImages: DeviceImage[] = []
 
@@ -319,7 +319,7 @@ export async function prepareDeviceImages(
         let buildId = resolveBuildId(buildIdSpec, deviceConfig)
         let deviceImage = DeviceImage.get(buildIndex, deviceConfig, buildId, type)
         let deviceBuildId = getDeviceBuildId(deviceConfig, buildId)
-        let images: DeviceImages = imagesMap.get(deviceBuildId) ?? {} as DeviceImages
+        let images: DeviceImages = imagesMap.get(deviceBuildId) ?? ({} as DeviceImages)
         if (deviceImage.type === ImageType.Factory) {
           images.factoryImage = deviceImage
         } else if (deviceImage.type === ImageType.Ota) {
@@ -410,7 +410,8 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
       if (image.isGrapheneOS) {
         isInnerZip = entryName.includes(`/image-${deviceName}-`) && entryName.endsWith('.zip')
       } else {
-        isInnerZip = entryName.includes(`-${image.buildId.toLowerCase()}/image-${deviceName}`) &&
+        isInnerZip =
+          entryName.includes(`-${image.buildId.toLowerCase()}/image-${deviceName}`) &&
           entryName.endsWith(`-${image.buildId.toLowerCase()}.zip`)
       }
 
@@ -419,14 +420,17 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
       }
 
       // this operation initializes entry.fileDataOffset
-      (await outerZip.openReadStream(entry, { validateCrc32: false })).destroy()
+      ;(await outerZip.openReadStream(entry, { validateCrc32: false })).destroy()
 
       assert(entry.compressionMethod === 0, entryName) // uncompressed
       assert(entry.compressedSize === entry.uncompressedSize, entryName)
 
       let entryOffset = entry.fileDataOffset
 
-      let innerZip = await yauzl.fromReader(new FdReader(fd, entryOffset, entry.uncompressedSize), entry.uncompressedSize)
+      let innerZip = await yauzl.fromReader(
+        new FdReader(fd, entryOffset, entry.uncompressedSize),
+        entry.uncompressedSize,
+      )
 
       let unpackedTmp = out + '-tmp'
       let promises = []
@@ -504,16 +508,17 @@ async function unpackExt4(fsImagePath: string, destinationDir: string) {
   assert(!destinationDir.includes('"'), destinationDir)
 
   let isStderrLineAllowed = function (s: string) {
-      return s.length == 0 ||
-        // it's expected that ownership information will be lost during unpacking
-        s.startsWith('dump_file: Operation not permitted while changing ownership of ') ||
-        s.startsWith('rdump: Operation not permitted while changing ownership of ') ||
-        // version string
-        s.startsWith('debugfs ')
+    return (
+      s.length == 0 ||
+      // it's expected that ownership information will be lost during unpacking
+      s.startsWith('dump_file: Operation not permitted while changing ownership of ') ||
+      s.startsWith('rdump: Operation not permitted while changing ownership of ') ||
+      // version string
+      s.startsWith('debugfs ')
+    )
   }
 
-  await spawnAsyncNoOut('debugfs', ['-R', `rdump / "${destinationDir}"`, fsImagePath],
-    isStderrLineAllowed)
+  await spawnAsyncNoOut('debugfs', ['-R', `rdump / "${destinationDir}"`, fsImagePath], isStderrLineAllowed)
 }
 
 async function unpackErofs(fsImagePath: string, destinationDir: string) {
@@ -522,7 +527,11 @@ async function unpackErofs(fsImagePath: string, destinationDir: string) {
 
 class FdReader extends yauzl.Reader {
   // fd ownership remains with the caller
-  constructor(readonly fd: FileHandle, readonly off: number, readonly len: number) {
+  constructor(
+    readonly fd: FileHandle,
+    readonly off: number,
+    readonly len: number,
+  ) {
     super()
   }
 

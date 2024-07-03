@@ -1,4 +1,4 @@
-import { Command } from '@oclif/command'
+import { Command } from '@oclif/core'
 import { readFileSync } from 'fs'
 import { writeFile } from 'fs/promises'
 import { YAMLMap } from 'yaml/types'
@@ -10,12 +10,13 @@ import { showGitDiff } from '../util/cli'
 import { yamlStringifyNoFold } from '../util/yaml'
 
 export default class UpdateBuildIndex extends Command {
-  static description = 'fetch main (non-beta) build index and if it has changed, update build-index-main.yml file in-place and show git diff'
+  static description =
+    'fetch main (non-beta) build index and if it has changed, update build-index-main.yml file in-place and show git diff'
 
   static flags = DEVICE_CONFIG_FLAGS
 
   async run() {
-    let { flags } = this.parse(UpdateBuildIndex)
+    let { flags } = await this.parse(UpdateBuildIndex)
     let devices = await loadDeviceConfigs(flags.devices)
 
     let index: YAMLMap = await fetchBuildIndex(devices)

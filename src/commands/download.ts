@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 
 import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs, resolveBuildId } from '../config/device'
@@ -9,23 +9,26 @@ import { DeviceImage } from '../images/device-image'
 import { downloadDeviceImages } from '../images/download'
 
 export default class Download extends Command {
-  static description = 'download device factory images, OTAs, and/or vendor packages. Default output location is ' +
-    IMAGE_DOWNLOAD_DIR + '. To override it, use ADEVTOOL_IMG_DOWNLOAD_DIR environment variable.'
+  static description =
+    'download device factory images, OTAs, and/or vendor packages. Default output location is ' +
+    IMAGE_DOWNLOAD_DIR +
+    '. To override it, use ADEVTOOL_IMG_DOWNLOAD_DIR environment variable.'
 
   static flags = {
-    type: flags.string({
+    type: Flags.string({
       char: 't',
-      description: 'type(s) of images to download: factory | ota | vendor/$NAME (e.g. vendor/qcom, vendor/google_devices)',
+      description:
+        'type(s) of images to download: factory | ota | vendor/$NAME (e.g. vendor/qcom, vendor/google_devices)',
       default: ['factory'],
       multiple: true,
     }),
-    buildId: flags.string({
+    buildId: Flags.string({
       char: 'b',
       description: 'build ID(s) of images to download, defaults to the current build ID',
       required: false,
       multiple: true,
     }),
-    unpack: flags.boolean({
+    unpack: Flags.boolean({
       char: 'u',
       description: 'unpack downloaded factory images',
       default: false,
@@ -34,7 +37,7 @@ export default class Download extends Command {
   }
 
   async run() {
-    let { flags } = this.parse(Download)
+    let { flags } = await this.parse(Download)
 
     let index = loadBuildIndex()
     let deviceConfigs = loadDeviceConfigs(flags.devices)

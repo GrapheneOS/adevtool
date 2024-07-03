@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 import { spawnSync } from 'child_process'
 import { promises as fs } from 'fs'
@@ -17,29 +17,29 @@ export default class CollectState extends Command {
   static description = 'collect built system state for use with other commands'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    aapt2: flags.string({
+    help: Flags.help({ char: 'h' }),
+    aapt2: Flags.string({
       char: 'a',
       description: 'path to aapt2 executable',
       default: 'out/host/linux-x86/bin/aapt2',
     }),
-    outRoot: flags.string({ char: 'r', description: 'path to AOSP build output directory (out/)', default: 'out' }),
-    parallel: flags.boolean({
+    outRoot: Flags.string({ char: 'r', description: 'path to AOSP build output directory (out/)', default: 'out' }),
+    parallel: Flags.boolean({
       char: 'p',
       description: 'generate devices in parallel (causes buggy progress spinners)',
       default: false,
     }),
-    outPath: flags.string({
+    outPath: Flags.string({
       char: 'o',
       description: `output path for system state JSON file(s). If it's a directory, $device.json will be used for file names`,
       required: true,
       default: COLLECTED_SYSTEM_STATE_DIR,
     }),
-    rebuild: flags.boolean({
+    rebuild: Flags.boolean({
       description: 'generate prep vendor module (same as generate-prep) and make an OS build before collecting state',
       default: false,
     }),
-    allowOutReuse: flags.boolean({
+    allowOutReuse: Flags.boolean({
       description: 'if --rebuild is specified, do not remove out/ dir before making an OS build',
       default: false,
     }),
@@ -49,7 +49,7 @@ export default class CollectState extends Command {
   async run() {
     let {
       flags: { aapt2: aapt2Path, devices, outRoot, parallel, outPath, rebuild, allowOutReuse },
-    } = this.parse(CollectState)
+    } = await this.parse(CollectState)
 
     let configs = await loadDeviceConfigs(devices)
 
@@ -70,8 +70,9 @@ export default class CollectState extends Command {
           if (!allowOutReuse) {
             await spawnAsync('rm', ['-rf', path.join(OS_CHECKOUT_DIR, 'out')])
           }
-          let res = spawnSync(path.join(ADEVTOOL_DIR, 'scripts/make-prep-build.sh'),
-            [config.device.name], { stdio: 'inherit' })
+          let res = spawnSync(path.join(ADEVTOOL_DIR, 'scripts/make-prep-build.sh'), [config.device.name], {
+            stdio: 'inherit',
+          })
           assert(res.status === 0, `make-prep-build.sh failed, exit code ${res.status}`)
         }
 

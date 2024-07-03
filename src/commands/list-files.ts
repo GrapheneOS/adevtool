@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Args, Command, Flags } from '@oclif/core'
 import { promises as fs } from 'fs'
 import { listPart } from '../blobs/file-list'
 
@@ -9,24 +9,27 @@ export default class ListFiles extends Command {
   static description = 'list system files and symlinks important for blobs'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: Flags.help({ char: 'h' }),
 
-    device: flags.string({ char: 'd', description: 'device codename', required: true }),
+    device: Flags.string({ char: 'd', description: 'device codename', required: true }),
     ...WRAPPED_SOURCE_FLAGS,
   }
 
-  static args = [
-    { name: 'out', description: 'directory to write partition file lists to', required: true },
-  ]
+  static args = {
+    out: Args.string({
+      description: 'directory to write partition file lists to',
+      required: true,
+    }),
+  }
 
   async run() {
     let {
       flags: { device, stockSrc, buildId, useTemp },
       args: { out },
-    } = this.parse(ListFiles)
+    } = await this.parse(ListFiles)
 
     await withWrappedSrc(stockSrc, device, buildId, useTemp, async stockSrc => {
-      await fs.mkdir(out, {recursive: true})
+      await fs.mkdir(out, { recursive: true })
 
       for (let partition of ALL_SYS_PARTITIONS) {
         let files = await listPart(partition, stockSrc, null, true)

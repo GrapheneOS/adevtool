@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Args, Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 
 import { parseFileList } from '../blobs/file-list'
@@ -11,23 +11,26 @@ export default class Extract extends Command {
   static description = 'extract proprietary files'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    vendor: flags.string({ char: 'v', description: 'device vendor/OEM name', required: true }),
-    device: flags.string({ char: 'd', description: 'device codename', required: true }),
-    skipCopy: flags.boolean({ char: 'k', description: 'skip file copying and only generate build files' }),
+    help: Flags.help({ char: 'h' }),
+    vendor: Flags.string({ char: 'v', description: 'device vendor/OEM name', required: true }),
+    device: Flags.string({ char: 'd', description: 'device codename', required: true }),
+    skipCopy: Flags.boolean({ char: 'k', description: 'skip file copying and only generate build files' }),
 
     ...WRAPPED_SOURCE_FLAGS,
   }
 
-  static args = [
-    { name: 'listPath', description: 'path to LineageOS-compatible proprietary-files.txt list', required: true },
-  ]
+  static args = {
+    listPath: Args.string({
+      description: 'path to LineageOS-compatible proprietary-files.txt list',
+      required: true,
+    }),
+  }
 
   async run() {
     let {
       args: { listPath },
       flags: { vendor, device, skipCopy, stockSrc, buildId, useTemp },
-    } = this.parse(Extract)
+    } = await this.parse(Extract)
 
     await withWrappedSrc(stockSrc, device, buildId, useTemp, async stockSrc => {
       // Parse list

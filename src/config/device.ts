@@ -2,7 +2,7 @@
 // eslint-disable-next-line @typescript-eslint/triple-slash-reference
 ///<reference path="../util/jstypes.d.ts" />
 
-import { flags } from '@oclif/command'
+import { Flags } from '@oclif/core'
 import assert from 'assert'
 import path from 'path'
 
@@ -158,7 +158,7 @@ export function resolveBuildId(str: string, config: DeviceConfig) {
 }
 
 export const DEVICE_CONFIG_FLAGS = {
-  devices: flags.string({
+  devices: Flags.string({
     char: 'd',
     description: `Device or DeviceList config paths or names`,
     multiple: true,

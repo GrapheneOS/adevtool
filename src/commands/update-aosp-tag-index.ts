@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command'
+import { Command, Flags } from '@oclif/core'
 import assert from 'assert'
 import { writeFileSync } from 'fs'
 import YAML from 'yaml'
@@ -24,14 +24,14 @@ export default class UpdateAospTagIndex extends Command {
   static description = `update buildId-to-tag map in ${BUILD_ID_TO_TAG_FILE}`
 
   static flags = {
-    dryRun: flags.boolean({
+    dryRun: Flags.boolean({
       char: 'n',
       description: 'skip file update',
     }),
   }
 
   async run() {
-    let { flags } = this.parse(UpdateAospTagIndex)
+    let { flags } = await this.parse(UpdateAospTagIndex)
 
     // let bases = ['android-vts', 'android-security', 'android', 'android-platform', 'android-cts']
     let bases = ['android']
@@ -85,8 +85,7 @@ export default class UpdateAospTagIndex extends Command {
     }
 
     if (!flags.dryRun && numNewTags > 0) {
-      let entries = Array.from(map.entries())
-        .sort(([_k1, tag1], [_k2, tag2]) => compareTags(tag1, tag2))
+      let entries = Array.from(map.entries()).sort(([_k1, tag1], [_k2, tag2]) => compareTags(tag1, tag2))
 
       writeFileSync(BUILD_ID_TO_TAG_FILE, yamlStringifyNoFold(new Map(entries)))
     }
