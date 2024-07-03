@@ -45,7 +45,7 @@
     "nyc": "^14",
     "oclif": "^4.13.12",
     "prettier": "^3.3.2",
-    "ts-node": "^8",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   },
   "engines": {
