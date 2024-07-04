@@ -85,7 +85,7 @@ export default class UpdateAospTagIndex extends Command {
     }
 
     if (!flags.dryRun && numNewTags > 0) {
-      let entries = Array.from(map.entries()).sort(([_k1, tag1], [_k2, tag2]) => compareTags(tag1, tag2))
+      let entries = Array.from(map.entries()).sort(([, tag1], [, tag2]) => compareTags(tag1, tag2))
 
       writeFileSync(BUILD_ID_TO_TAG_FILE, yamlStringifyNoFold(new Map(entries)))
     }

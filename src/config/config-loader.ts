@@ -5,7 +5,7 @@ import YAML from 'yaml'
 import { readFile } from '../util/fs'
 import { parseFilters, SerializedFilters } from './filters'
 
-function mergeConfigs(base: any, overlay: any) {
+function mergeConfigs(base: unknown, overlay: unknown) {
   return _.mergeWith(base, overlay, (a, b) => {
     if (_.isArray(a)) {
       return a.concat(b)
@@ -13,7 +13,8 @@ function mergeConfigs(base: any, overlay: any) {
   })
 }
 
-async function loadOverlaysRecursive(overlays: any[], rootDir: string, root: any) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function loadOverlaysRecursive(overlays: unknown[], rootDir: string, root: any) {
   if (_.isArray(root.includes)) {
     for (let relPath of root.includes) {
       let overlayPath = path.resolve(rootDir, relPath)
@@ -34,6 +35,7 @@ export async function loadAndMergeConfig(configPath: string, baseConfig: Readonl
 
   let rootOverlay = YAML.parse(await readFile(configPath))
   let rootPath = path.dirname(configPath)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let overlays: any[] = []
   await loadOverlaysRecursive(overlays, rootPath, rootOverlay)
 

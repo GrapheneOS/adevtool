@@ -36,8 +36,8 @@ export class DeviceImage {
     let buildProps = index.get(deviceBuildId)
     if (buildProps === undefined) {
       if (buildId.startsWith(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX)) {
-        let fileName = deviceConfig.device.name + '-factory-' +
-            buildId.substring(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX.length) + '.zip'
+        let fileName =
+          deviceConfig.device.name + '-factory-' + buildId.substring(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX.length) + '.zip'
 
         let url = 'https://releases.grapheneos.org/' + fileName
 
@@ -71,7 +71,7 @@ export class DeviceImage {
 
   static async getMissing(arr: DeviceImage[]) {
     let res: DeviceImage[] = []
-    let imagePresence = arr.map(i => ({image: i, isPresent: i.isPresent()}))
+    let imagePresence = arr.map(i => ({ image: i, isPresent: i.isPresent() }))
     for (let e of imagePresence) {
       if (!(await e.isPresent)) {
         res.push(e.image)

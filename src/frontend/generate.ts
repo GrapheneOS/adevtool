@@ -27,8 +27,8 @@ import {
 import { generateFileContexts } from '../selinux/labels'
 import { exists, readFile, TempState } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
-import {ApkModule, TYPE_APK} from "../build/soong"
-import assert from "assert"
+import { ApkModule, TYPE_APK } from '../build/soong'
+import assert from 'assert'
 
 export interface PropResults {
   stockProps: PartitionProps
@@ -165,10 +165,12 @@ export async function extractProps(config: DeviceConfig, customState: SystemStat
 
   // Diff
   let propChanges = diffPartitionProps(stockProps, customProps)
-  let missingProps: PartitionProps = new Map(Array.from(propChanges.entries()).map(([part, props]) => [part, props.removed]))
+  let missingProps: PartitionProps = new Map(
+    Array.from(propChanges.entries()).map(([part, props]) => [part, props.removed]),
+  )
 
   // A/B OTA partitions
-  let stockOtaParts = getAbOtaPartitionsProps(stockProps)!!
+  let stockOtaParts = getAbOtaPartitionsProps(stockProps)!
   let customOtaParts = new Set(getAbOtaPartitionsProps(customProps) ?? [])
   let missingOtaParts = stockOtaParts.filter(p => !customOtaParts.has(p) && filterValue(config.filters.partitions, p))
 
@@ -280,7 +282,7 @@ export async function extractFirmware(
     config.device.name,
     stockProps.get('vendor')!.get('ro.build.expect.bootloader')!,
     stockProps.get('vendor')!.get('ro.build.expect.baseband')!,
-    getAbOtaPartitionsProps(stockProps)!!
+    getAbOtaPartitionsProps(stockProps)!,
   )
   await fs.writeFile(`${dirs.firmware}/${ANDROID_INFO}`, androidInfo)
 
@@ -375,7 +377,7 @@ export async function generateBuildFiles(
     if (m._type == TYPE_APK) {
       let apkModule = m as ApkModule
       if (filterValue(config.filters.deprivileged_apks, apkModule.apk)) {
-        assert(apkModule.privileged, apkModule.apk + " is already unprivileged")
+        assert(apkModule.privileged, apkModule.apk + ' is already unprivileged')
         apkModule.privileged = false
       }
     }

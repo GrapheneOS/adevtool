@@ -6,7 +6,7 @@ import hasha from 'hasha'
 import ora from 'ora'
 import path from 'path'
 import { pipeline } from 'stream/promises'
-import * as yauzl from 'yauzl-promise/lib/index.js'
+import yauzl from 'yauzl-promise'
 import { DeviceBuildId, DeviceConfig, FsType, getDeviceBuildId, resolveBuildId } from '../config/device'
 
 import { IMAGE_DOWNLOAD_DIR } from '../config/paths'
@@ -340,7 +340,7 @@ export async function prepareDeviceImages(
 
   await downloadMissingDeviceImages(allImages)
 
-  let jobs: Promise<any>[] = []
+  let jobs: Promise<unknown>[] = []
   let destinationDirNames: string[] = []
 
   for (let images of imagesMap.values()) {
@@ -356,7 +356,9 @@ export async function prepareDeviceImages(
     let isAlreadyUnpacked = false
     try {
       isAlreadyUnpacked = (await fs.stat(dir)).isDirectory()
-    } catch {}
+    } catch {
+      /* empty */
+    }
 
     if (!isAlreadyUnpacked) {
       let factoryImagePath = images.factoryImage.getPath()
@@ -426,6 +428,9 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
       assert(entry.compressedSize === entry.uncompressedSize, entryName)
 
       let entryOffset = entry.fileDataOffset
+      if (entryOffset === null) {
+        throw Error('entryOffset is null')
+      }
 
       let innerZip = await yauzl.fromReader(
         new FdReader(fd, entryOffset, entry.uncompressedSize),
@@ -439,7 +444,9 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
       try {
         await fs.access(unpackedTmp)
         rmTmpDir = true
-      } catch {}
+      } catch {
+        /* empty */
+      }
 
       if (rmTmpDir) {
         await spawnAsyncNoOut('chmod', ['--recursive', 'u+w', unpackedTmp])

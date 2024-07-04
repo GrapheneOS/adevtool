@@ -53,6 +53,7 @@ export function serializeSystemState(state: SystemState) {
 
 export function parseSystemState(json: string) {
   let diskState = JSON.parse(json, (k, v) => {
+    // eslint-disable-next-line no-prototype-builtins
     if (v?.hasOwnProperty('_type') && v?._type == 'Map') {
       return new Map(Object.entries(v.data))
     }

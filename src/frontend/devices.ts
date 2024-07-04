@@ -4,7 +4,7 @@ export async function forEachDevice<Device>(
   devices: Device[],
   parallel: boolean,
   callback: (device: Device) => Promise<void>,
-  deviceKey: (device: Device) => string = d => d as any as string,
+  deviceKey: (device: Device) => string = d => d as string,
 ) {
   let jobs = []
   let isMultiDevice = devices.length > 1

@@ -54,7 +54,10 @@ async function hashFile(baseDir: string, filePath: string, dst: FileTreeSpec) {
 }
 
 export class FileTreeComparison {
-  constructor(readonly a: FileTreeSpec, readonly b: FileTreeSpec) {}
+  constructor(
+    readonly a: FileTreeSpec,
+    readonly b: FileTreeSpec,
+  ) {}
 
   // present in B, but missing in A
   readonly newEntries = new Map<string, string>()

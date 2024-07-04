@@ -1,6 +1,6 @@
 import { setIntersection } from '../util/data'
 import { parseLines } from '../util/parse'
-import { SoongModuleInfo, TargetModuleInfo } from './soong-info'
+import { SoongModuleInfo } from './soong-info'
 
 export interface OverrideModules {
   modules: Array<string>

@@ -18,10 +18,12 @@ import {
 } from '../build/make'
 import {
   blobToSoongModule,
-  serializeBlueprint, SharedLibraryModule,
+  serializeBlueprint,
+  SharedLibraryModule,
   SoongBlueprint,
   SoongModule,
-  SPECIAL_FILE_EXTENSIONS, TYPE_SHARED_LIBRARY,
+  SPECIAL_FILE_EXTENSIONS,
+  TYPE_SHARED_LIBRARY,
 } from '../build/soong'
 import { DeviceConfig } from '../config/device'
 import { Partition } from '../util/partitions'
@@ -77,8 +79,7 @@ export async function generateBuild(
   let conflictModules = new Map<string, SoongModule[]>()
   let conflictCounters = new Map<string, number>()
 
-  entryLoop:
-  for (let entry of entries) {
+  entryLoop: for (let entry of entries) {
     let ext = path.extname(entry.path)
     let pathParts = entry.path.split('/')
     let srcPath = entry.diskSrcPath ?? `${source}/${entry.srcPath}`
@@ -203,11 +204,7 @@ export async function createVendorDirs(vendor: string, device: string) {
   } as VendorDirectories
 }
 
-export async function writeBuildFiles(
-  build: BuildFiles,
-  dirs: VendorDirectories,
-  config?: DeviceConfig
-) {
+export async function writeBuildFiles(build: BuildFiles, dirs: VendorDirectories, config?: DeviceConfig) {
   if (build.rootBlueprint != undefined) {
     let bp = serializeBlueprint(build.rootBlueprint)
     await fs.writeFile(`${dirs.out}/Android.bp`, bp)

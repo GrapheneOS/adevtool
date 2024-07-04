@@ -62,7 +62,12 @@ export async function writeFirmwareImages(images: FirmwareImages, fwDir: string)
   return paths
 }
 
-export function generateAndroidInfo(device: string, blVersion: string, radioVersion: string, stockAbOtaPartitions: string[]) {
+export function generateAndroidInfo(
+  device: string,
+  blVersion: string,
+  radioVersion: string,
+  stockAbOtaPartitions: string[],
+) {
   let android_info = `require board=${device}
 
 require version-bootloader=${blVersion}

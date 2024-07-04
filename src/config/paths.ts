@@ -14,7 +14,8 @@ export const ADEVTOOL_DIR = path.join(OS_CHECKOUT_DIR, 'vendor/adevtool')
 export const CONFIG_DIR = process.env['ADEVTOOL_CONFIG_DIR'] ?? path.join(ADEVTOOL_DIR, 'config')
 export const DEVICE_CONFIG_DIR = path.join(CONFIG_DIR, 'device')
 // $DEVICE.json files made by collect-state command
-export const COLLECTED_SYSTEM_STATE_DIR = process.env['ADEVTOOL_SYSTEM_STATE_DIR'] ?? path.join(OS_CHECKOUT_DIR, 'vendor/state')
+export const COLLECTED_SYSTEM_STATE_DIR =
+  process.env['ADEVTOOL_SYSTEM_STATE_DIR'] ?? path.join(OS_CHECKOUT_DIR, 'vendor/state')
 
 export const BUILD_INDEX_DIR = path.join(CONFIG_DIR, 'build-index')
 export const BUILD_INDEX_FILE = path.join(BUILD_INDEX_DIR, 'build-index.yml')

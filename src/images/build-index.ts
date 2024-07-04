@@ -58,7 +58,9 @@ const PAGE_TYPES: Record<string, PageTypeInfo> = {
 }
 
 export async function loadBuildIndex(filePath: string = BUILD_INDEX_FILE): Promise<BuildIndex> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let obj: any = await loadAndMergeConfig(filePath, {})
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let outerMap = new Map<string, any>(Object.entries(obj))
   for (let k of outerMap.keys()) {
     outerMap.set(k, new Map<string, string>(Object.entries(outerMap.get(k))))
@@ -141,10 +143,7 @@ function parseVendorPage(buildIndex: BuildIndex, dom: JSDOM, devices: Set<string
     let header = dom.window.document.querySelector(`#${device}`) as HTMLHeadingElement
     let head = header.nextElementSibling!
 
-    while (true) {
-      if (!head.id.startsWith(device)) {
-        break
-      }
+    while (head.id.startsWith(device)) {
       let buildId = head.id.substring(device.length).toUpperCase()
       let table = head.nextElementSibling!.firstElementChild as HTMLTableElement
       let buildProps = getBuildProps(buildIndex, device, buildId)
@@ -173,7 +172,7 @@ function parseBetaFactoryOrOtaPage(
 
     let fileNameAndHash = row.cells[1].textContent!.split('\n')
     assert(fileNameAndHash.length == 3, `unexpected fileNameAndHash value ${fileNameAndHash}`)
-    assert(fileNameAndHash[0] === '', fileNameAndHash)
+    assert(fileNameAndHash[0] === '', `${fileNameAndHash}`)
 
     let fileName = fileNameAndHash[1].trim()
     assert(fileName.endsWith('.zip'), `unexpected extension of filename ${fileName}`)

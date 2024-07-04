@@ -89,7 +89,7 @@ function logTermsAndConditionsNotice(images: DeviceImage[]) {
     return
   }
 
-  console.log(chalk.bold('\nBy downloading images, you agree to Google\'s terms and conditions:'))
+  console.log(chalk.bold("\nBy downloading images, you agree to Google's terms and conditions:"))
 
   let msg = '    - Factory images: https://developers.google.com/android/images#legal\n'
   if (images.find(i => i.type === ImageType.Ota) !== undefined) {

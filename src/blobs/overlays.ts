@@ -148,7 +148,7 @@ export async function parsePartOverlayApks(
   return partValues
 }
 
-function shouldDeleteKey(filters: Filters, rawKey: string, { targetPkg, type, key, flags }: ResKey) {
+function shouldDeleteKey(filters: Filters, rawKey: string, { type, flags }: ResKey) {
   // Simple exclusion sets
   if (DIFF_EXCLUDE_TYPES.has(type)) {
     return true
@@ -218,7 +218,7 @@ export function diffPartOverlays(
   return missingPartValues
 }
 
-function serializeXmlObject(obj: any) {
+function serializeXmlObject(obj: unknown) {
   return XML_HEADER + XML_BUILDER.buildObject(obj).replace(/^<\?xml.*>$/m, '')
 }
 
@@ -278,7 +278,7 @@ export async function serializePartOverlays(partValues: PartResValues, overlaysD
         },
       })
 
-      let valuesObj = { resources: {} as { [type: string]: Array<any> } }
+      let valuesObj = { resources: {} as { [type: string]: Array<unknown> } }
       let resEntries = Array.from(values.entries())
       resEntries.sort(([k1], [k2]) => {
         return k1.key.localeCompare(k2.key)
@@ -288,7 +288,7 @@ export async function serializePartOverlays(partValues: PartResValues, overlaysD
           $: {
             name: key,
           },
-        } as { [key: string]: any }
+        } as { [key: string]: unknown }
 
         if (type.includes('array')) {
           entry.item = (value as Array<ResValue>).map(v => v.toString())
@@ -296,6 +296,7 @@ export async function serializePartOverlays(partValues: PartResValues, overlaysD
           entry._ = value.toString()
         }
 
+        // eslint-disable-next-line no-prototype-builtins
         if (valuesObj.resources.hasOwnProperty(type)) {
           valuesObj.resources[type].push(entry)
         } else {
@@ -528,7 +529,10 @@ function roundFloat(v: number) {
 class Complex {
   unit: number
 
-  constructor(readonly type: ComplexType, readonly raw: number) {
+  constructor(
+    readonly type: ComplexType,
+    readonly raw: number,
+  ) {
     this.unit = (raw >> COMPLEX_UNIT_SHIFT) & COMPLEX_UNIT_MASK
   }
 

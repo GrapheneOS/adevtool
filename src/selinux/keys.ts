@@ -100,7 +100,7 @@ function parseKeysConf(conf: string) {
 
     let pathLine = line.match(/^(.+)\s*:\s*(.+)$/)
     if (pathLine != undefined) {
-      let [_, buildType, path] = pathLine
+      let [, buildType, path] = pathLine
       if (curPaths != null) {
         curPaths.set(buildType, path)
       }

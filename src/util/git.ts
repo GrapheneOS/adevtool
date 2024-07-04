@@ -27,7 +27,7 @@ export class GitLsRemote {
         if (!desc.endsWith(tagSuffix)) {
           continue
         }
-        result.tags.set(desc.slice(tagPrefix.length, - tagSuffix.length), commit)
+        result.tags.set(desc.slice(tagPrefix.length, -tagSuffix.length), commit)
       } else {
         assert(desc.startsWith(branchPrefix), line)
         result.branches.set(desc, commit)
