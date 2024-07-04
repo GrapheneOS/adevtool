@@ -32,6 +32,7 @@
     "@types/node": "^16.11.6",
     "@types/node-fetch": "^2.6.11",
     "@types/xml2js": "^0.4.14",
+    "@types/yauzl-promise": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "chai": "^4",

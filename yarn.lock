@@ -1603,6 +1603,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/yauzl-promise@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@types/yauzl-promise/-/yauzl-promise-4.0.1.tgz#66ec3c8e4f88b54966ab08a9333acfec8f4b763c"
+  integrity sha512-qYEC3rJwqiJpdQ9b+bPNeuSY0c3JUM8vIuDy08qfuVN7xHm3ZDsHn2kGphUIB0ruEXrPGNXZ64nMUcu4fDjViQ==
+  dependencies:
+    "@types/node" "*"
+
 "@typescript-eslint/eslint-plugin@^7.15.0":
   version "7.15.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-7.15.0.tgz"
