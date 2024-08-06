@@ -170,8 +170,8 @@ export async function extractProps(config: DeviceConfig, customState: SystemStat
   )
 
   // A/B OTA partitions
-  let stockOtaParts = getAbOtaPartitionsProps(stockProps)!
-  let customOtaParts = new Set(getAbOtaPartitionsProps(customProps) ?? [])
+  let stockOtaParts = getAbOtaPartitions(stockProps)!
+  let customOtaParts = new Set(getAbOtaPartitions(customProps) ?? [])
   let missingOtaParts = stockOtaParts.filter(p => !customOtaParts.has(p) && filterValue(config.filters.partitions, p))
 
   return {
@@ -183,7 +183,7 @@ export async function extractProps(config: DeviceConfig, customState: SystemStat
   } as PropResults
 }
 
-function getAbOtaPartitionsProps(props: PartitionProps): string[] | undefined {
+function getAbOtaPartitions(props: PartitionProps): string[] | undefined {
   return props.get('product')?.get('ro.product.ab_ota_partitions')?.split(',')
 }
 
@@ -282,7 +282,7 @@ export async function extractFirmware(
     config.device.name,
     stockProps.get('vendor')!.get('ro.build.expect.bootloader')!,
     stockProps.get('vendor')!.get('ro.build.expect.baseband')!,
-    getAbOtaPartitionsProps(stockProps)!,
+    getAbOtaPartitions(stockProps)!,
   )
   await fs.writeFile(`${dirs.firmware}/${ANDROID_INFO}`, androidInfo)
 
