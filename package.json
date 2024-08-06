@@ -41,7 +41,6 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
-    "globby": "^10",
     "oclif": "^4.13.12",
     "prettier": "^3.3.2",
     "ts-node": "^10.9.2",
