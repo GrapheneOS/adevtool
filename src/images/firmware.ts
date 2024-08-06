@@ -5,7 +5,7 @@ import { NodeFileReader } from '../util/zip'
 
 export const ANDROID_INFO = 'android-info.txt'
 
-export type FirmwareImages = Map<string, ArrayBuffer>
+export type FirmwareImages = Map<string, Buffer>
 
 async function extractFactoryZipFirmware(path: string, images: FirmwareImages) {
   let reader = new NodeFileReader(path)
@@ -16,9 +16,9 @@ async function extractFactoryZipFirmware(path: string, images: FirmwareImages) {
     // Find images
     for (let [name, entry] of Object.entries(entries)) {
       if (name.includes('/bootloader-')) {
-        images.set('bootloader.img', await entry.arrayBuffer())
+        images.set('bootloader.img', Buffer.from(await entry.arrayBuffer()))
       } else if (name.includes('/radio-')) {
-        images.set('radio.img', await entry.arrayBuffer())
+        images.set('radio.img', Buffer.from(await entry.arrayBuffer()))
       }
     }
   } finally {
@@ -30,17 +30,17 @@ async function extractFactoryDirFirmware(path: string, images: FirmwareImages) {
   for (let file of await fs.readdir(path)) {
     if (file.startsWith('bootloader-')) {
       let buf = await fs.readFile(`${path}/${file}`)
-      images.set('bootloader.img', buf.buffer)
+      images.set('bootloader.img', buf)
     } else if (file.startsWith('radio-')) {
       let buf = await fs.readFile(`${path}/${file}`)
-      images.set('radio.img', buf.buffer)
+      images.set('radio.img', buf)
     }
   }
 }
 
 // Path can be a directory or zip
 export async function extractFactoryFirmware(path: string) {
-  let images: FirmwareImages = new Map<string, ArrayBuffer>()
+  let images: FirmwareImages = new Map<string, Buffer>()
 
   if ((await fs.stat(path)).isDirectory()) {
     await extractFactoryDirFirmware(path, images)
@@ -57,7 +57,7 @@ export async function writeFirmwareImages(images: FirmwareImages, fwDir: string)
   for (let [name, buffer] of images.entries()) {
     let path = `${fwDir}/${name}`
     paths.push(path)
-    promises.push(fs.writeFile(path, new DataView(buffer)))
+    promises.push(fs.writeFile(path, buffer))
   }
   await Promise.all(promises)
 
