@@ -53,11 +53,13 @@ export async function extractFactoryFirmware(path: string) {
 
 export async function writeFirmwareImages(images: FirmwareImages, fwDir: string) {
   let paths = []
+  let promises: Promise<void>[] = []
   for (let [name, buffer] of images.entries()) {
     let path = `${fwDir}/${name}`
     paths.push(path)
-    await fs.writeFile(path, new DataView(buffer))
+    promises.push(fs.writeFile(path, new DataView(buffer)))
   }
+  await Promise.all(promises)
 
   return paths
 }
