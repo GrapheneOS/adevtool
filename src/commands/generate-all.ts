@@ -9,7 +9,6 @@ import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
 import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
 import {
-  ADEVTOOL_DIR,
   CARRIER_SETTINGS_DIR,
   CARRIER_SETTINGS_FACTORY_PATH,
   COLLECTED_SYSTEM_STATE_DIR,
@@ -47,7 +46,6 @@ import {
   parseFileTreeSpecYaml,
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive, withTempDir } from '../util/fs'
-import { spawnAsync } from '../util/process'
 import {
   decodeConfigs,
   downloadAllConfigs,
@@ -208,10 +206,6 @@ export default class GenerateFull extends Command {
       char: 'f',
       description: 'path to stock factory images zip (for extracting firmware if stockSrc is not factory images)',
     }),
-    otaPath: Flags.string({
-      char: 'o',
-      description: 'path to OTA image, used only for extract_android_ota_payload.py',
-    }),
     skipCopy: Flags.boolean({
       char: 'k',
       description: 'skip file copying and only generate build files',
@@ -255,18 +249,11 @@ export default class GenerateFull extends Command {
     let useImagesFromConfig = flags.stockSrc === undefined
 
     if (useImagesFromConfig) {
-      let requiredImageTypes = flags.skipOtaExtraction ? [ImageType.Factory] : [ImageType.Factory, ImageType.Ota]
-
       let index: BuildIndex = await loadBuildIndex()
-      images = await prepareDeviceImages(index, requiredImageTypes, devices)
-      assert(flags.otaPath === undefined)
+      images = await prepareDeviceImages(index, [ImageType.Factory], devices)
       assert(flags.buildId === undefined)
       assert(flags.factoryPath === undefined)
       assert(!flags.useTemp)
-    } else {
-      if (!flags.skipOtaExtraction) {
-        assert(flags.otaPath !== undefined, '--otaPath is not specified and --skipOtaExtraction is not set')
-      }
     }
 
     await forEachDevice(
@@ -274,24 +261,16 @@ export default class GenerateFull extends Command {
       flags.parallel,
       async config => {
         let deviceBuildId: string | undefined
-        let otaPath: string | undefined
         let stockSrc: string
         let factoryPath: string | undefined
         if (useImagesFromConfig) {
           let deviceImages = images.get(getDeviceBuildId(config))!
           stockSrc = deviceImages.unpackedFactoryImageDir
           factoryPath = deviceImages.factoryImage.getPath()
-          let otaImage = deviceImages.otaImage
-          if (otaImage !== undefined) {
-            otaPath = otaImage.getPath()
-          } else {
-            assert(flags.skipOtaExtraction)
-          }
         } else {
           stockSrc = flags.stockSrc!
           factoryPath = flags.factoryPath
           deviceBuildId = flags.buildId
-          otaPath = flags.otaPath
         }
 
         // Prepare output directories
@@ -308,13 +287,6 @@ export default class GenerateFull extends Command {
           flags.skipCopy,
           flags.useTemp,
         )
-
-        if (!flags.skipOtaExtraction) {
-          this.log(chalk.bold('Running extract_android_ota_payload.py'))
-          // TODO: extract these files from bootloader.img instead of from full OTA image
-          let cmd = path.join(ADEVTOOL_DIR, 'external/extract_android_ota_payload/extract_android_ota_payload.py')
-          await spawnAsync(cmd, [otaPath!, vendorDirs.firmware])
-        }
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular) {

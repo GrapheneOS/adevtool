@@ -183,7 +183,7 @@ export async function extractProps(config: DeviceConfig, customState: SystemStat
   } as PropResults
 }
 
-function getAbOtaPartitions(props: PartitionProps): string[] | undefined {
+export function getAbOtaPartitions(props: PartitionProps): string[] | undefined {
   return props.get('product')?.get('ro.product.ab_ota_partitions')?.split(',')
 }
 
@@ -274,7 +274,7 @@ export async function extractFirmware(
   stockProps: PartitionProps,
   factoryPath: string,
 ) {
-  let fwImages = await extractFactoryFirmware(factoryPath)
+  let fwImages = await extractFactoryFirmware(factoryPath, stockProps)
   let fwPaths = await writeFirmwareImages(fwImages, dirs.firmware)
 
   // Generate android-info.txt from device and versions

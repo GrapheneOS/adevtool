@@ -1,6 +1,10 @@
+import assert from 'assert'
 import { promises as fs } from 'fs'
 import * as unzipit from 'unzipit'
 
+import { FastbootPack, EntryType } from './fastboot-pack'
+import { PartitionProps } from '../blobs/props'
+import { getAbOtaPartitions } from '../frontend/generate'
 import { NodeFileReader } from '../util/zip'
 
 export const ANDROID_INFO = 'android-info.txt'
@@ -39,13 +43,26 @@ async function extractFactoryDirFirmware(path: string, images: FirmwareImages) {
 }
 
 // Path can be a directory or zip
-export async function extractFactoryFirmware(path: string) {
+export async function extractFactoryFirmware(path: string, stockProps: PartitionProps) {
   let images: FirmwareImages = new Map<string, Buffer>()
 
   if ((await fs.stat(path)).isDirectory()) {
     await extractFactoryDirFirmware(path, images)
   } else {
     await extractFactoryZipFirmware(path, images)
+  }
+
+  let abPartitions = new Set(getAbOtaPartitions(stockProps)!)
+
+  // Extract partitions from firmware FBPKs (fastboot packs)
+  for (let [, fbpkBuf] of Array.from(images.entries())) {
+    let fastbootPack = FastbootPack.parse(fbpkBuf)
+    for (let entry of fastbootPack.entries) {
+      if (abPartitions.has(entry.name)) {
+        assert(entry.type === EntryType.PartitionData, `unexpected entry type: ${entry.type}`)
+        images.set(entry.name + '.img', entry.readContents(fbpkBuf))
+      }
+    }
   }
 
   return images
