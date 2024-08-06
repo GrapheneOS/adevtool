@@ -18,6 +18,7 @@
     "node-fetch": "^2.6.13",
     "ora": "5.4.1",
     "protobufjs": "^7.3.2",
+    "smart-buffer": "^4.2.0",
     "ts-proto": "^1.181.0",
     "unzipit": "^1.4.3",
     "xml2js": "^0.6.2",
