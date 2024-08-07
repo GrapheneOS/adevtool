@@ -217,11 +217,6 @@ export default class GenerateFull extends Command {
       default: false,
     }),
 
-    skipOtaExtraction: Flags.boolean({
-      description:
-        'skip extract_android_ota_payload.py step. Allows to skip downloading OTA image when OTA generation is not needed',
-    }),
-
     updateSpec: Flags.boolean({
       description:
         'update vendor module FileTreeSpec in vendor-specs/ instead of requiring it to be equal to the reference (current) spec',
