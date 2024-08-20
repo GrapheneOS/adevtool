@@ -1,0 +1,10 @@
+includes:
+  - pixel.yml
+  - gs.yml
+
+device:
+  build_id: AD1A.240530.047
+
+platform:
+  sepolicy_dirs:
+    - device/google/zumapro-sepolicy

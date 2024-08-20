@@ -1,0 +1,9 @@
+device:
+  name: tokay
+
+#platform:
+#  product_makefile: device/google/
+
+includes:
+  - common/gen9pixel.yml
+  - common/gs-wireless-charger.yml

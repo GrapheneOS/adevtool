@@ -1,3 +1,68 @@
+komodo AD1A.240530.030:
+  desc: Aug 2024
+  factory: fb963bd65cdf9f933692fda3937144f400bde59cfbd74dcaf76f003911480711 komodo-ad1a.240530.030-factory-fb963bd6.zip
+  ota: d76aa69933b62cdc029efffd7c1b51442ba725f4aa6f088870acc529666b0138 komodo-ota-ad1a.240530.030-d76aa699.zip
+  vendor/google_devices: 2b8380eeb923751e3cada5a4627bfa7d250af29320929c324a25938b4b1ed01a google_devices-komodo-ad1a.240530.030-794b9ab7.tgz
+komodo AD1A.240530.030.A1:
+  desc: Aug 2024, India only
+  factory: 06b98f685acd2f268cc115fb386c9d7d8da64fe20307f08c8193fdffd452ac95 komodo-ad1a.240530.030.a1-factory-06b98f68.zip
+  ota: 911531c434e916d1cfede4dc358b23bde72cb67f213815b25a87d9a6815e545d komodo-ota-ad1a.240530.030.a1-911531c4.zip
+  vendor/google_devices: ef3b2a0801a8a2ffbf9253bdb510ad47178e2f7d1653a72a97a9f93412b90f0d google_devices-komodo-ad1a.240530.030.a1-bec05d72.tgz
+komodo AD1A.240530.030.A2:
+  desc: Aug 2024, VZW/US Emerging carriers + gStore
+  factory: f3d59301681042d53bb7bccc6dfb9940767d93dbafc35b6dd58688bdbb1f878e komodo-ad1a.240530.030.a2-factory-f3d59301.zip
+  ota: 05bc85139d21ac44a681c89893fc704f9220ceaae78fbcacba3de09836f606ad komodo-ota-ad1a.240530.030.a2-05bc8513.zip
+  vendor/google_devices: 0c39be34623a38e88f97a73aaec32fe107457e252ef44cb83fe98d47789acb08 google_devices-komodo-ad1a.240530.030.a2-5681d310.tgz
+komodo AD1A.240530.047:
+  desc: Aug 2024
+  factory: bb04e484c47931311312a0ce7fa6b00a3e26977f03d042167b4a880d69c3ff4e komodo-ad1a.240530.047-factory-bb04e484.zip
+  ota: 01e062a698e968e6671aa633fc23b76a01db9861bde054ca37c0d20010db74b5 komodo-ota-ad1a.240530.047-01e062a6.zip
+  vendor/google_devices: 624575b63cc038eca39da09e18506aada24bbed7805cb670c7661e74540e315d google_devices-komodo-ad1a.240530.047-91716126.tgz
+caiman AD1A.240530.030:
+  desc: Aug 2024
+  factory: 5e2727b97027f14ff26f89b68ce04559c0caf43ce8feda39e6ca3e5925c66309 caiman-ad1a.240530.030-factory-5e2727b9.zip
+  ota: 0fc923fd7946a73296ab7d1f3740667f6c53dad22b8cb84332badf905aeb4ea4 caiman-ota-ad1a.240530.030-0fc923fd.zip
+  vendor/google_devices: 9c04f45c5307937f5aa5381175aacdb1cafbc504c7d7816f7da3e40f523ebce2 google_devices-caiman-ad1a.240530.030-5ad9947c.tgz
+caiman AD1A.240530.030.A1:
+  desc: Aug 2024, India only
+  factory: 5a5409a8729388391712fb5d2818a54317da43f825c3fe96a0230a168f9c8a8a caiman-ad1a.240530.030.a1-factory-5a5409a8.zip
+  ota: 9d217d6c9f563d061900b17a2f41459049990030efca58762952067b30693b69 caiman-ota-ad1a.240530.030.a1-9d217d6c.zip
+  vendor/google_devices: 210d4c16b141092e95ba7d5a63089876cb0693ce0dea78ac77383cb331e44b59 google_devices-caiman-ad1a.240530.030.a1-44e786e7.tgz
+caiman AD1A.240530.030.A2:
+  desc: Aug 2024, VZW/US Emerging carriers + gStore
+  factory: b6c8d14d245f1f158fe81c3ebee74f2fe65e6dce76e11c1510992d7064258f66 caiman-ad1a.240530.030.a2-factory-b6c8d14d.zip
+  ota: 33df50258726eb51728abae75ff5be0bb0c5e50775d9aafd077f05b155e88d56 caiman-ota-ad1a.240530.030.a2-33df5025.zip
+  vendor/google_devices: 1c43d5e970c21bb5e5f0a4854fe338fe9f16447bf1cc31db34f67835216f6732 google_devices-caiman-ad1a.240530.030.a2-547c4cf5.tgz
+caiman AD1A.240530.047:
+  desc: Aug 2024
+  factory: 073ef35db1e5949f561de1eb3021e3be703c19834cf05bfe730dd0903bd5fc58 caiman-ad1a.240530.047-factory-073ef35d.zip
+  ota: eb7765ef229d6ae4ec612f0e96afeeeca6947d64468dd73e4e55c21f1ebe6926 caiman-ota-ad1a.240530.047-eb7765ef.zip
+  vendor/google_devices: 3f3969bf79ba962f0b8999613501a0f3c8d0916ca40478286a3f37ddc258d8db google_devices-caiman-ad1a.240530.047-77ff2344.tgz
+tokay AD1A.240530.030.A1:
+  desc: Aug 2024, India only
+  factory: c00748c817eba73c1f70695132ae71a9db6c4d0adb486ba1827a7d231378863d tokay-ad1a.240530.030.a1-factory-c00748c8.zip
+  ota: d2b8e63ad7c05f472ee87f6f65db1dc2793c6419f86443988e3713d93251f2ae tokay-ota-ad1a.240530.030.a1-d2b8e63a.zip
+  vendor/google_devices: b5efa62bf507937c4de0d42fec7f3690e9ac09ead764d8f217da96df800cf4b6 google_devices-tokay-ad1a.240530.030.a1-97948065.tgz
+tokay AD1A.240530.030:
+  desc: Aug 2024
+  factory: 6e7c358b2574a986991ec326f3aaacad92eb38ad4a938006be3ab14025e52096 tokay-ad1a.240530.030-factory-6e7c358b.zip
+  ota: 5077f537a0fa4fb4af65a575f2541683e98a3be1c92c063555b32f8a5ec143de tokay-ota-ad1a.240530.030-5077f537.zip
+  vendor/google_devices: e28e3a3df270dcd7054f718b0f9f6f50a4fd070feeb87986c563b605be5d95d8 google_devices-tokay-ad1a.240530.030-9eda4664.tgz
+tokay AD1A.240530.030.A2:
+  desc: Aug 2024, VZW/US Emerging carriers + gStore
+  factory: 586308ac7f76aa27e67863fdb2ff7af312b368287b373de9774fff1b88937be7 tokay-ad1a.240530.030.a2-factory-586308ac.zip
+  ota: 33964b07cbf71c872445e7a3a0ff7d3bf704c95f2c3ec0214324b097bb665101 tokay-ota-ad1a.240530.030.a2-33964b07.zip
+  vendor/google_devices: a67047cfe858f685c68379b6efbf688caa3c83096efcd15487fe3613ad0987eb google_devices-tokay-ad1a.240530.030.a2-0c4f2916.tgz
+tokay AD1A.240530.030.B1:
+  desc: Aug 2024, EMEA + TW + SG + AU + CA
+  factory: 948bdc3f820681fa46a7118ff310d1dab2f43d9163af1b866f992e57ba11180a tokay-ad1a.240530.030.b1-factory-948bdc3f.zip
+  ota: 8d51f0809c38c2cee282f6f1b8eaafa572ad6d37b6f34577083fbd015d3d491a tokay-ota-ad1a.240530.030.b1-8d51f080.zip
+  vendor/google_devices: b8458c5941be9aed9235a0a3b26a0acd05ccfadfda86112834dfabcb5f3da3b4 google_devices-tokay-ad1a.240530.030.b1-5eea152a.tgz
+tokay AD1A.240530.047:
+  desc: Aug 2024
+  factory: 5c2831bb3f64fc022603fc97d1e97e7612682260c065542cacb6fb629fcab04e tokay-ad1a.240530.047-factory-5c2831bb.zip
+  ota: 711b7179a1bb24023c8ca4bd9e143a888c3863eda0dcdaae70af1862695b91b7 tokay-ota-ad1a.240530.047-711b7179.zip
+  vendor/google_devices: c68bbcb408e7da3092a394e2fd0f874e6f43758ca9b6437f47c3ad0cf97e57a7 google_devices-tokay-ad1a.240530.047-86ea418b.tgz
 akita UD2A.231203.054:
   desc: May 2024, EMEA, APAC, JP
   factory: b3a902d4ece1f67ab85ac165d58c543d48dd3af1cc822944636d4f96e12df059 akita-ud2a.231203.054-factory-b3a902d4.zip
@@ -63,6 +128,11 @@ akita AP2A.240805.005.A1:
   factory: c57ea37c0e8ddbe12da9e6ea97e27640bd18394df1645d228c99705fdfc01626 akita-ap2a.240805.005.a1-factory-c57ea37c.zip
   ota: f66677082c40a755463542ac1ed0ce658f08f8433962e98d44c4365e0cb5e22f akita-ota-ap2a.240805.005.a1-f6667708.zip
   vendor/google_devices: 6b657a0cdf1900d254dadcfdd9069adba9c27e27b64c6108eb8e02e7d92ebb2d google_devices-akita-ap2a.240805.005.a1-93c84798.tgz
+akita AP2A.240805.005.C1:
+  desc: Aug 2024, Verizon
+  factory: b2608cfebc8076cc9d56c508b87ef71e3379440bd2fcfaa89b2c5ba419b2e082 akita-ap2a.240805.005.c1-factory-b2608cfe.zip
+  ota: 8f333bff665411e809f13ba69cad28175a1e29197d370ec8d63f9ae70a58de69 akita-ota-ap2a.240805.005.c1-8f333bff.zip
+  vendor/google_devices: 7d0e3cec9ebb1198bb0a59a7472f40abadd08356a66104bd20eb12251a306704 google_devices-akita-ap2a.240805.005.c1-fc360204.tgz
 akita AP2A.240805.005.E1:
   desc: Aug 2024, Telus
   factory: 9f81474f5a62a2ec1ed77dfd4cbd1155f4a1018ae84c159f84515641f8f241d0 akita-ap2a.240805.005.e1-factory-9f81474f.zip
@@ -193,6 +263,11 @@ husky AP2A.240805.005:
   factory: 06d11dac76a73c42b81a3b143f663ecc65b405b3ca45c35a6d1a18d98e7e0a6d husky-ap2a.240805.005-factory-06d11dac.zip
   ota: 0cbc4d6a62694b0eb7e24ad3d9f7d64a2c93f651175b8e8b13a712fd49b8be04 husky-ota-ap2a.240805.005-0cbc4d6a.zip
   vendor/google_devices: 9b3b5e12fae4d756a8e1a4f936b578c013db150a418d74e345f008e5a67cc21c google_devices-husky-ap2a.240805.005-02ffc308.tgz
+husky AP2A.240805.005.B1:
+  desc: Aug 2024, Verizon
+  factory: dd171ccdeb7beca9a665f5522f2185acbe900c8e69e12138f5bba8edb276d2b3 husky-ap2a.240805.005.b1-factory-dd171ccd.zip
+  ota: 01a0c10527fac5e7cc67c61b7606057803619029b7157205380dfd698339df6c husky-ota-ap2a.240805.005.b1-01a0c105.zip
+  vendor/google_devices: 700dc6d51b4096641a6e3d9b716ab207ca6d1d09eaf60f344e4be563cdb55c05 google_devices-husky-ap2a.240805.005.b1-89ae4b72.tgz
 husky AP2A.240805.005.D1:
   desc: Aug 2024, Telus
   factory: 0c13edae79511a5025a05bf1404e686310c11664f49bfc449ea65533d03e6d41 husky-ap2a.240805.005.d1-factory-0c13edae.zip
@@ -323,6 +398,11 @@ shiba AP2A.240805.005:
   factory: 47c02ead914cca59832a20bc477e88fc969127e277eec1f34fe9edd1cee293a3 shiba-ap2a.240805.005-factory-47c02ead.zip
   ota: bcd0cb98b4f51d823c7b515f7c2eea5bd864872653c36b30dde99701bc7343fb shiba-ota-ap2a.240805.005-bcd0cb98.zip
   vendor/google_devices: e8dd438717c81bd3a828490149229f83c0db7ce67358158c212fdc6f391b83e8 google_devices-shiba-ap2a.240805.005-633b928e.tgz
+shiba AP2A.240805.005.B1:
+  desc: Aug 2024, Verizon
+  factory: ebe3bd22f4cc2d057843f5433595d162ca4129f5c4f5386be677ffd7026b0c87 shiba-ap2a.240805.005.b1-factory-ebe3bd22.zip
+  ota: 58833eca93d31acb546268450ef5732fc7be912791d6715acc077dc3678ec20b shiba-ota-ap2a.240805.005.b1-58833eca.zip
+  vendor/google_devices: 20597aa3ac0e06cf76a0b0a76afe23f9d2a1a338ad36b0e7fb5e5e1b1a3de427 google_devices-shiba-ap2a.240805.005.b1-eba94ebc.tgz
 shiba AP2A.240805.005.D1:
   desc: Aug 2024, Telus
   factory: c7e4f284d125489ea936386dc51a94d1778eaf14b3b8d71f1cb19a756ed87b85 shiba-ap2a.240805.005.d1-factory-c7e4f284.zip

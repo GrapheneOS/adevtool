@@ -1,0 +1,6 @@
+type: device-list
+
+devices:
+  - komodo.yml
+  - caiman.yml
+  - tokay.yml
