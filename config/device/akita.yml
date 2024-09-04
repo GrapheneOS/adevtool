@@ -1,6 +1,5 @@
 device:
   name: akita
-  build_id: AP2A.240905.003.A1
 
 platform:
   product_makefile: device/google/akita/aosp_akita.mk

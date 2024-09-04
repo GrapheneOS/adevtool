@@ -2,9 +2,6 @@ platform:
   sepolicy_dirs:
     - device/google/gs101-sepolicy
 
-device:
-  build_id: AP2A.240905.003.F1
-
 includes:
   - pixel.yml
   - gs.yml
