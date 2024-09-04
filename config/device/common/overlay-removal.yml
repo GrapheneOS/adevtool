@@ -35,6 +35,7 @@ filters:
       - com.google.android.cellbroadcastreceiver/CellBroadcastCustomization
       - com.google.android.cellbroadcastservice/CellBroadcastServiceCustomization
       - com.google.android.documentsui/DocumentsUICustomization
+      - com.google.android.avatarpicker/
       # Unused SIM app stuff
       - com.android.simappdialog
       # Unwanted Permissions link
@@ -170,6 +171,12 @@ filters:
       - android:string/config_defaultNetworkRecommendationProviderPackage
       # com.google.android.keep
       - android:string/config_defaultNotes
+      # aicore
+      - android:string/config_defaultOnDeviceIntelligenceDeviceConfigNamespace
+      # com.google.android.aicore/com.google.android.apps.aicore.service.isolated.AiCoreIntelligenceService
+      - android:string/config_defaultOnDeviceIntelligenceService
+      # com.google.android.aicore/com.google.android.apps.aicore.service.isolated.AiCoreIsolatedService
+      - android:string/config_defaultOnDeviceSandboxedInferenceService
       - android:string/config_defaultOnDeviceSpeechRecognitionService
       - android:string/config_defaultProfcollectReportUploaderAction
       - android:string/config_defaultProfcollectReportUploaderApp
@@ -300,8 +307,8 @@ filters:
       # com.google.android.apps.pixel.agent on 14 QPR3 caiman
       - com.android.systemui:string/config_pearl_package
       - com.android.systemui:string/config_remoteCopyPackage
-      # set to Google Files app, "sceenshot" typo is upstream
-      - com.android.systemui:string/config_sceenshotWorkProfileFilesApp
+      # set to Google Files app, com.google.android.apps.nbu.files/com.google.android.apps.nbu.files.home.HomeActivity
+      - com.android.systemui:string/config_screenshotFilesApp
       - com.android.systemui:string/config_screenshotEditor
       - com.android.systemui:string/quick_settings_tiles_default
       - com.android.systemui:string/config_lowLightDreamComponent

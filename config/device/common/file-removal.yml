@@ -79,6 +79,7 @@ filters:
       - vendor/etc/default-permissions/default-permissions_wildlife.xml
       - product/etc/sysconfig/google-install-constraints-package-allowlist.xml
       - system_ext/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml
+      - system_ext/etc/sysconfig/preinstalled-packages-com.android.google.avatarpicker.xml
       # Irrelevant OTA updater
       - system_ext/etc/init/init.sota.rc
       - system_ext/etc/permissions/com.google.android.factoryota.xml
@@ -174,7 +175,7 @@ filters:
       - product/app/CalendarGooglePrebuilt/
       - product/app/Chrome-Stub/
       - product/app/Chrome/
-      - product/app/DevicePolicyPrebuilt/
+      - product/app/DevicePolicyPrebuilt
       # com.qualcomm.qti.devicestatisticsservice found on 5th gen Pixels
       - product/app/DeviceStatisticsService/
       # com.google.android.apps.diagnosticstool
@@ -217,10 +218,10 @@ filters:
       - product/app/SafetyHubHideApps/
       - product/app/SafetyRegulatoryInfo/
       # com.google.android.accessibility.soundamplifier
-      - product/app/SoundAmplifierPrebuilt/
+      - product/app/SoundAmplifierPrebuilt
       - product/app/SoundPickerPrebuilt/
       # com.google.android.accessibility.switchaccess
-      - product/app/SwitchAccessPrebuilt/
+      - product/app/SwitchAccessPrebuilt
       - product/app/TrichromeLibrary/
       - product/app/TrichromeLibrary-Stub/
       # Google Fi app, com.google.android.apps.tycho
@@ -328,7 +329,7 @@ filters:
       - product/priv-app/SSRestartDetector/
       - product/priv-app/SafetyHubPrebuilt/
       # "Live Transcribe & Notification", com.google.audio.hearing.visualization.accessibility.scribe
-      - product/priv-app/ScribePrebuilt/
+      - product/priv-app/ScribePrebuilt
       - product/priv-app/SearchSelectorPrebuilt/
       # https://play.google.com/store/apps/details?id=com.google.android.apps.security.securityhub
       - product/priv-app/SecurityHubPrebuilt/
@@ -372,6 +373,7 @@ filters:
       # "Extreme Battery Saver", com.google.android.flipendo
       - system_ext/app/Flipendo/
       - system_ext/app/RepairMode/
+      - system_ext/priv-app/AvatarPickerGoogle/
       - system_ext/priv-app/CarrierSetup/
       - system_ext/priv-app/CccDkTimeSyncService/
       # Manages thermal throttling of cellular and Wi-Fi connectivity, com.google.android.connectivitythermalpowermanager
