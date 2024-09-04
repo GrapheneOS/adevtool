@@ -345,6 +345,9 @@ export async function generateBuildFiles(
 
     let productProps = propResults.stockProps.get('product')!
     let productName = productProps.get('ro.product.product.name')!
+    if (productName.endsWith('_beta')) {
+      productName = productName.slice(0, -'_beta'.length)
+    }
 
     build.productMakefile = {
       baseProductPath: config.platform.product_makefile,
