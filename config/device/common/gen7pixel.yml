@@ -12,3 +12,18 @@ filters:
       # external/android-nn-driver/Android.mk: error: "android.hardware.neuralnetworks@1.0-service-armnn (EXECUTABLES android-arm64) missing libOpenCL (SHARED_LIBRARIES android-arm64)"
       - vendor/lib/libOpenCL.so
       - vendor/lib64/libOpenCL.so
+
+  files:
+    prefix:
+      - product/lib/
+      - system/framework/arm/
+      - system/lib/
+      - system_ext/lib/
+      - vendor/lib/
+
+    match:
+      - system/bin/app_process32
+      - system/bin/boringssl_self_test32
+      - system/bin/bootstrap/linker
+      - system/bin/linker
+      - system/bin/linker_asan
