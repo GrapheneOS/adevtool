@@ -27,3 +27,4 @@ filters:
       - system/bin/bootstrap/linker
       - system/bin/linker
       - system/bin/linker_asan
+      - system/bin/bootstrap/linker_asan
