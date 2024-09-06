@@ -1,7 +1,7 @@
 import { Command, flags } from '@oclif/command'
-import chalk from 'chalk'
 
 import { diffPartitionProps, loadPartitionProps, PartitionProps } from '../blobs/props'
+import { DIFF_FLAGS, DiffMap, printDiffMap } from '../util/diff'
 
 const BUILD_KEY_PATTERN = /^ro(?:\.(?:system|system_ext|product|vendor|odm|vendor_dlkm|odm_dlkm))?\.build\..+$/
 
@@ -15,25 +15,12 @@ function removeBuildProps(partProps: PartitionProps) {
   }
 }
 
-function forEachPropLine(props: Map<string, string>, callback: (prop: string) => void) {
-  for (let [key, value] of props.entries()) {
-    callback(`${key}=${chalk.bold(value)}`)
-  }
-}
-
-function forEachPropLineModified(props: Map<string, Array<string>>, callback: (prop: string) => void) {
-  for (let [key, [refValue, newValue]] of props.entries()) {
-    callback(`${key}=${chalk.bold(refValue)} -> ${chalk.bold(chalk.blue(newValue))}`)
-  }
-}
-
 export default class DiffProps extends Command {
   static description = 'find missing and different properties compared to a reference system'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
-    all: flags.boolean({ char: 'a', description: 'show all differences, not only missing props', default: false }),
     includeBuild: flags.boolean({ char: 'b', description: 'include build props', default: false }),
+    ...DIFF_FLAGS
   }
 
   static args = [
@@ -43,7 +30,7 @@ export default class DiffProps extends Command {
 
   async run() {
     let {
-      flags: { all, includeBuild },
+      flags: { type, includeBuild },
       args: { sourceRef, sourceNew },
     } = this.parse(DiffProps)
 
@@ -58,16 +45,15 @@ export default class DiffProps extends Command {
 
     let partChanges = diffPartitionProps(propsRef, propsNew)
 
+    let diffs = []
+
     for (let [partition, changes] of partChanges.entries()) {
-      this.log(chalk.bold(partition))
-
-      forEachPropLine(changes.removed, p => this.log(chalk.red(`    ${p}`)))
-      if (all) {
-        forEachPropLine(changes.added, p => this.log(chalk.green(`    ${p}`)))
-        forEachPropLineModified(changes.modified, p => this.log(`    ${p}`))
-      }
-
-      this.log()
+      diffs.push({
+        partition,
+        ...changes
+      } as DiffMap)
     }
+
+    printDiffMap(diffs, type, this.log)
   }
 }

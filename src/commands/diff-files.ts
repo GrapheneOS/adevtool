@@ -1,20 +1,13 @@
-import { Command, flags } from '@oclif/command'
-import chalk from 'chalk'
+import { Command } from '@oclif/command'
 
 import { diffLists, listPart } from '../blobs/file-list'
+import { DIFF_FLAGS, DiffList, printDiffList } from '../util/diff'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 
 export default class DiffFiles extends Command {
   static description = 'find missing system files compared to a reference system'
 
-  static flags = {
-    help: flags.help({ char: 'h' }),
-    all: flags.boolean({
-      char: 'a',
-      description: 'show all differences, not only missing/removed files',
-      default: false,
-    }),
-  }
+  static flags = DIFF_FLAGS
 
   static args = [
     { name: 'sourceRef', description: 'path to root of reference system', required: true },
@@ -23,9 +16,11 @@ export default class DiffFiles extends Command {
 
   async run() {
     let {
-      flags: { all },
+      flags: { type },
       args: { sourceRef, sourceNew },
     } = this.parse(DiffFiles)
+
+    let diffs = []
 
     for (let partition of ALL_SYS_PARTITIONS) {
       let filesRef = await listPart(partition, sourceRef)
@@ -35,17 +30,13 @@ export default class DiffFiles extends Command {
 
       let filesNew = (await listPart(partition, sourceNew)) ?? []
 
-      this.log(chalk.bold(partition))
-
-      let newAdded = diffLists(filesRef, filesNew)
-      let newRemoved = diffLists(filesNew, filesRef)
-
-      newRemoved.forEach(f => this.log(chalk.red(`    ${f}`)))
-      if (all) {
-        newAdded.forEach(f => this.log(chalk.green(`    ${f}`)))
-      }
-
-      this.log()
+      diffs.push({
+        partition,
+        added: diffLists(filesRef, filesNew),
+        removed: diffLists(filesNew, filesRef),
+      } as DiffList)
     }
+
+    printDiffList(diffs, type, this.log)
   }
 }
