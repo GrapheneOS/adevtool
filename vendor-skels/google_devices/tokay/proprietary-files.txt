@@ -449,7 +449,6 @@ product/lib64/libdmengine.so
 product/lib64/libdmjavaplugin.so
 product/priv-app/EuiccGoogle/EuiccGoogle.apk
 product/priv-app/PixelCameraServices/PixelCameraServices.apk;PRESIGNED
-product/priv-app/SafetyHubSuwPrebuilt/SafetyHubSuwPrebuilt.apk
 vendor/apex/com.google.android.hardware.biometrics.face.tokay.apex
 vendor/apex/com.google.android.widevine-11775005.apex
 vendor/apex/com.google.pixel.camera.hal.apex

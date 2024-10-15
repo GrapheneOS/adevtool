@@ -456,7 +456,6 @@ PRODUCT_PACKAGES += \
     rfsd \
     ril-extension \
     rild_exynos \
-    SafetyHubSuwPrebuilt \
     samsung.hardware.media.c2@1.2-service \
     sd \
     sensors.dynamic_sensor_hal \

@@ -326,6 +326,7 @@ filters:
       - product/priv-app/SCONE
       - product/priv-app/SSRestartDetector/
       - product/priv-app/SafetyHubPrebuilt/
+      - product/priv-app/SafetyHubSuwPrebuilt
       # "Live Transcribe & Notification", com.google.audio.hearing.visualization.accessibility.scribe
       - product/priv-app/ScribePrebuilt
       - product/priv-app/SearchSelectorPrebuilt/

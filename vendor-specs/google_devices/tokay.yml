@@ -82,10 +82,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: 759439ad2351ac6706a88dd7f24484760f1d05df854c2ecf260fe606b551dd07
 proprietary: dir
-proprietary-files.txt: 8caaa25e9a1e3bff229068048ee42dc5e06be7ce6454533356b336af2720a9a6
-proprietary/Android.bp: 1973f114e7341cc33546f18f13f4e5cb55d6660c1615969270caf87d09256724
+proprietary-files.txt: 4fc940187f623a11939c1fbc9cb57e089f78553c7aba64247ec3584077311c6d
+proprietary/Android.bp: 316316817cff034a46790997d7ec7076e6a69d0b29ddae614b9ac99a8a2acb8c
 proprietary/BoardConfigVendor.mk: fa69f703693581b0518ddacc305581ab40473538a6bdbb1caba46fbc297e26fd
-proprietary/device-vendor.mk: 965e9970a4251e52c1bd84516dfde28305e270040c5471491b446ba6819996be
+proprietary/device-vendor.mk: 04430a533e966afe47e70839267a68ad6f8c13a883ab881e5a177c381f351bd4
 proprietary/linker-config-adevtool.json: 6b3c6b57416c259790eb479ca3bf9575437bc060fd7439a96b2826785f73bcfc
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -482,8 +482,6 @@ proprietary/product/priv-app/EuiccGoogle: dir
 proprietary/product/priv-app/EuiccGoogle/EuiccGoogle.apk: 86613701151682271d77f7a09d42d332c6cd17a630edc3768485e6ba2ed9fbad
 proprietary/product/priv-app/PixelCameraServices: dir
 proprietary/product/priv-app/PixelCameraServices/PixelCameraServices.apk: d7a8f600a3d09d5193041341f9ebe025634314f2d71cb7b949dc356f94d37ffb
-proprietary/product/priv-app/SafetyHubSuwPrebuilt: dir
-proprietary/product/priv-app/SafetyHubSuwPrebuilt/SafetyHubSuwPrebuilt.apk: 814cc4df30538da5eca57afe6e8924a97c48e3a4127cd855fabd70f8012d44da
 proprietary/system: dir
 proprietary/system/system: dir
 proprietary/system/system/bin: dir
