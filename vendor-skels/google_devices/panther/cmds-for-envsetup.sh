@@ -1,2 +1,2 @@
 export BUILD_ID_panther="AP31.240617.015"
-export PLATFORM_SECURITY_PATCH_panther="2024-09-01"
+unset PLATFORM_SECURITY_PATCH_panther

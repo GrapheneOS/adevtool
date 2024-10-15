@@ -10,7 +10,6 @@ device:
   has_cellular: true
 
   build_id: AP31.240617.015
-  platform_security_patch_level_override: 2024-09-01
 
 platform:
   sepolicy_dirs:
