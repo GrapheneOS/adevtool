@@ -36,7 +36,7 @@ export default class UpdateAospTagIndex extends Command {
     // let bases = ['android-vts', 'android-security', 'android', 'android-platform', 'android-cts']
     let bases = ['android']
     // let versions = ['11.0.0', '12.0.0', '12.1.0', '13.0.0']
-    let versions = ['13.0.0', '14.0.0']
+    let versions = ['13.0.0', '14.0.0', '15.0.0']
 
     let prefixes: string[] = []
     bases.forEach(base =>
