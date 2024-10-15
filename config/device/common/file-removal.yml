@@ -62,6 +62,9 @@ filters:
       - product/etc/sysconfig/satellite_sos.xml
       - product/framework/com.google.android.dialer.support.jar
       - system/etc/permissions/privapp-permissions-google.xml
+      - # used by Device Connectivity Services (com.google.android.apps.pixel.dcservice) which is not shipped
+      - system_ext/bin/bluetooth_gci
+      - system_ext/etc/init/bluetooth_gci.rc
       - system_ext/etc/default-permissions/default-permissions-com.google.android.apps.pixel.dcservice.xml
       - system_ext/etc/default-permissions/default-permissions_pixelweather.xml
       - system_ext/etc/default-permissions/default-permissions_wallpapereffect.xml
