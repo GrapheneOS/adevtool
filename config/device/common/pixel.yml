@@ -9,7 +9,7 @@ device:
   kernel_repo_url: https://android.googlesource.com/kernel/gs
   has_cellular: true
 
-  build_id: AP31.240617.015
+  build_id: AP3A.241005.015
 
 platform:
   sepolicy_dirs:
