@@ -576,7 +576,7 @@ proprietary/vendor/apex: dir
 proprietary/vendor/apex/com.google.android.hardware.biometrics.face.pixel23.apex: f7de1bd3928cd2405efe39d7be22308bbf2e656da3bd272b35daff7099197d67
 proprietary/vendor/apex/com.google.android.hardware.biometrics.fingerprint.apex: 3ad8b2175aa8a56217f37d16e5a3c201567f33a9b55f5eb479547beb2ec93347
 proprietary/vendor/apex/com.google.android.widevine-11775005.apex: 5a9f6d5ed9b0e2dcef7d12cad3de8ee7813925eb3d9eed2f7c4f1bbb1a913609
-proprietary/vendor/apex/com.google.pixel.camera.hal.apex: 1f2d75d1d144b81d5e2f13a3bd39d9cc8e8e4d0ac3866a1afe871824a9a7077d
+proprietary/vendor/apex/com.google.pixel.camera.hal.apex: 167d18b84a0beaeb05805d4ed851b14c73a226704ff968b352d4bcb7859cdb2d
 proprietary/vendor/apex/com.google.pixel.euicc.update.apex: 408898123cc6452babce4e74d78745c53b26795dd81c9c72dce6dcb048eaceb4
 proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: 35f878ae4e5be1a4af44645a64abc7f4185874ebc576a194f173968fc869429b
 proprietary/vendor/bin: dir

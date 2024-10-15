@@ -7,14 +7,7 @@ import path from 'path'
 import { createVendorDirs, VendorDirectories } from '../blobs/build'
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
-import {
-  DEVICE_CONFIG_FLAGS,
-  DeviceBuildId,
-  DeviceConfig,
-  getDeviceBuildId,
-  loadDeviceConfigs,
-  makeDeviceBuildId,
-} from '../config/device'
+import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
 import {
   CARRIER_SETTINGS_DIR,
   CARRIER_SETTINGS_FACTORY_PATH,
@@ -40,13 +33,7 @@ import {
   writeEnvsetupCommands,
 } from '../frontend/generate'
 import { writeReadme } from '../frontend/readme'
-import {
-  DeviceImages,
-  prepareDeviceImages,
-  prepareFactoryImages,
-  WRAPPED_SOURCE_FLAGS,
-  wrapSystemSrc,
-} from '../frontend/source'
+import { DeviceImages, prepareDeviceImages, WRAPPED_SOURCE_FLAGS, wrapSystemSrc } from '../frontend/source'
 import { BuildIndex, ImageType, loadBuildIndex } from '../images/build-index'
 import { SelinuxPartResolutions } from '../selinux/contexts'
 import { gitDiff, withSpinner } from '../util/cli'
@@ -327,8 +314,6 @@ export default class GenerateFull extends Command {
           }
         }
 
-        await maybeReplaceFiles(config, vendorDirs)
-
         if (flags.updateSpec) {
           let cpSkelPromise = copyVendorSkel(vendorDirs, config)
           await writeVendorFileTreeSpec(vendorDirs, config)
@@ -349,46 +334,6 @@ export default class GenerateFull extends Command {
       config => config.device.name,
     )
   }
-}
-
-async function maybeReplaceFiles(config: DeviceConfig, vendorDirs: VendorDirectories) {
-  let deviceName = config.device.name
-  let prevBuildId: string
-  switch (deviceName) {
-    case 'komodo':
-    case 'tokay':
-      prevBuildId = 'AD1A.240905.004'
-      break
-    case 'akita':
-      prevBuildId = 'AP2A.240905.003.A1'
-      break
-    case 'husky':
-    case 'shiba':
-    case 'felix':
-    case 'tangorpro':
-    case 'lynx':
-    case 'cheetah':
-    case 'panther':
-      prevBuildId = 'AP2A.240905.003'
-      break
-    case 'bluejay':
-    case 'raven':
-    case 'oriole':
-      prevBuildId = 'AP2A.240905.003.F1'
-      break
-    default:
-      return
-  }
-
-  let images = await prepareFactoryImages(await loadBuildIndex(), [config], [prevBuildId])
-  let ap2aImage = images.get(makeDeviceBuildId(deviceName, prevBuildId))!
-
-  let relPath = 'vendor/apex/com.google.pixel.camera.hal.apex'
-  let srcPath = path.join(ap2aImage.unpackedFactoryImageDir, relPath)
-  let dstPath = path.join(vendorDirs.proprietary, relPath)
-  // make dstPath writable
-  await fs.chmod(dstPath, 0o666)
-  await fs.copyFile(srcPath, dstPath)
 }
 
 async function compareToReferenceFileTreeSpec(vendorDirs: VendorDirectories, config: DeviceConfig) {
