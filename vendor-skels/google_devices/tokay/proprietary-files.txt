@@ -696,7 +696,6 @@ vendor/etc/libg3a_standalone_gaf_rc
 vendor/etc/libg3a_standalone_ghawb_rc
 vendor/etc/media_codecs_dolby_c2.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/mixer_paths_aidl.xml
 vendor/etc/modem_stat.conf
 vendor/etc/open_carrier_info.dat
 vendor/etc/panel_config_google-tk4a_cal0.pb

@@ -45,7 +45,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/google/gs-common/gps/lsi/sepolicy \
     device/google/gs-common/gps/pixel/sepolicy \
-    device/google/gs-common/audio/sepolicy/aidl \
     vendor/google_devices/komodo/sepolicy
 
 # Missing vendor SELinux context: /(vendor|system/vendor)/bin/hw/qorvo\.uci-daemon u:object_r:qorvo-uci-daemon_exec:s0

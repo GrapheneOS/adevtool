@@ -17,8 +17,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.product.brand_for_attestation=google \
     ro.product.name_for_attestation=tokay \
     ro.product.device_for_attestation=tokay \
-    ro.product.manufacturer_for_attestation=Google \
-    ro.audio.ihaladaptervendorextension_enabled=true
+    ro.product.manufacturer_for_attestation=Google
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.model_for_attestation=Pixel 9 \
@@ -61,8 +60,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.rild.libpath=libsitril.so \
     persist.vendor.ril.support_nr_ds=1 \
     persist.vendor.ril.ecc.use.xml=1 \
-    vendor.battery_mitigation.aidl.enable=true \
-    vendor.audio_hal.aidl.enable=true
+    vendor.battery_mitigation.aidl.enable=true
 
 PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.model_for_attestation=Pixel 9 \
@@ -76,15 +74,19 @@ PRODUCT_OVERRIDE_FINGERPRINT := google/tokay_beta/tokay:15/AP31.240617.015/12207
 PRODUCT_PACKAGES += \
     activity \
     aidb_recorder \
+    aidl_audio_set_configurations_bfbs \
+    aidl_audio_set_configurations_json \
+    aidl_audio_set_scenarios_bfbs \
+    aidl_audio_set_scenarios_json \
     ambient \
     ambient_micro \
     ambient_volume \
     android.auto_generated_rro_product_adevtool__ \
     android.auto_generated_rro_vendor_adevtool__ \
     android.frameworks.stats-V1-cpp.vendor \
+    android.hardware.audio.common@5.0.vendor \
     android.hardware.audio.core-V2-ndk.vendor \
     android.hardware.audio.core.sounddose-V2-ndk.vendor \
-    android.hardware.audio.effect-V2-ndk.vendor \
     android.hardware.audio.service-aidl.aoc \
     android.hardware.audio.service-aidl.aoc__2 \
     android.hardware.authsecret-impl.nos \
@@ -95,6 +97,10 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-V3-ndk.vendor \
     android.hardware.bluetooth-service.bcmbtlinux \
     android.hardware.bluetooth-V1-ndk.vendor \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-V4-ndk.vendor \
+    android.hardware.bluetooth.audio@2.0.vendor \
+    android.hardware.bluetooth.audio@2.1.vendor \
     android.hardware.bluetooth.finder-V1-ndk.vendor \
     android.hardware.bluetooth.ranging-V1-ndk.vendor \
     android.hardware.camera.provider@2.7-service-google-apex \
@@ -173,6 +179,8 @@ PRODUCT_PACKAGES += \
     android.hardware.weaver-service.citadel__2 \
     android.hardware.weaver-V2-ndk.vendor \
     android.hardware.weaver2-impl.nos \
+    android.hidl.memory.token@1.0.vendor \
+    android.hidl.safe_union@1.0.vendor \
     android.hidl.token@1.0-utils.vendor \
     android.hidl.token@1.0.vendor \
     android.media.soundtrigger.types-V2-ndk.vendor \
@@ -252,6 +260,7 @@ PRODUCT_PACKAGES += \
     hardware.google.bluetooth.bt_channel_avoidance@1.0.vendor \
     hardware.google.ril_ext-V1-ndk.vendor \
     health \
+    hfp_codec_capabilities_xml \
     imu_cal \
     init_citadel \
     init.camera.set-interrupts-ownership \
@@ -263,21 +272,21 @@ PRODUCT_PACKAGES += \
     lib_jpg_encoder \
     lib_reader \
     libAlgFx_HiFi3z \
+    libalsautilsv2 \
     libaoc \
     libaptX_encoder__system_ext \
     libaptXHD_encoder__system_ext \
-    libaudio_aidl_conversion_common_ndk.vendor \
-    libaudioaidlcommon.vendor \
     libaudioaidlranges.vendor \
     libaudioroutev2.vendor \
     libaudioserviceexampleimpl \
     libavservices_minijail.vendor \
     libbinder_trusty \
-    libbundleaidl \
+    libbluetooth_audio_session_aidl:64 \
     libbw_av1dec \
     libbw_av1enc \
     libc2filterplugin \
     libcap.vendor \
+    libclang_rt.ubsan_standalone.vendor \
     libcodec2_aidl.vendor \
     libcodec2_hal_common.vendor \
     libcodec2_hidl_plugin \
@@ -301,8 +310,6 @@ PRODUCT_PACKAGES += \
     libdisplaypanel \
     libdmengine__product \
     libdmjavaplugin__product \
-    libdownmixaidl \
-    libdynamicsprocessingaidl \
     libedgetpu_client.google \
     libedgetpu_dba.google__system_ext \
     libedgetpu_tachyon.google \
@@ -325,6 +332,7 @@ PRODUCT_PACKAGES += \
     libExynosC2Vp9Enc \
     libexynosutils \
     libexynosv4l2 \
+    libflatbuffers-cpp.vendor \
     libfvsam_prm_parser \
     libgc2_bw_av1_dec \
     libgc2_bw_av1_enc \
@@ -339,7 +347,7 @@ PRODUCT_PACKAGES += \
     libgpudataproducer \
     libgril_oem-google \
     libgxp \
-    libhapticgeneratoraidl \
+    libhidlmemory.vendor \
     libhidltransport.vendor \
     libhidparser:64 \
     libhwbinder.vendor \
@@ -350,16 +358,18 @@ PRODUCT_PACKAGES += \
     libkeymaster_portable.vendor \
     libkeymint_support.vendor \
     libkeymint.vendor \
-    libloudnessenhanceraidl \
     liblzma.vendor \
     libmahalcontroller \
     libmedia_ecoservice.vendor \
     libmedia_omx.vendor \
     libmediaadaptor__system_ext \
+    libmediautils_vendor.vendor \
+    libmemunreachable.vendor \
     libmetrics_logger \
     libminijail.vendor \
     libmodem_ml_svc_proto \
     libmodem_svc_proto_legacy_soong \
+    libnbaio_mono \
     libnetutils.vendor \
     libnos_citadeld_proxy \
     libnos_client_citadel \
@@ -382,7 +392,6 @@ PRODUCT_PACKAGES += \
     libqfp-service \
     libqfpsuez \
     libqfstrusty_intf \
-    libreverbaidl \
     libril_gfeature \
     libril_sitril \
     libril-aidl \
@@ -411,14 +420,15 @@ PRODUCT_PACKAGES += \
     libtachyon_core \
     libtachyon_dsp_core \
     libthermal_tflite_wrapper \
+    libtinyalsav2.vendor \
     libtinycompress \
     libtouchflow \
     libtrusty_metrics \
     libunwindstack.vendor \
     libusf \
     libutils-default \
-    libvisualizeraidl \
     libwlcproto_aidl-default \
+    libxml2.vendor \
     libziparchive.vendor \
     manifest_input.processor-service \
     manifest_radioext \
@@ -3576,7 +3586,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tokay/proprietary/vendor/etc/displayconfig/display_port_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_port_0.xml \
     vendor/google_devices/tokay/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
     vendor/google_devices/tokay/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    vendor/google_devices/tokay/proprietary/vendor/etc/mixer_paths_aidl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_aidl.xml \
     vendor/google_devices/tokay/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
     vendor/google_devices/tokay/proprietary/vendor/etc/permissions/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     vendor/google_devices/tokay/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml \
