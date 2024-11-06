@@ -26,7 +26,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.build.expect.bootloader=cloudripper-15.0-11969070 \
     dalvik.vm.isa.arm.variant=cortex-a53 \
     dalvik.vm.isa.arm.features=default \
-    ro.vendor.build.svn=62 \
+    ro.vendor.build.svn=64 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
@@ -40,7 +40,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.fingerprint.ta.name=g7.app \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/cheetah/cheetah:15/AP3A.241005.015/12366759:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/cheetah/cheetah:15/AP3A.241105.007/12470370:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \

@@ -37,7 +37,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.uwb.calibration.calibrationpaths=/vendor/etc/uwb/calib_paths \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/tangorpro/tangorpro:15/AP3A.241005.015/12366759:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/tangorpro/tangorpro:15/AP3A.241105.007/12470370:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \

@@ -26,7 +26,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.build.expect.baseband=g5300i-240704-240912-B-12358532 \
     ro.build.expect.bootloader=ripcurrent-15.0-12059390 \
-    ro.vendor.build.svn=39 \
+    ro.vendor.build.svn=41 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
@@ -39,7 +39,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ril.ecc.use.xml=1 \
     ro.vendor.fingerprint.ta.name=g7.app
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/shiba/shiba:15/AP3A.241005.015/12366759:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/shiba/shiba:15/AP3A.241105.007/12470370:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \

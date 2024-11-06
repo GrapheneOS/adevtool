@@ -770,17 +770,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.dolby.media.c2@1.0-service",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/hw/vendor.dolby.media.c2@1.0-service" ],
-    relative_install_path: "hw",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.google.aam-service",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/vendor.google.aam-service" ],
@@ -1890,42 +1879,9 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_soft_ddpdec",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/libcodec2_soft_ddpdec.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_store_dolby",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/libcodec2_store_dolby.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libcustomgnss",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libcustomgnss.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdapparamstorage",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/libdapparamstorage.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1948,17 +1904,6 @@ cc_prebuilt_library_shared {
     name: "libdarwinn_hal",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libdarwinn_hal.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdeccfg",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/libdeccfg.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -3177,15 +3122,6 @@ prebuilt_etc_xml {
     name: "pixel-gnss-default",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/pixel-gnss-default.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "vendor.dolby.media.c2@1.0-service__2",
-    owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

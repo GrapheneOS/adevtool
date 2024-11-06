@@ -478,7 +478,6 @@ vendor/bin/hw/google.hardware.media.c2@2.0-service
 vendor/bin/hw/init_citadel
 vendor/bin/hw/rild_exynos
 vendor/bin/hw/samsung.hardware.media.c2@1.2-service
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.google.aam-service
 vendor/bin/hw/vendor.google.audiometricext@1.0-service-vendor
 vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
@@ -664,7 +663,6 @@ vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc
 vendor/etc/init/securedpud.slider.rc
 vendor/etc/init/trusty_metricsd.rc
 vendor/etc/init/twoshay.rc
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.google.aam.rc
 vendor/etc/init/vendor.google.audiometricext@1.0-service-vendor.rc
 vendor/etc/init/vendor.google.battery_mitigation-default.rc
@@ -680,7 +678,6 @@ vendor/etc/input_classifier_model.pb
 vendor/etc/libg3a_standalone_gabc_rc
 vendor/etc/libg3a_standalone_gaf_rc
 vendor/etc/libg3a_standalone_ghawb_rc
-vendor/etc/media_codecs_dolby_c2.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/modem_stat.conf
 vendor/etc/open_carrier_info.dat
@@ -726,7 +723,6 @@ vendor/etc/vintf/manifest/manifest_input.processor-service.xml
 vendor/etc/vintf/manifest/manifest_radioext.xml
 vendor/etc/vintf/manifest/manifest_wifi_ext_aidl.xml
 vendor/etc/vintf/manifest/pixel-gnss-default.xml
-vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.google.aam.xml
 vendor/etc/vintf/manifest/vendor.google.battery_mitigation-default.xml
 vendor/etc/vintf/manifest/vendor.google.edgetpu_vendor_service@1.0-service.xml
@@ -2005,13 +2001,9 @@ vendor/lib64/libaocx.so
 vendor/lib64/libbw_av1dec.so
 vendor/lib64/libbw_av1enc.so
 vendor/lib64/libc2filterplugin.so
-vendor/lib64/libcodec2_soft_ddpdec.so
-vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libcustomgnss.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdarwinn_dba_hal_runtime.so
 vendor/lib64/libdarwinn_hal.so
-vendor/lib64/libdeccfg.so
 vendor/lib64/libdeeptouch.so
 vendor/lib64/libdisplaycolor.so
 vendor/lib64/libedgetpu_client.google.so

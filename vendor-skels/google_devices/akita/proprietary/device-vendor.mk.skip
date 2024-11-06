@@ -46,8 +46,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.build.expect.baseband=g5300o-240704-240912-B-12358532 \
     ro.build.expect.bootloader=akita-15.0-12059390 \
     persist.vendor.gps.hal.service.name=vendor \
-    ro.vendor.build.svn=22 \
+    ro.vendor.build.svn=24 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
+    ro.vendor.primarydisplay.google-ak3b.temperature_path=/dev/thermal/tz-by-name/display_therm/temp \
+    ro.vendor.display.read_temp_interval=30 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
     vendor.battery_mitigation.aidl.enable=true \
@@ -56,8 +58,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.rild.libpath=libsitril.so \
     persist.vendor.ril.support_nr_ds=1 \
     persist.vendor.ril.ecc.use.xml=1 \
-    ro.vendor.fingerprint.ta.name=g7a.app \
-    ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
+    ro.vendor.fingerprint.ta.name=g7a.app
 
 PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.model_for_attestation=Pixel 8a \
@@ -66,7 +67,7 @@ PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.device_for_attestation=akita \
     ro.product.manufacturer_for_attestation=Google
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/akita/akita:15/AP3A.241005.015/12366759:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/akita/akita:15/AP3A.241105.007/12470370:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \
@@ -305,18 +306,13 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_hidl@1.1.vendor \
     libcodec2_hidl@1.2.vendor \
-    libcodec2_soft_common.vendor \
-    libcodec2_soft_ddpdec \
-    libcodec2_store_dolby \
     libcodec2_vndk.vendor \
     libcodec2.vendor \
     libcppbor.vendor \
     libcppcose_rkp.vendor \
     libcustomgnss \
-    libdapparamstorage \
     libdarwinn_dba_hal_runtime \
     libdarwinn_hal \
-    libdeccfg \
     libdeeptouch \
     libdisplaycolor \
     libdmengine__product \
@@ -482,8 +478,6 @@ PRODUCT_PACKAGES += \
     vendor_chre_atoms_log \
     vendor_chre_metrics-cpp \
     vendor-pixelatoms-cpp \
-    vendor.dolby.media.c2@1.0-service \
-    vendor.dolby.media.c2@1.0-service__2 \
     vendor.google.aam \
     vendor.google.aam-service \
     vendor.google.aam-V2-ndk \
@@ -980,7 +974,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/securedpud.slider.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/securedpud.slider.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/trusty_metricsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusty_metricsd.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/twoshay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/twoshay.rc \
-    vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.aam.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.aam.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.audiometricext@1.0-service-vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.audiometricext@1.0-service-vendor.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.battery_mitigation-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.battery_mitigation-default.rc \
@@ -2317,7 +2310,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_DEFAULT.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_DEFAULT.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_ICCID.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_ICCID.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/displayconfig/display_port_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_port_0.xml \
-    vendor/google_devices/akita/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/permissions/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
