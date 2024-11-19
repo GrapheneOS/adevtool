@@ -4,6 +4,7 @@ includes:
 
 device:
   build_id: AP3A.241105.008
+  kernel_repo_url: https://android.googlesource.com/kernel/common
 
 platform:
   sepolicy_dirs:

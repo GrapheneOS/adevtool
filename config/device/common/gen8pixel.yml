@@ -2,6 +2,9 @@ includes:
   - pixel.yml
   - gs.yml
 
+device:
+  kernel_repo_url: https://android.googlesource.com/kernel/common
+
 platform:
   sepolicy_dirs:
     - device/google/zuma-sepolicy
