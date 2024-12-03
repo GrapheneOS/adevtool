@@ -298,6 +298,12 @@ barbet AP2A.240805.005:
   ota: 44633b16c66bd19bdf160bf6d65af95b7d038c8a172a972f4f38843146d06ffe barbet-ota-ap2a.240805.005-44633b16.zip
   vendor/google_devices: d1ac39e330b281f95640bc2f44a8901ac6e5359cd9954220cbee82bc8a8df50b google_devices-barbet-ap2a.240805.005-a0da9c40.tgz
   vendor/qcom: 286603f0a3593345fe1892aade7a7f03330aca407ed8db9c847aac4f9928ac70 qcom-barbet-ap2a.240805.005-4480b6d7.tgz
+barbet AP2A.240805.005.S4:
+  desc: Nov 2024
+  factory: eb064cd61c8e95ace5f2e2a3c2f29d72fb716f2cc4fa12d742c2fae9c934002c barbet-ap2a.240805.005.s4-factory-eb064cd6.zip
+  ota: 65a8b7c3a4ad3a14a0b5b38b24adb05e64ba7f69d03b40e82e33260cc7ef8c33 barbet-ota-ap2a.240805.005.s4-65a8b7c3.zip
+  vendor/google_devices: 2bd73b6d06392e9946a2b2527f0d91b2f478df411c428e5b68a0fa28b50ac4c1 google_devices-barbet-ap2a.240805.005.s4-104d90f1.tgz
+  vendor/qcom: 552260d1705d70ea5ff4759acb10f9527882f8ae7aa9a21006f69c565e7edfdd qcom-barbet-ap2a.240805.005.s4-4b71630d.tgz
 redfin RD1A.200810.020:
   desc: Oct 2020, AU & JP carriers
   factory: c3ea1715c2f96254cc279b4602f967a57fc2a94bb464d296445b9928eec0e974 redfin-rd1a.200810.020-factory-c3ea1715.zip

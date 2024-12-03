@@ -10,8 +10,8 @@ PRODUCT_MODEL := Pixel 5a
 PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
 
-ifneq ($(BUILD_ID),AP2A.240805.005)
-  $(error BUILD_ID: expected AP2A.240805.005, got $(BUILD_ID))
+ifneq ($(BUILD_ID),AP2A.240805.005.S4)
+  $(error BUILD_ID: expected AP2A.240805.005.S4, got $(BUILD_ID))
 endif
 
 ifneq ($(PLATFORM_SECURITY_PATCH),2024-09-01)

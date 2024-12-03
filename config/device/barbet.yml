@@ -1,6 +1,6 @@
 device:
   name: barbet
-  build_id: AP2A.240805.005
+  build_id: AP2A.240805.005.S4
   platform_security_patch_level_override: 2024-09-01
 
 platform:
