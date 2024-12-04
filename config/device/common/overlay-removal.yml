@@ -58,6 +58,8 @@ filters:
       # "Face unlock" is not shipped
       - /config_face_
       - /face_acquired
+    suffix:
+      - config_avatar_picker_package
     match:
       - android:bool/config_pauseWallpaperRenderWhenStateChangeEnabled
       - android:bool/config_adaptive_sleep_available
@@ -121,6 +123,7 @@ filters:
       - android:string-array/config_primaryCredentialProviderService
       - android:string-array/config_priorityOnlyDndExemptPackages
       - android:string-array/config_priorityOnlyDndExemptPackages
+      - android:string-array/config_profcollectOnCameraOpenedSkipPackages # com.google.android.as
       # first appeared in Pixel Fold 14 QPR1 image
       - android:string-array/default_wallpaper_component_per_device_color
       # set to Google Camera
@@ -219,8 +222,10 @@ filters:
       - android:string/config_recentsComponentName
       - android:string/config_retailDemoPackage
       - android:string/config_retailDemoPackageSignature
+      - android:string/config_satellite_demo_mode_sos_intent_action # com.google.android.apps.stargate.ACTION_ESOS_DEMO
       - android:string/config_satellite_emergency_handover_intent_action
       - android:string/config_satellite_service_package
+      - android:string/config_satellite_test_with_esp_replies_intent_action # com.google.android.apps.stargate.ACTION_ESOS_QUESTIONNAIRE_TEST_WITH_ESP_REPLIES
       - android:string/config_secondaryHomePackage
       - android:string/config_secondaryLocationTimeZoneProviderPackageName
       - android:string/config_servicesExtensionPackage
@@ -254,6 +259,8 @@ filters:
       - android:string/config_wallpaperCropperPackage
       - android:string/default_wallpaper_component
       - android:string/harmful_app_warning_title
+      - android:string/identity_check_settings_action # com.google.android.gms.personalsafety.settings.IDENTITY_CHECK_SWITCH
+      - android:string/identity_check_settings_package_name # com.google.android.gms
       - android:string/widget_default_class_name
       - android:string/widget_default_package_name
       - com.android.networkstack/NetworkStackConfig:bool/config_dhcp_client_hostname

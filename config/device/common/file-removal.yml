@@ -220,7 +220,7 @@ filters:
       - product/app/SafetyRegulatoryInfo/
       # com.google.android.accessibility.soundamplifier
       - product/app/SoundAmplifierPrebuilt
-      - product/app/SoundPickerPrebuilt/
+      - product/app/SoundPickerPrebuilt
       # com.google.android.accessibility.switchaccess
       - product/app/SwitchAccessPrebuilt
       - product/app/TrichromeLibrary/
@@ -285,7 +285,7 @@ filters:
       - product/priv-app/Dreamliner
       # appeared in 14 QPR2 on Pixel Tablet, com.google.android.apps.pixel.ensemble
       - product/priv-app/EnsemblePrebuilt-stub/
-      - product/priv-app/FamilySpacePrebuilt/
+      - product/priv-app/FamilySpacePrebuilt
       - product/priv-app/FilesPrebuilt/
       # "Google Connectivity Services", https://play.google.com/store/apps/details?id=com.google.android.apps.gcs
       - product/priv-app/GCS/
@@ -308,7 +308,7 @@ filters:
       - product/priv-app/KidsSupervisionStub/
       # "Google Pixel Buds" app, com.google.android.apps.wearables.maestro.companion
       - product/priv-app/MaestroPrebuilt/
-      - product/priv-app/OTAConfigNoZeroTouchPrebuilt/
+      - product/priv-app/OTAConfigNoZeroTouchPrebuilt
       # "Google Play Protect Service", https://play.google.com/store/apps/details?id=com.google.android.odad
       - product/priv-app/OdadPrebuilt/
       - product/priv-app/OemDmTrigger/
@@ -316,7 +316,7 @@ filters:
       # Play Store app (com.android.vending)
       - product/priv-app/Phonesky/
       - product/priv-app/PixelAIPrebuilt/
-      - product/priv-app/PixelLiveWallpaperPrebuilt/
+      - product/priv-app/PixelLiveWallpaperPrebuilt
       - product/priv-app/PixelSupportPrebuilt/
       # "Messages by Google", com.google.android.apps.messaging
       - product/priv-app/PrebuiltBugle/
