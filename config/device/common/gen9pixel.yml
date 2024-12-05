@@ -2,9 +2,6 @@ includes:
   - pixel.yml
   - gs.yml
 
-device:
-  build_id: AP3A.241105.008
-
 platform:
   sepolicy_dirs:
     - device/google/zumapro-sepolicy
