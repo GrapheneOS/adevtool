@@ -1,5 +1,5 @@
 canonical_name: "lmt_lv"
-version: 60000000013
+version: 62000000013
 apns {
   apn {
     name: "LMT LV"
@@ -118,5 +118,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720164590
+  seconds: 1721185492
 }

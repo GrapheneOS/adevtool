@@ -1,5 +1,5 @@
 canonical_name: "dish5gsa_us"
-version: 60000000001
+version: 62000000002
 apns {
   apn {
     name: "internet"
@@ -120,6 +120,10 @@ configs {
     int_value: 1430
   }
   config {
+    key: "ims.registration_retry_max_timer_millis_int"
+    int_value: 300000
+  }
+  config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
     int_array {
       item: 6
@@ -185,6 +189,16 @@ configs {
     key: "imsss.ut_terminal_based_services_int_array"
     int_array {
       item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
     }
   }
   config {
@@ -288,6 +302,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
     key: "maxMessageSize"
     int_value: 1048576
   }
@@ -347,5 +365,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1716977029
+  seconds: 1724912506
 }

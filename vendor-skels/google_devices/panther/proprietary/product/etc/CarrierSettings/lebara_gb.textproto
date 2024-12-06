@@ -1,5 +1,5 @@
 canonical_name: "lebara_gb"
-version: 60000000005
+version: 62000000006
 apns {
   apn {
     name: "Lebara Internet"
@@ -27,12 +27,6 @@ apns {
 }
 configs {
   config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
-  }
-  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -57,6 +51,88 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.registration_event_package_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 180000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 180000
+  }
+  config {
+    key: "imsvoice.session_refresh_method_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 0
+  }
+  config {
     key: "read_only_apn_types_string_array"
     text_array {
       item: "*"
@@ -76,5 +152,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173359
+  seconds: 1724912472
 }

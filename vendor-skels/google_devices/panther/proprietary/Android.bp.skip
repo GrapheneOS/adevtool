@@ -291,6 +291,16 @@ android_app_import {
 }
 
 android_app_import {
+    name: "PixelIwlan",
+    owner: "google_devices",
+    apk: "system_ext/priv-app/PixelIwlan/PixelIwlan.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: { enabled: false },
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "PixelNfc",
     owner: "google_devices",
     apk: "system_ext/priv-app/PixelNfc/PixelNfc.apk",
@@ -464,17 +474,6 @@ cc_prebuilt_binary {
     name: "android.hardware.bluetooth-service.bcmbtlinux",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.bluetooth-service.bcmbtlinux" ],
-    relative_install_path: "hw",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.confirmationui-service.trusty.vendor",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/hw/android.hardware.confirmationui-service.trusty.vendor" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -849,16 +848,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "securedpud.slider",
-    owner: "google_devices",
-    srcs: [ "vendor/bin/securedpud.slider" ],
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "trusty_metricsd",
     owner: "google_devices",
     srcs: [ "vendor/bin/trusty_metricsd" ],
@@ -918,27 +907,9 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ambient_micro",
-    owner: "google_devices",
-    src: "vendor/etc/chre/ambient_micro.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
     name: "ambient_volume",
     owner: "google_devices",
     src: "vendor/etc/chre/ambient_volume.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "ambient",
-    owner: "google_devices",
-    src: "vendor/etc/chre/ambient.so",
     filename_from_src: true,
     sub_dir: "chre",
     soc_specific: true,
@@ -1089,6 +1060,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "sensorcollector",
+    owner: "google_devices",
+    src: "vendor/etc/chre/sensorcollector.so",
+    filename_from_src: true,
+    sub_dir: "chre",
+    soc_specific: true,
+}
+
+prebuilt_etc {
     name: "smartbatching",
     owner: "google_devices",
     src: "vendor/etc/chre/smartbatching.so",
@@ -1135,19 +1115,6 @@ cc_prebuilt_library_shared {
     name: "android.hardware.authsecret-impl.nos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.authsecret-impl.nos.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.confirmationui.secure_input_citadel",
-    owner: "google_devices",
-    target: {
-        android_arm64: { srcs: [ "vendor/lib64/android.hardware.confirmationui.secure_input_citadel.so" ] }
-    },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1213,6 +1180,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "aoc_aconfig_flags_c_lib",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/aoc_aconfig_flags_c_lib.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "aoc_aud_ext",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/aoc_aud_ext.so" ] } },
@@ -1235,9 +1213,9 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "aocx-ndk",
+    name: "aocx-V1-ndk",
     owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/aocx-ndk.so" ] } },
+    target: { android_arm64: { srcs: [ "vendor/lib64/aocx-V1-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2270,17 +2248,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libOpenCL",
-    owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/libOpenCL.so" ] } },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    strip: { none: true },
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libril_gfeature",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libril_gfeature.so" ] } },
@@ -2654,10 +2621,10 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V2-ndk",
+    name: "vendor.google.whitechapel.audio.extension-V3-ndk",
     owner: "google_devices",
     target: {
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" ] }
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V3-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -2678,10 +2645,10 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.wireless_charger.service-V1-ndk",
+    name: "vendor.google.wireless_charger.service-V2-ndk",
     owner: "google_devices",
     target: {
-        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V1-ndk.so" ] }
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger.service-V2-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -2814,15 +2781,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.confirmationui-service.trusty.vendor__2",
-    owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/android.hardware.confirmationui-service.trusty.vendor.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.contexthub-service.generic__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.contexthub-service.generic.xml",
@@ -2871,6 +2829,15 @@ prebuilt_etc_xml {
     name: "android.hardware.weaver-service.citadel__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "com.google.android.imageprocessing.hal-default",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/com.google.android.imageprocessing.hal-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

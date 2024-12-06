@@ -1,5 +1,5 @@
 canonical_name: "telekom_sk"
-version: 60000000012
+version: 62000000013
 apns {
   apn {
     name: "Internet"
@@ -32,8 +32,20 @@ apns {
 }
 configs {
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 1
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -143,6 +155,66 @@ configs {
     }
   }
   config {
+    key: "qns.condition_rove_in_idle_wifi_pref_home_string_array"
+    text_array {
+      item: "Condition:WIFI_GOOD"
+    }
+  }
+  config {
+    key: "qns.condition_rove_in_idle_wifi_pref_roam_string_array"
+    text_array {
+      item: "Condition:WIFI_GOOD"
+    }
+  }
+  config {
+    key: "qns.condition_rove_out_idle_wifi_pref_home_string_array"
+    text_array {
+      item: "Condition:WIFI_BAD"
+    }
+  }
+  config {
+    key: "qns.condition_rove_out_idle_wifi_pref_roam_string_array"
+    text_array {
+      item: "Condition:WIFI_BAD"
+    }
+  }
+  config {
+    key: "qns.idle_geran_rssi_int_array"
+    int_array {
+      item: -89
+      item: -106
+    }
+  }
+  config {
+    key: "qns.idle_utran_rscp_int_array"
+    int_array {
+      item: -99
+      item: -103
+    }
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.override_cell_pref_to_ims_pref_home"
+    bool_value: true
+  }
+  config {
+    key: "qns.voice_geran_rssi_int_array"
+    int_array {
+      item: -89
+      item: -102
+    }
+  }
+  config {
+    key: "qns.voice_utran_rscp_int_array"
+    int_array {
+      item: -89
+      item: -105
+    }
+  }
+  config {
     key: "qns.xcap_transport_type_int"
     int_value: 0
   }
@@ -156,5 +228,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1714533646
+  seconds: 1726812761
 }

@@ -37,11 +37,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.google.android.apps.pixel.dcservice domain=dcservice_app type=privapp_data_file levelFrom=user
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.google.android.apps.pixel.dcservice.ui domain=dcservice_app type=privapp_data_file levelFrom=user
 
-# Missing product SELinux context: user=_app isPrivApp=true seinfo=google name=com.google.android.GoogleCamera domain=google_camera_app type=app_data_file levelFrom=all
-# Missing product SELinux context: user=_app seinfo=CameraEng name=com.google.android.GoogleCameraEng domain=debug_camera_app type=app_data_file levelFrom=all
-# Missing product SELinux context: user=_app seinfo=CameraFishfood name=com.google.android.apps.googlecamera.fishfood domain=google_camera_app type=app_data_file levelFrom=all
-# Missing product SELinux context: user=_app seinfo=CameraEng name=com.google.android.apps.googlecamera.fishfood domain=debug_camera_app type=app_data_file levelFrom=all
-
 BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/google_devices/shiba/sepolicy
 

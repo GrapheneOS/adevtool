@@ -1,5 +1,5 @@
 canonical_name: "attmvnos_us"
-version: 60000000020
+version: 62000000021
 apns {
   apn {
     name: "MVNO Reseller"
@@ -107,13 +107,6 @@ configs {
       item: "default"
       item: "dun"
       item: "supl"
-    }
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-      item: 2
     }
   }
   config {
@@ -808,5 +801,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715771932
+  seconds: 1724912472
 }

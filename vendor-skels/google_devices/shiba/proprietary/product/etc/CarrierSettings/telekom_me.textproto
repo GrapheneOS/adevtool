@@ -1,5 +1,5 @@
 canonical_name: "telekom_me"
-version: 60000000004
+version: 62000000004
 apns {
   apn {
     name: "T-Mobile ME Internet"
@@ -31,12 +31,6 @@ apns {
 }
 configs {
   config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
-  }
-  config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
   }
@@ -49,10 +43,69 @@ configs {
     bool_value: false
   }
   config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE# - #MODEL# - #BUILD#"
+  }
+  config {
+    key: "ims.keep_pdn_up_in_no_vops_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 3000
+  }
+  config {
     key: "imsss.ut_iptype_roaming_int"
     int_value: 0
   }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
 }
 last_updated {
-  seconds: 1722173396
+  seconds: 1724912506
 }
