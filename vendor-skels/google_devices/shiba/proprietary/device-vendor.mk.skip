@@ -900,8 +900,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/shiba/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1-m40.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1-m40.img \
     vendor/google_devices/shiba/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1-m41.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1-m41.img \
     vendor/google_devices/shiba/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1.img \
-    vendor/google_devices/shiba/proprietary/vendor/boot_otas/boot_ota_16k.zip:$(TARGET_COPY_OUT_VENDOR)/boot_otas/boot_ota_16k.zip \
-    vendor/google_devices/shiba/proprietary/vendor/boot_otas/boot_ota_4k.zip:$(TARGET_COPY_OUT_VENDOR)/boot_otas/boot_ota_4k.zip \
     vendor/google_devices/shiba/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
     vendor/google_devices/shiba/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/google_devices/shiba/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \

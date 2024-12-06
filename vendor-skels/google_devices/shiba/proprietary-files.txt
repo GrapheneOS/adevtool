@@ -532,8 +532,6 @@ vendor/bin/twoshay
 vendor/bin/umfw_stat_tool
 vendor/bin/usf_stats
 vendor/bin/wfc-pkt-router
-vendor/boot_otas/boot_ota_16k.zip
-vendor/boot_otas/boot_ota_4k.zip
 vendor/etc/atc_profile.json
 vendor/etc/bluetooth/bt_vendor.conf
 vendor/etc/chre/activity.napp_header

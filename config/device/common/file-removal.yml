@@ -450,3 +450,4 @@ filters:
       - product/etc/preferred-apps/
       # fs-verity certificates for GmsCore and Play Store
       - product/etc/security/fsverity/
+      - vendor/boot_otas/
