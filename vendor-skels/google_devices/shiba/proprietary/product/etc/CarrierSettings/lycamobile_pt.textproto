@@ -1,0 +1,33 @@
+canonical_name: "lycamobile_pt"
+version: 62000000001
+apns {
+  apn {
+    name: "lycamobile"
+    value: "data.lycamobile.pt"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "support_conference_call_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1726812784
+}

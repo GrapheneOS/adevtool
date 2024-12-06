@@ -1,5 +1,5 @@
 canonical_name: "tango_lu"
-version: 60000000002
+version: 62000000003
 apns {
   apn {
     name: "Tango Internet"
@@ -56,8 +56,55 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
     key: "imsss.ut_as_server_port_int"
     int_value: 8080
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
   }
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
@@ -72,5 +119,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519152
+  seconds: 1724912506
 }

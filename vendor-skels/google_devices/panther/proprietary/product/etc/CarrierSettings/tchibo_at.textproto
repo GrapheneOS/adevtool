@@ -1,5 +1,5 @@
 canonical_name: "tchibo_at"
-version: 60000000001
+version: 62000000001
 apns {
   apn {
     name: "Tchibo internet"
@@ -24,5 +24,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718316536
+  seconds: 1718786026
 }
