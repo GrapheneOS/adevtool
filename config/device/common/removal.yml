@@ -61,6 +61,8 @@ filters:
       - debug.sf.enable_egl_image_tracker
 
   sepolicy_dirs:
+    prefix:
+      - device/google/gs-common/gcam_app/
     match:
       - hardware/google/pixel-sepolicy/googlebattery
       - hardware/google/pixel-sepolicy/flipendo
