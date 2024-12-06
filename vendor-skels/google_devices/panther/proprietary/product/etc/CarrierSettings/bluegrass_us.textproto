@@ -1,5 +1,5 @@
 canonical_name: "bluegrass_us"
-version: 62000000023
+version: 60000000024
 apns {
   apn {
     name: "Bluegrass"
@@ -206,6 +206,12 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "Bluegrass Cellular"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -1578,5 +1584,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721964267
+  seconds: 1722173359
 }

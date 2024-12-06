@@ -1,5 +1,5 @@
 canonical_name: "siminn_is"
-version: 62000000005
+version: 60000000005
 apns {
   apn {
     name: "Siminn Internet"

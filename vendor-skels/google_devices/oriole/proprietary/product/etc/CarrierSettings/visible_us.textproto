@@ -1,5 +1,5 @@
 canonical_name: "visible_us"
-version: 62000004483
+version: 60000004484
 apns {
   apn {
     name: "Visible"
@@ -192,6 +192,12 @@ configs {
       item: "dun"
       item: "supl"
       item: "mms"
+    }
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
     }
   }
   config {
@@ -1137,5 +1143,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721964254
+  seconds: 1722173344
 }

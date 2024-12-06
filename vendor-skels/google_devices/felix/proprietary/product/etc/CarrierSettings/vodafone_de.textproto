@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 62000000012
+version: 60000000011
 apns {
   apn {
     name: "Vodafone DE"
@@ -33,6 +33,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_cross_sim_ims_available_bool"
+    bool_value: false
+  }
   config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
@@ -284,5 +288,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718176748
+  seconds: 1716977005
 }

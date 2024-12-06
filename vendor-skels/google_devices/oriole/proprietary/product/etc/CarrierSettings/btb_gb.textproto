@@ -1,5 +1,5 @@
 canonical_name: "btb_gb"
-version: 62000000481
+version: 60000000481
 apns {
   apn {
     name: "IMS"

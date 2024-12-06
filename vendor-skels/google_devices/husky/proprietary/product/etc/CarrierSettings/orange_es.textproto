@@ -1,5 +1,5 @@
 canonical_name: "orange_es"
-version: 62000000014
+version: 60000000014
 apns {
   apn {
     name: "Orange Internet M\303\263vil"

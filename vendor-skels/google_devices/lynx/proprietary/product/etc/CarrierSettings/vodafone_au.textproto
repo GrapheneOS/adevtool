@@ -1,5 +1,5 @@
 canonical_name: "vodafone_au"
-version: 62000000010
+version: 60000000010
 apns {
   apn {
     name: "Vodafone AU"

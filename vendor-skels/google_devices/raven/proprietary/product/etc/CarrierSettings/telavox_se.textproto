@@ -1,5 +1,5 @@
 canonical_name: "telavox_se"
-version: 62000000004
+version: 60000000001
 apns {
   apn {
     name: "Telavox internet"
@@ -12,14 +12,12 @@ apns {
   apn {
     name: "Telavox MMS"
     value: "mms"
-    type: MMS
     mmsc: "http://mms.media"
   }
   apn {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -28,74 +26,10 @@ apns {
 }
 configs {
   config {
-    key: "carrier_default_wfc_ims_enabled_bool"
-    bool_value: false
-  }
-  config {
-    key: "carrier_default_wfc_ims_mode_int"
-    int_value: 1
-  }
-  config {
     key: "ims.sip_over_ipsec_enabled_bool"
     bool_value: false
   }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
-  }
-  config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
-    int_array {
-    }
-  }
-  config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
-    bundle {
-      config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
-        }
-      }
-    }
-  }
-  config {
-    key: "iwlan.add_ke_to_child_session_rekey_bool"
-    bool_value: true
-  }
-  config {
-    key: "iwlan.diffie_hellman_groups_int_array"
-    int_array {
-      item: 14
-    }
-  }
-  config {
-    key: "wfc_spn_format_idx_int"
-    int_value: 7
-  }
 }
 last_updated {
-  seconds: 1726812748
+  seconds: 1720164562
 }

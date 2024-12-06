@@ -1,5 +1,5 @@
 canonical_name: "btc_gb"
-version: 62000000014
+version: 60000000014
 apns {
   apn {
     name: "IMS"

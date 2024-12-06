@@ -1,5 +1,5 @@
 canonical_name: "sasktel_ca"
-version: 62000000012
+version: 60000000011
 apns {
   apn {
     name: "SaskTel"
@@ -90,10 +90,6 @@ configs {
   config {
     key: "ims.registration_subscribe_expiry_timer_sec_int"
     int_value: 43200
-  }
-  config {
-    key: "ims.request_uri_type_int"
-    int_value: 1
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -284,5 +280,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725429745
+  seconds: 1715895699
 }

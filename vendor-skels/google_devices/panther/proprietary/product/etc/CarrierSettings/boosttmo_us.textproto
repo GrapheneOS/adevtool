@@ -1,5 +1,5 @@
 canonical_name: "boosttmo_us"
-version: 62000000041
+version: 60000000041
 apns {
   apn {
     name: "Internet"

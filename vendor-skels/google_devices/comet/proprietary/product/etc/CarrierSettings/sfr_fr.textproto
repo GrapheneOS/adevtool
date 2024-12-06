@@ -1,5 +1,5 @@
 canonical_name: "sfr_fr"
-version: 62000000007
+version: 60000000008
 apns {
   apn {
     name: "SFR webphone"
@@ -41,6 +41,12 @@ configs {
     key: "carrier_certificate_string_array"
     text_array {
       item: "5f00d30d66af74dd43e98a00695362719d8e7c9e7de367b962769cdfe12bd9da:com.sfr.otp,com.sfr.mobileconnect,com.sfr.android.moncompte,com.sfr.android.redmoncompte"
+    }
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
     }
   }
   config {
@@ -246,5 +252,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185512
+  seconds: 1722173420
 }

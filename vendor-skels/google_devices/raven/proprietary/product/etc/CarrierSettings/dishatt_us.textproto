@@ -1,5 +1,5 @@
 canonical_name: "dishatt_us"
-version: 62000000027
+version: 60000000027
 apns {
   apn {
     name: "ereseller"

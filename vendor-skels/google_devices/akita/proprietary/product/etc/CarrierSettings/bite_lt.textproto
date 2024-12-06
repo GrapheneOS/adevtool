@@ -1,5 +1,5 @@
 canonical_name: "bite_lt"
-version: 62000000014
+version: 60000000014
 apns {
   apn {
     name: "Bite Internet"
@@ -128,5 +128,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718786052
+  seconds: 1718316570
 }

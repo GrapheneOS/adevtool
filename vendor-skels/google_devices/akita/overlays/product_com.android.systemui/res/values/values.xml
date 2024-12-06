@@ -3,13 +3,11 @@
      For more info, see https://github.com/GrapheneOS/adevtool -->
 <resources>
   <bool name="config_battery_index_enabled">true</bool>
-  <bool name="config_charge_limit_discovery_enabled">true</bool>
   <bool name="config_hspa_data_distinguishable">true</bool>
   <bool name="config_nfc_conflict_with_usb_audio">true</bool>
   <bool name="config_nfc_conflict_with_wlc">true</bool>
   <bool name="config_screen_protector_notification_enabled">true</bool>
   <bool name="config_vibrateOnIconAnimation">true</bool>
-  <bool name="config_wireless_charging_warning_enabled">true</bool>
   <integer-array name="config_nfc_conflict_with_usb_audio_productid">
     <item>20532</item>
   </integer-array>

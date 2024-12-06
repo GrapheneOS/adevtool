@@ -1,5 +1,5 @@
 canonical_name: "sky_gb"
-version: 62000000019
+version: 60000000018
 apns {
   apn {
     name: "SKY MMS"
@@ -54,6 +54,12 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -90,23 +96,6 @@ configs {
     text_value: "xcap.ims.mnc057.mcc234.pub.3gppnetwork.org"
   }
   config {
-    key: "imsss.ut_server_based_services_int_array"
-    int_array {
-      item: 1
-      item: 2
-      item: 3
-      item: 4
-      item: 5
-      item: 6
-      item: 7
-      item: 15
-      item: 19
-      item: 8
-      item: 11
-      item: 9
-    }
-  }
-  config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
       item: 5
@@ -141,12 +130,6 @@ configs {
           item: 96
         }
       }
-      config {
-        key: "imsvoice.evs_payload_type_int_array"
-        int_array {
-          item: 127
-        }
-      }
     }
   }
   config {
@@ -156,35 +139,6 @@ configs {
   config {
     key: "imsvoice.dedicated_bearer_wait_timer_millis_int"
     int_value: 10000
-  }
-  config {
-    key: "imsvoice.evs_payload_description_bundle"
-    bundle {
-      config {
-        key: "127"
-        bundle {
-          config {
-            key: "imsvoice.codec_attribute_cmr_int"
-            int_value: 2
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-            int_value: 255
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_hf_only_int"
-            int_value: 0
-          }
-        }
-      }
-    }
   }
   config {
     key: "imsvoice.minimum_session_expires_timer_sec_int"
@@ -229,5 +183,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912460
+  seconds: 1722173351
 }

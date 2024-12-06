@@ -1,5 +1,5 @@
 canonical_name: "swisscom_ch"
-version: 62000000016
+version: 60000000017
 apns {
   apn {
     name: "Swisscom Services"
@@ -64,6 +64,12 @@ configs {
   config {
     key: "carrier_ims_gba_required_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -449,5 +455,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185440
+  seconds: 1722173351
 }

@@ -1,5 +1,5 @@
 canonical_name: "stc_sa"
-version: 62000000630
+version: 60000000630
 apns {
   apn {
     name: "STC - GPRS"

@@ -34,7 +34,6 @@
   <bool name="config_allowRotationResolver">false</bool>
   <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
   <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
-  <bool name="config_biometricFrrNotificationEnabled">false</bool>
   <bool name="config_buttonTextAllCaps">false</bool>
   <bool name="config_enableAutoPowerModes">true</bool>
   <bool name="config_enableMultiUserUI">true</bool>
@@ -47,7 +46,6 @@
   <bool name="config_isCompatFakeFocusEnabled">true</bool>
   <bool name="config_isWindowManagerCameraCompatSplitScreenAspectRatioEnabled">true</bool>
   <bool name="config_isWindowManagerCameraCompatTreatmentEnabled">true</bool>
-  <bool name="config_keyboardVibrationSettingsSupported">true</bool>
   <bool name="config_keyguardUserSwitcher">false</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
   <bool name="config_letterboxIsDisplayAspectRatioForFixedOrientationLetterboxEnabled">true</bool>
@@ -61,7 +59,6 @@
   <bool name="config_localDisplaysMirrorContent">false</bool>
   <bool name="config_matchSecondaryInternalDisplaysOrientationToReverseDefaultDisplay">true</bool>
   <bool name="config_offsetWallpaperToCenterOfLargestDisplay">true</bool>
-  <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
   <bool name="config_showUserSwitcherByDefault">false</bool>
@@ -165,7 +162,6 @@
   <integer name="config_globalActionsKeyTimeout">750</integer>
   <integer name="config_letterboxActivityCornersRadius">-1</integer>
   <integer name="config_longPressOnPowerDurationMs">750</integer>
-  <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <integer name="config_pauseRotationWhenUnfolding_displaySwitchTimeout">1000</integer>
   <integer name="config_pauseRotationWhenUnfolding_hingeEventTimeout">400</integer>
   <integer name="config_pauseRotationWhenUnfolding_maxHingeAngle">165</integer>

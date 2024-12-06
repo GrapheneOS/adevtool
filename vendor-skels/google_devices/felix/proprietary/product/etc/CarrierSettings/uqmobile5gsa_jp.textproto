@@ -1,5 +1,5 @@
 canonical_name: "uqmobile5gsa_jp"
-version: 62000000009
+version: 60000000008
 apns {
   apn {
     name: "UQ mobile"
@@ -153,6 +153,13 @@ configs {
   config {
     key: "disable_dun_apn_while_roaming_with_preset_apn_bool"
     bool_value: true
+  }
+  config {
+    key: "emergency_number_prefix_string_array"
+    text_array {
+      item: "184"
+      item: "186"
+    }
   }
   config {
     key: "enabledMMS"
@@ -458,5 +465,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1717749051
+  seconds: 1714533657
 }

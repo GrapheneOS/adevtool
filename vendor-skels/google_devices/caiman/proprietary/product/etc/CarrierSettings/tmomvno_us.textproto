@@ -1,5 +1,5 @@
 canonical_name: "tmomvno_us"
-version: 62000000012
+version: 60000000012
 apns {
   apn {
     name: "T-Mobile Tethering"

@@ -1,5 +1,5 @@
 canonical_name: "1and1_de"
-version: 62000000021
+version: 60000000019
 apns {
   apn {
     name: "1&1 Internet"
@@ -41,12 +41,14 @@ apns {
 }
 configs {
   config {
-    key: "allow_hold_call_during_emergency_bool"
-    bool_value: false
-  }
-  config {
     key: "call_barring_visibility_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -150,12 +152,6 @@ configs {
           item: 96
         }
       }
-      config {
-        key: "imsvoice.evs_payload_type_int_array"
-        int_array {
-          item: 127
-        }
-      }
     }
   }
   config {
@@ -165,39 +161,6 @@ configs {
   config {
     key: "imsvoice.conference_factory_uri_string"
     text_value: "mmtel@conf-factory.1und1-mobilfunk.de"
-  }
-  config {
-    key: "imsvoice.evs_payload_description_bundle"
-    bundle {
-      config {
-        key: "127"
-        bundle {
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-            int_value: 255
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_dtx_bool"
-            bool_value: false
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_dtx_recv_bool"
-            bool_value: false
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_hf_only_int"
-            int_value: 1
-          }
-        }
-      }
-    }
   }
   config {
     key: "imsvoice.oip_source_from_header_bool"
@@ -329,5 +292,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725935992
+  seconds: 1722173344
 }

@@ -1,5 +1,5 @@
 canonical_name: "astca_as"
-version: 62000000004
+version: 60000000004
 apns {
   apn {
     name: "ASTCA"

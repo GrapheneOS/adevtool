@@ -1,5 +1,5 @@
 canonical_name: "telenet_be"
-version: 62000000007
+version: 60000000007
 apns {
   apn {
     name: "Telenet Internet"

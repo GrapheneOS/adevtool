@@ -1,5 +1,5 @@
 canonical_name: "att5g_us"
-version: 62000000014
+version: 60000000014
 apns {
   apn {
     name: "ATT Enhancedphone"
@@ -835,5 +835,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726034630
+  seconds: 1722475408
 }

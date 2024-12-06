@@ -1,5 +1,5 @@
 canonical_name: "uscc_us"
-version: 62000000012
+version: 60000000010
 apns {
   apn {
     name: "U.S. Cellular"
@@ -62,6 +62,12 @@ configs {
   config {
     key: "carrier_eri_file_name_string"
     text_value: "eri.xml"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_ussd_method_int"
@@ -181,10 +187,6 @@ configs {
   config {
     key: "imsemergency.emergency_registration_timer_millis_int"
     int_value: 10000
-  }
-  config {
-    key: "imsrtt.text_as_bandwidth_kbps_int"
-    int_value: 3
   }
   config {
     key: "imsrtt.text_rr_bandwidth_bps_int"
@@ -491,5 +493,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812777
+  seconds: 1722173380
 }

@@ -1,5 +1,5 @@
 canonical_name: "telus_ca"
-version: 62000000016
+version: 60000000015
 apns {
   apn {
     name: "TELUS ISP"
@@ -70,15 +70,6 @@ configs {
   config {
     key: "5g_icon_display_grace_period_string"
     text_value: "connected_mmwave,connected,30;connected_mmwave,connected_rrc_idle,30;connected_mmwave,not_restricted_rrc_idle,30;connected_mmwave,not_restricted_rrc_con,30"
-  }
-  config {
-    key: "5g_nr_ssrsrp_thresholds_int_array"
-    int_array {
-      item: -128
-      item: -118
-      item: -108
-      item: -98
-    }
   }
   config {
     key: "additional_nr_advanced_bands_int_array"
@@ -515,5 +506,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812792
+  seconds: 1718766414
 }

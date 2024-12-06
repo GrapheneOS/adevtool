@@ -1,5 +1,5 @@
 canonical_name: "firstnetpacific_us"
-version: 62000000014
+version: 60000000012
 apns {
   apn {
     name: "ATT FirstNet-Phone"
@@ -76,10 +76,6 @@ configs {
   }
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
   }
   config {
@@ -197,6 +193,12 @@ configs {
     text_array {
       item: "510|Call completed elsewhere|1014"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
     }
   }
   config {
@@ -408,11 +410,9 @@ configs {
   config {
     key: "iwlan_handover_policy_string_array"
     text_array {
-      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|IWLAN, target=GERAN|IWLAN, type=disallowed"
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
-      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
-      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
-      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+      item: "source=UTRAN|EUTRAN|NGRAN|IWLAN, target=UTRAN|EUTRAN|NGRAN|IWLAN, type=allowed"
     }
   }
   config {
@@ -638,5 +638,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912483
+  seconds: 1718766393
 }

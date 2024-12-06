@@ -1,5 +1,5 @@
 canonical_name: "esn_gb"
-version: 62000000031
+version: 60000000031
 apns {
   apn {
     name: "IMS"

@@ -1,5 +1,5 @@
 canonical_name: "optus_au"
-version: 62000000014
+version: 60000000014
 apns {
   apn {
     name: "Optus Yes Internet"

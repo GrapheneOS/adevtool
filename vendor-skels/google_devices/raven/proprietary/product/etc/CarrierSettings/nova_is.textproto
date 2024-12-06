@@ -1,5 +1,5 @@
 canonical_name: "nova_is"
-version: 62000000008
+version: 60000000006
 apns {
   apn {
     name: "MMS Nova"
@@ -47,51 +47,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
-  }
-  config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
-    int_array {
-      item: 5
-      item: 6
-      item: 3
-      item: 1
-      item: 2
-    }
-  }
-  config {
-    key: "imsvoice.evs_payload_description_bundle"
-    bundle {
-      config {
-        key: "127"
-        bundle {
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_dtx_bool"
-            bool_value: false
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_dtx_recv_bool"
-            bool_value: false
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_hf_only_int"
-            int_value: 1
-          }
-        }
-      }
-    }
-  }
-  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -107,5 +62,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912449
+  seconds: 1715771916
 }

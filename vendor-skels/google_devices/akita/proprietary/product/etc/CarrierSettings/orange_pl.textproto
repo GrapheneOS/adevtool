@@ -1,5 +1,5 @@
 canonical_name: "orange_pl"
-version: 62000000013
+version: 60000000011
 apns {
   apn {
     name: "Orange Internet"
@@ -210,10 +210,6 @@ configs {
     }
   }
   config {
-    key: "qns.mms_rat_preference_int"
-    int_value: 2
-  }
-  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
@@ -223,5 +219,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1723685422
+  seconds: 1718766414
 }

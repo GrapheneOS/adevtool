@@ -27,6 +27,7 @@
   <string name="network_dashboard_summary_no_mobile">Wi‑Fi</string>
   <string name="non_carrier_data_usage">Wi‑Fi data usage</string>
   <string name="regional_pref_footer_learn_more_link">"https://support.google.com/googlepixeltablet/?p=app_language"</string>
+  <string name="reset_network_title">Reset Wi-Fi &amp; Bluetooth</string>
   <string name="screensaver_settings_summary_off">Show favorite photos, artwork, clocks, and more when idle</string>
   <string name="security_settings_fingerprint_enroll_consent_introduction_title">Allow Fingerprint Unlock</string>
   <string name="security_settings_fingerprint_enroll_find_sensor_message">"The fingerprint sensor is on the Power button.
@@ -66,8 +67,7 @@ Move your finger slightly each time. This helps capture more of your fingerprint
   <string name="setup_fingerprint_enroll_immobile_help_continue">Continue setup</string>
   <string name="setup_fingerprint_enroll_immobile_help_subtitle">This helps capture more of your fingerprint for a better unlocking experience</string>
   <string name="setup_fingerprint_enroll_immobile_help_title">Move your finger</string>
-  <string name="sound_dashboard_summary">Volume</string>
-  <string name="sound_dashboard_summary_with_dnd">Volume, Do Not Disturb</string>
+  <string name="sound_dashboard_summary">Volume, Do Not Disturb</string>
   <string name="sound_settings">Sound</string>
   <string name="suggested_fingerprint_lock_settings_summary">Use Pixel Imprint to unlock your tablet</string>
   <string name="suggested_fingerprint_lock_settings_title">Use Fingerprint Unlock</string>

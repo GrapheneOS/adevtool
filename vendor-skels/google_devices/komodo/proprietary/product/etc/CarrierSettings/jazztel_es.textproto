@@ -1,5 +1,5 @@
 canonical_name: "jazztel_es"
-version: 62000000008
+version: 60000000007
 apns {
   apn {
     name: "jazzinternet"
@@ -13,8 +13,6 @@ apns {
     type: MMS
     authtype: 1
     mmsc: "http://jazztelmms.com/servlets/mms"
-    mmsc_proxy: "37.132.0.10"
-    mmsc_proxy_port: "8080"
   }
   apn {
     name: "jazzinternet"
@@ -261,5 +259,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289927
+  seconds: 1715771975
 }

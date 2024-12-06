@@ -1,5 +1,5 @@
 canonical_name: "nova_gr"
-version: 62000000004
+version: 60000000003
 apns {
   apn {
     name: "Wind Internet"
@@ -54,59 +54,12 @@ configs {
     bool_value: true
   }
   config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
-  }
-  config {
     key: "imsss.ut_as_server_fqdn_string"
     text_value: "xcap.ims.mnc010.mcc202.pub.3gppnetwork.org"
   }
   config {
     key: "imsss.ut_as_server_port_int"
     int_value: 8090
-  }
-  config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
-    int_array {
-      item: 5
-      item: 6
-      item: 3
-      item: 1
-      item: 2
-    }
-  }
-  config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
-    bundle {
-      config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
-        }
-      }
-    }
   }
   config {
     key: "imsvoice.conference_factory_uri_string"
@@ -124,5 +77,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912506
+  seconds: 1707786591
 }

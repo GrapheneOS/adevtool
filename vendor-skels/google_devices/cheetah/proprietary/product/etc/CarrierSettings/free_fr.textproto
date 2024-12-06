@@ -1,5 +1,5 @@
 canonical_name: "free_fr"
-version: 62000000022
+version: 60000000022
 apns {
   apn {
     name: "Free"
@@ -202,5 +202,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1723067509
+  seconds: 1722173359
 }

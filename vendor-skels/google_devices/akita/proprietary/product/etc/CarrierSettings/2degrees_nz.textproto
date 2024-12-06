@@ -1,5 +1,5 @@
 canonical_name: "2degrees_nz"
-version: 62000000008
+version: 60000000009
 apns {
   apn {
     name: "2Degrees Internet"
@@ -24,6 +24,12 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -144,5 +150,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185501
+  seconds: 1722173409
 }

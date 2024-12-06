@@ -1,5 +1,5 @@
 canonical_name: "zain_kw"
-version: 62000000007
+version: 60000000007
 apns {
   apn {
     name: "ZAIN MI"

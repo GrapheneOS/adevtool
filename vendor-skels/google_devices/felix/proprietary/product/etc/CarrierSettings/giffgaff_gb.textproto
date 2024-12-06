@@ -1,5 +1,5 @@
 canonical_name: "giffgaff_gb"
-version: 62000000005
+version: 60000000006
 apns {
   apn {
     name: "giffgaff"
@@ -103,5 +103,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718786032
+  seconds: 1718316544
 }

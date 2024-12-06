@@ -1,5 +1,5 @@
 canonical_name: "proximus_be"
-version: 62000000010
+version: 60000000010
 apns {
   apn {
     name: "Proximus Internet"

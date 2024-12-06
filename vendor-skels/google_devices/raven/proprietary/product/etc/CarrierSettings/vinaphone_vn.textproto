@@ -1,5 +1,5 @@
 canonical_name: "vinaphone_vn"
-version: 62000000001
+version: 60000000001
 apns {
   apn {
     name: "Vina-wap-gprs"

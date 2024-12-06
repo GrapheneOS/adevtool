@@ -1,5 +1,5 @@
 canonical_name: "m1_sg"
-version: 62000000012
+version: 60000000012
 apns {
   apn {
     name: "Sunsurf Mobile"

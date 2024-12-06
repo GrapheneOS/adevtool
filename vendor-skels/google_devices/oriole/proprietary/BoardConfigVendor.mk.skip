@@ -23,7 +23,6 @@ AB_OTA_PARTITIONS += \
 TARGET_BOARD_INFO_FILE := vendor/google_devices/oriole/firmware/android-info.txt
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/google/gs-common/battery_mitigation/sepolicy/system_ext/private \
     hardware/google/pixel-sepolicy/connectivity_thermal_power_manager
 
 # Missing system_ext SELinux context: /metadata/repair-mode/config(/.*)? u:object_r:repair_mode_metadata_config_file:s0
@@ -36,23 +35,9 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.google.android.apps.pixel.dcservice domain=dcservice_app type=privapp_data_file levelFrom=user
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.google.android.apps.pixel.dcservice.ui domain=dcservice_app type=privapp_data_file levelFrom=user
 
-# Missing product SELinux context: com.google.pixel.camera.services.cameraidremapper.ICameraIdRemapper/default u:object_r:camera_cameraidremapper_service:s0
-# Missing product SELinux context: com.google.pixel.camera.services.lyricconfigprovider.ILyricConfigProvider/default u:object_r:camera_lyricconfigprovider_service:s0
-
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/google/gs-common/battery_mitigation/sepolicy/vendor \
     vendor/google_devices/oriole/sepolicy
 
-# Missing vendor SELinux context: /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face-service\.default u:object_r:hal_face_default_exec:s0
-# Missing vendor SELinux context: /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.default u:object_r:hal_fingerprint_default_exec:s0
-# Missing vendor SELinux context: /sys/devices/platform/[0-9a-z]+\.ufs/pixel/enable_pixel_ufs_logging u:object_r:sysfs_scsi_devices_0000:s0
-# Missing vendor SELinux context: /vendor/bin/dump/dump_modem u:object_r:dump_modem_exec:s0
-# Missing vendor SELinux context: /vendor/bin/dump/dump_power u:object_r:dump_power_exec:s0
 # Missing vendor SELinux context: /system_ext/bin/bluetooth_gci u:object_r:bluetooth_gci_exec:s0
-# Missing vendor SELinux context: /vendor/bin/ufs_firmware_update\.sh u:object_r:ufs_firmware_update_exec:s0
-# Missing vendor SELinux context: /vendor/lib64/android\.frameworks\.stats-V2-ndk\.so u:object_r:same_process_hal_file:s0
-# Missing vendor SELinux context: vendor.wlcservice.test.authentication u:object_r:vendor_wlcservice_test_prop:s0 exact bool
-# Missing vendor SELinux context: vendor.gril. u:object_r:vendor_gril_prop:s0
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=mds name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=platform name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
-# Missing vendor SELinux context: com.google.android.imageprocessing.hal.IImageProcessingHal/default u:object_r:vendor_image_processing_hal_service:s0

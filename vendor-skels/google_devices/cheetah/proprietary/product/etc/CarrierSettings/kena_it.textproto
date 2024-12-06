@@ -1,5 +1,5 @@
 canonical_name: "kena_it"
-version: 62000000014
+version: 60000000013
 apns {
   apn {
     name: "Kena Mobile web"
@@ -197,10 +197,6 @@ configs {
     }
   }
   config {
-    key: "imswfc.emergency_call_over_emergency_pdn_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -244,10 +240,6 @@ configs {
     }
   }
   config {
-    key: "qns.sos_transport_type_int"
-    int_value: 2
-  }
-  config {
     key: "qns.support_wfc_during_airplane_mode_bool"
     bool_value: false
   }
@@ -287,5 +279,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1723067509
+  seconds: 1708520751
 }

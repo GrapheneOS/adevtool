@@ -1,5 +1,5 @@
 canonical_name: "orange_be"
-version: 62000000014
+version: 60000000015
 apns {
   apn {
     name: "Orange MMS"
@@ -35,6 +35,12 @@ configs {
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_volte_available_bool"
@@ -303,5 +309,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185440
+  seconds: 1722173351
 }

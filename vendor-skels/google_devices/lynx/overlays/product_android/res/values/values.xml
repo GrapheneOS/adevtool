@@ -27,9 +27,7 @@
   <bool name="config_fingerprintSupportsGestures">false</bool>
   <bool name="config_honor_data_retry_timer_for_emergency_network">true</bool>
   <bool name="config_hotspotNetworksEnabledForService">false</bool>
-  <bool name="config_keyboardVibrationSettingsSupported">true</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
-  <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
   <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
@@ -47,7 +45,6 @@
   <dimen name="system_app_widget_background_radius">28dp</dimen>
   <dimen name="system_app_widget_inner_radius">20dp</dimen>
   <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
-  <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <integer name="device_idle_idle_after_inactive_to_ms">15000</integer>
   <integer name="device_idle_inactive_to_ms">15000</integer>
   <integer name="device_idle_locating_to_ms">15000</integer>

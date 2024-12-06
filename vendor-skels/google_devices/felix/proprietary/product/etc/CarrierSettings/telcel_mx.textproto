@@ -1,5 +1,5 @@
 canonical_name: "telcel_mx"
-version: 62000000004
+version: 60000000004
 apns {
   apn {
     name: "Internet"
@@ -43,58 +43,18 @@ configs {
     }
   }
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
   config {
     key: "display_no_data_notification_on_permanent_failure_bool"
     bool_value: true
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
-  }
-  config {
-    key: "imsss.ut_requires_ims_registration_bool"
-    bool_value: true
-  }
-  config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
-    int_array {
-    }
-  }
-  config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
-    bundle {
-      config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
-        }
-      }
-    }
   }
   config {
     key: "maxImageHeight"
@@ -127,5 +87,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912483
+  seconds: 1722173369
 }

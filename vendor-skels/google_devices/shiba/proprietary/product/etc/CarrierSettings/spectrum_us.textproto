@@ -1,5 +1,5 @@
 canonical_name: "spectrum_us"
-version: 62000000016
+version: 60000000016
 apns {
   apn {
     name: "Spectrum"
@@ -1230,5 +1230,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721964286
+  seconds: 1721863464
 }

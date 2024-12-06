@@ -1,5 +1,5 @@
 canonical_name: "u264ao_at"
-version: 62000000009
+version: 60000000009
 apns {
   apn {
     name: "U+264A-AT Operational"

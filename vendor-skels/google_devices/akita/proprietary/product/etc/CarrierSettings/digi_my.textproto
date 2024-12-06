@@ -1,5 +1,5 @@
 canonical_name: "digi_my"
-version: 62000000009
+version: 60000000008
 apns {
   apn {
     name: "DiGi Internet"
@@ -22,9 +22,9 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|18|20"
-    protocol: IPV6
-    roaming_protocol: IPV6
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_visible: false
   }
   apn {
@@ -36,10 +36,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "carrier_default_wfc_ims_mode_int"
-    int_value: 1
-  }
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
@@ -107,11 +103,7 @@ configs {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
-  config {
-    key: "wfc_spn_format_idx_int"
-    int_value: 1
-  }
 }
 last_updated {
-  seconds: 1726812792
+  seconds: 1708635204
 }

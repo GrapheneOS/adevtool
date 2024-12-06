@@ -1,5 +1,5 @@
 canonical_name: "celluarone_us"
-version: 62000000007
+version: 60000000007
 apns {
   apn {
     name: "IMS"

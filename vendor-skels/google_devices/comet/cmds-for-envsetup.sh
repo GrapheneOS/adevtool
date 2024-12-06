@@ -1,2 +1,2 @@
-export BUILD_ID_comet="AP4A.241205.013"
+export BUILD_ID_comet="AP3A.241105.008"
 unset PLATFORM_SECURITY_PATCH_comet

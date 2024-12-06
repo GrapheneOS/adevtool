@@ -1,5 +1,5 @@
 canonical_name: "bsnl_in"
-version: 62000000005
+version: 60000000004
 apns {
   apn {
     name: "bsnlmms"
@@ -39,10 +39,6 @@ apns {
 configs {
   config {
     key: "additional_settings_caller_id_visibility_bool"
-    bool_value: false
-  }
-  config {
-    key: "allow_hold_call_during_emergency_bool"
     bool_value: false
   }
   config {
@@ -104,5 +100,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725429767
+  seconds: 1706100387
 }

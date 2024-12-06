@@ -4,6 +4,7 @@
 <resources>
   <integer name="config_ambient_brightness_changed_debounce_ms">500</integer>
   <integer name="config_compensation_filter_horizon">1500</integer>
+  <bool name="config_compensation_animation_enabled">true</bool>
   <dimen name="config_compensation_filter_intercept">10</dimen>
   <dimen name="config_lbe_lux_switch_threshold">1</dimen>
   <dimen name="config_za_compensation_brightness_enter_threshold">0.4</dimen>

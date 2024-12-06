@@ -1,5 +1,5 @@
 canonical_name: "lyca_us"
-version: 62000000001
+version: 60000000001
 apns {
   apn {
     name: "Lyca"
@@ -672,5 +672,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720605681
+  seconds: 1720164596
 }

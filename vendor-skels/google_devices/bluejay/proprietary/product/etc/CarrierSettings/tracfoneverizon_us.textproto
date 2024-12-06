@@ -1,5 +1,5 @@
 canonical_name: "tracfoneverizon_us"
-version: 62000000030
+version: 60000000030
 apns {
   apn {
     name: "Verizon"
@@ -18,7 +18,7 @@ apns {
   }
   apn {
     name: "Verizon"
-    value: "VZWINTERNET"
+    value: "TRACFONE.VZWENTP"
     type: DEFAULT
     type: SUPL
     type: DUN
@@ -240,6 +240,12 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "TFW"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -1184,5 +1190,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725935999
+  seconds: 1722173351
 }

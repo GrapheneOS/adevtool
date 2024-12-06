@@ -1,5 +1,5 @@
 canonical_name: "idmobile_gb"
-version: 62000000425
+version: 60000000426
 apns {
   apn {
     name: "iD"
@@ -43,6 +43,12 @@ configs {
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -322,5 +328,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1722173344
 }

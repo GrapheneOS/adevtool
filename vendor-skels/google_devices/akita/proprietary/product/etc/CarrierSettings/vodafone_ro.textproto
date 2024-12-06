@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ro"
-version: 62000000013
+version: 60000000013
 apns {
   apn {
     name: "Vodafone live!"
@@ -185,5 +185,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718786052
+  seconds: 1718316570
 }

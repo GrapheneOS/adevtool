@@ -1,5 +1,5 @@
 canonical_name: "tello_us"
-version: 62000000001
+version: 60000000001
 apns {
   apn {
     name: "tello"
@@ -694,5 +694,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720605689
+  seconds: 1720164602
 }

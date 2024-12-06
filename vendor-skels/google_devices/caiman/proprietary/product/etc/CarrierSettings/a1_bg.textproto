@@ -1,5 +1,5 @@
 canonical_name: "a1_bg"
-version: 62000000005
+version: 60000000003
 apns {
   apn {
     name: "Mtel Internet"
@@ -17,86 +17,15 @@ apns {
     mmsc_proxy: "10.150.0.33"
     mmsc_proxy_port: "8080"
   }
-  apn {
-    name: "IMS"
-    value: "ims"
-    type: IMS
-    bearer_bitmask: "14|18|20"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
-    user_visible: false
-  }
-  apn {
-    name: "HOS"
-    value: "hos"
-    type: XCAP
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
-    user_visible: false
-  }
 }
 configs {
   config {
-    key: "carrier_supports_ss_over_ut_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_volte_available_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_wfc_ims_available_bool"
-    bool_value: true
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    key: "carrier_nr_availabilities_int_array"
     int_array {
-      item: 3
+      item: 1
     }
-  }
-  config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
-    bundle {
-      config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
-        }
-      }
-    }
-  }
-  config {
-    key: "iwlan.diffie_hellman_groups_int_array"
-    int_array {
-      item: 5
-      item: 14
-    }
-  }
-  config {
-    key: "wfc_spn_format_idx_int"
-    int_value: 1
   }
 }
 last_updated {
-  seconds: 1725429778
+  seconds: 1722173420
 }

@@ -1,5 +1,5 @@
 canonical_name: "play_pl"
-version: 62000000014
+version: 60000000012
 apns {
   apn {
     name: "Play Internet"
@@ -254,5 +254,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912449
+  seconds: 1718316522
 }

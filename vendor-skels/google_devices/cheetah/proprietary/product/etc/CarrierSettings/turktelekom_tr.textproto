@@ -1,5 +1,5 @@
 canonical_name: "turktelekom_tr"
-version: 62000000004
+version: 60000000005
 apns {
   apn {
     name: "AVEA INTERNET"
@@ -30,6 +30,12 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -68,5 +74,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185451
+  seconds: 1722173359
 }

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_hu"
-version: 62000000005
+version: 60000000004
 apns {
   apn {
     name: "Vodafone Internet"
@@ -54,22 +54,32 @@ configs {
     }
   }
   config {
-    key: "imsvoice.evs_payload_description_bundle"
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
     bundle {
       config {
-        key: "127"
-        bundle {
-          config {
-            key: "imsvoice.codec_attribute_cmr_int"
-            int_value: 3
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
         }
       }
     }
@@ -80,5 +90,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912495
+  seconds: 1706100379
 }

@@ -1,5 +1,5 @@
 canonical_name: "fastweb_it"
-version: 62000000009
+version: 60000000009
 apns {
   apn {
     name: "Fastweb"
@@ -31,6 +31,12 @@ configs {
     int_value: 1
   }
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -54,15 +60,32 @@ configs {
     }
   }
   config {
-    key: "imsvoice.evs_payload_description_bundle"
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
     bundle {
       config {
-        key: "127"
-        bundle {
-          config {
-            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-            int_value: 255
-          }
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
         }
       }
     }
@@ -110,5 +133,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289888
+  seconds: 1722173351
 }

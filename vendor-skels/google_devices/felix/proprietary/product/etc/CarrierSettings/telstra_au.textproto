@@ -1,5 +1,5 @@
 canonical_name: "telstra_au"
-version: 62000000015
+version: 60000000014
 apns {
   apn {
     name: "Telstra Broadband"
@@ -207,10 +207,6 @@ configs {
     int_value: 3600
   }
   config {
-    key: "imsvoice.session_refresher_type_int"
-    int_value: 0
-  }
-  config {
     key: "imsvt.video_as_bandwidth_kbps_int"
     int_value: 408
   }
@@ -362,5 +358,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185465
+  seconds: 1706100369
 }

@@ -1,5 +1,5 @@
 canonical_name: "play_pl"
-version: 62000000013
+version: 60000000011
 apns {
   apn {
     name: "Play Internet"
@@ -92,7 +92,6 @@ configs {
   config {
     key: "imsemergency.emergency_domain_preference_int_array"
     int_array {
-      item: 2
       item: 1
     }
   }
@@ -283,5 +282,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912524
+  seconds: 1718316577
 }

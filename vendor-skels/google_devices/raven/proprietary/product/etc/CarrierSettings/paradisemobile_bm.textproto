@@ -1,11 +1,10 @@
 canonical_name: "paradisemobile_bm"
-version: 62000000007
+version: 60000000006
 apns {
   apn {
     name: "internet"
     value: "internet"
     type: DEFAULT
-    type: XCAP
     protocol: IPV4V6
     roaming_protocol: IPV4V6
   }
@@ -31,14 +30,6 @@ apns {
 }
 configs {
   config {
-    key: "bsf.bsf_server_fqdn_string"
-    text_value: "bsf.ims.mnc007.mcc350.pub.3gppnetwork.org"
-  }
-  config {
-    key: "carrier_default_wfc_ims_roaming_enabled_bool"
-    bool_value: true
-  }
-  config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
     }
@@ -58,8 +49,9 @@ configs {
     }
   }
   config {
-    key: "imsss.ut_as_server_fqdn_string"
-    text_value: "xcap.ims.mnc007.mcc350.pub.3gppnetwork.org"
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
   }
   config {
     key: "imsvoice.audio_codec_capability_payload_types_bundle"
@@ -98,5 +90,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812748
+  seconds: 1709714785
 }

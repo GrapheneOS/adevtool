@@ -1,5 +1,5 @@
 canonical_name: "ice_no"
-version: 62000000012
+version: 60000000012
 apns {
   apn {
     name: "ice.net Internet"
@@ -33,6 +33,12 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_volte_available_bool"
@@ -71,14 +77,6 @@ configs {
         }
       }
     }
-  }
-  config {
-    key: "imsvoice.ringback_timer_millis_int"
-    int_value: 180000
-  }
-  config {
-    key: "imsvoice.ringing_timer_millis_int"
-    int_value: 180000
   }
   config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
@@ -122,5 +120,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721816150
+  seconds: 1722173369
 }

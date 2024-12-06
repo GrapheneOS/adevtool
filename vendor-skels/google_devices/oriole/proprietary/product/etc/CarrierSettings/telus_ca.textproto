@@ -1,5 +1,5 @@
 canonical_name: "telus_ca"
-version: 62000000091
+version: 60000000091
 apns {
   apn {
     name: "TELUS ISP"

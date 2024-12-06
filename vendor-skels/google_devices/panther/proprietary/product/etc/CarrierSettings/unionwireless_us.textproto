@@ -1,5 +1,5 @@
 canonical_name: "unionwireless_us"
-version: 62000000004
+version: 60000000002
 apns {
   apn {
     name: "Union Wireless Data"
@@ -39,7 +39,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|18|20"
+    bearer_bitmask: "14|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -55,38 +55,10 @@ configs {
     bool_value: true
   }
   config {
-    key: "carrier_wfc_ims_available_bool"
-    bool_value: true
-  }
-  config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
-  config {
-    key: "imsserviceentitlement.entitlement_server_url_string"
-    text_value: "https://aes.mnc020.mcc310.pub.3gppnetwork.org/des/ts43"
-  }
-  config {
-    key: "imsserviceentitlement.show_vowifi_webview_bool"
-    bool_value: true
-  }
-  config {
-    key: "imswfc.emergency_call_over_emergency_pdn_bool"
-    bool_value: true
-  }
-  config {
-    key: "qns.sos_transport_type_int"
-    int_value: 2
-  }
-  config {
-    key: "wfc_emergency_address_carrier_app_string"
-    text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
-  }
-  config {
-    key: "wfc_spn_format_idx_int"
-    int_value: 4
-  }
 }
 last_updated {
-  seconds: 1726812761
+  seconds: 1709116002
 }

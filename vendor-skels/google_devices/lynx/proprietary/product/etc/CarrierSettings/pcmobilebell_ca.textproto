@@ -1,5 +1,5 @@
 canonical_name: "pcmobilebell_ca"
-version: 62000000011
+version: 60000000010
 apns {
   apn {
     name: "PC Mobile"
@@ -70,13 +70,6 @@ configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
     bool_value: false
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-      item: 2
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -357,5 +350,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472151
+  seconds: 1715154551
 }

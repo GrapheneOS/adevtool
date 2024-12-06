@@ -1,5 +1,5 @@
 canonical_name: "tmobile_us"
-version: 62000000053
+version: 60000000052
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -86,10 +86,6 @@ configs {
       item: 260
       item: 261
     }
-  }
-  config {
-    key: "allow_metered_network_for_cert_download_bool"
-    bool_value: true
   }
   config {
     key: "bsf.bsf_server_fqdn_string"
@@ -312,14 +308,6 @@ configs {
   config {
     key: "imsemergency.retry_emergency_on_ims_pdn_bool"
     bool_value: true
-  }
-  config {
-    key: "imsi_key_availability_int"
-    int_value: 2
-  }
-  config {
-    key: "imsi_key_download_url_string"
-    text_value: "https://eas3.msg.t-mobile.com:8188/ses/android/getWifiImsiEncryptionCertificate"
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -705,7 +693,7 @@ configs {
   }
   config {
     key: "wifi.carrier_profiles_version_int"
-    int_value: 4
+    int_value: 3
   }
   config {
     key: "wifi.passpoint_profiles_string_array"
@@ -722,5 +710,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1721185440
+  seconds: 1715895699
 }

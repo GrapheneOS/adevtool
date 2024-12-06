@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 62000000500
+version: 60000000501
 apns {
   apn {
     name: "Telia Internet"
@@ -53,6 +53,12 @@ configs {
       item: "default"
       item: "dun"
       item: "supl"
+    }
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
     }
   }
   config {
@@ -255,5 +261,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1722173344
 }

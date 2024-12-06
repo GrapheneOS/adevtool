@@ -1,2 +1,2 @@
-export BUILD_ID_oriole="AP4A.241205.013"
+export BUILD_ID_oriole="AP3A.241105.007"
 unset PLATFORM_SECURITY_PATCH_oriole

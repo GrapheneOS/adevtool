@@ -1,5 +1,5 @@
 canonical_name: "stc_kw"
-version: 62000000006
+version: 60000000006
 apns {
   apn {
     name: "VIVA - KW"

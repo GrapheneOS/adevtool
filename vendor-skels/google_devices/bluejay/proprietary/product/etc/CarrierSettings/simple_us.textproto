@@ -1,5 +1,5 @@
 canonical_name: "simple_us"
-version: 62000000043
+version: 60000000043
 apns {
   apn {
     name: "SIMPLE"

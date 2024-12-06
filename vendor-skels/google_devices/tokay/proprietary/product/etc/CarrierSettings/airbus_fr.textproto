@@ -1,5 +1,5 @@
 canonical_name: "airbus_fr"
-version: 62000000002
+version: 60000000001
 apns {
   apn {
     name: "aircraft"
@@ -51,52 +51,10 @@ configs {
     int_value: 2
   }
   config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
-  }
-  config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
-    int_array {
-    }
-  }
-  config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
-    bundle {
-      config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
-        }
-      }
-    }
-  }
-  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1724912524
+  seconds: 1715771975
 }

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gb"
-version: 62000000346
+version: 60000000345
 apns {
   apn {
     name: "Vodafone UK Data"
@@ -101,13 +101,6 @@ configs {
   config {
     key: "ims.registration_event_package_supported_bool"
     bool_value: false
-  }
-  config {
-    key: "ims_reasoninfo_mapping_string_array"
-    text_array {
-      item: "338|busy everywhere|1017"
-      item: "510|Call completed elsewhere|1014"
-    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -318,5 +311,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1716976973
 }

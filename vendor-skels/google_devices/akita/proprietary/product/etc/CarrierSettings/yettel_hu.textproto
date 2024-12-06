@@ -1,5 +1,5 @@
 canonical_name: "yettel_hu"
-version: 62000000017
+version: 60000000015
 apns {
   apn {
     name: "Yettel online"
@@ -79,30 +79,32 @@ configs {
     }
   }
   config {
-    key: "imsvoice.evs_payload_description_bundle"
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
     bundle {
       config {
-        key: "127"
-        bundle {
-          config {
-            key: "imsvoice.codec_attribute_cmr_int"
-            int_value: 2
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-            int_array {
-              item: 0
-              item: 6
-            }
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-            int_value: 255
-          }
-          config {
-            key: "imsvoice.evs_codec_attribute_hf_only_int"
-            int_value: 0
-          }
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
         }
       }
     }
@@ -129,5 +131,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912516
+  seconds: 1718316570
 }

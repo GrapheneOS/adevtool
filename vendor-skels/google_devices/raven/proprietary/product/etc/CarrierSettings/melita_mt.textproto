@@ -1,5 +1,5 @@
 canonical_name: "melita_mt"
-version: 62000000002
+version: 60000000001
 apns {
   apn {
     name: "melitaweb"
@@ -7,12 +7,10 @@ apns {
     type: DEFAULT
     type: SUPL
     authtype: 0
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
   }
 }
 configs {
 }
 last_updated {
-  seconds: 1723848851
+  seconds: 1720164562
 }

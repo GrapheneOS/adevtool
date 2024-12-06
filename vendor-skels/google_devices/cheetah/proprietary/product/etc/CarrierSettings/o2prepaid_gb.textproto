@@ -1,5 +1,5 @@
 canonical_name: "o2prepaid_gb"
-version: 62000000004
+version: 60000000004
 apns {
   apn {
     name: "O2 Pay As You Go"

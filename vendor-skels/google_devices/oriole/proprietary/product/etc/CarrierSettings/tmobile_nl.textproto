@@ -1,5 +1,5 @@
 canonical_name: "tmobile_nl"
-version: 62000000505
+version: 60000000505
 apns {
   apn {
     name: "Internet"
@@ -43,6 +43,12 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_mode_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -201,13 +207,6 @@ configs {
     int_value: 64800
   }
   config {
-    key: "iwlan.diffie_hellman_groups_int_array"
-    int_array {
-      item: 2
-      item: 5
-    }
-  }
-  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -227,29 +226,8 @@ configs {
     int_value: 64800
   }
   config {
-    key: "iwlan.ike_session_encryption_aes_cbc_key_size_int_array"
-    int_array {
-      item: 128
-      item: 256
-    }
-  }
-  config {
     key: "iwlan.key_error_policy_config_string"
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\"],\"RetryArray\": [\"300\", \"300\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
-  }
-  config {
-    key: "iwlan.supported_integrity_algorithms_int_array"
-    int_array {
-      item: 2
-      item: 12
-    }
-  }
-  config {
-    key: "iwlan.supported_prf_algorithms_int_array"
-    int_array {
-      item: 2
-      item: 5
-    }
   }
   config {
     key: "qns.condition_rove_in_idle_wifi_pref_home_string_array"
@@ -350,5 +328,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721816131
+  seconds: 1722173344
 }

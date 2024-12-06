@@ -1,5 +1,5 @@
 canonical_name: "plus_pl"
-version: 62000000010
+version: 60000000009
 apns {
   apn {
     name: "Plus Internet"
@@ -63,10 +63,6 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
-    bool_value: true
-  }
-  config {
-    key: "display_hd_plus_icon_bool"
     bool_value: true
   }
   config {
@@ -213,5 +209,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472167
+  seconds: 1720164590
 }

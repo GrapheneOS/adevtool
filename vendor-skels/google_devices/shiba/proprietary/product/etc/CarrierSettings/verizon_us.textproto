@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 62000000029
+version: 60000000027
 apns {
   apn {
     name: "Verizon"
@@ -1374,5 +1374,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812784
+  seconds: 1726204453
 }

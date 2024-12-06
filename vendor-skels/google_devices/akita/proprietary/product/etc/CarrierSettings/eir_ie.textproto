@@ -1,5 +1,5 @@
 canonical_name: "eir_ie"
-version: 62000000010
+version: 60000000009
 apns {
   apn {
     name: "EIR Data"
@@ -31,8 +31,14 @@ apns {
 }
 configs {
   config {
-    key: "carrier_default_wfc_ims_enabled_bool"
+    key: "carrier_default_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_volte_available_bool"
@@ -141,11 +147,7 @@ configs {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
-  config {
-    key: "wfc_spn_format_idx_int"
-    int_value: 1
-  }
 }
 last_updated {
-  seconds: 1724289921
+  seconds: 1722173409
 }

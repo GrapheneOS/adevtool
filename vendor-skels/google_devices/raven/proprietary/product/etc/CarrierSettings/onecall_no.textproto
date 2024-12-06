@@ -1,5 +1,5 @@
 canonical_name: "onecall_no"
-version: 62000000010
+version: 60000000010
 apns {
   apn {
     name: "OneCall Internet"
@@ -221,5 +221,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912449
+  seconds: 1719391050
 }

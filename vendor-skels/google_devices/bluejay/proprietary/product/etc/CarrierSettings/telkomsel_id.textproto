@@ -1,5 +1,5 @@
 canonical_name: "telkomsel_id"
-version: 62000000001
+version: 60000000001
 apns {
   apn {
     name: "internet"
@@ -42,5 +42,5 @@ apns {
 configs {
 }
 last_updated {
-  seconds: 1722472103
+  seconds: 1720164568
 }
