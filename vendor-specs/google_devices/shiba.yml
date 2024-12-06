@@ -88,10 +88,10 @@ overlays/vendor_android/res: dir
 overlays/vendor_android/res/values: dir
 overlays/vendor_android/res/values/values.xml: 759439ad2351ac6706a88dd7f24484760f1d05df854c2ecf260fe606b551dd07
 proprietary: dir
-proprietary-files.txt: 4979649af49bf2cd1872fd0a69fa5c3ac6490c364ad84c84fe36afb46a70d311
+proprietary-files.txt: 629e3060c4dbe448e6a3c7a5ba531040720888f3e8d94a9661aacf11d9660a76
 proprietary/Android.bp: 555ce4e90e38694aaa16b22d25896fd55bfd171f821a3ba2a68a2210e885347b
 proprietary/BoardConfigVendor.mk: 95f3a508f64d1cc4f108a51adefc6e6aa30b79f061ec03d6eeefe2592a23712f
-proprietary/device-vendor.mk: 789e3e65cdaac85e47846c69180f263a45b4845bc8107abc097dfe39869333f6
+proprietary/device-vendor.mk: 0cbd7c0b5e2f0f445cc28c74556b12bfc528920f21728174833ccf95b0436449
 proprietary/linker-config-adevtool.json: 1f9e401c56f463f32e208aee192aaca3bf367909f95df8da0f18a320cb551e54
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -669,9 +669,6 @@ proprietary/vendor/bin/twoshay: 7b2ccf847053acd1f9f62fbac1a38dd8b4595e15e758d1f0
 proprietary/vendor/bin/umfw_stat_tool: 798a118c991d07245b1ae2803951c82c288e6df36eeeb89fc40fbeeccef770dd
 proprietary/vendor/bin/usf_stats: b087f5ab1246f6fcad60cfb61bdfcb10f877169dd277df7259395abd9f4c183e
 proprietary/vendor/bin/wfc-pkt-router: 4097a9fa5743bc96124d75566887b9cdd01ed080f39afffa124b3cdf76290feb
-proprietary/vendor/boot_otas: dir
-proprietary/vendor/boot_otas/boot_ota_16k.zip: 4c56fc1b64f96796a4725a9831e32b4fa8cb25dcd8962b49d60acd79c21c8d27
-proprietary/vendor/boot_otas/boot_ota_4k.zip: 915a9f6ae6b5072c74dfb09c6da3b594c2f9215b83eb8ccdf2594474a70c8304
 proprietary/vendor/etc: dir
 proprietary/vendor/etc/Khronos: dir
 proprietary/vendor/etc/Khronos/OpenCL: dir
