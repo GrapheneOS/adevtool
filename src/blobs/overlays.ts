@@ -327,16 +327,20 @@ export async function serializePartOverlays(partValues: PartResValues, overlaysD
 async function loadApkResValues(aapt2Path: string, partition: string, apkPath: string, tmpDir: string) {
   let protoApk = path.join(tmpDir, partition + '_' + path.basename(apkPath, '.apk') + '.proto.apk')
   // convert resource table and XMLs from binary to proto format
-  await spawnAsyncNoOut(aapt2Path, [
-    'convert',
-    '--for-adevtool',
-    '--output-format',
-    'proto',
-    apkPath,
-    '-v', // verbose logging
-    '-o',
-    protoApk,
-  ])
+  await spawnAsyncNoOut(
+    aapt2Path,
+    [
+      'convert',
+      '--for-adevtool',
+      '--output-format',
+      'proto',
+      apkPath,
+      '-v', // verbose logging
+      '-o',
+      protoApk,
+    ],
+    line => (line.startsWith('note: writing ') && line.endsWith('to archive.')) || line.length == 0,
+  )
 
   let reader = new NodeFileReader(protoApk)
   try {
