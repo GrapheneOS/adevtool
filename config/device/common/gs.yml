@@ -7,5 +7,9 @@ platform:
     provideLibs:
       # used by com.google.pixel.camera.hal.apex
       - lib_aion_buffer.so
+      - libedgetpu_client.google.so
+      - libedgetpu_tachyon.google.so
+      - libedgetpu_util.so
+      - libgxp.so
       # used by com.google.android.widevine.apex
       - liboemcrypto.so
