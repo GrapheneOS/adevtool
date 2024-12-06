@@ -1,5 +1,5 @@
 canonical_name: "turkcell_tr"
-version: 60000000002
+version: 62000000002
 apns {
   apn {
     name: "TURKCELL INTERNET"

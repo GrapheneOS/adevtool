@@ -1,5 +1,5 @@
 canonical_name: "kddimvno_jp"
-version: 60000000462
+version: 62000000462
 apns {
   apn {
     name: "IMS"

@@ -1,5 +1,5 @@
 canonical_name: "truemove_th"
-version: 60000000007
+version: 62000000007
 apns {
   apn {
     name: "TRUE-H INTERNET"

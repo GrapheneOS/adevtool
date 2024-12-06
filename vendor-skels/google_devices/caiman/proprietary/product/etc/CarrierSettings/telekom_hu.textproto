@@ -1,5 +1,5 @@
 canonical_name: "telekom_hu"
-version: 60000000006
+version: 62000000006
 apns {
   apn {
     name: "Internet"
@@ -186,5 +186,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718316577
+  seconds: 1718786058
 }

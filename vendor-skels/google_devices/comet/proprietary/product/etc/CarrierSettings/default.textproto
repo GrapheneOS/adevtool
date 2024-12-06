@@ -1,5 +1,5 @@
 canonical_name: "default"
-version: 60000000008
+version: 62000000010
 configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
@@ -21,6 +21,12 @@ configs {
   config {
     key: "carrier_eri_file_name_string"
     text_value: "eri.xml"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_promote_wfc_on_call_fail_bool"
@@ -288,6 +294,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.underlying_network_validation_events_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 2
+    }
+  }
+  config {
     key: "iwlan.update_n1_mode_on_ui_change_bool"
     bool_value: false
   }
@@ -347,6 +361,20 @@ configs {
     }
   }
   config {
+    key: "qns.iwlan_network_validation_condition_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
+    key: "qns.iwlan_underlying_network_validation_condition_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
     key: "qns.minimum_handover_guarding_timer_ms_int"
     int_value: 3000
   }
@@ -357,6 +385,13 @@ configs {
   config {
     key: "qns.mms_transport_type_int"
     int_value: 2
+  }
+  config {
+    key: "qns.network_validation_fail_restricted_time_int_array"
+    int_array {
+      item: 30000
+      item: 0
+    }
   }
   config {
     key: "qns.video_eutran_rsrp_int_array"
@@ -486,5 +521,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1722173420
+  seconds: 1724912524
 }

@@ -1,0 +1,40 @@
+canonical_name: "optimera_us"
+version: 62000000001
+apns {
+  apn {
+    name: "OptimERA"
+    value: "internet"
+    type: DEFAULT
+    type: MMS
+    type: XCAP
+    mmsc: "http://mms.oexg.mobi"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "OptimERA Hotspot"
+    value: "tether"
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "OptimERA IMS"
+    value: "ims"
+    type: IMS
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1724289888
+}

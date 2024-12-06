@@ -1,5 +1,5 @@
 canonical_name: "plus_pl"
-version: 60000000009
+version: 62000000009
 apns {
   apn {
     name: "Plus Internet"
@@ -197,5 +197,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720164568
+  seconds: 1720003562
 }

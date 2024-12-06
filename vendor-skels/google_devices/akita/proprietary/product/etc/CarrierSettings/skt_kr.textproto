@@ -1,5 +1,5 @@
 canonical_name: "skt_kr"
-version: 60000000009
+version: 62000000008
 apns {
   apn {
     name: "SKT IMS"
@@ -86,12 +86,6 @@ configs {
   config {
     key: "carrier_instant_lettering_length_limit_int"
     int_value: 16
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "enableSMSDeliveryReports"
@@ -237,5 +231,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173409
+  seconds: 1721185501
 }

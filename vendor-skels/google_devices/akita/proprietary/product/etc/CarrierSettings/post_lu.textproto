@@ -1,5 +1,5 @@
 canonical_name: "post_lu"
-version: 60000000006
+version: 62000000007
 apns {
   apn {
     name: "POST Internet"
@@ -59,6 +59,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
     int_array {
       item: 3
@@ -111,32 +115,18 @@ configs {
     }
   }
   config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    key: "imsvoice.evs_payload_description_bundle"
     bundle {
       config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 4
+              item: 6
+            }
+          }
         }
       }
     }
@@ -151,5 +141,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100394
+  seconds: 1724912516
 }

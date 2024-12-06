@@ -1,5 +1,5 @@
 canonical_name: "virgin_ca"
-version: 60000000072
+version: 62000000073
 apns {
   apn {
     name: "Virgin Mobile"
@@ -68,7 +68,6 @@ configs {
     key: "carrier_nr_availabilities_int_array"
     int_array {
       item: 1
-      item: 2
     }
   }
   config {
@@ -428,5 +427,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713343920
+  seconds: 1722472090
 }

@@ -1,5 +1,5 @@
 canonical_name: "cellcom_us"
-version: 60000000019
+version: 62000000018
 apns {
   apn {
     name: "Cellcom"
@@ -200,12 +200,6 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "Cellcom"
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -1322,5 +1316,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173359
+  seconds: 1721964267
 }

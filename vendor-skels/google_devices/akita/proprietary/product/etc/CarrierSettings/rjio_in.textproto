@@ -1,5 +1,5 @@
 canonical_name: "rjio_in"
-version: 60000000010
+version: 62000000009
 apns {
   apn {
     name: "Jio 4G"
@@ -32,10 +32,6 @@ configs {
   }
   config {
     key: "additional_settings_caller_id_visibility_bool"
-    bool_value: false
-  }
-  config {
-    key: "allow_hold_call_during_emergency_bool"
     bool_value: false
   }
   config {
@@ -316,5 +312,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720164596
+  seconds: 1706100394
 }

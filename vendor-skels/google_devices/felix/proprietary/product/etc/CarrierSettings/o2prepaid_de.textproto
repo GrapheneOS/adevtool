@@ -1,5 +1,5 @@
 canonical_name: "o2prepaid_de"
-version: 60000000010
+version: 62000000010
 apns {
   apn {
     name: "o2 DE IMS"

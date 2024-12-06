@@ -1,5 +1,5 @@
 canonical_name: "ultra_us"
-version: 60000000015
+version: 62000000015
 apns {
   apn {
     name: "ultra"
@@ -717,5 +717,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720164602
+  seconds: 1720605689
 }

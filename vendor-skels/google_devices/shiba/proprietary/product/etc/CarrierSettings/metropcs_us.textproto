@@ -1,5 +1,5 @@
 canonical_name: "metropcs_us"
-version: 60000000027
+version: 62000000028
 apns {
   apn {
     name: "MetroPCS Tethering"
@@ -84,6 +84,10 @@ configs {
       item: 260
       item: 261
     }
+  }
+  config {
+    key: "allow_metered_network_for_cert_download_bool"
+    bool_value: true
   }
   config {
     key: "bsf.bsf_server_fqdn_string"
@@ -309,6 +313,26 @@ configs {
   }
   config {
     key: "imsemergency.retry_emergency_on_ims_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsi_key_availability_int"
+    int_value: 2
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://eas3.msg.t-mobile.com:8188/ses/android/getWifiImsiEncryptionCertificate"
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://ts43.eas3.msg.t-mobile.com/google?"
+  }
+  config {
+    key: "imsserviceentitlement.show_vowifi_webview_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsserviceentitlement.skip_wfc_activation_bool"
     bool_value: true
   }
   config {
@@ -680,12 +704,12 @@ configs {
     bool_value: true
   }
   config {
-    key: "vonr_on_by_default_bool"
-    bool_value: false
-  }
-  config {
     key: "wfc_carrier_name_override_by_pnn_bool"
     bool_value: true
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
   }
   config {
     key: "wfc_operator_error_codes_string_array"
@@ -707,7 +731,7 @@ configs {
   }
   config {
     key: "wifi.carrier_profiles_version_int"
-    int_value: 3
+    int_value: 4
   }
   config {
     key: "wifi.passpoint_profiles_string_array"
@@ -724,5 +748,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1720164590
+  seconds: 1721295356
 }

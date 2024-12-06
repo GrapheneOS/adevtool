@@ -1,5 +1,5 @@
 canonical_name: "u264ap_at"
-version: 60000000008
+version: 62000000008
 apns {
   apn {
     name: "U+264A-AT Provisioning"

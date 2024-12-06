@@ -1,5 +1,5 @@
 canonical_name: "linemo_jp"
-version: 60000000009
+version: 62000000009
 apns {
   apn {
     name: "IMS"
@@ -464,5 +464,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720164590
+  seconds: 1720003588
 }

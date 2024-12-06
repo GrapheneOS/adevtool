@@ -1,5 +1,5 @@
 canonical_name: "tele2_se"
-version: 60000000018
+version: 62000000017
 apns {
   apn {
     name: "Tele2 Internet"
@@ -49,12 +49,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -268,5 +262,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173351
+  seconds: 1721185440
 }

@@ -1,0 +1,20 @@
+canonical_name: "eeyoumobility_ca"
+version: 62000000001
+apns {
+  apn {
+    name: "Eeyou"
+    value: "apn.em.com"
+    type: DEFAULT
+    type: MMS
+    mmsc: "http://mms.eeyoumobility.com"
+    mmsc_proxy: "mms.eeyoumobility.com"
+    mmsc_proxy_port: "80"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1724289908
+}

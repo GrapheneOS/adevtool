@@ -1,5 +1,5 @@
 canonical_name: "mobifone_vn"
-version: 60000000001
+version: 62000000001
 apns {
   apn {
     name: "Mobi-wap-gprs 2"
@@ -38,5 +38,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720164585
+  seconds: 1720003581
 }

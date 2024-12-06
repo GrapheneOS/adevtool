@@ -45,6 +45,7 @@
   <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">true</bool>
   <bool name="config_isCompatFakeFocusEnabled">true</bool>
   <bool name="config_isWindowManagerCameraCompatTreatmentEnabled">true</bool>
+  <bool name="config_keyboardVibrationSettingsSupported">true</bool>
   <bool name="config_keyguardUserSwitcher">false</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
   <bool name="config_leftRightSplitInPortrait">true</bool>
@@ -59,6 +60,7 @@
   <bool name="config_matchSecondaryInternalDisplaysOrientationToReverseDefaultDisplay">true</bool>
   <bool name="config_offsetWallpaperToCenterOfLargestDisplay">true</bool>
   <bool name="config_refreshRateSynchronizationEnabled">true</bool>
+  <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
   <bool name="config_showUserSwitcherByDefault">false</bool>
@@ -165,6 +167,7 @@
   <integer name="config_externalDisplayPeakRefreshRate">61</integer>
   <integer name="config_externalDisplayPeakWidth">1920</integer>
   <integer name="config_letterboxActivityCornersRadius">-1</integer>
+  <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <integer name="config_pauseRotationWhenUnfolding_displaySwitchTimeout">1000</integer>
   <integer name="config_pauseRotationWhenUnfolding_hingeEventTimeout">400</integer>
   <integer name="config_pauseRotationWhenUnfolding_maxHingeAngle">165</integer>

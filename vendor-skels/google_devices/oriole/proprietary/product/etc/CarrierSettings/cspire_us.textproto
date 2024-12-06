@@ -1,5 +1,5 @@
 canonical_name: "cspire_us"
-version: 60000000446
+version: 62000000446
 apns {
   apn {
     name: "C Spire OTA"
@@ -56,12 +56,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_ussd_method_int"
@@ -403,6 +397,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
+    bool_value: true
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 6
   }
@@ -416,5 +414,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173344
+  seconds: 1723685388
 }

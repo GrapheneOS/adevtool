@@ -1,5 +1,5 @@
 canonical_name: "docomo_jp"
-version: 60000000368
+version: 62000000369
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"
@@ -128,6 +128,10 @@ configs {
   config {
     key: "ims.request_uri_type_int"
     int_value: 1
+  }
+  config {
+    key: "ims.sip_preferred_transport_int"
+    int_value: 0
   }
   config {
     key: "ims_reasoninfo_mapping_string_array"
@@ -282,5 +286,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635157
+  seconds: 1724912449
 }

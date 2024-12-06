@@ -1,5 +1,5 @@
 canonical_name: "docomomvno_jp"
-version: 60000000011
+version: 62000000012
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"
@@ -310,6 +310,10 @@ configs {
     int_value: 1
   }
   config {
+    key: "ims.sip_preferred_transport_int"
+    int_value: 0
+  }
+  config {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
       item: "332||510"
@@ -454,5 +458,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635180
+  seconds: 1724912483
 }

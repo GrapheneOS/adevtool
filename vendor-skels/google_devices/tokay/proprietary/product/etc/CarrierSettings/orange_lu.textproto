@@ -1,5 +1,5 @@
 canonical_name: "orange_lu"
-version: 60000000004
+version: 62000000006
 apns {
   apn {
     name: "Orange"
@@ -22,6 +22,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -99,6 +103,46 @@ configs {
           item: 96
         }
       }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+        }
+      }
     }
   }
   config {
@@ -111,5 +155,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709116039
+  seconds: 1724912524
 }

@@ -1,5 +1,5 @@
 canonical_name: "axis_id"
-version: 60000000001
+version: 62000000001
 apns {
   apn {
     name: "Internet"
@@ -36,5 +36,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718954633
+  seconds: 1719391071
 }

@@ -1,5 +1,5 @@
 canonical_name: "telia_dk"
-version: 60000000013
+version: 62000000012
 apns {
   apn {
     name: "Internet"
@@ -55,12 +55,6 @@ configs {
       item: "default"
       item: "dun"
       item: "supl"
-    }
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
     }
   }
   config {
@@ -201,5 +195,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173380
+  seconds: 1721185479
 }

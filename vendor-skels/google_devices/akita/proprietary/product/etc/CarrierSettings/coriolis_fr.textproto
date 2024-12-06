@@ -1,5 +1,5 @@
 canonical_name: "coriolis_fr"
-version: 60000000007
+version: 62000000006
 apns {
   apn {
     name: "Coriolis"
@@ -29,12 +29,6 @@ configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
     bool_value: false
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "editable_wfc_mode_bool"
@@ -218,5 +212,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173409
+  seconds: 1721185501
 }

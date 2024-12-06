@@ -53,7 +53,7 @@
   </hal>
   <hal format="aidl">
     <name>com.google.input</name>
-    <version>2</version>
+    <version>3</version>
     <fqname>ITouchContextService/default</fqname>
   </hal>
   <hal format="hidl">

@@ -1,5 +1,5 @@
 canonical_name: "telenor_dk"
-version: 60000000501
+version: 62000000504
 apns {
   apn {
     name: "Telenor Internet"
@@ -20,8 +20,6 @@ apns {
     value: "ims"
     type: IMS
     bearer_bitmask: "14|18|20"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
     user_visible: false
   }
   apn {
@@ -39,12 +37,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -67,12 +59,16 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
     key: "ims.sip_timer_f_millis_int"
-    int_value: 32000
+    int_value: 128000
   }
   config {
     key: "ims.sip_timer_t1_millis_int"
-    int_value: 500
+    int_value: 2000
   }
   config {
     key: "ims.sip_timer_t4_millis_int"
@@ -153,12 +149,12 @@ configs {
     }
   }
   config {
-    key: "imsvoice.minimum_session_expires_timer_sec_int"
-    int_value: 1800
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 120000
   }
   config {
     key: "imsvoice.ringing_timer_millis_int"
-    int_value: 45000
+    int_value: 120000
   }
   config {
     key: "is_ims_conference_size_enforced_bool"
@@ -224,5 +220,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173344
+  seconds: 1724912449
 }

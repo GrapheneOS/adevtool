@@ -1,5 +1,5 @@
 canonical_name: "lowi_es"
-version: 60000000002
+version: 62000000004
 apns {
   apn {
     name: "Lowi.es"
@@ -32,8 +32,114 @@ apns {
 }
 configs {
   config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8090
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE# #MODEL# Android #AV# #BUILD# EU00026"
+  }
+  config {
+    key: "ims.ipsec_authentication_algorithms_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ipsec_encryption_algorithms_int_array"
+    int_array {
+      item: 0
+      item: 2
+    }
+  }
+  config {
+    key: "ims.registration_retry_max_timer_millis_int"
+    int_value: 300000
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 360000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 360000
+  }
+  config {
+    key: "imsvoice.session_expires_timer_sec_int"
+    int_value: 900
   }
   config {
     key: "unloggable_numbers_string_array"
@@ -50,5 +156,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519158
+  seconds: 1724912516
 }

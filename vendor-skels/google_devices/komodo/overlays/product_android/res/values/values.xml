@@ -29,8 +29,10 @@
   <bool name="config_fingerprintSupportsGestures">false</bool>
   <bool name="config_honor_data_retry_timer_for_emergency_network">true</bool>
   <bool name="config_hotspotNetworksEnabledForService">false</bool>
+  <bool name="config_keyboardVibrationSettingsSupported">true</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
   <bool name="config_refreshRateSynchronizationEnabled">true</bool>
+  <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
   <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
@@ -53,6 +55,7 @@
   <integer name="config_externalDisplayPeakRefreshRate">61</integer>
   <integer name="config_externalDisplayPeakWidth">1920</integer>
   <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
+  <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <integer name="config_screenTimeoutOverride">10000</integer>
   <string-array name="config_forceSlowJpegModeList">
     <item>com.facebook.orca</item>

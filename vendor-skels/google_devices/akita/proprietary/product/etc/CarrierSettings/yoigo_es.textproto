@@ -1,5 +1,5 @@
 canonical_name: "yoigo_es"
-version: 60000000010
+version: 62000000009
 apns {
   apn {
     name: "Internet"
@@ -24,12 +24,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
-  }
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
@@ -141,5 +135,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173409
+  seconds: 1721185501
 }

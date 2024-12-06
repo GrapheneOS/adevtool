@@ -1,5 +1,5 @@
 canonical_name: "ooredoo_kw"
-version: 60000000004
+version: 62000000004
 apns {
   apn {
     name: "Ooredoo Internet"

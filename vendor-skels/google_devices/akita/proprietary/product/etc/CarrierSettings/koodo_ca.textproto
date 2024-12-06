@@ -1,5 +1,5 @@
 canonical_name: "koodo_ca"
-version: 60000000019
+version: 62000000019
 apns {
   apn {
     name: "Koodo SP"
@@ -65,6 +65,15 @@ configs {
     text_value: "connected_mmwave,connected,30;connected_mmwave,connected_rrc_idle,30;connected_mmwave,not_restricted_rrc_idle,30;connected_mmwave,not_restricted_rrc_con,30"
   }
   config {
+    key: "5g_nr_ssrsrp_thresholds_int_array"
+    int_array {
+      item: -128
+      item: -118
+      item: -108
+      item: -98
+    }
+  }
+  config {
     key: "additional_nr_advanced_bands_int_array"
     int_array {
       item: 78
@@ -89,12 +98,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_mode_int"
     int_value: 1
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -498,5 +501,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173409
+  seconds: 1726812792
 }

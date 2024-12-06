@@ -1,5 +1,5 @@
 canonical_name: "bob_at"
-version: 60000000005
+version: 62000000006
 apns {
   apn {
     name: "data.bob"
@@ -61,11 +61,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -253,5 +248,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713343958
+  seconds: 1723067552
 }

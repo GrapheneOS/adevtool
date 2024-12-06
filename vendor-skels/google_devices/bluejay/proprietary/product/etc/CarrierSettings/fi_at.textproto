@@ -1,5 +1,5 @@
 canonical_name: "fi_at"
-version: 60000000010
+version: 62000000012
 apns {
 }
 configs {
@@ -40,6 +40,13 @@ configs {
   config {
     key: "carrier_auto_cancel_cs_notification"
     bool_value: true
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "B9CFCE1C47A6AC713442718F15EF55B00B3A6D1A6D48CB46249FA8EB51465350:com.google.android.apps.tycho"
+      item: "4C36AF4A5BDAD97C1F3D8B283416D244496C2AC5EAFE8226079EF6F676FD1859:com.google.android.apps.tycho"
+    }
   }
   config {
     key: "carrier_default_wfc_ims_enabled_bool"
@@ -127,6 +134,10 @@ configs {
   config {
     key: "cdma_roaming_mode_int"
     int_value: 2
+  }
+  config {
+    key: "com.google.android.apps.privacy.wildlife.allow_vpn_on_mobile_network"
+    bool_value: true
   }
   config {
     key: "com.google.android.dialer.carrier_supports_voip_calls"
@@ -555,5 +566,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718316529
+  seconds: 1728608451
 }

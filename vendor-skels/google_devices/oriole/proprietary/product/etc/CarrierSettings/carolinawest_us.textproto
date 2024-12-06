@@ -1,5 +1,5 @@
 canonical_name: "carolinawest_us"
-version: 60000000006
+version: 62000000008
 apns {
   apn {
     name: "Carolina West Wireless"
@@ -37,8 +37,23 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "Carolina West XCAP"
+    value: "hos"
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
 }
 configs {
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8091
+  }
+  config {
+    key: "call_forwarding_when_unreachable_supported_bool"
+    bool_value: false
+  }
   config {
     key: "carrier_default_data_roaming_enabled_bool"
     bool_value: true
@@ -63,9 +78,8 @@ configs {
     }
   }
   config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
-    int_array {
-    }
+    key: "imsss.ut_as_server_port_int"
+    int_value: 8090
   }
   config {
     key: "imsvoice.audio_codec_capability_payload_types_bundle"
@@ -128,5 +142,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709714785
+  seconds: 1724912449
 }

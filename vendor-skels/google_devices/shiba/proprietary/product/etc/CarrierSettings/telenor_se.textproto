@@ -1,5 +1,5 @@
 canonical_name: "telenor_se"
-version: 60000000015
+version: 62000000015
 apns {
   apn {
     name: "Telenor MMS"
@@ -37,12 +37,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
-  }
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
@@ -223,10 +217,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "use_only_dialed_sim_ecc_list_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 9
   }
 }
 last_updated {
-  seconds: 1722173396
+  seconds: 1726812784
 }

@@ -78,6 +78,7 @@
   <bool name="config_allowRotationResolver">false</bool>
   <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
   <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
+  <bool name="config_biometricFrrNotificationEnabled">true</bool>
   <bool name="config_buttonTextAllCaps">false</bool>
   <bool name="config_deskDockEnablesAccelerometer">false</bool>
   <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
@@ -97,6 +98,7 @@
   <bool name="config_isDesktopModeSupported">true</bool>
   <bool name="config_isWindowManagerCameraCompatTreatmentEnabled">true</bool>
   <bool name="config_keepDreamingWhenUnplugging">true</bool>
+  <bool name="config_keyboardVibrationSettingsSupported">true</bool>
   <bool name="config_knownNetworksEnabledForService">false</bool>
   <bool name="config_letterboxIsDisplayRotationImmersiveAppCompatPolicyEnabled">true</bool>
   <bool name="config_letterboxIsEducationEnabled">true</bool>
@@ -109,6 +111,7 @@
   <bool name="config_performantAuthDefault">true</bool>
   <bool name="config_resetScreenTimeoutOnUnexpectedDreamExit">true</bool>
   <bool name="config_reverseDefaultRotation">true</bool>
+  <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_sensorPrivacyRequiresAuthentication">false</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
@@ -137,6 +140,8 @@
   <integer name="config_globalActionsKeyTimeout">750</integer>
   <integer name="config_letterboxActivityCornersRadius">-1</integer>
   <integer name="config_longPressOnPowerDurationMs">750</integer>
+  <integer name="config_maxDesktopWindowingActiveTasks">4</integer>
+  <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <integer name="config_navBarInteractionMode">2</integer>
   <integer name="config_shortPressOnPowerBehavior">7</integer>
   <integer name="device_idle_idle_after_inactive_to_ms">15000</integer>

@@ -1,5 +1,5 @@
 canonical_name: "tmobile_at"
-version: 60000000017
+version: 62000000016
 apns {
   apn {
     name: "T-Mobile IMS"
@@ -58,12 +58,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_mode_int"
     int_value: 1
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -250,5 +244,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173369
+  seconds: 1721185465
 }

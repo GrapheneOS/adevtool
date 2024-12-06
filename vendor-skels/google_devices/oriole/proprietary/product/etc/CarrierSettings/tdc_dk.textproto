@@ -1,5 +1,5 @@
 canonical_name: "tdc_dk"
-version: 60000000498
+version: 62000000499
 apns {
   apn {
     name: "TDC MMS"
@@ -31,6 +31,7 @@ apns {
     value: "xcap"
     type: XCAP
     protocol: IPV6
+    roaming_protocol: IPV4V6
     user_visible: false
   }
 }
@@ -214,5 +215,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715771916
+  seconds: 1720003556
 }

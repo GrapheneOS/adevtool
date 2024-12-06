@@ -1,0 +1,35 @@
+canonical_name: "lebara_nl"
+version: 62000000001
+apns {
+  apn {
+    name: "Lebara"
+    value: "internet.lebara.nl"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1724289901
+}

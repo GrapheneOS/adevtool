@@ -1,5 +1,5 @@
 canonical_name: "partner_il"
-version: 60000000007
+version: 62000000007
 apns {
   apn {
     name: "Partner"
@@ -90,5 +90,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718316570
+  seconds: 1718786052
 }

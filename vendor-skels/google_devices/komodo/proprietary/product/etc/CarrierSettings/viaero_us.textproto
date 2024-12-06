@@ -1,5 +1,5 @@
 canonical_name: "viaero_us"
-version: 60000000004
+version: 62000000004
 apns {
   apn {
     name: "Viaero Connect"

@@ -1,5 +1,5 @@
 canonical_name: "celcom_my"
-version: 60000000011
+version: 62000000012
 apns {
   apn {
     name: "Celcom Internet"
@@ -18,13 +18,17 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
   config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
@@ -84,7 +88,11 @@ configs {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1709714794
+  seconds: 1726812754
 }

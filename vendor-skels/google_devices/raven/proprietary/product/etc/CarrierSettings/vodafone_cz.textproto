@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 60000000588
+version: 62000000589
 apns {
   apn {
     name: "IMS"
@@ -131,7 +131,11 @@ configs {
   config {
     key: "iwlan_handover_policy_string_array"
     text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
     }
   }
   config {
@@ -152,5 +156,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635157
+  seconds: 1724289881
 }

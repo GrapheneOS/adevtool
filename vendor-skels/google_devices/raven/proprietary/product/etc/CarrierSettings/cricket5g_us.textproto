@@ -1,5 +1,5 @@
 canonical_name: "cricket5g_us"
-version: 60000000333
+version: 62000000332
 apns {
   apn {
     name: "internet"
@@ -86,12 +86,6 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "cricket"
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -681,5 +675,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173344
+  seconds: 1721185431
 }

@@ -1,5 +1,5 @@
 canonical_name: "sprintwholesale_us"
-version: 60000000007
+version: 62000000007
 apns {
   apn {
     name: "Internet"
@@ -303,5 +303,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721863472
+  seconds: 1721964292
 }

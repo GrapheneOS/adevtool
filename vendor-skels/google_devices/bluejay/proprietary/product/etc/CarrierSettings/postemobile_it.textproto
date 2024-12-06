@@ -1,0 +1,35 @@
+canonical_name: "postemobile_it"
+version: 62000000002
+apns {
+  apn {
+    name: "PosteMobile WAP"
+    value: "wap.postemobile.it"
+    type: DEFAULT
+    type: SUPL
+    type: FOTA
+    type: DUN
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "PosteMobile MMS"
+    value: "mms.postemobile.it"
+    type: MMS
+    mmsc: "http://mms.postemobile.it/servlets/mms"
+    mmsc_proxy: "10.128.224.10"
+    mmsc_proxy_port: "80"
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1726812754
+}

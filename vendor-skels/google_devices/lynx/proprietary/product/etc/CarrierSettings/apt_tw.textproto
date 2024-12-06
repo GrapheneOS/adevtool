@@ -1,5 +1,5 @@
 canonical_name: "apt_tw"
-version: 60000000006
+version: 62000000006
 apns {
   apn {
     name: "GT Internet"

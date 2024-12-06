@@ -1,5 +1,5 @@
 canonical_name: "ee_gb"
-version: 60000000006
+version: 62000000006
 apns {
   apn {
     name: "IMS"
@@ -68,6 +68,7 @@ configs {
     key: "carrier_nr_availabilities_int_array"
     int_array {
       item: 1
+      item: 2
     }
   }
   config {
@@ -321,5 +322,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173420
+  seconds: 1723067562
 }

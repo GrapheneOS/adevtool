@@ -1,5 +1,5 @@
 canonical_name: "airtel_in"
-version: 60000000016
+version: 62000000017
 apns {
   apn {
     name: "Internet"
@@ -56,6 +56,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
   }
@@ -66,12 +70,6 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "airtel"
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-    }
   }
   config {
     key: "carrier_ussd_method_int"
@@ -276,6 +274,16 @@ configs {
     bool_value: true
   }
   config {
+    key: "qns.disallow_iwlan_initial_attach_int"
+    int_value: 0
+  }
+  config {
+    key: "qns.enable_minimum_guarding_timer_after_connected_apn_string_array"
+    text_array {
+      item: "ims"
+    }
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
   }
@@ -304,5 +312,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173359
+  seconds: 1726812761
 }

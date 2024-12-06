@@ -1,5 +1,5 @@
 canonical_name: "orange_sk"
-version: 60000000011
+version: 62000000011
 apns {
   apn {
     name: "Orange SK"

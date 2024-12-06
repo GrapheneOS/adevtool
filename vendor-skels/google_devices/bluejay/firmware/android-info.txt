@@ -1,4 +1,4 @@
 require board=bluejay
 
-require version-bootloader=bluejay-15.0-11921129
-require version-baseband=g5123b-140687-240912-B-12359222
+require version-bootloader=bluejay-15.1-12292109
+require version-baseband=g5123b-143112-241107-B-12620021

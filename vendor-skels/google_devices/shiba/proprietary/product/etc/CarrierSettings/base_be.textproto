@@ -1,5 +1,5 @@
 canonical_name: "base_be"
-version: 60000000011
+version: 62000000011
 apns {
   apn {
     name: "BASE WAP"
@@ -142,5 +142,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718766407
+  seconds: 1719391118
 }

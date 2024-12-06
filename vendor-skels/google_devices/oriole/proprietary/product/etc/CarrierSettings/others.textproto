@@ -1,4 +1,4 @@
-version: 60000000771
+version: 62000000779
 setting {
   canonical_name: "019mobile_il"
   apns {
@@ -1648,40 +1648,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "21902"
-  apns {
-    apn {
-      name: "Telemach Internet"
-      value: "telemach.hr"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://mms.telemach.hr"
-      mmsc_proxy: "86.32.5.243"
-      mmsc_proxy_port: "80"
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "mmi_two_digit_number_pattern_string_array"
-      text_array {
-        item: "92"
-        item: "93"
-        item: "94"
-        item: "95"
-        item: "96"
-      }
-    }
-    config {
-      key: "non_roaming_operator_string_array"
-      text_array {
-        item: "21901"
-      }
-    }
-  }
-}
-setting {
   canonical_name: "22001"
   apns {
     apn {
@@ -1940,53 +1906,6 @@ setting {
       type: FOTA
       authtype: 0
       user_editable: false
-    }
-  }
-  configs {
-    config {
-      key: "carrier_volte_available_bool"
-      bool_value: false
-    }
-    config {
-      key: "default_vm_number_string"
-      text_value: "42020"
-    }
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-    config {
-      key: "volte_replacement_rat_int"
-      int_value: 3
-    }
-  }
-}
-setting {
-  canonical_name: "22210SPN=POSTEMOBILE"
-  apns {
-    apn {
-      name: "PosteMobile"
-      value: "wap.postemobile.it"
-      type: DEFAULT
-      type: SUPL
-      type: FOTA
-      authtype: 0
-    }
-    apn {
-      name: "PosteMobile (DUN)"
-      value: "internet.postemobile.it"
-      type: DUN
-      authtype: 0
-      user_editable: false
-    }
-    apn {
-      name: "PosteMobile MMS"
-      value: "mms.postemobile.it"
-      type: MMS
-      authtype: 0
-      mmsc: "http://mms.postemobile.it/servlets/mms"
-      mmsc_proxy: "10.128.224.10"
-      mmsc_proxy_port: "80"
     }
   }
   configs {
@@ -3685,33 +3604,6 @@ setting {
       value: "Internet"
       type: DEFAULT
       authtype: 1
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "28403"
-  apns {
-    apn {
-      name: "VIVACOM Internet"
-      value: "internet.vivacom.bg"
-      type: DEFAULT
-      type: SUPL
-      user: "vivacom"
-      password: "vivacom"
-      authtype: 1
-    }
-    apn {
-      name: "Vivacom MMS"
-      value: "mms.vivacom.bg"
-      type: MMS
-      user: "mms"
-      password: "mms"
-      authtype: 1
-      mmsc: "http://mmsc.vivacom.bg"
-      mmsc_proxy: "192.168.123.123"
-      mmsc_proxy_port: "8080"
     }
   }
   configs {
@@ -9557,100 +9449,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "311650SPN=UNITEDWIRELESS"
-  apns {
-    apn {
-      name: "unitedwireless"
-      value: "CdmaNai"
-      type: MMS
-      bearer_bitmask: "6"
-      mmsc: "http://mms.unitedwireless.com/united/mms.php"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "United IMS"
-      value: "VZWIMS"
-      type: IA
-      type: IMS
-      bearer_bitmask: "13"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "United IMS"
-      value: "VZWIMS"
-      type: IA
-      type: IMS
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "United FOTA"
-      value: "VZWADMIN"
-      type: FOTA
-      bearer_bitmask: "13"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "United FOTA"
-      value: "VZWADMIN"
-      type: FOTA
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "Unitedwireless"
-      value: "VZWINTERNET"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      type: DUN
-      bearer_bitmask: "13"
-      mmsc: "http://mms.unitedwireless.com/united/mms.php"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "Unitedwireless"
-      value: "VZWINTERNET"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      type: DUN
-      bearer_bitmask: "14"
-      mmsc: "http://mms.unitedwireless.com/united/mms.php"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "United IMS"
-      value: "IMS"
-      type: IA
-      type: IMS
-      bearer_bitmask: "13"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "United IMS"
-      value: "IMS"
-      type: IA
-      type: IMS
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "311740"
   apns {
     apn {
@@ -13711,24 +13509,6 @@ setting {
       value: "default"
       type: DEFAULT
       type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "48_ie"
-  apns {
-    apn {
-      name: "48 Internet"
-      value: "48months.liffeytelecom.com"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      authtype: 1
-      mmsc: "http://mmc1/servlets/mms"
-      mmsc_proxy: "10.1.11.19"
-      mmsc_proxy_port: "8080"
     }
   }
   configs {
@@ -20107,12 +19887,6 @@ setting {
       text_value: ""
     }
     config {
-      key: "carrier_nr_availabilities_int_array"
-      int_array {
-        item: 1
-      }
-    }
-    config {
       key: "carrier_supports_ss_over_ut_bool"
       bool_value: true
     }
@@ -21023,12 +20797,6 @@ setting {
       int_value: 64
     }
     config {
-      key: "carrier_nr_availabilities_int_array"
-      int_array {
-        item: 1
-      }
-    }
-    config {
       key: "enableSMSDeliveryReports"
       bool_value: false
     }
@@ -21195,12 +20963,6 @@ setting {
     config {
       key: "carrier_instant_lettering_length_limit_int"
       int_value: 64
-    }
-    config {
-      key: "carrier_nr_availabilities_int_array"
-      int_array {
-        item: 1
-      }
     }
     config {
       key: "enableSMSDeliveryReports"
@@ -21498,39 +21260,11 @@ setting {
   }
 }
 setting {
-  canonical_name: "lycamobile_pt"
-  apns {
-    apn {
-      name: "lycamobile"
-      value: "data.lycamobile.pt"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "lycamobile_ro"
   apns {
     apn {
       name: "lycamobile"
       value: "data.lycamobile.ro"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "lycamobile_se"
-  apns {
-    apn {
-      name: "lycamobile"
-      value: "data.lycamobile.se"
       type: DEFAULT
       type: SUPL
       authtype: 1
@@ -22055,12 +21789,6 @@ setting {
         item: "default"
         item: "dun"
         item: "supl"
-      }
-    }
-    config {
-      key: "carrier_nr_availabilities_int_array"
-      int_array {
-        item: 1
       }
     }
     config {
@@ -22873,71 +22601,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "spectrumcbrs_us"
-  apns {
-    apn {
-      name: "Spectrum"
-      value: "spectrum"
-      type: DEFAULT
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "always_show_primary_signal_bar_in_opportunistic_network_boolean"
-      bool_value: true
-    }
-    config {
-      key: "boosted_lte_earfcns_string_array"
-      text_array {
-        item: "600-1199"
-        item: "1950-2399"
-      }
-    }
-    config {
-      key: "lte_earfcns_rsrp_boost_int"
-      int_value: 6
-    }
-    config {
-      key: "lte_rsrp_thresholds_int_array"
-      int_array {
-        item: -115
-        item: -105
-        item: -95
-        item: -85
-      }
-    }
-    config {
-      key: "opportunistic_network_data_switch_exit_hysteresis_time_long"
-      long_value: 2000
-    }
-    config {
-      key: "opportunistic_network_data_switch_hysteresis_time_long"
-      long_value: 2000
-    }
-    config {
-      key: "opportunistic_network_entry_threshold_rsrp_int"
-      int_value: -111
-    }
-    config {
-      key: "opportunistic_network_entry_threshold_rssnr_int"
-      int_value: 10
-    }
-    config {
-      key: "opportunistic_network_exit_threshold_rsrp_int"
-      int_value: -120
-    }
-    config {
-      key: "opportunistic_network_exit_threshold_rssnr_int"
-      int_value: 9
-    }
-    config {
-      key: "ping_test_before_data_switch_bool"
-      bool_value: false
-    }
-  }
-}
-setting {
   canonical_name: "spectrumdata_us"
   apns {
     apn {
@@ -22987,45 +22650,6 @@ setting {
         item: "404"
         item: "405"
       }
-    }
-  }
-}
-setting {
-  canonical_name: "superdrug_gb"
-  apns {
-    apn {
-      name: "Superdrug"
-      value: "superdrug.net"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://mms.um.three.co.uk:10021/mmsc"
-      mmsc_proxy: "mms.three.co.uk"
-      mmsc_proxy_port: "8799"
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "non_roaming_operator_string_array"
-      text_array {
-        item: "23410"
-        item: "23426"
-        item: "23430"
-        item: "23431"
-        item: "23432"
-        item: "23433"
-        item: "23434"
-        item: "23486"
-      }
-    }
-    config {
-      key: "prefer_2g_bool"
-      bool_value: false
-    }
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
     }
   }
 }
@@ -23251,110 +22875,6 @@ setting {
         item: "20408"
       }
     }
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
-  canonical_name: "test001_zz"
-  apns {
-    apn {
-      name: "TEST_DEFAULT"
-      value: "default"
-      type: DEFAULT
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "testing_us"
-  apns {
-    apn {
-      name: "XM LAB1"
-      value: "internet"
-      type: DEFAULT
-      protocol: IPV4V6
-    }
-    apn {
-      name: "XM LAB1"
-      value: "admin.comcast"
-      type: DEFAULT
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "always_show_primary_signal_bar_in_opportunistic_network_boolean"
-      bool_value: true
-    }
-    config {
-      key: "boosted_lte_earfcns_string_array"
-      text_array {
-        item: "600-1199"
-        item: "1950-2399"
-      }
-    }
-    config {
-      key: "lte_earfcns_rsrp_boost_int"
-      int_value: 6
-    }
-    config {
-      key: "lte_rsrp_thresholds_int_array"
-      int_array {
-        item: -115
-        item: -105
-        item: -95
-        item: -85
-      }
-    }
-    config {
-      key: "opportunistic_network_data_switch_exit_hysteresis_time_long"
-      long_value: 2000
-    }
-    config {
-      key: "opportunistic_network_data_switch_hysteresis_time_long"
-      long_value: 2000
-    }
-    config {
-      key: "opportunistic_network_entry_threshold_rsrp_int"
-      int_value: -111
-    }
-    config {
-      key: "opportunistic_network_entry_threshold_rssnr_int"
-      int_value: 10
-    }
-    config {
-      key: "opportunistic_network_exit_threshold_rsrp_int"
-      int_value: -120
-    }
-    config {
-      key: "opportunistic_network_exit_threshold_rssnr_int"
-      int_value: 9
-    }
-  }
-}
-setting {
-  canonical_name: "tim_br"
-  apns {
-    apn {
-      name: "TIM Connect"
-      value: "timbrasil.br"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      user: "tim"
-      password: "tim"
-      authtype: 1
-      mmsc: "http://mms.tim.br"
-      mmsc_proxy: "189.40.191.96"
-      mmsc_proxy_port: "8080"
-      protocol: IPV4V6
-    }
-  }
-  configs {
     config {
       key: "show_4g_for_lte_data_icon_bool"
       bool_value: true
@@ -23805,51 +23325,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "vivo_br"
-  apns {
-    apn {
-      name: "Vivo MMS"
-      value: "mms.vivo.com.br"
-      type: MMS
-      user: "vivo"
-      password: "vivo"
-      authtype: 1
-      mmsc: "http://termnat.vivomms.com.br:8088/mms"
-      mmsc_proxy: "200.142.130.104"
-      mmsc_proxy_port: "80"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "Vivo Internet"
-      value: "zap.vivo.com.br"
-      type: DEFAULT
-      type: SUPL
-      user: "vivo"
-      password: "vivo"
-      authtype: 1
-      protocol: IPV4V6
-    }
-    apn {
-      name: "Vivo IMS"
-      value: "ims"
-      type: IMS
-      protocol: IPV4V6
-    }
-    apn {
-      name: "Vivo Xcap"
-      value: "xcap.ims"
-      type: XCAP
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "vodafonelab_de"
   apns {
     apn {
@@ -23867,23 +23342,6 @@ setting {
       value: "ims32.testnetz-vd2.de"
       type: IMS
       bearer_bitmask: "14|18|20"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "VF DE Web Lab 31"
-      value: "web31.testnetz-vd2.de"
-      type: DEFAULT
-      type: IA
-      type: XCAP
-      bearer_bitmask: "1|2|3|9|10|11|13|14|15|20"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "VF DE IMS Lab 31"
-      value: "ims31.testnetz-vd2.de"
-      type: IMS
       protocol: IPV4V6
       roaming_protocol: IPV4V6
     }
@@ -24141,23 +23599,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "walmart_mx"
-  apns {
-    apn {
-      name: "Walmart MX"
-      value: "internet.wm.com"
-      type: DEFAULT
-    }
-    apn {
-      name: "Walmart MX"
-      value: "ims"
-      type: IMS
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "wimo_mx"
   apns {
     apn {
@@ -24205,77 +23646,6 @@ setting {
     }
   }
   configs {
-  }
-}
-setting {
-  canonical_name: "xfinitymso_us"
-  apns {
-    apn {
-      name: "Xfinity Mobile"
-      value: "internet"
-      type: DEFAULT
-      protocol: IPV4V6
-    }
-    apn {
-      name: "Xfinity Mobile"
-      value: "admin.comcast"
-      type: DEFAULT
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "always_show_primary_signal_bar_in_opportunistic_network_boolean"
-      bool_value: true
-    }
-    config {
-      key: "boosted_lte_earfcns_string_array"
-      text_array {
-        item: "600-1199"
-        item: "1950-2399"
-      }
-    }
-    config {
-      key: "lte_earfcns_rsrp_boost_int"
-      int_value: 6
-    }
-    config {
-      key: "lte_rsrp_thresholds_int_array"
-      int_array {
-        item: -115
-        item: -105
-        item: -95
-        item: -85
-      }
-    }
-    config {
-      key: "opportunistic_network_data_switch_exit_hysteresis_time_long"
-      long_value: 2000
-    }
-    config {
-      key: "opportunistic_network_data_switch_hysteresis_time_long"
-      long_value: 2000
-    }
-    config {
-      key: "opportunistic_network_entry_threshold_rsrp_int"
-      int_value: -111
-    }
-    config {
-      key: "opportunistic_network_entry_threshold_rssnr_int"
-      int_value: 10
-    }
-    config {
-      key: "opportunistic_network_exit_threshold_rsrp_int"
-      int_value: -120
-    }
-    config {
-      key: "opportunistic_network_exit_threshold_rssnr_int"
-      int_value: 9
-    }
-    config {
-      key: "ping_test_before_data_switch_bool"
-      bool_value: false
-    }
   }
 }
 setting {
@@ -24416,8 +23786,16 @@ setting {
       key: "hide_lte_plus_data_icon_bool"
       bool_value: false
     }
+    config {
+      key: "ims.sip_timer_f_millis_int"
+      int_value: 32000
+    }
+    config {
+      key: "ims.sip_timer_j_millis_int"
+      int_value: 32000
+    }
   }
 }
 last_updated {
-  seconds: 1722173344
+  seconds: 1726812748
 }

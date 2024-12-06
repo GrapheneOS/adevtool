@@ -14,6 +14,7 @@
   <bool name="config_early_screen_timeout_detector_enabled">true</bool>
   <bool name="config_hspa_data_distinguishable">true</bool>
   <bool name="config_psim_conversion_menu_enabled">true</bool>
+  <bool name="config_robust_open_close_detection_setting_enabled">true</bool>
   <bool name="enrollment_message_display_controller_flag">true</bool>
   <integer-array name="config_carrier_use_rac">
     <item>2397</item>

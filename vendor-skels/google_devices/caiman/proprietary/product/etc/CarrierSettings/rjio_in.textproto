@@ -1,5 +1,5 @@
 canonical_name: "rjio_in"
-version: 60000000008
+version: 62000000008
 apns {
   apn {
     name: "Jio 4G"
@@ -32,10 +32,6 @@ configs {
   }
   config {
     key: "additional_settings_caller_id_visibility_bool"
-    bool_value: false
-  }
-  config {
-    key: "allow_hold_call_during_emergency_bool"
     bool_value: false
   }
   config {
@@ -329,10 +325,18 @@ configs {
     int_value: 3
   }
   config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "vonr_on_by_default_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1720164602
+  seconds: 1720605689
 }

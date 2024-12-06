@@ -1,5 +1,5 @@
 canonical_name: "solomobile_ca"
-version: 60000000006
+version: 62000000007
 apns {
   apn {
     name: "Solo Mobile"
@@ -27,6 +27,13 @@ configs {
   config {
     key: "bsf.bsf_transport_type_int"
     int_value: 3
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
   }
   config {
     key: "emailGatewayNumber"
@@ -288,5 +295,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100387
+  seconds: 1722472167
 }

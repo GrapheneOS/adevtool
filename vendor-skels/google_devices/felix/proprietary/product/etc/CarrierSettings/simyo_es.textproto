@@ -1,5 +1,5 @@
 canonical_name: "simyo_es"
-version: 60000000006
+version: 62000000005
 apns {
   apn {
     name: "internet simyo"
@@ -41,12 +41,6 @@ configs {
     key: "carrier_certificate_string_array"
     text_array {
       item: "B67AFFCDA89E3193B1595036D7C6CDBE22BE5CA24C9F6CF93FC6B48F91D7310D:com.orange.phone,com.orange.miorange,com.orange.bluu.jazztel,com.orange.miamena,com.orange.update"
-    }
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
     }
   }
   config {
@@ -382,5 +376,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173369
+  seconds: 1721185465
 }

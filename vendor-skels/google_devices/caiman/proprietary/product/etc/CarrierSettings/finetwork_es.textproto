@@ -1,5 +1,5 @@
 canonical_name: "finetwork_es"
-version: 60000000002
+version: 62000000002
 apns {
   apn {
     name: "FINETWORK_DATA"

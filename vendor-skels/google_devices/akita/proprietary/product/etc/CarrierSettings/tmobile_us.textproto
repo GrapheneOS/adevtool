@@ -1,5 +1,5 @@
 canonical_name: "tmobile_us"
-version: 60000000031
+version: 62000000028
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -86,6 +86,10 @@ configs {
       item: 260
       item: 261
     }
+  }
+  config {
+    key: "allow_metered_network_for_cert_download_bool"
+    bool_value: true
   }
   config {
     key: "bsf.bsf_server_fqdn_string"
@@ -314,11 +318,23 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsi_key_availability_int"
+    int_value: 2
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://eas3.msg.t-mobile.com:8188/ses/android/getWifiImsiEncryptionCertificate"
+  }
+  config {
     key: "imsserviceentitlement.entitlement_server_url_string"
     text_value: "https://ts43.eas3.msg.t-mobile.com/google?"
   }
   config {
     key: "imsserviceentitlement.show_vowifi_webview_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsserviceentitlement.skip_wfc_activation_bool"
     bool_value: true
   }
   config {
@@ -698,6 +714,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "vonr_on_by_default_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_carrier_name_override_by_pnn_bool"
     bool_value: true
   }
@@ -725,7 +745,7 @@ configs {
   }
   config {
     key: "wifi.carrier_profiles_version_int"
-    int_value: 3
+    int_value: 4
   }
   config {
     key: "wifi.passpoint_profiles_string_array"
@@ -742,5 +762,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1724208590
+  seconds: 1726034630
 }

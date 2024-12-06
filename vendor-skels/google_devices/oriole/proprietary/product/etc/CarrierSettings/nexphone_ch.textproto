@@ -1,0 +1,19 @@
+canonical_name: "nexphone_ch"
+version: 62000000001
+apns {
+  apn {
+    name: "NX"
+    value: "chili"
+    type: DEFAULT
+    type: SUPL
+  }
+}
+configs {
+  config {
+    key: "enabledMMS"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1724289881
+}

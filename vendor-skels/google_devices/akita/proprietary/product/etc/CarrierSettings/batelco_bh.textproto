@@ -1,5 +1,5 @@
 canonical_name: "batelco_bh"
-version: 60000000005
+version: 62000000005
 apns {
   apn {
     name: "GPRS"

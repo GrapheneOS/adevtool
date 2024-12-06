@@ -1,5 +1,5 @@
 canonical_name: "mobily_sa"
-version: 60000000004
+version: 62000000004
 apns {
   apn {
     name: "Mobily WEB"

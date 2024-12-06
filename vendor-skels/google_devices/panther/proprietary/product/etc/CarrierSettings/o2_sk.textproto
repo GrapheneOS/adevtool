@@ -1,5 +1,5 @@
 canonical_name: "o2_sk"
-version: 60000000010
+version: 62000000011
 apns {
   apn {
     name: "O2 internet"
@@ -157,6 +157,10 @@ configs {
     }
   }
   config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -166,5 +170,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1716355886
+  seconds: 1723685399
 }

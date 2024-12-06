@@ -1,5 +1,5 @@
 canonical_name: "coopvoce_it"
-version: 60000000005
+version: 62000000007
 apns {
   apn {
     name: "WEB CoopVoce"
@@ -25,8 +25,20 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "Ut CoopVoce"
+    value: "xcap.coopvoce.it"
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -40,6 +52,11 @@ configs {
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
     }
   }
   config {
@@ -74,11 +91,15 @@ configs {
     }
   }
   config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
     key: "read_only_apn_types_string_array"
     text_array {
     }
   }
 }
 last_updated {
-  seconds: 1708635195
+  seconds: 1724912506
 }

@@ -1,5 +1,5 @@
 canonical_name: "free_re"
-version: 60000000003
+version: 62000000004
 apns {
   apn {
     name: "Free Re"
@@ -13,6 +13,48 @@ apns {
   }
 }
 configs {
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
   config {
     key: "maxMessageSize"
     int_value: 614400
@@ -28,5 +70,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1717171995
+  seconds: 1724912460
 }

@@ -1,5 +1,5 @@
 canonical_name: "cellcom_il"
-version: 60000000006
+version: 62000000006
 apns {
   apn {
     name: "Cellcom Internet"
@@ -104,5 +104,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718180316
+  seconds: 1717749077
 }

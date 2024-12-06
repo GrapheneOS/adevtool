@@ -1,5 +1,5 @@
 canonical_name: "softbank_jp"
-version: 60000000010
+version: 62000000010
 apns {
   apn {
     name: "IMS"

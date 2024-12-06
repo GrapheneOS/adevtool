@@ -1,5 +1,5 @@
 canonical_name: "salt_ch"
-version: 60000000008
+version: 62000000009
 apns {
   apn {
     name: "Salt Internet"
@@ -73,32 +73,22 @@ configs {
     }
   }
   config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    key: "imsvoice.evs_payload_description_bundle"
     bundle {
       config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 255
+          }
         }
       }
     }
@@ -109,5 +99,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1721816131
 }

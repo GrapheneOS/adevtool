@@ -1,5 +1,5 @@
 canonical_name: "rogers5g_ca"
-version: 60000000014
+version: 62000000014
 apns {
   apn {
     name: "Rogers Tethering"
@@ -93,6 +93,7 @@ configs {
     key: "carrier_nr_availabilities_int_array"
     int_array {
       item: 1
+      item: 2
     }
   }
   config {
@@ -449,5 +450,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722173369
+  seconds: 1722472135
 }

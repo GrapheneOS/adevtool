@@ -1,5 +1,5 @@
 canonical_name: "nextech_us"
-version: 60000000012
+version: 62000000013
 apns {
   apn {
     name: "NexTech Ota"
@@ -148,10 +148,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "show_roaming_indicator_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 4
   }
 }
 last_updated {
-  seconds: 1717171987
+  seconds: 1720003556
 }
