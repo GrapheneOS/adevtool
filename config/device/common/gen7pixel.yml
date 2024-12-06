@@ -7,12 +7,6 @@ includes:
   - gs.yml
 
 filters:
-  dep_files:
-    match:
-      # external/android-nn-driver/Android.mk: error: "android.hardware.neuralnetworks@1.0-service-armnn (EXECUTABLES android-arm64) missing libOpenCL (SHARED_LIBRARIES android-arm64)"
-      - vendor/lib/libOpenCL.so
-      - vendor/lib64/libOpenCL.so
-
   files:
     prefix:
       - product/lib/
