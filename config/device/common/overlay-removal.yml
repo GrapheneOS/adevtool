@@ -65,6 +65,8 @@ filters:
       - android:bool/config_adaptive_sleep_available
       - android:bool/config_assistLongPressHomeEnabledDefault
       - android:bool/config_assistTouchGestureEnabledDefault
+      # Face Unlock is not shipped
+      - android:bool/config_biometricFrrNotificationEnabled
       - android:bool/config_bugReportHandlerEnabled
       - android:bool/config_defaultRingtonePickerEnabled
       - android:bool/config_enableFusedLocationOverlay
