@@ -419,7 +419,7 @@ entry {
   canonical_name: "1and1_de"
   carrier_id {
     mcc_mnc: "20801"
-    6: "894936"
+    iccid: "894936"
   }
 }
 entry {
