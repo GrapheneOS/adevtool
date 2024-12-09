@@ -15,7 +15,7 @@ apns {
     roaming_protocol: IPV4V6
     user_editable: false
     always_on: true
-    31: 1
+    esim_bootstrap_provisioning: 1
   }
   apn {
     name: "ATT Hotspot"
@@ -24,7 +24,7 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    31: 1
+    esim_bootstrap_provisioning: 1
   }
   apn {
     name: "ATT IMS"
@@ -35,7 +35,7 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
     always_on: true
-    31: 1
+    esim_bootstrap_provisioning: 1
   }
   apn {
     name: "ATT XCAP"
@@ -44,7 +44,7 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    31: 1
+    esim_bootstrap_provisioning: 1
   }
 }
 configs {
