@@ -35,6 +35,22 @@ export async function exists(path: string) {
   }
 }
 
+export async function maybeStat(path: string) {
+  try {
+    return await fs.stat(path)
+  } catch {
+    return null
+  }
+}
+
+export async function isFile(path: string) {
+  return (await maybeStat(path))?.isFile() ?? false
+}
+
+export async function isDirectory(path: string) {
+  return (await maybeStat(path))?.isDirectory() ?? false
+}
+
 export async function withTempDir<Return>(callback: (tmp: TempState) => Promise<Return>) {
   let tmp = os.tmpdir()
   let rand = `${Math.random()}`.slice(2, 10)
