@@ -43,6 +43,21 @@ comet AP4A.241205.013.B1:
   factory: ba69154f224b1324232f41ec026f92a311a335586a2faa0ba80fc41542539265 comet-ap4a.241205.013.b1-factory-ba69154f.zip
   ota: 61c6e9336cda13f02170357044f7ea6cab406924abd030d30fe03a90dbfcb408 comet-ota-ap4a.241205.013.b1-61c6e933.zip
   vendor/google_devices: 4bc0e75613c04497f4db5a728e6a7b230807a8172a04391d7287af2189b4e713 google_devices-comet-ap4a.241205.013.b1-93c68ca5.tgz
+comet AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: dccfcd261d0f4402a899782b4dcd6aa4665c0a152e1f98dddc0fe7b6a31a5a63 comet-ap4a.241205.013.c1-factory-dccfcd26.zip
+  ota: 778a50ed590ba9647f635ad8b07d640538274c13d9e98801c8356d7c42f62b73 comet-ota-ap4a.241205.013.c1-778a50ed.zip
+  vendor/google_devices: 102cebf1b44c30b4e8a642f0c42cd4f69b780116bdc631a4768e6858ef9c0672 google_devices-comet-ap4a.241205.013.c1-ff15a430.tgz
+comet AP4A.250105.002:
+  desc: Jan 2025
+  factory: aa2a315e4b94ccdb010bddbaf8ba567864096ac478cb8b68cce1627736ace4ba comet-ap4a.250105.002-factory-aa2a315e.zip
+  ota: 9273a6429bcee2d0d94fb5bb30bdde30767baa1388e69a2ffda94833339b2264 comet-ota-ap4a.250105.002-9273a642.zip
+  vendor/google_devices: 19205ff264fdfa6babbc228b7c5bc2a25b034418d1ba36002a55aab0f2d0c0f8 google_devices-comet-ap4a.250105.002-6cf637a8.tgz
+comet AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: a7a2a988ccd9a60d69ad30f84b54121fc083ebe39b0c54926e9d54108a764c0c comet-ap4a.250105.002.b1-factory-a7a2a988.zip
+  ota: 56cce3f6f53bfd56a839df5924ece7ae36f34aafa6fd841c280340cb2adc58fa comet-ota-ap4a.250105.002.b1-56cce3f6.zip
+  vendor/google_devices: b01f643a3ddcf1afa2fcf3b987b6f48c1b8e0d22f31239e9e161e049b8d62650 google_devices-comet-ap4a.250105.002.b1-945ba624.tgz
 komodo AD1A.240530.030:
   desc: Aug 2024
   factory: fb963bd65cdf9f933692fda3937144f400bde59cfbd74dcaf76f003911480711 komodo-ad1a.240530.030-factory-fb963bd6.zip
@@ -93,6 +108,21 @@ komodo AP4A.241205.013.B1:
   factory: ddfbeebcb9c63727186bfadd3905247e731336d5cf88ef046e0098ad31354d86 komodo-ap4a.241205.013.b1-factory-ddfbeebc.zip
   ota: 09a52aa8614b3484f7b6bfd506d7cc784111e95f6f29c13ebd1b466103264498 komodo-ota-ap4a.241205.013.b1-09a52aa8.zip
   vendor/google_devices: ebeaa4aac1d8301de7e1c73122afbd12674e0cf13a60d864eb1c04214e5fcf5e google_devices-komodo-ap4a.241205.013.b1-d27dfaef.tgz
+komodo AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: 36944ce432f051277f04f93955bc1382ab761f33718717d381a51a2ab01f5e3a komodo-ap4a.241205.013.c1-factory-36944ce4.zip
+  ota: e3d5f405dd2ea69d49c05e03f1ebc29d09e412964948c9391187ea5be01aa93a komodo-ota-ap4a.241205.013.c1-e3d5f405.zip
+  vendor/google_devices: 1b180187742973000fcf8d59859d9af9e0158fc975c3bc4190851161776c4ea4 google_devices-komodo-ap4a.241205.013.c1-6aebe418.tgz
+komodo AP4A.250105.002:
+  desc: Jan 2025
+  factory: 1f16cb17ce7221aa40dc9ddf3fb8d166257a4a69d8d3751e25528ab867516a67 komodo-ap4a.250105.002-factory-1f16cb17.zip
+  ota: 41ab2eacd26553a88d72a37295604f66eb8807b094d4cad043c482408c16bd38 komodo-ota-ap4a.250105.002-41ab2eac.zip
+  vendor/google_devices: b8af5103f89fea7509ecede3ac28e3299d9eb16df2a04bc6de81e1c01d5b39ed google_devices-komodo-ap4a.250105.002-3e04a5c6.tgz
+komodo AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: 6776e03faaf5cd269ea5c40498ac1ae15359fd0d9d5348a4ab8c791c07025c62 komodo-ap4a.250105.002.b1-factory-6776e03f.zip
+  ota: ddce1d3720acbeb67140be2be482ce5264053cfba6b41f1d184903a13355e34c komodo-ota-ap4a.250105.002.b1-ddce1d37.zip
+  vendor/google_devices: 70b432168f2603bcee34ab478e9c0d0d357e323193e3c9db92295fd35a93dea6 google_devices-komodo-ap4a.250105.002.b1-2b9a907d.tgz
 caiman AD1A.240530.030:
   desc: Aug 2024
   factory: 5e2727b97027f14ff26f89b68ce04559c0caf43ce8feda39e6ca3e5925c66309 caiman-ad1a.240530.030-factory-5e2727b9.zip
@@ -143,6 +173,21 @@ caiman AP4A.241205.013.B1:
   factory: 63763b8c96171de8012a1f33d23c01a5fb5d2ce9016fa9dec123ea9f9fd9b243 caiman-ap4a.241205.013.b1-factory-63763b8c.zip
   ota: bb072821e313db1172e1b1079d760923efc2488804b001ba79aa77956b15841e caiman-ota-ap4a.241205.013.b1-bb072821.zip
   vendor/google_devices: dbc5511d34f0b3eeeab3561f0b5abcc02fad394c78cc11be9690ccb88fbb367f google_devices-caiman-ap4a.241205.013.b1-0b5b72d1.tgz
+caiman AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: db9b5f0eefba9d87ca9aa47891f3a90b262c536ae5a45df9b298f42998b11b92 caiman-ap4a.241205.013.c1-factory-db9b5f0e.zip
+  ota: b1d00923797cbfa5eb219390c1b5b1722cedab0d2f27bc7f220b456e4f237d19 caiman-ota-ap4a.241205.013.c1-b1d00923.zip
+  vendor/google_devices: fcd4cad8669dca4031e85bf16378238af70f2e6036cbae684b32d7ffa73fecf9 google_devices-caiman-ap4a.241205.013.c1-0c574720.tgz
+caiman AP4A.250105.002:
+  desc: Jan 2025
+  factory: c63e0cc23ddf96bf963dc9e473024ee0059009143addb5d54c5d3731e8ef0317 caiman-ap4a.250105.002-factory-c63e0cc2.zip
+  ota: 678a85190456a7140d34fa2ef10c54c8bd92da2293d6bfca40075649723e4388 caiman-ota-ap4a.250105.002-678a8519.zip
+  vendor/google_devices: c9001ec5a410dc2b296f25d31ad5399881e3ceaae9bb5c35d36401cd1b359c66 google_devices-caiman-ap4a.250105.002-3d8ab31c.tgz
+caiman AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: ca78c16b210aee0594fcaf2786a516305296e216bce2c3d58eb3fb73063062a5 caiman-ap4a.250105.002.b1-factory-ca78c16b.zip
+  ota: 1ca26605909b4bda89cff8d11d0d4269a684edd264ffcce045dc25f5ecd83144 caiman-ota-ap4a.250105.002.b1-1ca26605.zip
+  vendor/google_devices: 6f887027ce019b7a483c5a529b6d88c7c04af67b58dae1a5bb721f28c43a14b7 google_devices-caiman-ap4a.250105.002.b1-1e0aab8f.tgz
 tokay AD1A.240530.030.A1:
   desc: Aug 2024, India only
   factory: c00748c817eba73c1f70695132ae71a9db6c4d0adb486ba1827a7d231378863d tokay-ad1a.240530.030.a1-factory-c00748c8.zip
@@ -198,6 +243,21 @@ tokay AP4A.241205.013.B1:
   factory: cec75b3132870663a8343653f3ac20ffb6e6bfc350a10bd7f035be9f3e0ae4c7 tokay-ap4a.241205.013.b1-factory-cec75b31.zip
   ota: cd9e133e0e97111af1557eb10ca4cd63d0e7a400256e445fa048b1eb74d08221 tokay-ota-ap4a.241205.013.b1-cd9e133e.zip
   vendor/google_devices: 682bd05ea0bf7279dff17cd87cd7817e014d8ef5b5a1458cec38dfee2f6b2026 google_devices-tokay-ap4a.241205.013.b1-951068f6.tgz
+tokay AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: b7ade089a16155cf0686bc6ed4fb9091377360d9672513b8aedbacf744b6eb57 tokay-ap4a.241205.013.c1-factory-b7ade089.zip
+  ota: c1f50d4c8f848693ea4adf087adbb0a68de2874f5dff558ba61b3f30699569ca tokay-ota-ap4a.241205.013.c1-c1f50d4c.zip
+  vendor/google_devices: 963ea90fb1caca137227ec2e3ff0047b7eb5e688e873324e06e135274fd6c36a google_devices-tokay-ap4a.241205.013.c1-d1cc16e3.tgz
+tokay AP4A.250105.002:
+  desc: Jan 2025
+  factory: d3f58a9f93f634d8e73992a01df3ef5515fad7cef76b0f3fdb240439db279c45 tokay-ap4a.250105.002-factory-d3f58a9f.zip
+  ota: d60a34387c64b775bed0edda39c20c26138fb7881b8d00a88ae8f8617178acca tokay-ota-ap4a.250105.002-d60a3438.zip
+  vendor/google_devices: c1f0952477b9dcf1f5f4b1f957aa85085515b919c511b69780f47ccd6483f214 google_devices-tokay-ap4a.250105.002-39b76f16.tgz
+tokay AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: 9c90aecaba84e67c941b4afe806d258858b39c2e747611387b24a8f882f6e4a3 tokay-ap4a.250105.002.b1-factory-9c90aeca.zip
+  ota: 04bc37cb68f88bd5caa142012801d9d4fd6d9f027f831bd7fb686db77a789ecb tokay-ota-ap4a.250105.002.b1-04bc37cb.zip
+  vendor/google_devices: ed8c57c65673d213c7c5f60409e479ab4f57d01aa34e3b5770736a0abcf6e264 google_devices-tokay-ap4a.250105.002.b1-72f3f324.tgz
 akita UD2A.231203.054:
   desc: May 2024, EMEA, APAC, JP
   factory: b3a902d4ece1f67ab85ac165d58c543d48dd3af1cc822944636d4f96e12df059 akita-ud2a.231203.054-factory-b3a902d4.zip
@@ -313,6 +373,21 @@ akita AP4A.241205.013.B1:
   factory: e7a81fa496797f2c1233380c6cb58134574f655549c442210bc533de0f30664c akita-ap4a.241205.013.b1-factory-e7a81fa4.zip
   ota: 2344e716318ec3a795a32b25e37bb8b3fea775ae0344ecf489f1fd4fbb5fd8c2 akita-ota-ap4a.241205.013.b1-2344e716.zip
   vendor/google_devices: 1ed30865ede47e2ab32cd910d4ff51c28dceca71534ead2bd42a27cb0e777075 google_devices-akita-ap4a.241205.013.b1-1f46be3b.tgz
+akita AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: ad999085ee845a479d9b805b2d2a8d9bca68d67f720c0f6e2df9814b28f7753e akita-ap4a.241205.013.c1-factory-ad999085.zip
+  ota: 22515fee0f436cacf6b9c4b6f9e93aa3ac97b48a881ff90e12f3e112cb049245 akita-ota-ap4a.241205.013.c1-22515fee.zip
+  vendor/google_devices: c3c2f8bc7f92dcb467557d5982956c39e8052584c9c68e545b417322959742e0 google_devices-akita-ap4a.241205.013.c1-924316a1.tgz
+akita AP4A.250105.002:
+  desc: Jan 2025
+  factory: 1c5c298daa1e66408c49a796d61cc16c7f7858eabafa9b6c87c1a32b4359a341 akita-ap4a.250105.002-factory-1c5c298d.zip
+  ota: 640ed10d073af3320869c5ad4c1747a66cda9195e94d57b1dbd23bc96ca95ba8 akita-ota-ap4a.250105.002-640ed10d.zip
+  vendor/google_devices: bf5df3ef8309873a503952cfaee0c30f8f98a1b5fdd5f83a0301863d30e09a57 google_devices-akita-ap4a.250105.002-0b6cfe8d.tgz
+akita AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: a0ea183d449bb4688f1cae686f89d8619cdaeaa927c1ca1d5893164a87eacd4c akita-ap4a.250105.002.b1-factory-a0ea183d.zip
+  ota: 23037922f3c10b8be79acfdb6dc6e83dd8c5119bf42b0ffab039b739c14d1b30 akita-ota-ap4a.250105.002.b1-23037922.zip
+  vendor/google_devices: 7773117bc0d7ceb17a76ef4dfd15e42cd50677c75a50d984568ec75e196865f5 google_devices-akita-ap4a.250105.002.b1-40d10959.tgz
 husky UD1A.230803.022.A3:
   desc: Sep 2023, Verizon
   factory: a95417f6ace90bb3ed39f86966bf9f32aad0505c29d5698dc19dddb9739f37bc husky-ud1a.230803.022.a3-factory-a95417f6.zip
@@ -488,6 +563,21 @@ husky AP4A.241205.013.B1:
   factory: 7d737d19adf8e6648d6c9d8939c2c15842e719af82a5783afcbc23db600e65ba husky-ap4a.241205.013.b1-factory-7d737d19.zip
   ota: fd4d078abeb1d69c57eb7ce57dde072ff82b175fa90948cc2e40c085ed76a7b6 husky-ota-ap4a.241205.013.b1-fd4d078a.zip
   vendor/google_devices: b973c2bb47ca23dbcfbce4030b4164de90f896e5dcc33474afed4c485b44e0c7 google_devices-husky-ap4a.241205.013.b1-b3198930.tgz
+husky AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: 245f15fc79888edfe46b6ad2f4cce791ba461581ea6bb9d7be057cd8dd865bb2 husky-ap4a.241205.013.c1-factory-245f15fc.zip
+  ota: 4c0b3e3e4a82f4b3fcf3ab2bd21c1ae94cafa7f67920c3f2f443bb1f607c126c husky-ota-ap4a.241205.013.c1-4c0b3e3e.zip
+  vendor/google_devices: a119cfb977e494e0cf1b3c724dd6b3839e102725fc68ba62d49eb2d3e1069d23 google_devices-husky-ap4a.241205.013.c1-8788b8de.tgz
+husky AP4A.250105.002:
+  desc: Jan 2025
+  factory: 0b0ddde9994194b36a6a98b9335d961bdb4d851777e83023de634ca1e11e3276 husky-ap4a.250105.002-factory-0b0ddde9.zip
+  ota: a9df99e894b6cc17256a35a5c6dfb8a4c31978dda26c4d4b74fedfa46b5a6e92 husky-ota-ap4a.250105.002-a9df99e8.zip
+  vendor/google_devices: ae67be30ca71ad1655985a6d85a5f8bd56c6db67e523f57b50f1cc19db77c899 google_devices-husky-ap4a.250105.002-34b9f582.tgz
+husky AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: 7a25bce26ac469545f00994587a3c64e40809d962ec111b35c03960e9170a5b3 husky-ap4a.250105.002.b1-factory-7a25bce2.zip
+  ota: 971dad3fe17b2289b74df0e383920aaf1cfdb0607f85edda927755dfc523c5ad husky-ota-ap4a.250105.002.b1-971dad3f.zip
+  vendor/google_devices: 0aed03e682f0cf61c10a7df181e1dc588da0e5807920fe000a772d86f61ec3ed google_devices-husky-ap4a.250105.002.b1-0f856239.tgz
 shiba UD1A.230803.022.A5:
   desc: Sep 2023, US Non Verizon/AT&T/T-Mobile carriers/CA/TW
   factory: 85c06d1dd95b2e157ea1ba3c78fc2df8dabeb42dcd58c9cdb6f015e2c0c7b455 shiba-ud1a.230803.022.a5-factory-85c06d1d.zip
@@ -663,6 +753,21 @@ shiba AP4A.241205.013.B1:
   factory: 4151ddc4ff5cce9a5c108d151fd642fb458b44c513544e821024f000e26d9e48 shiba-ap4a.241205.013.b1-factory-4151ddc4.zip
   ota: 9a2217c9b9dce48ca5a0fe362bfbb6d019f8bd2655047ed39639cf13fa8ea456 shiba-ota-ap4a.241205.013.b1-9a2217c9.zip
   vendor/google_devices: 2176eec91157b97abb076a6edd193151c7814eed25d17a55a977966285e31ee2 google_devices-shiba-ap4a.241205.013.b1-8ee0b685.tgz
+shiba AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: e25767261380fa6ff6ebad01e43c7a771afec5e020c30d9e2c36f7d285a5e729 shiba-ap4a.241205.013.c1-factory-e2576726.zip
+  ota: 9cf20dfcb04d29fe37d578eec87a4c6d68b9408b6027c2339a23977fbb165b9d shiba-ota-ap4a.241205.013.c1-9cf20dfc.zip
+  vendor/google_devices: b08a909f2f06ede15ff31176e34c529dee52d8e81486dfe46c2dae100c1c8b48 google_devices-shiba-ap4a.241205.013.c1-9f74e419.tgz
+shiba AP4A.250105.002:
+  desc: Jan 2025
+  factory: fe54edcd0607c29bec24b016655d99128f3597c98561f1d27efa61ecdb5a31a3 shiba-ap4a.250105.002-factory-fe54edcd.zip
+  ota: 8973f6e79d0f3a371e5c342b15aa39f30d6f43cfa93d2bb5913d10247cda27f7 shiba-ota-ap4a.250105.002-8973f6e7.zip
+  vendor/google_devices: 87ad266a45f30244fdbb4c172d076635379e2d9cca8d2010e73d98bc6a331c75 google_devices-shiba-ap4a.250105.002-1f18b083.tgz
+shiba AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: daccd46c04e332baa67fceae0bedc164463dfbff91cb205ce6c6af398dd9cc29 shiba-ap4a.250105.002.b1-factory-daccd46c.zip
+  ota: bbe308efad9fc9c64671409716c80995de93a7b8b410825a8e0c1a95f6500797 shiba-ota-ap4a.250105.002.b1-bbe308ef.zip
+  vendor/google_devices: 7c5f47beb5694c92f382d9acd929e9468a59793239f448c21c7b88c05b995002 google_devices-shiba-ap4a.250105.002.b1-25ee0a00.tgz
 felix TD3A.230203.070.A1:
   desc: Jun 2023
   factory: d935f0196d7959c916e4f42e25d92e05cd7d2ca0c01080ee46fc35fa996e302b felix-td3a.230203.070.a1-factory-d935f019.zip
@@ -863,6 +968,21 @@ felix AP4A.241205.013.B1:
   factory: 2803682eee240699439ae8a62b543ae0eae2df40b780eb65d37611bb1212d95a felix-ap4a.241205.013.b1-factory-2803682e.zip
   ota: 37c5b18b1b37e41476324240e1b7bc1722548e3be79f52dd9f0fd3b9984e9f15 felix-ota-ap4a.241205.013.b1-37c5b18b.zip
   vendor/google_devices: edc50042eab5f021cdd5d843e0125b20490d6ec169e9806bdae1721b091a522e google_devices-felix-ap4a.241205.013.b1-e4b7ba80.tgz
+felix AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: c3600f7e1aa5f45984caa641d609b4958e3052fb5b4cc48b6abd4f16dcef6b3e felix-ap4a.241205.013.c1-factory-c3600f7e.zip
+  ota: ddfc2988ef69ea5840c71d6ef2041e2e05aa35e0e0d38bf81c196e09f7ddeca5 felix-ota-ap4a.241205.013.c1-ddfc2988.zip
+  vendor/google_devices: 551d832c7da92390fb25da8b5fe4df3761f165544695ac03df04292c7e32dbdb google_devices-felix-ap4a.241205.013.c1-1a5832dd.tgz
+felix AP4A.250105.002:
+  desc: Jan 2025
+  factory: 2f535487264aea5b68e1243eaf19ff0b542f426411ff2e0effaf051701388147 felix-ap4a.250105.002-factory-2f535487.zip
+  ota: 6523eab624f94e4087717296faa174961bc29ee62da33146c56fa7ab84baf283 felix-ota-ap4a.250105.002-6523eab6.zip
+  vendor/google_devices: 0e8bada88b114f16b92a72caae52879c703ec5203dff3d4c35bd2e09fadfed6c google_devices-felix-ap4a.250105.002-5ca88e2d.tgz
+felix AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: a803b0e606c55e5c63f9f2722324390325ae8f703006c64809b800b41d606ec2 felix-ap4a.250105.002.b1-factory-a803b0e6.zip
+  ota: 4ddc8133970858a40e578018b34405f57c7548c47d1841955fd17a972a915e3f felix-ota-ap4a.250105.002.b1-4ddc8133.zip
+  vendor/google_devices: c791e5fccd73055ac5a68daff1bebc1664e5f33ed0be89f8e0fe2ac5c7ad943b google_devices-felix-ap4a.250105.002.b1-f9b18c8e.tgz
 tangorpro TD2A.230203.028:
   desc: Jun 2023
   factory: 55b7fab7178e0cc88a70d432d73edf498ace0277d81ee34867aeaa943b46a7fa tangorpro-td2a.230203.028-factory-55b7fab7.zip
@@ -963,6 +1083,11 @@ tangorpro AP4A.241205.013:
   factory: 04563cd382ef39225b2b8f1f0ae34904f39edf09d0399f93f15189bd9f2af48e tangorpro-ap4a.241205.013-factory-04563cd3.zip
   ota: 7c0e30b1274730a0e95c34efdd93f7d19624893338f18abb38ac395354c4efba tangorpro-ota-ap4a.241205.013-7c0e30b1.zip
   vendor/google_devices: 195f251aed249e01683df4955c30f17e867451b01239355af96be5fa2c69736e google_devices-tangorpro-ap4a.241205.013-3a6aa8aa.tgz
+tangorpro AP4A.250105.002:
+  desc: Jan 2025
+  factory: 8c471fde1ae795fdd264e4ba9bcb2b93e8a3aa88a8a38df0ad40b3cb4559424f tangorpro-ap4a.250105.002-factory-8c471fde.zip
+  ota: f0d8d5e9f6d288e10c0b53ca4e6b978a223f965af73f5c6f6b00a19a130b7761 tangorpro-ota-ap4a.250105.002-f0d8d5e9.zip
+  vendor/google_devices: 47261b75a67d2fbda747cf33c7e0a3635c7174185606519306150773d57036e3 google_devices-tangorpro-ap4a.250105.002-83c4ee99.tgz
 lynx TD4A.221205.042:
   desc: May 2023
   factory: f94007e2844eabb0b4f2203f31776cc9f907021458a258f69f57eed4ef3d24f2 lynx-td4a.221205.042-factory-f94007e2.zip
@@ -1158,6 +1283,21 @@ lynx AP4A.241205.013.B1:
   factory: 19143327209e02786f2ed6f40b04cdad8d2e8c70e92b0db3e3d1358cb9bafaba lynx-ap4a.241205.013.b1-factory-19143327.zip
   ota: f22fb9d6f091f2d570fed9c32324f816fc371218f95f4ac4418b00f8b94b6c67 lynx-ota-ap4a.241205.013.b1-f22fb9d6.zip
   vendor/google_devices: 884d3ea770822711451d78382131b77326c6433ea7df9794b169076001a85628 google_devices-lynx-ap4a.241205.013.b1-0016739b.tgz
+lynx AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: ba1095cf259b913aa83257c133bd8467c2314628ad6c22798d32f57fd970759f lynx-ap4a.241205.013.c1-factory-ba1095cf.zip
+  ota: f0bf07bc0d8a4dd919145546bd3385a576acd0962e0ba499d261d0dcf45c6996 lynx-ota-ap4a.241205.013.c1-f0bf07bc.zip
+  vendor/google_devices: e7b4215309b4d3bf3c3c1669e9fdf1da2453ae3d911ff4afcab3fba135996f23 google_devices-lynx-ap4a.241205.013.c1-a2042def.tgz
+lynx AP4A.250105.002:
+  desc: Jan 2025
+  factory: 9426ca164b081aa3ed051a123a06a632004459a6913e59a58dacd06344442bae lynx-ap4a.250105.002-factory-9426ca16.zip
+  ota: c8dc58360421b0db748ecbc16352aed6d559a6c6cf49e31d5b50451f465c1b10 lynx-ota-ap4a.250105.002-c8dc5836.zip
+  vendor/google_devices: 8c56bc298d143cf998065568be8dd0540c0596948a82c0de4e3921a77050aa30 google_devices-lynx-ap4a.250105.002-30cac4d6.tgz
+lynx AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: 0957d4ac243fe75d04f7d996bf6c456d60af2d879d1c120858fe7c8b0edc99f1 lynx-ap4a.250105.002.b1-factory-0957d4ac.zip
+  ota: fafbc74e5aca58959d5379170e85f0a79d8cdcc614cc4e483aa55639e34b5cd8 lynx-ota-ap4a.250105.002.b1-fafbc74e.zip
+  vendor/google_devices: ab8c76858ed543936ef41906072d2b2adbc335500226f4f342280b5aac8bd7b4 google_devices-lynx-ap4a.250105.002.b1-add71457.tgz
 cheetah TD1A.220804.009.A2:
   desc: Oct 2022
   factory: 8e7393e1bd7f86d76d75cdea988d5e4ebfded3a50fac26d774b9eb07152c1ed5 cheetah-td1a.220804.009.a2-factory-8e7393e1.zip
@@ -1418,6 +1558,21 @@ cheetah AP4A.241205.013.B1:
   factory: a47ebb3d4677e628c6655af3734ce29bdb6824b313f2bba13fca9dd8bcd44c1a cheetah-ap4a.241205.013.b1-factory-a47ebb3d.zip
   ota: 81743b9626f9996e1c8939a973431f2b452bae15cafa1b88228ccdcd7d5a298f cheetah-ota-ap4a.241205.013.b1-81743b96.zip
   vendor/google_devices: fce9cdc13d1d6c4836708dd234c9c2969af50492bb8d2bed18142f4aa8d7257e google_devices-cheetah-ap4a.241205.013.b1-b3d09f9d.tgz
+cheetah AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: 89eb723a937de0625c3d4e68fb24267514307b519a553b288a46d5381746080b cheetah-ap4a.241205.013.c1-factory-89eb723a.zip
+  ota: 25436aadba031fc2e9084d76f1f8fa1c54b75f552d2932f11c27858304f69d48 cheetah-ota-ap4a.241205.013.c1-25436aad.zip
+  vendor/google_devices: 8527bf00ec5d7151604a5e87b93f5372abd7ed010445766c5873e12c08aedce6 google_devices-cheetah-ap4a.241205.013.c1-26ddeb1b.tgz
+cheetah AP4A.250105.002:
+  desc: Jan 2025
+  factory: 7574869b3d4379a2cd813ab36f42b58f8380f881d5f622a42cc81358b9c4172b cheetah-ap4a.250105.002-factory-7574869b.zip
+  ota: f36057bde1e0a9c49adf89ed9385b3cd3565190cedb2666a3387f14c0f505cdf cheetah-ota-ap4a.250105.002-f36057bd.zip
+  vendor/google_devices: c22d44df8a221a4f3df15cf2dd5baafa0130d68dea258faee7962c78e7200b41 google_devices-cheetah-ap4a.250105.002-5cb537df.tgz
+cheetah AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: 3969a8f8475421641e4bf590f2e98948b064ca2223d81d1ead45c599dd89fb0a cheetah-ap4a.250105.002.b1-factory-3969a8f8.zip
+  ota: 69b6645f471ecc5dfdb3d219d81e26e914e086445bdbfc4376a5e66572700e39 cheetah-ota-ap4a.250105.002.b1-69b6645f.zip
+  vendor/google_devices: dc3769e4307d29c0ed9c982941d45fa516a3972eae4760f8a3e4a30d40b1b076 google_devices-cheetah-ap4a.250105.002.b1-8656bd43.tgz
 panther TD1A.220804.009.A2:
   desc: Oct 2022
   factory: 336ba5c1728987d0dea8ce764e342b1d3c5cf30b8c3ea1dd5c405c492f66677d panther-td1a.220804.009.a2-factory-336ba5c1.zip
@@ -1678,6 +1833,21 @@ panther AP4A.241205.013.B1:
   factory: 9d9918f7c9112854ae6d2e45debfac6e155ab191cfb83874b8d4143eebbcbafd panther-ap4a.241205.013.b1-factory-9d9918f7.zip
   ota: df4d1e5d7d5f0c4db9db26e2b5e8f8ac00f0787803595dcd49d4f2b45e58d1a4 panther-ota-ap4a.241205.013.b1-df4d1e5d.zip
   vendor/google_devices: 15cc3c203b79d719f30f0f5a63027aad3a43f53a058dde91f035206e86802665 google_devices-panther-ap4a.241205.013.b1-ec9c406d.tgz
+panther AP4A.241205.013.C1:
+  desc: Dec 2024, T-Mobile
+  factory: 0c9997443c211a9df3b44eeb26cb54151c9e13254218247e2bf45b5560c15cbf panther-ap4a.241205.013.c1-factory-0c999744.zip
+  ota: f2bdba88614ce52701f72ede802a93b0255255676d53162116b6eb2ac22bbdf8 panther-ota-ap4a.241205.013.c1-f2bdba88.zip
+  vendor/google_devices: b005a3f89589bb3539d184af53295abd8e440ebfb19fb14e62ca17d25e31be88 google_devices-panther-ap4a.241205.013.c1-541cc234.tgz
+panther AP4A.250105.002:
+  desc: Jan 2025
+  factory: 19fbfb654a3c566cc993c12335d288af9e57161ceab2a00d0754ccaffe7450ee panther-ap4a.250105.002-factory-19fbfb65.zip
+  ota: 6e2a641805f44df0f989deb0a87eb69de61d3e82648d3999185854d037f03ab3 panther-ota-ap4a.250105.002-6e2a6418.zip
+  vendor/google_devices: f6b35d74e8b07aa0c9cf100cd7a2aade7c714174cc0ece1aaf6aabd120b70227 google_devices-panther-ap4a.250105.002-cba3631b.tgz
+panther AP4A.250105.002.B1:
+  desc: Jan 2025, Telstra
+  factory: 8e2e0f7a2972cbd1ce5d99e33701637fc86ee4331b20084e456fb0bec9acab98 panther-ap4a.250105.002.b1-factory-8e2e0f7a.zip
+  ota: efe8fde0c5f043fd4b2f3e220ed27396752ed71ffa41cc821cdf3134062615b7 panther-ota-ap4a.250105.002.b1-efe8fde0.zip
+  vendor/google_devices: 141f00575870ab9e8ede379086fac211cc12a97662fd682872b892feebb05811 google_devices-panther-ap4a.250105.002.b1-475f41c7.tgz
 bluejay SD2A.220601.001.A1:
   desc: Jun 2022, JP carriers
   factory: 16c3fe1cce5be6bd26db4a87a40c8ebe0b0f520efe5fa79602e809d91d89c40b bluejay-sd2a.220601.001.a1-factory-16c3fe1c.zip
@@ -1938,6 +2108,16 @@ bluejay AP4A.241205.013.A2:
   factory: 52a9ff22c7dd81d1ef591d4664150d8af4a7bc8202e31155ff2dda2865a463ad bluejay-ap4a.241205.013.a2-factory-52a9ff22.zip
   ota: d06e0e4d21c68c36a93a50adea1a79cb3555b9e9370aeb4ff98bcc10febff033 bluejay-ota-ap4a.241205.013.a2-d06e0e4d.zip
   vendor/google_devices: f733cf25099fd70acaa4feab456cf3aad9f737a2a4690fc8daeea5c8a9c42f3f google_devices-bluejay-ap4a.241205.013.a2-0fdf3ef9.tgz
+bluejay AP4A.250105.002:
+  desc: Jan 2025
+  factory: 72283090f956af65694f65f0d9947eefb0c0023f739f9f7eaa0038b008e63491 bluejay-ap4a.250105.002-factory-72283090.zip
+  ota: 14508b664b31eb5c6880a0b5bba13905f876ff5a9b6a5be9832a2b1d872edfcb bluejay-ota-ap4a.250105.002-14508b66.zip
+  vendor/google_devices: d193ce3c5741d4d6ad7e9b6619105043ca7db56f8aa192ed06a07e712edcba68 google_devices-bluejay-ap4a.250105.002-3e267cbd.tgz
+bluejay AP4A.250105.002.A1:
+  desc: Jan 2025, EMEA
+  factory: 1ca32eb5eff5aaf3a504b7860677759918044ac078a3b44c661a627dd37dbbea bluejay-ap4a.250105.002.a1-factory-1ca32eb5.zip
+  ota: e270b59e6f3dd2a579fd6eac042a3dd1d53c826c67a06c764d82ec5a647baebf bluejay-ota-ap4a.250105.002.a1-e270b59e.zip
+  vendor/google_devices: b4938beba8db248fef6ac23b8cdb6b80c62e8a59bdd45677bab04f8c415c2543 google_devices-bluejay-ap4a.250105.002.a1-3c9db338.tgz
 raven SD1A.210817.015.A4:
   desc: Oct 2021
   factory: bd6cb030402897f58b952008211640f5241699200d509926540425e00b115bc9 raven-sd1a.210817.015.a4-factory-bd6cb030.zip
@@ -2273,6 +2453,16 @@ raven AP4A.241205.013.A2:
   factory: c084c2f1d14be30b6fdb965896e11ae4b3a09b9d4a0d27752e3be7ea4bf83a06 raven-ap4a.241205.013.a2-factory-c084c2f1.zip
   ota: bfa8f5bf4d09cdedb7c2c211224ca6ac6ffd7e0f618cf952c8b26a847dc8391c raven-ota-ap4a.241205.013.a2-bfa8f5bf.zip
   vendor/google_devices: 10f509d820492196cf310448b1fc3eecfb20de5bd0da97844b2d49910b04de2c google_devices-raven-ap4a.241205.013.a2-2b8352aa.tgz
+raven AP4A.250105.002:
+  desc: Jan 2025
+  factory: a6237d24518841c6d60c1df36932ed31fda9ee55575bef1d1b59f52aeabb6a8a raven-ap4a.250105.002-factory-a6237d24.zip
+  ota: 1653a7393e55d9d7e85fa57d01a17267caee3e024e9a81f93aa907d7bcb521d9 raven-ota-ap4a.250105.002-1653a739.zip
+  vendor/google_devices: 23384b92723273b86ac5a62d71938c9c4a087459d4d329a83ff6507da37324db google_devices-raven-ap4a.250105.002-00a72f2b.tgz
+raven AP4A.250105.002.A1:
+  desc: Jan 2025, EMEA
+  factory: 52aee3c7b07e4dd8f06c3ab02f4fb45118112673ffa91e5b01a2b4f020a088fc raven-ap4a.250105.002.a1-factory-52aee3c7.zip
+  ota: 1d66fbc115f3e0b2d9075aee9e1d2dea09349160d449337554a3f6d36bd0cc14 raven-ota-ap4a.250105.002.a1-1d66fbc1.zip
+  vendor/google_devices: 5dd714fb93ce91992ae98acfdf63b0361949d7bb97117d1bbcb5430e540ceeb2 google_devices-raven-ap4a.250105.002.a1-e04d8de0.tgz
 oriole SD1A.210817.015.A4:
   desc: Oct 2021
   factory: 074b7f51800a72cf493d5f287a4ec3ff23e234c403d0d2a935dd7d6194665d19 oriole-sd1a.210817.015.a4-factory-074b7f51.zip
@@ -2608,6 +2798,16 @@ oriole AP4A.241205.013.A2:
   factory: 2090c860514a0f6c84e279ae2dcb186f0c0a96c9c3c534eae2bf94b74570777b oriole-ap4a.241205.013.a2-factory-2090c860.zip
   ota: f763e7ad4e1896407fc3d4f9a770efa174206b8d657cf6d71908b9f5b655b5ce oriole-ota-ap4a.241205.013.a2-f763e7ad.zip
   vendor/google_devices: 68825159e933ab51107ba63f3dbf829ea0a24d19466cb07ca613981cca39bda8 google_devices-oriole-ap4a.241205.013.a2-a33d54d9.tgz
+oriole AP4A.250105.002:
+  desc: Jan 2025
+  factory: 242e92719154c8ee3bf906aecddae049798c28108e510cea0d6f011a804fcf7f oriole-ap4a.250105.002-factory-242e9271.zip
+  ota: 5e0383a4d1a3b6b788fbca7c1d52b7e93702969cbb640a474461ff1dd5165dfb oriole-ota-ap4a.250105.002-5e0383a4.zip
+  vendor/google_devices: 21970cd022797b4efd59ff00cc4c86c9dc8ce147b2692dca680fbfe3695775be google_devices-oriole-ap4a.250105.002-a47885e4.tgz
+oriole AP4A.250105.002.A1:
+  desc: Jan 2025, EMEA
+  factory: ac37771b1d99a66e6162d1bbbb432d326cae2527446c9c6bdebccd921e419330 oriole-ap4a.250105.002.a1-factory-ac37771b.zip
+  ota: 88f120a01c51652514b5441d51a3b13b6e2d8cf620c7a887fb5201df4762bfc7 oriole-ota-ap4a.250105.002.a1-88f120a0.zip
+  vendor/google_devices: 8c3a7ca1e71d883db5abcf75160b544e59f56b871d4d520ec71bb419a767ea08 google_devices-oriole-ap4a.250105.002.a1-2b51b2d8.tgz
 raven SQ1D.211205.016.A1:
   vendor/google_devices: af62f2caad37c623bc7a6d87a1aa5a35aa73e54e17d5fec1e45938659ecb9375 google_devices-raven-sq1d.211205.016.a1-71ff241f.tgz
 raven SQ1D.211205.016.A4:
