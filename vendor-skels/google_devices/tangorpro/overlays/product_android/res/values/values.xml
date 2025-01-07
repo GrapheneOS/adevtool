@@ -78,7 +78,6 @@
   <bool name="config_allowRotationResolver">false</bool>
   <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
   <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
-  <bool name="config_biometricFrrNotificationEnabled">true</bool>
   <bool name="config_buttonTextAllCaps">false</bool>
   <bool name="config_deskDockEnablesAccelerometer">false</bool>
   <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
