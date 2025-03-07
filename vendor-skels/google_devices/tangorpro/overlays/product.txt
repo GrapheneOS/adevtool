@@ -178,7 +178,6 @@ com.android.phone:bool/vvm3_enabled = true
 com.android.phone:integer/config_metrics_pull_cooldown_millis = 18000000
 com.android.server.telecom:bool/grant_location_permission_enabled = true
 com.android.providers.telephony:string/app_label = Mobile Network Configuration
-android:string-array/config_defaultPinnerServiceFiles = /system/framework/framework.jar,/system/framework/services.jar,/apex/com.android.art/javalib/core-oj.jar,/apex/com.android.art/javalib/core-libart.jar,/system/bin/surfaceflinger,/system_ext/priv-app/SystemUITitan/SystemUITitan.apk
 android:string-array/config_disabledDreamComponents = com.google.android.deskclock/com.android.deskclock.Screensaver,com.android.dreams.basic/.Colors,com.google.android.apps.photos/.daydream.PhotosDreamService,com.android.systemui/com.google.android.systemui.lowlightclock.LowLightClockDreamService
 android:string-array/config_dockExtconStateMapping = 4,USB=1,3
 android:integer-array/config_supportedDreamComplications = 1,2,3,4,5,6,7,8

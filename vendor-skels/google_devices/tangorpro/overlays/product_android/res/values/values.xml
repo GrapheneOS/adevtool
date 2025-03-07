@@ -159,14 +159,6 @@
   <integer-array name="non_removable_euicc_slots">
     <item>0</item>
   </integer-array>
-  <string-array name="config_defaultPinnerServiceFiles">
-    <item>/system/framework/framework.jar</item>
-    <item>/system/framework/services.jar</item>
-    <item>/apex/com.android.art/javalib/core-oj.jar</item>
-    <item>/apex/com.android.art/javalib/core-libart.jar</item>
-    <item>/system/bin/surfaceflinger</item>
-    <item>/system_ext/priv-app/SystemUITitan/SystemUITitan.apk</item>
-  </string-array>
   <string-array name="config_disabledDreamComponents">
     <item>com.google.android.deskclock/com.android.deskclock.Screensaver</item>
     <item>com.android.dreams.basic/.Colors</item>

@@ -105,6 +105,7 @@ filters:
       - android:string-array/config_companionDevicePackages
       - android:string-array/config_companionDevicePackages
       - android:string-array/config_defaultCloudSearchServices
+      - android:string-array/config_defaultPinnerServiceFiles
       - android:string-array/config_defaultFirstUserRestrictions
       - android:string-array/config_disabledUntilUsedPreinstalledImes
       - android:string-array/config_disabledUntilUsedPreinstalledImes
