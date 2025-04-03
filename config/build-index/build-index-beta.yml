@@ -457,3 +457,50 @@ komodo BP11.241210.004:
 comet BP11.241210.004:
   factory: 01fc7bc24d5c982987816c0a371e1e4a8296f2597ddc47c3dac19e6e05c6aa93 https://dl.google.com/developers/android/vic/images/factory/comet_beta-bp11.241210.004-factory-01fc7bc2.zip
   ota: dc44cdf1bf1de5eac8b8ff7919c37cb0ecb134b57e85a4a0b5faca48e18ad4aa https://dl.google.com/developers/android/vic/images/ota/comet_beta-ota-bp11.241210.004-dc44cdf1.zip
+
+# 16 Beta 3.2 | April 2, 2025 | March 2025 SPL
+oriole BP22.250221.015:
+  factory: c1e661486dc764202e19fbef2ea78ae943f570bd85691aab2dd50ac1ec54f20d https://dl.google.com/developers/android/baklava/images/factory/oriole_beta-bp22.250221.015-factory-c1e66148.zip
+  ota: cc5e12306515b509317fbd85cb024eda61f23432f965e105486bc51916d069ef https://dl.google.com/developers/android/baklava/images/ota/oriole_beta-ota-bp22.250221.015-cc5e1230.zip
+raven BP22.250221.015:
+  factory: ada496c48c36721508ac30fec32ba4072867311ceda22ba3579031d1f775c3e2 https://dl.google.com/developers/android/baklava/images/factory/raven_beta-bp22.250221.015-factory-ada496c4.zip
+  ota: bcac7d19ff8a09b2db8885b7889eef2b231045c3a4c0a3555c9d98f6256e58bb https://dl.google.com/developers/android/baklava/images/ota/raven_beta-ota-bp22.250221.015-bcac7d19.zip
+bluejay BP22.250221.015:
+  factory: ab07bdf5ffb50988d7442ea0cf122936b8a6d82672e0eaff2562f8ae64ccdc66 https://dl.google.com/developers/android/baklava/images/factory/bluejay_beta-bp22.250221.015-factory-ab07bdf5.zip
+  ota: bcdedf33e498fb2b64722534d105723546b7a73c782a8465736bd45ffdc62a77 https://dl.google.com/developers/android/baklava/images/ota/bluejay_beta-ota-bp22.250221.015-bcdedf33.zip
+panther BP22.250221.015:
+  factory: 91bb3bc462c8875a8ca925e17679b42fb8cf2cbf24ab988ac2307530cd6fe688 https://dl.google.com/developers/android/baklava/images/factory/panther_beta-bp22.250221.015-factory-91bb3bc4.zip
+  ota: f7b2935f9f72d6e6e9307faf9cb8585c33531f33f4f8b30968a63365ccd3d63f https://dl.google.com/developers/android/baklava/images/ota/panther_beta-ota-bp22.250221.015-f7b2935f.zip
+cheetah BP22.250221.015:
+  factory: 2a23a8e90206753e0e912e9a42536d40aa6db71fd398999242b573cc3666538a https://dl.google.com/developers/android/baklava/images/factory/cheetah_beta-bp22.250221.015-factory-2a23a8e9.zip
+  ota: 461e1857639dd869d206db0e6807a1d6dccf82b6b0adfddcc8ad9409abe7c154 https://dl.google.com/developers/android/baklava/images/ota/cheetah_beta-ota-bp22.250221.015-461e1857.zip
+lynx BP22.250221.015:
+  factory: 50d6e686757b79422b5a8723bbcc9bdf94ee62148bc35fd215fd2e4ee272b452 https://dl.google.com/developers/android/baklava/images/factory/lynx_beta-bp22.250221.015-factory-50d6e686.zip
+  ota: ca5f0504b18bd049bce4431e6eeee7797941331e589fa23e28cd8a9aa4a84772 https://dl.google.com/developers/android/baklava/images/ota/lynx_beta-ota-bp22.250221.015-ca5f0504.zip
+felix BP22.250221.015:
+  factory: d3fc817b32a0568811d82f82152d7241e076af672f7fceee1ef5278804a17a12 https://dl.google.com/developers/android/baklava/images/factory/felix_beta-bp22.250221.015-factory-d3fc817b.zip
+  ota: 9a76ff222dd8127048518012f8e2649d7b0541d476d795f1f2305429714b21a2 https://dl.google.com/developers/android/baklava/images/ota/felix_beta-ota-bp22.250221.015-9a76ff22.zip
+tangorpro BP22.250221.015:
+  factory: 6107a5d8136f134e363626b3acde1319ba29dcd13f973b9d626359de75d347a1 https://dl.google.com/developers/android/baklava/images/factory/tangorpro_beta-bp22.250221.015-factory-6107a5d8.zip
+  ota: 7f24130f9259cfcc79ca90d8b33c04973f3da5d3635f796ed2b8cdea0aa19915 https://dl.google.com/developers/android/baklava/images/ota/tangorpro_beta-ota-bp22.250221.015-7f24130f.zip
+shiba BP22.250221.015:
+  factory: bea9b35205694f4cad3fcc8b828857da906cbed88c788e1edacd86017b508f78 https://dl.google.com/developers/android/baklava/images/factory/shiba_beta-bp22.250221.015-factory-bea9b352.zip
+  ota: f45e7f6e1943de6479d7ee0d7a951a597b72def386d59be6ca07a3e9ef48aa4a https://dl.google.com/developers/android/baklava/images/ota/shiba_beta-ota-bp22.250221.015-f45e7f6e.zip
+husky BP22.250221.015:
+  factory: 604c097b0cc21f33f1ea8c6a57db8432dfebcfc7ef295f8e58f5c5e01f3088df https://dl.google.com/developers/android/baklava/images/factory/husky_beta-bp22.250221.015-factory-604c097b.zip
+  ota: 54955fd60d6a58801dbc43047b6c6368d6ea6603972192cd3ffafd6e4737102e https://dl.google.com/developers/android/baklava/images/ota/husky_beta-ota-bp22.250221.015-54955fd6.zip
+akita BP22.250221.015:
+  factory: 793590f91408df4ad1cad9ff9e21421726f2b7f1ccf29009c42ccc1881c6564f https://dl.google.com/developers/android/baklava/images/factory/akita_beta-bp22.250221.015-factory-793590f9.zip
+  ota: bd84a592b605bf2e505524ddb455056171ee27bbe878d6e0461e23be5f33919e https://dl.google.com/developers/android/baklava/images/ota/akita_beta-ota-bp22.250221.015-bd84a592.zip
+tokay BP22.250221.015:
+  factory: 872f7d2ddba39b73b47b1564d1daeae52a3dfb73f6c3c6d155675f4af834b833 https://dl.google.com/developers/android/baklava/images/factory/tokay_beta-bp22.250221.015-factory-872f7d2d.zip
+  ota: a89ba5f7460fbd3eca2427587ecc8dd753149362ebfe632a82bcb4b06da0dc82 https://dl.google.com/developers/android/baklava/images/ota/tokay_beta-ota-bp22.250221.015-a89ba5f7.zip
+caiman BP22.250221.015:
+  factory: 11aee2bbf616e8dd59aad23b63cf4d72b4b624c1b3cf55ac2b5bfc5f726f49ff https://dl.google.com/developers/android/baklava/images/factory/caiman_beta-bp22.250221.015-factory-11aee2bb.zip
+  ota: 06b182f4f95ab9d5639eb7533062672b10df4c811cad66ca804f1f56efc8d063 https://dl.google.com/developers/android/baklava/images/ota/caiman_beta-ota-bp22.250221.015-06b182f4.zip
+komodo BP22.250221.015:
+  factory: b504db81117382a34c554494a46b557f172757ea4e3dc502786f817979f7a754 https://dl.google.com/developers/android/baklava/images/factory/komodo_beta-bp22.250221.015-factory-b504db81.zip
+  ota: 69ceb9a47bbac137cc1e9cef8b5ecbefcc427bceb917be6b99f2b40a3442bba0 https://dl.google.com/developers/android/baklava/images/ota/komodo_beta-ota-bp22.250221.015-69ceb9a4.zip
+comet BP22.250221.015:
+  factory: fc342593466edf27e26b08a5deff03e0004045e5a95c68aab4a8a7325e84d75f https://dl.google.com/developers/android/baklava/images/factory/comet_beta-bp22.250221.015-factory-fc342593.zip
+  ota: a6a5d621d651626e20063b17f8e39107abbe0b82bf97258e3644518a535a524e https://dl.google.com/developers/android/baklava/images/ota/comet_beta-ota-bp22.250221.015-a6a5d621.zip
