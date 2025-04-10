@@ -2,6 +2,9 @@ includes:
   - pixel.yml
   - gs.yml
 
+device:
+  build_id: BP1A.250405.007.B1
+
 platform:
   sepolicy_dirs:
     - device/google/zuma-sepolicy
