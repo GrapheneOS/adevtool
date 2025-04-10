@@ -1,7 +1,6 @@
 device:
   name: tangorpro
   has_cellular: false
-  build_id: BP1A.250305.020.T2
 
 platform:
   product_makefile: device/google/tangorpro/aosp_tangorpro.mk
