@@ -458,6 +458,16 @@ tokay BP1A.250405.007.D1:
   factory: 680d3eb5ee968b595bbb2501fdb5a99fa1c7f3c75a176cb10fc0d7059a5383bf tokay-bp1a.250405.007.d1-factory-680d3eb5.zip
   ota: dbcfe787b0d00929a066e9901e9c15966470fa9acd46cb786bbd7cfa06bc65b7 tokay-ota-bp1a.250405.007.d1-dbcfe787.zip
   vendor/google_devices: 7a9c20f7dc35311bbba020b05c9110004a7e9514f6eebdbdd5dc035148311676 google_devices-tokay-bp1a.250405.007.d1-ac52e865.tgz
+tegu BD4A.240925.111:
+  desc: Apr 2025
+  factory: eb8b02663f40b73b7f0b8d945ca100f3223b05715253268a5ac664a13e26f758 tegu-bd4a.240925.111-factory-eb8b0266.zip
+  ota: 2e1b0f30cfc79bc1125aed9cf4eacc84e38a2a288e511e0e5129ae20a335f2fe tegu-ota-bd4a.240925.111-2e1b0f30.zip
+  vendor/google_devices: ccece1b1cbb147508ae17daee83192195a5c75eff5e7953c092016ce12901567 google_devices-tegu-bd4a.240925.111-7f8389d3.tgz
+tegu BD4A.250405.003:
+  desc: Apr 2025
+  factory: 6dba30b45d2339eae49c7223e276a2ed006d04af157edaaaf9de8e828cb5752d tegu-bd4a.250405.003-factory-6dba30b4.zip
+  ota: 9387d8f01bd877da9a78f2890c6e58b4014e1a3c12105b73590a80e00aba649e tegu-ota-bd4a.250405.003-9387d8f0.zip
+  vendor/google_devices: 2a1512e0c52d8d09f258f0304b455bf0180f60da8f5e5ff172664b97163efc55 google_devices-tegu-bd4a.250405.003-cb48fddd.tgz
 akita UD2A.231203.054:
   desc: May 2024, EMEA, APAC, JP
   factory: b3a902d4ece1f67ab85ac165d58c543d48dd3af1cc822944636d4f96e12df059 akita-ud2a.231203.054-factory-b3a902d4.zip
