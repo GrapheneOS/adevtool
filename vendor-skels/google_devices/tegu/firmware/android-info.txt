@@ -1,0 +1,5 @@
+require board=tegu
+
+require version-bootloader=tegu-16.0-13238451
+require version-baseband=g5300t-241101-241226-B-12850354
+require partition-exists=vendor_kernel_boot

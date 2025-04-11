@@ -1,0 +1,258 @@
+canonical_name: "cht_tw"
+version: 63000000003
+apns {
+  apn {
+    name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (Internet)"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+  }
+  apn {
+    name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (MMS)"
+    value: "emome"
+    type: MMS
+    mmsc: "http://mms.emome.net:8002"
+    mmsc_proxy: "10.1.1.1"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (IMS)"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    user_visible: false
+  }
+  apn {
+    name: "CHT XCAP"
+    value: "hos"
+    type: XCAP
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,31;connected,legacy,31;connected_mmwave,not_restricted_rrc_con,31;connected,not_restricted_rrc_con,31;not_restricted_rrc_idle,not_restricted_rrc_con,15"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8088
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_override_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_string"
+    text_value: "\344\270\255\350\217\257\351\233\273\344\277\241"
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 2
+    }
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.dpd_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc092.mcc466.pub.3gppnetwork.org"
+  }
+  config {
+    key: "lte_endc_using_user_data_for_rrc_detection_bool"
+    bool_value: true
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
+    key: "nr_timers_reset_if_non_endc_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "preferred_ike_protocol_int"
+    int_value: 40
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

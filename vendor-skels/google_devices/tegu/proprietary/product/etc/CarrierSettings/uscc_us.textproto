@@ -1,0 +1,510 @@
+canonical_name: "uscc_us"
+version: 63000000006
+apns {
+  apn {
+    name: "U.S. Cellular"
+    value: "usccinternet"
+    type: DEFAULT
+    type: MMS
+    type: DUN
+    type: HIPRI
+    type: FOTA
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    mmsc: "http://mmsc1.uscc.net/mmsc/MMS"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    mtu: 1422
+    user_editable: false
+  }
+  apn {
+    name: "U.S. Cellular"
+    value: ""
+    type: DEFAULT
+    type: MMS
+    type: DUN
+    type: HIPRI
+    type: FOTA
+    bearer_bitmask: "4|5|6|7|8|12"
+    authtype: 3
+    mmsc: "http://mmsc1.uscc.net/mmsc/MMS"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    mtu: 1422
+    user_visible: false
+  }
+  apn {
+    name: "U.S. Cellular IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_eri_file_name_string"
+    text_value: "eri.xml"
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "cdma_3waycall_flash_delay_int"
+    int_value: 0
+  }
+  config {
+    key: "cdma_nonroaming_networks_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "config_telephony_use_own_number_for_voicemail_bool"
+    bool_value: true
+  }
+  config {
+    key: "disable_cdma_activation_code_bool"
+    bool_value: false
+  }
+  config {
+    key: "dtmf_type_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "emailGatewayNumber"
+    text_value: "6245"
+  }
+  config {
+    key: "emergency_number_prefix_string_array"
+    text_array {
+      item: "#"
+      item: "*"
+      item: "*272"
+    }
+  }
+  config {
+    key: "enableMultipartSMS"
+    bool_value: false
+  }
+  config {
+    key: "enabledNotifyWapMMSC"
+    bool_value: true
+  }
+  config {
+    key: "enabledTransID"
+    bool_value: true
+  }
+  config {
+    key: "gsm_nonroaming_networks_string_array"
+    text_array {
+      item: "310120"
+      item: "310260"
+      item: "310410"
+      item: "311480"
+      item: "312530"
+    }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_preferred_network_type_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_sim_lock_settings_bool"
+    bool_value: true
+  }
+  config {
+    key: "httpParams"
+    text_value: "x-vzw-mdn: 1##LINE1NOCOUNTRYCODE##"
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1080
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.registration_expiry_timer_sec_int"
+    int_value: 7200
+  }
+  config {
+    key: "ims.registration_subscribe_expiry_timer_sec_int"
+    int_value: 7200
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.sip_timer_b_millis_int"
+    int_value: 130000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_callback_mode_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.emergency_vowifi_requires_condition_int"
+    int_value: 1
+  }
+  config {
+    key: "imsrtt.text_as_bandwidth_kbps_int"
+    int_value: 3
+  }
+  config {
+    key: "imsrtt.text_rr_bandwidth_bps_int"
+    int_value: 300
+  }
+  config {
+    key: "imsrtt.text_rs_bandwidth_bps_int"
+    int_value: 100
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://aes.mnc580.mcc311.pub.3gppnetwork.org/rcs-entitlement"
+  }
+  config {
+    key: "imsserviceentitlement.fcm_sender_id_string"
+    text_value: "1074633755707"
+  }
+  config {
+    key: "imsserviceentitlement.show_vowifi_webview_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "102"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 2
+              item: 4
+              item: 7
+            }
+          }
+        }
+      }
+      config {
+        key: "103"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 2
+              item: 4
+              item: 7
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "104"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 1
+              item: 2
+            }
+          }
+        }
+      }
+      config {
+        key: "105"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 1
+              item: 2
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "usccconf@usccims.com"
+  }
+  config {
+    key: "imsvoice.dedicated_bearer_wait_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 4
+              item: 4
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 900
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 60000
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 2
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 1
+      item: 2
+      item: 3
+    }
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "310"
+      item: "311"
+      item: "312"
+      item: "313"
+      item: "314"
+      item: "315"
+      item: "316"
+    }
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_apn_setting_cdma_bool"
+    bool_value: false
+  }
+  config {
+    key: "show_cdma_choices_bool"
+    bool_value: false
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "us"
+  }
+  config {
+    key: "support_ims_conference_event_package_bool"
+    bool_value: false
+  }
+  config {
+    key: "support_ss_over_cdma_bool"
+    bool_value: true
+  }
+  config {
+    key: "support_swap_after_merge_bool"
+    bool_value: true
+  }
+  config {
+    key: "uaProfTagName"
+    text_value: "x-wap-profile"
+  }
+  config {
+    key: "use_otasp_for_provisioning_bool"
+    bool_value: false
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "volte_5g_limited_alert_dialog_bool"
+    bool_value: true
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 6
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+  config {
+    key: "world_mode_enabled_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1726812809
+}

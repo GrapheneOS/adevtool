@@ -1,0 +1,261 @@
+canonical_name: "vodafone_in"
+version: 63000000003
+apns {
+  apn {
+    name: "Vodafone Mobile Connect"
+    value: "www"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
+    bool_value: true
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE#_#MODEL#_#BUILD#"
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 60000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 60000
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 768
+  }
+  config {
+    key: "imsvt.video_rr_bandwidth_bps_int"
+    int_value: 28800
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 9600
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.mcc_mncs_string_array"
+    text_array {
+      item: "404-13"
+      item: "405-751"
+      item: "405-752"
+      item: "404-84"
+      item: "404-11"
+      item: "404-05"
+      item: "404-01"
+      item: "405-754"
+      item: "405-750"
+      item: "404-15"
+      item: "405-66"
+      item: "404-30"
+      item: "404-27"
+      item: "405-756"
+      item: "404-20"
+      item: "405-755"
+      item: "405-753"
+      item: "404-60"
+      item: "404-43"
+      item: "404-88"
+      item: "405-67"
+      item: "404-86"
+      item: "404-46"
+      item: "404-07"
+      item: "405-845"
+      item: "405-70"
+      item: "405-852"
+      item: "404-04"
+      item: "404-24"
+      item: "404-12"
+      item: "404-82"
+      item: "405-846"
+      item: "404-89"
+      item: "404-56"
+      item: "405-848"
+      item: "404-22"
+      item: "404-78"
+      item: "405-799"
+      item: "405-849"
+      item: "405-850"
+      item: "404-87"
+      item: "405-852"
+      item: "404-14"
+      item: "405-853"
+      item: "404-44"
+      item: "404-19"
+    }
+  }
+  config {
+    key: "prevent_clir_activation_and_deactivation_code_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.support_wfc_during_airplane_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "roaming_operator_string_array"
+    text_array {
+      item: "404"
+      item: "405"
+    }
+  }
+  config {
+    key: "smart_forwarding_config_component_name_string"
+    text_value: "com.qti.xdivert/com.qti.xdivert.XDivertSetting"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

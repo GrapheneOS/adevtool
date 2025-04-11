@@ -1,0 +1,478 @@
+canonical_name: "bell_ca"
+version: 63000000003
+apns {
+  apn {
+    name: "Bell Mobility"
+    value: "pda.bell.ca"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: DUN
+    type: HIPRI
+    type: XCAP
+    bearer_bitmask: "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"
+    mmsc: "http://mms.bell.ca/mms/wapenc"
+    protocol: IPV6
+    user_editable: false
+  }
+  apn {
+    name: "Bell Mobility Apps"
+    value: "apps.bell.ca"
+    type: MMS
+    type: XCAP
+    bearer_bitmask: "18"
+    mmsc: "http://mms.bell.ca/mms/wapenc"
+    protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Bell Mobility IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
+  }
+  apn {
+    name: "Bell Mobility SOS"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,connected,10"
+  }
+  config {
+    key: "additional_nr_advanced_bands_int_array"
+    int_array {
+      item: 78
+    }
+  }
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.bell.ca"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "carrier_cross_sim_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "emailGatewayNumber"
+    text_value: "6245"
+  }
+  config {
+    key: "enable_nr_advanced_for_roaming_bool"
+    bool_value: false
+  }
+  config {
+    key: "gps.es_extension_sec"
+    text_value: "300"
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.gruu_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_pdn_enabled_in_no_vops_support_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE# #MODEL# #BUILD#"
+  }
+  config {
+    key: "ims.registration_subscribe_expiry_timer_sec_int"
+    int_value: 86400
+  }
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.emergency_scan_timer_sec_int"
+    int_value: 3
+  }
+  config {
+    key: "imsemergency.emergency_vowifi_requires_condition_int"
+    int_value: 1
+  }
+  config {
+    key: "imsemergency.maximum_cellular_search_timer_sec_int"
+    int_value: 3
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://egw.wireless.bell.ca:9014/DEGDROIDInterfaceTS43/"
+  }
+  config {
+    key: "imsserviceentitlement.fcm_sender_id_string"
+    text_value: "263945284783"
+  }
+  config {
+    key: "imsserviceentitlement.show_vowifi_webview_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "naf.ims.bell.ca"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "imsss.ut_requires_ims_registration_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "101"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "103"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 1
+              item: 2
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+      config {
+        key: "104"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 1
+              item: 2
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_as_bandwidth_kbps_int"
+    int_value: 50
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 101
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_rr_bandwidth_bps_int"
+    int_value: 1875
+  }
+  config {
+    key: "imsvoice.audio_rs_bandwidth_bps_int"
+    int_value: 625
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "conf@ims.bell.ca"
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 4
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 8000
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 150000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 30000
+  }
+  config {
+    key: "imsvoice.rtp_inactivity_time_threshold_millis_long"
+    long_value: 6000
+  }
+  config {
+    key: "imsvoice.session_privacy_type_int"
+    int_value: 2
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 86500
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 80100
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 80000
+  }
+  config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"1\", \"4\", \"5\", \"7\", \"9\", \"11\", \"14\", \"17\", \"35\", \"37\", \"38\", \"39\"],\"RetryArray\": [\"0\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\"],\"RetryArray\": [\"10\", \"20\", \"20\", \"20\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "302"
+    }
+  }
+  config {
+    key: "preferred_ike_protocol_int"
+    int_value: 40
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.xcap_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 8
+  }
+  config {
+    key: "voicemail_notification_persistent_bool"
+    bool_value: true
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1731555629
+}

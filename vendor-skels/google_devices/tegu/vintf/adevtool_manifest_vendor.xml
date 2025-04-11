@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<manifest version="1.0" type="device">
+  <hal format="aidl">
+    <name>android.hardware.radio.config</name>
+    <version>3</version>
+    <fqname>IRadioConfig/default</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.data</name>
+    <version>3</version>
+    <fqname>IRadioData/slot1</fqname>
+    <fqname>IRadioData/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.messaging</name>
+    <version>3</version>
+    <fqname>IRadioMessaging/slot1</fqname>
+    <fqname>IRadioMessaging/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.modem</name>
+    <version>3</version>
+    <fqname>IRadioModem/slot1</fqname>
+    <fqname>IRadioModem/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.network</name>
+    <version>3</version>
+    <fqname>IRadioNetwork/slot1</fqname>
+    <fqname>IRadioNetwork/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.sap</name>
+    <fqname>ISap/slot1</fqname>
+    <fqname>ISap/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.sim</name>
+    <version>3</version>
+    <fqname>IRadioSim/slot1</fqname>
+    <fqname>IRadioSim/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.radio.voice</name>
+    <version>3</version>
+    <fqname>IRadioVoice/slot1</fqname>
+    <fqname>IRadioVoice/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.secure_element</name>
+    <fqname>ISecureElement/SIM1</fqname>
+    <fqname>ISecureElement/SIM2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>android.hardware.security.keymint</name>
+    <version>3</version>
+    <fqname>IRemotelyProvisionedComponent/strongbox</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>com.google.input</name>
+    <version>3</version>
+    <fqname>ITouchContextService/default</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>com.google.input.algos.gril</name>
+    <version>3</version>
+    <fqname>IGrilAntennaTuningService/default</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>com.google.input.algos.spd</name>
+    <version>3</version>
+    <fqname>IScreenProtectorDetectorService/default</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>vendor.samsung_slsi.telephony.hardware.radioExternal</name>
+    <fqname>IOemSlsiRadioExternal/default</fqname>
+  </hal>
+</manifest>

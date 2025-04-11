@@ -1,0 +1,115 @@
+canonical_name: "inland_us"
+version: 63000000003
+apns {
+  apn {
+    name: "Inland"
+    value: "internet.inland.com"
+    type: DEFAULT
+    type: SUPL
+    type: MMS
+    bearer_bitmask: "3|9|10|11|14|15|20"
+    mmsc: "http://mms.inland3g.com/inland/mms.php"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "Inland Hotspot"
+    value: "modem.inland.com"
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Inland OTA"
+    value: "ota.inland.com"
+    type: FOTA
+    user_visible: false
+  }
+  apn {
+    name: "Inland IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Inland SOS"
+    value: "SOS"
+    type: EMERGENCY
+    protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Inland XCAP"
+    value: "hos"
+    type: XCAP
+    protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_data_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ims_gba_required_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "httpParams"
+    text_value: "X-MDN: ##LINE1##"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 2432
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 4320
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1228800
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 0
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 1
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1724912532
+}

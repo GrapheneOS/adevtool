@@ -1,0 +1,212 @@
+canonical_name: "tstar_tw"
+version: 63000000003
+apns {
+  apn {
+    name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247TS (Internet)"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247TS (MMS)"
+    value: "internet"
+    type: MMS
+    mmsc: "http://mms.vibo.net.tw"
+    mmsc_proxy: "172.24.128.36"
+    mmsc_proxy_port: "8080"
+    user_editable: false
+  }
+  apn {
+    name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247TS (IMS)"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,31;connected,legacy,31;connected_mmwave,not_restricted_rrc_con,31;connected,not_restricted_rrc_con,31;not_restricted_rrc_idle,not_restricted_rrc_con,15"
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_t4_millis_int"
+    int_value: 20000
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "108"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "110"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 108
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 110
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 1800
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 35000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 45000
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "lte_endc_using_user_data_for_rrc_detection_bool"
+    bool_value: true
+  }
+  config {
+    key: "support_ims_conference_call_bool"
+    bool_value: false
+  }
+  config {
+    key: "support_ims_conference_event_package_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

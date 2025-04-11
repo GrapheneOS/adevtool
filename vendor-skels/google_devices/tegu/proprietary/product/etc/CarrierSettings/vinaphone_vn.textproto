@@ -1,0 +1,65 @@
+canonical_name: "vinaphone_vn"
+version: 63000000001
+apns {
+  apn {
+    name: "Vina-wap-gprs"
+    value: "m3-world"
+    type: DEFAULT
+    type: SUPL
+    user: "mms"
+    password: "mms"
+    authtype: 1
+  }
+  apn {
+    name: "Vina-gprs-mms"
+    value: "m3-mms"
+    type: MMS
+    user: "mms"
+    password: "mms"
+    authtype: 1
+    mmsc: "http://mms.vinaphone.com.vn"
+    mmsc_proxy: "10.1.10.46"
+    mmsc_proxy_port: "8000"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "SOS"
+    value: "sos"
+    type: EMERGENCY
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+}
+last_updated {
+  seconds: 1717749084
+}

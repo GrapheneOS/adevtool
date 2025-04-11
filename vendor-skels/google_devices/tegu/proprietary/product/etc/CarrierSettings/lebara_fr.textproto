@@ -1,0 +1,23 @@
+canonical_name: "lebara_fr"
+version: 63000000001
+apns {
+  apn {
+    name: "Lebara"
+    value: "fr.lebara.mobi"
+    type: DEFAULT
+    type: DUN
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1717749084
+}

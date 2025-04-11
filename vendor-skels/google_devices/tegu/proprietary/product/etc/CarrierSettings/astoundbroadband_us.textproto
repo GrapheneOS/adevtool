@@ -1,0 +1,702 @@
+canonical_name: "astoundbroadband_us"
+version: 63000000002
+apns {
+  apn {
+    name: "Astound Broadband"
+    value: "wholesale"
+    type: DEFAULT
+    type: SUPL
+    type: MMS
+    mmsc: "http://wholesale.mmsmvno.com/mms/wapenc"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV4V6
+    mtu: 1440
+    user_visible: false
+    always_on: true
+  }
+  apn {
+    name: "Emergency"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    always_on: true
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30"
+  }
+  config {
+    key: "5g_nr_ssrsrp_thresholds_int_array"
+    int_array {
+      item: -125
+      item: -120
+      item: -114
+      item: -109
+    }
+  }
+  config {
+    key: "additional_nr_advanced_bands_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.msg.pc.t-mobile.com"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "call_composer_picture_server_url_string"
+    text_value: ""
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "carrier_default_data_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_ims_gba_required_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_vowifi_tty_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_vt_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "data_connected_roaming_notification_excluded_mccs_string_array"
+    text_array {
+      item: "310"
+      item: "311"
+      item: "312"
+      item: "313"
+      item: "314"
+      item: "315"
+      item: "316"
+    }
+  }
+  config {
+    key: "data_connected_roaming_notification_included_mcc_mncs_string_array"
+    text_array {
+      item: "310032"
+      item: "310033"
+      item: "310110"
+      item: "310140"
+      item: "310370"
+      item: "310400"
+      item: "310470"
+      item: "310500"
+      item: "310970"
+      item: "311170"
+      item: "311250"
+    }
+  }
+  config {
+    key: "data_limit_threshold_bytes_long"
+    long_value: 107374182400
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
+  }
+  config {
+    key: "emergency_number_prefix_string_array"
+    text_array {
+      item: "*272"
+    }
+  }
+  config {
+    key: "enable_carrier_display_name_resolver_bool"
+    bool_value: true
+  }
+  config {
+    key: "enable_nr_advanced_for_roaming_bool"
+    bool_value: true
+  }
+  config {
+    key: "gba_ua_tls_cipher_suite_int"
+    int_value: 47
+  }
+  config {
+    key: "gsm_roaming_networks_string_array"
+    text_array {
+      item: "310032"
+      item: "310033"
+      item: "310110"
+      item: "310140"
+      item: "310370"
+      item: "310400"
+      item: "310470"
+      item: "310500"
+      item: "310970"
+      item: "311170"
+      item: "311250"
+    }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_tty_hco_vco_with_rtt"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.enable_presence_capability_exchange_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.enable_presence_publish_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
+    key: "ims.gruu_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "T-Mobile EPSFB-ePDG-IR94-RTT-ussd #MANUFACTURE#/#MODEL# #BUILD#"
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "510|Call completed elsewhere|1014"
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_lte_preferred_after_nr_failed_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.emergency_scan_timer_sec_int"
+    int_value: 50
+  }
+  config {
+    key: "imsemergency.retry_emergency_on_ims_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.msg.pc.t-mobile.com"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_inactivity_call_end_reasons_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_rtcp_inactivity_timer_millis_int"
+    int_value: 30000
+  }
+  config {
+    key: "imsvoice.audio_rtp_inactivity_timer_millis_int"
+    int_value: 30000
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "8881112663@msg.pc.t-mobile.com"
+  }
+  config {
+    key: "imsvoice.dedicated_bearer_wait_timer_millis_int"
+    int_value: 40000
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 4
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 128000
+  }
+  config {
+    key: "imsvoice.rtp_packet_loss_rate_threshold_int"
+    int_value: 30
+  }
+  config {
+    key: "imsvoice.voice_on_default_bearer_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 560
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 5200
+  }
+  config {
+    key: "imsvt.video_rtp_dscp_int"
+    int_value: 34
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
+    key: "iwlan.epdg_plmn_priority_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500\"],\"RetryArray\": [\"3600\",\"7200\",\"10800\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"15500\"],\"NumAttemptsPerFqdn\": \"6\",\"RetryArray\": [\"0\",\"0\",\"300\",\"600\",\"1200\",\"0\",\"0\",\"0\",\"300\",\"600\",\"1200\",\"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"11001\",\"11011\"],\"RetryArray\": [],\"UnthrottlingEvents\": []},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"8192\"],\"RetryArray\": [\"5\",\"10\",\"10\",\"20\",\"40\",\"80\",\"160\",\"320\",\"640\",\"1280\",\"1800\",\"3600\",\"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"],\"HandoverAttemptCount\": \"3\"}]}]"
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 1680
+  }
+  config {
+    key: "mmi_two_digit_number_pattern_string_array"
+    text_array {
+      item: "*2"
+    }
+  }
+  config {
+    key: "mmsCloseConnection"
+    bool_value: true
+  }
+  config {
+    key: "nr_advanced_threshold_bandwidth_khz_int"
+    int_value: 40000
+  }
+  config {
+    key: "nr_timers_reset_on_voice_qos_bool"
+    bool_value: true
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "preferred_ike_protocol_int"
+    int_value: 40
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.idle_geran_rssi_int_array"
+    int_array {
+      item: -95
+      item: -105
+    }
+  }
+  config {
+    key: "qns.idle_ngran_ssrsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.idle_utran_ecno_int_array"
+    int_array {
+      item: -10
+      item: -15
+    }
+  }
+  config {
+    key: "qns.idle_utran_rscp_int_array"
+    int_array {
+      item: -100
+      item: -110
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -70
+      item: -80
+    }
+  }
+  config {
+    key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 10000
+      item: 10000
+      item: 10000
+    }
+  }
+  config {
+    key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 10000
+      item: 10000
+      item: 10000
+    }
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.video_eutran_rsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.video_ngran_ssrsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.video_wifi_rssi_int_array"
+    int_array {
+      item: -70
+      item: -80
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.voice_ngran_ssrsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -70
+      item: -80
+    }
+  }
+  config {
+    key: "ratchet_nr_advanced_bandwidth_if_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_data_connected_roaming_notification"
+    bool_value: true
+  }
+  config {
+    key: "show_roaming_indicator_bool"
+    bool_value: false
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 12
+  }
+  config {
+    key: "support_video_conference_call_bool"
+    bool_value: false
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+  config {
+    key: "vonr_setting_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "wfc_carrier_name_override_by_pnn_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_operator_error_codes_string_array"
+    text_array {
+      item: "REG09|0"
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+  config {
+    key: "wifi.avoid_5ghz_softap_for_laa_bool"
+    bool_value: true
+  }
+  config {
+    key: "wifi.avoid_5ghz_wifi_direct_for_laa_bool"
+    bool_value: true
+  }
+  config {
+    key: "wifi.carrier_profiles_version_int"
+    int_value: 2
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1731555629
+}

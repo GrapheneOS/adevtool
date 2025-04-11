@@ -1,0 +1,50 @@
+canonical_name: "telkomsel_id"
+version: 63000000001
+apns {
+  apn {
+    name: "internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "TSEL-WAP"
+    value: "telkomsel"
+    type: DEFAULT
+    type: SUPL
+    proxy: "10.1.89.130"
+    port: "8000"
+    user: "wap"
+    password: "wap123"
+    authtype: 1
+  }
+  apn {
+    name: "TSEL-MMS"
+    value: "mms"
+    type: MMS
+    user: "wap"
+    password: "wap123"
+    authtype: 1
+    mmsc: "http://mms.telkomsel.com"
+    mmsc_proxy: "10.1.89.150"
+    mmsc_proxy_port: "8000"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1722472212
+}

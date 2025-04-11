@@ -1,0 +1,28 @@
+canonical_name: "help_at"
+version: 63000000001
+apns {
+  apn {
+    name: "help internet"
+    value: "mass.at"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1717749084
+}

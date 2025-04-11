@@ -1,0 +1,317 @@
+canonical_name: "sprintwholesale_us"
+version: 63000000003
+apns {
+  apn {
+    name: "Internet"
+    value: "sprint"
+    type: CBS
+    type: DEFAULT
+    type: SUPL
+    bearer_bitmask: "4|5|6|7|8|12"
+  }
+  apn {
+    name: "Internet"
+    value: "sprint"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    type: CBS
+    bearer_bitmask: "4|5|6|7|8|12"
+    profile_id: 1
+    modem_cognitive: true
+    user_editable: false
+  }
+  apn {
+    name: "OTA"
+    value: "otasn"
+    type: IA
+    type: FOTA
+    user: "null"
+    password: "null"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "MMS"
+    value: "mms"
+    type: MMS
+    mmsc: "http://mms.plspictures.com"
+    mmsc_proxy: "oap7.sprintpcs.com"
+    mmsc_proxy_port: "80"
+  }
+}
+configs {
+  config {
+    key: "allow_non_emergency_calls_in_ecm_bool"
+    bool_value: false
+  }
+  config {
+    key: "apn_expand_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_allow_turnoff_ims_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "27F96DBAB77B31F6953E4CD2C2DEFE15F5D7C78F073DD7162018EF476B097C34"
+      item: "3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562"
+      item: "92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920"
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_eri_file_name_string"
+    text_value: "eri.xml"
+  }
+  config {
+    key: "carrier_settings_activity_component_name_string"
+    text_value: "com.android.sdm.plugins.sprintdm/.SprintCarrierSettingsActivity"
+  }
+  config {
+    key: "carrier_settings_enable_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_provisioning_required_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "cdma_3waycall_flash_delay_int"
+    int_value: 0
+  }
+  config {
+    key: "config_telephony_use_own_number_for_voicemail_bool"
+    bool_value: true
+  }
+  config {
+    key: "dtmf_type_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "emailGatewayNumber"
+    text_value: "6245"
+  }
+  config {
+    key: "emergency_number_prefix_string_array"
+    text_array {
+      item: "*272"
+    }
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "enable_apps_string_array"
+    text_array {
+      item: "com.android.omadm.service"
+      item: "com.android.sdm.plugins.sprintdm"
+    }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "httpParams"
+    text_value: "X-MDN: ##LINE1##|Proxy-Authorization: Basic ##NAI##"
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE# #MODEL# #BUILD#"
+  }
+  config {
+    key: "ims.mmtel_requires_provisioning_bundle"
+    bundle {
+      config {
+        key: "ims.capability_type_video_int_array"
+        int_array {
+          item: 0
+        }
+      }
+      config {
+        key: "ims.capability_type_voice_int_array"
+        int_array {
+          item: 1
+        }
+      }
+    }
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "510|Call completed elsewhere|1014"
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 2097152
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "mmi_two_digit_number_pattern_string_array"
+    text_array {
+      item: "*2"
+    }
+  }
+  config {
+    key: "naiSuffix"
+    text_value: ":pcs"
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 40
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_cdma_choices_bool"
+    bool_value: false
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 6
+  }
+  config {
+    key: "stk_disable_launch_browser_bool"
+    bool_value: true
+  }
+  config {
+    key: "supportMmsContentDisposition"
+    bool_value: false
+  }
+  config {
+    key: "support_swap_after_merge_bool"
+    bool_value: true
+  }
+  config {
+    key: "use_hfa_for_provisioning_bool"
+    bool_value: true
+  }
+  config {
+    key: "voicemail_notification_persistent_bool"
+    bool_value: true
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 6
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.google.android.wfcactivation/.WfcActivationActivity"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1721964304
+}

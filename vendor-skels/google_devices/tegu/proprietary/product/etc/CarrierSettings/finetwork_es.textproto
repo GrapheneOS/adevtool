@@ -1,0 +1,53 @@
+canonical_name: "finetwork_es"
+version: 63000000001
+apns {
+  apn {
+    name: "FINETWORK_DATA"
+    value: "fi.omv.es"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    user_editable: false
+  }
+  apn {
+    name: "FINETWORK_MMS"
+    value: "mms.fi.omv.es"
+    type: MMS
+    user: "wap@wap"
+    password: "wap125"
+    mmsc: "http://mms.fi.omv.es/servlets/mms"
+    mmsc_proxy: "212.73.32.10"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "unloggable_numbers_string_array"
+    text_array {
+      item: "900018018"
+      item: "016"
+      item: "021"
+      item: "024"
+      item: "028"
+      item: "116000"
+      item: "116111"
+      item: "900202010"
+    }
+  }
+}
+last_updated {
+  seconds: 1717749084
+}

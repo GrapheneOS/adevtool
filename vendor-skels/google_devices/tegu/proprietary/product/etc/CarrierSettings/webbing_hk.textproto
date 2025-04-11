@@ -1,0 +1,24 @@
+canonical_name: "webbing_hk"
+version: 63000000001
+apns {
+  apn {
+    name: "Webbing"
+    value: "wbdata"
+    type: DEFAULT
+    type: SUPL
+    type: IA
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1717749084
+}

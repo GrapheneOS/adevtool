@@ -1,0 +1,27 @@
+canonical_name: "telco_re"
+version: 63000000001
+apns {
+  apn {
+    name: "Telco OI Re"
+    value: "internet.telco.re"
+    type: DEFAULT
+    type: DUN
+    type: SUPL
+    type: MMS
+    mmsc: "http://mms.telco.re"
+  }
+}
+configs {
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1717749084
+}
