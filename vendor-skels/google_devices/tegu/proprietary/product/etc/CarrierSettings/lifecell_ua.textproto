@@ -1,0 +1,52 @@
+canonical_name: "lifecell_ua"
+version: 63000000002
+apns {
+  apn {
+    name: "Lifecell Internet"
+    value: "internet"
+    type: DEFAULT
+    type: DUN
+    type: HIPRI
+    type: SUPL
+    type: FOTA
+    type: CBS
+    authtype: 1
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 6
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

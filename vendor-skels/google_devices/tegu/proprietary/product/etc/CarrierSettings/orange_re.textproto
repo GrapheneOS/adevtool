@@ -1,0 +1,166 @@
+canonical_name: "orange_re"
+version: 63000000002
+apns {
+  apn {
+    name: "Orange World re"
+    value: "orangerun"
+    type: DEFAULT
+    type: SUPL
+    user: "orange"
+    password: "orange"
+    authtype: 1
+    protocol: IPV6
+  }
+  apn {
+    name: "Orange MMS R\303\251union"
+    value: "orangerun.acte"
+    type: MMS
+    user: "orange"
+    password: "orange"
+    mmsc: "http://mms.orange.re"
+    mmsc_proxy: "192.168.10.200"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "PRD-IR92/15 #MANUFACTURE#/#MODEL#-#BUILD# device-type/#TYPE# mno-custom/#MCCMNC#"
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "101"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "99"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 101
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 99
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 106
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 96
+          item: 97
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "96"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+        }
+      }
+      config {
+        key: "97"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

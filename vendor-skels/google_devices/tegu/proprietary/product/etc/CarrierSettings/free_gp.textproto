@@ -1,0 +1,21 @@
+canonical_name: "free_gp"
+version: 63000000001
+apns {
+  apn {
+    name: "Free Gp"
+    value: "free.gp"
+    type: DEFAULT
+    type: MMS
+    mmsc: "http://mms.free.gp"
+    protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+}
+last_updated {
+  seconds: 1717749084
+}

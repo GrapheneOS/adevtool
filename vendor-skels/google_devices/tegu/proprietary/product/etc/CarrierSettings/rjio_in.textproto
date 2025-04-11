@@ -1,0 +1,338 @@
+canonical_name: "rjio_in"
+version: 63000000003
+apns {
+  apn {
+    name: "Jio 4G"
+    value: "jionet"
+    type: DEFAULT
+    type: SUPL
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "5g_nr_ssrsrp_thresholds_int_array"
+    int_array {
+      item: -128
+      item: -118
+      item: -108
+      item: -98
+    }
+  }
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "allowed_initial_attach_apn_types_string_array"
+    text_array {
+      item: "ia"
+      item: "default"
+    }
+  }
+  config {
+    key: "apn_settings_default_apn_types_string_array"
+    text_array {
+      item: "default"
+    }
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 7080
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_enhanced_4g_lte_bool"
+    bool_value: false
+  }
+  config {
+    key: "editable_wfc_mode_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_ims_apn_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE#_#MODEL#_#BUILD#"
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.sip_timer_c_millis_int"
+    int_value: 180000
+  }
+  config {
+    key: "ims_conference_size_limit_int"
+    int_value: 6
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsemergency.prefer_ims_emergency_when_voice_calls_on_cs_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsrtt.text_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 7077
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 45000
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.voice_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 86500
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.epdg_plmn_priority_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_roaming_string"
+    text_value: "InternationalVoWiFi.jio.com"
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "vowifi.jio.com"
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 86500
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "iwlan.mcc_mncs_string_array"
+    text_array {
+      item: "405-840"
+      item: "405-854"
+      item: "405-855"
+      item: "405-856"
+      item: "405-857"
+      item: "405-858"
+      item: "405-859"
+      item: "405-860"
+      item: "405-861"
+      item: "405-862"
+      item: "405-863"
+      item: "405-864"
+      item: "405-865"
+      item: "405-866"
+      item: "405-867"
+      item: "405-868"
+      item: "405-869"
+      item: "405-870"
+      item: "405-871"
+      item: "405-872"
+      item: "405-873"
+      item: "405-874"
+    }
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "prevent_clir_activation_and_deactivation_code_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.support_wfc_during_airplane_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "roaming_operator_string_array"
+    text_array {
+      item: "404"
+      item: "405"
+    }
+  }
+  config {
+    key: "smart_forwarding_config_component_name_string"
+    text_value: "com.qti.xdivert/com.qti.xdivert.XDivertSetting"
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+  config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "vonr_on_by_default_bool"
+    bool_value: false
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1720605697
+}

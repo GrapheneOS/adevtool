@@ -1,0 +1,146 @@
+canonical_name: "orange_gp"
+version: 63000000002
+apns {
+  apn {
+    name: "Orange World Cara\303\257be"
+    value: "orangeweb"
+    type: DEFAULT
+    type: SUPL
+    user_editable: false
+  }
+  apn {
+    name: "Orange MMS Cara\303\257be"
+    value: "orangewap"
+    type: MMS
+    user: "orange"
+    password: "orange"
+    authtype: 1
+    mmsc: "http://mms.orangecaraibe.com/servlets/mms"
+    mmsc_proxy: "10.0.0.10"
+    mmsc_proxy_port: "8080"
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "b67affcda89e3193b1595036d7c6cdbe22be5ca24c9f6cf93fc6b48f91d7310d:com.orange.caraibe.orangeetmoicaraibe,com.orange.caraibe.soshcaraibe,com.orange.update,com.orange.phone"
+    }
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "config_plans_package_override_string"
+    text_value: "com.orange.caraibe.orangeetmoicaraibe"
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_scan_timer_sec_int"
+    int_value: 5
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "101"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "99"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 101
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 99
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 106
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+    }
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "20801"
+      item: "20815"
+    }
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

@@ -1,0 +1,126 @@
+canonical_name: "hotmobile_il"
+version: 63000000002
+apns {
+  apn {
+    name: "HOT mobile PC"
+    value: "pc.hotm"
+    type: DUN
+    user_visible: false
+  }
+  apn {
+    name: "HOT mobile Internet"
+    value: "net.hotm"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "HOT mobile MMS"
+    value: "mms.hotm"
+    type: MMS
+    mmsc: "http://mms.hotmobile.co.il"
+    mmsc_proxy: "80.246.131.99"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "42503"
+    }
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "il"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

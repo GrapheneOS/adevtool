@@ -1,0 +1,588 @@
+canonical_name: "fi_at"
+version: 63000000005
+apns {
+}
+configs {
+  config {
+    key: "5g_nr_ssrsrp_thresholds_int_array"
+    int_array {
+      item: -125
+      item: -120
+      item: -114
+      item: -109
+    }
+  }
+  config {
+    key: "additional_settings_call_waiting_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "allow_non_emergency_calls_in_ecm_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_barring_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_app_required_during_setup_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_app_wake_signal_config"
+    text_array {
+    }
+  }
+  config {
+    key: "carrier_auto_cancel_cs_notification"
+    bool_value: true
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "B9CFCE1C47A6AC713442718F15EF55B00B3A6D1A6D48CB46249FA8EB51465350:com.google.android.apps.tycho"
+      item: "4C36AF4A5BDAD97C1F3D8B283416D244496C2AC5EAFE8226079EF6F676FD1859:com.google.android.apps.tycho"
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_metered_apn_types_strings"
+    text_array {
+      item: "default"
+      item: "dun"
+      item: "supl"
+    }
+  }
+  config {
+    key: "carrier_metered_roaming_apn_types_strings"
+    text_array {
+      item: "default"
+      item: "dun"
+      item: "supl"
+    }
+  }
+  config {
+    key: "carrier_name_override_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_string"
+    text_value: "Google Fi"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_settings_enable_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_vowifi_tty_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_vt_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_vvm_package_name_string"
+    text_value: ""
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "cdma_3waycall_flash_delay_int"
+    int_value: 0
+  }
+  config {
+    key: "cdma_roaming_mode_int"
+    int_value: 2
+  }
+  config {
+    key: "com.google.android.apps.privacy.wildlife.allow_vpn_on_mobile_network"
+    bool_value: true
+  }
+  config {
+    key: "com.google.android.dialer.carrier_supports_voip_calls"
+    bool_value: true
+  }
+  config {
+    key: "com.google.android.dialer.spam_blocking_controlled_by_carrier"
+    bool_value: true
+  }
+  config {
+    key: "config_telephony_use_own_number_for_voicemail_bool"
+    bool_value: true
+  }
+  config {
+    key: "data_warning_threshold_bytes_long"
+    long_value: -2
+  }
+  config {
+    key: "display_hd_audio_property_bool"
+    bool_value: false
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
+  }
+  config {
+    key: "emailGatewayNumber"
+    text_value: ""
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "force_home_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "groupChatDefaultsToMMS"
+    bool_value: true
+  }
+  config {
+    key: "hide_carrier_network_settings_bool"
+    bool_value: false
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_sim_lock_settings_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_sim_network_locked_events_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.registration_expiry_timer_sec_int"
+    int_value: 36000
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.ut_requires_ims_registration_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_rtp_inactivity_timer_millis_int"
+    int_value: 15000
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 384
+  }
+  config {
+    key: "imsvt.video_rr_bandwidth_bps_int"
+    int_value: 14400
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 4800
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 1800
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 2
+      item: 5
+    }
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 3600
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 1800
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1994
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 570
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "23203"
+      item: "23205"
+    }
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.condition_rove_in_idle_wifi_pref_home_string_array"
+    text_array {
+      item: "Condition:WIFI_GOOD"
+    }
+  }
+  config {
+    key: "qns.condition_rove_in_idle_wifi_pref_roam_string_array"
+    text_array {
+      item: "Condition:WIFI_GOOD"
+    }
+  }
+  config {
+    key: "qns.condition_rove_out_idle_wifi_pref_home_string_array"
+    text_array {
+      item: "Condition:WIFI_BAD"
+    }
+  }
+  config {
+    key: "qns.condition_rove_out_idle_wifi_pref_roam_string_array"
+    text_array {
+      item: "Condition:WIFI_BAD"
+    }
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -108
+      item: -115
+    }
+  }
+  config {
+    key: "qns.idle_geran_rssi_int_array"
+    int_array {
+      item: -90
+      item: -100
+    }
+  }
+  config {
+    key: "qns.idle_ngran_ssrsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.idle_utran_rscp_int_array"
+    int_array {
+      item: -97
+      item: -107
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -74
+      item: -85
+    }
+  }
+  config {
+    key: "qns.override_cell_pref_to_ims_pref_home"
+    bool_value: true
+  }
+  config {
+    key: "qns.video_eutran_rsrp_int_array"
+    int_array {
+      item: -108
+      item: -115
+    }
+  }
+  config {
+    key: "qns.video_geran_rssi_int_array"
+    int_array {
+      item: -90
+      item: -100
+    }
+  }
+  config {
+    key: "qns.video_ngran_ssrsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.video_utran_rscp_int_array"
+    int_array {
+      item: -97
+      item: -107
+    }
+  }
+  config {
+    key: "qns.video_wifi_rssi_int_array"
+    int_array {
+      item: -74
+      item: -85
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -108
+      item: -115
+    }
+  }
+  config {
+    key: "qns.voice_geran_rssi_int_array"
+    int_array {
+      item: -90
+      item: -100
+    }
+  }
+  config {
+    key: "qns.voice_ngran_ssrsrp_int_array"
+    int_array {
+      item: -109
+      item: -114
+    }
+  }
+  config {
+    key: "qns.voice_utran_rscp_int_array"
+    int_array {
+      item: -97
+      item: -107
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -74
+      item: -85
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "require_entitlement_checks_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: false
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "us"
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+  config {
+    key: "vonr_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "vonr_on_by_default_bool"
+    bool_value: true
+  }
+  config {
+    key: "vvm_destination_number_string"
+    text_value: ""
+  }
+  config {
+    key: "vvm_port_number_int"
+    int_value: 0
+  }
+  config {
+    key: "vvm_type_string"
+    text_value: "vvm_type_disabled"
+  }
+}
+last_updated {
+  seconds: 1728608499
+}

@@ -1,0 +1,209 @@
+canonical_name: "skinny_nz"
+version: 63000000002
+apns {
+  apn {
+    name: "Data"
+    value: "wapaccess.co.nz"
+    type: DEFAULT
+    type: SUPL
+    type: MMS
+    type: DUN
+    mmsc: "http://lsmmsc.xtra.co.nz"
+    mmsc_proxy: "210.55.11.73"
+    mmsc_proxy_port: "80"
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "SOS"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "XCAP"
+    value: "xcap"
+    type: XCAP
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.mnc005.mcc530.pub.3gppnetwork.spark.co.nz"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8444
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+64204864236"
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.mnc005.mcc530.pub.3gppnetwork.spark.co.nz"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 8443
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "supportMmsContentDisposition"
+    bool_value: false
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

@@ -1,0 +1,292 @@
+canonical_name: "o2postpaid_gb"
+version: 63000000003
+apns {
+  apn {
+    name: "O2 Pay Monthly"
+    value: "mobile.o2.co.uk"
+    type: DEFAULT
+    type: DUN
+    type: MMS
+    type: SUPL
+    type: HIPRI
+    type: XCAP
+    user: "o2"
+    password: "p"
+    authtype: 1
+    mmsc: "http://mmsc.mms.o2.co.uk:8002"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "O2 IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "auto_retry_failed_wifi_emergency_call"
+    bool_value: true
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "901"
+  }
+  config {
+    key: "disable_supplementary_services_in_airplane_mode_bool"
+    bool_value: true
+  }
+  config {
+    key: "display_hd_audio_property_bool"
+    bool_value: false
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.sip_timer_b_millis_int"
+    int_value: 90000
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "510|Call completed elsewhere|1014"
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.dedicated_bearer_wait_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.oip_source_from_header_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 43300
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 43200
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.dpd_timer_sec_int"
+    int_value: 1800
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 43300
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 43200
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "iwlan.supported_ike_session_encryption_algorithms_int_array"
+    int_array {
+      item: 12
+      item: 13
+    }
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "23420"
+      item: "23426"
+      item: "23430"
+      item: "23431"
+      item: "23432"
+      item: "23433"
+      item: "23434"
+      item: "23486"
+    }
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: false
+  }
+  config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
+    key: "radio_restart_failure_causes_int_array"
+    int_array {
+      item: 55
+    }
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 10
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1723067573
+}

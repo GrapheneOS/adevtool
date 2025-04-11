@@ -1,0 +1,224 @@
+canonical_name: "telenor_dk"
+version: 63000000007
+apns {
+  apn {
+    name: "Telenor Internet"
+    value: "Internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "Telenor MMS"
+    value: "telenor"
+    type: MMS
+    mmsc: "http://mms.telenor.dk"
+    mmsc_proxy: "212.88.64.8"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    user_visible: false
+  }
+  apn {
+    name: "XCAP"
+    value: "hos"
+    type: XCAP
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 128000
+  }
+  config {
+    key: "ims.sip_timer_t1_millis_int"
+    int_value: 2000
+  }
+  config {
+    key: "ims.sip_timer_t4_millis_int"
+    int_value: 20000
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "conf-factory@ims.mnc002.mcc238.3gppnetwork.org"
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 4
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 3500
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc002.mcc238.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 86300
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 2097152
+  }
+  config {
+    key: "qns.xcap_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1724912532
+}

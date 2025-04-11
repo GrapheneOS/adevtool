@@ -1,0 +1,114 @@
+canonical_name: "globe_ph"
+version: 63000000003
+apns {
+  apn {
+    name: "myGlobe Internet"
+    value: "internet.globe.com.ph"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "myGlobe INET"
+    value: "http.globe.com.ph"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "myGlobe Connect"
+    value: "www.globe.com.ph"
+    type: DEFAULT
+    type: SUPL
+    proxy: "203.177.42.214"
+    port: "8080"
+  }
+  apn {
+    name: "myGlobe MMS"
+    value: "mms.globe.com.ph"
+    type: MMS
+    mmsc: "http://192.40.100.22:10021/mmsc"
+    mmsc_proxy: "203.177.42.214"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.ut_requires_ims_registration_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

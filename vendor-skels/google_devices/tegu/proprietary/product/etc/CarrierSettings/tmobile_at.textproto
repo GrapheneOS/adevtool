@@ -1,0 +1,262 @@
+canonical_name: "tmobile_at"
+version: 63000000003
+apns {
+  apn {
+    name: "T-Mobile IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    mtu: 1500
+    user_visible: false
+    lingering_network_type_bitmask: "1|2|3|8|9|10|13|14|15|18|20"
+  }
+  apn {
+    name: "Internet"
+    value: "internet.t-mobile.at"
+    type: DEFAULT
+    type: SUPL
+    user: "T"
+    password: "tm"
+    authtype: 1
+    protocol: IPV4V6
+  }
+  apn {
+    name: "HOS"
+    value: "hos"
+    type: MMS
+    type: XCAP
+    user: "t-mobile"
+    password: "tm"
+    authtype: 1
+    mmsc: "http://mmsc.t-mobile.at/servlets/mms"
+    mmsc_proxy: "10.12.0.20"
+    mmsc_proxy_port: "80"
+    protocol: IPV4V6
+    max_conns_time: 120
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_allow_transfer_ims_call_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+436762200"
+  }
+  config {
+    key: "display_hd_audio_property_bool"
+    bool_value: false
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE# - #MODEL# - #BUILD#"
+  }
+  config {
+    key: "ims.keep_pdn_up_in_no_vops_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 3000
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 99
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 98
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: -1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 130000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 130000
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 384
+  }
+  config {
+    key: "imsvt.video_rr_bandwidth_bps_int"
+    int_value: 14400
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 4800
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 3000
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 1500
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc003.mcc232.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 64900
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 64800
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "telephony_data_setup_retry_rules_string_array"
+    text_array {
+      item: "capabilities=eims, retry_interval=1000, maximum_retries=20"
+      item: "permanent_fail_causes=8|27|28|29|30|32|35|50|51|111|-5|-6|65537|65538|-3|65543|2253|2254, retry_interval=2500"
+      item: "capabilities=mms|supl|cbs, retry_interval=2000"
+      item: "capabilities=internet|enterprise|dun|ims|fota, retry_interval=2500|3000|5000|10000|15000|20000|40000|60000|120000|240000|600000|1200000|1800000, maximum_retries=20"
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 2
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

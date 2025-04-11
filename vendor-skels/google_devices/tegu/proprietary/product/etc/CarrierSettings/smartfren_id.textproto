@@ -1,0 +1,29 @@
+canonical_name: "smartfren_id"
+version: 63000000001
+apns {
+  apn {
+    name: "Smartfren4G"
+    value: "smartfren4G"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1722472212
+}

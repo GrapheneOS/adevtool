@@ -1,0 +1,40 @@
+canonical_name: "axis_id"
+version: 63000000001
+apns {
+  apn {
+    name: "Internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+  apn {
+    name: "XL-MMS"
+    value: "www.xlmms.net"
+    type: MMS
+    user: "xlgprs"
+    password: "proxl"
+    authtype: 1
+    mmsc: "http://mmc.xl.net.id/servlets/mms"
+    mmsc_proxy: "202.152.240.50"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1719391140
+}

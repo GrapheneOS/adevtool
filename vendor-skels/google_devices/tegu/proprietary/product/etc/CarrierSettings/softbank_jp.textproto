@@ -1,0 +1,529 @@
+canonical_name: "softbank_jp"
+version: 63000000002
+apns {
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
+  }
+  apn {
+    name: "Application"
+    value: "plus.acs.jp.v6"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: IA
+    type: HIPRI
+    user: "ym"
+    password: "ym"
+    authtype: 2
+    mmsc: "http://mms-s"
+    mmsc_proxy: "andmms.plusacs.ne.jp"
+    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "XCAP"
+    value: "plus.acs.jp.v6"
+    type: XCAP
+    user: "ym"
+    password: "ym"
+    authtype: 2
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Closed Networks[Enterprise]"
+    value: "cmn.mgx"
+    type: DEFAULT
+    type: SUPL
+    type: IA
+    user: "cmn@mgx"
+    password: "mgx"
+    authtype: 1
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "EIMS"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    skip_464xlat: SKIP_464XLAT_ENABLE
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,31;connected,legacy,31;connected_mmwave,not_restricted_rrc_con,31;connected,not_restricted_rrc_con,31;not_restricted_rrc_idle,not_restricted_rrc_con,15"
+  }
+  config {
+    key: "5g_nr_ssrsrp_thresholds_int_array"
+    int_array {
+      item: -128
+      item: -118
+      item: -108
+      item: -98
+    }
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "always_show_emergency_alert_onoff_bool"
+    bool_value: true
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8088
+  }
+  config {
+    key: "call_barring_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_barring_supports_deactivate_all_bool"
+    bool_value: false
+  }
+  config {
+    key: "call_barring_supports_password_change_bool"
+    bool_value: false
+  }
+  config {
+    key: "call_barring_visibility_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_forwarding_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_waiting_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "caller_id_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_additional_cbs_channels_strings"
+    text_array {
+      item: "0xA800:type=earthquake, emergency=true"
+      item: "0xAFEE:type=tsunami, emergency=true"
+      item: "0xAC00-0xAFED:type=other, emergency=true"
+      item: "0xA802,0xA804:type=etws_default, emergency=true"
+    }
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "8CD14DE82459630273B8D4C4F0C7C042FA0EF419C2B76A0AAD3D7A0646B015B9"
+    }
+  }
+  config {
+    key: "carrier_cross_sim_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_force_disable_etws_cmas_test_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_roaming_string"
+    text_value: "+819066514170"
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "1416"
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
+  }
+  config {
+    key: "gps.enable_active_sim_emergency_supl"
+    bool_value: true
+  }
+  config {
+    key: "gps.es_extension_sec"
+    text_value: "300"
+  }
+  config {
+    key: "gps.lpp_profile"
+    text_value: "0"
+  }
+  config {
+    key: "gps.supl_ver"
+    text_value: "0x20000"
+  }
+  config {
+    key: "gps.use_emergency_pdn_for_emergency_supl"
+    text_value: "0"
+  }
+  config {
+    key: "gsm_dtmf_tone_delay_int"
+    int_value: 300
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_data_enabled_changed_for_video_calls"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#IMEISV#_suppfork"
+  }
+  config {
+    key: "ims.ipsec_authentication_algorithms_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ipsec_encryption_algorithms_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "ims_dtmf_tone_delay_int"
+    int_value: 300
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "332||510"
+      item: "332|q.850|510"
+      item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.cross_stack_redial_timer_sec_int"
+    int_value: 35
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.emergency_requires_volte_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.quick_cross_stack_redial_timer_sec_int"
+    int_value: 3
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_rtcp_inactivity_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.audio_rtp_inactivity_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.dedicated_bearer_wait_timer_millis_int"
+    int_value: 4000
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 1
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 600000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 600000
+  }
+  config {
+    key: "imsvoice.session_privacy_type_int"
+    int_value: 2
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "local_disconnect_empty_ims_conference_bool"
+    bool_value: true
+  }
+  config {
+    key: "lte_endc_using_user_data_for_rrc_detection_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 307200
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
+    key: "nr_timers_reset_if_non_endc_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+      item: "ims"
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: -1
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_blocking_pay_phone_option_bool"
+    bool_value: true
+  }
+  config {
+    key: "vilte_data_is_metered_bool"
+    bool_value: false
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

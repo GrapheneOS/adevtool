@@ -1,0 +1,316 @@
+canonical_name: "airtel_in"
+version: 63000000004
+apns {
+  apn {
+    name: "Internet"
+    value: "airtelgprs.com"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "Airtel MMS"
+    value: "airtelmms.com"
+    type: MMS
+    authtype: 1
+    mmsc: "http://100.1.201.171:10021/mmsc"
+    mmsc_proxy: "100.1.201.172"
+    mmsc_proxy_port: "8799"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    lingering_network_type_bitmask: "1|2|3|8|9|10|13|14|15|18|20"
+  }
+}
+configs {
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "auto_retry_failed_wifi_emergency_call"
+    bool_value: true
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "7170F9C35AC5966C1687372089AF55713DACC17635BAD248370DA67DDF8472B6"
+      item: "FB9FD5425AB63FA933CF8125B2F3EFC0DF11F0DE0C9C01EF2F2B71A3EBD135A3"
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_override_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_string"
+    text_value: "airtel"
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE#_#MODEL#_#BUILD#"
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "510|Call completed elsewhere|1014"
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "100"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "101"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 118
+          item: 100
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 116
+          item: 101
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 35000
+  }
+  config {
+    key: "imsvoice.session_expires_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 28800
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 28700
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 86300
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "21401"
+      item: "21402"
+      item: "21403"
+      item: "21404"
+      item: "21406"
+      item: "21407"
+      item: "21408"
+      item: "21409"
+      item: "214010"
+      item: "214011"
+      item: "214012"
+      item: "214013"
+      item: "214014"
+      item: "214015"
+      item: "214016"
+      item: "214017"
+      item: "214018"
+      item: "214019"
+      item: "214020"
+      item: "214021"
+    }
+  }
+  config {
+    key: "prevent_clir_activation_and_deactivation_code_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.disallow_iwlan_initial_attach_int"
+    int_value: 0
+  }
+  config {
+    key: "qns.enable_minimum_guarding_timer_after_connected_apn_string_array"
+    text_array {
+      item: "ims"
+    }
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.support_wfc_during_airplane_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "roaming_operator_string_array"
+    text_array {
+      item: "404"
+      item: "405"
+    }
+  }
+  config {
+    key: "smart_forwarding_config_component_name_string"
+    text_value: "com.qti.xdivert/com.qti.xdivert.XDivertSetting"
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1726812809
+}

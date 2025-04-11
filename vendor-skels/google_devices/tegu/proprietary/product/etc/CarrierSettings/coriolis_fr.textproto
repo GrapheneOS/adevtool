@@ -1,0 +1,226 @@
+canonical_name: "coriolis_fr"
+version: 63000000003
+apns {
+  apn {
+    name: "Coriolis"
+    value: "coriolis"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "Coriolis IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Coriolis MMS"
+    value: "mmscoriolis"
+    type: MMS
+    mmsc: "http://mms.coriolis.fr"
+    mmsc_proxy: "10.12.0.1"
+    mmsc_proxy_port: "9028"
+  }
+}
+configs {
+  config {
+    key: "carrier_cross_sim_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "editable_wfc_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ipsec_encryption_algorithms_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1300
+  }
+  config {
+    key: "ims.registration_event_package_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "mmtel@conf-factory.ims.mnc027.mcc208.3gppnetwork.org"
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.codec_attribute_cmr_int"
+            int_value: 3
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 255
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_hf_only_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 64900
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 64800
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc027.mcc208.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 64900
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 64800
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "20801"
+      item: "20810"
+    }
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "fr"
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

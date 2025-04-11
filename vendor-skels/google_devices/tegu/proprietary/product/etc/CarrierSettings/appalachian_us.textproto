@@ -1,0 +1,90 @@
+canonical_name: "appalachian_us"
+version: 63000000002
+apns {
+  apn {
+    name: "Appalachian"
+    value: "4g.myawi.com"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: DUN
+    type: FOTA
+    bearer_bitmask: "14"
+    mmsc: "http://mms.ekn.com"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "Appalachian IMS"
+    value: "ims"
+    type: IA
+    type: IMS
+    bearer_bitmask: "14|18"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Appalachian Emergency"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Appalachian XCAP"
+    value: "hos.myawi.com"
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Appalachian MMS"
+    value: "mms.myawi.com"
+    type: MMS
+    bearer_bitmask: "18"
+    mmsc: "http://mms.ekn.com"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "httpParams"
+    text_value: "X-MDN: ##LINE1##"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 2432
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 4320
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1228800
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 1
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

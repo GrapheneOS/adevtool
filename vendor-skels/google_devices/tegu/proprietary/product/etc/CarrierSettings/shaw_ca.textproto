@@ -1,0 +1,340 @@
+canonical_name: "shaw_ca"
+version: 63000000003
+apns {
+  apn {
+    name: "Internet"
+    value: "wsp.shaw.ca"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "IMS"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "MMS"
+    value: "mms.shaw.ca"
+    type: MMS
+    mmsc: "http://mms.shaw.ca"
+    mmsc_proxy: "74.115.197.70"
+    mmsc_proxy_port: "8080"
+    modem_cognitive: true
+    user_editable: false
+  }
+  apn {
+    name: "XCAP"
+    value: "xcap.freedommobile.ca"
+    type: XCAP
+    user_visible: false
+  }
+  apn {
+    name: "EMERGENCY"
+    value: "e911.mobilefrdm.ca"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "allow_metered_network_for_cert_download_bool"
+    bool_value: true
+  }
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.mobilefrdm.ca"
+  }
+  config {
+    key: "carrier_cross_sim_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "gps.es_extension_sec"
+    text_value: "300"
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "Freedom #MODEL# #BUILD#"
+  }
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims_conference_size_limit_int"
+    int_value: 2
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.emergency_scan_timer_sec_int"
+    int_value: 20
+  }
+  config {
+    key: "imsemergency.maximum_cellular_search_timer_sec_int"
+    int_value: 20
+  }
+  config {
+    key: "imsi_key_availability_int"
+    int_value: 2
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://wifiaccess.shaw.ca/gc"
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.mobilefrdm.ca"
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+      item: 8
+      item: 0
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "conf@mobilefrdm.ca"
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 8100
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 8000
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+      item: 5
+    }
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc490.mcc302.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 8100
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 8000
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 55
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.xcap_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "ca"
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 6
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.google.android.wfcactivation/.WfcActivationCanadaActivity"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+  config {
+    key: "wifi.carrier_profiles_version_int"
+    int_value: 2
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile><PPSMO><![CDATA[<MgmtTree xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscription</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovidersubscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>ShawPasspoint</Value></Node><Node><NodeName>FQDN</NodeName><Value>shaw.ca</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Realm</NodeName><Value>wlan.mnc490.mcc302.3gppnetwork.org</Value></Node><Node><NodeName>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>302490*</Value></Node><Node><NodeName>EAPType</NodeName><Value>23</Value></Node></Node></Node></Node></Node></MgmtTree>]]></PPSMO></PasspointProfile>"
+    }
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

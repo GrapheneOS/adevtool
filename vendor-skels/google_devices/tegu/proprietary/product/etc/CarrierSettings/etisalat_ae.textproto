@@ -1,0 +1,174 @@
+canonical_name: "etisalat_ae"
+version: 63000000002
+apns {
+  apn {
+    name: "Data"
+    value: "etisalat.ae"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "MMS"
+    value: "etisalat.ae"
+    type: MMS
+    authtype: 1
+    mmsc: "http://mms/servlets/mms"
+    mmsc_proxy: "10.12.0.32"
+    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Etisalat XCAP"
+    value: "ut"
+    type: XCAP
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.mnc002.mcc424.pub.3gppnetwork.org"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8088
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+      item: 5
+    }
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.mnc002.mcc424.pub.3gppnetwork.org"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 8080
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "atsconf@ims.mnc002.mcc424.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc002.mcc424.etisalat.ae"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 4
+  }
+}
+last_updated {
+  seconds: 1720003606
+}

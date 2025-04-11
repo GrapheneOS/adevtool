@@ -1,0 +1,451 @@
+canonical_name: "rogers_ca"
+version: 63000000003
+apns {
+  apn {
+    name: "Rogers Tethering"
+    value: "ltedata.apn"
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Rogers Internet"
+    value: "ltemobile.apn"
+    type: DEFAULT
+    type: SUPL
+    type: HIPRI
+    type: IA
+    type: MMS
+    bearer_bitmask: "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"
+    mmsc: "http://mms.gprs.rogers.com"
+    mmsc_proxy: "mmsproxy.rogers.com"
+    mmsc_proxy_port: "80"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "Netsvcs"
+    value: "netsvcs"
+    type: MMS
+    type: XCAP
+    bearer_bitmask: "18"
+    mmsc: "http://mms.gprs.rogers.com"
+    mmsc_proxy: "mmsproxy.rogers.com"
+    mmsc_proxy_port: "80"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Netsvcs XCAP"
+    value: "netsvcs"
+    type: XCAP
+    bearer_bitmask: "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
+    key: "additional_nr_advanced_bands_int_array"
+    int_array {
+      item: 77
+      item: 78
+    }
+  }
+  config {
+    key: "allow_metered_network_for_cert_download_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_forwarding_map_non_number_to_voicemail_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_cross_sim_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "gps.es_extension_sec"
+    text_value: "300"
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.ims_pdn_enabled_in_no_vops_support_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "Rogers #MODEL# #BUILD#"
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1430
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1430
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 1
+      item: 2
+      item: 5
+      item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.emergency_scan_timer_sec_int"
+    int_value: 10
+  }
+  config {
+    key: "imsemergency.maximum_cellular_search_timer_sec_int"
+    int_value: 10
+  }
+  config {
+    key: "imsi_key_availability_int"
+    int_value: 3
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://wifiaccess.rogers.com/gc"
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+      item: 1
+      item: 2
+      item: 3
+      item: 6
+      item: 5
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "108"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "110"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 108
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 110
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 106
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "mmtel@conf-factory.ims.mnc720.mcc302.3gppnetwork.org"
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "106"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 2
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc720.mcc302.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\"],\"RetryArray\": [\"10\", \"20\", \"20\", \"20\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|XCAP"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|XCAP"
+      item: "source=EUTRAN|IWLAN, target=EUTRAN|IWLAN, type=allowed, capabilities=IMS|XCAP"
+    }
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 20
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "302220"
+      item: "302370"
+      item: "302610"
+      item: "302660"
+      item: "302780"
+    }
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.choose_wfc_preferred_transport_in_both_bad_condition_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -78
+    }
+  }
+  config {
+    key: "qns.ims_cellular_allowed_rat_string_array"
+    text_array {
+      item: "LTE"
+      item: "NR"
+      item: "3G"
+      item: "2G"
+    }
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.video_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -78
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -78
+    }
+  }
+  config {
+    key: "qns.xcap_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 6
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "voicemail_notification_persistent_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.google.android.wfcactivation/.WfcActivationCanadaActivity"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+  config {
+    key: "wifi.carrier_profiles_version_int"
+    int_value: 1
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile><PPSMO><![CDATA[<MgmtTree xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscription</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovidersubscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>Rogers Wi-Fi Hotspots</Value></Node><Node><NodeName>FQDN</NodeName><Value>rogers.com</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Realm</NodeName><Value>wlan.mnc720.mcc302.3gppnetwork.org</Value></Node><Node><NodeName>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>302720*</Value></Node><Node><NodeName>EAPType</NodeName><Value>50</Value></Node></Node></Node></Node></Node></MgmtTree>]]></PPSMO></PasspointProfile>"
+    }
+  }
+}
+last_updated {
+  seconds: 1721185521
+}

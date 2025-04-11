@@ -1,0 +1,164 @@
+com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/high_intensity = 1.8
+com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/low_intensity = 0.4
+com.google.android.pixelsystemservice/AdaptiveHapticsConfig:string/medium_intensity = 1.0
+com.google.euiccpixel:string-array/config_state_busy_intent_list = intent:#Intent;action=com.google.android.gms.dck.action.SE_STATE_CHANGED;i.com.google.android.gms.dck.extra.SE_STATE=1;end,intent:#Intent;action=com.qorvo.uwb.action.SE_STATE_CHANGED;i.com.qorvo.uwb.extra.SE_STATE=1;end
+com.google.euiccpixel:string-array/config_state_ready_intent_list = intent:#Intent;action=com.google.android.gms.dck.action.SE_STATE_CHANGED;i.com.google.android.gms.dck.extra.SE_STATE=0;end,intent:#Intent;action=com.qorvo.uwb.action.SE_STATE_CHANGED;i.com.qorvo.uwb.extra.SE_STATE=0;end
+com.google.euiccpixel:string-array/config_state_request_intent_list = intent:#Intent;action=com.google.android.gms.dck.action.SE_STATE_REQUEST;end,intent:#Intent;action=com.qorvo.uwb.action.SE_STATE_REQUEST;end
+com.google.euiccpixel:string-array/config_state_request_permission_list = com.google.android.gms.dck.permission.DIGITAL_KEY_PRIVILEGED,com.qorvo.uwb.permission.SE_STATE_REQUEST
+android:string-array/face_error_vendor = Certificate expired,Sensor temporarily disabled,Calibration error,Face unlock unavailable. Phone is too hot.,Face unlock needs to be set up again
+android:string-array/vendor_required_attestation_certificates = -----BEGIN CERTIFICATE----- MIIFYDCCA0igAwIBAgIJAOj6GWMU0voYMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV BAUTEGY5MjAwOWU4NTNiNmIwNDUwHhcNMTYwNTI2MTYyODUyWhcNMjYwNTI0MTYy ODUyWjAbMRkwFwYDVQQFExBmOTIwMDllODUzYjZiMDQ1MIICIjANBgkqhkiG9w0B AQEFAAOCAg8AMIICCgKCAgEAr7bHgiuxpwHsK7Qui8xUFmOr75gvMsd/dTEDDJdS Sxtf6An7xyqpRR90PL2abxM1dEqlXnf2tqw1Ne4Xwl5jlRfdnJLmN0pTy/4lj4/7 tv0Sk3iiKkypnEUtR6WfMgH0QZfKHM1+di+y9TFRtv6y//0rb+T+W8a9nsNL/ggj nar86461qO0rOs2cXjp3kOG1FEJ5MVmFmBGtnrKpa73XpXyTqRxB/M0n1n/W9nGq C4FSYa04T6N5RIZGBN2z2MT5IKGbFlbC8UrW0DxW7AYImQQcHtGl/m00QLVWutHQ oVJYnFPlXTcHYvASLu+RhhsbDmxMgJJ0mcDpvsC4PjvB+TxywElgS70vE0XmLD+O JtvsBslHZvPBKCOdT0MS+tgSOIfga+z1Z1g7+DVagf7quvmag8jfPioyKvxnK/Eg sTUVi2ghzq8wm27ud/mIM7AY2qEORR8Go3TVB4HzWQgpZrt3i5MIlCaY504LzSRi igHCzAPlHws+W0rB5N+er5/2pJKnfBSDiCiFAVtCLOZ7gLiMm0jhO2B6tUXHI/+M RPjy02i59lINMRRev56GKtcd9qO/0kUJWdZTdA2XoS82ixPvZtXQpUpuL12ab+9E aDK8Z4RHJYYfCT3Q5vNAXaiWQ+8PTWm2QgBR/bkwSWc+NpUFgNPN9PvQi8WEg5Um AGMCAwEAAaOBpjCBozAdBgNVHQ4EFgQUNmHhAHyIBQlRi0RsR/8aTMnqTxIwHwYD VR0jBBgwFoAUNmHhAHyIBQlRi0RsR/8aTMnqTxIwDwYDVR0TAQH/BAUwAwEB/zAO BgNVHQ8BAf8EBAMCAYYwQAYDVR0fBDkwNzA1oDOgMYYvaHR0cHM6Ly9hbmRyb2lk Lmdvb2dsZWFwaXMuY29tL2F0dGVzdGF0aW9uL2NybC8wDQYJKoZIhvcNAQELBQAD ggIBACDIw41L3KlXG0aMiS//cqrG+EShHUGo8HNsw30W1kJtjn6UBwRM6jnmiwfB Pb8VA91chb2vssAtX2zbTvqBJ9+LBPGCdw/E53Rbf86qhxKaiAHOjpvAy5Y3m00m qC0w/Zwvju1twb4vhLaJ5NkUJYsUS7rmJKHHBnETLi8GFqiEsqTWpG/6ibYCv7rY DBJDcR9W62BW9jfIoBQcxUCUJouMPH25lLNcDc1ssqvC2v7iUgI9LeoM1sNovqPm QUiG9rHli1vXxzCyaMTjwftkJLkf6724DFhuKug2jITV0QkXvaJWF4nUaHOTNA4u JU9WDvZLI1j83A+/xnAJUucIv/zGJ1AMH2boHqF8CY16LpsYgBt6tKxxWH00XcyD CdW2KlBCeqbQPcsFmWyWugxdcekhYsAWyoSf818NUsZdBWBaR/OukXrNLfkQ79Iy ZohZbvabO/X+MVT3rriAoKc8oE2Uws6DF+60PV7/WIPjNvXySdqspImSN78mflxD qwLqRBYkA3I75qppLGG9rp7UCdRjxMl8ZDBld+7yvHVgt1cVzJx9xnyGCC23Uaic MDSXYrB4I4WHXPGjxhZuCuPBLTdOLU8YRvMYdEvYebWHMpvwGCF6bAx3JBpIeOQ1 wDB5y0USicV3YgYGmi+NZfhA4URSh77Yd6uuJOJENRaNVTzk -----END CERTIFICATE-----,-----BEGIN CERTIFICATE----- MIIFHDCCAwSgAwIBAgIJANUP8luj8tazMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV BAUTEGY5MjAwOWU4NTNiNmIwNDUwHhcNMTkxMTIyMjAzNzU4WhcNMzQxMTE4MjAz NzU4WjAbMRkwFwYDVQQFExBmOTIwMDllODUzYjZiMDQ1MIICIjANBgkqhkiG9w0B AQEFAAOCAg8AMIICCgKCAgEAr7bHgiuxpwHsK7Qui8xUFmOr75gvMsd/dTEDDJdS Sxtf6An7xyqpRR90PL2abxM1dEqlXnf2tqw1Ne4Xwl5jlRfdnJLmN0pTy/4lj4/7 tv0Sk3iiKkypnEUtR6WfMgH0QZfKHM1+di+y9TFRtv6y//0rb+T+W8a9nsNL/ggj nar86461qO0rOs2cXjp3kOG1FEJ5MVmFmBGtnrKpa73XpXyTqRxB/M0n1n/W9nGq C4FSYa04T6N5RIZGBN2z2MT5IKGbFlbC8UrW0DxW7AYImQQcHtGl/m00QLVWutHQ oVJYnFPlXTcHYvASLu+RhhsbDmxMgJJ0mcDpvsC4PjvB+TxywElgS70vE0XmLD+O JtvsBslHZvPBKCOdT0MS+tgSOIfga+z1Z1g7+DVagf7quvmag8jfPioyKvxnK/Eg sTUVi2ghzq8wm27ud/mIM7AY2qEORR8Go3TVB4HzWQgpZrt3i5MIlCaY504LzSRi igHCzAPlHws+W0rB5N+er5/2pJKnfBSDiCiFAVtCLOZ7gLiMm0jhO2B6tUXHI/+M RPjy02i59lINMRRev56GKtcd9qO/0kUJWdZTdA2XoS82ixPvZtXQpUpuL12ab+9E aDK8Z4RHJYYfCT3Q5vNAXaiWQ+8PTWm2QgBR/bkwSWc+NpUFgNPN9PvQi8WEg5Um AGMCAwEAAaNjMGEwHQYDVR0OBBYEFDZh4QB8iAUJUYtEbEf/GkzJ6k8SMB8GA1Ud IwQYMBaAFDZh4QB8iAUJUYtEbEf/GkzJ6k8SMA8GA1UdEwEB/wQFMAMBAf8wDgYD VR0PAQH/BAQDAgIEMA0GCSqGSIb3DQEBCwUAA4ICAQBOMaBc8oumXb2voc7XCWnu XKhBBK3e2KMGz39t7lA3XXRe2ZLLAkLM5y3J7tURkf5a1SutfdOyXAmeE6SRo83U h6WszodmMkxK5GM4JGrnt4pBisu5igXEydaW7qq2CdC6DOGjG+mEkN8/TA6p3cno L/sPyz6evdjLlSeJ8rFBH6xWyIZCbrcpYEJzXaUOEaxxXxgYz5/cTiVKN2M1G2ok QBUIYSY6bjEL4aUN5cfo7ogP3UvliEo3Eo0YgwuzR2v0KR6C1cZqZJSTnghIC/vA D32KdNQ+c3N+vl2OTsUVMC1GiWkngNx1OO1+kXW+YTnnTUOtOIswUP/Vqd5SYgAI mMAfY8U9/iIgkQj6T2W6FsScy94IN9fFhE1UtzmLoBIuUFsVXJMTz+Jucth+IqoW Fua9v1R93/k98p41pjtFX+H8DslVgfP097vju4KDlqN64xV1grw3ZLl4CiOe/A91 oeLm2UHOq6wn3esB4r2EIQKb6jTVGu5sYCcdWpXr0AUVqcABPdgL+H7qJguBw09o jm6xNIrw2OocrDKsudk/okr/AwqEyPKw9WnMlQgLIKw1rODG2NvU9oR3GVGdMkUB ZutL8VuFkERQGt6vQ2OCw0sV47VMkuYbacK/xyZFiRcrPJPb41zgbQj9XAEyLKCH ex0SdDrx+tWUDqG8At2JHA== -----END CERTIFICATE-----,-----BEGIN CERTIFICATE----- MIIFHDCCAwSgAwIBAgIJAMNrfES5rhgxMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV BAUTEGY5MjAwOWU4NTNiNmIwNDUwHhcNMjExMTE3MjMxMDQyWhcNMzYxMTEzMjMx MDQyWjAbMRkwFwYDVQQFExBmOTIwMDllODUzYjZiMDQ1MIICIjANBgkqhkiG9w0B AQEFAAOCAg8AMIICCgKCAgEAr7bHgiuxpwHsK7Qui8xUFmOr75gvMsd/dTEDDJdS Sxtf6An7xyqpRR90PL2abxM1dEqlXnf2tqw1Ne4Xwl5jlRfdnJLmN0pTy/4lj4/7 tv0Sk3iiKkypnEUtR6WfMgH0QZfKHM1+di+y9TFRtv6y//0rb+T+W8a9nsNL/ggj nar86461qO0rOs2cXjp3kOG1FEJ5MVmFmBGtnrKpa73XpXyTqRxB/M0n1n/W9nGq C4FSYa04T6N5RIZGBN2z2MT5IKGbFlbC8UrW0DxW7AYImQQcHtGl/m00QLVWutHQ oVJYnFPlXTcHYvASLu+RhhsbDmxMgJJ0mcDpvsC4PjvB+TxywElgS70vE0XmLD+O JtvsBslHZvPBKCOdT0MS+tgSOIfga+z1Z1g7+DVagf7quvmag8jfPioyKvxnK/Eg sTUVi2ghzq8wm27ud/mIM7AY2qEORR8Go3TVB4HzWQgpZrt3i5MIlCaY504LzSRi igHCzAPlHws+W0rB5N+er5/2pJKnfBSDiCiFAVtCLOZ7gLiMm0jhO2B6tUXHI/+M RPjy02i59lINMRRev56GKtcd9qO/0kUJWdZTdA2XoS82ixPvZtXQpUpuL12ab+9E aDK8Z4RHJYYfCT3Q5vNAXaiWQ+8PTWm2QgBR/bkwSWc+NpUFgNPN9PvQi8WEg5Um AGMCAwEAAaNjMGEwHQYDVR0OBBYEFDZh4QB8iAUJUYtEbEf/GkzJ6k8SMB8GA1Ud IwQYMBaAFDZh4QB8iAUJUYtEbEf/GkzJ6k8SMA8GA1UdEwEB/wQFMAMBAf8wDgYD VR0PAQH/BAQDAgIEMA0GCSqGSIb3DQEBCwUAA4ICAQBTNNZe5cuf8oiq+jV0itTG zWVhSTjOBEk2FQvh11J3o3lna0o7rd8RFHnN00q4hi6TapFhh4qaw/iG6Xg+xOan 63niLWIC5GOPFgPeYXM9+nBb3zZzC8ABypYuCusWCmt6Tn3+Pjbz3MTVhRGXuT/T QH4KGFY4PhvzAyXwdjTOCXID+aHud4RLcSySr0Fq/L+R8TWalvM1wJJPhyRjqRCJ erGtfBagiALzvhnmY7U1qFcS0NCnKjoO7oFedKdWlZz0YAfu3aGCJd4KHT0MsGiL Zez9WP81xYSrKMNEsDK+zK5fVzw6jA7cxmpXcARTnmAuGUeI7VVDhDzKeVOctf3a 0qQLwC+d0+xrETZ4r2fRGNw2YEs2W8Qj6oDcfPvq9JySe7pJ6wcHnl5EZ0lwc4xH 7Y4Dx9RA1JlfooLMw3tOdJZH0enxPXaydfAD3YifeZpFaUzicHeLzVJLt9dvGB0b HQLE4+EqKFgOZv2EoP686DQqbVS1u+9k0p2xbMA105TBIk7npraa8VM0fnrRKi7w lZKwdH+aNAyhbXRW9xsnODJ+g8eF452zvbiKKngEKirK5LGieoXBX7tZ9D1GNBH2 Ob3bKOwwIWdEFle/YF/h6zWgdeoaNGDqVBrLr2+0DtWoiB1aDEjLWl9FmyIUyUm7 mD/vFDkzF+wm7cyWpQpCVQ== -----END CERTIFICATE-----,-----BEGIN CERTIFICATE----- MIIFHDCCAwSgAwIBAgIJAPHBcqaZ6vUdMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV BAUTEGY5MjAwOWU4NTNiNmIwNDUwHhcNMjIwMzIwMTgwNzQ4WhcNNDIwMzE1MTgw NzQ4WjAbMRkwFwYDVQQFExBmOTIwMDllODUzYjZiMDQ1MIICIjANBgkqhkiG9w0B AQEFAAOCAg8AMIICCgKCAgEAr7bHgiuxpwHsK7Qui8xUFmOr75gvMsd/dTEDDJdS Sxtf6An7xyqpRR90PL2abxM1dEqlXnf2tqw1Ne4Xwl5jlRfdnJLmN0pTy/4lj4/7 tv0Sk3iiKkypnEUtR6WfMgH0QZfKHM1+di+y9TFRtv6y//0rb+T+W8a9nsNL/ggj nar86461qO0rOs2cXjp3kOG1FEJ5MVmFmBGtnrKpa73XpXyTqRxB/M0n1n/W9nGq C4FSYa04T6N5RIZGBN2z2MT5IKGbFlbC8UrW0DxW7AYImQQcHtGl/m00QLVWutHQ oVJYnFPlXTcHYvASLu+RhhsbDmxMgJJ0mcDpvsC4PjvB+TxywElgS70vE0XmLD+O JtvsBslHZvPBKCOdT0MS+tgSOIfga+z1Z1g7+DVagf7quvmag8jfPioyKvxnK/Eg sTUVi2ghzq8wm27ud/mIM7AY2qEORR8Go3TVB4HzWQgpZrt3i5MIlCaY504LzSRi igHCzAPlHws+W0rB5N+er5/2pJKnfBSDiCiFAVtCLOZ7gLiMm0jhO2B6tUXHI/+M RPjy02i59lINMRRev56GKtcd9qO/0kUJWdZTdA2XoS82ixPvZtXQpUpuL12ab+9E aDK8Z4RHJYYfCT3Q5vNAXaiWQ+8PTWm2QgBR/bkwSWc+NpUFgNPN9PvQi8WEg5Um AGMCAwEAAaNjMGEwHQYDVR0OBBYEFDZh4QB8iAUJUYtEbEf/GkzJ6k8SMB8GA1Ud IwQYMBaAFDZh4QB8iAUJUYtEbEf/GkzJ6k8SMA8GA1UdEwEB/wQFMAMBAf8wDgYD VR0PAQH/BAQDAgIEMA0GCSqGSIb3DQEBCwUAA4ICAQB8cMqTllHc8U+qCrOlg3H7 174lmaCsbo/bJ0C17JEgMLb4kvrqsXZs01U3mB/qABg/1t5Pd5AORHARs1hhqGIC W/nKMav574f9rZN4PC2ZlufGXb7sIdJpGiO9ctRhiLuYuly10JccUZGEHpHSYM2G tkgYbZba6lsCPYAAP83cyDV+1aOkTf1RCp/lM0PKvmxYN10RYsK631jrleGdcdkx oSK//mSQbgcWnmAEZrzHoF1/0gso1HZgIn0YLzVhLSA/iXCX4QT2h3J5z3znluKG 1nv8NQdxei2DIIhASWfu804CA96cQKTTlaae2fweqXjdN1/v2nqOhngNyz1361mF mr4XmaKH/ItTwOe72NI9ZcwS1lVaCvsIkTDCEXdm9rCNPAY10iTunIHFXRh+7KPz lHGewCq/8TOohBRn0/NNfh7uRslOSZ/xKbN9tMBtw37Z8d2vvnXq/YWdsm1+JLVw n6yYD/yacNJBlwpddla8eaVMjsF6nBnIgQOf9zKSe06nSTqvgwUHosgOECZJZ1Eu zbH4yswbt02tKtKEFhx+v+OTge/06V+jGsqTWLsfrOCNLuA8H++z+pUENmpqnnHo vaI47gC+TNpkgYGkkBT6B/m/U01BuOBBTzhIlMEZq9qkDWuM2cA5kW5V3FJUcfHn w1IdYIg2Wxg7yHcQZemFQg== -----END CERTIFICATE-----
+android:bool/config_enableAutoPowerModes = true
+android:bool/config_hotspotNetworksEnabledForService = false
+android:bool/config_knownNetworksEnabledForService = false
+android:bool/config_settingsHelpLinksEnabled = true
+android:string/biometric_app_setting_name = Use face or fingerprint
+android:string/biometric_dialog_default_subtitle = Use your face or fingerprint to continue
+android:string/biometric_or_screen_lock_app_setting_name = Use face, fingerprint, or screen lock
+android:string/biometric_or_screen_lock_dialog_default_subtitle = Use your face, fingerprint, or screen lock to continue
+android:string/config_defaultAccessibilityNotificationSound = Effect_Tick.ogg
+android:string/config_defaultCredentialManagerAutofillService = com.android.credentialmanager/com.android.credentialmanager.autofill.CredentialAutofillService
+android:string/face_recalibrate_notification_content = Face unlock may not work until you re-enroll
+android:string/face_recalibrate_notification_name = Face unlock
+android:string/face_recalibrate_notification_title = Please re-enroll your face
+android:string/safety_protection_display_text = "<font face=\"google-sans">Protected by </font><font face="google-sans-medium">Android</font>"
+android:string/scCellularNetworkSecurityLearnMore = "https://support.google.com/android?p=cellular_security"
+android:string/vendor_required_attestation_revocation_list_url = https://android.googleapis.com/attestation/status
+com.android.systemui:bool/config_battery_index_enabled = true
+com.android.systemui:bool/config_charge_limit_discovery_enabled = true
+com.android.systemui:bool/config_wireless_charging_warning_enabled = true
+android:bool/config_swipe_up_gesture_setting_available = true
+android:string-array/config_forceSlowJpegModeList = com.facebook.orca,com.skype.raider
+android:array/config_notificationMsgPkgsAllowedAsConvos = 
+android:bool/config_buttonTextAllCaps = false
+android:bool/config_fingerprintSupportsGestures = false
+android:bool/config_safetyProtectionEnabled = true
+android:bool/config_supportLongPressPowerWhenNonInteractive = true
+android:bool/config_supportsCamToggle = true
+android:bool/config_supportsMicToggle = true
+android:bool/config_systemCaptionsServiceCallsEnabled = true
+android:bool/config_useRoundIcon = true
+android:dimen/config_bottomDialogCornerRadius = 16dp
+android:dimen/config_buttonCornerRadius = 4dp
+android:dimen/config_dialogCornerRadius = 28dp
+android:dimen/config_highResTaskSnapshotScale = 0.8
+android:dimen/config_progressBarCornerRadius = 1000dp
+android:dimen/system_app_widget_background_radius = 28dp
+android:dimen/system_app_widget_inner_radius = 20dp
+android:integer/config_maximumCallLogEntriesPerSim = 1000
+android:string/android_start_title = Pixel is starting…
+android:string/android_upgrading_title = Pixel is updating…
+android:string/config_ambientContextEventArrayExtraKey = EVENT_ARRAY
+android:string/config_ambientContextPackageNameExtraKey = PACKAGE_NAME
+android:string/config_icon_mask = M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z
+com.android.pixeldisplayservice:array/config_za_compensation_opr_thresholds = 0.3
+com.android.pixeldisplayservice:array/config_za_primary_display_condition1_brightness_thresholds = 0.47222,0.48611,0.5,0.52778,0.55556,0.61111,0.66667,0.72222,0.77778,0.83333,0.88889,0.91667,0.94444,0.97222,1
+com.android.pixeldisplayservice:array/config_za_primary_display_condition2_brightness_thresholds = 0.47222,0.48611,0.5,0.52778,0.55556,0.58333,0.61111,0.63889,0.66667,0.69444,0.72222,0.75,0.77778,0.80556,0.83333,0.86111,0.88889,0.94444,0.95833,0.97222,0.98611,1
+com.android.pixeldisplayservice:dimen/config_compensation_filter_intercept = 10
+com.android.pixeldisplayservice:dimen/config_lbe_lux_switch_threshold = 1
+com.android.pixeldisplayservice:dimen/config_za_compensation_brightness_enter_threshold = 0.4
+com.android.pixeldisplayservice:integer/config_ambient_brightness_changed_debounce_ms = 500
+com.android.pixeldisplayservice:integer/config_compensation_filter_horizon = 1500
+com.android.settings:bool/config_adaptive_alert_vibration_enabled = true
+com.android.settings:string/config_limited_warranty_overlay_package_name = com.android.settings.overlay.tegu
+com.android.settings:integer-array/config_carrier_use_rac = 2397,25
+com.android.settings:string-array/enabled_networks_except_gsm_values = 10,0
+com.android.settings:string-array/enabled_networks_values = 10,0,1
+com.android.settings:bool/config_adaptive_touch_sensitivity_enabled = true
+com.android.settings:bool/config_hspa_data_distinguishable = true
+com.android.settings:string/display_white_balance_summary = Dynamically adapts the display to warmer or cooler tones based on ambient lighting
+com.android.settings:string/display_white_balance_title = Adaptive tone
+com.android.settings:string/fingerprint_unlock_set_unlock_password = Password • Fingerprint
+com.android.settings:string/fingerprint_unlock_set_unlock_pattern = Pattern • Fingerprint
+com.android.settings:string/fingerprint_unlock_set_unlock_pin = PIN • Fingerprint
+com.android.settings:string/fingerprint_unlock_skip_fingerprint = Continue without Fingerprint Unlock
+com.android.settings:string/fingerprint_unlock_title = With Fingerprint Unlock, you can unlock your phone using your fingerprint. For security, this option requires a backup screen lock.
+com.android.settings:string/security_settings_fingerprint_enroll_consent_introduction_title = Allow Fingerprint Unlock
+com.android.settings:string/security_settings_fingerprint_enroll_introduction_message_unlock_disabled = "With Pixel Imprint, you can use your fingerprint to authorize purchases or sign in to apps.
+
+Be careful whose fingerprints you add. Any fingerprints added will be able to do these things.
+
+Note: You can’t use your fingerprint to unlock this device. For more information, contact your organization’s admin."
+com.android.settings:string/security_settings_fingerprint_enroll_introduction_title = Set up Fingerprint Unlock
+com.android.settings:string/security_settings_fingerprint_enroll_introduction_title_unlock_disabled = Pixel Imprint
+com.android.settings:string/security_settings_fingerprint_preference_title = Fingerprint Unlock
+com.android.settings:string/suggested_fingerprint_lock_settings_summary = Use Pixel Imprint to unlock your phone
+com.android.systemui:integer-array/config_nfc_conflict_with_usb_audio_productid = 20532
+com.android.systemui:integer-array/config_nfc_conflict_with_usb_audio_vendorid = 6353
+com.android.systemui:bool/config_adaptive_touch_sensitivity_enabled = true
+com.android.systemui:bool/config_hspa_data_distinguishable = true
+com.android.systemui:bool/config_nfc_conflict_with_usb_audio = true
+com.android.systemui:bool/config_nfc_conflict_with_wlc = true
+com.android.systemui:bool/config_screen_protector_notification_enabled = true
+com.android.systemui:bool/config_vibrateOnIconAnimation = true
+com.android.systemui:integer/config_showTemperatureWarning = 1
+com.android.systemui:integer/config_showUsbPortAlarm = 1
+com.android.phone:string-array/config_countries_to_enable_shortcut_view = ca,us,de,fr,es,gb,au,in,jp,sg,tw,it,ie,ar,be,bg,br,cn,co,cz,dk,do,ge,gr,hr,hu,id,jo,mx,my,nl,no,ph,pl,pr,pt,ro,ru,se,th,uy,vn,za
+com.android.phone:string-array/enabled_networks_except_gsm_values = 10,0
+com.android.phone:string-array/enabled_networks_values = 10,0,1
+com.android.phone:bool/config_support_simless_emergency_rtt = true
+com.android.phone:bool/hac_enabled = true
+com.android.phone:bool/vvm3_enabled = true
+com.android.phone:integer/config_metrics_pull_cooldown_millis = 18000000
+com.android.server.telecom:bool/grant_location_permission_enabled = true
+com.android.traceur:bool/config_hspa_data_distinguishable = true
+com.android.settings:string/security_settings_fingerprint_bad_calibration = Visit a repair provider or g.co/pixel/fingerprintunlock.
+com.android.settings:string/security_settings_fingerprint_enroll_finish_message = Fingerprint Unlock improves the more you use it to unlock your phone or verify it’s you in apps
+com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction_footer_message_2 = Fingerprint Unlock creates a unique model of your fingerprint to verify it’s you. To create this fingerprint model during setup, you will take images of your fingerprint from different positions.
+com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction_footer_message_3 = When you use Fingerprint Unlock, images are used to update your fingerprint model. Your fingerprint images and model are stored securely on your phone and never leave the phone. All processing occurs securely on your phone.
+com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction_footer_message_4 = You can delete your fingerprint images and model, or turn off Fingerprint Unlock at any time in Settings. Fingerprint images and models are stored on the phone until you delete them.
+com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2 = Fingerprint Unlock creates a unique model of your child’s fingerprint to verify it’s them. To create this fingerprint model during setup, they will take images of their fingerprint from different positions.
+com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3 = When they use Fingerprint Unlock, images are used to update their fingerprint model. Your child’s fingerprint images and model are stored securely on the phone and never leave the phone. All processing occurs securely on the phone.
+com.android.settings:string/security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4 = You and your child can delete their fingerprint images and model, or turn off Fingerprint Unlock at any time in Settings. Fingerprint images and models are stored on the phone until they’re deleted.
+com.android.settings:string/security_settings_work_fingerprint_preference_title = Fingerprint Unlock for work
+com.android.settings:string/suggested_fingerprint_lock_settings_title = Use Fingerprint Unlock
+com.android.settings:string/unlock_disable_frp_warning_content_password_face_fingerprint = "A password protects your phone if it’s lost or stolen.
+
+This deletes the fingerprint images and model stored on your device. Your face model will also be permanently and securely deleted. You won’t be able to use your face or fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_password_fingerprint = "A password protects your phone if it’s lost or stolen.
+
+This also deletes the fingerprint images and model stored on your device. You won’t be able to use your fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_pattern_face_fingerprint = "A pattern protects your phone if it’s lost or stolen.
+
+This deletes the fingerprint images and model stored on your device. Your face model will also be permanently and securely deleted. You won’t be able to use your face or fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_pattern_fingerprint = "A pattern protects your phone if it’s lost or stolen.
+
+This also deletes the fingerprint images and model stored on your device. You won’t be able to use your fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_pin_face_fingerprint = "A PIN protects your phone if it’s lost or stolen.
+
+This deletes the fingerprint images and model stored on your device. Your face model will also be permanently and securely deleted. You won’t be able to use your face or fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_pin_fingerprint = "A PIN protects your phone if it’s lost or stolen.
+
+This also deletes the fingerprint images and model stored on your device. You won’t be able to use your fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_unknown_face_fingerprint = "Device protection features will not work without your screen lock.
+
+This deletes the fingerprint images and model stored on your device. Your face model will also be permanently and securely deleted. You won’t be able to use your face or fingerprint for authentication in apps."
+com.android.settings:string/unlock_disable_frp_warning_content_unknown_fingerprint = "Device protection features will not work without your screen lock.
+
+This also deletes the fingerprint images and model stored on your device. You won’t be able to use your fingerprint for authentication in apps."
+android:string-array/config_nightDisplayColorTemperatureCoefficients = 0.0,0.0,1.0,-0.000000014365268757,0.000255092801250106,-0.064156942434907716,-0.000000000910931179,0.000207598323269139,-0.349361641294833436
+android:string-array/config_udfps_enroll_stage_thresholds = 0.065,0.48,0.584,0.792
+android:string-array/fingerprint_acquired_vendor = ,,,,,Move your finger. Try again.,Finger already enrolled use a different finger.,Poor image quality. Try again.,,Poor image quality. Try again.,,,Smudge detected, clean screen. Try again.,Failure to read image. Try again.,
+android:string-array/fingerprint_error_vendor = ,,,,,,Bad data. Try again.,Failed to enroll finger. Try again.
+android:integer-array/non_removable_euicc_slots = 0
+android:bool/config_allowDisablingAssistDisclosure = true
+android:bool/config_honor_data_retry_timer_for_emergency_network = true
+android:bool/config_keyboardVibrationSettingsSupported = true
+android:bool/config_refreshRateSynchronizationEnabled = true
+android:bool/config_ringtoneVibrationSettingsSupported = true
+android:dimen/config_keyboardHapticFeedbackFixedAmplitude = 0.62
+android:integer/config_esim_bootstrap_data_limit_bytes = 235929600
+android:integer/config_externalDisplayPeakHeight = 1080
+android:integer/config_externalDisplayPeakRefreshRate = 61
+android:integer/config_externalDisplayPeakWidth = 1920
+android:integer/config_fingerprintMaxTemplatesPerUser = 4
+android:integer/config_screenTimeoutOverride = 10000
+android:string/config_qualified_networks_service_package = com.android.qns
+android:string/config_wlan_data_service_package = com.google.pixel.iwlan
+android:string/config_wlan_network_service_package = com.google.pixel.iwlan
+android:string/fingerprint_error_bad_calibration = Can’t use fingerprint sensor. Visit a repair provider or g.co/pixel/fingerprintunlock
+android:string/fingerprint_recalibrate_notification_content = Visit a repair provider or g.co/pixel/fingerprintunlock
+com.android.networkstack/NetworkStackConfig:bool/config_force_enable_apfv6_nd_offload = true
+com.android.networkstack.tethering/TetheringConfig:string-array/config_tether_ncm_regexs = "ncm\\d"
+com.android.networkstack.tethering/TetheringConfig:string-array/config_tether_usb_regexs = "rndis\\d"
+com.android.networkstack.tethering/TetheringConfig:string-array/config_tether_wifi_p2p_regexs = "p2p-p2p\\d-.*","p2p\\d","p2p-wlan\\d-.*"
+com.android.networkstack.tethering/TetheringConfig:integer/config_tether_usb_functions = 1
