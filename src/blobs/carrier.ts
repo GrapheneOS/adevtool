@@ -30,7 +30,7 @@ export async function fetchUpdateConfig(
       info: {
         int: 4,
         deviceInfo: {
-          apilevel: 35,
+          apilevel: 36,
           name: device,
           buildId: build_id,
           name1: device,
