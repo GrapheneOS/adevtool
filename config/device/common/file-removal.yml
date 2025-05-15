@@ -456,6 +456,11 @@ filters:
       # fs-verity certificates for GmsCore and Play Store
       - product/etc/security/fsverity/
       - vendor/boot_otas/
+      # aconfig directories from different partitions
+      - product/etc/aconfig/
+      - system/etc/aconfig/
+      - system_ext/etc/aconfig/
+      - vendor/etc/aconfig/
 
       - system/bin/tradeinmode
       - system/etc/init/tradeinmode.rc
