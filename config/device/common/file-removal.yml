@@ -22,6 +22,7 @@ filters:
       - product/etc/permissions/com.google.android.dialer.support.xml
       - product/etc/permissions/com.google.assistant.hubui.xml
       - product/etc/permissions/com.google.SSRestartDetector.xml
+      - product/etc/permissions/privapp-permissions-glasses-core.xml
       - product/etc/permissions/privapp-permissions-google-p.xml
       - product/etc/permissions/split-permissions-google.xml
       - product/etc/res/raw/content_protection/package_name_blocklist.txt
@@ -59,6 +60,7 @@ filters:
       - product/etc/sysconfig/pixel_experience_2023_midyear.xml
       - product/etc/sysconfig/pixel_experience_2024.xml
       - product/etc/sysconfig/pixel_experience_2024_midyear.xml
+      - product/etc/sysconfig/pixel_experience_2025_midyear.xml
       - product/etc/sysconfig/quick_tap.xml
       - product/etc/sysconfig/satellite_sos.xml
       - product/framework/com.google.android.dialer.support.jar
@@ -169,6 +171,8 @@ filters:
       - .ogg
       # fs-verity metadata
       - .fsv_meta
+      # TTS models (currently located only in product/tts/google)
+      - .zvoice
 
     prefix:
       - system/apex/
@@ -279,6 +283,8 @@ filters:
       - product/priv-app/DeviceIntelligenceNetworkPrebuilt
       # DevicePersonalizationPrebuiltPixel{4,2021,2022}
       - product/priv-app/DevicePersonalizationPrebuiltPixel
+      # PrebuiltPixelCoreServices
+      - product/priv-app/PrebuiltPixelCoreServices/
       # com.android.sdm.plugins.diagmon, but included on Tensor Pixels too
       - product/priv-app/DiagMon/
       - product/priv-app/DiagnosticsToolPrebuilt
@@ -324,6 +330,7 @@ filters:
       # "Messages by Google", com.google.android.apps.messaging
       - product/priv-app/PrebuiltBugle/
       - product/priv-app/PrebuiltGmsCore/
+      - product/priv-app/PrebuiltGmsCoreVic/
       - product/priv-app/RecorderPrebuilt
       - product/priv-app/RelationshipsPrebuilt
       - product/priv-app/RetailCorePrebuilt
