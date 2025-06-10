@@ -5,3 +5,4 @@ devices:
   - komodo.yml
   - caiman.yml
   - tokay.yml
+  - tegu.yml
