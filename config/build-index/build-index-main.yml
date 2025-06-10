@@ -128,6 +128,10 @@ comet BP1A.250505.005.D1:
   factory: 23b555f8263be27cde2c4c3ee309e0382709177dffdb347431df24078dde74b8 comet-bp1a.250505.005.d1-factory-23b555f8.zip
   ota: da324037c643b2048df1b26e222f56101f4404e33fb1d77515de26fd8a7df88f comet-ota-bp1a.250505.005.d1-da324037.zip
   vendor/google_devices: b88c0c831eb511a0332414331b0facaf471be5cae20bd2bcccc55141b33e74db google_devices-comet-bp1a.250505.005.d1-11744533.tgz
+comet BP2A.250605.031.A3:
+  desc: Jun 2025
+  factory: 1f6bd727030e18daf381e3b759d75622ba4cae218b4c5cab084e213cf1b88fee comet-bp2a.250605.031.a3-factory-1f6bd727.zip
+  ota: b6c67e0a96df3ef2bf75ac8eba49cc50c5aae500f84583221881a665b429a0ec comet-ota-bp2a.250605.031.a3-b6c67e0a.zip
 komodo AD1A.240530.030:
   desc: Aug 2024
   factory: fb963bd65cdf9f933692fda3937144f400bde59cfbd74dcaf76f003911480711 komodo-ad1a.240530.030-factory-fb963bd6.zip
@@ -263,6 +267,10 @@ komodo BP1A.250505.005.D1:
   factory: c19e8841a85c233a749971838f7688c36b795a1c70baf11b257089c1572a619f komodo-bp1a.250505.005.d1-factory-c19e8841.zip
   ota: d36a9f38440896ba6719f4c8d349f3bac7cb97fc8116bd39cad0ebf4b5c03d13 komodo-ota-bp1a.250505.005.d1-d36a9f38.zip
   vendor/google_devices: 972c8da9aa99d6c50cb083169ad09854a04eb978481a506103d94cdca51f5406 google_devices-komodo-bp1a.250505.005.d1-22a53cff.tgz
+komodo BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: 4cd869ece3656228c2a34566534896fc5b1e5dba792341350a09dcc80e4ec19f komodo-bp2a.250605.031.a2-factory-4cd869ec.zip
+  ota: 60eaa0edceab3cf39868b58c291f13b1027b10a04c06186b6782cf39b278850f komodo-ota-bp2a.250605.031.a2-60eaa0ed.zip
 caiman AD1A.240530.030:
   desc: Aug 2024
   factory: 5e2727b97027f14ff26f89b68ce04559c0caf43ce8feda39e6ca3e5925c66309 caiman-ad1a.240530.030-factory-5e2727b9.zip
@@ -398,6 +406,10 @@ caiman BP1A.250505.005.D1:
   factory: c526436d4bf8336dec02a748628906a2f716a642a24419369994590ae24306e3 caiman-bp1a.250505.005.d1-factory-c526436d.zip
   ota: dffcae8d260d8fc84be4b7491c73c1c11cbef3ffb279e79ed1ea554eb9b90c34 caiman-ota-bp1a.250505.005.d1-dffcae8d.zip
   vendor/google_devices: 7fed7448965e379a273c2f84bf4bca270c4be13af0797949346208b1394824e3 google_devices-caiman-bp1a.250505.005.d1-3789a335.tgz
+caiman BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: ff28182737365d31b5a40033c943ad820507fa7e68a7cd8735cd220cdf78bb0e caiman-bp2a.250605.031.a2-factory-ff281827.zip
+  ota: 3748a4e149c9691eec8c0a2cdb16b99c2cc252d967878c9c354ed805ca072a1c caiman-ota-bp2a.250605.031.a2-3748a4e1.zip
 tokay AD1A.240530.030.A1:
   desc: Aug 2024, India only
   factory: c00748c817eba73c1f70695132ae71a9db6c4d0adb486ba1827a7d231378863d tokay-ad1a.240530.030.a1-factory-c00748c8.zip
@@ -538,6 +550,10 @@ tokay BP1A.250505.005.D1:
   factory: c91358828a565193ba0bbf2e0a65fd041500b1ea5c4817c4c2448c4225342a83 tokay-bp1a.250505.005.d1-factory-c9135882.zip
   ota: 96017d49b2b43d420a69eea0dedd7b59b2208c7b18ed76030dc05cb9bd3b71a2 tokay-ota-bp1a.250505.005.d1-96017d49.zip
   vendor/google_devices: 0cb22c21db85d489b09115006372f1b12a525783912c71bfdddf1a8c170ad12d google_devices-tokay-bp1a.250505.005.d1-1911d3c7.tgz
+tokay BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: df553d50ff121efc328affcfccb520a17ba4fd5b5d8321e222e17e13a3e10b91 tokay-bp2a.250605.031.a2-factory-df553d50.zip
+  ota: 7cccc3b7c2354bf1c5943ebda78ecb7beedf5f5bdf9fd0c5e1e9f75752313f61 tokay-ota-bp2a.250605.031.a2-7cccc3b7.zip
 tegu BD4A.240925.111:
   desc: Apr 2025
   factory: eb8b02663f40b73b7f0b8d945ca100f3223b05715253268a5ac664a13e26f758 tegu-bd4a.240925.111-factory-eb8b0266.zip
@@ -553,6 +569,10 @@ tegu BD4A.250505.003:
   factory: c76c3c0dda300a58625e7b3694946e2757e7e629e3ee5b3e00aded7c7b56bad4 tegu-bd4a.250505.003-factory-c76c3c0d.zip
   ota: 06eb56e8bbaf4c593e730b74285519a82bcc5727ea309d1815c944e5f259d18d tegu-ota-bd4a.250505.003-06eb56e8.zip
   vendor/google_devices: 0ad7cd61322c38ba01d142123de4e30c69e091c54c0901d18beae7e4b6da7be2 google_devices-tegu-bd4a.250505.003-9ab41e05.tgz
+tegu BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: aecd8a3b8cb97e1baacdf6b36d3dd053df4b0be5c0f3df31347b863304e5944b tegu-bp2a.250605.031.a2-factory-aecd8a3b.zip
+  ota: ec03acfb955eaa7ee4fea409a4a7a28b01c93647f60e34bc75a28ecf196319b4 tegu-ota-bp2a.250605.031.a2-ec03acfb.zip
 akita UD2A.231203.054:
   desc: May 2024, EMEA, APAC, JP
   factory: b3a902d4ece1f67ab85ac165d58c543d48dd3af1cc822944636d4f96e12df059 akita-ud2a.231203.054-factory-b3a902d4.zip
@@ -708,6 +728,10 @@ akita BP1A.250505.005.B1:
   factory: 26869594099ad5c1bd70d2303dbe768d4b93bb50d312251d45640ccdc45aae11 akita-bp1a.250505.005.b1-factory-26869594.zip
   ota: 405428be3836aba30e4ba6a001c790c9ff15154beafaa5d03e8c4abff5f663f1 akita-ota-bp1a.250505.005.b1-405428be.zip
   vendor/google_devices: 5ee7fe358f106cfc3e5f6591369ce8a769c95c9d83a51fbf00091e1f93eee23a google_devices-akita-bp1a.250505.005.b1-4c70395e.tgz
+akita BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: ee6b1148bd59c827863c23b559fe51368acc4e709eb9df529d0fbef91f49ddd7 akita-bp2a.250605.031.a2-factory-ee6b1148.zip
+  ota: 608042aae37cda79dec6bf0efe299da0ca015aeb69384d1da8190cc37b7f6a48 akita-ota-bp2a.250605.031.a2-608042aa.zip
 husky UD1A.230803.022.A3:
   desc: Sep 2023, Verizon
   factory: a95417f6ace90bb3ed39f86966bf9f32aad0505c29d5698dc19dddb9739f37bc husky-ud1a.230803.022.a3-factory-a95417f6.zip
@@ -923,6 +947,10 @@ husky BP1A.250505.005.B1:
   factory: 29f5f55fb3e85e751c7122d3b2e507772510e5fa7c98da7ec26721e735bc90a4 husky-bp1a.250505.005.b1-factory-29f5f55f.zip
   ota: 5f2620d8b704c6ebd5bcc4077fdc7faa412552c6e2b9a56f8c3304ce4d4b8177 husky-ota-bp1a.250505.005.b1-5f2620d8.zip
   vendor/google_devices: 182f38f7e984587bebf02296ea421cab326aee6c1e8d5968ba8813788560f6dd google_devices-husky-bp1a.250505.005.b1-16295551.tgz
+husky BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: bc4121464e7caca3ac375164ac808825113ed31ae55141d681cc33ab4cfb6fc4 husky-bp2a.250605.031.a2-factory-bc412146.zip
+  ota: 73a4023f1dd2814dc75f9db8959face06b59d475832d8a09a42a8fd526a30ad1 husky-ota-bp2a.250605.031.a2-73a4023f.zip
 shiba UD1A.230803.022.A5:
   desc: Sep 2023, US Non Verizon/AT&T/T-Mobile carriers/CA/TW
   factory: 85c06d1dd95b2e157ea1ba3c78fc2df8dabeb42dcd58c9cdb6f015e2c0c7b455 shiba-ud1a.230803.022.a5-factory-85c06d1d.zip
@@ -1138,6 +1166,10 @@ shiba BP1A.250505.005.B1:
   factory: afdf8d90c7011d3834537868a69f4e34f4e5fa4b94572b71598b23caf3d7f320 shiba-bp1a.250505.005.b1-factory-afdf8d90.zip
   ota: 6214dfec838ae04545749778c194bc16420c313e854392d1e6ae17a06d2f9e26 shiba-ota-bp1a.250505.005.b1-6214dfec.zip
   vendor/google_devices: f9737f915f6728c65e751e478e8f87862a0d10460fee40c0f997c804a773c8d5 google_devices-shiba-bp1a.250505.005.b1-ef15dd6d.tgz
+shiba BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: 4453bca2af28baf052b7c55046e255d45b3e70e5ab368c7b92d814abfc616679 shiba-bp2a.250605.031.a2-factory-4453bca2.zip
+  ota: 410a5c373b4c4552663db2634c96d857f91b4522ad4d8d9d395f024d341da6f7 shiba-ota-bp2a.250605.031.a2-410a5c37.zip
 felix TD3A.230203.070.A1:
   desc: Jun 2023
   factory: d935f0196d7959c916e4f42e25d92e05cd7d2ca0c01080ee46fc35fa996e302b felix-td3a.230203.070.a1-factory-d935f019.zip
@@ -1378,6 +1410,10 @@ felix BP1A.250505.005.B1:
   factory: 01439a870c037278406d7086c16943e211d4c79bb2504f45e3e23c055711d40a felix-bp1a.250505.005.b1-factory-01439a87.zip
   ota: 1685cbb9451047059a04a5441635885ef899f186ae42a4e768e260ff5935c5cc felix-ota-bp1a.250505.005.b1-1685cbb9.zip
   vendor/google_devices: 508bac6adad717e9c333a5a06595563abf2247f3efea5021258c1577a5e321f0 google_devices-felix-bp1a.250505.005.b1-c8d68101.tgz
+felix BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: 49bbb5b560e6a6775ef389a43e495635fb8fa82263ba8ac375c802b6222c9d08 felix-bp2a.250605.031.a2-factory-49bbb5b5.zip
+  ota: 7988b295cfa8bd1cda6f7158245e6771776c7c553f3c85f7046196753d14ccb2 felix-ota-bp2a.250605.031.a2-7988b295.zip
 tangorpro TD2A.230203.028:
   desc: Jun 2023
   factory: 55b7fab7178e0cc88a70d432d73edf498ace0277d81ee34867aeaa943b46a7fa tangorpro-td2a.230203.028-factory-55b7fab7.zip
@@ -1503,6 +1539,10 @@ tangorpro BP1A.250505.005:
   factory: fbebb0532ba8a9e3cdec28fbb67d0dc3eac9c964b65751ab0b2679ef655686a1 tangorpro-bp1a.250505.005-factory-fbebb053.zip
   ota: a5bf29350aaf1c958a724e07052d089b34d3a38536d2076058f2b1c5abc0c401 tangorpro-ota-bp1a.250505.005-a5bf2935.zip
   vendor/google_devices: 5838562618fd72851f11201e9b560da8139efc3adc2aa77014bdae65ea1cc359 google_devices-tangorpro-bp1a.250505.005-fb23c626.tgz
+tangorpro BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: f6a2a3280fc3069c8edc5c8033e2ada89bee7d67459521bd90860afcdf3ef940 tangorpro-bp2a.250605.031.a2-factory-f6a2a328.zip
+  ota: f2142d82d447ef2014027ac004a5ec7aa01363579194b249a9d01d19e619bd33 tangorpro-ota-bp2a.250605.031.a2-f2142d82.zip
 lynx TD4A.221205.042:
   desc: May 2023
   factory: f94007e2844eabb0b4f2203f31776cc9f907021458a258f69f57eed4ef3d24f2 lynx-td4a.221205.042-factory-f94007e2.zip
@@ -1738,6 +1778,10 @@ lynx BP1A.250505.005.B1:
   factory: 45a1393fe222246fd7b2918e072b52c6e34a4048fcf3f6b8c840632b1acd128b lynx-bp1a.250505.005.b1-factory-45a1393f.zip
   ota: db24813f3c561f792a19c4015dabe2220e8ee2497ee435f8e6ace7a0a229f815 lynx-ota-bp1a.250505.005.b1-db24813f.zip
   vendor/google_devices: 0709d70a8fdb8e51d1c97de211f2e46c803b2ca01d3b7aee1e2d49bf93f356e0 google_devices-lynx-bp1a.250505.005.b1-31711dae.tgz
+lynx BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: 4246da73f42a97389351bd67dd0a766d7310ee10958e3569fc574ad48e86c81b lynx-bp2a.250605.031.a2-factory-4246da73.zip
+  ota: 8c4a66d1b4c2516a87763090d39221b2479f39b2f603be5f1cab7dd6eb779087 lynx-ota-bp2a.250605.031.a2-8c4a66d1.zip
 cheetah TD1A.220804.009.A2:
   desc: Oct 2022
   factory: 8e7393e1bd7f86d76d75cdea988d5e4ebfded3a50fac26d774b9eb07152c1ed5 cheetah-td1a.220804.009.a2-factory-8e7393e1.zip
@@ -2038,6 +2082,10 @@ cheetah BP1A.250505.005.B1:
   factory: c7b1354d87f6e478c1d2d982dbc296f1b589d6797575639085c0a3ea4c1da974 cheetah-bp1a.250505.005.b1-factory-c7b1354d.zip
   ota: 29966098f2f60bf571673a589d32ce6f516440f466830e926ca90e13211eade0 cheetah-ota-bp1a.250505.005.b1-29966098.zip
   vendor/google_devices: 201bd60269dff67399e54aa139976d44a608d78171530555136088e2dc98f72a google_devices-cheetah-bp1a.250505.005.b1-e217d0cd.tgz
+cheetah BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: f5e122c5f8600b34fb825eeedb3ced347e0f07c6de589ca7baab1a1d23f1628b cheetah-bp2a.250605.031.a2-factory-f5e122c5.zip
+  ota: 0662933e3e2e52701eaa4844646336fc79fa3dd0df1a078b297ec97cfea824fe cheetah-ota-bp2a.250605.031.a2-0662933e.zip
 panther TD1A.220804.009.A2:
   desc: Oct 2022
   factory: 336ba5c1728987d0dea8ce764e342b1d3c5cf30b8c3ea1dd5c405c492f66677d panther-td1a.220804.009.a2-factory-336ba5c1.zip
@@ -2338,6 +2386,10 @@ panther BP1A.250505.005.B1:
   factory: f3671e060ad7c2597fd39e918f9a3aeb3f83c8948ddd295bd04655b8808bedf8 panther-bp1a.250505.005.b1-factory-f3671e06.zip
   ota: cf5588e661121815a18522a4b56578254791f4fd8bec380fb1032be5921171ad panther-ota-bp1a.250505.005.b1-cf5588e6.zip
   vendor/google_devices: 3b8afa2148883d9eb7d161ce2c75cebac0fd466373ffbe574e2f04a152213528 google_devices-panther-bp1a.250505.005.b1-afda31f3.tgz
+panther BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: 53161cbbb74752a913d89137eb7d238a168905338356712bd5fddffdf60041f2 panther-bp2a.250605.031.a2-factory-53161cbb.zip
+  ota: e04c4c91ce0606a260e07415e0b0de97d60f07672df4084e89e9ea27b545cbcd panther-ota-bp2a.250605.031.a2-e04c4c91.zip
 bluejay SD2A.220601.001.A1:
   desc: Jun 2022, JP carriers
   factory: 16c3fe1cce5be6bd26db4a87a40c8ebe0b0f520efe5fa79602e809d91d89c40b bluejay-sd2a.220601.001.a1-factory-16c3fe1c.zip
@@ -2633,6 +2685,10 @@ bluejay BP1A.250505.005:
   factory: b552839786586b7f0c946abfb59478d5477531d94a164c10f2f577b0ef0861ab bluejay-bp1a.250505.005-factory-b5528397.zip
   ota: 728eab10ee8393a04503e2f79cfe441f7f287a6dda4ba207d0550632009f6904 bluejay-ota-bp1a.250505.005-728eab10.zip
   vendor/google_devices: 022fea802f2108bf93528281442f1a64e5e4cac9bb10530edcf872d58591b127 google_devices-bluejay-bp1a.250505.005-5f83a18f.tgz
+bluejay BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: d7a8921521b13555005b6be393ca5296a710dd50116c375bbf8f6ef492caac71 bluejay-bp2a.250605.031.a2-factory-d7a89215.zip
+  ota: 71681dcb1b6a9492aab6b463986297a08cda2e68a3de026c53c954e75092d045 bluejay-ota-bp2a.250605.031.a2-71681dcb.zip
 raven SD1A.210817.015.A4:
   desc: Oct 2021
   factory: bd6cb030402897f58b952008211640f5241699200d509926540425e00b115bc9 raven-sd1a.210817.015.a4-factory-bd6cb030.zip
@@ -3003,6 +3059,10 @@ raven BP1A.250505.005:
   factory: 3ded8f89d71d17f3cee423c017e69d0156d0a04c1e27e020c2fbb7d57918f0be raven-bp1a.250505.005-factory-3ded8f89.zip
   ota: 5793e41b178a28f1d4f114cf9d345b50e0b8e73f542ad522bbda1b18c1f0f32a raven-ota-bp1a.250505.005-5793e41b.zip
   vendor/google_devices: 5c4e9e39a9d3f9252311d36caf55b1d83d9b6e0ab8b255a947238d3d60ff648d google_devices-raven-bp1a.250505.005-01f8d127.tgz
+raven BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: fdd1008f6f1916689bb06b337fa7585467e162fd8405a955061d3415ca15f3db raven-bp2a.250605.031.a2-factory-fdd1008f.zip
+  ota: 0410530d19fd8cc9c9dc7af70e552a628f8a6d94dc2358932289496ee3ba6a48 raven-ota-bp2a.250605.031.a2-0410530d.zip
 oriole SD1A.210817.015.A4:
   desc: Oct 2021
   factory: 074b7f51800a72cf493d5f287a4ec3ff23e234c403d0d2a935dd7d6194665d19 oriole-sd1a.210817.015.a4-factory-074b7f51.zip
@@ -3373,6 +3433,10 @@ oriole BP1A.250505.005:
   factory: 9fc37bccc63a243d046f459d22cfbf0dd0ea26336f356c9dd3fe0525093316c1 oriole-bp1a.250505.005-factory-9fc37bcc.zip
   ota: 0ac3ca6175db1b86ed666aa2079a1f8ad41ea67a52e5a9b834c09bde6a6e5a5f oriole-ota-bp1a.250505.005-0ac3ca61.zip
   vendor/google_devices: c6347443fc25950d4012e166eafee57f592ce1513f8109b8665bc21d7b10c6a4 google_devices-oriole-bp1a.250505.005-adb53d50.tgz
+oriole BP2A.250605.031.A2:
+  desc: Jun 2025
+  factory: 747402f25eed1c39fe6de3f132e9e27446191e616e6235e51675e9179f888949 oriole-bp2a.250605.031.a2-factory-747402f2.zip
+  ota: e6a8072b436ebb1d0ffd1eef9be1b45bb564550ec62f73c5e40632440d7de6c5 oriole-ota-bp2a.250605.031.a2-e6a8072b.zip
 raven SQ1D.211205.016.A1:
   vendor/google_devices: af62f2caad37c623bc7a6d87a1aa5a35aa73e54e17d5fec1e45938659ecb9375 google_devices-raven-sq1d.211205.016.a1-71ff241f.tgz
 raven SQ1D.211205.016.A4:
