@@ -1,5 +1,7 @@
 device:
   name: comet
+  build_id: BP2A.250605.031.A3
+
 
 platform:
   product_makefile: device/google/comet/aosp_comet.mk

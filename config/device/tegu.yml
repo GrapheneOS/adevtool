@@ -1,6 +1,5 @@
 device:
   name: tegu
-  build_id: BD4A.250505.003
 
 platform:
   product_makefile: device/google/tegu/aosp_tegu.mk

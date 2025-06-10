@@ -8,7 +8,7 @@ device:
   system_fs_type: ext4
   kernel_repo_url: https://android.googlesource.com/kernel/common
   has_cellular: true
-  build_id: BP1A.250505.005
+  build_id: BP2A.250605.031.A2
 
 platform:
   sepolicy_dirs:
