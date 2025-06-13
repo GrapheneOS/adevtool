@@ -29,6 +29,7 @@ import { exists, readFile, TempState } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 import { ApkModule, TYPE_APK } from '../build/soong'
 import assert from 'assert'
+import { deviceMapping } from '../config/hardcoded-config'
 
 export interface PropResults {
   stockProps: PartitionProps
@@ -148,6 +149,20 @@ export async function flattenApexs(
   return apex.entries
 }
 
+function replaceWithHardcodedFirmwareProps(config: DeviceConfig, props: Map<string, string>) {
+  const deviceDetails = deviceMapping[`${config.device.name}`]
+
+  for (let key of props.keys()) {
+    if (key == "ro.build.expect.bootloader") {
+        props.set("ro.build.expect.bootloader", deviceDetails['version-bootloader'])
+    }
+
+    if (key == "ro.build.expect.baseband") {
+      props.set("ro.build.expect.baseband", deviceDetails['version-baseband'])
+    }
+  }
+}
+
 export async function extractProps(config: DeviceConfig, customState: SystemState | null, stockSrc: string) {
   let stockProps = await loadPartitionProps(stockSrc)
   let customProps = customState?.partitionProps ?? new Map<string, Map<string, string>>()
@@ -155,9 +170,11 @@ export async function extractProps(config: DeviceConfig, customState: SystemStat
   // Filters
   for (let props of stockProps.values()) {
     filterKeys(config.filters.props, props)
+    replaceWithHardcodedFirmwareProps(config, props)
   }
   for (let props of customProps.values()) {
     filterKeys(config.filters.props, props)
+    replaceWithHardcodedFirmwareProps(config, props)
   }
 
   // Fingerprint for SafetyNet
@@ -274,7 +291,7 @@ export async function extractFirmware(
   stockProps: PartitionProps,
   factoryPath: string,
 ) {
-  let fwImages = await extractFactoryFirmware(factoryPath, stockProps)
+  let fwImages = await extractFactoryFirmware(factoryPath, stockProps, config)
   let fwPaths = await writeFirmwareImages(fwImages, dirs.firmware)
 
   // Generate android-info.txt from device and versions
