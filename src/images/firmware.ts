@@ -6,12 +6,17 @@ import { PartitionProps } from '../blobs/props'
 import { getAbOtaPartitions } from '../frontend/generate'
 import { NodeFileReader } from '../util/zip'
 import { EntryType, FastbootPack } from './fastboot-pack'
+import { DeviceConfig } from '../config/device'
+import { deviceMapping } from '../config/hardcoded-config'
 
 export const ANDROID_INFO = 'android-info.txt'
 
 export type FirmwareImages = Map<string, Buffer>
 
-async function extractFactoryZipFirmware(path: string, images: FirmwareImages) {
+async function extractFactoryZipFirmware(path: string, images: FirmwareImages, config: DeviceConfig) {
+  await overrideFirmware(images, config)
+  return;
+
   let reader = new NodeFileReader(path)
 
   try {
@@ -30,7 +35,38 @@ async function extractFactoryZipFirmware(path: string, images: FirmwareImages) {
   }
 }
 
-async function extractFactoryDirFirmware(path: string, images: FirmwareImages) {
+async function overrideFirmware(images: FirmwareImages, config: DeviceConfig) {
+  const firmwareDir = process.env.FIRMWARE_DIR;
+  const hardcodedConfig = deviceMapping[`${config.device.name}`]
+
+  if (!firmwareDir) {
+    throw new Error('Value of FIRMWARE_DIR is not set')
+  }
+
+  if (hardcodedConfig['modem-name'] == "") {
+    const loadedImages = await Promise.all(
+      [
+        fs.readFile(`${firmwareDir}/${hardcodedConfig['bootloader-name']}`)
+      ]
+    )
+    images.set('bootloader.img', loadedImages[0])
+  } else {
+    const loadedImages = await Promise.all(
+      [
+        fs.readFile(`${firmwareDir}/${hardcodedConfig['bootloader-name']}`),
+        fs.readFile(`${firmwareDir}/${hardcodedConfig['modem-name']}`)
+      ]
+    )
+    images.set('bootloader.img', loadedImages[0])
+    images.set('radio.img', loadedImages[1])
+  }
+}
+
+async function extractFactoryDirFirmware(path: string, images: FirmwareImages, config: DeviceConfig) {
+
+  await overrideFirmware(images, config)
+  return;
+
   for (let file of await fs.readdir(path)) {
     if (file.startsWith('bootloader-')) {
       let buf = await fs.readFile(`${path}/${file}`)
@@ -43,13 +79,13 @@ async function extractFactoryDirFirmware(path: string, images: FirmwareImages) {
 }
 
 // Path can be a directory or zip
-export async function extractFactoryFirmware(path: string, stockProps: PartitionProps) {
+export async function extractFactoryFirmware(path: string, stockProps: PartitionProps, config: DeviceConfig) {
   let images: FirmwareImages = new Map<string, Buffer>()
 
   if ((await fs.stat(path)).isDirectory()) {
-    await extractFactoryDirFirmware(path, images)
+    await extractFactoryDirFirmware(path, images, config)
   } else {
-    await extractFactoryZipFirmware(path, images)
+    await extractFactoryZipFirmware(path, images, config)
   }
 
   let abPartitions = new Set(getAbOtaPartitions(stockProps)!)
@@ -87,12 +123,17 @@ export function generateAndroidInfo(
   radioVersion: string,
   stockAbOtaPartitions: string[],
 ) {
+
+  const hardcodedConfig = deviceMapping[`${device}`]
+  const modem = hardcodedConfig['version-baseband']
+  const bootloader = hardcodedConfig['version-bootloader']
+
   let android_info = `require board=${device}
 
-require version-bootloader=${blVersion}
+require version-bootloader=${bootloader}
 `
-  if (radioVersion != undefined) {
-    android_info += `require version-baseband=${radioVersion}\n`
+  if (modem != undefined) {
+    android_info += `require version-baseband=${modem}\n`
   }
 
   if (stockAbOtaPartitions.includes('vendor_kernel_boot')) {
