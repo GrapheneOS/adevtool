@@ -90,6 +90,7 @@ filters:
       - system_ext/etc/init/init.sota.rc
       - system_ext/etc/permissions/com.google.android.factoryota.xml
       # Unused Face Unlock stuff
+      - vendor/apex/com.google.android.hardware.biometrics.face.apex
       - product/etc/permissions/android.hardware.biometrics.face.xml
       - vendor/bin/hw/android.hardware.biometrics.face-service.22.pixel
       - vendor/etc/faceauth_pipeline_input_pixel_22
