@@ -416,7 +416,6 @@ PRODUCT_PACKAGES += \
     vendor.google.whitechapel.audio.audioext@4.0 \
     vendor.google.whitechapel.audio.audioext@4.0-impl \
     vendor.google.whitechapel.audio.extension-V4-ndk \
-    vendor.google.whitechapel.audio.extension-V5-ndk \
     vendor.radio.base \
     vendor.radio.protocol.sit.base \
     vendor.radio.protocol.sit.json \

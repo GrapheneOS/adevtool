@@ -2241,4 +2241,3 @@ vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
 vendor/firmware/brcm/BTFW_D.hcd
-vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so

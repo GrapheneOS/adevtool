@@ -518,7 +518,6 @@ PRODUCT_PACKAGES += \
     vendor.google.whitechapel.audio.audioext@4.0__system_ext \
     vendor.google.whitechapel.audio.extension-V4-ndk \
     vendor.google.whitechapel.audio.extension-V4-ndk__system_ext \
-    vendor.google.whitechapel.audio.extension-V5-ndk \
     vendor.google.whitechapel.audio.hal.parserservice \
     vendor.google.whitechapel.audio.hal.utils \
     vendor.google.whitechapel.audio.hal.utils.adaptedinfo \
