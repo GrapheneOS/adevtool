@@ -2370,3 +2370,5 @@ vendor/lib64/vendor.radio.protocol.sit.stream.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
+vendor/firmware/bcmdhd_clm.blob_NA
+vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so

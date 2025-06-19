@@ -2584,6 +2584,19 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.google.whitechapel.audio.extension-V5-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.google.wireless_charger-V2-ndk",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/vendor.google.wireless_charger-V2-ndk.so" ] } },

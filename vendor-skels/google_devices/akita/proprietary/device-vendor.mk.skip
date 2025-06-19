@@ -500,6 +500,7 @@ PRODUCT_PACKAGES += \
     vendor.google.whitechapel.audio.audioext@4.0__system_ext \
     vendor.google.whitechapel.audio.extension-V4-ndk \
     vendor.google.whitechapel.audio.extension-V4-ndk__system_ext \
+    vendor.google.whitechapel.audio.extension-V5-ndk \
     vendor.google.whitechapel.audio.hal.parserservice \
     vendor.google.whitechapel.audio.hal.utils \
     vendor.google.whitechapel.audio.hal.utils.adaptedinfo \
@@ -1069,6 +1070,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_clm.blob_4383_a1:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob_4383_a1 \
     vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_clm.blob_4383_a3:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob_4383_a3 \
     vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_clm.blob_MMW:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob_MMW \
+    vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_clm.blob_NA:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob_NA \
     vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_txcap.blob_4383_a0:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_txcap.blob_4383_a0 \
     vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_txcap.blob_4383_a1:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_txcap.blob_4383_a1 \
     vendor/google_devices/akita/proprietary/vendor/firmware/bcmdhd_txcap.blob_4383_a3:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_txcap.blob_4383_a3 \
