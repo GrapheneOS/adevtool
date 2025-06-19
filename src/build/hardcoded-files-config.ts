@@ -25,7 +25,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -42,7 +41,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "comet": {
@@ -59,7 +57,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -76,7 +73,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "komodo": {
@@ -93,7 +89,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -110,7 +105,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "caiman": {
@@ -126,7 +120,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -143,7 +136,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "tokay": {
@@ -160,7 +152,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -177,7 +168,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "akita": {
@@ -200,7 +190,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -218,7 +207,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
         ],
         newFiles: [
             'vendor/firmware/bcmdhd_clm.blob_NA',  // WiFi firmware, only on 16
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "husky": {
@@ -236,7 +224,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -253,7 +240,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "shiba": {
@@ -270,7 +256,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
 
             'system_ext/priv-app/ril-extension/ril-extension.apk',
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -287,7 +272,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "felix": {
@@ -303,7 +287,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/gxp_fw_core3', // TPU firmware
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -321,7 +304,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
         ],
         newFiles: [
             'vendor/firmware/brcm/BTFW_D.hcd', // Bluetooth firmware, only on 16
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "tangorpro": {
@@ -349,7 +331,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/gxp_fw_core3', // TPU firmware
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -366,7 +347,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "cheetah": {
@@ -383,7 +363,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/gxp_fw_core3', // TPU firmware?
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -407,7 +386,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
         ],
         newFiles: [
             'vendor/firmware/brcm/BTFW_D.hcd', // Bluetooth firmware, only on 16
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "panther": {
@@ -424,7 +402,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/gxp_fw_core3', // TPU firmware?
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril-aidl.so', // used by rild_exynos
@@ -447,7 +424,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
         ],
         newFiles: [
             'vendor/firmware/brcm/BTFW_D.hcd', // Bluetooth firmware, only on 16
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "bluejay": {
@@ -460,7 +436,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/google/edgetpu-abrolhos.fw', // TPU firmware
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril_gfeature.so', // used by rild_exynos
@@ -476,7 +451,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "raven": {
@@ -489,7 +463,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/google/edgetpu-abrolhos.fw', // TPU firmware
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril_gfeature.so', // used by rild_exynos
@@ -505,7 +478,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
     "oriole": {
@@ -518,7 +490,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'vendor/firmware/google/edgetpu-abrolhos.fw', // TPU firmware
 
             'vendor/bin/hw/rild_exynos',
-            'vendor/lib64/libgooglerilaudio.so', // used by rild_exynos; requires vendor.google.whitechapel.audio.extension-V5-ndk.so
             'vendor/lib64/libgooglerilmemmonitor.so', // used by rild_exynos
             'vendor/lib64/libgril_oem-google.so',
             'vendor/lib64/libril_gfeature.so', // used by rild_exynos
@@ -534,7 +505,6 @@ export const android16filesforpixels: Record<string, BackportConfig> = {
             'system_ext/priv-app/ShannonRcs/ShannonRcs.apk',
         ],
         newFiles: [
-            'vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so',
         ],
     },
 }
