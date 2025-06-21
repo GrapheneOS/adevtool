@@ -1,0 +1,31 @@
+canonical_name: "only_yt"
+version: 70000000001
+apns {
+  apn {
+    name: "Only Internet"
+    value: "internet"
+    type: DEFAULT
+    type: DUN
+    type: SUPL
+  }
+  apn {
+    name: "Only MMS"
+    value: "mms"
+    type: MMS
+    mmsc: "http://mmsc.telcooi.re:9091"
+  }
+}
+configs {
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+last_updated {
+  seconds: 1728454052
+}

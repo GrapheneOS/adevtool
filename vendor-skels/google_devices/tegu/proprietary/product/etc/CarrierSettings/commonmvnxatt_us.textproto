@@ -1,5 +1,5 @@
-canonical_name: "reachmobileatt_us"
-version: 63000000002
+canonical_name: "commonmvnxatt_us"
+version: 70000000001
 apns {
   apn {
     name: "ereseller"
@@ -819,5 +819,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1730898291
 }

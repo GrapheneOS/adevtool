@@ -1,0 +1,40 @@
+canonical_name: "tigo_co"
+version: 70000000001
+apns {
+  apn {
+    name: "TIGO WEB"
+    value: "web.colombiamovil.com.co"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+  apn {
+    name: "TIGO Multimedia"
+    value: "mms.colombiamovil.com.co"
+    type: MMS
+    user: "mms-cm1900"
+    password: "mms-cm1900"
+    authtype: 1
+    mmsc: "http://mms.ola.com.co"
+    mmsc_proxy: "190.102.206.48"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "TIGO IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1732242351
+}

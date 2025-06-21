@@ -1,5 +1,5 @@
 canonical_name: "eastlink_ca"
-version: 63000000003
+version: 70000000004
 apns {
   apn {
     name: "Eastlink MMS"
@@ -24,8 +24,21 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "Eastlink XCAP"
+    value: "services"
+    type: XCAP
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -128,5 +141,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185521
+  seconds: 1733311838
 }

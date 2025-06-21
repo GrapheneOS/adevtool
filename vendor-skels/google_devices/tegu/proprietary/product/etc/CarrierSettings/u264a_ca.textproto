@@ -1,5 +1,5 @@
 canonical_name: "u264a_ca"
-version: 63000000002
+version: 70000000003
 apns {
   apn {
     name: "U+264A CA"
@@ -294,6 +294,18 @@ configs {
     bool_value: false
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: false
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -303,5 +315,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1727870779
 }

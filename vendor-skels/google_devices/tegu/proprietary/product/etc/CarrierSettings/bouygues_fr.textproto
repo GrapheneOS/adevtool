@@ -1,5 +1,5 @@
 canonical_name: "bouygues_fr"
-version: 63000000004
+version: 70000000008
 apns {
   apn {
     name: "Bouygues Telecom"
@@ -25,6 +25,7 @@ apns {
     type: IMS
     bearer_bitmask: "14|18|20"
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_visible: false
     lingering_network_type_bitmask: "1|2|3|8|9|10|13|14|15|18|20"
   }
@@ -65,11 +66,11 @@ configs {
     bool_value: true
   }
   config {
-    key: "editable_wfc_mode_bool"
-    bool_value: false
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
   }
   config {
-    key: "hide_enhanced_4g_lte_bool"
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -211,7 +212,7 @@ configs {
   config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
-      item: -110
+      item: -114
       item: -120
     }
   }
@@ -232,8 +233,8 @@ configs {
   config {
     key: "qns.idle_wifi_rssi_int_array"
     int_array {
-      item: -70
-      item: -79
+      item: -64
+      item: -72
     }
   }
   config {
@@ -256,7 +257,7 @@ configs {
   config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
-      item: -110
+      item: -114
       item: -120
     }
   }
@@ -277,13 +278,25 @@ configs {
   config {
     key: "qns.voice_wifi_rssi_int_array"
     int_array {
-      item: -70
-      item: -79
+      item: -64
+      item: -72
     }
   }
   config {
     key: "qns.xcap_transport_type_int"
     int_value: 0
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
   }
   config {
     key: "show_4g_for_lte_data_icon_bool"
@@ -295,5 +308,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289934
+  seconds: 1739349353
 }

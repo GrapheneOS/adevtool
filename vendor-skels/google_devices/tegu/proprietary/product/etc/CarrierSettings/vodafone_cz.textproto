@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 63000000003
+version: 70000000008
 apns {
   apn {
     name: "IMS"
@@ -30,6 +30,7 @@ apns {
     mmsc_proxy_port: "80"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
+    user_editable: false
   }
   apn {
     name: "XCAP"
@@ -44,6 +45,16 @@ configs {
   config {
     key: "call_barring_visibility_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_allow_transfer_ims_call_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "E4441B21B7374947FBA0CB34EEA9F600F05181056126FAC5FFEB9C34A2841C88:com.zentity.vodafone"
+    }
   }
   config {
     key: "carrier_default_wfc_ims_mode_int"
@@ -79,6 +90,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -158,6 +173,10 @@ configs {
     }
   }
   config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
     key: "qns.block_iwlan_in_international_roaming_without_wwan_bool"
     bool_value: true
   }
@@ -166,8 +185,24 @@ configs {
     int_value: 2
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 6
   }
   config {
     key: "wfc_spn_format_idx_int"
@@ -175,5 +210,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289934
+  seconds: 1739493498
 }

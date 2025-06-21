@@ -1,5 +1,5 @@
 canonical_name: "plus_pl"
-version: 63000000003
+version: 70000000004
 apns {
   apn {
     name: "Plus Internet"
@@ -67,6 +67,10 @@ configs {
   }
   config {
     key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -216,6 +220,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
@@ -225,5 +241,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472212
+  seconds: 1736946304
 }

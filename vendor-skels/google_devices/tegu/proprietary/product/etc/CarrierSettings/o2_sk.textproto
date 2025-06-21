@@ -1,5 +1,5 @@
 canonical_name: "o2_sk"
-version: 63000000003
+version: 70000000005
 apns {
   apn {
     name: "O2 internet"
@@ -37,6 +37,14 @@ apns {
     roaming_protocol: IPV6
     user_visible: false
   }
+  apn {
+    name: "emergency"
+    value: "EMERGENCY"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
   config {
@@ -64,10 +72,15 @@ configs {
     bool_value: true
   }
   config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "imsemergency.emergency_domain_preference_int_array"
     int_array {
       item: 2
       item: 1
+      item: 3
     }
   }
   config {
@@ -75,11 +88,6 @@ configs {
     int_array {
       item: 2
       item: 1
-    }
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
       item: 3
     }
   }
@@ -161,6 +169,10 @@ configs {
     }
   }
   config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -175,6 +187,22 @@ configs {
     int_value: 2
   }
   config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -184,5 +212,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1723685433
+  seconds: 1736946304
 }

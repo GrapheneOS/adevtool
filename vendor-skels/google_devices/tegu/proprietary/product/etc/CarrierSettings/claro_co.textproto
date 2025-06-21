@@ -1,0 +1,48 @@
+canonical_name: "claro_co"
+version: 70000000001
+apns {
+  apn {
+    name: "Web Claro CO"
+    value: "internet.comcel.com.co"
+    type: DEFAULT
+    type: SUPL
+    type: IA
+    type: XCAP
+    user: "COMCELWEB"
+    password: "COMCELWEB"
+    authtype: 1
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "MMS Claro CO"
+    value: "mms.comcel.com.co"
+    type: MMS
+    user: "COMCELMMS"
+    password: "COMCELMMS"
+    authtype: 1
+    mmsc: "http://www.comcel.com.co/mms/"
+    mmsc_proxy: "198.228.90.225"
+    mmsc_proxy_port: "8799"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS Claro CO"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1732098915
+}

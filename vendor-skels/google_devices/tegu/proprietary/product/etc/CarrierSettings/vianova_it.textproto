@@ -1,0 +1,48 @@
+canonical_name: "vianova_it"
+version: 70000000003
+apns {
+  apn {
+    name: "Vianova"
+    value: "apn.vianova.it"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "IMS"
+    value: "IMS"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1740560787
+}

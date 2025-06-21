@@ -1,14 +1,6 @@
 canonical_name: "digi_ro"
-version: 63000000003
+version: 70000000005
 apns {
-  apn {
-    name: "MMS"
-    value: "mms"
-    type: MMS
-    mmsc: "http://10.10.3.133:8002"
-    mmsc_proxy: "10.10.3.130"
-    mmsc_proxy_port: "8080"
-  }
   apn {
     name: "Digi.Mobil"
     value: "internet"
@@ -31,11 +23,27 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_metered_apn_types_strings"
+    text_array {
+      item: "default"
+      item: "dun"
+      item: "supl"
+    }
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -100,10 +108,22 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1721185521
+  seconds: 1736946304
 }

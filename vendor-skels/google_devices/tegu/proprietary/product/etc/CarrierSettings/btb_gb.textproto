@@ -1,5 +1,5 @@
 canonical_name: "btb_gb"
-version: 63000000002
+version: 70000000003
 apns {
   apn {
     name: "IMS"
@@ -154,15 +154,13 @@ configs {
       config {
         key: "imsvoice.amrnb_payload_type_int_array"
         int_array {
-          item: 98
-          item: 103
+          item: 102
         }
       }
       config {
         key: "imsvoice.amrwb_payload_type_int_array"
         int_array {
-          item: 100
-          item: 105
+          item: 104
         }
       }
       config {
@@ -175,6 +173,33 @@ configs {
         key: "imsvoice.dtmfwb_payload_type_int_array"
         int_array {
           item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
         }
       }
     }
@@ -238,5 +263,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1731496825
 }

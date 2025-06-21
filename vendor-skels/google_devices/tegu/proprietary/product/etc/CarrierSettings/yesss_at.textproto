@@ -1,5 +1,5 @@
 canonical_name: "yesss_at"
-version: 63000000002
+version: 70000000004
 apns {
   apn {
     name: "yesss!"
@@ -23,6 +23,7 @@ apns {
     value: "hos"
     type: XCAP
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_visible: false
   }
 }
@@ -68,6 +69,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "ims.registration_retry_max_timer_millis_int"
     int_value: 300000
   }
@@ -102,10 +107,6 @@ configs {
   config {
     key: "imsss.ut_as_server_port_int"
     int_value: 443
-  }
-  config {
-    key: "imsss.ut_iptype_roaming_int"
-    int_value: 0
   }
   config {
     key: "imsss.ut_supported_when_ps_data_off_bool"
@@ -230,6 +231,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -239,5 +252,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185521
+  seconds: 1736946304
 }

@@ -1,5 +1,5 @@
 canonical_name: "asda_gb"
-version: 63000000006
+version: 70000000007
 apns {
   apn {
     name: "ASDA internet"
@@ -75,12 +75,6 @@ configs {
   config {
     key: "ims.registration_event_package_supported_bool"
     bool_value: false
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -163,5 +157,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912532
+  seconds: 1730360197
 }

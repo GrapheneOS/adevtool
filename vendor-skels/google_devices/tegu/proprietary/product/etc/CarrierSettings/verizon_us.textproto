@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 63000000006
+version: 70000000014
 apns {
   apn {
     name: "Verizon"
@@ -29,6 +29,7 @@ apns {
     max_conns: 20
     max_conns_time: 300
     modem_cognitive: true
+    infrastructure_bitmask: 1
   }
   apn {
     name: "Verizon"
@@ -42,6 +43,7 @@ apns {
     max_conns_time: 300
     modem_cognitive: true
     user_visible: false
+    infrastructure_bitmask: 1
   }
   apn {
     name: "Verizon"
@@ -57,6 +59,7 @@ apns {
     max_conns_time: 300
     modem_cognitive: true
     user_visible: false
+    infrastructure_bitmask: 1
   }
   apn {
     name: "Verizon"
@@ -72,6 +75,7 @@ apns {
     max_conns_time: 300
     modem_cognitive: true
     user_visible: false
+    infrastructure_bitmask: 1
   }
   apn {
     name: "Verizon Emergency"
@@ -253,14 +257,6 @@ configs {
       item: "supl"
       item: "mms"
     }
-  }
-  config {
-    key: "carrier_name_override_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_name_string"
-    text_value: "Verizon"
   }
   config {
     key: "carrier_nr_availabilities_int_array"
@@ -959,6 +955,16 @@ configs {
     }
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+      item: "source=EUTRAN|NGRAN|IWLAN|UNKNOWN, target=EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS|MMS|XCAP|CBS"
+    }
+  }
+  config {
     key: "lte_earfcns_rsrp_boost_int"
     int_value: 6
   }
@@ -1395,5 +1401,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812809
+  seconds: 1741781053
 }

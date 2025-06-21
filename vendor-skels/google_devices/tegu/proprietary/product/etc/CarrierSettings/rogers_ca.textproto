@@ -1,11 +1,11 @@
 canonical_name: "rogers_ca"
-version: 63000000003
+version: 70000000006
 apns {
   apn {
     name: "Rogers Tethering"
     value: "ltedata.apn"
     type: DUN
-    protocol: IPV4V6
+    protocol: IPV6
     roaming_protocol: IPV4V6
     user_editable: false
   }
@@ -14,7 +14,7 @@ apns {
     value: "ims"
     type: IMS
     bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
-    protocol: IPV4V6
+    protocol: IPV6
     roaming_protocol: IPV4V6
     user_visible: false
   }
@@ -30,7 +30,7 @@ apns {
     mmsc: "http://mms.gprs.rogers.com"
     mmsc_proxy: "mmsproxy.rogers.com"
     mmsc_proxy_port: "80"
-    protocol: IPV4V6
+    protocol: IPV6
     roaming_protocol: IPV4V6
     user_editable: false
   }
@@ -53,6 +53,14 @@ apns {
     type: XCAP
     bearer_bitmask: "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "emergency"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV6
     roaming_protocol: IPV4V6
     user_visible: false
   }
@@ -447,5 +455,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185521
+  seconds: 1733311838
 }

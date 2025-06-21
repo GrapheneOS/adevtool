@@ -1,5 +1,5 @@
 canonical_name: "tele2_lv"
-version: 63000000002
+version: 70000000006
 apns {
   apn {
     name: "Internet"
@@ -9,7 +9,7 @@ apns {
     type: MMS
     authtype: 1
     mmsc: "http://mmsc.tele2.lv/"
-    mmsc_proxy: "193.12.40.29"
+    mmsc_proxy: "mmsproxy.tele2.lv"
     mmsc_proxy_port: "8080"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
@@ -42,8 +42,20 @@ configs {
     int_value: 8081
   }
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
   }
   config {
     key: "carrier_volte_available_bool"
@@ -51,6 +63,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -113,10 +129,56 @@ configs {
     }
   }
   config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 1500
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 1400
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
     }
+  }
+  config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 3000
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 2900
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -115
+      item: -118
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -115
+      item: -118
+    }
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
   }
   config {
     key: "wfc_spn_format_idx_int"
@@ -124,5 +186,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1736946304
 }

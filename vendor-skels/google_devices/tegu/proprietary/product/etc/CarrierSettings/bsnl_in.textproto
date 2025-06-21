@@ -1,5 +1,5 @@
 canonical_name: "bsnl_in"
-version: 63000000003
+version: 70000000005
 apns {
   apn {
     name: "bsnlmms"
@@ -16,6 +16,7 @@ apns {
     type: DEFAULT
     type: SUPL
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "bsnllive"
@@ -44,6 +45,10 @@ configs {
   config {
     key: "allow_hold_call_during_emergency_bool"
     bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
   }
   config {
     key: "carrier_volte_available_bool"
@@ -118,5 +123,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725429784
+  seconds: 1741179740
 }

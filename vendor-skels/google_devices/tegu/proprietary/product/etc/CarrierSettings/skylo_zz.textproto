@@ -1,5 +1,5 @@
 canonical_name: "skylo_zz"
-version: 63000000001
+version: 70000000002
 apns {
   apn {
     name: "Skylo"
@@ -12,7 +12,11 @@ apns {
   }
 }
 configs {
+  config {
+    key: "satellite_nidd_apn_name_string"
+    text_value: "pixel.ntn"
+  }
 }
 last_updated {
-  seconds: 1717749084
+  seconds: 1730898291
 }

@@ -1,5 +1,5 @@
 canonical_name: "luckymobile_ca"
-version: 63000000003
+version: 70000000004
 apns {
   apn {
     name: "Lucky Mobile"
@@ -45,6 +45,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "allow_metered_network_for_cert_download_bool"
+    bool_value: true
+  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.bell.ca"
@@ -126,6 +130,14 @@ configs {
   config {
     key: "imsemergency.maximum_cellular_search_timer_sec_int"
     int_value: 10
+  }
+  config {
+    key: "imsi_key_availability_int"
+    int_value: 2
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://public-cert-imsi.bell.ca/"
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -349,7 +361,23 @@ configs {
     key: "voicemail_notification_persistent_bool"
     bool_value: true
   }
+  config {
+    key: "wifi.carrier_profiles_version_int"
+    int_value: 2
+  }
+  config {
+    key: "wifi.network_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork priority=\"10\"><SSID>5099251212</SSID><Credential><SIM><EAPType>23</EAPType></SIM></Credential></WifiNetwork>"
+    }
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile priority=\"20\"><PPSMO><![CDATA[<MgmtTree xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscription</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovidersubscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>WiFi</Value></Node><Node><NodeName>FQDN</NodeName><Value>luckymobile.ca</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Realm</NodeName><Value>wlan.mnc610.mcc302.3gppnetwork.org</Value></Node><Node><NodeName>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>302610*</Value></Node><Node><NodeName>EAPType</NodeName><Value>23</Value></Node></Node></Node></Node></Node></MgmtTree>]]></PPSMO></PasspointProfile>"
+    }
+  }
 }
 last_updated {
-  seconds: 1722472212
+  seconds: 1730898291
 }
