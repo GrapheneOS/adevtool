@@ -1,0 +1,23 @@
+canonical_name: "mettel_us"
+version: 70000000001
+apns {
+  apn {
+    name: "MetTel"
+    value: "MetTel"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "enabledMMS"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1736319564
+}

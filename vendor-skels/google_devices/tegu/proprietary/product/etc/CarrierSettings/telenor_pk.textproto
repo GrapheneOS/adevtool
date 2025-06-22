@@ -1,0 +1,38 @@
+canonical_name: "telenor_pk"
+version: 70000000001
+apns {
+  apn {
+    name: "Telenor WAP"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "Telenor MMS"
+    value: "mms"
+    type: MMS
+    user: "Telenor"
+    password: "Telenor"
+    mmsc: "http://mmstelenor"
+    mmsc_proxy: "172.18.19.11"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1732242351
+}
