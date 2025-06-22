@@ -1,0 +1,40 @@
+canonical_name: "aliv_bs"
+version: 70000000001
+apns {
+  apn {
+    name: "Be Aliv"
+    value: "pda.newcomobile.com"
+    type: DEFAULT
+    type: SUPL
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "Be Aliv IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "bs"
+  }
+}
+last_updated {
+  seconds: 1739962042
+}

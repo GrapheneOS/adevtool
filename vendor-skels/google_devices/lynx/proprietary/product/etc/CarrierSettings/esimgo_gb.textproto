@@ -1,0 +1,299 @@
+canonical_name: "esimgo_gb"
+version: 70000000001
+apns {
+  apn {
+    name: "eSIM Go Data"
+    value: "uk.data.esim"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    user: "wap"
+    password: "wap"
+    authtype: 1
+    mmsc: "http://mms.vodafone.co.uk/servlets/mms"
+    mmsc_proxy: "212.183.137.12"
+    mmsc_proxy_port: "8799"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    mtu: 1340
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "IMS"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "feature_access_codes_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1280
+  }
+  config {
+    key: "ims.registration_event_package_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "338|busy everywhere|1017"
+      item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 90000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 90000
+  }
+  config {
+    key: "imsvoice.session_refresh_method_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 0
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
+    key: "iwlan.mcc_mncs_string_array"
+    text_array {
+      item: "235-015"
+    }
+  }
+  config {
+    key: "iwlan.natt_keep_alive_timer_sec_int"
+    int_value: 30
+  }
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "qns.block_iwlan_in_international_roaming_without_wwan_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -116
+    }
+  }
+  config {
+    key: "qns.idle_geran_rssi_int_array"
+    int_array {
+      item: -99
+      item: -102
+    }
+  }
+  config {
+    key: "qns.idle_utran_rscp_int_array"
+    int_array {
+      item: -105
+      item: -110
+    }
+  }
+  config {
+    key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 5000
+      item: 5000
+      item: 5000
+    }
+  }
+  config {
+    key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 5000
+      item: 5000
+      item: 5000
+    }
+  }
+  config {
+    key: "qns.video_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -116
+    }
+  }
+  config {
+    key: "qns.video_geran_rssi_int_array"
+    int_array {
+      item: -99
+      item: -102
+    }
+  }
+  config {
+    key: "qns.video_utran_rscp_int_array"
+    int_array {
+      item: -105
+      item: -110
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -116
+    }
+  }
+  config {
+    key: "qns.voice_geran_rssi_int_array"
+    int_array {
+      item: -99
+      item: -102
+    }
+  }
+  config {
+    key: "qns.voice_utran_rscp_int_array"
+    int_array {
+      item: -105
+      item: -110
+    }
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 10
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 12
+  }
+}
+last_updated {
+  seconds: 1741940435
+}
