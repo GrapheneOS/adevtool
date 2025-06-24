@@ -1,5 +1,5 @@
 canonical_name: "sunrise_ch"
-version: 64000000012
+version: 70000000014
 apns {
   apn {
     name: "IMS"
@@ -66,6 +66,10 @@ configs {
   config {
     key: "enabledMMS"
     bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "ims.ipsec_authentication_algorithms_int_array"
@@ -188,8 +192,30 @@ configs {
     int_value: 11
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
   }
   config {
     key: "use_wfc_home_network_mode_in_roaming_network_bool"
@@ -201,5 +227,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185492
+  seconds: 1741781035
 }

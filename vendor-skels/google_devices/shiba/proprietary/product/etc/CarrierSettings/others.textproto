@@ -1,4 +1,4 @@
-version: 64000000084
+version: 70000000092
 setting {
   canonical_name: "019mobile_il"
   apns {
@@ -3509,27 +3509,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "29001"
-  apns {
-    apn {
-      name: "Tele Internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Tele MMS"
-      value: "mms"
-      type: MMS
-      mmsc: "http://mms.tele.gl/mms/wapenc"
-      mmsc_proxy: "10.112.222.37"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "29364"
   apns {
     apn {
@@ -5952,80 +5931,6 @@ setting {
       bearer_bitmask: "14"
       protocol: IPV4V6
       roaming_protocol: IPV4V6
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "310470"
-  apns {
-    apn {
-      name: "DataConnect"
-      value: "isp.cingular"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "MediaNet"
-      value: "wap.cingular"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      user: "WAP@CINGULARGPRS.COM"
-      password: "CINGULAR1"
-      mmsc: "http://mmsc.cingular.com"
-      mmsc_proxy: "66.209.11.32"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "nTelos Ota"
-      value: "admin.4g.ntelos.com"
-      type: FOTA
-      bearer_bitmask: "13"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "nTelos Ota"
-      value: "admin.4g.ntelos.com"
-      type: FOTA
-      bearer_bitmask: "14"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "nTelos Wireless"
-      value: "internet.4g.ntelos.com"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      type: HIPRI
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "nTelos Tether"
-      value: "tethering.4g.ntelos.com"
-      type: DUN
-      bearer_bitmask: "13"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "nTelos Tether"
-      value: "tethering.4g.ntelos.com"
-      type: DUN
-      bearer_bitmask: "14"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-      user_editable: false
     }
   }
   configs {
@@ -9811,49 +9716,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "334090"
-  apns {
-    apn {
-      name: "Modem"
-      value: "modem.nexteldata.com.mx"
-      type: DUN
-      user_visible: false
-    }
-    apn {
-      name: "MMS"
-      value: "mms.nexteldata.com.mx"
-      type: MMS
-      authtype: 0
-      mmsc: "http://3gmms.nexteldata.com.mx"
-      mmsc_proxy: "129.192.129.104"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "Navegaci\303\263n"
-      value: "wap.nexteldata.com.mx"
-      type: DEFAULT
-      type: SUPL
-      authtype: 0
-    }
-  }
-  configs {
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-    config {
-      key: "mmi_two_digit_number_pattern_string_array"
-      text_array {
-        item: "#9"
-      }
-    }
-    config {
-      key: "skip_cf_fail_to_disable_dialog_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "33805"
   apns {
     apn {
@@ -11474,27 +11336,6 @@ setting {
     }
   }
   configs {
-  }
-}
-setting {
-  canonical_name: "41308"
-  apns {
-    apn {
-      name: "Hutch"
-      value: "default"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-    config {
-      key: "min_udp_port_4500_nat_timeout_sec_int"
-      int_value: 120
-    }
-    config {
-      key: "preferred_ike_protocol_int"
-      int_value: 40
-    }
   }
 }
 setting {
@@ -17927,45 +17768,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "73002"
-  apns {
-    apn {
-      name: "Movistar APLICACIONES"
-      value: "wap.tmovil.cl"
-      type: DEFAULT
-      type: SUPL
-      user: "wap"
-      password: "wap"
-      authtype: 1
-    }
-    apn {
-      name: "Movistar MMS"
-      value: "mms.tmovil.cl"
-      type: MMS
-      user: "mms"
-      password: "mms"
-      authtype: 1
-      mmsc: "http://mms.movistar.cl"
-      mmsc_proxy: "172.17.8.10"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-    config {
-      key: "enableGroupMms"
-      bool_value: false
-    }
-    config {
-      key: "enabledMMS"
-      bool_value: false
-    }
-    config {
-      key: "groupChatDefaultsToMMS"
-      bool_value: false
-    }
-  }
-}
-setting {
   canonical_name: "73007"
   apns {
     apn {
@@ -18032,37 +17834,6 @@ setting {
         item: "73002"
       }
     }
-  }
-}
-setting {
-  canonical_name: "73009"
-  apns {
-    apn {
-      name: "Internet WOM"
-      value: "internet"
-      type: DEFAULT
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "IMS"
-      value: "ims"
-      type: IMS
-      user_visible: false
-      user_editable: false
-    }
-    apn {
-      name: "MMS Nextel"
-      value: "mms.nextelmovil.cl"
-      type: MMS
-      authtype: 0
-      mmsc: "http://3gmms.nextelmovil.cl"
-      mmsc_proxy: "129.192.129.104"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
   }
 }
 setting {
@@ -19063,28 +18834,6 @@ setting {
     config {
       key: "show_4g_for_lte_data_icon_bool"
       bool_value: true
-    }
-  }
-}
-setting {
-  canonical_name: "aliv_bs"
-  apns {
-    apn {
-      name: "Be Aliv"
-      value: "pda.newcomobile.com"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Be Aliv IMS"
-      value: "ims"
-      type: IMS
-    }
-  }
-  configs {
-    config {
-      key: "sim_country_iso_override_string"
-      text_value: "bs"
     }
   }
 }
@@ -21403,6 +21152,13 @@ setting {
       }
     }
     config {
+      key: "carrier_nr_availabilities_int_array"
+      int_array {
+        item: 2
+        item: 1
+      }
+    }
+    config {
       key: "carrier_supports_ss_over_ut_bool"
       bool_value: true
     }
@@ -21440,6 +21196,10 @@ setting {
     }
     config {
       key: "hide_enhanced_4g_lte_bool"
+      bool_value: true
+    }
+    config {
+      key: "ignore_rtt_mode_setting_bool"
       bool_value: true
     }
     config {
@@ -21781,6 +21541,18 @@ setting {
       key: "read_only_apn_types_string_array"
       text_array {
       }
+    }
+    config {
+      key: "rtt_downgrade_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_while_roaming_bool"
+      bool_value: true
     }
     config {
       key: "show_4g_for_lte_data_icon_bool"
@@ -22772,48 +22544,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "verizononsitelte_us"
-  apns {
-    apn {
-      name: "Verizon Internet(PN)"
-      value: ""
-      type: DEFAULT
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      profile_id: 0
-      modem_cognitive: true
-    }
-    apn {
-      name: "Verizon Initial Attach(PN)"
-      value: ""
-      type: IA
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_visible: false
-    }
-    apn {
-      name: "Verizon"
-      value: "VZWADMIN"
-      type: FOTA
-      bearer_bitmask: "14"
-      authtype: 0
-      protocol: IPV4V6
-      profile_id: 3
-      max_conns: 20
-      max_conns_time: 300
-      modem_cognitive: true
-      user_visible: false
-    }
-  }
-  configs {
-    config {
-      key: "cellular_usage_setting_int"
-      int_value: 2
-    }
-  }
-}
-setting {
   canonical_name: "videocon1_in"
   apns {
     apn {
@@ -22950,6 +22680,14 @@ setting {
   }
   configs {
     config {
+      key: "bsf.bsf_server_port_int"
+      int_value: 443
+    }
+    config {
+      key: "bsf.bsf_transport_type_int"
+      int_value: 3
+    }
+    config {
       key: "carrier_certificate_string_array"
       text_array {
         item: "0318ED2A8B33CE173C7ABE3F647D263810994CF489C8FCD27A8CAAFCF2822A88:com.appseleration.android.selfcare,com.appseleration.speedtest"
@@ -23007,6 +22745,10 @@ setting {
       bool_value: false
     }
     config {
+      key: "ignore_rtt_mode_setting_bool"
+      bool_value: true
+    }
+    config {
       key: "ims.ims_user_agent_string"
       text_value: "#MANUFACTURE# #MODEL# Android #AV# #BUILD# EU00025"
     }
@@ -23036,12 +22778,20 @@ setting {
       bool_value: false
     }
     config {
+      key: "imsss.ut_as_server_port_int"
+      int_value: 443
+    }
+    config {
       key: "imsss.ut_iptype_home_int"
       int_value: 0
     }
     config {
       key: "imsss.ut_iptype_roaming_int"
       int_value: 0
+    }
+    config {
+      key: "imsss.ut_transport_type_int"
+      int_value: 3
     }
     config {
       key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -23185,6 +22935,18 @@ setting {
     config {
       key: "qns.xcap_transport_type_int"
       int_value: 0
+    }
+    config {
+      key: "rtt_downgrade_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_while_roaming_bool"
+      bool_value: true
     }
     config {
       key: "show_4g_for_lte_data_icon_bool"
@@ -23407,5 +23169,5 @@ setting {
   }
 }
 last_updated {
-  seconds: 1733386072
+  seconds: 1741940442
 }

@@ -1,11 +1,13 @@
 canonical_name: "digi_my"
-version: 64000000009
+version: 70000000010
 apns {
   apn {
     name: "DiGi Internet"
     value: "diginet"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "DiGi MMS"
@@ -31,8 +33,8 @@ apns {
     name: "hos"
     value: "hos"
     type: XCAP
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
+    protocol: IPV6
+    roaming_protocol: IPV6
   }
 }
 configs {
@@ -109,5 +111,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812784
+  seconds: 1739349332
 }

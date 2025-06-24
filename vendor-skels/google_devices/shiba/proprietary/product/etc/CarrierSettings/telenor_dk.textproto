@@ -1,5 +1,5 @@
 canonical_name: "telenor_dk"
-version: 64000000013
+version: 70000000014
 apns {
   apn {
     name: "Telenor Internet"
@@ -56,6 +56,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -211,6 +215,18 @@ configs {
     int_value: 2
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -220,5 +236,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912506
+  seconds: 1736946279
 }

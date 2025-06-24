@@ -1,5 +1,5 @@
 canonical_name: "no_sim"
-version: 64000000001
+version: 70000000002
 configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
@@ -475,9 +475,9 @@ configs {
     key: "telephony_data_setup_retry_rules_string_array"
     text_array {
       item: "capabilities=eims, retry_interval=1000, maximum_retries=20"
-      item: "permanent_fail_causes=28|29|30|35|50|51|111|-5|-6|65537|65538|-3|65543|2253|2254, retry_interval=2500"
-      item: "capabilities=mms|supl|cbs, retry_interval=2000"
-      item: "capabilities=internet|enterprise|dun|ims|fota, retry_interval=2500|3000|5000|10000|15000|20000|40000|60000|120000|240000|600000|1200000|1800000, maximum_retries=20"
+      item: "permanent_fail_causes=8|27|28|29|30|32|33|35|50|51|111|-5|-6|65537|65538|-3|65543|65547|2252|2253|2254, retry_interval=2500"
+      item: "capabilities=mms|supl|cbs|rcs, retry_interval=2000"
+      item: "capabilities=internet|enterprise|dun|ims|fota|xcap|mcx|prioritize_bandwidth|prioritize_latency, retry_interval=2500|3000|5000|10000|15000|20000|40000|60000|120000|240000|600000|1200000|1800000, maximum_retries=20"
     }
   }
   config {
@@ -496,5 +496,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1730360176
+  seconds: 1739962051
 }

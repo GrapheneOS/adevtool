@@ -1,5 +1,5 @@
 canonical_name: "bell_ca"
-version: 64000000015
+version: 70000000015
 apns {
   apn {
     name: "Bell Mobility"

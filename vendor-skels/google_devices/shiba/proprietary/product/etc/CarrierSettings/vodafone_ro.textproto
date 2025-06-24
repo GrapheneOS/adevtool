@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ro"
-version: 64000000017
+version: 70000000018
 apns {
   apn {
     name: "Internet"
@@ -73,6 +73,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -184,10 +188,22 @@ configs {
     bool_value: false
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1732242331
+  seconds: 1736946279
 }

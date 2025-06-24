@@ -1,5 +1,5 @@
 canonical_name: "telia_lt"
-version: 64000000017
+version: 70000000020
 apns {
   apn {
     name: "Telia MMS"
@@ -44,6 +44,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
   }
@@ -61,6 +65,14 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -195,10 +207,22 @@ configs {
     int_value: 2097152
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1724912506
+  seconds: 1739349332
 }
