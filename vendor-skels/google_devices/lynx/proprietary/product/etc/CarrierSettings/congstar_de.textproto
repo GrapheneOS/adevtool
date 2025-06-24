@@ -1,5 +1,5 @@
 canonical_name: "congstar_de"
-version: 64000000014
+version: 70000000015
 apns {
   apn {
     name: "Internet"
@@ -133,6 +133,10 @@ configs {
   config {
     key: "hide_lte_plus_data_icon_bool"
     bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "ims.ims_user_agent_string"
@@ -368,6 +372,18 @@ configs {
     int_value: 2
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_ims_registration_status_bool"
     bool_value: true
   }
@@ -395,5 +411,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276180
+  seconds: 1736946272
 }

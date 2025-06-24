@@ -1,5 +1,5 @@
 canonical_name: "orange_ro"
-version: 64000000010
+version: 70000000013
 apns {
   apn {
     name: "Orange Internet"
@@ -29,6 +29,10 @@ apns {
 }
 configs {
   config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -37,9 +41,8 @@ configs {
     bool_value: true
   }
   config {
-    key: "imssms.sms_over_ims_supported_rats_int_array"
-    int_array {
-    }
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "imsss.ut_server_based_services_int_array"
@@ -176,6 +179,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -185,5 +200,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732098891
+  seconds: 1740560739
 }

@@ -1,29 +1,40 @@
 canonical_name: "sky_gb"
-version: 64000000019
+version: 70000000020
 apns {
   apn {
     name: "SKY MMS"
     value: "mms.mobile.sky"
     type: MMS
     bearer_bitmask: "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"
+    authtype: 0
     mmsc: "http://185.110.178.96:38090/was"
     mmsc_proxy: "185.110.178.97"
     mmsc_proxy_port: "9028"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
   }
   apn {
     name: "SKY WiFi MMS"
     value: "wifi.mms.mobile.sky"
     type: MMS
     bearer_bitmask: "18"
+    authtype: 0
     mmsc: "http://185.110.178.96:38090/was"
     mmsc_proxy: "185.110.178.97"
     mmsc_proxy_port: "9028"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_visible: false
   }
   apn {
     name: "SKY Internet"
     value: "mobile.sky"
     type: DEFAULT
+    type: SUPL
+    type: IA
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -211,6 +222,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "maxMessageSize"
+    int_value: 307200
+  }
+  config {
     key: "non_roaming_operator_string_array"
     text_array {
       item: "23410"
@@ -241,5 +256,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912495
+  seconds: 1735886348
 }

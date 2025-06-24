@@ -1,5 +1,5 @@
 canonical_name: "linemo_jp"
-version: 64000000010
+version: 70000000010
 apns {
   apn {
     name: "IMS"

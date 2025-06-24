@@ -1,0 +1,58 @@
+canonical_name: "movistar_cl"
+version: 70000000001
+apns {
+  apn {
+    name: "Movistar INTERNET"
+    value: "wap.tmovil.cl"
+    type: DEFAULT
+    type: SUPL
+    user: "wap"
+    password: "wap"
+    authtype: 1
+  }
+  apn {
+    name: "Movistar MMS"
+    value: "mms.tmovil.cl"
+    type: MMS
+    user: "mms"
+    password: "mms"
+    authtype: 1
+    mmsc: "http://mms.movistar.cl"
+    mmsc_proxy: "172.17.8.10"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "Movistar CL IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "enableGroupMms"
+    bool_value: false
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
+  }
+  config {
+    key: "groupChatDefaultsToMMS"
+    bool_value: false
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "conference@ims.mnc002.mcc730.3gppnetwork.org"
+  }
+}
+last_updated {
+  seconds: 1739493482
+}

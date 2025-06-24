@@ -1,5 +1,5 @@
 canonical_name: "hotmobile_il"
-version: 64000000005
+version: 70000000005
 apns {
   apn {
     name: "HOT mobile PC"

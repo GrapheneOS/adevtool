@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 64000000014
+version: 70000000016
 apns {
   apn {
     name: "Vodafone DE"
@@ -41,6 +41,14 @@ apns {
   }
 }
 configs {
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
   config {
     key: "carrier_certificate_string_array"
     text_array {
@@ -99,6 +107,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "ims.ims_user_agent_string"
     text_value: "#MANUFACTURE# #MODEL# Android #AV# #BUILD# EU00025"
   }
@@ -128,12 +140,20 @@ configs {
     bool_value: false
   }
   config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
     key: "imsss.ut_iptype_home_int"
     int_value: 0
   }
   config {
     key: "imsss.ut_iptype_roaming_int"
     int_value: 0
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -279,6 +299,18 @@ configs {
     int_value: 0
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -300,5 +332,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242325
+  seconds: 1739349324
 }

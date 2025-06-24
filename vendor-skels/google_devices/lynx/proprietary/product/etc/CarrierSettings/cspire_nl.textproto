@@ -1,5 +1,5 @@
 canonical_name: "cspire_nl"
-version: 64000000007
+version: 70000000008
 apns {
   apn {
     name: "INTL CSpire Internet"
@@ -66,6 +66,10 @@ configs {
   config {
     key: "httpParams"
     text_value: "X-CS3G-MDN: 1##LINE1NOCOUNTRYCODE##"
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
@@ -273,6 +277,18 @@ configs {
     int_value: 20
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "sim_country_iso_override_string"
     text_value: "us"
   }
@@ -282,5 +298,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1697177665
+  seconds: 1736946272
 }

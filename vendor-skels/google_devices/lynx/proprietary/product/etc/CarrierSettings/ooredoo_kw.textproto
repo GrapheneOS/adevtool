@@ -1,5 +1,5 @@
 canonical_name: "ooredoo_kw"
-version: 64000000004
+version: 70000000005
 apns {
   apn {
     name: "Ooredoo Internet"
@@ -39,6 +39,14 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsrtt.text_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
     }
@@ -74,7 +82,15 @@ configs {
       }
     }
   }
+  config {
+    key: "imsvoice.voice_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1706100379
+  seconds: 1739349324
 }

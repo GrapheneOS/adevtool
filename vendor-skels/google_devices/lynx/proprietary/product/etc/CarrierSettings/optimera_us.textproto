@@ -1,5 +1,5 @@
 canonical_name: "optimera_us"
-version: 64000000001
+version: 70000000002
 apns {
   apn {
     name: "OptimERA"
@@ -31,6 +31,10 @@ apns {
 }
 configs {
   config {
+    key: "carrier_default_data_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -38,7 +42,11 @@ configs {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
+  config {
+    key: "mmsRoamingAutoRetrieveByDefault"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1724289908
+  seconds: 1736946272
 }

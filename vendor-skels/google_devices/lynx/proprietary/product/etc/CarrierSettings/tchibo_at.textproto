@@ -1,5 +1,5 @@
 canonical_name: "tchibo_at"
-version: 64000000003
+version: 70000000004
 apns {
   apn {
     name: "Tchibo"
@@ -25,6 +25,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "ims.request_uri_type_int"
     int_value: 1
   }
@@ -36,7 +40,19 @@ configs {
     key: "ims.sip_preferred_transport_int"
     int_value: 0
   }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1731496803
+  seconds: 1736946272
 }
