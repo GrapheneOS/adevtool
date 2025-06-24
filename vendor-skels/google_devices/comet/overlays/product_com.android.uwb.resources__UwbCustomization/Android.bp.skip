@@ -2,6 +2,6 @@
 // For more info, see https://github.com/GrapheneOS/adevtool
 
 runtime_resource_overlay {
-    name: "com.android.nfc__NfcCustomization.auto_generated_rro_product_adevtool__",
+    name: "com.android.uwb.resources__UwbCustomization.auto_generated_rro_product_adevtool__",
     product_specific: true,
 }

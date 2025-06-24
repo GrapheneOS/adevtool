@@ -1,5 +1,5 @@
 canonical_name: "bell_ca"
-version: 64000000009
+version: 70000000012
 apns {
   apn {
     name: "Bell Mobility"
@@ -117,6 +117,36 @@ configs {
   config {
     key: "enable_nr_advanced_for_roaming_bool"
     bool_value: false
+  }
+  config {
+    key: "epsfb_silent_retry_error_code_string_array"
+    text_array {
+      item: "400"
+      item: "403"
+      item: "408"
+      item: "412"
+      item: "436"
+      item: "480"
+      item: "481"
+      item: "482"
+      item: "483"
+      item: "485"
+      item: "487"
+      item: "488"
+      item: "489"
+      item: "491"
+      item: "499"
+      item: "500"
+      item: "501"
+      item: "502"
+      item: "503"
+      item: "504"
+      item: "505"
+      item: "513"
+      item: "580"
+      item: "606"
+      item: "607"
+    }
   }
   config {
     key: "gps.es_extension_sec"
@@ -482,6 +512,10 @@ configs {
     int_value: 3
   }
   config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
   }
@@ -508,5 +542,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732679849
+  seconds: 1743656457
 }

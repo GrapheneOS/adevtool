@@ -1,19 +1,13 @@
 canonical_name: "starhub_sg"
-version: 64000000006
+version: 70000000007
 apns {
   apn {
     name: "SH Data Postpaid"
     value: "shwap"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
     apn_set_id: 1
-  }
-  apn {
-    name: "SH Data Prepaid"
-    value: "shppd"
-    type: DEFAULT
-    type: SUPL
-    apn_set_id: 2
   }
   apn {
     name: "SH ims"
@@ -283,5 +277,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1713343964
+  seconds: 1739962072
 }

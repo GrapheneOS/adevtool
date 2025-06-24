@@ -1,5 +1,5 @@
 canonical_name: "tmobileprivate_us"
-version: 64000000002
+version: 70000000002
 apns {
   apn {
     name: "T-Mobile US"
@@ -23,5 +23,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1735077858
+  seconds: 1739349346
 }

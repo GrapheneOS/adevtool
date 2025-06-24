@@ -1,5 +1,5 @@
 canonical_name: "postemobile_it"
-version: 64000000002
+version: 70000000003
 apns {
   apn {
     name: "PosteMobile WAP"
@@ -33,7 +33,23 @@ configs {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1726812801
+  seconds: 1736946296
 }

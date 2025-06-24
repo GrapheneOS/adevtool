@@ -1,5 +1,5 @@
 canonical_name: "tstar_tw"
-version: 64000000005
+version: 70000000006
 apns {
   apn {
     name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247TS (Internet)"
@@ -211,6 +211,12 @@ configs {
     bool_value: true
   }
 }
+vendor_configs {
+  client {
+    name: "ril"
+    value: "\n/\n\'rilext.ims_prefer_apm_normal_ecc_enable\022\004true"
+  }
+}
 last_updated {
-  seconds: 1721185512
+  seconds: 1740560776
 }

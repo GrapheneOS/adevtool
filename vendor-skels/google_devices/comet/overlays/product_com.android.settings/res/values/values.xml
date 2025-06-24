@@ -15,10 +15,20 @@
   <bool name="config_hspa_data_distinguishable">true</bool>
   <bool name="config_psim_conversion_menu_enabled">true</bool>
   <bool name="config_robust_open_close_detection_setting_enabled">true</bool>
+  <bool name="config_screen_protector_notification_v2">true</bool>
+  <bool name="config_show_communal_settings_mobile">true</bool>
+  <bool name="config_show_glanceable_hub_toggle_setting_mobile">true</bool>
   <bool name="enrollment_message_display_controller_flag">true</bool>
   <integer-array name="config_carrier_use_rac">
     <item>2397</item>
     <item>25</item>
+    <item>28</item>
+    <item>19</item>
+    <item>22</item>
+    <item>29</item>
+    <item>20</item>
+    <item>23</item>
+    <item>1452</item>
   </integer-array>
   <integer-array name="config_psim_conversion_menu_enabled_carrier">
     <item>1</item>
@@ -45,6 +55,8 @@
   <string name="fingerprint_unlock_skip_fingerprint">Continue without Fingerprint Unlock</string>
   <string name="fingerprint_unlock_title">With Fingerprint Unlock, you can unlock your phone using your fingerprint. For security, this option requires a backup screen lock.</string>
   <string name="help_url_fingerprint">https://support.google.com/pixelphone/answer/6285273</string>
+  <string name="screensaver_settings_summary_postured_and_charging">While upright and charging</string>
+  <string name="screensaver_settings_summary_sleep">While charging</string>
   <string name="security_settings_fingerprint_enroll_consent_introduction_title">Allow Fingerprint Unlock</string>
   <string name="security_settings_fingerprint_enroll_find_sensor_message">"The fingerprint sensor is on the Power button.
 
@@ -82,6 +94,10 @@ Note: You can’t use your fingerprint to unlock this device. For more informati
   <string name="setup_fingerprint_enroll_immobile_help_title">Move your finger</string>
   <string name="suggested_fingerprint_lock_settings_summary">Use Pixel Imprint to unlock your phone</string>
   <string name="suggested_fingerprint_lock_settings_title">Use Fingerprint Unlock</string>
+  <string name="when_to_show_hubmode_charging">While charging</string>
+  <string name="when_to_show_hubmode_charging_and_upright">While charging and upright</string>
+  <string name="when_to_show_hubmode_docked">While docked</string>
+  <string name="when_to_show_hubmode_never">Never</string>
   <array name="config_userAspectRatioOverrideEntries">
     <item>@null</item>
     <item>@null</item>
@@ -99,5 +115,14 @@ Note: You can’t use your fingerprint to unlock this device. For more informati
   </string-array>
   <string-array name="fingerprint_acquired_vendor">
     <item>Reposition finger. You already touched with this area of your fingerprint.</item>
+  </string-array>
+  <string-array name="when_to_start_hubmode_values">
+    <item>never</item>
+    <item>while_charging</item>
+    <item>while_charging_and_upright</item>
+  </string-array>
+  <string-array name="when_to_start_screensaver_values_no_battery">
+    <item>while_charging_only</item>
+    <item>while_postured_only</item>
   </string-array>
 </resources>

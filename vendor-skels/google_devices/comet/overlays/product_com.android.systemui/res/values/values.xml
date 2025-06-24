@@ -23,9 +23,6 @@
   <dimen name="comet_unfolded_qqs_layout_padding_bottom">16dp</dimen>
   <dimen name="comet_unfolded_qs_content_horizontal_padding">24dp</dimen>
   <dimen name="comet_unfolded_qs_horizontal_margin">24dp</dimen>
-  <dimen name="comet_unfolded_qs_media_rec_album_side_margin">16dp</dimen>
-  <dimen name="comet_unfolded_qs_media_rec_album_size">88dp</dimen>
-  <dimen name="comet_unfolded_qs_media_rec_icon_top_margin">16dp</dimen>
   <dimen name="comet_unfolded_qs_media_session_height_expanded">172dp</dimen>
   <dimen name="comet_unfolded_qs_tiles_page_horizontal_margin">12dp</dimen>
   <dimen name="comet_unfolded_split_shade_notifications_scrim_margin_bottom">16dp</dimen>
@@ -42,6 +39,7 @@
   <bool name="config_nfc_conflict_with_wlc">true</bool>
   <bool name="config_notificationToContents">true</bool>
   <bool name="config_screen_protector_notification_enabled">true</bool>
+  <bool name="config_screen_protector_notification_v2">true</bool>
   <bool name="config_vibrateOnIconAnimation">true</bool>
   <bool name="config_wireless_charging_warning_enabled">true</bool>
   <bool name="use_custom_bp_size">true</bool>

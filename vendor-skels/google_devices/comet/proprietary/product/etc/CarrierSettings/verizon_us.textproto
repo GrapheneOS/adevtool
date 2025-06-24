@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 64000000022
+version: 70000000022
 apns {
   apn {
     name: "Verizon"
@@ -257,14 +257,6 @@ configs {
       item: "supl"
       item: "mms"
     }
-  }
-  config {
-    key: "carrier_name_override_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_name_string"
-    text_value: "Verizon"
   }
   config {
     key: "carrier_nr_availabilities_int_array"
@@ -1309,10 +1301,6 @@ configs {
     int_value: 20
   }
   config {
-    key: "remove_satellite_plmn_in_manual_network_scan_bool"
-    bool_value: true
-  }
-  config {
     key: "rtt_supported_bool"
     bool_value: true
   }
@@ -1468,5 +1456,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742179725
+  seconds: 1741781047
 }

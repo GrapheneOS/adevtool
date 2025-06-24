@@ -1,2 +1,2 @@
-export BUILD_ID_comet="BP1A.250505.005"
+export BUILD_ID_comet="BP2A.250605.031.A3"
 unset PLATFORM_SECURITY_PATCH_comet
