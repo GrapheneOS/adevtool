@@ -1,5 +1,5 @@
 canonical_name: "tmobile_cz"
-version: 64000000014
+version: 70000000015
 apns {
   apn {
     name: "IMS"
@@ -63,6 +63,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -218,6 +222,18 @@ configs {
     int_value: 2
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "smsToMmsTextThreshold"
     int_value: 3
   }
@@ -240,5 +256,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276191
+  seconds: 1736946279
 }

@@ -1,5 +1,5 @@
 canonical_name: "finetwork_es"
-version: 64000000002
+version: 70000000003
 apns {
   apn {
     name: "FINETWORK_DATA"
@@ -35,6 +35,22 @@ configs {
     bool_value: true
   }
   config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "unloggable_numbers_string_array"
     text_array {
       item: "900018018"
@@ -49,5 +65,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519152
+  seconds: 1736946279
 }

@@ -1,5 +1,5 @@
 canonical_name: "pwg_us"
-version: 64000000002
+version: 70000000004
 apns {
   apn {
     name: "PWG"
@@ -676,5 +676,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276191
+  seconds: 1739349332
 }

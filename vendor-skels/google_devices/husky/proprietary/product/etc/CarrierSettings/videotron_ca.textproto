@@ -1,5 +1,5 @@
 canonical_name: "videotron_ca"
-version: 64000000009
+version: 70000000010
 apns {
   apn {
     name: "Media"
@@ -36,6 +36,14 @@ apns {
     roaming_protocol: IPV6
     user_visible: false
     user_editable: false
+  }
+  apn {
+    name: "Emergency"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
   }
 }
 configs {
@@ -364,5 +372,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185492
+  seconds: 1740119826
 }

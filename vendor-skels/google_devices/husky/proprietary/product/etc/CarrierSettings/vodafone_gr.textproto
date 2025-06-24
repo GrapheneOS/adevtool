@@ -1,16 +1,21 @@
 canonical_name: "vodafone_gr"
-version: 64000000008
+version: 70000000011
 apns {
   apn {
-    name: "Vf Mobile Internet"
+    name: "Vodafone GR"
     value: ""
     type: IA
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
   }
   apn {
-    name: "Vf Mobile Internet"
+    name: "Vf Internet"
     value: "internet.vodafone.gr"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "Vf MMS"
@@ -22,6 +27,8 @@ apns {
     mmsc: "http://mms.vodafone.gr"
     mmsc_proxy: "213.249.19.49"
     mmsc_proxy_port: "5080"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -62,6 +69,10 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "121"
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -121,32 +132,22 @@ configs {
     }
   }
   config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    key: "imsvoice.evs_payload_description_bundle"
     bundle {
       config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.codec_attribute_cmr_int"
+            int_value: 3
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
         }
       }
     }
@@ -169,10 +170,14 @@ configs {
     text_value: "epdg.epc.mnc005.mcc202.pub.3gppnetwork.org"
   }
   config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1732242331
+  seconds: 1740426837
 }

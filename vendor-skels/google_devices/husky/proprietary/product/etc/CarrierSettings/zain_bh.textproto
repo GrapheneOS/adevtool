@@ -1,5 +1,5 @@
 canonical_name: "zain_bh"
-version: 64000000007
+version: 70000000007
 apns {
   apn {
     name: "Zain BH Internet"
