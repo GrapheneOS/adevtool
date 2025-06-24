@@ -1,5 +1,5 @@
 canonical_name: "homobile_it"
-version: 64000000586
+version: 70000000587
 apns {
   apn {
     name: "ho."
@@ -27,6 +27,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "call_barring_visibility_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_certificate_string_array"
     text_array {
@@ -235,5 +239,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242300
+  seconds: 1739349292
 }

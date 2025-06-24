@@ -1,5 +1,5 @@
 canonical_name: "nos_pt"
-version: 64000000009
+version: 70000000010
 apns {
   apn {
     name: "Internet"
@@ -73,6 +73,8 @@ configs {
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
     int_array {
+      item: 3
+      item: 6
     }
   }
   config {
@@ -151,5 +153,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1740560691
 }

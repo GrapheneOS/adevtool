@@ -1,5 +1,5 @@
 canonical_name: "digi_pt"
-version: 64000000001
+version: 70000000002
 apns {
   apn {
     name: "Digi PT"
@@ -32,11 +32,7 @@ configs {
     text_array {
     }
   }
-  config {
-    key: "support_conference_call_bool"
-    bool_value: false
-  }
 }
 last_updated {
-  seconds: 1731496781
+  seconds: 1737658646
 }

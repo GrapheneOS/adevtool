@@ -1,5 +1,5 @@
 canonical_name: "tdc_dk"
-version: 64000000500
+version: 70000000501
 apns {
   apn {
     name: "TDC MMS"
@@ -64,6 +64,10 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "editable_enhanced_4g_lte_bool"
+    bool_value: false
   }
   config {
     key: "ims.ipv4_sip_mtu_size_cellular_int"
@@ -224,5 +228,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733311788
+  seconds: 1740426798
 }

@@ -1,5 +1,5 @@
 canonical_name: "telekom_hu"
-version: 64000000014
+version: 70000000015
 apns {
   apn {
     name: "Internet"
@@ -164,10 +164,14 @@ configs {
     int_value: 11
   }
   config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1718786013
+  seconds: 1737658646
 }

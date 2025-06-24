@@ -1,5 +1,5 @@
 canonical_name: "republicwireless_us"
-version: 64000000002
+version: 70000000004
 apns {
   apn {
     name: "Republic"
@@ -672,5 +672,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276139
+  seconds: 1739349292
 }

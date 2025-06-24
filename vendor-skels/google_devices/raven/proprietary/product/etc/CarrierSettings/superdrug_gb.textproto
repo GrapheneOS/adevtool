@@ -1,9 +1,9 @@
 canonical_name: "superdrug_gb"
-version: 64000000001
+version: 70000000002
 apns {
   apn {
     name: "Superdrug"
-    value: "superdrug.net"
+    value: "mobile.connect"
     type: DEFAULT
     type: MMS
     type: SUPL
@@ -325,5 +325,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289881
+  seconds: 1735886321
 }

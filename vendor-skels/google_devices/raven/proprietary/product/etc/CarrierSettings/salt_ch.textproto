@@ -1,5 +1,5 @@
 canonical_name: "salt_ch"
-version: 64000000010
+version: 70000000011
 apns {
   apn {
     name: "Salt Internet"
@@ -40,7 +40,7 @@ configs {
   }
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -106,10 +106,20 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1730898236
+  seconds: 1739349292
 }

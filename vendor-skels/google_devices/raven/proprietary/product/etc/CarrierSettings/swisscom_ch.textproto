@@ -1,11 +1,13 @@
 canonical_name: "swisscom_ch"
-version: 64000000495
+version: 70000000497
 apns {
   apn {
     name: "Swisscom Services"
     value: "gprs.swisscom.ch"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_editable: false
   }
   apn {
@@ -21,7 +23,7 @@ apns {
     value: "ims"
     type: IMS
     bearer_bitmask: "14|18|20"
-    protocol: IPV6
+    protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
   }
@@ -238,7 +240,6 @@ configs {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 15
-      item: 2
     }
   }
   config {
@@ -453,5 +454,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496781
+  seconds: 1739493465
 }

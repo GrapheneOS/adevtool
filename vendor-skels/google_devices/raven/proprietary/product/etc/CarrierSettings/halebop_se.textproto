@@ -1,5 +1,5 @@
 canonical_name: "halebop_se"
-version: 64000000629
+version: 70000000629
 apns {
   apn {
     name: "Halebop Internet"

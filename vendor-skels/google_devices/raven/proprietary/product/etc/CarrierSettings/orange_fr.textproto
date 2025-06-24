@@ -1,5 +1,5 @@
 canonical_name: "orange_fr"
-version: 64000000358
+version: 70000000359
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -66,6 +66,12 @@ configs {
       item: "default"
       item: "dun"
       item: "supl"
+    }
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
     }
   }
   config {
@@ -469,5 +475,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276139
+  seconds: 1741940407
 }

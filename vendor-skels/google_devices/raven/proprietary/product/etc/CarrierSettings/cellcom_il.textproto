@@ -1,5 +1,5 @@
 canonical_name: "cellcom_il"
-version: 64000000005
+version: 70000000006
 apns {
   apn {
     name: "Cellcom Internet"
@@ -19,7 +19,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -80,7 +80,21 @@ configs {
     key: "imsvoice.ringing_timer_millis_int"
     int_value: 60000
   }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "qns.support_wfc_during_airplane_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1741179679
 }

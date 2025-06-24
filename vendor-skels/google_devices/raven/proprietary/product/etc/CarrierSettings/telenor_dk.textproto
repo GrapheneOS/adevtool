@@ -1,5 +1,5 @@
 canonical_name: "telenor_dk"
-version: 64000000504
+version: 70000000504
 apns {
   apn {
     name: "Telenor Internet"

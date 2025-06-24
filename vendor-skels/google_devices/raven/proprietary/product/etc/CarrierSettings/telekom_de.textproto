@@ -1,5 +1,5 @@
 canonical_name: "telekom_de"
-version: 64000000076
+version: 70000000076
 apns {
   apn {
     name: "Telekom IMS"

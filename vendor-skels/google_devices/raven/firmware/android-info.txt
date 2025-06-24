@@ -1,4 +1,4 @@
 require board=raven
 
-require version-bootloader=slider-15.3-13239612
-require version-baseband=g5123b-145971-250103-B-12866815
+require version-bootloader=slider-16.2-13291547
+require version-baseband=g5123b-145971-250328-B-13284995

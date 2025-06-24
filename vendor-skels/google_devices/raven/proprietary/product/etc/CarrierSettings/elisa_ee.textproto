@@ -1,5 +1,5 @@
 canonical_name: "elisa_ee"
-version: 64000000013
+version: 70000000013
 apns {
   apn {
     name: "Elisa Internet"

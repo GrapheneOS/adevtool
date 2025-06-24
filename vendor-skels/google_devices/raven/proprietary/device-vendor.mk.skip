@@ -9,6 +9,7 @@ DEVICE_MANIFEST_FILE += vendor/google_devices/raven/vintf/adevtool_manifest_vend
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += vendor/google_devices/raven/proprietary/linker-config-adevtool.json
 
 PRODUCT_SYSTEM_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0 \
     persist.uwb.enable_uci_stack=1 \
     ro.camerax.extensions.enabled=true
 
@@ -16,6 +17,47 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     remote_provisioning.use_cert_processor=false
 
 PRODUCT_PRODUCT_PROPERTIES += \
+    ro.zram_backing_device_min_free_mb=1536 \
+    persist.radio.reboot_on_modem_change=false \
+    persist.vendor.ril.camp_on_earlier=1 \
+    bluetooth.device.class_of_device=90,2,12 \
+    bluetooth.profile.asha.central.enabled=true \
+    bluetooth.profile.a2dp.source.enabled=true \
+    bluetooth.profile.avrcp.target.enabled=true \
+    bluetooth.profile.bas.client.enabled=true \
+    bluetooth.profile.gatt.enabled=true \
+    bluetooth.profile.hfp.ag.enabled=true \
+    bluetooth.profile.hid.device.enabled=true \
+    bluetooth.profile.hid.host.enabled=true \
+    bluetooth.profile.map.server.enabled=true \
+    bluetooth.profile.opp.enabled=true \
+    bluetooth.profile.pan.nap.enabled=true \
+    bluetooth.profile.pan.panu.enabled=true \
+    bluetooth.profile.pbap.server.enabled=true \
+    bluetooth.profile.sap.server.enabled=true \
+    persist.bluetooth.bqr.event_mask=30 \
+    persist.bluetooth.bqr.min_interval_ms=500 \
+    bluetooth.server.automatic_turn_on=true \
+    persist.sys.fuse.passthrough.enable=true \
+    ro.postinstall.fstab.prefix=/product \
+    dumpstate.strict_run=false \
+    persist.vendor.testing_battery_profile=2 \
+    masterclear.allow_retain_esim_profiles_after_fdr=true \
+    ro.thermal_warmreset=true \
+    ro.preventative_fsck=1 \
+    persist.bluetooth.a2dp_aac.vbr_supported=true \
+    persist.bluetooth.firmware.selection=BCM.hcd \
+    ro.vendor.vibrator.hal.long.frequency.shift=15 \
+    ro.vendor.vibrator.hal.device.mass=0.21 \
+    ro.vendor.vibrator.hal.loc.coeff=2.5 \
+    persist.vendor.vibrator.hal.chirp.enabled=0 \
+    ro.support_hide_display_cutout=true \
+    persist.vendor.fingerprint.disable.fake.override=none \
+    ro.support_one_handed_mode=true \
+    persist.bluetooth.opus.enabled=true \
+    ro.quick_start.oem_id=00e0 \
+    ro.quick_start.device_id=raven \
+    bluetooth.device_id.product_id=16647 \
     aoj.feature.contract=true \
     aoj.feature.node_logging=true \
     aoj.feature.dimension_logging= \
@@ -24,29 +66,145 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.build.expect.baseband=g5123b-145971-250103-B-12866815 \
-    ro.build.expect.bootloader=slider-15.3-13239612 \
-    ro.vendor.build.svn=02 \
+    ro.build.expect.baseband=g5123b-145971-250328-B-13284995 \
+    ro.build.expect.bootloader=slider-16.2-13291547 \
+    ro.hardware.vulkan=mali \
+    vendor.mali.platform.config=/vendor/etc/mali/platform.config \
+    vendor.mali.debug.config=/vendor/etc/mali/debug.config \
+    vendor.mali.base_protected_max_core_count=4 \
+    vendor.mali.base_protected_tls_max=67108864 \
+    vendor.mali.platform_agt_frequency_khz=24576 \
+    ro.hardware.egl=mali \
+    ro.egl.blobcache.multifile=true \
+    ro.egl.blobcache.multifile_limit=33554432 \
+    ro.opengles.version=196610 \
+    graphics.gpu.profiler.support=true \
+    ro.surface_flinger.prime_shader_cache.ultrahdr=1 \
+    sys.usb.ffs.io_uring_enabled=true \
+    vendor.edgetpu.tflite_delegate.force_disable_io_coherency=0 \
+    vendor.edgetpu.cpu_scheduler.policy=FIFO \
+    vendor.edgetpu.cpu_scheduler.priority=99 \
+    ro.crypto.metadata_init_delete_all_keys.enabled=true \
+    ro.soc.manufacturer=Google \
+    ro.soc.model=Tensor \
+    ro.vendor.build.svn=04 \
+    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true \
+    persist.vendor.udfps.als_feed_forward_supported=true \
+    persist.vendor.camera.exif_reveal_make_model=true \
+    vendor.audio.hapticgenerator.distortion.output.gain=0.32 \
+    vendor.zram.size=3g \
+    ro.usb.uvc.enabled=true \
+    ro.oem_unlock_supported=1 \
+    debug.mali.disable_backend_affinity=true \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=16600000 \
+    debug.sf.early.sf.duration=16600000 \
+    debug.sf.early.app.duration=16600000 \
+    debug.sf.earlyGl.sf.duration=16600000 \
+    debug.sf.earlyGl.app.duration=16600000 \
+    debug.sf.frame_rate_multiple_threshold=120 \
+    debug.sf.layer_caching_active_layer_timeout_ms=1000 \
+    debug.sf.treat_170m_as_sRGB=1 \
+    ro.surface_flinger.enable_layer_caching=true \
+    ro.surface_flinger.set_idle_timer_ms=80 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.supports_background_blur=1 \
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
+    ro.surface_flinger.has_wide_color_display=true \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.display_update_imminent_timeout_ms=50 \
+    vendor.hwc.dpp.downscale=2 \
+    ro.surface_flinger.support_kernel_idle_timer=true \
+    ro.surface_flinger.enable_frame_rate_override=true \
+    vendor.display.0.brightness.dimming.usage=1 \
+    vendor.display.lbe.supported=1 \
+    persist.vendor.display.primary.boot_config=1440x3120@120 \
     ro.surface_flinger.game_default_frame_rate_override=60 \
+    vendor.media.omx=0 \
+    ro.telephony.default_network=27 \
+    persist.vendor.ril.db_ecc.use.iccid_to_plmn=1 \
+    persist.vendor.ril.db_ecc.id.type=5 \
+    persist.vendor.ril.log_mask=3 \
+    persist.vendor.ril.log.base_dir=/data/vendor/radio/sit-ril \
+    persist.vendor.ril.log.chunk_size=5242880 \
+    persist.vendor.ril.log.num_file=3 \
+    persist.vendor.radio.config.carrier_config_dir=/vendor/firmware/carrierconfig \
+    telephony.active_modems.max_count=2 \
+    persist.vendor.verbose_logging_enabled=false \
+    ro.vendor.sys.modem.logging.loc=/data/vendor/slog \
+    persist.vendor.sys.silentlog.tcp=On \
+    ro.vendor.cbd.modem_removable=1 \
+    ro.vendor.cbd.modem_type=s5100sit \
+    persist.vendor.sys.modem.logging.br_num=5 \
+    persist.vendor.sys.modem.logging.enable=true \
+    persist.vendor.ril.crash_handling_mode=2 \
+    persist.vendor.radio.multisim_switch_support=true \
+    aaudio.mmap_policy=2 \
+    aaudio.mmap_exclusive_policy=2 \
+    aaudio.hw_burst_min_usec=2000 \
     vendor.battery_mitigation.aidl.enable=true \
+    debug.slsi_platform=1 \
+    debug.hwc.winupdate=1 \
+    debug.sf.disable_backpressure=0 \
+    debug.sf.enable_gl_backpressure=1 \
+    ro.vendor.ddk.set.afbc=1 \
+    debug.c2.use_dmabufheaps=1 \
+    media.c2.dmabuf.padding=512 \
+    debug.stagefright.ccodec_delayed_params=1 \
+    ro.vendor.gpu.dataspace=1 \
+    debug.stagefright.c2-poolmask=1507328 \
+    debug.stagefright.c2inputsurface=-1 \
+    media.c2.hal.selection=aidl \
+    ro.frp.pst=/dev/block/by-name/frp \
     persist.vendor.ril.use_radio_hal=1.6 \
     persist.vendor.ril.radioexternal_hal_type=hidl \
     vendor.rild.libpath=libsitril.so \
     persist.vendor.ril.support_nr_ds=0 \
     persist.vendor.ril.ecc.use.xml=1 \
+    ro.config.vc_call_vol_steps=7 \
+    ro.config.media_vol_steps=25 \
+    ro.audio.monitorRotation=true \
+    ro.audio.offload_wakelock=false \
+    persist.vendor.enable.thermal.genl=true \
+    framework_watchdog.fatal_window.second=600 \
+    framework_watchdog.fatal_count=3 \
+    zygote.critical_window.minute=10 \
+    suspend.short_suspend_threshold_millis=2000 \
+    suspend.short_suspend_backoff_enabled=true \
+    suspend.max_sleep_time_millis=40000 \
+    ro.incremental.enable=true \
+    dalvik.vm.dex2oat64.enabled=true \
+    ro.bluetooth.a2dp_offload.supported=true \
+    persist.bluetooth.a2dp_offload.disabled=false \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus \
+    vendor.pktrouter=1 \
     ro.vendor.uwb.calibration.calibrationpaths=/vendor/etc/uwb/calib_paths \
+    ro.odm.build.media_performance_class=31 \
+    ro.build.device_family=O6R4B9 \
+    ro.build.version.emergency_base_os=google/raven/raven:16/BP2A.250605.031/13467367:user/release-keys \
+    ro.gms.dck.eligible_wcc=3 \
+    ro.gms.dck.se_capability=1 \
+    ro.audio.spatializer_enabled=true \
+    audio.spatializer.effect.util_clamp_min=300 \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
     ro.vendor.dolby.dax.version=DAX3_G_3.7.3.0_r1
 
-PRODUCT_OVERRIDE_FINGERPRINT := google/raven/raven:15/BP1A.250505.005/13277524:user/release-keys
+PRODUCT_OVERRIDE_FINGERPRINT := google/raven/raven:16/BP2A.250605.031.A2/13578606:user/release-keys
 
 PRODUCT_PACKAGES += \
     activity \
     android.auto_generated_rro_product_adevtool__ \
     android.auto_generated_rro_vendor_adevtool__ \
-    android.frameworks.sensorservice-V1-ndk.vendor:32 \
+    android.frameworks.sensorservice-V1-ndk.vendor \
     android.frameworks.stats-V1-cpp.vendor:64 \
+    android.frameworks.stats-V2-ndk.vendor:32 \
     android.hardware.authsecret-impl.nos \
     android.hardware.authsecret-service.citadel \
     android.hardware.authsecret-service.citadel__2 \
@@ -58,19 +216,38 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth-V1-ndk.vendor:64 \
     android.hardware.bluetooth.finder-V1-ndk.vendor:64 \
     android.hardware.bluetooth.ranging-V1-ndk.vendor:64 \
+    android.hardware.boot-service.default-pixel \
+    android.hardware.boot-V1-ndk.vendor:64 \
+    android.hardware.boot@1.0.vendor:64 \
+    android.hardware.boot@1.1.vendor:64 \
     android.hardware.camera.provider@2.7-service-google-apex \
     android.hardware.contexthub-service.generic \
     android.hardware.contexthub-service.generic__2 \
     android.hardware.contexthub-V3-ndk.vendor \
     android.hardware.contexthub-V4-ndk.vendor:64 \
+    android.hardware.drm-V1-ndk.vendor:32 \
+    android.hardware.drm.common-V1-ndk.vendor:32 \
+    android.hardware.dumpstate-service \
+    android.hardware.dumpstate-service__2 \
+    android.hardware.dumpstate-V1-ndk.vendor:64 \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.gnss-V3-ndk.vendor:64 \
     android.hardware.gnss@2.1-impl-google \
     android.hardware.gnss@2.1-service-brcm \
     android.hardware.gnss@2.1-service-brcm__2 \
+    android.hardware.graphics.allocator-aidl-impl \
+    android.hardware.graphics.allocator-V2-service \
     android.hardware.graphics.bufferqueue@1.0.vendor:64 \
     android.hardware.graphics.bufferqueue@2.0.vendor:64 \
+    android.hardware.graphics.composer@2.1.vendor:32 \
+    android.hardware.graphics.composer@2.2.vendor:32 \
+    android.hardware.graphics.composer@2.3.vendor:32 \
+    android.hardware.graphics.composer@2.4.vendor:32 \
+    android.hardware.graphics.composer3-V4-ndk.vendor \
+    android.hardware.health-service.gs101 \
+    android.hardware.health-service.gs101__2 \
     android.hardware.health-V1-ndk.vendor \
+    android.hardware.health-V4-ndk.vendor:64 \
     android.hardware.input.common-V1-ndk.vendor:64 \
     android.hardware.input.processor-service \
     android.hardware.input.processor-V1-ndk.vendor:64 \
@@ -81,6 +258,8 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.omx@1.0.vendor:64 \
     android.hardware.media@1.0.vendor:64 \
+    android.hardware.memtrack-service.pixel \
+    android.hardware.memtrack-V1-ndk.vendor:64 \
     android.hardware.neuralnetworks-V4-ndk.vendor:64 \
     android.hardware.neuralnetworks@1.0.vendor:64 \
     android.hardware.neuralnetworks@1.1.vendor:64 \
@@ -92,6 +271,13 @@ PRODUCT_PACKAGES += \
     android.hardware.oemlock-service.citadel \
     android.hardware.oemlock-service.citadel__2 \
     android.hardware.oemlock-V1-ndk.vendor:64 \
+    android.hardware.power-V2-ndk.vendor \
+    android.hardware.power.stats-impl.gs-common \
+    android.hardware.power.stats-impl.gs101 \
+    android.hardware.power.stats-impl.pixel.vendor:64 \
+    android.hardware.power.stats-service.pixel \
+    android.hardware.power.stats-service.pixel__2 \
+    android.hardware.power.stats-V2-ndk.vendor \
     android.hardware.power@1.0.vendor:64 \
     android.hardware.power@1.1.vendor:64 \
     android.hardware.power@1.2.vendor:64 \
@@ -142,9 +328,10 @@ PRODUCT_PACKAGES += \
     aoc_aud_ext \
     aoc_audio_stereo_spatializer \
     aocd \
-    aocx-V1-ndk \
+    aocx-V2-ndk \
     aocxd \
     ar_bridge \
+    arm.graphics-V1-ndk \
     audio_adapted_info_features \
     audio_amcs_ext \
     audio_bluenote_aoc \
@@ -170,30 +357,32 @@ PRODUCT_PACKAGES += \
     columbus_lite \
     com.android.networkstack__NetworkStackConfig.auto_generated_rro_product_adevtool__ \
     com.android.networkstack.tethering__TetheringConfig.auto_generated_rro_product_adevtool__ \
-    com.android.nfc__NfcCustomization.auto_generated_rro_product_adevtool__ \
     com.android.phone.auto_generated_rro_product_adevtool__ \
     com.android.server.telecom.auto_generated_rro_product_adevtool__ \
     com.android.settings.auto_generated_rro_product_adevtool__ \
     com.android.systemui.auto_generated_rro_product_adevtool__ \
+    com.android.systemui.auto_generated_rro_vendor_adevtool__ \
     com.android.traceur.auto_generated_rro_product_adevtool__ \
     com.google.android.camera.experimental2021 \
     com.google.android.camera.experimental2022_system \
     com.google.android.camera.extensions \
     com.google.android.camerax.extensions \
-    com.google.android.widevine-12141839 \
+    com.google.android.nfc__NfcCustomization.auto_generated_rro_product_adevtool__ \
+    com.google.android.widevine-13130248 \
     com.google.edgetpu_app_service-V3-ndk \
     com.google.edgetpu_app_service-V3-ndk__system_ext \
     com.google.edgetpu_vendor_service-V2-ndk \
     com.google.edgetpu_vendor_service-V2-ndk__system_ext \
+    com.google.edgetpu.tachyon-ndk \
     com.google.edgetpu.tachyon-service \
     com.google.edgetpu.tachyon-service__2 \
-    com.google.edgetpu.tachyon-V1-ndk \
     com.google.euiccpixel.auto_generated_rro_product_adevtool__ \
     com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk \
+    com.google.hardware.pixel.display-V15-ndk.vendor \
     com.google.hardware.pixel.display-V4-ndk.vendor:64 \
     com.google.hardware.pixel.display-V9-ndk.vendor \
     com.google.input-V2-ndk \
-    com.google.input-V4-ndk \
+    com.google.input-V5-ndk \
     com.google.pixel.camera.connectivity \
     com.google.pixel.camera.hal \
     com.google.pixel.camera.services.cameraidremapper \
@@ -202,10 +391,26 @@ PRODUCT_PACKAGES += \
     com.google.pixel.euicc.update \
     com.google.pixel.modem.logmasklibrary-V1-ndk \
     com.google.pixel.wifi.ext \
+    disable_contaminant_detection.sh \
     dmd \
     dmd__2 \
     drop \
+    dump_aoc \
+    dump_devfreq \
+    dump_exynos_display \
+    dump_fingerprint \
     dump_gsc.sh \
+    dump_lsi.sh \
+    dump_modem \
+    dump_modemlog \
+    dump_perf \
+    dump_pixel_metrics \
+    dump_power \
+    dump_sensors \
+    dump_soc \
+    dump_storage \
+    dump_thermal.sh \
+    dump_trusty.sh \
     EuiccGoogle \
     EuiccGoogleOverlay \
     EuiccSupportPixel \
@@ -222,17 +427,24 @@ PRODUCT_PACKAGES += \
     google.hardware.media.c2@1.0-service \
     gps.default \
     gpsd \
+    gs_watchdogd \
     hardware.google.bluetooth.bt_channel_avoidance@1.0.vendor:64 \
     health \
+    hwcomposer.gs101 \
     imu_cal \
     init_citadel \
     init.camera.set-interrupts-ownership \
+    init.display.sh \
     init.radio.sh \
+    init.uwb.calib.sh \
+    insmod.sh \
     ip_health \
     lassen_dmd_constants \
     lhd \
     lib_aion_buffer \
     lib_reader \
+    libacryl \
+    libacryl_hdr_plugin \
     libadaptedinfo \
     libAlgFx_HiFi3z \
     libamcsextfile \
@@ -247,6 +459,7 @@ PRODUCT_PACKAGES += \
     libc++.product:32 \
     libc2filterplugin \
     libcap.vendor:64 \
+    libcodec2_aidl_noisurface.vendor:64 \
     libcodec2_aidl.vendor:64 \
     libcodec2_hal_common.vendor \
     libcodec2_hidl_plugin \
@@ -263,8 +476,13 @@ PRODUCT_PACKAGES += \
     libdeccfg \
     libdeeptouch \
     libdisplaycolor \
+    libdmabufheap.vendor:32 \
     libdmengine__product \
     libdmjavaplugin__product \
+    libdrm.vendor \
+    libdrmresource \
+    libdump \
+    libdumpstateutil.vendor:64 \
     libedgetpu_client.google \
     libedgetpu_tachyon.google \
     libedgetpu_tflite_compiler \
@@ -284,6 +502,8 @@ PRODUCT_PACKAGES += \
     libExynosC2Vp8Enc \
     libExynosC2Vp9Dec \
     libExynosC2Vp9Enc \
+    libexynosdisplay \
+    libExynosHWCService \
     libexynosutils \
     libexynosv4l2 \
     libfvsam_prm_parser \
@@ -303,7 +523,9 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhidparser \
     libhwbinder.vendor \
+    libhwjpeg \
     libion_exynos \
+    libion_google \
     libion.vendor \
     libjson \
     libjsoncpp.vendor:32 \
@@ -314,6 +536,7 @@ PRODUCT_PACKAGES += \
     libmedia_ecoservice.vendor \
     libmedia_omx.vendor:64 \
     libmediaadaptor__system_ext \
+    libmemtrack-pixel \
     libmetrics_logger \
     libminijail.vendor:64 \
     libmodem_svc_proto_legacy_soong \
@@ -332,13 +555,18 @@ PRODUCT_PACKAGES += \
     liboemservice \
     liboffloadeffect \
     libOpenCL-pixel \
+    libpixelatoms_defs \
+    libpixelhealth:64 \
+    libpixelstats:64 \
+    libpng.vendor \
     libpower.vendor:32 \
     libpowerstatshaldataprovider__system_ext \
+    libprocessgroup.vendor:32 \
     libqorvo_uwb_params_nfcc \
     libril_gfeature \
     libril_sitril \
     librtxproto_aidl-default \
-    libsensorndkbridge:32 \
+    libsensorndkbridge \
     libsensorsuez \
     libsfplugin_ccodec_utils.vendor \
     libsit_oem \
@@ -361,37 +589,44 @@ PRODUCT_PACKAGES += \
     libtachyon_core \
     libtinycompress \
     libtouchflow \
-    libtrusty_metrics:64 \
     libunwindstack.vendor:64 \
     libusf \
     libutils-default \
     libvendor.goodix.hardware.biometrics.fingerprint \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
+    libvendorgraphicbuffer \
     libwlcproto_aidl-default \
     libziparchive.vendor \
+    manifest \
     manifest_aocx \
+    manifest_gralloc_aidl2 \
     manifest_input.processor-service \
     manifest_radioext \
-    manifest_wifi_ext_aidl \
-    modem_android_property_manager_impl.vendor:32 \
-    modem_android_property_manager.vendor:32 \
-    modem_clock_manager_impl.vendor \
-    modem_clock_manager.vendor \
-    modem_log_constants.vendor:32 \
+    mapper.pixel \
+    memtrack \
+    modem_android_property_manager \
+    modem_android_property_manager_impl \
+    modem_clock_manager \
+    modem_clock_manager_impl \
+    modem_log_constants \
+    modem_log_dumper \
     modem_logging_control \
     motiondetector \
     nos_app_avb:64 \
     nos_app_keymaster:64 \
     nos_app_weaver:64 \
-    oem-iptables-init.sh \
     oemrilhook \
     OemRilHookService \
     OemRilService \
     PersistentBackgroundCameraServices \
+    pixel_stateresidency_provider_aidl_interface-ndk.vendor \
+    pixel-display-default \
+    pixel-power-ext-V1-ndk.vendor:32 \
+    pixelatoms-cpp:32 \
     PixelCameraServices \
-    PixelIwlan \
     PixelNfc \
     pixelpowerstats_provider_aidl_interface-cpp.vendor:64 \
+    pixelstats-vendor \
     qorvo.uwb-service \
     rfsd \
     rild_exynos \
@@ -423,6 +658,7 @@ PRODUCT_PACKAGES += \
     vendor.google.battery_mitigation-V1-ndk \
     vendor.google.battery_mitigation.service_static \
     vendor.google.bluetooth_ext-V1-ndk \
+    vendor.google.bluetooth_ext-V3-ndk \
     vendor.google.edgetpu_app_service@1.0-service \
     vendor.google.edgetpu_app_service@1.0-service__2 \
     vendor.google.edgetpu_vendor_service@1.0-service \
@@ -433,10 +669,10 @@ PRODUCT_PACKAGES += \
     vendor.google.radioext@1.0-service \
     vendor.google.whitechapel.audio.audioext@4.0 \
     vendor.google.whitechapel.audio.audioext@4.0-impl \
-    vendor.google.whitechapel.audio.extension-V4-ndk \
+    vendor.google.whitechapel.audio.extension-V5-ndk \
     vendor.google.wireless_charger-default \
     vendor.google.wireless_charger-default__2 \
-    vendor.google.wireless_charger-V2-ndk \
+    vendor.google.wireless_charger-V3-ndk \
     vendor.google.wireless_charger.service-default \
     vendor.google.wireless_charger.service-default__2 \
     vendor.google.wireless_charger.service-V2-ndk \
@@ -465,12 +701,15 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/a1_hr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1_hr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/a1_mk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1_mk.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/a1_si.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1_si.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/a1mpn_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1mpn_at.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/ahamo_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ahamo_jp.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/airbus_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_de.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/airbus_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_fr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/airtel_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_in.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/ais_th.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ais_th.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/alcom_fi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alcom_fi.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/alestra_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alestra_mx.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/aliv_bs.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/aliv_bs.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/altice_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/altice_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/alticeroaming_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alticeroaming_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/andorratelecom_ad.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/andorratelecom_ad.pb \
@@ -483,11 +722,15 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/astoundbroadband_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/astoundbroadband_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/att_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/att_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/att_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/att_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/att4g_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/att4g_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/att5g_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/att5g_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/att5gsa_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/att5gsa_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/attbootstrap_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/attbootstrap_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/attmvnos_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/attmvnos_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/attmvnos_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/attmvnos_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/axis_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/axis_id.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/bait_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bait_mx.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/bark_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bark_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/base_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/base_be.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/batelco_bh.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/batelco_bh.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/bell_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/bell_ca.pb \
@@ -508,6 +751,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/cellcom_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellcom_il.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/cellcom_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellcom_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/cellcommno_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellcommno_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/cellfie_ge.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cellfie_ge.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/celluarone_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/celluarone_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/chatr_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/chatr_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/chinamobile_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/chinamobile_hk.pb \
@@ -557,6 +801,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/epic_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/epic_mt.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/eplus_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/eplus_de.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/erate_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/erate_no.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/esimgo_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/esimgo_gb.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/esn_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/esn_gb.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/etisalat_ae.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/etisalat_ae.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/euskaltel_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/euskaltel_es.pb \
@@ -572,6 +817,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/firstnetpacific2_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/firstnetpacific2_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/fizz_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fizz_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/fl1_li.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fl1_li.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/fliggsmobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fliggsmobile_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/foroyatele_fo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/foroyatele_fo.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/free_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/free_fr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/free_gp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/free_gp.pb \
@@ -586,10 +832,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/globe_ph.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/globe_ph.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/gomobile_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gomobile_mt.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/grameenphone_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/grameenphone_bd.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/gta_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gta_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/guuk_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/guuk_es.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/h3_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_ie.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/h3_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_lk.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/h3_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_se.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/h3g27202_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3g27202_ie.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/halebop_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/halebop_se.pb \
@@ -597,6 +845,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/help_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/help_at.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/homobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/homobile_it.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/hotmobile_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/hotmobile_il.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/humane_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/humane_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/ice_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ice_no.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/idea_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idea_in.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/idmobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idmobile_gb.pb \
@@ -604,9 +853,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/indosat_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/indosat_id.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/inland_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/inland_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/iwireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/iwireless_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/izziatt_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/izziatt_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/jazz_pk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jazz_pk.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/jazztel_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jazztel_es.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/jcommobile_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/jcommobile_jp.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/joonto_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/joonto_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/kajeetmvno_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kajeetmvno_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/kddi_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kddi_jp.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/kddi5gsa_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kddi5gsa_jp.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/kddimvno_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kddimvno_jp.pb \
@@ -638,12 +890,15 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/masmovil_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/masmovil_es.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/maxis_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/maxis_my.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/mediacom_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mediacom_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/megamovil_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/megamovil_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/melita_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/melita_mt.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/meo_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/meo_pt.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/metropcs_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/metropcs_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/mettel_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mettel_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/mobifone_vn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobifone_vn.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/mobily_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobily_sa.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/monacotelecom_mc.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/monacotelecom_mc.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/movistar_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_cl.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/movistar_co.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_co.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/movistar_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_es.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/movistar_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_mx.pb \
@@ -651,12 +906,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/mvnoconnect_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mvnoconnect_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nema_fo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nema_fo.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/netcomgroup_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/netcomgroup_fr.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/newww_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/newww_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nexphone_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nexphone_ch.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nextech_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nextech_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/no_sim.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/no_sim.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nos_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nos_pt.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nova_gr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nova_gr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nova_is.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nova_is.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/nymobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nymobile_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/o2_cz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2_cz.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/o2_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2_de.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/o2_sk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2_sk.pb \
@@ -681,6 +938,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/orange_ro.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_ro.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/orange_sk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_sk.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/others.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/others.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/oxio_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/oxio_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/paradisemobile_bm.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/paradisemobile_bm.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/partner_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/partner_il.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/pcmobilebell_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/pcmobilebell_ca.pb \
@@ -700,11 +958,15 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/r_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/r_es.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/racc_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/racc_es.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/rakuten_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rakuten_jp.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/reach_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/reach_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/reallycommunications_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/reallycommunications_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/redpocketatt_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/redpocketatt_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/redpockettmo_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/redpockettmo_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/republicwireless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/republicwireless_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/rjio_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rjio_in.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/robi_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/robi_bd.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/roccstar_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/roccstar_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/rockisland_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rockisland_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/rogers_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogers_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/rogers5g_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogers5g_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/rogerswpn_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogerswpn_ca.pb \
@@ -722,9 +984,11 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/skt_kr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/skt_kr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/sky_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sky_gb.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/sky_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sky_ie.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/sky_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sky_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/skylo_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/skylo_zz.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/smart_ph.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smart_ph.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/smartfren_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smartfren_id.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/smartless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smartless_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/smartone_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smartone_hk.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/smarty_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smarty_gb.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/softbank_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/softbank_jp.pb \
@@ -818,12 +1082,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/tstar_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tstar_tw.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/turkcell_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/turkcell_tr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/turktelekom_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/turktelekom_tr.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/tusass_gl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tusass_gl.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/twm_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/twm_tw.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/u264a_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264a_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/u264a_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264a_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/u264ab_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264ab_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/u264ao_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264ao_at.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/u264ap_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264ap_at.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/ubixatt_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ubixatt_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/ultra_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ultra_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/umobile_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/umobile_my.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/unifi_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/unifi_my.pb \
@@ -833,8 +1099,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/uqmobile5gsa_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uqmobile5gsa_jp.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/uscc_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uscc_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/verizon_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizon_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/verizononsitelte_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizononsitelte_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/verymobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verymobile_it.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/viaero_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/viaero_us.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/vianova_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vianova_it.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/videotron_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/videotron_ca.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/viettel_vn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/viettel_vn.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/vimla_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vimla_se.pb \
@@ -868,7 +1136,9 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/vodafone_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_tr.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/walmart_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/walmart_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/webbing_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/webbing_hk.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/wim_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wim_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/windtre_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/windtre_it.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/wom_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wom_cl.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/xfinity_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinity_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/xfinity2_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinity2_us.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/xfinitymso_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/xfinitymso_us.pb \
@@ -877,6 +1147,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/yettel_bg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yettel_bg.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/yettel_hu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yettel_hu.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/yoigo_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yoigo_es.pb \
+    vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/yomobile_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/yomobile_mx.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/zain_bh.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zain_bh.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/zain_kw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zain_kw.pb \
     vendor/google_devices/raven/proprietary/product/etc/CarrierSettings/zain_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zain_sa.pb \
@@ -885,8 +1156,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/google_devices/raven/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/google_devices/raven/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
+    vendor/google_devices/raven/proprietary/product/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
+    vendor/google_devices/raven/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google_devices/raven/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/raven/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
+    vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_0105_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_0105_DVT.in \
+    vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_0105_DVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_0105_DVT.up \
+    vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_0105_EVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_0105_EVT.up \
+    vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_0109_DVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_0109_DVT.up \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up \
@@ -894,7 +1171,18 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v0-security.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v0-security.img \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v0.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v0.img \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img \
+    vendor/google_devices/raven/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
+    vendor/google_devices/raven/proprietary/vendor/etc/aoc/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
+    vendor/google_devices/raven/proprietary/vendor/etc/aoc/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
+    vendor/google_devices/raven/proprietary/vendor/etc/aoc/HEADSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HEADSET.dat \
+    vendor/google_devices/raven/proprietary/vendor/etc/aoc/mcps.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/mcps.dat \
+    vendor/google_devices/raven/proprietary/vendor/etc/aoc/recording.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/recording.gatf \
     vendor/google_devices/raven/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/bluetooth_power_limits_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+    vendor/google_devices/raven/proprietary/vendor/etc/bluetooth_power_limits_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
+    vendor/google_devices/raven/proprietary/vendor/etc/bluetooth_power_limits_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
+    vendor/google_devices/raven/proprietary/vendor/etc/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    vendor/google_devices/raven/proprietary/vendor/etc/bluetooth/bt_vendor_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf \
     vendor/google_devices/raven/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/google_devices/raven/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
     vendor/google_devices/raven/proprietary/vendor/etc/chre/ar_bridge.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ar_bridge.napp_header \
@@ -917,14 +1205,26 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/etc/chre/smartbatching.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/smartbatching.napp_header \
     vendor/google_devices/raven/proprietary/vendor/etc/chre/uv_exposure.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.napp_header \
     vendor/google_devices/raven/proprietary/vendor/etc/database/ecc_version:$(TARGET_COPY_OUT_VENDOR)/etc/database/ecc_version \
+    vendor/google_devices/raven/proprietary/vendor/etc/display_colordata_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal0.pb \
+    vendor/google_devices/raven/proprietary/vendor/etc/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
+    vendor/google_devices/raven/proprietary/vendor/etc/display_golden_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_cal0.pb \
+    vendor/google_devices/raven/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
+    vendor/google_devices/raven/proprietary/vendor/etc/gnss/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/lhd.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/gnss/scd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/scd.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.boot-service.default-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.boot-service.default-pixel.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.dumpstate-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate-service.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.health-service.gs101.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.health-service.gs101.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.input.processor-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.input.processor-service.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.rlsservice-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.rlsservice-service-google-apex.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-uicc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-uicc-service.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
@@ -937,18 +1237,36 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/etc/init/citadeld.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/citadeld.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/com.google.edgetpu.tachyon-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.tachyon-service.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/dmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dmd.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/dump_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dump_power.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/fingerprint-goodix.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-goodix.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/google.hardware.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@1.0-service.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/hw/init.gs101.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs101.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/hw/init.gs101.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs101.storage.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/hw/init.gs101.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs101.usb.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/hw/init.raviole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.raviole.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.aoc.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.fingerprint.dump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.dump.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.flood.control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.flood.control.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.modem_logging_control.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.modem_logging_control.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.module.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.module.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.pixel-mm-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-mm-gs.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.pixel-perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-perf.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.power-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.power-gs.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.shared_modem_platform_lassen.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.shared_modem_platform_lassen.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/init.vendor_telephony.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor_telephony.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/libg3a_gabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gabc.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/pixelstats-vendor.gs101.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.gs101.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/pktrouter.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pktrouter.rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/init/pkvm_experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pkvm_experiment.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/qorvo.uwb-calib.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qorvo.uwb-calib.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/qorvo.uwb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qorvo.uwb-service.rc \
     vendor/google_devices/raven/proprietary/vendor/etc/init/rfsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rfsd.rc \
@@ -968,8 +1286,36 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/etc/input_classifier_model.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model.pb \
     vendor/google_devices/raven/proprietary/vendor/etc/Khronos/OpenCL/vendors/ARM.icd:$(TARGET_COPY_OUT_VENDOR)/etc/Khronos/OpenCL/vendors/ARM.icd \
     vendor/google_devices/raven/proprietary/vendor/etc/Khronos/OpenCL/vendors/ARM32.icd:$(TARGET_COPY_OUT_VENDOR)/etc/Khronos/OpenCL/vendors/ARM32.icd \
+    vendor/google_devices/raven/proprietary/vendor/etc/libg3a_standalone_gabc_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gabc_rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/libg3a_standalone_gaf_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gaf_rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/libg3a_standalone_ghawb_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_ghawb_rc \
+    vendor/google_devices/raven/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/libse-gto-hal2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal2.conf \
     vendor/google_devices/raven/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/camera_rear_tele_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_tele_mipi_coex_table.csv \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_NAS_RRC.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_NAS_RRC.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_NAS_RRC.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_NAS_RRC.nprf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_network.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_network.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_network.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_network.nprf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_stability.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_stability.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_stability.nprf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.nprf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/gnss_blanking.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/gnss_blanking.csv \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/logging.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/Pixel_Default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/Pixel_Default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default.nprf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/Pixel_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/Pixel_stability.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.nprf \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/teamfood_default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/teamfood_default.cfg \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/teamfood_default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/teamfood_default.nprf \
     vendor/google_devices/raven/proprietary/vendor/etc/open_carrier_info.dat:$(TARGET_COPY_OUT_VENDOR)/etc/open_carrier_info.dat \
+    vendor/google_devices/raven/proprietary/vendor/etc/pixelstats_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pixelstats_config.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/powerhint_a0.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_a0.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/powerhint_a1.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_a1.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/powerhint-mainline.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-mainline.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     vendor/google_devices/raven/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/google_devices/raven/proprietary/vendor/etc/res/images/charger/battery_fail.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/battery_fail.png \
     vendor/google_devices/raven/proprietary/vendor/etc/res/images/charger/battery_scale.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/battery_scale.png \
@@ -984,10 +1330,69 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/etc/sensors/registry/raven_evt.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/raven_evt.reg \
     vendor/google_devices/raven/proprietary/vendor/etc/sensors/registry/raven_pro_1_0.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/raven_pro_1_0.reg \
     vendor/google_devices/raven/proprietary/vendor/etc/sensors/registry/raven_pro_1_1.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/raven_pro_1_1.reg \
+    vendor/google_devices/raven/proprietary/vendor/etc/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/thermal_info_config_charge.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
+    vendor/google_devices/raven/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
     vendor/google_devices/raven/proprietary/vendor/etc/touchflow.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow.pb \
     vendor/google_devices/raven/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
     vendor/google_devices/raven/proprietary/vendor/etc/uwb/calib_paths:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calib_paths \
     vendor/google_devices/raven/proprietary/vendor/etc/uwb/libuwb-uci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/libuwb-uci.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-am.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-am.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-at.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-at.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-az.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-az.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-be.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-be.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-bg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-bg.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-by.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-by.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ca.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ca.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ch.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ch.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-cy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-cy.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-cz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-cz.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-de.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-de.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-default.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-dk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-dk.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ee.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ee.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-es.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-es.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-fi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-fi.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-fr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-fr.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-gb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-gb.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-gr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-gr.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-hr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-hr.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-hu.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-hu.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-id.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-id.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ie.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ie.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-is.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-is.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-it.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-it.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-jp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-jp.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-kg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-kg.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-kz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-kz.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-li.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-li.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-lt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lt.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-lu.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lu.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-lv.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lv.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-mt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-mt.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ni.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ni.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-nl.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-nl.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-no.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-no.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-np.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-np.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-pl.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-pl.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-pt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-pt.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ro.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ro.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ru.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ru.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-se.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-se.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-si.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-si.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-sk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-sk.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-tj.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tj.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-tm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tm.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-tw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tw.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-ua.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ua.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-unknown.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-unknown.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-us.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-us.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration-uz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-uz.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/uwb/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/waves_config.ini:$(TARGET_COPY_OUT_VENDOR)/etc/waves_config.ini \
+    vendor/google_devices/raven/proprietary/vendor/etc/waves_preset.mps:$(TARGET_COPY_OUT_VENDOR)/etc/waves_preset.mps \
+    vendor/google_devices/raven/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/google_devices/raven/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/google_devices/raven/proprietary/vendor/firmware/aoc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aoc.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/bcmdhd_clm.blob:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob \
     vendor/google_devices/raven/proprietary/vendor/firmware/bcmdhd_clm.blob_JPN:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob_JPN \
@@ -1862,6 +2267,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/firmware/carrierconfig/manifests/fcd59fb16f5f9d8db3c4df49e26dd5c98834f30d:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fcd59fb16f5f9d8db3c4df49e26dd5c98834f30d \
     vendor/google_devices/raven/proprietary/vendor/firmware/carrierconfig/manifests/fd6f22cda14f0383b054936fbe799b6f0810372c:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/manifests/fd6f22cda14f0383b054936fbe799b6f0810372c \
     vendor/google_devices/raven/proprietary/vendor/firmware/carrierconfig/release-label:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/release-label \
+    vendor/google_devices/raven/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
+    vendor/google_devices/raven/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.wmfw \
+    vendor/google_devices/raven/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
     vendor/google_devices/raven/proprietary/vendor/firmware/cs40l20.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l20.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/cs40l25a_cal.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_cal.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/cs40l25a_cal.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_cal.wmfw \
@@ -1869,8 +2280,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/firmware/cs40l25a_clab.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_clab.wmfw \
     vendor/google_devices/raven/proprietary/vendor/firmware/cs40l25a_par.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_par.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/cs40l25a_par.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_par.wmfw \
-    vendor/google_devices/raven/proprietary/vendor/firmware/cs40l26-svc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26-svc.bin \
-    vendor/google_devices/raven/proprietary/vendor/firmware/cs40l26.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l26.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/dauntless/d3m2.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/d3m2.ec.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/dauntless/evt.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/evt.ec.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/dauntless/proto11.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/proto11.ec.bin \
@@ -1882,6 +2291,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/firmware/google_wifi_firmware_config_info.pb:$(TARGET_COPY_OUT_VENDOR)/firmware/google_wifi_firmware_config_info.pb \
     vendor/google_devices/raven/proprietary/vendor/firmware/google/edgetpu-abrolhos.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/google/edgetpu-abrolhos.fw \
     vendor/google_devices/raven/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-diag.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin \
+    vendor/google_devices/raven/proprietary/vendor/firmware/readme.md:$(TARGET_COPY_OUT_VENDOR)/firmware/readme.md \
     vendor/google_devices/raven/proprietary/vendor/firmware/s6sy79x.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/s6sy79x.bin \
     vendor/google_devices/raven/proprietary/vendor/firmware/sarconfig.info:$(TARGET_COPY_OUT_VENDOR)/firmware/sarconfig.info \
     vendor/google_devices/raven/proprietary/vendor/firmware/SensorHub.patch:$(TARGET_COPY_OUT_VENDOR)/firmware/SensorHub.patch \
@@ -1911,8 +2324,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/system_ext/etc/permissions/google-ril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/google-ril.xml \
     vendor/google_devices/raven/proprietary/system_ext/etc/permissions/oemrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/oemrilhook.xml \
     vendor/google_devices/raven/proprietary/system_ext/etc/permissions/privapp-permissions-qorvo.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qorvo.xml \
-    vendor/google_devices/raven/proprietary/system_ext/etc/permissions/privapp-permlist_com.google.pixel.iwlan.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permlist_com.google.pixel.iwlan.xml \
-    vendor/google_devices/raven/proprietary/system_ext/etc/sysconfig/sysconfig_com.google.pixel.iwlan.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/sysconfig_com.google.pixel.iwlan.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/audio_policy_configuration_le_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_le_offload_disabled.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/database/DbEcc_202.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_202.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/database/DbEcc_204.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_204.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/database/DbEcc_206.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_206.xml \
@@ -1980,10 +2397,23 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/vendor/etc/database/DbEcc_DEFAULT.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_DEFAULT.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/database/DbEcc_ICCID.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_ICCID.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/displayconfig/display_id_4619827677550801152.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4619827677550801152.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/Pixel_Default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default_metrics.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/modem/teamfood_default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/teamfood_default_metrics.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/permissions/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/permissions/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml \
     vendor/google_devices/raven/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
-    vendor/google_devices/raven/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2021.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2021.xml
+    vendor/google_devices/raven/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2021.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2021.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/sound_trigger_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_configuration.xml \
+    vendor/google_devices/raven/proprietary/vendor/etc/wifi/coex_table.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/coex_table.xml

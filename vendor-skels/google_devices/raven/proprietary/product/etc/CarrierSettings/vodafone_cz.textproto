@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 64000000592
+version: 70000000592
 apns {
   apn {
     name: "IMS"

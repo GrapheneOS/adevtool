@@ -1,5 +1,5 @@
 canonical_name: "vodafone_nl"
-version: 64000000472
+version: 70000000473
 apns {
   apn {
     name: "Internet"
@@ -44,7 +44,7 @@ configs {
   }
   config {
     key: "carrier_name_string"
-    text_value: "Vodafone NL"
+    text_value: "vodafone NL"
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -355,5 +355,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733386037
+  seconds: 1739962003
 }
