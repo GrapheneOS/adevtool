@@ -1,4 +1,4 @@
-version: 63000000017
+version: 70000000032
 setting {
   canonical_name: "019mobile_il"
   apns {
@@ -2383,39 +2383,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "23430SPN=LycaMobile"
-  apns {
-    apn {
-      name: "Lycamobile"
-      value: "data.lycamobile.co.uk"
-      type: DEFAULT
-      type: SUPL
-      user: "lmuk"
-      password: "plus"
-      authtype: 1
-    }
-  }
-  configs {
-    config {
-      key: "non_roaming_operator_string_array"
-      text_array {
-        item: "23410"
-        item: "23420"
-        item: "23430"
-        item: "23431"
-        item: "23432"
-        item: "23433"
-        item: "23434"
-        item: "23486"
-      }
-    }
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "23433SPN=LIFE"
   apns {
     apn {
@@ -3439,106 +3406,12 @@ setting {
   }
 }
 setting {
-  canonical_name: "27402"
-  apns {
-    apn {
-      name: "Vodafone Internet"
-      value: "gprs.is"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Vodafone MMS"
-      value: "mms.gprs.is"
-      type: MMS
-      mmsc: "http://mmsc.vodafone.is"
-      mmsc_proxy: "10.22.0.10"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-    config {
-      key: "maxImageHeight"
-      int_value: 1944
-    }
-    config {
-      key: "maxImageWidth"
-      int_value: 2592
-    }
-    config {
-      key: "maxMessageSize"
-      int_value: 1048576
-    }
-  }
-}
-setting {
-  canonical_name: "27403"
-  apns {
-    apn {
-      name: "Vodafone Internet"
-      value: "gprs.is"
-      type: DEFAULT
-      type: SUPL
-      type: DUN
-      type: FOTA
-      authtype: 0
-      user_editable: false
-    }
-    apn {
-      name: "Vodafone MMS"
-      value: "mms.gprs.is"
-      type: MMS
-      authtype: 0
-      mmsc: "http://mmsc.vodafone.is"
-      mmsc_proxy: "10.22.0.10"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-    config {
-      key: "maxImageHeight"
-      int_value: 1944
-    }
-    config {
-      key: "maxImageWidth"
-      int_value: 2592
-    }
-    config {
-      key: "maxMessageSize"
-      int_value: 1048576
-    }
-  }
-}
-setting {
   canonical_name: "27602"
   configs {
     config {
       key: "default_vm_number_string"
       text_value: "135"
     }
-  }
-}
-setting {
-  canonical_name: "27801"
-  apns {
-    apn {
-      name: "Vodafone MT"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-      user: "internet"
-      password: "internet"
-    }
-    apn {
-      name: "Vodafone MT-MMS"
-      value: "mms.vodafone.com.mt"
-      type: MMS
-      mmsc: "http://mms.vodafone.com.mt/servlets/mms"
-      mmsc_proxy: "10.12.0.3"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
   }
 }
 setting {
@@ -3630,27 +3503,6 @@ setting {
       value: "apn.maxtelecom.bg"
       type: DEFAULT
       type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "29001"
-  apns {
-    apn {
-      name: "Tele Internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Tele MMS"
-      value: "mms"
-      type: MMS
-      mmsc: "http://mms.tele.gl/mms/wapenc"
-      mmsc_proxy: "10.112.222.37"
-      mmsc_proxy_port: "8080"
     }
   }
   configs {
@@ -6079,80 +5931,6 @@ setting {
       bearer_bitmask: "14"
       protocol: IPV4V6
       roaming_protocol: IPV4V6
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "310470"
-  apns {
-    apn {
-      name: "DataConnect"
-      value: "isp.cingular"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "MediaNet"
-      value: "wap.cingular"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      user: "WAP@CINGULARGPRS.COM"
-      password: "CINGULAR1"
-      mmsc: "http://mmsc.cingular.com"
-      mmsc_proxy: "66.209.11.32"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "nTelos Ota"
-      value: "admin.4g.ntelos.com"
-      type: FOTA
-      bearer_bitmask: "13"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "nTelos Ota"
-      value: "admin.4g.ntelos.com"
-      type: FOTA
-      bearer_bitmask: "14"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "nTelos Wireless"
-      value: "internet.4g.ntelos.com"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      type: HIPRI
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-    }
-    apn {
-      name: "nTelos Tether"
-      value: "tethering.4g.ntelos.com"
-      type: DUN
-      bearer_bitmask: "13"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "nTelos Tether"
-      value: "tethering.4g.ntelos.com"
-      type: DUN
-      bearer_bitmask: "14"
-      server: "*"
-      mmsc: "http://mms.ntelospcs.net"
-      protocol: IPV4V6
-      user_editable: false
     }
   }
   configs {
@@ -9938,49 +9716,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "334090"
-  apns {
-    apn {
-      name: "Modem"
-      value: "modem.nexteldata.com.mx"
-      type: DUN
-      user_visible: false
-    }
-    apn {
-      name: "MMS"
-      value: "mms.nexteldata.com.mx"
-      type: MMS
-      authtype: 0
-      mmsc: "http://3gmms.nexteldata.com.mx"
-      mmsc_proxy: "129.192.129.104"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "Navegaci\303\263n"
-      value: "wap.nexteldata.com.mx"
-      type: DEFAULT
-      type: SUPL
-      authtype: 0
-    }
-  }
-  configs {
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-    config {
-      key: "mmi_two_digit_number_pattern_string_array"
-      text_array {
-        item: "#9"
-      }
-    }
-    config {
-      key: "skip_cf_fail_to_disable_dialog_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "33805"
   apns {
     apn {
@@ -11437,31 +11172,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "41001"
-  apns {
-    apn {
-      name: "Mobilink WAP GPRS"
-      value: "connect.mobilinkworld.com"
-      type: DEFAULT
-      type: SUPL
-      user: "Mobilink"
-      password: "Mobilink"
-    }
-    apn {
-      name: "Mobilink MMS"
-      value: "mms.mobilinkworld.com"
-      type: MMS
-      user: "Mobilink"
-      password: "Mobilink"
-      mmsc: "http://mms/"
-      mmsc_proxy: "172.25.20.12"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "41003"
   apns {
     apn {
@@ -11498,29 +11208,6 @@ setting {
       mmsc: "http://10.81.6.11:8080"
       mmsc_proxy: "10.81.6.33"
       mmsc_proxy_port: "8000"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "41006"
-  apns {
-    apn {
-      name: "Telenor WAP"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Telenor MMS"
-      value: "mms"
-      type: MMS
-      user: "Telenor"
-      password: "Telenor"
-      mmsc: "http://mmstelenor"
-      mmsc_proxy: "172.18.19.11"
-      mmsc_proxy_port: "8080"
     }
   }
   configs {
@@ -11649,27 +11336,6 @@ setting {
     }
   }
   configs {
-  }
-}
-setting {
-  canonical_name: "41308"
-  apns {
-    apn {
-      name: "Hutch"
-      value: "default"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-    config {
-      key: "min_udp_port_4500_nat_timeout_sec_int"
-      int_value: 120
-    }
-    config {
-      key: "preferred_ike_protocol_int"
-      int_value: 40
-    }
   }
 }
 setting {
@@ -13463,32 +13129,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "47001"
-  apns {
-    apn {
-      name: "GP-INTERNET"
-      value: "gpinternet"
-      type: DEFAULT
-      type: SUPL
-      type: DUN
-      type: FOTA
-      authtype: 0
-      user_editable: false
-    }
-    apn {
-      name: "GP-MMS"
-      value: "gpmms"
-      type: MMS
-      authtype: 0
-      mmsc: "http://mms.gpsurf.net/servlets/mms"
-      mmsc_proxy: "10.128.1.2"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "47201"
   apns {
     apn {
@@ -13602,42 +13242,6 @@ setting {
       value: "live.vodafone.com"
       mmsc: "http://pxt.vodafone.net.au/pxtsend"
       mmsc_proxy: "10.202.2.60"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "51001"
-  apns {
-    apn {
-      name: "Indosat-SNS"
-      value: "indosatgprs"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-    apn {
-      name: "Indosat GPRS"
-      value: "indosatgprs"
-      type: DEFAULT
-      type: SUPL
-      proxy: "10.19.19.19"
-      port: "8080"
-      user: "indosat"
-      password: "indosat"
-      authtype: 1
-    }
-    apn {
-      name: "Indosat MMS"
-      value: "indosatmms"
-      type: MMS
-      user: "indosat"
-      password: "indosat"
-      authtype: 1
-      mmsc: "http://mmsc.indosat.com"
-      mmsc_proxy: "10.19.19.19"
       mmsc_proxy_port: "8080"
     }
   }
@@ -16782,35 +16386,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "64702"
-  apns {
-    apn {
-      name: "OnlyWap"
-      value: "onlywap"
-      type: DEFAULT
-      type: SUPL
-      proxy: "10.4.85.50"
-      port: "8080"
-      user: "only"
-      password: "only"
-      authtype: 1
-    }
-    apn {
-      name: "OnlyMMS"
-      value: "onlymms"
-      type: MMS
-      user: "only"
-      password: "only"
-      authtype: 1
-      mmsc: "http://10.4.85.50:8514"
-      mmsc_proxy: "10.4.85.50"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "64710"
   apns {
     apn {
@@ -18168,41 +17743,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "73001"
-  apns {
-    apn {
-      name: "Internet Movil"
-      value: "bam.entelpcs.cl"
-      type: DEFAULT
-      type: SUPL
-      user: "entelpcs"
-      password: "entelpcs"
-      authtype: 1
-      protocol: IPV4V6
-    }
-    apn {
-      name: "MMS Entel PCS"
-      value: "mms.entelpcs.cl"
-      type: MMS
-      user: "entelpcs"
-      password: "entelpcs"
-      authtype: 1
-      mmsc: "http://mmsc.entelpcs.cl"
-      mmsc_proxy: "10.99.0.10"
-      mmsc_proxy_port: "8080"
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "non_roaming_operator_string_array"
-      text_array {
-        item: "73010"
-      }
-    }
-  }
-}
-setting {
   canonical_name: "73001SPN=FALABELLA"
   apns {
     apn {
@@ -18225,72 +17765,6 @@ setting {
         item: "73010"
       }
     }
-  }
-}
-setting {
-  canonical_name: "73002"
-  apns {
-    apn {
-      name: "Movistar APLICACIONES"
-      value: "wap.tmovil.cl"
-      type: DEFAULT
-      type: SUPL
-      user: "wap"
-      password: "wap"
-      authtype: 1
-    }
-    apn {
-      name: "Movistar MMS"
-      value: "mms.tmovil.cl"
-      type: MMS
-      user: "mms"
-      password: "mms"
-      authtype: 1
-      mmsc: "http://mms.movistar.cl"
-      mmsc_proxy: "172.17.8.10"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-    config {
-      key: "enableGroupMms"
-      bool_value: false
-    }
-    config {
-      key: "enabledMMS"
-      bool_value: false
-    }
-    config {
-      key: "groupChatDefaultsToMMS"
-      bool_value: false
-    }
-  }
-}
-setting {
-  canonical_name: "73003"
-  apns {
-    apn {
-      name: "Banda Ancha Movil"
-      value: "bam.clarochile.cl"
-      type: DEFAULT
-      type: SUPL
-      user: "clarochile"
-      password: "clarochile"
-      authtype: 1
-    }
-    apn {
-      name: "MMS Claro"
-      value: "mms.clarochile.cl"
-      type: MMS
-      user: "clarochile"
-      password: "clarochile"
-      authtype: 1
-      mmsc: "http://mms.clarochile.cl"
-      mmsc_proxy: "172.23.200.200"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
   }
 }
 setting {
@@ -18363,37 +17837,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "73009"
-  apns {
-    apn {
-      name: "Internet WOM"
-      value: "internet"
-      type: DEFAULT
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_editable: false
-    }
-    apn {
-      name: "IMS"
-      value: "ims"
-      type: IMS
-      user_visible: false
-      user_editable: false
-    }
-    apn {
-      name: "MMS Nextel"
-      value: "mms.nextelmovil.cl"
-      type: MMS
-      authtype: 0
-      mmsc: "http://3gmms.nextelmovil.cl"
-      mmsc_proxy: "129.192.129.104"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "73010"
   apns {
     apn {
@@ -18429,33 +17872,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "732101"
-  apns {
-    apn {
-      name: "COMCEL"
-      value: "internet.comcel.com.co"
-      type: DEFAULT
-      type: SUPL
-      user: "COMCELWEB"
-      password: "COMCELWEB"
-      authtype: 1
-    }
-    apn {
-      name: "MMS Comcel 3GSM"
-      value: "mms.comcel.com.co"
-      type: MMS
-      user: "COMCELMMS"
-      password: "COMCELMMS"
-      authtype: 1
-      mmsc: "http://www.comcel.com.co/mms/"
-      mmsc_proxy: "198.228.90.225"
-      mmsc_proxy_port: "8799"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "73212"
   apns {
     apn {
@@ -18467,33 +17883,6 @@ setting {
       password: "movistar"
       authtype: 1
       user_editable: false
-    }
-    apn {
-      name: "Movistar MMS"
-      value: "mms.movistar.com.co"
-      type: MMS
-      user: "movistar"
-      password: "movistar"
-      authtype: 1
-      mmsc: "http://mms.movistar.com.co"
-      mmsc_proxy: "192.168.222.7"
-      mmsc_proxy_port: "9001"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "732123"
-  apns {
-    apn {
-      name: "Movistar INTERNET"
-      value: "internet.movistar.com.co"
-      type: DEFAULT
-      type: SUPL
-      user: "movistar"
-      password: "movistar"
-      authtype: 1
     }
     apn {
       name: "Movistar MMS"
@@ -19445,28 +18834,6 @@ setting {
     config {
       key: "show_4g_for_lte_data_icon_bool"
       bool_value: true
-    }
-  }
-}
-setting {
-  canonical_name: "aliv_bs"
-  apns {
-    apn {
-      name: "Be Aliv"
-      value: "pda.newcomobile.com"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Be Aliv IMS"
-      value: "ims"
-      type: IMS
-    }
-  }
-  configs {
-    config {
-      key: "sim_country_iso_override_string"
-      text_value: "bs"
     }
   }
 }
@@ -20435,6 +19802,13 @@ setting {
   }
   configs {
     config {
+      key: "carrier_nr_availabilities_int_array"
+      int_array {
+        item: 1
+        item: 2
+      }
+    }
+    config {
       key: "carrier_volte_available_bool"
       bool_value: true
     }
@@ -20478,6 +19852,13 @@ setting {
     }
   }
   configs {
+    config {
+      key: "carrier_nr_availabilities_int_array"
+      int_array {
+        item: 1
+        item: 2
+      }
+    }
     config {
       key: "carrier_volte_available_bool"
       bool_value: true
@@ -21466,31 +20847,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "movil_co"
-  apns {
-    apn {
-      name: "TIGO WEB"
-      value: "web.colombiamovil.com.co"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-    apn {
-      name: "TIGO Multimedia"
-      value: "mms.colombiamovil.com.co"
-      type: MMS
-      user: "mms-cm1900"
-      password: "mms-cm1900"
-      authtype: 1
-      mmsc: "http://mms.ola.com.co"
-      mmsc_proxy: "190.102.206.48"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "movilexito_co"
   apns {
     apn {
@@ -21860,6 +21216,13 @@ setting {
       }
     }
     config {
+      key: "carrier_nr_availabilities_int_array"
+      int_array {
+        item: 2
+        item: 1
+      }
+    }
+    config {
       key: "carrier_supports_ss_over_ut_bool"
       bool_value: true
     }
@@ -21897,6 +21260,10 @@ setting {
     }
     config {
       key: "hide_enhanced_4g_lte_bool"
+      bool_value: true
+    }
+    config {
+      key: "ignore_rtt_mode_setting_bool"
       bool_value: true
     }
     config {
@@ -22246,6 +21613,18 @@ setting {
       key: "read_only_apn_types_string_array"
       text_array {
       }
+    }
+    config {
+      key: "rtt_downgrade_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_while_roaming_bool"
+      bool_value: true
     }
     config {
       key: "show_4g_for_lte_data_icon_bool"
@@ -22694,19 +22073,6 @@ setting {
       value: "spectrum.ota"
       type: FOTA
       protocol: IPV4V6
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "spusu_it"
-  apns {
-    apn {
-      name: "spusu"
-      value: "web"
-      type: ALL
-      user_editable: false
     }
   }
   configs {
@@ -23250,66 +22616,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "verizononsitelte_us"
-  apns {
-    apn {
-      name: "Verizon Internet(PN)"
-      value: ""
-      type: DEFAULT
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      profile_id: 0
-      modem_cognitive: true
-    }
-    apn {
-      name: "Verizon Initial Attach(PN)"
-      value: ""
-      type: IA
-      bearer_bitmask: "14"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_visible: false
-    }
-    apn {
-      name: "Verizon"
-      value: "VZWADMIN"
-      type: FOTA
-      bearer_bitmask: "14"
-      authtype: 0
-      protocol: IPV4V6
-      profile_id: 3
-      max_conns: 20
-      max_conns_time: 300
-      modem_cognitive: true
-      user_visible: false
-    }
-  }
-  configs {
-    config {
-      key: "cellular_usage_setting_int"
-      int_value: 2
-    }
-    config {
-      key: "imsemergency.emergency_callback_mode_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "imsemergency.emergency_domain_preference_int_array"
-      int_array {
-        item: 2
-        item: 1
-      }
-    }
-    config {
-      key: "imsemergency.emergency_domain_preference_roaming_int_array"
-      int_array {
-        item: 2
-        item: 1
-      }
-    }
-  }
-}
-setting {
   canonical_name: "videocon1_in"
   apns {
     apn {
@@ -23446,6 +22752,20 @@ setting {
   }
   configs {
     config {
+      key: "bsf.bsf_server_port_int"
+      int_value: 443
+    }
+    config {
+      key: "bsf.bsf_transport_type_int"
+      int_value: 3
+    }
+    config {
+      key: "carrier_certificate_string_array"
+      text_array {
+        item: "0318ED2A8B33CE173C7ABE3F647D263810994CF489C8FCD27A8CAAFCF2822A88:com.appseleration.android.selfcare,com.appseleration.speedtest"
+      }
+    }
+    config {
       key: "carrier_nr_availabilities_int_array"
       int_array {
         item: 1
@@ -23497,6 +22817,10 @@ setting {
       bool_value: false
     }
     config {
+      key: "ignore_rtt_mode_setting_bool"
+      bool_value: true
+    }
+    config {
       key: "ims.ims_user_agent_string"
       text_value: "#MANUFACTURE# #MODEL# Android #AV# #BUILD# EU00025"
     }
@@ -23522,13 +22846,6 @@ setting {
       int_value: 1280
     }
     config {
-      key: "imsemergency.emergency_domain_preference_int_array"
-      int_array {
-        item: 2
-        item: 1
-      }
-    }
-    config {
       key: "imsemergency.emergency_domain_preference_roaming_int_array"
       int_array {
         item: 2
@@ -23536,14 +22853,12 @@ setting {
       }
     }
     config {
-      key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-      int_array {
-        item: 3
-      }
-    }
-    config {
       key: "imsss.network_initiated_ussd_over_ims_supported_bool"
       bool_value: false
+    }
+    config {
+      key: "imsss.ut_as_server_port_int"
+      int_value: 443
     }
     config {
       key: "imsss.ut_iptype_home_int"
@@ -23552,6 +22867,10 @@ setting {
     config {
       key: "imsss.ut_iptype_roaming_int"
       int_value: 0
+    }
+    config {
+      key: "imsss.ut_transport_type_int"
+      int_value: 3
     }
     config {
       key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -23631,6 +22950,10 @@ setting {
       int_value: 120000
     }
     config {
+      key: "imswfc.emergency_call_over_emergency_pdn_bool"
+      bool_value: true
+    }
+    config {
       key: "iwlan.child_sa_rekey_hard_timer_sec_int"
       int_value: 14450
     }
@@ -23685,8 +23008,24 @@ setting {
       }
     }
     config {
+      key: "qns.sos_transport_type_int"
+      int_value: 2
+    }
+    config {
       key: "qns.xcap_transport_type_int"
       int_value: 0
+    }
+    config {
+      key: "rtt_downgrade_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_bool"
+      bool_value: true
+    }
+    config {
+      key: "rtt_supported_while_roaming_bool"
+      bool_value: true
     }
     config {
       key: "show_4g_for_lte_data_icon_bool"
@@ -23909,5 +23248,5 @@ setting {
   }
 }
 last_updated {
-  seconds: 1743068789
+  seconds: 1741940466
 }

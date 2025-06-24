@@ -1,5 +1,5 @@
 canonical_name: "cox_us"
-version: 63000000003
+version: 70000000006
 apns {
   apn {
     name: "Cox"
@@ -516,6 +516,10 @@ configs {
   config {
     key: "imsi_key_availability_int"
     int_value: 2
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://eap-ide.cox.com/android"
   }
   config {
     key: "imsrtt.text_on_default_bearer_supported_bool"
@@ -1163,7 +1167,20 @@ configs {
   }
   config {
     key: "wifi.carrier_profiles_version_int"
-    int_value: 2
+    int_value: 3
+  }
+  config {
+    key: "wifi.network_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork priority=\"20\"><SSID>Cox Mobile</SSID><Credential><SIM><EAPType>23</EAPType><AnonymousIdentity>anonymous@coxmobile.com</AnonymousIdentity></SIM></Credential></WifiNetwork>"
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork priority=\"0\"><SSID>Xfinity Mobile</SSID><Credential><SIM><EAPType>23</EAPType><AnonymousIdentity>anonymous@coxmobile.com</AnonymousIdentity></SIM></Credential></WifiNetwork>"
+    }
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile priority=\"10\"><PPSMO><![CDATA[<MgmtTree xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscription</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovidersubscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>Cox Mobile</Value></Node><Node><NodeName>FQDN</NodeName><Value>secure.aaa.coxwifi.com</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Realm</NodeName><Value>@coxmobile.com</Value></Node><Node><NodeName>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>311480*</Value></Node><Node><NodeName>EAPType</NodeName><Value>23</Value></Node></Node></Node></Node></Node></MgmtTree>]]></PPSMO></PasspointProfile>"
+    }
   }
   config {
     key: "wifi_calls_can_be_hd_audio"
@@ -1175,5 +1192,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721964304
+  seconds: 1741940466
 }

@@ -1,5 +1,5 @@
 canonical_name: "telus_ca"
-version: 63000000003
+version: 70000000004
 apns {
   apn {
     name: "TELUS ISP"
@@ -410,6 +410,12 @@ configs {
     int_value: 30
   }
   config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "302"
+    }
+  }
+  config {
     key: "nr_advanced_threshold_bandwidth_khz_int"
     int_value: 60000
   }
@@ -510,5 +516,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1728454052
 }

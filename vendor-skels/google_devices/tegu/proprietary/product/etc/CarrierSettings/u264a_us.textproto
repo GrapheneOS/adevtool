@@ -1,12 +1,17 @@
 canonical_name: "u264a_us"
-version: 63000000003
+version: 70000000007
 apns {
   apn {
     name: "U+264A US"
     value: "h2g2"
     type: DEFAULT
     type: SUPL
-    protocol: IPV4V6
+    type: MMS
+    type: FOTA
+    type: CBS
+    type: IA
+    mmsc: "http://wholesale.mmsmvno.com/mms/wapenc"
+    protocol: IPV6
     user_editable: false
   }
 }
@@ -408,6 +413,18 @@ configs {
     bool_value: false
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: false
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -417,5 +434,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731555629
+  seconds: 1739349353
 }

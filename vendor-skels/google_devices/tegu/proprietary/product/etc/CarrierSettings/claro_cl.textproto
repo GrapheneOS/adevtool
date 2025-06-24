@@ -1,0 +1,42 @@
+canonical_name: "claro_cl"
+version: 70000000001
+apns {
+  apn {
+    name: "Banda Ancha Movil"
+    value: "bam.clarochile.cl"
+    type: DEFAULT
+    type: SUPL
+    user: "clarochile"
+    password: "clarochile"
+    authtype: 1
+  }
+  apn {
+    name: "MMS Claro"
+    value: "mms.clarochile.cl"
+    type: MMS
+    user: "clarochile"
+    password: "clarochile"
+    authtype: 1
+    mmsc: "http://mms.clarochile.cl"
+    mmsc_proxy: "172.23.200.200"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS Claro CL"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1732242351
+}

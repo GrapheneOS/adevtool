@@ -1,5 +1,5 @@
 canonical_name: "simba_sg"
-version: 63000000002
+version: 70000000003
 apns {
   apn {
     name: "TPG"
@@ -31,6 +31,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
@@ -122,5 +126,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1734527072
 }

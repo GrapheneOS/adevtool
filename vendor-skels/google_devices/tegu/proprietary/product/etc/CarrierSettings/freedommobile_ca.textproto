@@ -1,5 +1,5 @@
 canonical_name: "freedommobile_ca"
-version: 63000000004
+version: 70000000005
 apns {
   apn {
     name: "Internet"
@@ -48,6 +48,21 @@ apns {
   }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,connected,10;connected_mmwave,connected_rrc_idle,10;connected_mmwave,not_restricted_rrc_idle,10;connected_mmwave,not_restricted_rrc_con,10"
+  }
+  config {
+    key: "additional_nr_advanced_bands_int_array"
+    int_array {
+      item: 77
+      item: 78
+    }
+  }
   config {
     key: "allow_metered_network_for_cert_download_bool"
     bool_value: true
@@ -225,6 +240,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "include_lte_for_nr_advanced_threshold_bandwidth_bool"
+    bool_value: true
+  }
+  config {
     key: "is_ims_conference_size_enforced_bool"
     bool_value: true
   }
@@ -292,6 +311,10 @@ configs {
     }
   }
   config {
+    key: "nr_advanced_threshold_bandwidth_khz_int"
+    int_value: 60000
+  }
+  config {
     key: "qns.mms_rat_preference_int"
     int_value: 2
   }
@@ -344,5 +367,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185521
+  seconds: 1729074844
 }

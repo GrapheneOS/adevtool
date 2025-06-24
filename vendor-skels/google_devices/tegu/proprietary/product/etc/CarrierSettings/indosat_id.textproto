@@ -1,0 +1,51 @@
+canonical_name: "indosat_id"
+version: 70000000001
+apns {
+  apn {
+    name: "Indosat-SNS"
+    value: "indosatgprs"
+    type: DEFAULT
+    type: SUPL
+    authtype: 1
+  }
+  apn {
+    name: "Indosat GPRS"
+    value: "indosatgprs"
+    type: DEFAULT
+    type: SUPL
+    proxy: "10.19.19.19"
+    port: "8080"
+    user: "indosat"
+    password: "indosat"
+    authtype: 1
+  }
+  apn {
+    name: "Indosat MMS"
+    value: "indosatmms"
+    type: MMS
+    user: "indosat"
+    password: "indosat"
+    authtype: 1
+    mmsc: "http://mmsc.indosat.com"
+    mmsc_proxy: "10.19.19.19"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1729679688
+}

@@ -1,5 +1,5 @@
 canonical_name: "tim_br"
-version: 63000000003
+version: 70000000003
 apns {
   apn {
     name: "TIM Connect"
@@ -92,5 +92,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733386095
+  seconds: 1733386094
 }

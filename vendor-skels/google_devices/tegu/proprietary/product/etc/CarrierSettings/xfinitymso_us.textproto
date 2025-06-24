@@ -1,5 +1,5 @@
 canonical_name: "xfinitymso_us"
-version: 63000000005
+version: 70000000005
 apns {
   apn {
     name: "Xfinity Mobile"
@@ -113,7 +113,7 @@ configs {
   }
   config {
     key: "opportunistic.5g_backoff_time_long"
-    long_value: 10000
+    long_value: 30000
   }
   config {
     key: "opportunistic.5g_data_switch_exit_hysteresis_time_long"
@@ -132,34 +132,16 @@ configs {
     long_value: 60000
   }
   config {
-    key: "opportunistic.entry_threshold_ss_rsrp_int_bundle"
-    bundle {
-      config {
-        key: "48"
-        int_value: -115
-      }
-      config {
-        key: "71"
-        int_value: -106
-      }
-    }
+    key: "opportunistic.entry_threshold_ss_rsrp_int"
+    int_value: -115
   }
   config {
     key: "opportunistic.entry_threshold_ss_rsrq_double"
     double_value: -35
   }
   config {
-    key: "opportunistic.exit_threshold_ss_rsrp_int_bundle"
-    bundle {
-      config {
-        key: "48"
-        int_value: -123
-      }
-      config {
-        key: "71"
-        int_value: -109
-      }
-    }
+    key: "opportunistic.exit_threshold_ss_rsrp_int"
+    int_value: -123
   }
   config {
     key: "opportunistic.exit_threshold_ss_rsrq_double"
@@ -195,5 +177,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1743044098
+  seconds: 1741781053
 }

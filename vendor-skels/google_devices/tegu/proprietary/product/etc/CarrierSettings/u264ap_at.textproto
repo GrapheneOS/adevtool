@@ -1,5 +1,5 @@
 canonical_name: "u264ap_at"
-version: 63000000002
+version: 70000000006
 apns {
   apn {
     name: "U+264A-AT Provisioning"
@@ -84,6 +84,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "ignore_sim_network_locked_events_bool"
     bool_value: true
   }
@@ -145,16 +149,9 @@ configs {
       item: 6
       item: 5
       item: 2
-      item: 0
       item: 8
       item: 9
       item: 11
-    }
-  }
-  config {
-    key: "imsss.ut_terminal_based_services_int_array"
-    int_array {
-      item: 10
     }
   }
   config {
@@ -212,6 +209,12 @@ configs {
     int_value: 4800
   }
   config {
+    key: "iwlan.child_session_aes_cbc_key_size_int_array"
+    int_array {
+      item: 256
+    }
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -236,8 +239,27 @@ configs {
     text_value: "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
   }
   config {
+    key: "iwlan.ike_session_encryption_aes_cbc_key_size_int_array"
+    int_array {
+      item: 256
+    }
+  }
+  config {
     key: "iwlan.key_error_policy_config_string"
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500\"],\"RetryArray\": [\"3600\",\"7200\",\"10800\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"15500\"],\"NumAttemptsPerFqdn\": \"6\",\"RetryArray\": [\"0\",\"0\",\"300\",\"600\",\"1200\",\"0\",\"0\",\"0\",\"300\",\"600\",\"1200\",\"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"11001\",\"11011\"],\"RetryArray\": [],\"UnthrottlingEvents\": []},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"8192\"],\"RetryArray\": [\"5\",\"10\",\"10\",\"20\",\"40\",\"80\",\"160\",\"320\",\"640\",\"1280\",\"1800\",\"3600\",\"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"],\"HandoverAttemptCount\": \"3\"}]}]"
+  }
+  config {
+    key: "iwlan.supported_integrity_algorithms_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.supported_prf_algorithms_int_array"
+    int_array {
+      item: 5
+      item: 7
+    }
   }
   config {
     key: "iwlan_handover_policy_string_array"
@@ -319,6 +341,18 @@ configs {
     bool_value: false
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: false
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -328,5 +362,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1740119844
 }

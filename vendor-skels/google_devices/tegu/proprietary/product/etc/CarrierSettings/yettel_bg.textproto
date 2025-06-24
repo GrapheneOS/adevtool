@@ -1,19 +1,19 @@
 canonical_name: "yettel_bg"
-version: 63000000004
+version: 70000000005
 apns {
   apn {
-    name: "Telenor Internet"
-    value: "telenorbg"
+    name: "Yettel Internet"
+    value: "internet"
     type: DEFAULT
     type: SUPL
     authtype: 0
   }
   apn {
-    name: "Telenor MMS"
+    name: "Yettel MMS"
     value: "mms"
     type: MMS
     user: "mms"
-    authtype: 1
+    authtype: 0
     mmsc: "http://mmsc"
     mmsc_proxy: "192.168.87.11"
     mmsc_proxy_port: "8004"
@@ -109,5 +109,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912532
+  seconds: 1739349353
 }

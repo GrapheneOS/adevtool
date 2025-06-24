@@ -17,6 +17,7 @@
     <item>0</item>
   </integer-array>
   <bool name="config_enableDisplayCutoutProtection">true</bool>
+  <bool name="config_useBackGestureML">false</bool>
   <string name="config_frontBuiltInDisplayCutoutProtection">m 594.5,86 a 54.5,54.5 0 0 0 -109,0 54.5,54.5 0 0 0 109,0 z</string>
   <string name="config_protectedCameraId">1</string>
   <string name="doze_brightness_sensor_type">com.google.sensor.binned_brightness</string>

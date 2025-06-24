@@ -1,0 +1,62 @@
+canonical_name: "verizononsitelte_us"
+version: 70000000001
+apns {
+  apn {
+    name: "Verizon Internet(PN)"
+    value: ""
+    type: DEFAULT
+    bearer_bitmask: "14"
+    protocol: IPV4V6
+    profile_id: 0
+    modem_cognitive: true
+  }
+  apn {
+    name: "Verizon Initial Attach(PN)"
+    value: ""
+    type: IA
+    bearer_bitmask: "14"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Verizon"
+    value: "VZWADMIN"
+    type: FOTA
+    bearer_bitmask: "14"
+    authtype: 0
+    protocol: IPV4V6
+    profile_id: 3
+    max_conns: 20
+    max_conns_time: 300
+    modem_cognitive: true
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "cellular_usage_setting_int"
+    int_value: 2
+  }
+  config {
+    key: "imsemergency.emergency_callback_mode_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+}
+last_updated {
+  seconds: 1741781053
+}

@@ -1,22 +1,13 @@
 canonical_name: "m1_sg"
-version: 63000000003
+version: 70000000006
 apns {
   apn {
     name: "Sunsurf Mobile"
     value: "sunsurf"
     type: DEFAULT
     type: SUPL
-  }
-  apn {
-    name: "M1 MMS(3G)"
-    value: "miworld"
-    type: MMS
-    user: "65"
-    password: "user123"
-    authtype: 1
-    mmsc: "http://mmsgw:8002"
-    mmsc_proxy: "172.16.14.10"
-    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "M1 IMS"
@@ -51,6 +42,10 @@ configs {
     int_value: 8090
   }
   config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
       item: 1
@@ -60,6 +55,10 @@ configs {
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
   }
   config {
     key: "carrier_volte_available_bool"
@@ -180,5 +179,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733386095
+  seconds: 1741781053
 }

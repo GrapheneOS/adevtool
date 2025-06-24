@@ -1,5 +1,5 @@
 canonical_name: "giffgaff_gb"
-version: 63000000002
+version: 70000000003
 apns {
   apn {
     name: "giffgaff"
@@ -11,6 +11,7 @@ apns {
     authtype: 1
     mmsc: "http://mmsc.mediamessaging.co.uk:8002"
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -103,5 +104,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718786064
+  seconds: 1730898291
 }

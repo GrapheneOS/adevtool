@@ -1,0 +1,33 @@
+canonical_name: "gomobile_mt"
+version: 70000000001
+apns {
+  apn {
+    name: "GO"
+    value: "gointernet"
+    type: DEFAULT
+    type: SUPL
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1729679688
+}

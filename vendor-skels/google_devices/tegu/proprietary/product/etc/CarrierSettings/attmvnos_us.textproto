@@ -1,5 +1,5 @@
 canonical_name: "attmvnos_us"
-version: 63000000003
+version: 70000000004
 apns {
   apn {
     name: "MVNO Reseller"
@@ -123,7 +123,7 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "csp_enabled_bool"
@@ -813,5 +813,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912532
+  seconds: 1733311838
 }

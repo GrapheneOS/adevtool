@@ -1,5 +1,5 @@
 canonical_name: "telekom_me"
-version: 63000000006
+version: 70000000004
 apns {
   apn {
     name: "T-Mobile ME Internet"
@@ -107,5 +107,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1743068789
+  seconds: 1724912532
 }

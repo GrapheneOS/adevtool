@@ -1,5 +1,5 @@
 canonical_name: "assurance_us"
-version: 63000000005
+version: 70000000007
 apns {
   apn {
     name: "Tether"
@@ -771,5 +771,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1731555629
+  seconds: 1739349353
 }

@@ -1,5 +1,5 @@
 canonical_name: "spmtelecom_pm"
-version: 63000000002
+version: 70000000002
 apns {
   apn {
     name: "St. Pierre-et-Miquelon T\303\251l\303\251com IMS"

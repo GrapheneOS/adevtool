@@ -1,5 +1,5 @@
 canonical_name: "ultra_us"
-version: 63000000005
+version: 70000000008
 apns {
   apn {
     name: "ultra"
@@ -108,6 +108,7 @@ configs {
     key: "carrier_nr_availabilities_int_array"
     int_array {
       item: 1
+      item: 2
     }
   }
   config {
@@ -716,5 +717,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731555629
+  seconds: 1739349353
 }

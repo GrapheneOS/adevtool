@@ -5,9 +5,19 @@
   <bool name="config_adaptive_alert_vibration_enabled">true</bool>
   <bool name="config_adaptive_touch_sensitivity_enabled">true</bool>
   <bool name="config_hspa_data_distinguishable">true</bool>
+  <bool name="config_screen_protector_notification_v2">true</bool>
+  <bool name="config_show_communal_settings_mobile">true</bool>
+  <bool name="config_show_glanceable_hub_toggle_setting_mobile">true</bool>
   <integer-array name="config_carrier_use_rac">
     <item>2397</item>
     <item>25</item>
+    <item>28</item>
+    <item>19</item>
+    <item>22</item>
+    <item>29</item>
+    <item>20</item>
+    <item>23</item>
+    <item>1452</item>
   </integer-array>
   <string name="config_limited_warranty_overlay_package_name">com.android.settings.overlay.tegu</string>
   <string name="display_white_balance_summary">Dynamically adapts the display to warmer or cooler tones based on ambient lighting</string>
@@ -17,6 +27,8 @@
   <string name="fingerprint_unlock_set_unlock_pin">PIN • Fingerprint</string>
   <string name="fingerprint_unlock_skip_fingerprint">Continue without Fingerprint Unlock</string>
   <string name="fingerprint_unlock_title">With Fingerprint Unlock, you can unlock your phone using your fingerprint. For security, this option requires a backup screen lock.</string>
+  <string name="screensaver_settings_summary_postured_and_charging">While upright and charging</string>
+  <string name="screensaver_settings_summary_sleep">While charging</string>
   <string name="security_settings_fingerprint_bad_calibration">Visit a repair provider or g.co/pixel/fingerprintunlock.</string>
   <string name="security_settings_fingerprint_enroll_consent_introduction_title">Allow Fingerprint Unlock</string>
   <string name="security_settings_fingerprint_enroll_finish_message">Fingerprint Unlock improves the more you use it to unlock your phone or verify it’s you in apps</string>
@@ -61,6 +73,10 @@ This deletes the fingerprint images and model stored on your device. Your face m
   <string name="unlock_disable_frp_warning_content_unknown_fingerprint">"Device protection features will not work without your screen lock.
 
 This also deletes the fingerprint images and model stored on your device. You won’t be able to use your fingerprint for authentication in apps."</string>
+  <string name="when_to_show_hubmode_charging">While charging</string>
+  <string name="when_to_show_hubmode_charging_and_upright">While charging and upright</string>
+  <string name="when_to_show_hubmode_docked">While docked</string>
+  <string name="when_to_show_hubmode_never">Never</string>
   <string-array name="enabled_networks_except_gsm_values">
     <item>10</item>
     <item>0</item>
@@ -69,5 +85,14 @@ This also deletes the fingerprint images and model stored on your device. You wo
     <item>10</item>
     <item>0</item>
     <item>1</item>
+  </string-array>
+  <string-array name="when_to_start_hubmode_values">
+    <item>never</item>
+    <item>while_charging</item>
+    <item>while_charging_and_upright</item>
+  </string-array>
+  <string-array name="when_to_start_screensaver_values_no_battery">
+    <item>while_charging_only</item>
+    <item>while_postured_only</item>
   </string-array>
 </resources>

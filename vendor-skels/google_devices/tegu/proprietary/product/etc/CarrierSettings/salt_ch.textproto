@@ -1,5 +1,5 @@
 canonical_name: "salt_ch"
-version: 63000000003
+version: 70000000006
 apns {
   apn {
     name: "Salt Internet"
@@ -35,6 +35,14 @@ configs {
     text_value: "bsf.mnc003.mcc228.pub.3gppnetwork.org"
   }
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
   }
@@ -49,6 +57,10 @@ configs {
   config {
     key: "enabledMMS"
     bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "imsemergency.emergency_domain_preference_int_array"
@@ -108,10 +120,36 @@ configs {
     }
   }
   config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1721816182
+  seconds: 1739349353
 }

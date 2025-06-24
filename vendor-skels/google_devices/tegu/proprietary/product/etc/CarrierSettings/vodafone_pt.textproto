@@ -1,6 +1,14 @@
 canonical_name: "vodafone_pt"
-version: 63000000004
+version: 70000000009
 apns {
+  apn {
+    name: "Vodafone PT"
+    value: ""
+    type: IA
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
   apn {
     name: "Vodafone Net2"
     value: "net2.vodafone.pt"
@@ -8,9 +16,7 @@ apns {
     type: MMS
     type: SUPL
     type: XCAP
-    user: "vodafone"
-    password: "vodafone"
-    authtype: 1
+    authtype: 0
     mmsc: "http://mms.vodafone.pt/servlets/mms"
     mmsc_proxy: "iproxy.vodafone.pt"
     mmsc_proxy_port: "80"
@@ -35,6 +41,12 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "1EE6A3F2CBCADB2060075A9147F5336B8B9D68E0979FD097A65CD7DD70852389:com.vodafone.mCare"
+    }
+  }
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
@@ -70,6 +82,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -157,6 +173,22 @@ configs {
     bool_value: true
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -170,5 +202,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185521
+  seconds: 1739493498
 }

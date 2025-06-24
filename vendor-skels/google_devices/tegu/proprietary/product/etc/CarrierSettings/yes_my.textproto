@@ -1,5 +1,5 @@
 canonical_name: "yes_my"
-version: 63000000002
+version: 70000000003
 apns {
   apn {
     name: "Yes 4G"
@@ -84,10 +84,14 @@ configs {
     }
   }
   config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "conference-factory@yes.my"
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1734527072
 }

@@ -1,5 +1,5 @@
 canonical_name: "kddimvno5gsa_jp"
-version: 63000000001
+version: 70000000002
 apns {
   apn {
     name: "IMS"
@@ -166,7 +166,7 @@ configs {
   }
   config {
     key: "imsemergency.quick_cross_stack_redial_timer_sec_int"
-    int_value: 3
+    int_value: 15
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -342,5 +342,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472212
+  seconds: 1743656466
 }
