@@ -1,5 +1,5 @@
 canonical_name: "tracfonetmo_us"
-version: 64000000011
+version: 70000000012
 apns {
   apn {
     name: "Tracfone"
@@ -38,6 +38,15 @@ configs {
   config {
     key: "5g_icon_display_grace_period_string"
     text_value: "connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30"
+  }
+  config {
+    key: "5g_nr_ssrsrp_thresholds_int_array"
+    int_array {
+      item: -120
+      item: -114
+      item: -109
+      item: -100
+    }
   }
   config {
     key: "bsf.bsf_server_fqdn_string"
@@ -295,6 +304,10 @@ configs {
     int_value: 34
   }
   config {
+    key: "inflate_signal_strength_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -314,6 +327,15 @@ configs {
   config {
     key: "iwlan.key_error_policy_config_string"
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500\"],\"RetryArray\": [\"3600\",\"7200\",\"10800\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"11001\",\"11011\"],\"RetryArray\": [],\"UnthrottlingEvents\": []}]}]"
+  }
+  config {
+    key: "lte_rsrp_thresholds_int_array"
+    int_array {
+      item: -120
+      item: -114
+      item: -109
+      item: -100
+    }
   }
   config {
     key: "maxImageHeight"
@@ -390,5 +412,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472199
+  seconds: 1742540187
 }

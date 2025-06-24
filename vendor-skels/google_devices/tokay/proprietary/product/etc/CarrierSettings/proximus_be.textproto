@@ -1,5 +1,5 @@
 canonical_name: "proximus_be"
-version: 64000000007
+version: 70000000008
 apns {
   apn {
     name: "Proximus Internet"
@@ -71,6 +71,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -176,6 +180,18 @@ configs {
     bool_value: true
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
@@ -185,5 +201,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1717172047
+  seconds: 1736946296
 }

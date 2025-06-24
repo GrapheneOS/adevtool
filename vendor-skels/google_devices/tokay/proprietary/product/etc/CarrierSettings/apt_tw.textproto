@@ -1,5 +1,5 @@
 canonical_name: "apt_tw"
-version: 64000000004
+version: 70000000007
 apns {
   apn {
     name: "GT Internet"
@@ -29,6 +29,10 @@ configs {
   }
   config {
     key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
     bool_value: false
   }
   config {
@@ -140,10 +144,24 @@ configs {
     bool_value: true
   }
   config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "46601"
+      item: "46602"
+      item: "46603"
+    }
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
 }
+vendor_configs {
+  client {
+    name: "ril"
+    value: "\n/\n\'rilext.ims_prefer_apm_normal_ecc_enable\022\004true"
+  }
+}
 last_updated {
-  seconds: 1709116039
+  seconds: 1740560776
 }

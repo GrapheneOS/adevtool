@@ -1,5 +1,5 @@
 canonical_name: "manxprepaid_im"
-version: 64000000004
+version: 70000000004
 apns {
   apn {
     name: "web.prontogo.net"

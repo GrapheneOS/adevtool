@@ -29,8 +29,10 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 
 # Missing system_ext SELinux context: /metadata/repair-mode/config(/.*)? u:object_r:repair_mode_metadata_config_file:s0
 # Missing system_ext SELinux context: /system_ext/bin/bluetooth_gci u:object_r:bluetooth_gci_exec:s0
+# Missing system_ext SELinux context: sota.charge.stop.level u:object_r:sota_prop:s0
 # Missing system_ext SELinux context: repair_mode.init_completed. u:object_r:repair_mode_init_prop:s0 prefix bool
 # Missing system_ext SELinux context: pixelsystemservice.device.contextualawarenessbool u:object_r:pixelsystemservice_contextualawareness_prop:s0 exact bool
+# Missing system_ext SELinux context: persist.vendor.pulsar u:object_r:vendor_sysuig_prop:s0
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.android.theflippinapp domain=flag_flipper_app type=app_data_file levelFrom=all seinfo=platform
 # Missing system_ext SELinux context: user=system seinfo=platform name=com.google.android.repairmode domain=repair_mode_app type=app_data_file levelFrom=user
 # Missing system_ext SELinux context: user=_app seinfo=platform name=com.google.android.turboadapter domain=turbo_adapter type=app_data_file levelFrom=all
@@ -48,10 +50,21 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/google_devices/tokay/sepolicy
 
 # Missing vendor SELinux context: /vendor/bin/hw/vendor.google.aam-service u:object_r:hal_aam_exec:s0
-# Missing vendor SELinux context: /vendor/bin/hw/android\.hardware\.biometrics\.face-service(.[a-zA-Z0-9]+)?.pixel u:object_r:hal_face_default_exec:s0
-# Missing vendor SELinux context: /vendor/bin/hw/android\.hardware\.biometrics\.face-service-[a-zA-Z0-9]+ u:object_r:hal_face_default_exec:s0
+# Missing vendor SELinux context: /vendor/bin/init\.qfp\.sh u:object_r:init_qfp_exec:s0
+# Missing vendor SELinux context: /vendor/bin/dump/dump_tpu u:object_r:dump_tpu_exec:s0
+# Missing vendor SELinux context: /vendor/bin/storage_init\.sh u:object_r:storage_init_exec:s0
+# Missing vendor SELinux context: /dev/logbuffer_wlc_fw_update u:object_r:logbuffer_device:s0
 # Missing vendor SELinux context: /vendor/bin/flood\.control\.hal u:object_r:flood_control_exec:s0
+# Missing vendor SELinux context: /vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
+# Missing vendor SELinux context: /vendor/bin/pcie_power_control u:object_r:pcie_power_exec:s0
+# Missing vendor SELinux context: /vendor/bin/dump/dump_exynos_display u:object_r:dump_exynos_display_exec:s0
+# Missing vendor SELinux context: /vendor/bin/dump/dump_display_userdebug\.sh u:object_r:dump_exynos_display_userdebug_exec:s0
+# Missing vendor SELinux context: /vendor/bin/android\.hardware\.biometrics\.face-service\.pixel u:object_r:hal_face_default_exec:s0
 # Missing vendor SELinux context: com.google.face.debug::IDebugHost u:object_r:hal_face_debug_hwservice:s0
+# Missing vendor SELinux context: vendor.wlcservice.test.authentication u:object_r:vendor_wlcservice_prop:s0 exact bool
+# Missing vendor SELinux context: vendor.wlcservice.fwupdate.tx u:object_r:vendor_wlcservice_prop:s0 exact enum 0 1 2 3
+# Missing vendor SELinux context: vendor.wlcservice.start u:object_r:vendor_wlcservice_prop:s0 exact bool
+# Missing vendor SELinux context: ro.vendor.flood. u:object_r:vendor_flood_prop:s0
 # Missing vendor SELinux context: vendor.pixel.system.phenotype. u:object_r:vendor_pss_systemphenotype_prop:s0
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=mds name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=platform name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
@@ -61,7 +74,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 # Missing vendor SELinux context: user=system seinfo=platform name=com.samsung.slsi.telephony.testmode domain=vendor_telephony_test_app levelFrom=all
 # Missing vendor SELinux context: user=_app seinfo=platform name=com.samsung.slsi.engineermode domain=vendor_engineermode_app levelFrom=all
 # Missing vendor SELinux context: user=system seinfo=platform name=com.google.android.CatEngine domain=cat_engine_service_app type=system_app_data_file levelFrom=all
+# Missing vendor SELinux context: com.google.input.ITwoshayNotificationService/default u:object_r:twoshay_notification_service:s0
 # Missing vendor SELinux context: com.google.face.debug.IDebugHost/default u:object_r:hal_face_debug_service:s0
 # Missing vendor SELinux context: com.google.face.debug.IDebugManager/default u:object_r:hal_face_debug_service:s0
 # Missing vendor SELinux context: com.google.flood.IFloodService/default u:object_r:flood_control_service:s0
+# Missing vendor SELinux context: vendor.google.bluetooth_ext.IBluetoothCco/default u:object_r:hal_bluetooth_coexistence_service:s0
 # Missing vendor SELinux context: vendor.google.aam.IAam/default u:object_r:hal_aam_service:s0
+# Missing vendor SELinux context: com.google.hardware.biometrics.fingerprint.debug.IFingerprintDebug/default u:object_r:hal_fingerprint_debug_service:s0
