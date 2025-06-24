@@ -1,5 +1,5 @@
 canonical_name: "telia_fi"
-version: 64000000018
+version: 70000000019
 apns {
   apn {
     name: "Telia Internet"
@@ -69,6 +69,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "editable_wfc_roaming_mode_bool"
     bool_value: true
   }
   config {
@@ -238,5 +242,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732679815
+  seconds: 1734527046
 }

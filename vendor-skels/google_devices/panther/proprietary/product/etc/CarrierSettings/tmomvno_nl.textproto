@@ -1,5 +1,5 @@
 canonical_name: "tmomvno_nl"
-version: 64000000021
+version: 70000000022
 apns {
   apn {
     name: "Internet"
@@ -77,6 +77,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -331,6 +335,18 @@ configs {
     int_value: 0
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -349,5 +365,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721816144
+  seconds: 1736946258
 }

@@ -1,5 +1,5 @@
 canonical_name: "kpn_nl"
-version: 64000000023
+version: 70000000024
 apns {
   apn {
     name: "IMS"
@@ -72,6 +72,10 @@ configs {
   }
   config {
     key: "gsm_cdma_calls_can_be_hd_audio"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -249,6 +253,18 @@ configs {
     int_value: 40
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -258,5 +274,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912472
+  seconds: 1736946258
 }

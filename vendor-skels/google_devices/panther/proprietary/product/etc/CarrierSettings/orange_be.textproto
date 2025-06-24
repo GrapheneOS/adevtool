@@ -1,5 +1,5 @@
 canonical_name: "orange_be"
-version: 64000000014
+version: 70000000015
 apns {
   apn {
     name: "Orange MMS"
@@ -47,6 +47,10 @@ configs {
   config {
     key: "config_plans_package_override_string"
     text_value: "com.orange.myorange.obe"
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "ims.ipv4_sip_mtu_size_cellular_int"
@@ -294,6 +298,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -303,5 +319,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185451
+  seconds: 1736946258
 }

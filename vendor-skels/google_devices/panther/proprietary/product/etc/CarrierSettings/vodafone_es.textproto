@@ -1,5 +1,5 @@
 canonical_name: "vodafone_es"
-version: 64000000019
+version: 70000000020
 apns {
   apn {
     name: "INTERNET"
@@ -82,6 +82,10 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "22177"
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "ims.ims_user_agent_string"
@@ -228,6 +232,18 @@ configs {
     int_value: 2
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -254,5 +270,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185451
+  seconds: 1736946258
 }

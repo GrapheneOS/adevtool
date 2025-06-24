@@ -1,5 +1,5 @@
 canonical_name: "vivo_br"
-version: 64000000002
+version: 70000000002
 apns {
   apn {
     name: "Vivo MMS"

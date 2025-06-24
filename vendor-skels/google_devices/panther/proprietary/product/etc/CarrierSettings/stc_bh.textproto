@@ -1,5 +1,5 @@
 canonical_name: "stc_bh"
-version: 64000000004
+version: 70000000005
 apns {
   apn {
     name: "VIVAGPRS"
@@ -34,6 +34,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -82,5 +86,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100361
+  seconds: 1739349306
 }

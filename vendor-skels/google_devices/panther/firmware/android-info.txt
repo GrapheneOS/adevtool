@@ -1,5 +1,5 @@
 require board=panther
 
-require version-bootloader=cloudripper-15.2-13237001
-require version-baseband=g5300q-241205-250127-B-12973597
+require version-bootloader=cloudripper-16.0-13291549
+require version-baseband=g5300q-250320-250425-B-13407682
 require partition-exists=vendor_kernel_boot
