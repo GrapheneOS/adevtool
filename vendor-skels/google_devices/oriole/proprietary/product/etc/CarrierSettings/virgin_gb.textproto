@@ -1,5 +1,5 @@
 canonical_name: "virgin_gb"
-version: 64000000595
+version: 70000000595
 apns {
   apn {
     name: "Virgin Media Mobile Internet"

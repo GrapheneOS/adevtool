@@ -1,5 +1,5 @@
 canonical_name: "cspire_us"
-version: 64000000451
+version: 70000000448
 apns {
   apn {
     name: "C Spire OTA"
@@ -164,10 +164,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "imssms.sms_over_ims_format_int"
-    int_value: 1
-  }
-  config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
     bool_value: false
   }
@@ -283,16 +279,8 @@ configs {
     bool_value: true
   }
   config {
-    key: "imsvoice.minimum_session_expires_timer_sec_int"
-    int_value: 90000
-  }
-  config {
     key: "imsvoice.prack_supported_for_18x_bool"
     bool_value: true
-  }
-  config {
-    key: "imsvoice.session_expires_timer_sec_int"
-    int_value: 1800000
   }
   config {
     key: "imsvoice.srvcc_type_int_array"
@@ -401,10 +389,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
-    bool_value: true
-  }
-  config {
     key: "volte_replacement_rat_int"
     int_value: 6
   }
@@ -418,5 +402,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742450772
+  seconds: 1743143673
 }

@@ -1,5 +1,5 @@
 canonical_name: "tmobile_us"
-version: 64000000174
+version: 70000000176
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -144,6 +144,27 @@ configs {
     int_array {
       item: 1
       item: 2
+    }
+  }
+  config {
+    key: "carrier_roaming_satellite_default_services_int_array"
+    int_array {
+      item: 2
+      item: 3
+      item: 6
+    }
+  }
+  config {
+    key: "carrier_supported_satellite_services_per_provider_bundle"
+    bundle {
+      config {
+        key: "310830"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
     }
   }
   config {
@@ -666,6 +687,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_ignore_data_roaming_setting_bool"
+    bool_value: true
+  }
+  config {
     key: "show_data_connected_roaming_notification"
     bool_value: true
   }
@@ -726,5 +751,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1730276139
+  seconds: 1738826901
 }

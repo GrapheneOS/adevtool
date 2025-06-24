@@ -1,5 +1,5 @@
 canonical_name: "nextech_us"
-version: 64000000013
+version: 70000000014
 apns {
   apn {
     name: "NexTech Ota"
@@ -148,6 +148,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_roaming_indicator_bool"
     bool_value: false
   }
@@ -157,5 +165,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003556
+  seconds: 1741179679
 }

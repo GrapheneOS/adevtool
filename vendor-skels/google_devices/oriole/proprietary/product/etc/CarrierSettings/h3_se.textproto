@@ -1,5 +1,5 @@
 canonical_name: "h3_se"
-version: 64000000510
+version: 70000000510
 apns {
   apn {
     name: "3"

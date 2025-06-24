@@ -1,5 +1,5 @@
 canonical_name: "dna_fi"
-version: 64000000008
+version: 70000000009
 apns {
   apn {
     name: "Internet"
@@ -49,6 +49,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -102,5 +106,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635157
+  seconds: 1742540150
 }

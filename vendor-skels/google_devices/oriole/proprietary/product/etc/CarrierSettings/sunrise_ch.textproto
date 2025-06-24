@@ -1,5 +1,5 @@
 canonical_name: "sunrise_ch"
-version: 64000000586
+version: 70000000587
 apns {
   apn {
     name: "IMS"
@@ -188,6 +188,16 @@ configs {
     int_value: 11
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
   }
@@ -201,5 +211,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1741781005
 }

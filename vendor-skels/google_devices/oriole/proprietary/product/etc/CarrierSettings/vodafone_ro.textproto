@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ro"
-version: 64000000017
+version: 70000000017
 apns {
   apn {
     name: "Internet"

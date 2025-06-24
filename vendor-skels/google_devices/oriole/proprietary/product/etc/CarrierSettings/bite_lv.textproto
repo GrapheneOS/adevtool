@@ -1,5 +1,5 @@
 canonical_name: "bite_lv"
-version: 64000000015
+version: 70000000016
 apns {
   apn {
     name: "Bite LV Internet"
@@ -35,6 +35,7 @@ apns {
     type: XCAP
     protocol: IPV4V6
     roaming_protocol: IPV4V6
+    user_visible: false
   }
 }
 configs {
@@ -136,5 +137,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1718786013
+  seconds: 1733891235
 }

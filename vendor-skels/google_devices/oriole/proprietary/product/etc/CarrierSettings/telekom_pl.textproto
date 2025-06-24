@@ -1,5 +1,5 @@
 canonical_name: "telekom_pl"
-version: 64000000018
+version: 70000000020
 apns {
   apn {
     name: "Internet"
@@ -76,12 +76,6 @@ configs {
   config {
     key: "ims.keep_pdn_up_in_no_vops_bool"
     bool_value: true
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
   }
   config {
     key: "imsemergency.emergency_registration_timer_millis_int"
@@ -210,8 +204,8 @@ configs {
     }
   }
   config {
-    key: "prefer_2g_bool"
-    bool_value: true
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
   }
   config {
     key: "qns.condition_rove_in_idle_wifi_pref_home_string_array"
@@ -283,5 +277,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733311788
+  seconds: 1741179679
 }

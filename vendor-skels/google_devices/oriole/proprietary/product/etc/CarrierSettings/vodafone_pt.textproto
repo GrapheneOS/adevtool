@@ -1,6 +1,14 @@
 canonical_name: "vodafone_pt"
-version: 64000000016
+version: 70000000019
 apns {
+  apn {
+    name: "Vodafone PT"
+    value: ""
+    type: IA
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
   apn {
     name: "Vodafone Net2"
     value: "net2.vodafone.pt"
@@ -8,9 +16,7 @@ apns {
     type: MMS
     type: SUPL
     type: XCAP
-    user: "vodafone"
-    password: "vodafone"
-    authtype: 1
+    authtype: 0
     mmsc: "http://mms.vodafone.pt/servlets/mms"
     mmsc_proxy: "iproxy.vodafone.pt"
     mmsc_proxy_port: "80"
@@ -128,6 +134,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -141,5 +151,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242300
+  seconds: 1739493465
 }

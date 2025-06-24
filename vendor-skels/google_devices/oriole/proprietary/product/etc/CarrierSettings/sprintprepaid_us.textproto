@@ -1,5 +1,5 @@
 canonical_name: "sprintprepaid_us"
-version: 64000000489
+version: 70000000489
 apns {
   apn {
     name: "Internet"

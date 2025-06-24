@@ -1,5 +1,5 @@
 canonical_name: "fido_ca"
-version: 64000000073
+version: 70000000073
 apns {
   apn {
     name: "Fido Internet"

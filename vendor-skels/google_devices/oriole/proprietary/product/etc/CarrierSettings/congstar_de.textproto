@@ -1,5 +1,5 @@
 canonical_name: "congstar_de"
-version: 64000000556
+version: 70000000556
 apns {
   apn {
     name: "Internet"

@@ -1,5 +1,5 @@
 canonical_name: "entel_cl"
-version: 64000000001
+version: 70000000002
 apns {
   apn {
     name: "Internet Movil"
@@ -32,8 +32,42 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "Entel XCAP"
+    value: "hos"
+    type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.mnc001.mcc730.pub.3gppnetwork.org"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 10080
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.mnc001.mcc730.pub.3gppnetwork.org"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 8080
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
   config {
     key: "non_roaming_operator_string_array"
     text_array {
@@ -42,5 +76,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242300
+  seconds: 1738826901
 }

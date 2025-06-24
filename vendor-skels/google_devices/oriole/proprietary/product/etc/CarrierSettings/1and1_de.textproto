@@ -1,5 +1,5 @@
 canonical_name: "1and1_de"
-version: 64000000022
+version: 70000000023
 apns {
   apn {
     name: "1&1 Internet"
@@ -46,6 +46,10 @@ configs {
   }
   config {
     key: "call_barring_visibility_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
   }
   config {
@@ -260,6 +264,16 @@ configs {
     int_value: 86400
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -333,5 +347,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496781
+  seconds: 1741781005
 }

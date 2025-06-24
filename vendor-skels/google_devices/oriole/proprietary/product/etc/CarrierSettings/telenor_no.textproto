@@ -1,5 +1,5 @@
 canonical_name: "telenor_no"
-version: 64000000496
+version: 70000000496
 apns {
   apn {
     name: "Telenor Smart"
