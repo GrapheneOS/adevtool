@@ -1,5 +1,5 @@
 canonical_name: "tmobile_at"
-version: 64000000012
+version: 70000000013
 apns {
   apn {
     name: "T-Mobile IMS"
@@ -89,6 +89,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -230,6 +234,18 @@ configs {
     bool_value: false
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "telephony_data_setup_retry_rules_string_array"
     text_array {
       item: "capabilities=eims, retry_interval=1000, maximum_retries=20"
@@ -248,5 +264,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185501
+  seconds: 1736946287
 }

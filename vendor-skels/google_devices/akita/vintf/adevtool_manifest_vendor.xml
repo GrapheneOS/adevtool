@@ -58,18 +58,39 @@
   </hal>
   <hal format="aidl">
     <name>com.google.input</name>
-    <version>3</version>
+    <version>5</version>
     <fqname>ITouchContextService/default</fqname>
   </hal>
   <hal format="aidl">
+    <name>com.google.input</name>
+    <version>5</version>
+    <fqname>ITwoshayNotificationService/default</fqname>
+  </hal>
+  <hal format="aidl">
     <name>com.google.input.algos.gril</name>
-    <version>3</version>
+    <version>5</version>
     <fqname>IGrilAntennaTuningService/default</fqname>
   </hal>
   <hal format="aidl">
     <name>com.google.input.algos.spd</name>
-    <version>3</version>
+    <version>5</version>
     <fqname>IScreenProtectorDetectorService/default</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>hardware.google.ril_ext</name>
+    <fqname>IRilExt/slot1</fqname>
+    <fqname>IRilExt/slot2</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>vendor.google.bluetooth_ext</name>
+    <version>2</version>
+    <fqname>IBTChannelAvoidance/default</fqname>
+    <fqname>IBluetoothCcc/default</fqname>
+    <fqname>IBluetoothCco/default</fqname>
+    <fqname>IBluetoothEwp/default</fqname>
+    <fqname>IBluetoothExt/default</fqname>
+    <fqname>IBluetoothFinder/default</fqname>
+    <fqname>IBluetoothSar/default</fqname>
   </hal>
   <hal format="hidl">
     <name>vendor.samsung_slsi.telephony.hardware.radioExternal</name>

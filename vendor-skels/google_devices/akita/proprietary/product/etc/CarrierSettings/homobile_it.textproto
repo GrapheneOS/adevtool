@@ -1,5 +1,5 @@
 canonical_name: "homobile_it"
-version: 64000000010
+version: 70000000012
 apns {
   apn {
     name: "ho."
@@ -27,6 +27,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "call_barring_visibility_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_certificate_string_array"
     text_array {
@@ -56,6 +60,10 @@ configs {
   config {
     key: "hide_lte_plus_data_icon_bool"
     bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "ims.ipsec_authentication_algorithms_int_array"
@@ -222,6 +230,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -239,5 +259,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242338
+  seconds: 1739349339
 }

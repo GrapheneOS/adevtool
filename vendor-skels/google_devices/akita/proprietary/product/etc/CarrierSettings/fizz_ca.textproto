@@ -1,5 +1,5 @@
 canonical_name: "fizz_ca"
-version: 64000000010
+version: 70000000011
 apns {
   apn {
     name: "mobile.bm"
@@ -28,6 +28,14 @@ apns {
     type: XCAP
     user_visible: false
     user_editable: false
+  }
+  apn {
+    name: "Emergency"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
   }
 }
 configs {
@@ -362,5 +370,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185501
+  seconds: 1740119832
 }

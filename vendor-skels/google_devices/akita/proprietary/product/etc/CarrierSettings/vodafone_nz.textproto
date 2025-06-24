@@ -1,5 +1,5 @@
 canonical_name: "vodafone_nz"
-version: 64000000009
+version: 70000000009
 apns {
   apn {
     name: "VFNZ Gateway"

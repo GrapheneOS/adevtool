@@ -1,5 +1,5 @@
 canonical_name: "alcom_fi"
-version: 64000000001
+version: 70000000002
 apns {
   apn {
     name: "Internet"
@@ -24,7 +24,7 @@ apns {
     mmsc: "http://mms.amt.aland.fi"
     mmsc_proxy: "194.110.177.70"
     mmsc_proxy_port: "8080"
-    user_editable: false
+    user_visible: false
   }
 }
 configs {
@@ -65,5 +65,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1727870767
+  seconds: 1737535021
 }

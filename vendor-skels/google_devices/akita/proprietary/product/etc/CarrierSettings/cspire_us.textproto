@@ -1,5 +1,5 @@
 canonical_name: "cspire_us"
-version: 64000000007
+version: 70000000007
 apns {
   apn {
     name: "C Spire OTA"

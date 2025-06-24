@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 64000000007
+version: 70000000008
 apns {
   apn {
     name: "Telia Internet"
@@ -77,6 +77,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -246,6 +250,18 @@ configs {
     int_value: 2097152
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -259,5 +275,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185501
+  seconds: 1736946287
 }

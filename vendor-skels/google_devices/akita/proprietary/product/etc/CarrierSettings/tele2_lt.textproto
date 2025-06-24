@@ -1,5 +1,5 @@
 canonical_name: "tele2_lt"
-version: 64000000012
+version: 70000000013
 apns {
   apn {
     name: "Internet"
@@ -53,6 +53,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -141,6 +145,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
@@ -150,5 +166,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732098903
+  seconds: 1736946287
 }

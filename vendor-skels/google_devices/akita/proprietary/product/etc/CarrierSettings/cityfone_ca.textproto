@@ -1,5 +1,5 @@
 canonical_name: "cityfone_ca"
-version: 64000000008
+version: 70000000008
 apns {
   apn {
     name: "Cityfone Tethering"

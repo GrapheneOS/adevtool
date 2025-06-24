@@ -1,5 +1,5 @@
 canonical_name: "ahamo_jp"
-version: 64000000010
+version: 70000000010
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"
