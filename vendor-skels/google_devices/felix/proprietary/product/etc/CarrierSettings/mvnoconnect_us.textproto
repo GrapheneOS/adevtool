@@ -1,5 +1,5 @@
 canonical_name: "mvnoconnect_us"
-version: 64000000002
+version: 70000000005
 apns {
   apn {
     name: "MVNO Connect"
@@ -45,10 +45,10 @@ configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
     int_array {
-      item: -125
-      item: -120
-      item: -114
-      item: -109
+      item: -111
+      item: -90
+      item: -80
+      item: -65
     }
   }
   config {
@@ -672,5 +672,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276169
+  seconds: 1742540166
 }

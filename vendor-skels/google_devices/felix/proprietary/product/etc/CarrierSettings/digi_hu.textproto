@@ -1,5 +1,5 @@
 canonical_name: "digi_hu"
-version: 64000000004
+version: 70000000005
 apns {
   apn {
     name: "internet"
@@ -21,6 +21,10 @@ apns {
 configs {
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -65,7 +69,19 @@ configs {
       }
     }
   }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1706100369
+  seconds: 1736946265
 }

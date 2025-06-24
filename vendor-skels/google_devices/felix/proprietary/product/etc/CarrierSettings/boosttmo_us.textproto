@@ -1,5 +1,5 @@
 canonical_name: "boosttmo_us"
-version: 64000000028
+version: 70000000030
 apns {
   apn {
     name: "Internet"
@@ -660,5 +660,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730276169
+  seconds: 1739349315
 }

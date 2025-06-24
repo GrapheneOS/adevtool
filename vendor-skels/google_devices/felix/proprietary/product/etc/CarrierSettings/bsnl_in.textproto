@@ -1,5 +1,5 @@
 canonical_name: "bsnl_in"
-version: 64000000005
+version: 70000000006
 apns {
   apn {
     name: "bsnlmms"
@@ -16,6 +16,7 @@ apns {
     type: DEFAULT
     type: SUPL
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "bsnllive"
@@ -104,5 +105,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725429755
+  seconds: 1741179702
 }

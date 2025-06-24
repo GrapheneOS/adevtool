@@ -43,6 +43,12 @@
   <hal format="hidl">
     <name>android.hardware.secure_element</name>
     <transport>hwbinder</transport>
+    <fqname>@1.2::ISecureElement/eSE1</fqname>
+    <fqname>@1.2::ISecureElement/eSE2</fqname>
+  </hal>
+  <hal format="hidl">
+    <name>android.hardware.secure_element</name>
+    <transport>hwbinder</transport>
     <fqname>@1.2::ISecureElement/SIM1</fqname>
     <fqname>@1.2::ISecureElement/SIM2</fqname>
   </hal>
@@ -53,8 +59,19 @@
   </hal>
   <hal format="aidl">
     <name>com.google.input</name>
-    <version>3</version>
+    <version>5</version>
     <fqname>ITouchContextService/default</fqname>
+  </hal>
+  <hal format="aidl">
+    <name>vendor.google.bluetooth_ext</name>
+    <version>2</version>
+    <fqname>IBTChannelAvoidance/default</fqname>
+    <fqname>IBluetoothCcc/default</fqname>
+    <fqname>IBluetoothCco/default</fqname>
+    <fqname>IBluetoothEwp/default</fqname>
+    <fqname>IBluetoothExt/default</fqname>
+    <fqname>IBluetoothFinder/default</fqname>
+    <fqname>IBluetoothSar/default</fqname>
   </hal>
   <hal format="hidl">
     <name>vendor.samsung_slsi.telephony.hardware.radioExternal</name>

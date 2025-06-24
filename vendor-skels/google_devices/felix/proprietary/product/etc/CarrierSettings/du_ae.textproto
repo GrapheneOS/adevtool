@@ -1,5 +1,5 @@
 canonical_name: "du_ae"
-version: 64000000005
+version: 70000000006
 apns {
   apn {
     name: "du"
@@ -31,6 +31,10 @@ configs {
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
   }
   config {
     key: "carrier_volte_available_bool"
@@ -85,5 +89,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1706100369
+  seconds: 1739349315
 }

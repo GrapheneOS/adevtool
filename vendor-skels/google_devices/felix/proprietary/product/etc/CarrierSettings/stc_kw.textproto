@@ -1,5 +1,5 @@
 canonical_name: "stc_kw"
-version: 64000000008
+version: 70000000009
 apns {
   apn {
     name: "VIVA - KW"
@@ -31,6 +31,10 @@ configs {
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
   }
   config {
     key: "carrier_volte_available_bool"
@@ -133,5 +137,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635180
+  seconds: 1739349315
 }

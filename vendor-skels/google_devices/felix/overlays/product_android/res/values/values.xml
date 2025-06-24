@@ -35,6 +35,11 @@
   <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
   <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
   <bool name="config_buttonTextAllCaps">false</bool>
+  <bool name="config_dreamsActivatedOnDockByDefault">false</bool>
+  <bool name="config_dreamsActivatedOnPosturedByDefault">false</bool>
+  <bool name="config_dreamsActivatedOnSleepByDefault">false</bool>
+  <bool name="config_dreamsDisabledByAmbientModeSuppressionConfig">true</bool>
+  <bool name="config_dreamsEnabledByDefault">false</bool>
   <bool name="config_enableAutoPowerModes">true</bool>
   <bool name="config_enableMultiUserUI">true</bool>
   <bool name="config_fingerprintSupportsGestures">true</bool>
@@ -59,16 +64,17 @@
   <bool name="config_letterboxIsVerticalReachabilityEnabled">true</bool>
   <bool name="config_matchSecondaryInternalDisplaysOrientationToReverseDefaultDisplay">true</bool>
   <bool name="config_offsetWallpaperToCenterOfLargestDisplay">true</bool>
+  <bool name="config_resetScreenTimeoutOnUnexpectedDreamExit">true</bool>
   <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
   <bool name="config_showUserSwitcherByDefault">false</bool>
+  <bool name="config_supportDoubleTapSleep">true</bool>
   <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
   <bool name="config_supportsCamToggle">true</bool>
   <bool name="config_supportsMicToggle">true</bool>
   <bool name="config_swipe_up_gesture_setting_available">true</bool>
   <bool name="config_systemCaptionsServiceCallsEnabled">true</bool>
-  <bool name="config_useRoundIcon">true</bool>
   <bool name="config_windowManagerHalfFoldAutoRotateOverride">false</bool>
   <bool name="config_windowManagerPauseRotationWhenUnfolding">true</bool>
   <dimen name="config_bottomDialogCornerRadius">16dp</dimen>
@@ -125,6 +131,9 @@
     <item>config_deviceStateRearDisplay</item>
     <item>config_deviceStateConcurrentRearDisplay</item>
   </string-array>
+  <string-array name="config_disabledDreamComponents">
+    <item>com.android.systemui/com.google.android.systemui.lowlightclock.LowLightClockDreamService</item>
+  </string-array>
   <string-array name="config_forceSlowJpegModeList">
     <item>com.facebook.orca</item>
     <item>com.skype.raider</item>
@@ -139,6 +148,10 @@
     <item>-0.000000000910931179</item>
     <item>0.000207598323269139</item>
     <item>-0.349361641294833436</item>
+  </string-array>
+  <string-array name="config_notificationDefaultUnsupportedAdjustments">
+    <item>key_type</item>
+    <item>key_summarization</item>
   </string-array>
   <string-array name="config_perDeviceStateRotationLockDefaults">
     <item>0:1</item>
@@ -163,6 +176,7 @@
   <integer name="config_deviceStateRearDisplay">3</integer>
   <integer name="config_globalActionsKeyTimeout">750</integer>
   <integer name="config_letterboxActivityCornersRadius">-1</integer>
+  <integer name="config_longPressOnHomeBehavior">2</integer>
   <integer name="config_longPressOnPowerDurationMs">750</integer>
   <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <integer name="config_pauseRotationWhenUnfolding_displaySwitchTimeout">1000</integer>

@@ -1,5 +1,5 @@
 canonical_name: "cellcommno_us"
-version: 64000000014
+version: 70000000014
 apns {
   apn {
     name: "Cellcom"

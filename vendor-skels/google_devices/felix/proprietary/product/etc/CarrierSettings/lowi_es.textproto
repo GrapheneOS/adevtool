@@ -1,5 +1,5 @@
 canonical_name: "lowi_es"
-version: 64000000004
+version: 70000000005
 apns {
   apn {
     name: "Lowi.es"
@@ -37,6 +37,10 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -142,6 +146,18 @@ configs {
     int_value: 900
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "unloggable_numbers_string_array"
     text_array {
       item: "900018018"
@@ -156,5 +172,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912483
+  seconds: 1736946265
 }

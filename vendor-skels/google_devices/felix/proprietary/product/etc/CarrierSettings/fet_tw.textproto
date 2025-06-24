@@ -1,5 +1,5 @@
 canonical_name: "fet_tw"
-version: 64000000013
+version: 70000000014
 apns {
   apn {
     name: "\351\201\240\345\202\263\351\233\273\344\277\241(Far EasTone) (Internet)"
@@ -293,6 +293,12 @@ configs {
     int_value: 1
   }
 }
+vendor_configs {
+  client {
+    name: "ril"
+    value: "\n/\n\'rilext.ims_prefer_apm_normal_ecc_enable\022\004true"
+  }
+}
 last_updated {
-  seconds: 1721185465
+  seconds: 1740560726
 }

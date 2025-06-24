@@ -1,5 +1,5 @@
 canonical_name: "metropcs_us"
-version: 64000000036
+version: 70000000038
 apns {
   apn {
     name: "MetroPCS Tethering"
@@ -752,5 +752,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1732098885
+  seconds: 1739349315
 }

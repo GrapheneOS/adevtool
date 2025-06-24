@@ -1,30 +1,30 @@
 canonical_name: "att_mx"
-version: 64000000005
+version: 70000000022
 apns {
   apn {
-    name: "Modem"
-    value: "modem.iusacellgsm.mx"
-    type: DUN
-    user: "iusacellgsm"
-    password: "iusacellgsm"
-    authtype: 1
-    user_visible: false
-  }
-  apn {
-    name: "Iusacell Internet"
-    value: "web.iusacellgsm.mx"
+    name: "AT&T 5G Internet"
+    value: "web.5g.attmex.mx"
     type: DEFAULT
-    type: SUPL
-    user: "iusacellgsm"
-    password: "iusacellgsm"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
   }
   apn {
-    name: "Iusacell MMS"
-    value: "mms.iusacellgsm.mx"
+    name: "MMS"
+    value: "mms.attmex.mx"
     type: MMS
-    user: "mmsiusacellgsm"
-    password: "mmsiusacellgsm"
-    mmsc: "http://mms.iusacell3g.com/"
+    mmsc: "http://mms.att.com.mx"
+    mmsc_proxy: "129.192.129.104"
+    mmsc_proxy_port: "8080"
+    user_editable: false
+  }
+  apn {
+    name: "Modem"
+    value: "modem.attmex.mx"
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
   }
   apn {
     name: "IMS"
@@ -42,8 +42,58 @@ configs {
     bool_value: true
   }
   config {
+    key: "allow_metered_network_for_cert_download_bool"
+    bool_value: true
+  }
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.attmex.mx"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8443
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_service_name_array"
+    text_array {
+      item: "AT&T M\303\251xico"
+      item: "Atencion a Clientes"
+      item: "Emergencias"
+      item: "Compra Tiempo Aire"
+      item: "Momentonos"
+      item: "Asist Ejecutiva"
+      item: "Asistencia SOS"
+      item: "Buzon de Voz"
+      item: "Info General"
+      item: "Info Entretenimiento"
+    }
+  }
+  config {
+    key: "carrier_service_number_array"
+    text_array {
+      item: "5569329582"
+      item: "*611"
+      item: "911"
+      item: "*2473"
+      item: "*6262"
+      item: "*73273"
+      item: "*767"
+      item: "*86"
+      item: "*8636"
+      item: "*386"
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
   }
   config {
     key: "carrier_volte_available_bool"
@@ -54,10 +104,62 @@ configs {
     bool_value: true
   }
   config {
+    key: "editable_wfc_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "gsm_cdma_calls_can_be_hd_audio"
+    bool_value: true
+  }
+  config {
+    key: "ims.registration_retry_base_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "ims.registration_retry_max_timer_millis_int"
+    int_value: 7200000
+  }
+  config {
+    key: "ims.request_uri_type_int"
+    int_value: 1
+  }
+  config {
+    key: "ims.sip_timer_c_millis_int"
+    int_value: 180000
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 20000
+  }
+  config {
+    key: "ims.sip_timer_t2_millis_int"
+    int_value: 4000
+  }
+  config {
+    key: "ims.sip_timer_t4_millis_int"
+    int_value: 5000
+  }
+  config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
     int_array {
       item: 3
     }
+  }
+  config {
+    key: "imsi_key_availability_int"
+    int_value: 2
+  }
+  config {
+    key: "imsi_key_download_url_string"
+    text_value: "https://pki.securewifi.att.com.mx/devices/download/wifioattcommx.json"
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.attmex.mx"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
   }
   config {
     key: "imsss.ut_server_based_services_int_array"
@@ -80,6 +182,7 @@ configs {
       item: 5
       item: 2
       item: 0
+      item: 10
       item: 8
       item: 9
       item: 11
@@ -88,12 +191,46 @@ configs {
   config {
     key: "imsss.ut_terminal_based_services_int_array"
     int_array {
-      item: 10
     }
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "100"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 1
+              item: 2
+            }
+          }
+        }
+      }
+      config {
+        key: "105"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 0
+              item: 1
+              item: 2
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
     }
   }
   config {
@@ -128,8 +265,66 @@ configs {
     }
   }
   config {
+    key: "imsvoice.audio_rtcp_inactivity_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsvoice.audio_rtp_inactivity_timer_millis_int"
+    int_value: 10000
+  }
+  config {
     key: "imsvoice.conference_factory_uri_string"
     text_value: "ALU_CONF@ims.attmex.mx"
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 255
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 11000
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 60000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 60000
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 3
+    }
+  }
+  config {
+    key: "iwlan.child_session_aes_cbc_key_size_int_array"
+    int_array {
+      item: 256
+    }
   }
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
@@ -148,9 +343,76 @@ configs {
     text_value: "epdg.epc.mnc050.mcc334.pub.3gppnetwork.org"
   }
   config {
+    key: "iwlan.ike_session_encryption_aes_cbc_key_size_int_array"
+    int_array {
+      item: 256
+    }
+  }
+  config {
+    key: "iwlan.supported_integrity_algorithms_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "iwlan.supported_prf_algorithms_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
     key: "mmi_two_digit_number_pattern_string_array"
     text_array {
       item: "#9"
+    }
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -115
+    }
+  }
+  config {
+    key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 60000
+      item: 0
+      item: 0
+    }
+  }
+  config {
+    key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 60000
+      item: 0
+      item: 0
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -115
+    }
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
     }
   }
   config {
@@ -158,10 +420,24 @@ configs {
     bool_value: true
   }
   config {
+    key: "smsToMmsTextThreshold"
+    int_value: 5
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
+  config {
+    key: "wifi.carrier_profiles_version_int"
+    int_value: 2
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+      item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile><PPSMO><![CDATA[<MgmtTree xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscription</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovidersubscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>AT&amp;T MX Wi-Fi</Value></Node><Node><NodeName>FQDN</NodeName><Value>attmexwifi.com</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Realm</NodeName><Value>wlan.mnc050.mcc334.3gppnetwork.org</Value></Node><Node><NodeName>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>334050*</Value></Node><Node><NodeName>EAPType</NodeName><Value>23</Value></Node></Node></Node></Node></Node></MgmtTree>]]></PPSMO></PasspointProfile>"
+    }
+  }
 }
 last_updated {
-  seconds: 1733311807
+  seconds: 1746114243
 }

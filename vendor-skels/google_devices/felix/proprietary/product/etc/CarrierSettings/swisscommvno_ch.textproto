@@ -1,11 +1,13 @@
 canonical_name: "swisscommvno_ch"
-version: 64000000002
+version: 70000000004
 apns {
   apn {
     name: "Swisscom Services"
     value: "gprs.swisscom.ch"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_editable: false
   }
   apn {
@@ -21,7 +23,7 @@ apns {
     value: "ims"
     type: IMS
     bearer_bitmask: "14|18|20"
-    protocol: IPV6
+    protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
   }
@@ -95,6 +97,10 @@ configs {
   }
   config {
     key: "enabledMMS"
+    bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: false
   }
   config {
@@ -242,7 +248,6 @@ configs {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 15
-      item: 2
     }
   }
   config {
@@ -438,6 +443,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: false
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -451,5 +468,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496798
+  seconds: 1739493478
 }

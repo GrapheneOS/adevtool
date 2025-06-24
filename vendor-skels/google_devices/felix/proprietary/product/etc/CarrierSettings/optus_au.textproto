@@ -1,11 +1,13 @@
 canonical_name: "optus_au"
-version: 64000000010
+version: 70000000011
 apns {
   apn {
     name: "Optus Yes Internet"
     value: "yesinternet"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "Optus MMS"
@@ -29,6 +31,8 @@ apns {
     value: "yesbusiness"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
   }
   apn {
     name: "Optus XCAP"
@@ -264,5 +268,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1710306132
+  seconds: 1740560726
 }

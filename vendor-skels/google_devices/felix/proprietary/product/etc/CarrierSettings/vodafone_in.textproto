@@ -1,5 +1,5 @@
 canonical_name: "vodafone_in"
-version: 64000000016
+version: 70000000016
 apns {
   apn {
     name: "Vodafone Mobile Connect"

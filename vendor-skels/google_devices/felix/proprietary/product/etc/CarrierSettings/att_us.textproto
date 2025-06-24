@@ -1,5 +1,5 @@
 canonical_name: "att_us"
-version: 64000000017
+version: 70000000017
 apns {
   apn {
     name: "ATT Nextgenphone"
