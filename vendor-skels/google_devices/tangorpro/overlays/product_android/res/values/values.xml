@@ -79,8 +79,12 @@
   <bool name="config_appCompatUserAppAspectRatioFullscreenIsEnabled">true</bool>
   <bool name="config_appCompatUserAppAspectRatioSettingsIsEnabled">true</bool>
   <bool name="config_buttonTextAllCaps">false</bool>
+  <bool name="config_canInternalDisplayHostDesktops">true</bool>
   <bool name="config_deskDockEnablesAccelerometer">false</bool>
   <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
+  <bool name="config_dreamsActivatedOnDockByDefault">true</bool>
+  <bool name="config_dreamsActivatedOnPosturedByDefault">false</bool>
+  <bool name="config_dreamsActivatedOnSleepByDefault">false</bool>
   <bool name="config_dreamsDisabledByAmbientModeSuppressionConfig">true</bool>
   <bool name="config_dreamsEnabledByDefault">false</bool>
   <bool name="config_dreamsOnlyEnabledForDockUser">true</bool>
@@ -94,7 +98,8 @@
   <bool name="config_hotspotNetworksEnabledForService">false</bool>
   <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">true</bool>
   <bool name="config_isCompatFakeFocusEnabled">true</bool>
-  <bool name="config_isDesktopModeSupported">true</bool>
+  <bool name="config_isDesktopModeDevOptionSupported">true</bool>
+  <bool name="config_isDesktopModeSupported">false</bool>
   <bool name="config_isWindowManagerCameraCompatTreatmentEnabled">true</bool>
   <bool name="config_keepDreamingWhenUnplugging">true</bool>
   <bool name="config_keyboardVibrationSettingsSupported">true</bool>
@@ -117,12 +122,12 @@
   <bool name="config_showUserSwitcherByDefault">true</bool>
   <bool name="config_skipActivityRelaunchWhenDocking">true</bool>
   <bool name="config_startDreamImmediatelyOnDock">false</bool>
+  <bool name="config_supportDoubleTapSleep">true</bool>
   <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
   <bool name="config_supportsCamToggle">true</bool>
   <bool name="config_supportsMicToggle">true</bool>
   <bool name="config_swipe_up_gesture_setting_available">true</bool>
   <bool name="config_systemCaptionsServiceCallsEnabled">true</bool>
-  <bool name="config_useRoundIcon">true</bool>
   <dimen name="config_bottomDialogCornerRadius">16dp</dimen>
   <dimen name="config_buttonCornerRadius">4dp</dimen>
   <dimen name="config_dialogCornerRadius">28dp</dimen>
@@ -137,6 +142,7 @@
   <integer name="config_dreamsBatteryLevelDrainCutoff">2</integer>
   <integer name="config_globalActionsKeyTimeout">750</integer>
   <integer name="config_letterboxActivityCornersRadius">-1</integer>
+  <integer name="config_longPressOnHomeBehavior">2</integer>
   <integer name="config_longPressOnPowerDurationMs">750</integer>
   <integer name="config_maxDesktopWindowingActiveTasks">4</integer>
   <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
@@ -183,6 +189,10 @@
     <item>-0.000000000910931179</item>
     <item>0.000207598323269139</item>
     <item>-0.349361641294833436</item>
+  </string-array>
+  <string-array name="config_notificationDefaultUnsupportedAdjustments">
+    <item>key_type</item>
+    <item>key_summarization</item>
   </string-array>
   <string-array name="face_error_vendor">
     <item>Certificate expired</item>

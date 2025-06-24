@@ -1,0 +1,2 @@
+android:bool/config_enableUdcSysfsUsbStateUpdate = true
+android:bool/euicc_optimize_apdu_sender = true

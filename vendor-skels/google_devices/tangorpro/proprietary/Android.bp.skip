@@ -21,6 +21,23 @@ android_app_import {
     system_ext_specific: true,
 }
 
+sh_binary {
+    name: "convert_to_ext4.sh",
+    owner: "google_devices",
+    src: "system_ext/bin/convert_to_ext4.sh",
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "gs_watchdogd",
+    owner: "google_devices",
+    srcs: [ "system_ext/bin/gs_watchdogd" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "vendor.google.edgetpu_app_service@1.0-service",
     owner: "google_devices",
@@ -127,16 +144,6 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
-    name: "PixelIwlan",
-    owner: "google_devices",
-    apk: "system_ext/priv-app/PixelIwlan/PixelIwlan.apk",
-    certificate: "platform",
-    privileged: true,
-    dex_preopt: { enabled: false },
-    system_ext_specific: true,
-}
-
-android_app_import {
     name: "PixelNfc",
     owner: "google_devices",
     apk: "system_ext/priv-app/PixelNfc/PixelNfc.apk",
@@ -168,9 +175,9 @@ android_app_import {
 }
 
 prebuilt_apex {
-    name: "com.google.android.widevine-12141839",
+    name: "com.google.android.widevine-13130248",
     owner: "google_devices",
-    src: "vendor/apex/com.google.android.widevine-12141839.apex",
+    src: "vendor/apex/com.google.android.widevine-13130248.apex",
     prefer: true,
     soc_specific: true,
 }
@@ -221,6 +228,189 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
+sh_binary {
+    name: "predump_gti0.sh",
+    owner: "google_devices",
+    src: "vendor/bin/dump_touch/predump_gti0.sh",
+    sub_dir: "dump_touch",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_aoc",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_aoc" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_devfreq",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_devfreq" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_exynos_display",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_exynos_display" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_fingerprint",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_fingerprint" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "dump_gsc.sh",
+    owner: "google_devices",
+    src: "vendor/bin/dump/dump_gsc.sh",
+    sub_dir: "dump",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_modem",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_modem" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_modemlog",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_modemlog" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_perf",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_perf" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_pixel_metrics",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_pixel_metrics" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_power",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_power" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_sensors",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_sensors" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_soc",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_soc" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_storage",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_storage" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "dump_thermal.sh",
+    owner: "google_devices",
+    src: "vendor/bin/dump/dump_thermal.sh",
+    sub_dir: "dump",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "dump_touch.sh",
+    owner: "google_devices",
+    src: "vendor/bin/dump/dump_touch.sh",
+    sub_dir: "dump",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "dump_trusty.sh",
+    owner: "google_devices",
+    src: "vendor/bin/dump/dump_trusty.sh",
+    sub_dir: "dump",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dump_umfw_stat",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/dump/dump_umfw_stat" ],
+    relative_install_path: "dump",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "flood.control.hal",
     owner: "google_devices",
@@ -265,6 +455,28 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.boot-service.default-pixel",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.boot-service.default-pixel" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.composer.hwc3-service.pixel",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.composer.hwc3-service.pixel" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.contexthub-service.generic",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.contexthub-service.generic" ],
@@ -287,9 +499,31 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.dumpstate-service",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.dumpstate-service" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.edgetpu.logging@service-edgetpu-logging",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.graphics.allocator-V2-service",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.graphics.allocator-V2-service" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -320,6 +554,28 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.lights-service.tangorpro",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.lights-service.tangorpro" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.memtrack-service.pixel",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.memtrack-service.pixel" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.neuralnetworks@service-darwinn-aidl",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl" ],
@@ -334,6 +590,17 @@ cc_prebuilt_binary {
     name: "android.hardware.oemlock-service.citadel",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/android.hardware.oemlock-service.citadel" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.power.stats-service.pixel",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/android.hardware.power.stats-service.pixel" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,
@@ -415,6 +682,14 @@ cc_prebuilt_binary {
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "disable_contaminant_detection.sh",
+    owner: "google_devices",
+    src: "vendor/bin/hw/disable_contaminant_detection.sh",
+    sub_dir: "hw",
     soc_specific: true,
 }
 
@@ -516,6 +791,54 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
+sh_binary {
+    name: "init.display.sh",
+    owner: "google_devices",
+    src: "vendor/bin/init.display.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.uwb.calib.sh",
+    owner: "google_devices",
+    src: "vendor/bin/init.uwb.calib.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "insmod.sh",
+    owner: "google_devices",
+    src: "vendor/bin/insmod.sh",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "pixelstats-vendor",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/pixelstats-vendor" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "predump_touch.sh",
+    owner: "google_devices",
+    src: "vendor/bin/predump_touch.sh",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "touch_gti_ical",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/touch_gti_ical" ],
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "trusty_metricsd",
     owner: "google_devices",
@@ -533,6 +856,13 @@ cc_prebuilt_binary {
     check_elf_files: false,
     prefer: true,
     strip: { none: true },
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "ufs_firmware_update.sh",
+    owner: "google_devices",
+    src: "vendor/bin/ufs_firmware_update.sh",
     soc_specific: true,
 }
 
@@ -575,24 +905,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ar_bridge",
-    owner: "google_devices",
-    src: "vendor/etc/chre/ar_bridge.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "blue",
-    owner: "google_devices",
-    src: "vendor/etc/chre/blue.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
     name: "capo",
     owner: "google_devices",
     src: "vendor/etc/chre/capo.so",
@@ -602,27 +914,9 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "cc",
-    owner: "google_devices",
-    src: "vendor/etc/chre/cc.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
     name: "drop",
     owner: "google_devices",
     src: "vendor/etc/chre/drop.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "geofence",
-    owner: "google_devices",
-    src: "vendor/etc/chre/geofence.so",
     filename_from_src: true,
     sub_dir: "chre",
     soc_specific: true,
@@ -647,15 +941,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ip_health",
-    owner: "google_devices",
-    src: "vendor/etc/chre/ip_health.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
     name: "motiondetector",
     owner: "google_devices",
     src: "vendor/etc/chre/motiondetector.so",
@@ -674,15 +959,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "smartbatching",
-    owner: "google_devices",
-    src: "vendor/etc/chre/smartbatching.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
     name: "system_signal_hub",
     owner: "google_devices",
     src: "vendor/etc/chre/system_signal_hub.so",
@@ -695,15 +971,6 @@ prebuilt_etc {
     name: "uv_exposure",
     owner: "google_devices",
     src: "vendor/etc/chre/uv_exposure.so",
-    filename_from_src: true,
-    sub_dir: "chre",
-    soc_specific: true,
-}
-
-prebuilt_etc {
-    name: "vice",
-    owner: "google_devices",
-    src: "vendor/etc/chre/vice.so",
     filename_from_src: true,
     sub_dir: "chre",
     soc_specific: true,
@@ -731,6 +998,32 @@ cc_prebuilt_library_shared {
     name: "android.hardware.oemlock-impl.nos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/android.hardware.oemlock-impl.nos.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.power.stats-impl.gs-common",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/android.hardware.power.stats-impl.gs-common.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.power.stats-impl.gs201",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/android.hardware.power.stats-impl.gs201.so" ] }
+    },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -818,9 +1111,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "aocx-V1-ndk",
+    name: "aocx-V2-ndk",
     owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/aocx-V1-ndk.so" ] } },
+    target: { android_arm64: { srcs: [ "vendor/lib64/aocx-V2-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "arm.graphics-V1-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/arm.graphics-V1-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1007,9 +1311,9 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.edgetpu.tachyon-V1-ndk",
+    name: "com.google.edgetpu.tachyon-ndk",
     owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu.tachyon-V1-ndk.so" ] } },
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu.tachyon-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1061,9 +1365,9 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.input-V4-ndk",
+    name: "com.google.input-V5-ndk",
     owner: "google_devices",
-    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.input-V4-ndk.so" ] } },
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.input-V5-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1139,6 +1443,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.allocator-aidl-impl",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: {
+        android_arm64: { srcs: [ "vendor/lib64/hw/android.hardware.graphics.allocator-aidl-impl.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "audio.platform.aoc",
     owner: "google_devices",
     relative_install_path: "hw",
@@ -1167,6 +1485,18 @@ cc_prebuilt_library_shared {
     owner: "google_devices",
     relative_install_path: "hw",
     target: { android_arm64: { srcs: [ "vendor/lib64/hw/fingerprint.fpc.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "mapper.pixel",
+    owner: "google_devices",
+    relative_install_path: "hw",
+    target: { android_arm64: { srcs: [ "vendor/lib64/hw/mapper.pixel.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1227,6 +1557,28 @@ cc_prebuilt_library_shared {
     name: "lib_reader",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/lib_reader.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libacryl_hdr_plugin",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libacryl_hdr_plugin.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libacryl",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libacryl.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1422,6 +1774,28 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdrmresource",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libdrmresource.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdump",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libdump.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libedgetpu_client.google",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_client.google.so" ] } },
@@ -1609,6 +1983,50 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libexynosdisplay",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libexynosdisplay.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libExynosHWCService",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libExynosHWCService.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynosutils",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libexynosutils.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynosv4l2",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libexynosv4l2.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libfvsam_prm_parser",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libfvsam_prm_parser.so" ] } },
@@ -1719,6 +2137,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libhwjpeg",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libhwjpeg.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libion_exynos",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libion_exynos.so" ] } },
@@ -1730,9 +2159,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libion_google",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libion_google.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmahalcontroller",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libmahalcontroller.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmemtrack-pixel",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libmemtrack-pixel.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -1840,6 +2291,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libspeechenhancer",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libspeechenhancer.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libstpreprocess21",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libstpreprocess21.so" ] } },
@@ -1898,6 +2360,61 @@ cc_prebuilt_library_shared {
     name: "libusf",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libusf.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvendorgraphicbuffer",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libvendorgraphicbuffer.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "modem_android_property_manager_impl",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/modem_android_property_manager_impl.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "modem_android_property_manager",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/modem_android_property_manager.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "modem_log_constants",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/modem_log_constants.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "modem_log_dumper",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/modem_log_dumper.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,
@@ -2102,6 +2619,24 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "android.hardware.dumpstate-service__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/android.hardware.dumpstate-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.lights-service.tangorpro__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/android.hardware.lights-service.tangorpro.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "android.hardware.neuralnetworks@service-darwinn-aidl__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.neuralnetworks@service-darwinn-aidl.xml",
@@ -2114,6 +2649,15 @@ prebuilt_etc_xml {
     name: "android.hardware.oemlock-service.citadel__2",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/android.hardware.oemlock-service.citadel.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.power.stats-service.pixel__2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -2165,6 +2709,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "hwc3-default",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/hwc3-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "manifest_android.hardware.drm-service.castkey",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.castkey.xml",
@@ -2177,6 +2730,15 @@ prebuilt_etc_xml {
     name: "manifest_aocx",
     owner: "google_devices",
     src: "vendor/etc/vintf/manifest/manifest_aocx.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "manifest_gralloc_aidl2",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/manifest_gralloc_aidl2.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -2201,9 +2763,27 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "manifest_wifi_ext_aidl",
+    name: "manifest",
     owner: "google_devices",
-    src: "vendor/etc/vintf/manifest/manifest_wifi_ext_aidl.xml",
+    src: "vendor/etc/vintf/manifest/manifest.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "memtrack",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/memtrack.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "pixel-display-default",
+    owner: "google_devices",
+    src: "vendor/etc/vintf/manifest/pixel-display-default.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,

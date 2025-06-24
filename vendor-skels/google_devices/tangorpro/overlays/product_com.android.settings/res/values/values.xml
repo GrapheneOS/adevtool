@@ -27,7 +27,10 @@
   <string name="network_dashboard_summary_no_mobile">Wi‑Fi</string>
   <string name="non_carrier_data_usage">Wi‑Fi data usage</string>
   <string name="regional_pref_footer_learn_more_link">"https://support.google.com/googlepixeltablet/?p=app_language"</string>
+  <string name="screensaver_settings_summary_dock_and_charging">While docked and charging</string>
   <string name="screensaver_settings_summary_off">Show favorite photos, artwork, clocks, and more when idle</string>
+  <string name="screensaver_settings_summary_postured_and_charging">While upright and charging</string>
+  <string name="screensaver_settings_summary_sleep">While charging</string>
   <string name="security_settings_fingerprint_enroll_consent_introduction_title">Allow Fingerprint Unlock</string>
   <string name="security_settings_fingerprint_enroll_find_sensor_message">"The fingerprint sensor is on the Power button.
 
@@ -73,10 +76,16 @@ Move your finger slightly each time. This helps capture more of your fingerprint
   <string name="suggested_fingerprint_lock_settings_title">Use Fingerprint Unlock</string>
   <string name="tether_settings_title_all">Tethering</string>
   <string name="tethering_footer_info">Use tethering to provide internet to other devices through USB, Ethernet, or Bluetooth.</string>
+  <string name="when_to_show_hubmode_charging">While charging</string>
+  <string name="when_to_show_hubmode_charging_and_upright">While charging and upright</string>
+  <string name="when_to_show_hubmode_docked">While docked</string>
+  <string name="when_to_show_hubmode_never">Never</string>
   <bool name="config_clear_calling_enabled">false</bool>
   <bool name="config_hspa_data_distinguishable">true</bool>
+  <bool name="config_show_communal_settings_mobile">true</bool>
   <bool name="config_show_emergency_settings">false</bool>
   <bool name="config_show_glanceable_hub_toggle_setting">true</bool>
+  <bool name="config_show_glanceable_hub_toggle_setting_mobile">true</bool>
   <bool name="config_show_premium_sms">false</bool>
   <bool name="config_show_sim_info">false</bool>
   <bool name="config_show_wifi_hotspot_settings">false</bool>
@@ -96,6 +105,10 @@ Move your finger slightly each time. This helps capture more of your fingerprint
     <item>1</item>
     <item>4</item>
   </integer-array>
+  <integer name="config_whenToStartHubModeDefault">2</integer>
+  <integer name="enrollment_collect_time">100</integer>
+  <integer name="enrollment_help_minimum_time_display">250</integer>
+  <integer name="enrollment_progress_minimum_time_display">250</integer>
   <fraction name="display_density_max_scale">133.12378%</fraction>
   <dimen name="dream_item_min_column_width">210dp</dimen>
   <dimen name="dream_preference_card_padding">20dp</dimen>
@@ -111,7 +124,14 @@ Move your finger slightly each time. This helps capture more of your fingerprint
   <string-array name="fingerprint_acquired_vendor">
     <item>Reposition finger. You already touched with this area of your fingerprint.</item>
   </string-array>
-  <integer name="enrollment_collect_time">100</integer>
-  <integer name="enrollment_help_minimum_time_display">250</integer>
-  <integer name="enrollment_progress_minimum_time_display">250</integer>
+  <string-array name="when_to_start_hubmode_values">
+    <item>never</item>
+    <item>while_charging</item>
+    <item>while_docked</item>
+  </string-array>
+  <string-array name="when_to_start_screensaver_values_no_battery">
+    <item>while_charging_only</item>
+    <item>while_docked_only</item>
+    <item>while_postured_only</item>
+  </string-array>
 </resources>

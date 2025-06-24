@@ -10,10 +10,6 @@
   <dimen name="burn_in_prevention_offset_y">0dp</dimen>
   <dimen name="burn_in_prevention_offset_y_clock">0dp</dimen>
   <dimen name="dream_overlay_complication_margin">24dp</dimen>
-  <dimen name="dream_overlay_container_padding_bottom">40dp</dimen>
-  <dimen name="dream_overlay_container_padding_end">40dp</dimen>
-  <dimen name="dream_overlay_container_padding_start">40dp</dimen>
-  <dimen name="dream_overlay_container_padding_top">0dp</dimen>
   <dimen name="keyguard_affordance_fixed_height">64dp</dimen>
   <dimen name="keyguard_affordance_fixed_padding">14dp</dimen>
   <dimen name="keyguard_affordance_fixed_radius">32dp</dimen>
@@ -35,6 +31,8 @@
   <bool name="config_notificationToContents">true</bool>
   <bool name="config_show_low_light_clock_when_docked">true</bool>
   <bool name="config_show_wifi_tethering">false</bool>
+  <bool name="config_showUmoOnHub">true</bool>
+  <bool name="config_swipeToOpenGlanceableHub">true</bool>
   <bool name="config_vibrateOnIconAnimation">true</bool>
   <bool name="doze_display_state_supported">true</bool>
   <bool name="doze_suspend_display_state_supported">false</bool>

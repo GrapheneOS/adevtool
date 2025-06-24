@@ -28,6 +28,8 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 # Missing system_ext SELinux context: /system_ext/bin/bluetooth_gci u:object_r:bluetooth_gci_exec:s0
 # Missing system_ext SELinux context: repair_mode.init_completed. u:object_r:repair_mode_init_prop:s0 prefix bool
 # Missing system_ext SELinux context: pixelsystemservice.device.contextualawarenessbool u:object_r:pixelsystemservice_contextualawareness_prop:s0 exact bool
+# Missing system_ext SELinux context: sota.charge.stop.level u:object_r:sota_prop:s0
+# Missing system_ext SELinux context: persist.vendor.pulsar u:object_r:vendor_sysuig_prop:s0
 # Missing system_ext SELinux context: user=_app isPrivApp=true name=com.android.theflippinapp domain=flag_flipper_app type=app_data_file levelFrom=all seinfo=platform
 # Missing system_ext SELinux context: user=system seinfo=platform name=com.google.android.repairmode domain=repair_mode_app type=app_data_file levelFrom=user
 # Missing system_ext SELinux context: user=_app seinfo=platform name=com.google.android.turboadapter domain=turbo_adapter type=app_data_file levelFrom=all
@@ -43,11 +45,22 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/google_devices/tangorpro/sepolicy
 
+# Missing vendor SELinux context: /dev/umts_wfc[01] u:object_r:pktrouter_device:s0
+# Missing vendor SELinux context: /data/vendor/nfc(/.*)? u:object_r:vendor_nfc_vendor_data_file:s0
+# Missing vendor SELinux context: /dev/fth_fd u:object_r:fingerprint_device:s0
+# Missing vendor SELinux context: /vendor/bin/wfc-pkt-router u:object_r:pktrouter_exec:s0
+# Missing vendor SELinux context: /vendor/bin/storage_init\.sh u:object_r:storage_init_exec:s0
+# Missing vendor SELinux context: /vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 # Missing vendor SELinux context: /vendor/bin/flood\.control\.hal u:object_r:flood_control_exec:s0
+# Missing vendor SELinux context: /vendor/bin/dump/dump_exynos_display u:object_r:dump_exynos_display_exec:s0
 # Missing vendor SELinux context: /mnt/vendor/persist/nest/cast_auth\.crt u:object_r:device_cert_file:s0
+# Missing vendor SELinux context: /vendor/bin/dump/dump_display_userdebug\.sh u:object_r:dump_exynos_display_userdebug_exec:s0
 # Missing vendor SELinux context: /vendor/bin/hw/android\.hardware\.drm-service\.castkey u:object_r:hal_drm_cast_exec:s0
 # Missing vendor SELinux context: vendor.pixel.system.phenotype. u:object_r:vendor_pss_systemphenotype_prop:s0
+# Missing vendor SELinux context: vendor.pktrouter u:object_r:vendor_ims_prop:s0
+# Missing vendor SELinux context: ro.vendor.flood. u:object_r:vendor_flood_prop:s0
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=mds name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
 # Missing vendor SELinux context: user=_app isPrivApp=true seinfo=platform name=com.google.mds domain=modem_diagnostic_app type=app_data_file levelFrom=user
+# Missing vendor SELinux context: com.google.input.ITwoshayNotificationService/default u:object_r:twoshay_notification_service:s0
 # Missing vendor SELinux context: com.google.flood.IFloodService/default u:object_r:flood_control_service:s0
 # Missing vendor SELinux context: android.hardware.drm.IDrmFactory/castkey u:object_r:hal_drm_service:s0
