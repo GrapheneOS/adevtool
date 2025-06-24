@@ -1,5 +1,5 @@
 canonical_name: "digi_ro"
-version: 64000000009
+version: 70000000010
 apns {
   apn {
     name: "Digi.Mobil"
@@ -41,6 +41,10 @@ configs {
   config {
     key: "enabledMMS"
     bool_value: false
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
   }
   config {
     key: "imsemergency.emergency_domain_preference_int_array"
@@ -104,6 +108,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "vendor.ims.carrier_config_use_aosp_ims_config_bool"
     bool_value: true
   }
@@ -113,5 +129,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1729074835
+  seconds: 1736946296
 }

@@ -1,5 +1,5 @@
 canonical_name: "fizz_ca"
-version: 64000000008
+version: 70000000009
 apns {
   apn {
     name: "mobile.bm"
@@ -29,6 +29,14 @@ apns {
     user_visible: false
     user_editable: false
   }
+  apn {
+    name: "Emergency"
+    value: "sos"
+    type: EMERGENCY
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
+  }
 }
 configs {
   config {
@@ -38,6 +46,7 @@ configs {
   config {
     key: "additional_nr_advanced_bands_int_array"
     int_array {
+      item: 77
       item: 78
     }
   }
@@ -388,5 +397,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185512
+  seconds: 1740119838
 }

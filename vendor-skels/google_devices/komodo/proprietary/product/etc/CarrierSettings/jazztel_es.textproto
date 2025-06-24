@@ -1,5 +1,5 @@
 canonical_name: "jazztel_es"
-version: 64000000008
+version: 70000000009
 apns {
   apn {
     name: "jazzinternet"
@@ -46,6 +46,10 @@ configs {
   }
   config {
     key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -235,6 +239,18 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -261,5 +277,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289927
+  seconds: 1736946296
 }

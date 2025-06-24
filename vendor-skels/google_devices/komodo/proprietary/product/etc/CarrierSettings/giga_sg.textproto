@@ -1,10 +1,12 @@
 canonical_name: "giga_sg"
-version: 64000000007
+version: 70000000008
 apns {
   apn {
     name: "giga"
     value: "giga"
     type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -204,5 +206,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724289927
+  seconds: 1739962072
 }

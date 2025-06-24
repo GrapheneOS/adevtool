@@ -1,5 +1,5 @@
 canonical_name: "m1_sg"
-version: 64000000011
+version: 70000000012
 apns {
   apn {
     name: "Sunsurf Mobile"
@@ -40,6 +40,10 @@ configs {
   config {
     key: "bsf.bsf_server_port_int"
     int_value: 8090
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
   }
   config {
     key: "carrier_nr_availabilities_int_array"
@@ -179,5 +183,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733311832
+  seconds: 1741781047
 }
