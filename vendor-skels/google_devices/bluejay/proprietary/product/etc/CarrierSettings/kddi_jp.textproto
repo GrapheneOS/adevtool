@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 64000000014
+version: 70000000016
 apns {
   apn {
     name: "5G NET"
@@ -26,6 +26,7 @@ apns {
     user_visible: false
     user_editable: false
     apn_set_id: 0
+    infrastructure_bitmask: 1
   }
   apn {
     name: "5G NET for DATA"
@@ -52,6 +53,7 @@ apns {
     user_visible: false
     user_editable: false
     apn_set_id: 1
+    infrastructure_bitmask: 1
   }
   apn {
     name: "KDDI JP OTA"
@@ -161,6 +163,13 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "au"
+  }
+  config {
+    key: "carrier_roaming_satellite_default_services_int_array"
+    int_array {
+      item: 2
+      item: 3
+    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -470,6 +479,14 @@ configs {
     }
   }
   config {
+    key: "satellite_ignore_data_roaming_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "satellite_information_redirect_url_string"
+    text_value: "https://www.au.com/mobile/service/starlink-direct/"
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -497,5 +514,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1729679639
+  seconds: 1742540155
 }

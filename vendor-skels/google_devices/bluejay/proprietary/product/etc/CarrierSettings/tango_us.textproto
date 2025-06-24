@@ -1,5 +1,5 @@
 canonical_name: "tango_us"
-version: 64000000005
+version: 70000000006
 apns {
   apn {
     name: "globaldata"
@@ -29,7 +29,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -90,7 +90,13 @@ configs {
     key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
     bool_value: true
   }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS|IMS"
+    }
+  }
 }
 last_updated {
-  seconds: 1706100353
+  seconds: 1739349299
 }

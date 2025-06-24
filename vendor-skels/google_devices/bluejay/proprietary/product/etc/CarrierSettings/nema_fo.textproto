@@ -1,5 +1,5 @@
 canonical_name: "nema_fo"
-version: 64000000003
+version: 70000000004
 apns {
   apn {
     name: "internet"
@@ -80,6 +80,28 @@ configs {
     }
   }
   config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.codec_attribute_cmr_int"
+            int_value: 3
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -103,5 +125,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732679809
+  seconds: 1740426808
 }

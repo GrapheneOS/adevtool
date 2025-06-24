@@ -1,5 +1,5 @@
 canonical_name: "o2prepaid_de"
-version: 64000000021
+version: 70000000022
 apns {
   apn {
     name: "o2 DE IMS"
@@ -228,8 +228,8 @@ configs {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
-      item: 2
-      item: 5
+      item: 15
+      item: 16
     }
   }
   config {
@@ -303,5 +303,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1712735153
+  seconds: 1736946251
 }

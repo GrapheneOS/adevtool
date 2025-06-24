@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 64000000017
+version: 70000000018
 apns {
   apn {
     name: "Vodafone DE"
@@ -41,6 +41,14 @@ apns {
   }
 }
 configs {
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
   config {
     key: "carrier_certificate_string_array"
     text_array {
@@ -127,12 +135,20 @@ configs {
     bool_value: false
   }
   config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
     key: "imsss.ut_iptype_home_int"
     int_value: 0
   }
   config {
     key: "imsss.ut_iptype_roaming_int"
     int_value: 0
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
   }
   config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
@@ -299,5 +315,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242306
+  seconds: 1739349299
 }

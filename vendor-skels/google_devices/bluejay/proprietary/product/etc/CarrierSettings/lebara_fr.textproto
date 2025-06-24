@@ -1,5 +1,5 @@
 canonical_name: "lebara_fr"
-version: 64000000001
+version: 70000000002
 apns {
   apn {
     name: "Lebara"
@@ -11,13 +11,26 @@ apns {
     roaming_protocol: IPV4V6
     user_editable: false
   }
+  apn {
+    name: "Lebara IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
   config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1707299248
+  seconds: 1739493470
 }

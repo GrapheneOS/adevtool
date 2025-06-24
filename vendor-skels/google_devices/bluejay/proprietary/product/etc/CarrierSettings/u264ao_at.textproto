@@ -1,5 +1,5 @@
 canonical_name: "u264ao_at"
-version: 64000000011
+version: 70000000013
 apns {
   apn {
     name: "U+264A-AT Operational"
@@ -131,16 +131,9 @@ configs {
       item: 6
       item: 5
       item: 2
-      item: 0
       item: 8
       item: 9
       item: 11
-    }
-  }
-  config {
-    key: "imsss.ut_terminal_based_services_int_array"
-    int_array {
-      item: 10
     }
   }
   config {
@@ -330,18 +323,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "rtt_downgrade_supported_bool"
-    bool_value: false
-  }
-  config {
-    key: "rtt_supported_bool"
-    bool_value: false
-  }
-  config {
-    key: "rtt_supported_while_roaming_bool"
-    bool_value: false
-  }
-  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -351,5 +332,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732098872
+  seconds: 1740119803
 }

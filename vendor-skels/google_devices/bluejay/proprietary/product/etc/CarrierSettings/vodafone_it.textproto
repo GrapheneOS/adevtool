@@ -1,5 +1,5 @@
 canonical_name: "vodafone_it"
-version: 64000000014
+version: 70000000014
 apns {
   apn {
     name: "Tethering Internet"

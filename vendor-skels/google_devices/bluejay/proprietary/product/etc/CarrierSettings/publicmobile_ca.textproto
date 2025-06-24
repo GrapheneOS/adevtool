@@ -1,5 +1,5 @@
 canonical_name: "publicmobile_ca"
-version: 64000000026
+version: 70000000026
 apns {
   apn {
     name: "Tethered Mobile Internet"

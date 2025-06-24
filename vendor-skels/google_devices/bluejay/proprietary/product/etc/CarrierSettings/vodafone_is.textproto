@@ -1,5 +1,5 @@
 canonical_name: "vodafone_is"
-version: 64000000002
+version: 70000000004
 apns {
   apn {
     name: "Vodafone Internet"
@@ -19,7 +19,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     user_visible: false
   }
   apn {
@@ -37,12 +37,58 @@ configs {
     text_value: "bsf.ims.mnc002.mcc274.pub.3gppnetwork.org"
   }
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "ims.sip_over_ipsec_enabled_bool"
     bool_value: false
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
     text_value: "xcap.ims.mnc002.mcc274.pub.3gppnetwork.org"
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.codec_attribute_cmr_int"
+            int_value: 3
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
   }
   config {
     key: "maxImageHeight"
@@ -56,7 +102,11 @@ configs {
     key: "maxMessageSize"
     int_value: 1048576
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1730276150
+  seconds: 1741179687
 }

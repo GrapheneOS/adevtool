@@ -1,0 +1,36 @@
+canonical_name: "tusass_gl"
+version: 70000000001
+apns {
+  apn {
+    name: "Tele Internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "Tele MMS"
+    value: "mms"
+    type: MMS
+    mmsc: "https://mms.tele.gl/mms/wapenc"
+    mmsc_proxy: "10.112.222.37"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1740560703
+}

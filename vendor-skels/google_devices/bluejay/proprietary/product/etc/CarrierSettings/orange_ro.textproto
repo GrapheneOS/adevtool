@@ -1,5 +1,5 @@
 canonical_name: "orange_ro"
-version: 64000000010
+version: 70000000011
 apns {
   apn {
     name: "Orange Internet"
@@ -35,11 +35,6 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
-  }
-  config {
-    key: "imssms.sms_over_ims_supported_rats_int_array"
-    int_array {
-    }
   }
   config {
     key: "imsss.ut_server_based_services_int_array"
@@ -185,5 +180,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732098872
+  seconds: 1740560703
 }

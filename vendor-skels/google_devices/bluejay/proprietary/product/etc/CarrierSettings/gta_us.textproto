@@ -1,0 +1,34 @@
+canonical_name: "gta_us"
+version: 70000000001
+apns {
+  apn {
+    name: "GTA"
+    value: "mpulse.gta.net"
+    type: DEFAULT
+    user_editable: false
+  }
+  apn {
+    name: "GTA Hotspot"
+    value: "tether.gta.net"
+    type: DUN
+    user_visible: false
+  }
+  apn {
+    name: "GTA IMS"
+    value: "IMS"
+    type: IMS
+    bearer_bitmask: "14|20"
+    user_visible: false
+  }
+  apn {
+    name: "GTA Service"
+    value: "service"
+    type: XCAP
+    user_visible: false
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1741179687
+}

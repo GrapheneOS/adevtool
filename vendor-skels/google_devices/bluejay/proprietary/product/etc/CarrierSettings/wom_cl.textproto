@@ -1,0 +1,35 @@
+canonical_name: "wom_cl"
+version: 70000000001
+apns {
+  apn {
+    name: "Internet WOM"
+    value: "internet"
+    type: DEFAULT
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "MMS Nextel"
+    value: "mms.nextelmovil.cl"
+    type: MMS
+    authtype: 0
+    mmsc: "http://3gmms.nextelmovil.cl"
+    mmsc_proxy: "129.192.129.104"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1739493470
+}

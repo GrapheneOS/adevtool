@@ -1,5 +1,5 @@
 canonical_name: "erate_no"
-version: 64000000005
+version: 70000000006
 apns {
   apn {
     name: "eRate Internet"
@@ -17,13 +17,17 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
   config {
     key: "default_vm_number_string"
     text_value: "+4796630000"
@@ -35,12 +39,6 @@ configs {
   config {
     key: "ims.ipv6_sip_mtu_size_cellular_int"
     int_value: 1300
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -115,7 +113,13 @@ configs {
     key: "imsvoice.ringing_timer_millis_int"
     int_value: 120000
   }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+    }
+  }
 }
 last_updated {
-  seconds: 1724912460
+  seconds: 1739493470
 }

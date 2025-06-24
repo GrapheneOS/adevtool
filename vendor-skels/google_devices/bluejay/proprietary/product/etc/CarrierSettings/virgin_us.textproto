@@ -1,5 +1,5 @@
 canonical_name: "virgin_us"
-version: 64000000006
+version: 70000000006
 apns {
   apn {
     name: "Internet"

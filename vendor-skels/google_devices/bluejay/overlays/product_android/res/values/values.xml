@@ -32,12 +32,12 @@
   <bool name="config_ringtoneVibrationSettingsSupported">true</bool>
   <bool name="config_safetyProtectionEnabled">true</bool>
   <bool name="config_settingsHelpLinksEnabled">true</bool>
+  <bool name="config_supportDoubleTapSleep">true</bool>
   <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
   <bool name="config_supportsCamToggle">true</bool>
   <bool name="config_supportsMicToggle">true</bool>
   <bool name="config_swipe_up_gesture_setting_available">true</bool>
   <bool name="config_systemCaptionsServiceCallsEnabled">true</bool>
-  <bool name="config_useRoundIcon">true</bool>
   <dimen name="config_bottomDialogCornerRadius">16dp</dimen>
   <dimen name="config_buttonCornerRadius">4dp</dimen>
   <dimen name="config_dialogCornerRadius">28dp</dimen>
@@ -45,6 +45,7 @@
   <dimen name="config_keyboardHapticFeedbackFixedAmplitude">0.62</dimen>
   <dimen name="config_progressBarCornerRadius">1000dp</dimen>
   <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
+  <integer name="config_longPressOnHomeBehavior">2</integer>
   <integer name="config_maximumCallLogEntriesPerSim">1000</integer>
   <string-array name="config_forceSlowJpegModeList">
     <item>com.facebook.orca</item>
@@ -66,6 +67,10 @@
     <item>-0.000000000910931179</item>
     <item>0.000207598323269139</item>
     <item>-0.349361641294833436</item>
+  </string-array>
+  <string-array name="config_notificationDefaultUnsupportedAdjustments">
+    <item>key_type</item>
+    <item>key_summarization</item>
   </string-array>
   <string-array name="config_udfps_enroll_stage_thresholds">
     <item>0.065</item>

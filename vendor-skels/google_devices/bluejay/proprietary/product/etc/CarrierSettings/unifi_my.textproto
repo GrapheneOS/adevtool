@@ -1,5 +1,5 @@
 canonical_name: "unifi_my"
-version: 64000000006
+version: 70000000006
 apns {
   apn {
     name: "Internet"

@@ -1,5 +1,5 @@
 canonical_name: "xfinity2_us"
-version: 64000000009
+version: 70000000011
 apns {
   apn {
     name: "Verizon"
@@ -241,6 +241,12 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "Xfinity Mobile"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -1228,5 +1234,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742179685
+  seconds: 1741940414
 }

@@ -1,5 +1,5 @@
 canonical_name: "lebara_gb"
-version: 64000000007
+version: 70000000007
 apns {
   apn {
     name: "Lebara Internet"

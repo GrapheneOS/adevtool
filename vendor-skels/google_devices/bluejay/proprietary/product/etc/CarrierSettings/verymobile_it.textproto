@@ -1,5 +1,5 @@
 canonical_name: "verymobile_it"
-version: 64000000025
+version: 70000000025
 apns {
   apn {
     name: "IMS"

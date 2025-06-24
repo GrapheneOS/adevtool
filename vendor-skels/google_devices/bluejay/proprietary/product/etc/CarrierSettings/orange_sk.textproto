@@ -1,5 +1,5 @@
 canonical_name: "orange_sk"
-version: 64000000013
+version: 70000000014
 apns {
   apn {
     name: "Orange SK"
@@ -39,6 +39,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "always_play_remote_hold_tone_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_certificate_string_array"
     text_array {
@@ -185,5 +189,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496787
+  seconds: 1739962012
 }
