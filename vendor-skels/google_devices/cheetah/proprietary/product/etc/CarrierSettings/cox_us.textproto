@@ -1,5 +1,5 @@
 canonical_name: "cox_us"
-version: 64000000011
+version: 70000000013
 apns {
   apn {
     name: "Cox"
@@ -1172,5 +1172,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1729679646
+  seconds: 1741940421
 }

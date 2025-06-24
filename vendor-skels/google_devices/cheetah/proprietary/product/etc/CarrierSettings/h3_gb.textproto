@@ -1,5 +1,5 @@
 canonical_name: "h3_gb"
-version: 64000000018
+version: 70000000018
 apns {
   apn {
     name: "3hotspot"

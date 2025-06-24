@@ -1,5 +1,5 @@
 canonical_name: "eastlink_ca"
-version: 64000000007
+version: 70000000007
 apns {
   apn {
     name: "Eastlink MMS"

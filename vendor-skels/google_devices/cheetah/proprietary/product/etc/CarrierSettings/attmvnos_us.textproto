@@ -1,5 +1,5 @@
 canonical_name: "attmvnos_us"
-version: 64000000022
+version: 70000000022
 apns {
   apn {
     name: "MVNO Reseller"

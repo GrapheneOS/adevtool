@@ -1,10 +1,19 @@
 canonical_name: "test001_zz"
-version: 64000000003
+version: 70000000004
 apns {
   apn {
     name: "TEST_DEFAULT"
     value: "default"
     type: DEFAULT
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
   }
 }
 configs {
@@ -14,6 +23,10 @@ configs {
       item: 1
       item: 2
     }
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -49,5 +62,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724979925
+  seconds: 1738826916
 }

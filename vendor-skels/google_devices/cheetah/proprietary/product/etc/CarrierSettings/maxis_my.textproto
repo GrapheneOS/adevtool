@@ -1,5 +1,5 @@
 canonical_name: "maxis_my"
-version: 64000000015
+version: 70000000016
 apns {
   apn {
     name: "Maxis Internet"
@@ -45,6 +45,10 @@ configs {
   config {
     key: "bsf.bsf_server_port_int"
     int_value: 8091
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 2
   }
   config {
     key: "carrier_name_override_bool"
@@ -143,5 +147,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912472
+  seconds: 1734527046
 }

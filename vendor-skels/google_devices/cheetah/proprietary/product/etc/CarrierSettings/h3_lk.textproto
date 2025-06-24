@@ -1,0 +1,33 @@
+canonical_name: "h3_lk"
+version: 70000000001
+apns {
+  apn {
+    name: "HUTCH"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
+    key: "preferred_ike_protocol_int"
+    int_value: 40
+  }
+}
+last_updated {
+  seconds: 1741940421
+}

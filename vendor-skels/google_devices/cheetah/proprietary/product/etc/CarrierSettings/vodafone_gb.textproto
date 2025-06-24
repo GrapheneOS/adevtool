@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gb"
-version: 64000000023
+version: 70000000024
 apns {
   apn {
     name: "Vodafone UK Data"
@@ -212,6 +212,14 @@ configs {
     int_value: 120
   }
   config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.block_iwlan_in_international_roaming_without_wwan_bool"
     bool_value: true
   }
@@ -317,5 +325,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242312
+  seconds: 1739962021
 }

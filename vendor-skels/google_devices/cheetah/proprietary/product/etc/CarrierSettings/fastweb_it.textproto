@@ -1,5 +1,5 @@
 canonical_name: "fastweb_it"
-version: 64000000010
+version: 70000000012
 apns {
   apn {
     name: "Fastweb"
@@ -20,8 +20,29 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "HOS"
+    value: "hos"
+    type: XCAP
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.mnc008.mcc222.pub.3gppnetwork.org"
+  }
+  config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "bsf.bsf_transport_type_int"
+    int_value: 3
+  }
   config {
     key: "carrier_default_wfc_ims_enabled_bool"
     bool_value: true
@@ -29,6 +50,10 @@ configs {
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
   }
   config {
     key: "carrier_volte_available_bool"
@@ -47,9 +72,52 @@ configs {
     bool_value: true
   }
   config {
-    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.mnc008.mcc222.pub.3gppnetwork.org"
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 443
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
     int_array {
+      item: 1
+      item: 2
+      item: 3
+      item: 4
+      item: 5
+      item: 6
+      item: 7
+      item: 12
+      item: 17
+      item: 18
+      item: 19
+      item: 20
+      item: 21
+      item: 13
+      item: 14
+      item: 15
+      item: 16
+      item: 0
+      item: 8
+      item: 11
+      item: 9
     }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.ut_transport_type_int"
+    int_value: 3
   }
   config {
     key: "imsvoice.evs_payload_description_bundle"
@@ -99,6 +167,18 @@ configs {
     bool_value: false
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -108,5 +188,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1727870744
+  seconds: 1739962021
 }
