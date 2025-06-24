@@ -1,5 +1,5 @@
 canonical_name: "elisa2_fi"
-version: 64000000013
+version: 70000000014
 apns {
   apn {
     name: "Elisa Internet"
@@ -203,10 +203,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1732679849
+  seconds: 1736946296
 }

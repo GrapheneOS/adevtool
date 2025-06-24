@@ -1,5 +1,5 @@
 canonical_name: "rogers_ca"
-version: 64000000010
+version: 70000000012
 apns {
   apn {
     name: "Rogers Tethering"
@@ -459,5 +459,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1733311832
+  seconds: 1745456796
 }

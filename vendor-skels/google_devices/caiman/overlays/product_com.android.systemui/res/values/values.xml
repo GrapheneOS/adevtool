@@ -9,6 +9,7 @@
   <bool name="config_nfc_conflict_with_usb_audio">true</bool>
   <bool name="config_nfc_conflict_with_wlc">true</bool>
   <bool name="config_screen_protector_notification_enabled">true</bool>
+  <bool name="config_screen_protector_notification_v2">true</bool>
   <bool name="config_vibrateOnIconAnimation">true</bool>
   <bool name="config_wireless_charging_warning_enabled">true</bool>
   <integer-array name="config_nfc_conflict_with_usb_audio_productid">

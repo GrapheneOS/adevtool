@@ -1,5 +1,5 @@
 canonical_name: "tracfoneverizon_us"
-version: 64000000009
+version: 70000000011
 apns {
   apn {
     name: "Verizon"
@@ -232,14 +232,6 @@ configs {
       item: "dun"
       item: "supl"
     }
-  }
-  config {
-    key: "carrier_name_override_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_name_string"
-    text_value: "TFW"
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -1206,7 +1198,7 @@ configs {
   }
   config {
     key: "wfc_spn_format_idx_int"
-    int_value: 1
+    int_value: 7
   }
   config {
     key: "wifi_calls_can_be_hd_audio"
@@ -1218,5 +1210,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1725936038
+  seconds: 1736946296
 }

@@ -1,5 +1,5 @@
 canonical_name: "airtel_in"
-version: 64000000008
+version: 70000000011
 apns {
   apn {
     name: "Internet"
@@ -70,6 +70,12 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "airtel"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_ussd_method_int"
@@ -304,7 +310,7 @@ configs {
   }
   config {
     key: "qns.disallow_iwlan_initial_attach_int"
-    int_value: 0
+    int_value: 2
   }
   config {
     key: "qns.enable_minimum_guarding_timer_after_connected_apn_string_array"
@@ -318,6 +324,10 @@ configs {
   }
   config {
     key: "qns.support_wfc_during_airplane_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "qns.support_wfc_in_international_roaming"
     bool_value: false
   }
   config {
@@ -345,5 +355,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496820
+  seconds: 1740119838
 }

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 64000000015
+version: 70000000017
 apns {
   apn {
     name: "IMS"
@@ -47,6 +47,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_allow_transfer_ims_call_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_certificate_string_array"
     text_array {
       item: "E4441B21B7374947FBA0CB34EEA9F600F05181056126FAC5FFEB9C34A2841C88:com.zentity.vodafone"
@@ -86,6 +90,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -177,6 +185,18 @@ configs {
     int_value: 2
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -194,5 +214,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242344
+  seconds: 1739493494
 }

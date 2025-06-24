@@ -5,8 +5,10 @@
   <integer name="config_ambient_brightness_changed_debounce_ms">500</integer>
   <integer name="config_compensation_filter_horizon">1500</integer>
   <dimen name="config_compensation_filter_intercept">10</dimen>
+  <dimen name="config_display_mode_brightness_vote_threshold">0.00147</dimen>
   <dimen name="config_lbe_lux_switch_threshold">1</dimen>
   <dimen name="config_za_compensation_brightness_enter_threshold">0.4</dimen>
+  <bool name="config_is_display_mode_manager_supported">true</bool>
   <array name="config_za_primary_display_condition1_brightness_thresholds">
     <item>0.41463</item>
     <item>0.42683</item>
