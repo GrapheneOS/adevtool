@@ -105,10 +105,10 @@ overlays/vendor_com.android.systemui/res/values: dir
 overlays/vendor_com.android.systemui/res/values/values.xml: 2ec6cb22f9bd7455c415de9d673fd652b1108cb2b7961196bd33beb85727c2d9
 panther.mk: 764e4683d3c224b21e3648c4518f456fbdb17c63df43090561109716db293745
 proprietary: dir
-proprietary-files.txt: f02d5fe4c13374dfd243a5f4d9c15f1a6f94dbf477f8dcfa8e8649d666d7b18d
+proprietary-files.txt: 8a99cf9bd31a1f1ba39e616bc4704572e37b46945065f8f5cf6b5f3433cac874
 proprietary/Android.bp: a57e85bc8995fffbaaaaec07becb57ca78ec186980e62a3cbed0259f5bc68b95
 proprietary/BoardConfigVendor.mk: 7ffe7b2746ad77bb570fc0fe6c4bde5e61e024bf730c7281688b201d1b411101
-proprietary/device-vendor.mk: b2c737fbc5c35d1779b4ac87e78d7c90bc1391954052e8d9cc368db352dbc7be
+proprietary/device-vendor.mk: fe3856c137650b61c1ab63ac1714dfa2034971d73ac91da8f3fa5d68cf24a8b5
 proprietary/linker-config-adevtool.json: 1f9e401c56f463f32e208aee192aaca3bf367909f95df8da0f18a320cb551e54
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -927,6 +927,8 @@ proprietary/vendor/etc/fstab.modem: ea2a09fb83d8597d977215caa1dc6d34a801bf61b02f
 proprietary/vendor/etc/fstab.persist: 1af4f80fca67234a1a22bfad7182d9185093b361aa7a6ce4842e2de7e62d8b30
 proprietary/vendor/etc/gnss: dir
 proprietary/vendor/etc/gnss/gps.cer: c7085bbf9d2df23aa0c0b0f1ff755f3cacc8c23baaf2713e8044916d9e6e2eaf
+proprietary/vendor/etc/gnss/lhd.conf: 4c628dc6e160f8fd2aff4c44275a958cdc405a1f707ede95a6f71ca659ab82ae
+proprietary/vendor/etc/gnss/scd.conf: 0d5353135565eae6bb0bfdcfd9d8a94630a957f01853338e0e2fd9792fd77f58
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init.common.cfg: f4104573e29026ac335f03703e24242a304bd74cbb99f5d5848c9968901444fb
 proprietary/vendor/etc/init/Exynos_C2.rc: e1a67aedbf8524273e9b755409da6e4f5660631b59d6e502e35e4a778cb15422
@@ -961,6 +963,7 @@ proprietary/vendor/etc/init/hw: dir
 proprietary/vendor/etc/init/hw/init.gs201.rc: 6bc5dd6de4e07d1f049648cb1fc1d5897734dad3cd9bcc6ac7334abf47061143
 proprietary/vendor/etc/init/hw/init.gs201.storage.rc: 44565b0af9ad7324a5af004e5714d50b6fbb2c53e18b0cbd551561e33efe678f
 proprietary/vendor/etc/init/hw/init.gs201.usb.rc: 403c237812bf6ce9f79b5cf906cc5c0f02040154c8507a503420cc0244b03aa6
+proprietary/vendor/etc/init/hw/init.pantah.rc: d6c1a9317c0ee1648fd3d2aa48639720b82453283151e08295834e7572e46a1d
 proprietary/vendor/etc/init/hwc3-pixel.rc: 36eb37af0b1ab6f11a624a636bd92fc8ab7778f5d84405d45894cf518d374632
 proprietary/vendor/etc/init/init.aoc.rc: fbb768e18e950c9b96f2aa5110cfb673898e2e7b154af197736ddbe45909b879
 proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc: db7f011647b44e9bd7457ebff5d93c736755abe25e91514bebb79bc4d368fe31
