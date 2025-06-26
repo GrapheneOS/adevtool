@@ -777,6 +777,8 @@ vendor/etc/earcheek_classifier.tflite
 vendor/etc/fstab.modem
 vendor/etc/fstab.persist
 vendor/etc/gnss/gps.cer
+vendor/etc/gnss/lhd.conf
+vendor/etc/gnss/scd.conf
 vendor/etc/init.common.cfg
 vendor/etc/init/android.hardware.authsecret-service.citadel.rc
 vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc
@@ -809,6 +811,7 @@ vendor/etc/init/google.hardware.media.c2@1.0-service.rc
 vendor/etc/init/hw/init.gs201.rc
 vendor/etc/init/hw/init.gs201.storage.rc
 vendor/etc/init/hw/init.gs201.usb.rc
+vendor/etc/init/hw/init.pantah.rc
 vendor/etc/init/hwc3-pixel.rc
 vendor/etc/init/init_dauntless.rc
 vendor/etc/init/init.aoc.rc
@@ -884,7 +887,6 @@ vendor/etc/permissions/android.hardware.strongbox_keystore.xml
 vendor/etc/permissions/android.hardware.telephony.gsm.xml
 vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml
 vendor/etc/permissions/android.hardware.telephony.ims.xml
-vendor/etc/permissions/android.hardware.uwb.xml
 vendor/etc/permissions/com.google.android.camera.experimental2022.xml
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml
 vendor/etc/pixelstats_config.json

@@ -105,10 +105,10 @@ overlays/vendor_com.android.systemui/res: dir
 overlays/vendor_com.android.systemui/res/values: dir
 overlays/vendor_com.android.systemui/res/values/values.xml: 3b60e90e2952c1fd9fcf3e7d24f495e7e84549af7eadb7262012d4df00f83273
 proprietary: dir
-proprietary-files.txt: c1afe9d7a6b70cc92ae224afcaef98b72fa1b7376ffe99ee13d4cbdeb19d184c
+proprietary-files.txt: c7dc942ef1b3f0a817a8b5ed856b5620dd2d62d6429b9d1e5c423855c7e98e63
 proprietary/Android.bp: 7b330b36f05b4a265f2baae03ab96b03a231be2443af94d5430714d69b9876d3
 proprietary/BoardConfigVendor.mk: 1dc051942eb5c7a3729e0a0d775ef16f03ea2c6b07e190c422837d56ddba6a45
-proprietary/device-vendor.mk: d6d294c251163a1c7806f1462e4377f96d3d2d2cab47f0cfb8b231eeca26b57d
+proprietary/device-vendor.mk: a0788d27e7aa34e8e82c563fe97eda5dbe18982b64777a49450fef8be078f6f5
 proprietary/linker-config-adevtool.json: 1f9e401c56f463f32e208aee192aaca3bf367909f95df8da0f18a320cb551e54
 proprietary/product: dir
 proprietary/product/etc: dir
@@ -936,6 +936,8 @@ proprietary/vendor/etc/fstab.modem: ea2a09fb83d8597d977215caa1dc6d34a801bf61b02f
 proprietary/vendor/etc/fstab.persist: 1af4f80fca67234a1a22bfad7182d9185093b361aa7a6ce4842e2de7e62d8b30
 proprietary/vendor/etc/gnss: dir
 proprietary/vendor/etc/gnss/gps.cer: c7085bbf9d2df23aa0c0b0f1ff755f3cacc8c23baaf2713e8044916d9e6e2eaf
+proprietary/vendor/etc/gnss/lhd.conf: 4c628dc6e160f8fd2aff4c44275a958cdc405a1f707ede95a6f71ca659ab82ae
+proprietary/vendor/etc/gnss/scd.conf: 0d5353135565eae6bb0bfdcfd9d8a94630a957f01853338e0e2fd9792fd77f58
 proprietary/vendor/etc/init: dir
 proprietary/vendor/etc/init.common.cfg: f4104573e29026ac335f03703e24242a304bd74cbb99f5d5848c9968901444fb
 proprietary/vendor/etc/init/Exynos_C2.rc: e1a67aedbf8524273e9b755409da6e4f5660631b59d6e502e35e4a778cb15422
@@ -970,6 +972,7 @@ proprietary/vendor/etc/init/hw: dir
 proprietary/vendor/etc/init/hw/init.gs201.rc: 6bc5dd6de4e07d1f049648cb1fc1d5897734dad3cd9bcc6ac7334abf47061143
 proprietary/vendor/etc/init/hw/init.gs201.storage.rc: 44565b0af9ad7324a5af004e5714d50b6fbb2c53e18b0cbd551561e33efe678f
 proprietary/vendor/etc/init/hw/init.gs201.usb.rc: 403c237812bf6ce9f79b5cf906cc5c0f02040154c8507a503420cc0244b03aa6
+proprietary/vendor/etc/init/hw/init.pantah.rc: d6c1a9317c0ee1648fd3d2aa48639720b82453283151e08295834e7572e46a1d
 proprietary/vendor/etc/init/hwc3-pixel.rc: 36eb37af0b1ab6f11a624a636bd92fc8ab7778f5d84405d45894cf518d374632
 proprietary/vendor/etc/init/init.aoc.rc: fbb768e18e950c9b96f2aa5110cfb673898e2e7b154af197736ddbe45909b879
 proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc: db7f011647b44e9bd7457ebff5d93c736755abe25e91514bebb79bc4d368fe31
@@ -1046,7 +1049,6 @@ proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml: 538b
 proprietary/vendor/etc/permissions/android.hardware.telephony.gsm.xml: eb4e03a14d2004e88bc55072780b9996bce93c96db8ce2465e755f3749c4a145
 proprietary/vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml: f17ddcbaa2d6fcf515a89293898d393e942aaed0b90cb67b59fab2c8ebcb0f02
 proprietary/vendor/etc/permissions/android.hardware.telephony.ims.xml: 6f0d8f1e1dc0657e39ff63129b1633fdd9971417dcc9982271f089024666dadd
-proprietary/vendor/etc/permissions/android.hardware.uwb.xml: 7de875e65c51b120c053cbd58d9a17860e42054ffdc8c1576418951f1c31130d
 proprietary/vendor/etc/permissions/com.google.android.camera.experimental2022.xml: ea7454c19ef6e661da9454924f2f783413b86e5301e628c6b4fc937fc2d34492
 proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml: 2d3bbe40336a58b6ce38a2093695c5ca95db40e6a8203223951408647abc54ba
 proprietary/vendor/etc/pixelstats_config.json: 3ad2c2bd85e66c827386bd32a58177a342c6786f3d8cdbb4ae3269870a810260
