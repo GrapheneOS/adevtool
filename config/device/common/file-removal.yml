@@ -451,6 +451,7 @@ filters:
       # Kernel modules
       - odm/lib/modules/
       - odm_dlkm/
+      - system_dlkm/
       - vendor/lib/modules/
       - vendor_dlkm/
       # Overlay apps
