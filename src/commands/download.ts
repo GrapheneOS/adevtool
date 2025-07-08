@@ -1,5 +1,4 @@
 import { Command, Flags } from '@oclif/core'
-import assert from 'assert'
 
 import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs, resolveBuildId } from '../config/device'
 import { IMAGE_DOWNLOAD_DIR } from '../config/paths'
@@ -69,7 +68,17 @@ export default class Download extends Command {
     }
 
     if (flags.unpack) {
-      assert(types.includes(ImageType.Factory) || types.includes(ImageType.Ota), 'missing "-t factory|ota"')
+      for (let image of images) {
+        if (image.isGrapheneOsImage() && image.type === ImageType.Factory) {
+          this.log(
+            'Skipping unpack of ' +
+              image.fileName +
+              ', since optimized factory images are currently not supported. ' +
+              'Use "-t ota" to unpack the corresponding OTA image instead.',
+          )
+        }
+      }
+
       let imageMap = prepareDeviceImages(await index, types, await deviceConfigs, flags.buildId)
 
       for (let [deviceBuildId, deviceImages] of await imageMap) {
