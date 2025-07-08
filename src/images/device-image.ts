@@ -36,8 +36,16 @@ export class DeviceImage {
     let buildProps = index.get(deviceBuildId)
     if (buildProps === undefined) {
       if (buildId.startsWith(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX)) {
+        let infix: string
+        if (type === ImageType.Factory) {
+          infix = 'install'
+        } else if (type === ImageType.Ota) {
+          infix = 'ota_update'
+        } else {
+          throw new Error(`unknown type ${type}`)
+        }
         let fileName =
-          deviceConfig.device.name + '-factory-' + buildId.substring(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX.length) + '.zip'
+          deviceConfig.device.name + `-${infix}-` + buildId.substring(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX.length) + '.zip'
 
         let url = 'https://releases.grapheneos.org/' + fileName
 
@@ -78,6 +86,10 @@ export class DeviceImage {
       }
     }
     return res
+  }
+
+  isGrapheneOsImage() {
+    return this.buildId.startsWith(GRAPHENEOS_PSEUDO_BUILD_ID_PREFIX)
   }
 
   toString() {
