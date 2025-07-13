@@ -7,3 +7,28 @@ platform:
 
 includes:
   - common/gen6pixel.yml
+
+synthetic_overlays:
+  - sourcePaths:
+      - system_ext/priv-app/SettingsGoogle/SettingsGoogle.apk
+    moduleName: SettingsGoogleSyntheticOverlayBluejay
+    targetPackage: com.android.settings
+    resourcesToInclude:
+      string:
+        - battery_tip_early_replacement_summary
+        - battery_tip_replacement_summary
+        - charge_cycle_count
+        - help_url_battery_replacement
+
+  - sourcePaths:
+      - system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk
+    moduleName: SystemUIGoogleSyntheticOverlayBluejay
+    targetPackage: com.android.systemui
+    resourcesToInclude:
+      string:
+        - battery_health_notify_learn_more
+        - battery_management_action
+        - battery_replacement_early_notify_des
+        - battery_replacement_notify_des
+        - battery_replacement_notify_help_url
+        - battery_replacement_notify_title
