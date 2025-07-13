@@ -21,6 +21,9 @@ synthetic_overlays:
         - lottie_tap_to_check_phone
       string:
         - battery_missing_link_message
+        - battery_tip_early_replacement_summary
+        - battery_tip_replacement_summary
+        - charge_cycle_count
         - charging_optimization_charge_label
         - charging_optimization_reach_limit_charge_label
         - charging_optimization_reach_limit_remaining_time_label
@@ -158,6 +161,12 @@ synthetic_overlays:
     targetPackage: com.android.systemui
     resourcesToInclude:
       string:
+        - battery_health_notify_learn_more
+        - battery_management_action
+        - battery_replacement_early_notify_des
+        - battery_replacement_notify_des
+        - battery_replacement_notify_help_url
+        - battery_replacement_notify_title
         - high_temp_dialog_help_url
         - keyguard_indication_charging_time_charge_limit
         - keyguard_indication_charging_time_charge_limit_v1

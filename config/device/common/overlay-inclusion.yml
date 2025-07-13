@@ -805,6 +805,9 @@ filters:
       - com.android.settings:string/biometrics_unlock_set_unlock_password|*
       - com.android.settings:string/biometrics_unlock_set_unlock_pattern|*
       - com.android.settings:string/biometrics_unlock_set_unlock_pin|*
+      - com.android.settings:string/battery_tip_early_replacement_summary|*
+      - com.android.settings:string/battery_tip_replacement_summary|*
+      - com.android.settings:string/charge_cycle_count|*
       - com.android.settings:string/charge_limit_indexing_keywords|*
       - com.android.settings:string/charging_optimization_charge_label|*
       - com.android.settings:string/charging_optimization_footer_charge_limit|*
@@ -1198,6 +1201,12 @@ filters:
       - com.android.systemui:raw/fingerprint_dialogue_fingerprint_to_success_lottie|*
       - com.android.systemui:raw/rear_display_folded|*
       - com.android.systemui:raw/rear_display_turnaround|*
+      - com.android.systemui:string/battery_health_notify_learn_more|*
+      - com.android.systemui:string/battery_management_action|*
+      - com.android.systemui:string/battery_replacement_early_notify_des|*
+      - com.android.systemui:string/battery_replacement_notify_des|*
+      - com.android.systemui:string/battery_replacement_notify_help_url|*
+      - com.android.systemui:string/battery_replacement_notify_title|*
       - com.android.systemui:string/config_frontBuiltInDisplayCutoutProtection|*
       - com.android.systemui:string/config_innerBuiltInDisplayCutoutProtection|*
       - com.android.systemui:string/config_protectedCameraId|*
