@@ -8,7 +8,7 @@ import { spawnAsyncStdin } from '../util/process'
 import { VendorDirectories } from './build'
 
 export async function processOverlays(config: DeviceConfig, dirs: VendorDirectories, stockSrc: string) {
-  let arsclibPath = getHostBinPath('arsclib')
+  let arsclibPath = await getHostBinPath('arsclib')
 
   let moduleListPath = path.join(dirs.overlays, 'overlay-modules.txt')
 
