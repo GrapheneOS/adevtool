@@ -13,6 +13,7 @@ export async function processOverlays(config: DeviceConfig, dirs: VendorDirector
   let moduleListPath = path.join(dirs.overlays, 'overlay-modules.txt')
 
   let cmd = {
+    aapt2Path: await getHostBinPath('aapt2'),
     unpackedOsImageDir: stockSrc,
     syntheticOverlays: config.synthetic_overlays,
     pkgExclusionFilters: filtersToJson(config.filters.overlay_files),
