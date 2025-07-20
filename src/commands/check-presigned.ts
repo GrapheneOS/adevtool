@@ -6,6 +6,7 @@ import { parseFileList, serializeBlobList } from '../blobs/file-list'
 import { enumeratePresignedBlobs, parsePresignedRecursive, updatePresignedBlobs } from '../blobs/presigned'
 import { readFile } from '../util/fs'
 import { withWrappedSrc, WRAPPED_SOURCE_FLAGS } from '../frontend/source'
+import { getHostBinPath } from '../config/paths'
 
 export default class CheckPresigned extends Command {
   static description = 'check for APKs that should be presigned'
@@ -15,7 +16,7 @@ export default class CheckPresigned extends Command {
     aapt2: Flags.string({
       char: 'a',
       description: 'path to aapt2 executable',
-      default: 'out/host/linux-x86/bin/aapt2',
+      default: getHostBinPath('aapt2'),
     }),
     sepolicy: Flags.string({
       char: 'p',

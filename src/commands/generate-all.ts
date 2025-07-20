@@ -12,6 +12,7 @@ import {
   CARRIER_SETTINGS_DIR,
   CARRIER_SETTINGS_FACTORY_PATH,
   COLLECTED_SYSTEM_STATE_DIR,
+  getHostBinPath,
   OS_CHECKOUT_DIR,
   VENDOR_MODULE_SKELS_DIR,
   VENDOR_MODULE_SPECS_DIR,
@@ -193,7 +194,7 @@ export default class GenerateFull extends Command {
     aapt2: Flags.string({
       char: 'a',
       description: 'path to aapt2 executable',
-      default: 'out/host/linux-x86/bin/aapt2',
+      default: getHostBinPath('aapt2'),
     }),
     customSrc: Flags.string({
       char: 'c',
