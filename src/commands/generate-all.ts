@@ -1,5 +1,4 @@
 import { Command, Flags } from '@oclif/core'
-import assert from 'assert'
 import chalk from 'chalk'
 import { CopyOptions, promises as fs } from 'fs'
 import path from 'path'
@@ -46,7 +45,7 @@ import {
   writeEnvsetupCommands,
 } from '../frontend/generate'
 import { writeReadme } from '../frontend/readme'
-import { DeviceImages, prepareDeviceImages, WRAPPED_SOURCE_FLAGS, wrapSystemSrc } from '../frontend/source'
+import { DeviceImages, prepareDeviceImages } from '../frontend/source'
 import { BuildIndex, ImageType, loadBuildIndex } from '../images/build-index'
 import { SelinuxPartResolutions } from '../selinux/contexts'
 import { gitDiff, withSpinner } from '../util/cli'
@@ -58,138 +57,127 @@ import {
   getFileTreeSpec,
   parseFileTreeSpecYaml,
 } from '../util/file-tree-spec'
-import { exists, listFilesRecursive, withTempDir } from '../util/fs'
+import { exists, listFilesRecursive } from '../util/fs'
 
-const doDevice = (
+async function doDevice(
   dirs: VendorDirectories,
   config: DeviceConfig,
   stockSrc: string,
   customSrc: string,
   aapt2Path: string,
-  buildId: string | undefined,
   factoryPath: string | undefined,
   skipCopy: boolean,
-  useTemp: boolean,
-) =>
-  withTempDir(async tmp => {
-    // Prepare stock system source
-    let wrapBuildId = buildId == undefined ? null : buildId
-    let wrapped = await withSpinner('Extracting stock system source', spinner =>
-      wrapSystemSrc(stockSrc, config.device.name, wrapBuildId, useTemp, tmp, spinner),
+) {
+  // customSrc can point to a (directory containing) system state JSON or out/
+  let customState = await loadCustomState(config, customSrc)
+
+  // Each step will modify this. Key = combined part path
+  let namedEntries = new Map<string, BlobEntry>()
+
+  // 1. Diff files
+  await withSpinner('Enumerating files', spinner =>
+    enumerateFiles(spinner, config.filters.files, config.filters.dep_files, namedEntries, customState, stockSrc),
+  )
+
+  // 2. Overrides
+  let buildPkgs: string[] = []
+  if (config.generate.overrides) {
+    let builtModules = await withSpinner('Replacing blobs with buildable modules', () =>
+      resolveOverrides(config, customState, dirs, namedEntries),
     )
-    stockSrc = wrapped.src!
-    if (wrapped.factoryPath != null && factoryPath == undefined) {
-      factoryPath = wrapped.factoryPath
-    }
+    buildPkgs.push(...builtModules)
+  }
+  // After this point, we only need entry objects
+  let entries = Array.from(namedEntries.values())
 
-    // customSrc can point to a (directory containing) system state JSON or out/
-    let customState = await loadCustomState(config, customSrc)
-
-    // Each step will modify this. Key = combined part path
-    let namedEntries = new Map<string, BlobEntry>()
-
-    // 1. Diff files
-    await withSpinner('Enumerating files', spinner =>
-      enumerateFiles(spinner, config.filters.files, config.filters.dep_files, namedEntries, customState, stockSrc),
+  // 3. Presigned
+  if (config.generate.presigned) {
+    await withSpinner('Marking apps as presigned', spinner =>
+      updatePresigned(spinner, config, entries, aapt2Path, stockSrc),
     )
+  }
 
-    // 2. Overrides
-    let buildPkgs: string[] = []
-    if (config.generate.overrides) {
-      let builtModules = await withSpinner('Replacing blobs with buildable modules', () =>
-        resolveOverrides(config, customState, dirs, namedEntries),
-      )
-      buildPkgs.push(...builtModules)
-    }
-    // After this point, we only need entry objects
-    let entries = Array.from(namedEntries.values())
-
-    // 3. Presigned
-    if (config.generate.presigned) {
-      await withSpinner('Marking apps as presigned', spinner =>
-        updatePresigned(spinner, config, entries, aapt2Path, stockSrc),
-      )
-    }
-
-    // 4. Flatten APEX modules
-    if (config.generate.flat_apex) {
+  // 4. Flatten APEX modules
+  if (config.generate.flat_apex) {
+    withTempDir(async tmp => {
       entries = await withSpinner('Flattening APEX modules', spinner =>
         flattenApexs(spinner, entries, dirs, tmp, stockSrc),
       )
-    }
+    })
+  }
 
-    // 5. Extract
-    // Copy blobs (this has its own spinner)
-    if (config.generate.files && !skipCopy) {
-      await copyBlobs(entries, stockSrc, dirs.proprietary)
-    }
+  // 5. Extract
+  // Copy blobs (this has its own spinner)
+  if (config.generate.files && !skipCopy) {
+    await copyBlobs(entries, stockSrc, dirs.proprietary)
+  }
 
-    // 6. Props
-    let propResults: PropResults | null = null
-    if (config.generate.props) {
-      propResults = await withSpinner('Extracting properties', () => extractProps(config, customState, stockSrc))
-    }
+  // 6. Props
+  let propResults: PropResults | null = null
+  if (config.generate.props) {
+    propResults = await withSpinner('Extracting properties', () => extractProps(config, customState, stockSrc))
+  }
 
-    // 7. SELinux policies
-    let sepolicyResolutions: SelinuxPartResolutions | null = null
-    if (config.generate.sepolicy_dirs) {
-      sepolicyResolutions = await withSpinner('Adding missing SELinux policies', () =>
-        resolveSepolicyDirs(config, customState, dirs, stockSrc),
-      )
-    }
-
-    // 8. Overlays
-    if (config.generate.overlays) {
-      let overlayPkgs = await processOverlays(config, dirs, stockSrc)
-      buildPkgs.push(...overlayPkgs)
-    }
-
-    // 9. vintf manifests
-    let vintfManifestPaths: Map<string, string> | null = null
-    if (config.generate.vintf) {
-      vintfManifestPaths = await withSpinner('Extracting vintf manifests', () =>
-        extractVintfManifests(customState, dirs, stockSrc),
-      )
-    }
-
-    // 10. Firmware
-    let fwPaths: Array<string> | null = null
-    if (config.generate.factory_firmware && factoryPath != undefined) {
-      if (propResults == null) {
-        throw new Error('Factory firmware extraction depends on properties')
-      }
-
-      fwPaths = await withSpinner('Extracting firmware', () =>
-        extractFirmware(config, dirs, propResults!.stockProps, factoryPath!),
-      )
-    }
-
-    let vendorLinkerConfig = config.platform.vendor_linker_config
-    let vendorLinkerConfigPath: string | null = null
-    if (Object.keys(vendorLinkerConfig).length > 0) {
-      let json = JSON.stringify(vendorLinkerConfig, null, 4)
-      vendorLinkerConfigPath = path.join(dirs.proprietary, 'linker-config-adevtool.json')
-      await fs.writeFile(vendorLinkerConfigPath, json)
-    }
-
-    // 11. Build files
-    await withSpinner('Generating build files', () =>
-      generateBuildFiles(
-        config,
-        dirs,
-        entries,
-        buildPkgs,
-        propResults,
-        fwPaths,
-        vintfManifestPaths,
-        vendorLinkerConfigPath,
-        sepolicyResolutions,
-        stockSrc,
-      ),
+  // 7. SELinux policies
+  let sepolicyResolutions: SelinuxPartResolutions | null = null
+  if (config.generate.sepolicy_dirs) {
+    sepolicyResolutions = await withSpinner('Adding missing SELinux policies', () =>
+      resolveSepolicyDirs(config, customState, dirs, stockSrc),
     )
+  }
 
-    await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults)])
-  })
+  // 8. Overlays
+  if (config.generate.overlays) {
+    let overlayPkgs = await processOverlays(config, dirs, stockSrc)
+    buildPkgs.push(...overlayPkgs)
+  }
+
+  // 9. vintf manifests
+  let vintfManifestPaths: Map<string, string> | null = null
+  if (config.generate.vintf) {
+    vintfManifestPaths = await withSpinner('Extracting vintf manifests', () =>
+      extractVintfManifests(customState, dirs, stockSrc),
+    )
+  }
+
+  // 10. Firmware
+  let fwPaths: Array<string> | null = null
+  if (config.generate.factory_firmware && factoryPath != undefined) {
+    if (propResults == null) {
+      throw new Error('Factory firmware extraction depends on properties')
+    }
+
+    fwPaths = await withSpinner('Extracting firmware', () =>
+      extractFirmware(config, dirs, propResults!.stockProps, factoryPath!),
+    )
+  }
+
+  let vendorLinkerConfig = config.platform.vendor_linker_config
+  let vendorLinkerConfigPath: string | null = null
+  if (Object.keys(vendorLinkerConfig).length > 0) {
+    let json = JSON.stringify(vendorLinkerConfig, null, 4)
+    vendorLinkerConfigPath = path.join(dirs.proprietary, 'linker-config-adevtool.json')
+    await fs.writeFile(vendorLinkerConfigPath, json)
+  }
+
+  // 11. Build files
+  await withSpinner('Generating build files', () =>
+    generateBuildFiles(
+      config,
+      dirs,
+      entries,
+      buildPkgs,
+      propResults,
+      fwPaths,
+      vintfManifestPaths,
+      vendorLinkerConfigPath,
+      sepolicyResolutions,
+      stockSrc,
+    ),
+  )
+
+  await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults)])
+}
 
 export default class GenerateFull extends Command {
   static description = 'generate all vendor parts automatically'
@@ -232,62 +220,27 @@ export default class GenerateFull extends Command {
 
     doNotDownloadCarrierSettings: Flags.boolean({}),
 
-    ...WRAPPED_SOURCE_FLAGS,
     ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
-  }
-
-  static {
-    GenerateFull.flags.stockSrc.required = false
   }
 
   async run() {
     let { flags } = await this.parse(GenerateFull)
 
     let devices = await loadDeviceConfigs2(flags)
-
-    let images: Map<DeviceBuildId, DeviceImages>
-
-    let useImagesFromConfig = flags.stockSrc === undefined
-
-    if (useImagesFromConfig) {
-      let index: BuildIndex = await loadBuildIndex()
-      images = await prepareDeviceImages(index, [ImageType.Factory], devices)
-      assert(flags.buildId === undefined)
-      assert(flags.factoryPath === undefined)
-      assert(!flags.useTemp)
-    }
+    let index: BuildIndex = await loadBuildIndex()
+    let images: Map<DeviceBuildId, DeviceImages> = await prepareDeviceImages(index, [ImageType.Factory], devices)
 
     await forEachDevice(
       devices,
       flags.parallel,
       async config => {
-        let deviceBuildId: string | undefined
-        let stockSrc: string
-        let factoryPath: string | undefined
-        if (useImagesFromConfig) {
-          let deviceImages = images.get(getDeviceBuildId(config))!
-          stockSrc = deviceImages.unpackedFactoryImageDir
-          factoryPath = deviceImages.factoryImage.getPath()
-        } else {
-          stockSrc = flags.stockSrc!
-          factoryPath = flags.factoryPath
-          deviceBuildId = flags.buildId
-        }
-
+        let deviceImages = images.get(getDeviceBuildId(config))!
+        let stockSrc = deviceImages.unpackedFactoryImageDir
+        let factoryPath = deviceImages.factoryImage.getPath()
         // Prepare output directories
         let vendorDirs = await createVendorDirs(config.device.vendor, config.device.name)
 
-        await doDevice(
-          vendorDirs,
-          config,
-          stockSrc,
-          flags.customSrc,
-          flags.aapt2,
-          deviceBuildId,
-          factoryPath,
-          flags.skipCopy,
-          flags.useTemp,
-        )
+        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, flags.aapt2, factoryPath, flags.skipCopy)
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular && !flags.doNotDownloadCarrierSettings) {
