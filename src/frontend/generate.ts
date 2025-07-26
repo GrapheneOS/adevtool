@@ -52,7 +52,7 @@ export async function loadCustomState(config: DeviceConfig, customSrc: string) {
 }
 
 export async function enumerateFiles(
-  spinner: ora.Ora,
+  spinner: ora.Ora | null,
   filters: Filters,
   forceIncludeFilters: Filters | null,
   namedEntries: Map<string, BlobEntry>,
@@ -80,7 +80,9 @@ export async function enumerateFiles(
       namedEntries.set(combinedPartPath, entry)
     }
 
-    spinner.text = partition
+    if (spinner !== null) {
+      spinner.text = partition
+    }
   }
 }
 

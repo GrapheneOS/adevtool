@@ -1,17 +1,13 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 
-import { startActionSpinner, stopActionSpinner } from '../util/cli'
 import { readFile } from '../util/fs'
 import { BlobEntry } from './entry'
 
 export async function copyBlobs(entries: Iterable<BlobEntry>, srcDir: string, destDir: string) {
-  let spinner = startActionSpinner('Copying files')
-
   for (let entry of entries) {
     let outPath = `${destDir}/${entry.srcPath}`
     let srcPath = entry.diskSrcPath ?? `${srcDir}/${entry.srcPath}`
-    spinner.text = entry.srcPath
 
     // Symlinks are created at build time, not copied
     let stat = await fs.lstat(srcPath)
@@ -55,8 +51,6 @@ export async function copyBlobs(entries: Iterable<BlobEntry>, srcDir: string, de
       await fs.copyFile(srcPath, outPath)
     }
   }
-
-  stopActionSpinner(spinner)
 }
 
 async function maybePatch(entry: BlobEntry, srcPath: string) {

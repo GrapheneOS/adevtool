@@ -14,7 +14,6 @@ import {
 } from '../frontend/generate'
 import { DeviceImages, prepareFactoryImages } from '../frontend/source'
 import { loadBuildIndex } from '../images/build-index'
-import { withSpinner } from '../util/cli'
 
 export async function generatePrep(config: DeviceConfig, stockSrc: string) {
   await doDevice(config, stockSrc, false)
@@ -32,9 +31,7 @@ async function doDevice(config: DeviceConfig, stockSrc: string, skipCopy: boolea
   let dirs = await createVendorDirs(config.device.vendor, config.device.name)
 
   // 1. Diff files
-  await withSpinner('Enumerating files', spinner =>
-    enumerateFiles(spinner, config.filters.dep_files, null, namedEntries, null, stockSrc),
-  )
+  await enumerateFiles(null, config.filters.dep_files, null, namedEntries, null, stockSrc)
 
   // After this point, we only need entry objects
   let entries = Array.from(namedEntries.values())
@@ -48,17 +45,17 @@ async function doDevice(config: DeviceConfig, stockSrc: string, skipCopy: boolea
   // 3. Props
   let propResults: PropResults | null = null
   if (config.generate.props) {
-    propResults = await withSpinner('Extracting properties', () => extractProps(config, null, stockSrc))
+    propResults = await extractProps(config, null, stockSrc)
     delete propResults.missingProps
     delete propResults.fingerprint
   }
 
   // 4. Build files
-  await withSpinner('Generating build files', () =>
-    generateBuildFiles(config, dirs, entries, [], propResults, null, null, null, null, stockSrc, false, true),
-  )
+  await generateBuildFiles(config, dirs, entries, [], propResults, null, null, null, null, stockSrc, false, true)
 
   await writeEnvsetupCommands(config, dirs)
+
+  console.log('generated prep vendor module at ' + dirs.out)
 }
 
 export default class GeneratePrep extends Command {
