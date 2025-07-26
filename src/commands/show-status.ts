@@ -1,7 +1,7 @@
 import { Command } from '@oclif/core'
 import chalk from 'chalk'
 
-import { DEVICE_CONFIG_FLAGS, DeviceConfig, getDeviceNames, loadDeviceConfigs } from '../config/device'
+import { DEVICE_CONFIGS_FLAG, DeviceConfig, getDeviceNames, loadDeviceConfigs } from '../config/device'
 import { ImageType, loadBuildIndex } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { updateMultiMap } from '../util/data'
@@ -9,7 +9,7 @@ import { loadBuildIdToTagMap } from './update-aosp-tag-index'
 
 export default class ShowStatus extends Command {
   static flags = {
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG,
   }
 
   async run() {

@@ -4,7 +4,12 @@ import { spawnSync } from 'child_process'
 import { promises as fs } from 'fs'
 import path from 'path'
 
-import { DEVICE_CONFIG_FLAGS, DeviceBuildId, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
+import {
+  DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
+  DeviceBuildId,
+  getDeviceBuildId,
+  loadDeviceConfigs2,
+} from '../config/device'
 import { ADEVTOOL_DIR, COLLECTED_SYSTEM_STATE_DIR, OS_CHECKOUT_DIR } from '../config/paths'
 import { collectSystemState, serializeSystemState } from '../config/system-state'
 import { forEachDevice } from '../frontend/devices'
@@ -37,15 +42,14 @@ export default class CollectState extends Command {
     disallowOutReuse: Flags.boolean({
       description: 'remove out/ dir before invoking the build system. Has no effect if --immediate is specified',
     }),
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
   }
 
   async run() {
-    let {
-      flags: { devices, outRoot, parallel, outPath, immediate, disallowOutReuse },
-    } = await this.parse(CollectState)
+    let { flags } = await this.parse(CollectState)
+    let { outRoot, parallel, outPath, immediate, disallowOutReuse } = flags
 
-    let configs = await loadDeviceConfigs(devices)
+    let configs = await loadDeviceConfigs2(flags)
 
     let deviceImagesMap: Map<DeviceBuildId, DeviceImages>
     if (!immediate) {

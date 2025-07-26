@@ -3,7 +3,7 @@ import path from 'path'
 
 import assert from 'assert'
 import { decodeConfigs } from '../blobs/carrier'
-import { DEVICE_CONFIG_FLAGS, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
+import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, getDeviceBuildId, loadDeviceConfigs2 } from '../config/device'
 import { CARRIER_SETTINGS_FACTORY_PATH, VENDOR_MODULE_SKELS_DIR } from '../config/paths'
 import { forEachDevice } from '../frontend/devices'
 import { prepareFactoryImages } from '../frontend/source'
@@ -14,26 +14,22 @@ export default class DumpCarrierSettings extends Command {
   static description = 'generate protoc dumps of configs from factory image.'
 
   static flags = {
-    buildId: Flags.string({
-      description: 'specify build ID',
-      char: 'b',
-    }),
     out: Flags.string({
       char: 'o',
     }),
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
   }
 
   async run() {
     let { flags } = await this.parse(DumpCarrierSettings)
     let index: BuildIndex = await loadBuildIndex()
-    let devices = await loadDeviceConfigs(flags.devices)
+    let devices = await loadDeviceConfigs2(flags)
     await forEachDevice(
       devices,
       false,
       async config => {
         if (config.device.has_cellular) {
-          const build_id = flags.buildId ?? config.device.build_id
+          const build_id = config.device.build_id
           const images = await prepareFactoryImages(index, [config], [build_id])
           const deviceImages = images.get(getDeviceBuildId(config, build_id))!
           const stockCsPath = path.join(deviceImages.unpackedFactoryImageDir, CARRIER_SETTINGS_FACTORY_PATH)
@@ -51,7 +47,7 @@ export default class DumpCarrierSettings extends Command {
           this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)
         }
       },
-      config => `${config.device.name} ${flags.buildId ?? config.device.build_id}`,
+      config => `${config.device.name} ${config.device.build_id}`,
     )
   }
 }

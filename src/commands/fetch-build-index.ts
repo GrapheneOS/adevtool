@@ -1,7 +1,7 @@
 import { Command, Flags } from '@oclif/core'
 import { YAMLMap } from 'yaml/types'
 
-import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
+import { DEVICE_CONFIGS_FLAG, loadDeviceConfigs } from '../config/device'
 import { fetchBetaBuildIndex, fetchBuildIndex } from '../images/build-index'
 import { yamlStringifyNoFold } from '../util/yaml'
 
@@ -9,7 +9,7 @@ export default class FetchBuildIndex extends Command {
   description = 'fetch main or beta build index and print it out as YAML'
 
   static flags = {
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG,
     beta: Flags.string({
       char: 'b',
       description: 'Fetch index of beta builds for the specified major OS version (e.g. -b 14)',

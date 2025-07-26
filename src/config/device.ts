@@ -173,7 +173,7 @@ export function resolveBuildId(str: string, config: DeviceConfig) {
   }
 }
 
-export const DEVICE_CONFIG_FLAGS = {
+export const DEVICE_CONFIGS_FLAG = {
   devices: Flags.string({
     char: 'd',
     description: `Device or DeviceList config paths or names`,
@@ -182,10 +182,27 @@ export const DEVICE_CONFIG_FLAGS = {
   }),
 }
 
+export const DEVICE_CONFIGS_FLAG_WITH_BUILD_ID = {
+  ...DEVICE_CONFIGS_FLAG,
+  buildId: Flags.string({
+    char: 'b',
+    description: 'override build id that is specified in device config',
+  }),
+}
+
+interface DeviceConfigFlags {
+  devices: string[]
+  buildId?: string
+}
+
+export async function loadDeviceConfigs2(flags: DeviceConfigFlags) {
+  return await loadDeviceConfigs(flags.devices, flags.buildId)
+}
+
 // Each string should refer to a Device or DeviceList config.
 // There's two supported string formats: config path and config name from config dir (without .yml suffix),
 // i.e. path/to/device_name.yml and device_name
-export async function loadDeviceConfigs(strings: string[]) {
+export async function loadDeviceConfigs(strings: string[], buildIdOverride?: string) {
   const configFileSuffix = '.yml'
 
   let promises: Promise<DeviceConfig>[] = []
@@ -207,6 +224,9 @@ export async function loadDeviceConfigs(strings: string[]) {
     let key = config.device.name
     if (map.get(key) !== undefined) {
       console.warn(`loadDeviceConfigs: more than one config was passed for ${key}, only the last one will be used`)
+    }
+    if (buildIdOverride !== undefined) {
+      config.device.build_id = buildIdOverride
     }
     map.set(key, config)
   }

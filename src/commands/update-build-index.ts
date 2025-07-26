@@ -3,7 +3,7 @@ import { readFileSync } from 'fs'
 import { writeFile } from 'fs/promises'
 import { YAMLMap } from 'yaml/types'
 
-import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
+import { DEVICE_CONFIGS_FLAG, loadDeviceConfigs } from '../config/device'
 import { ADEVTOOL_DIR, MAIN_BUILD_INDEX_PART } from '../config/paths'
 import { fetchBuildIndex } from '../images/build-index'
 import { showGitDiff } from '../util/cli'
@@ -13,7 +13,7 @@ export default class UpdateBuildIndex extends Command {
   static description =
     'fetch main (non-beta) build index and if it has changed, update build-index-main.yml file in-place and show git diff'
 
-  static flags = DEVICE_CONFIG_FLAGS
+  static flags = DEVICE_CONFIGS_FLAG
 
   async run() {
     let { flags } = await this.parse(UpdateBuildIndex)

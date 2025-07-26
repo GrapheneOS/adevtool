@@ -3,7 +3,13 @@ import { Command, Flags } from '@oclif/core'
 import { createVendorDirs } from '../blobs/build'
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
-import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
+import {
+  DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
+  DeviceBuildId,
+  DeviceConfig,
+  getDeviceBuildId,
+  loadDeviceConfigs2,
+} from '../config/device'
 import { forEachDevice } from '../frontend/devices'
 import {
   enumerateFiles,
@@ -74,12 +80,12 @@ export default class GeneratePrep extends Command {
       default: false,
     }),
 
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
   }
 
   async run() {
     let { flags } = await this.parse(GeneratePrep)
-    let devices = await loadDeviceConfigs(flags.devices)
+    let devices = await loadDeviceConfigs2(flags)
 
     let deviceImagesMap: Map<DeviceBuildId, DeviceImages> = await prepareFactoryImages(await loadBuildIndex(), devices)
 

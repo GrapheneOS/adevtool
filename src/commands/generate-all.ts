@@ -15,7 +15,13 @@ import {
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
 import { processOverlays } from '../blobs/overlays2'
-import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
+import {
+  DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
+  DeviceBuildId,
+  DeviceConfig,
+  getDeviceBuildId,
+  loadDeviceConfigs2,
+} from '../config/device'
 import {
   CARRIER_SETTINGS_DIR,
   CARRIER_SETTINGS_FACTORY_PATH,
@@ -227,7 +233,7 @@ export default class GenerateFull extends Command {
     doNotDownloadCarrierSettings: Flags.boolean({}),
 
     ...WRAPPED_SOURCE_FLAGS,
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
   }
 
   static {
@@ -237,7 +243,7 @@ export default class GenerateFull extends Command {
   async run() {
     let { flags } = await this.parse(GenerateFull)
 
-    let devices = await loadDeviceConfigs(flags.devices)
+    let devices = await loadDeviceConfigs2(flags)
 
     let images: Map<DeviceBuildId, DeviceImages>
 

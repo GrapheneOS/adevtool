@@ -4,7 +4,7 @@ import chalk from 'chalk'
 import { existsSync, promises as fs } from 'fs'
 import { JSDOM } from 'jsdom'
 import path from 'path'
-import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
+import { DEVICE_CONFIGS_FLAG, loadDeviceConfigs2 } from '../config/device'
 import { DeviceImages, prepareFactoryImages } from '../frontend/source'
 
 import { loadBuildIndex } from '../images/build-index'
@@ -23,12 +23,12 @@ export default class GetKernelInfo extends Command {
       multiple: true,
       default: ['cur'],
     }),
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG,
   }
 
   async run() {
     let { flags } = await this.parse(GetKernelInfo)
-    let devices = await loadDeviceConfigs(flags.devices)
+    let devices = await loadDeviceConfigs2(flags)
     let res = await prepareFactoryImages(await loadBuildIndex(), devices, flags.buildIds)
 
     let commitMap = new Map<string, DeviceImages[]>()

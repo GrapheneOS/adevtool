@@ -1,7 +1,7 @@
 import { Command, Flags } from '@oclif/core'
 
 import { downloadAllConfigs, fetchUpdateConfig, getCarrierSettingsUpdatesDir } from '../blobs/carrier'
-import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
+import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, loadDeviceConfigs2 } from '../config/device'
 import { forEachDevice } from '../frontend/devices'
 
 export default class UpdateCarrierSettings extends Command {
@@ -16,22 +16,18 @@ export default class UpdateCarrierSettings extends Command {
       description: 'enable debug output',
       default: false,
     }),
-    buildId: Flags.string({
-      description: 'override build ID',
-      char: 'b',
-    }),
-    ...DEVICE_CONFIG_FLAGS,
+    ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
   }
 
   async run() {
     let { flags } = await this.parse(UpdateCarrierSettings)
-    let devices = await loadDeviceConfigs(flags.devices)
+    let devices = await loadDeviceConfigs2(flags)
     await forEachDevice(
       devices,
       false,
       async config => {
         if (config.device.has_cellular) {
-          const buildId = flags.buildId ?? config.device.build_id
+          const buildId = config.device.build_id
           const outDir = flags.out ?? getCarrierSettingsUpdatesDir(config)
           const updateConfig = await fetchUpdateConfig(config.device.name, buildId, flags.debug)
           if (flags.debug) console.log(updateConfig)
@@ -40,7 +36,7 @@ export default class UpdateCarrierSettings extends Command {
           this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)
         }
       },
-      config => `${config.device.name} ${flags.buildId ?? config.device.build_id}`,
+      config => `${config.device.name} ${config.device.build_id}`,
     )
   }
 }
