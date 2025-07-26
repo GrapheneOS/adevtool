@@ -60,7 +60,7 @@ export default class CollectState extends Command {
         if (!immediate) {
           let deviceImages = deviceImagesMap.get(getDeviceBuildId(config))
           assert(deviceImages !== undefined)
-          await generatePrep(config, deviceImages.unpackedFactoryImageDir, config.device.build_id)
+          await generatePrep(config, deviceImages.unpackedFactoryImageDir)
           if (disallowOutReuse) {
             await spawnAsync('rm', ['-rf', path.join(OS_CHECKOUT_DIR, 'out')])
           }
