@@ -1,6 +1,9 @@
 import { Command, Flags } from '@oclif/core'
 
-import { withWrappedSrc, WRAPPED_SOURCE_FLAGS } from '../frontend/source'
+import assert from 'assert'
+import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, getDeviceBuildId, loadDeviceConfigs2 } from '../config/device'
+import { prepareFactoryImages } from '../frontend/source'
+import { loadBuildIndex } from '../images/build-index'
 import {
   KeyInfo,
   MacSigner,
@@ -22,34 +25,36 @@ export default class FixCerts extends Command {
       required: true,
       multiple: true,
     }),
-    device: Flags.string({ char: 'd', description: 'device codename', required: true }),
 
-    ...WRAPPED_SOURCE_FLAGS,
+    ...DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
   }
 
   async run() {
-    let {
-      flags: { sepolicy: sepolicyDirs, device, buildId, stockSrc, useTemp },
-    } = await this.parse(FixCerts)
+    let { flags } = await this.parse(FixCerts)
 
-    await withWrappedSrc(stockSrc, device, buildId, useTemp, async stockSrc => {
-      let srcSigners: Array<MacSigner> = []
-      let srcKeys: Array<KeyInfo> = []
-      for (let dir of sepolicyDirs) {
-        srcSigners.push(...(await readMacPermissionsRecursive(dir)))
-        srcKeys.push(...(await readKeysConfRecursive(dir)))
+    let devices = await loadDeviceConfigs2(flags)
+    let images = await prepareFactoryImages(await loadBuildIndex(), devices)
+
+    assert(devices.length === 1)
+
+    let config = devices[0]
+    let deviceImages = images.get(getDeviceBuildId(config))!
+    let srcSigners: Array<MacSigner> = []
+    let srcKeys: Array<KeyInfo> = []
+    for (let dir of flags.sepolicy) {
+      srcSigners.push(...(await readMacPermissionsRecursive(dir)))
+      srcKeys.push(...(await readKeysConfRecursive(dir)))
+    }
+
+    let compiledSigners = await readPartMacPermissions(deviceImages.unpackedFactoryImageDir)
+    let keys = resolveKeys(srcKeys, srcSigners, compiledSigners)
+
+    for (let paths of keys.values()) {
+      for (let path of paths) {
+        this.log(path)
       }
+    }
 
-      let compiledSigners = await readPartMacPermissions(stockSrc)
-      let keys = resolveKeys(srcKeys, srcSigners, compiledSigners)
-
-      for (let paths of keys.values()) {
-        for (let path of paths) {
-          this.log(path)
-        }
-      }
-
-      await writeMappedKeys(keys)
-    })
+    await writeMappedKeys(keys)
   }
 }
