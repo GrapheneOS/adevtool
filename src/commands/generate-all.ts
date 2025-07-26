@@ -35,7 +35,6 @@ import {
   extractFirmware,
   extractProps,
   extractVintfManifests,
-  flattenApexs,
   generateBuildFiles,
   loadCustomState,
   PropResults,
@@ -95,15 +94,6 @@ async function doDevice(
     await withSpinner('Marking apps as presigned', spinner =>
       updatePresigned(spinner, config, entries, aapt2Path, stockSrc),
     )
-  }
-
-  // 4. Flatten APEX modules
-  if (config.generate.flat_apex) {
-    withTempDir(async tmp => {
-      entries = await withSpinner('Flattening APEX modules', spinner =>
-        flattenApexs(spinner, entries, dirs, tmp, stockSrc),
-      )
-    })
   }
 
   // 5. Extract

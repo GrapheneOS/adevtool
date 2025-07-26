@@ -1,7 +1,6 @@
 import { promises as fs } from 'fs'
 import ora from 'ora'
 import path from 'path'
-import { flattenAllApexs } from '../blobs/apex'
 
 import assert from 'assert'
 import { generateBuild, VendorDirectories, writeBuildFiles } from '../blobs/build'
@@ -25,8 +24,7 @@ import {
   SelinuxContexts,
   SelinuxPartResolutions,
 } from '../selinux/contexts'
-import { generateFileContexts } from '../selinux/labels'
-import { exists, readFile, TempState } from '../util/fs'
+import { exists, readFile } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 
 export interface PropResults {
@@ -129,24 +127,6 @@ export async function updatePresigned(
     },
     config.filters.presigned,
   )
-}
-
-export async function flattenApexs(
-  spinner: ora.Ora,
-  entries: BlobEntry[],
-  dirs: VendorDirectories,
-  tmp: TempState,
-  stockSrc: string,
-) {
-  let apex = await flattenAllApexs(entries, stockSrc, tmp, progress => {
-    spinner.text = progress
-  })
-
-  // Write context labels
-  let fileContexts = `${dirs.sepolicy}/file_contexts`
-  await fs.writeFile(fileContexts, generateFileContexts(apex.labels))
-
-  return apex.entries
 }
 
 export async function extractProps(config: DeviceConfig, customState: SystemState | null, stockSrc: string) {

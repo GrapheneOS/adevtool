@@ -48,7 +48,6 @@ export interface DeviceConfig {
   generate: {
     overrides: boolean
     presigned: boolean
-    flat_apex: boolean
     files: boolean
     props: boolean
     sepolicy_dirs: boolean
@@ -125,7 +124,6 @@ const DEFAULT_CONFIG_BASE = {
   generate: {
     overrides: true,
     presigned: true,
-    flat_apex: false, // currently broken
     files: true,
     props: true,
     sepolicy_dirs: true,
