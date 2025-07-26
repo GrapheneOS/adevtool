@@ -30,25 +30,25 @@ export default class CollectState extends Command {
       required: true,
       default: COLLECTED_SYSTEM_STATE_DIR,
     }),
-    rebuild: Flags.boolean({
-      description: 'generate prep vendor module (same as generate-prep) and make an OS build before collecting state',
+    immediate: Flags.boolean({
+      description: 'collect state immediately, without generating a prep vendor module and invoking the build system',
       default: false,
     }),
     disallowOutReuse: Flags.boolean({
-      description: 'if --rebuild is specified, remove out/ dir before making a state collection OS build',
+      description: 'remove out/ dir before invoking the build system. Has no effect if --immediate is specified',
     }),
     ...DEVICE_CONFIG_FLAGS,
   }
 
   async run() {
     let {
-      flags: { devices, outRoot, parallel, outPath, rebuild, disallowOutReuse },
+      flags: { devices, outRoot, parallel, outPath, immediate, disallowOutReuse },
     } = await this.parse(CollectState)
 
     let configs = await loadDeviceConfigs(devices)
 
     let deviceImagesMap: Map<DeviceBuildId, DeviceImages>
-    if (rebuild) {
+    if (!immediate) {
       deviceImagesMap = await prepareFactoryImages(await loadBuildIndex(), configs)
     }
 
@@ -57,7 +57,7 @@ export default class CollectState extends Command {
       configs,
       parallel,
       async config => {
-        if (rebuild) {
+        if (!immediate) {
           let deviceImages = deviceImagesMap.get(getDeviceBuildId(config))
           assert(deviceImages !== undefined)
           await generatePrep(config, deviceImages.unpackedFactoryImageDir, config.device.build_id)
