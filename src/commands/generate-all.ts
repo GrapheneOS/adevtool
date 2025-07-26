@@ -63,7 +63,6 @@ async function doDevice(
   config: DeviceConfig,
   stockSrc: string,
   customSrc: string,
-  aapt2Path: string,
   factoryPath: string | undefined,
   skipCopy: boolean,
 ) {
@@ -91,9 +90,7 @@ async function doDevice(
 
   // 3. Presigned
   if (config.generate.presigned) {
-    await withSpinner('Marking apps as presigned', spinner =>
-      updatePresigned(spinner, config, entries, aapt2Path, stockSrc),
-    )
+    await withSpinner('Marking apps as presigned', spinner => updatePresigned(spinner, config, entries, stockSrc))
   }
 
   // 5. Extract
@@ -174,11 +171,6 @@ export default class GenerateFull extends Command {
 
   static flags = {
     help: Flags.help({ char: 'h' }),
-    aapt2: Flags.string({
-      char: 'a',
-      description: 'path to aapt2 executable',
-      default: 'out/host/linux-x86/bin/aapt2',
-    }),
     customSrc: Flags.string({
       char: 'c',
       description: 'path to AOSP build output directory (out/) or (directory containing) JSON state file',
@@ -230,7 +222,7 @@ export default class GenerateFull extends Command {
         // Prepare output directories
         let vendorDirs = await createVendorDirs(config.device.vendor, config.device.name)
 
-        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, flags.aapt2, factoryPath, flags.skipCopy)
+        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, factoryPath, flags.skipCopy)
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular && !flags.doNotDownloadCarrierSettings) {
