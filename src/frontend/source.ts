@@ -520,6 +520,8 @@ async function unpackExt4(fsImagePath: string, destinationDir: string) {
       // it's expected that ownership information will be lost during unpacking
       s.startsWith('dump_file: Operation not permitted while changing ownership of ') ||
       s.startsWith('rdump: Operation not permitted while changing ownership of ') ||
+      s.startsWith('rdump: Invalid argument while changing ownership of ') ||
+      s.startsWith('dump_file: Invalid argument while changing ownership of ') ||
       // version string
       s.startsWith('debugfs ')
     )
