@@ -1,6 +1,6 @@
 import { Command, Flags } from '@oclif/core'
 
-import { createVendorDirs } from '../blobs/build'
+import { createVendorDirs, writeVersionCheckFile } from '../blobs/build'
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
 import {
@@ -60,6 +60,7 @@ async function doDevice(config: DeviceConfig, stockSrc: string, skipCopy: boolea
   await generateBuildFiles(config, dirs, entries, [], propResults, null, null, null, null, stockSrc, false, true)
 
   await writeEnvsetupCommands(config, dirs)
+  await writeVersionCheckFile(config, dirs)
 
   console.log('generated prep vendor module at ' + dirs.out)
 }

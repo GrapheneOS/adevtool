@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { CopyOptions, promises as fs } from 'fs'
 import path from 'path'
 
-import { createVendorDirs, VendorDirectories } from '../blobs/build'
+import { createVendorDirs, VendorDirectories, writeVersionCheckFile } from '../blobs/build'
 import {
   decodeConfigs,
   downloadAllConfigs,
@@ -271,6 +271,7 @@ export default class GenerateFull extends Command {
             throw e
           }
         }
+        await writeVersionCheckFile(config, vendorDirs)
       },
       config => config.device.name,
     )

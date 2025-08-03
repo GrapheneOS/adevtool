@@ -15,7 +15,7 @@ import { removeSelfModules } from '../build/soong-info'
 import { DeviceConfig } from '../config/device'
 import { filterKeys, Filters, filterValue, filterValues } from '../config/filters'
 import { getHostBinPath } from '../config/paths'
-import { collectSystemState, parseSystemState, SystemState } from '../config/system-state'
+import { parseSystemState, SystemState } from '../config/system-state'
 import { ANDROID_INFO, extractFactoryFirmware, generateAndroidInfo, writeFirmwareImages } from '../images/firmware'
 import {
   diffPartContexts,

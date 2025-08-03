@@ -4912,6 +4912,6 @@ proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal-V1
 proprietary/vendor/lib64/vendor_chre_atoms_log.so: 4e78bee4928c891741c50d9c87cc9190683ab7e621c42ff3cd73c31f8e5530a0
 proprietary/vendor/lib64/vendor_chre_metrics-cpp.so: 84523de6d856212eb4cfc75c77bc84f5429d414940d51e9d52dfcc6b4265bf75
 sepolicy: dir
-tegu.mk: 173dea4229d187a6af02f78b225bbc63adf03f8931c05d6f90d6152765730adf
+tegu.mk: c1cb443f0c592cc018a7da9305ae681a7030c6738c983fd22645ce727ed2e2bd
 vintf: dir
 vintf/adevtool_manifest_vendor.xml: 62cf5e26738a45ad0ecc8fa8b083b2ae72e6613a88972252da892edde27ab7a2

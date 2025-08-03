@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 
+import assert from 'assert'
 import {
   blobToFileCopy,
   BoardMakefile,
@@ -26,7 +27,9 @@ import {
   TYPE_SHARED_LIBRARY,
 } from '../build/soong'
 import { DeviceConfig } from '../config/device'
+import { ADEVTOOL_DIR, RELATIVE_ADEVTOOL_PATH } from '../config/paths'
 import { Partition } from '../util/partitions'
+import { spawnAsync } from '../util/process'
 import { BlobEntry, blobNeedsSoong } from './entry'
 
 export interface BuildFiles {
@@ -204,6 +207,22 @@ export async function createVendorDirs(vendor: string, device: string) {
   } as VendorDirectories
 }
 
+function getVersionCheckFilePath(dirs: VendorDirectories) {
+  return path.join(dirs.out, 'adevtool-version-check.mk')
+}
+
+export async function writeVersionCheckFile(config: DeviceConfig, dirs: VendorDirectories) {
+  let adevtoolRevision = await spawnAsync('git', ['-C', ADEVTOOL_DIR, 'rev-parse', 'HEAD'])
+  assert(adevtoolRevision.endsWith('\n'))
+  adevtoolRevision = adevtoolRevision.slice(0, -1)
+  let deviceName = config.device.name
+  let contents =
+    `ifneq ($(shell git -C ${RELATIVE_ADEVTOOL_PATH} rev-parse HEAD),${adevtoolRevision})\n` +
+    `  $(error ${deviceName} vendor module is outdated. Run \`adevtool generate-all -d ${deviceName}\` to update it)\n` +
+    `endif`
+  await fs.writeFile(getVersionCheckFilePath(dirs), contents)
+}
+
 export async function writeBuildFiles(build: BuildFiles, dirs: VendorDirectories, config?: DeviceConfig) {
   if (build.rootBlueprint != undefined) {
     let bp = serializeBlueprint(build.rootBlueprint)
@@ -231,6 +250,9 @@ export async function writeBuildFiles(build: BuildFiles, dirs: VendorDirectories
   }
 
   if (build.productMakefile != undefined) {
+    if (config !== undefined) {
+      build.productMakefile.prologue = `include ${getVersionCheckFilePath(dirs)}`
+    }
     let mk = serializeProductMakefile(build.productMakefile, config)
     await fs.writeFile(`${dirs.out}/${build.productMakefile.name}.mk`, mk)
   }

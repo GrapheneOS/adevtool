@@ -64,6 +64,8 @@ export interface ProductsMakefile {
 }
 
 export interface ProductMakefile {
+  prologue?: string
+
   baseProductPath: string
 
   name: string
@@ -229,6 +231,10 @@ export function serializeDeviceMakefile(mk: DeviceMakefile, config?: DeviceConfi
 
 export function serializeProductMakefile(mk: ProductMakefile, config?: DeviceConfig) {
   let blocks = startBlocks()
+
+  if (mk.prologue !== undefined) {
+    blocks.push(mk.prologue)
+  }
 
   blocks.push(`# Inherit AOSP product
 $(call inherit-product, ${mk.baseProductPath})`)

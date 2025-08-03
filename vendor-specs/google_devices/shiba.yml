@@ -4884,6 +4884,6 @@ proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.
 proprietary/vendor/lib64/vendor_chre_atoms_log.so: 4e78bee4928c891741c50d9c87cc9190683ab7e621c42ff3cd73c31f8e5530a0
 proprietary/vendor/lib64/vendor_chre_metrics-cpp.so: 84523de6d856212eb4cfc75c77bc84f5429d414940d51e9d52dfcc6b4265bf75
 sepolicy: dir
-shiba.mk: 5b29ceab12331c2dd13befc0b93af5595b409fb1aab1e6db15e2ef4aef21b7a7
+shiba.mk: 00516cdd9c6089489a5c8dff5ec2396346740bd229603cdba7fccbd88d726901
 vintf: dir
 vintf/adevtool_manifest_vendor.xml: 374c0ab4cab705152bb117c7aa80ee9076c472da1d2205993939f616309c53f6
