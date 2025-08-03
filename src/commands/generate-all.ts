@@ -66,7 +66,7 @@ async function doDevice(
   factoryPath: string | undefined,
   skipCopy: boolean,
 ) {
-  // customSrc can point to a (directory containing) system state JSON or out/
+  // customSrc can point to a (directory containing) system state JSON
   let customState = await loadCustomState(config, customSrc)
 
   // Each step will modify this. Key = combined part path

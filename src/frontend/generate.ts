@@ -25,7 +25,7 @@ import {
   SelinuxContexts,
   SelinuxPartResolutions,
 } from '../selinux/contexts'
-import { exists, readFile } from '../util/fs'
+import { isFile, readFile } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 
 export interface PropResults {
@@ -37,17 +37,17 @@ export interface PropResults {
 }
 
 export async function loadCustomState(config: DeviceConfig, customSrc: string) {
-  if ((await fs.stat(customSrc)).isFile()) {
-    return parseSystemState(await readFile(customSrc))
-  }
-  // Try <device>.json
+  let path: string
   let deviceSrc = `${customSrc}/${config.device.name}.json`
-  if (await exists(deviceSrc)) {
-    return parseSystemState(await readFile(deviceSrc))
+  if (await isFile(deviceSrc)) {
+    path = deviceSrc
+  } else {
+    if (!isFile(customSrc)) {
+      throw new Error('missing file: ' + customSrc)
+    }
+    path = customSrc
   }
-
-  // Otherwise, assume it's AOSP build output
-  return await collectSystemState(config.device.name, customSrc)
+  return parseSystemState(await readFile(path))
 }
 
 export async function enumerateFiles(
