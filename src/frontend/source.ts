@@ -9,13 +9,13 @@ import { pipeline } from 'stream/promises'
 import yauzl from 'yauzl-promise'
 import { DeviceBuildId, DeviceConfig, FsType, getDeviceBuildId, resolveBuildId } from '../config/device'
 
-import { getHostBinPath, IMAGE_DOWNLOAD_DIR } from '../config/paths'
+import { ADEVTOOL_DIR, getHostBinPath, IMAGE_DOWNLOAD_DIR, OS_CHECKOUT_DIR } from '../config/paths'
 import { BuildIndex, ImageType } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadMissingDeviceImages } from '../images/download'
 import { maybePlural, withSpinner } from '../util/cli'
 import { createSubTmp, exists, isDirectory, listFilesRecursive, mount, TempState, withTempDir } from '../util/fs'
-import { ALL_SYS_PARTITIONS } from '../util/partitions'
+import { ALL_KNOWN_PARTITIONS, ALL_SYS_PARTITIONS, BOOT_PARTITIONS } from '../util/partitions'
 import { run, spawnAsync, spawnAsyncNoOut } from '../util/process'
 import { isSparseImage } from '../util/sparse'
 import { listZipFiles } from '../util/zip'
@@ -592,6 +592,60 @@ async function unpackApex(apexPath: string, dstPath: string) {
   }
 }
 
+async function unpackBootImage(fsImagePath: string, destinationDir: string) {
+  let unpackBootimg = path.join(OS_CHECKOUT_DIR, 'system/tools/mkbootimg/unpack_bootimg.py')
+  let imgInfo = await spawnAsync(unpackBootimg, [
+    '--boot_img',
+    fsImagePath,
+    '--out',
+    destinationDir,
+    '--format',
+    'mkbootimg',
+    '--null',
+  ])
+
+  imgInfo = imgInfo.replaceAll(destinationDir + '/', '')
+
+  let jobs: Promise<unknown>[] = []
+  jobs.push(fs.writeFile(path.join(destinationDir, 'mkbootimg_args'), imgInfo))
+
+  for await (let file of listFilesRecursive(destinationDir)) {
+    let basename = path.basename(file)
+    if (!basename.includes('ramdisk')) {
+      continue
+    }
+    let job = async () => {
+      let stat = await fs.lstat(file)
+      if (!stat.isFile() || stat.size === 0) {
+        return
+      }
+      let dstDir = file + '__unpacked'
+      await fs.mkdir(dstDir)
+      await spawnAsync(
+        path.join(ADEVTOOL_DIR, 'scripts/unpack-ramdisk.sh'),
+        [await getHostBinPath('lz4'), await getHostBinPath('toybox'), file, dstDir],
+        errLine => {
+          switch (errLine) {
+            case 'cpio: dev/console: Operation not permitted':
+            case 'cpio: dev/kmsg: Operation not permitted':
+            case 'cpio: dev/null: Operation not permitted':
+            case 'cpio: dev/urandom: Operation not permitted':
+            case '':
+              return true
+            default:
+              return false
+          }
+        },
+        undefined,
+        [0, 1],
+      )
+    }
+    jobs.push(job())
+  }
+
+  await Promise.all(jobs)
+}
+
 async function unpackFsImageZipEntry(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot: string) {
   let fsImageName = entry.filename
 
@@ -603,7 +657,7 @@ async function unpackFsImageZipEntry(entry: yauzl.Entry, fsType: FsType, unpacke
 
   let fsImageBaseName = path.basename(fsImageName, expectedExt)
 
-  if (!ALL_SYS_PARTITIONS.has(fsImageBaseName)) {
+  if (!ALL_KNOWN_PARTITIONS.has(fsImageBaseName)) {
     return
   }
 
@@ -628,12 +682,17 @@ async function unpackFsImage(fsImagePath: string, fsType: FsType, baseDestinatio
 
   let fsImageBaseName = path.basename(fsImageName, expectedExt)
 
-  if (!ALL_SYS_PARTITIONS.has(fsImageBaseName)) {
+  if (!ALL_KNOWN_PARTITIONS.has(fsImageBaseName)) {
     return false
   }
 
   let destinationDir = path.join(baseDestinationDir, fsImageBaseName)
   await fs.mkdir(destinationDir)
+
+  if (BOOT_PARTITIONS.has(fsImageBaseName)) {
+    await unpackBootImage(fsImagePath, destinationDir)
+    return true
+  }
 
   if (fsType === FsType.EXT4) {
     await unpackExt4(fsImagePath, destinationDir)
@@ -690,7 +749,7 @@ class FdReader extends yauzl.Reader {
   }
 
   async _read(start: number, length: number) {
-    // do not initialize buffer contnents, assert below ensures that it's fully written out
+    // do not initialize buffer contents, assert below ensures that it's fully written out
     let buffer = Buffer.allocUnsafe(length)
 
     let opts = {
