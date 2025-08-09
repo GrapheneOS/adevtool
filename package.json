@@ -8,8 +8,10 @@
   },
   "bugs": "https://github.com/kdrag0n/adevtool/issues",
   "dependencies": {
+    "@npmcli/promise-spawn": "^8.0.2",
     "@oclif/core": "^4.0.8",
     "@oclif/plugin-help": "^6.2.4",
+    "@types/npmcli__promise-spawn": "^6.0.3",
     "async-mutex": "^0.5.0",
     "chalk": "^4.1.2",
     "cli-progress": "^3.12.0",

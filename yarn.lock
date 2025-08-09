@@ -890,6 +890,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@npmcli/promise-spawn@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@npmcli/promise-spawn/-/promise-spawn-8.0.2.tgz#053688f8bc2b4ecc036d2d52c691fd82af58ea5e"
+  integrity sha512-/bNJhjc+o6qL+Dwz/bqfTQClkEO5nTQ1ZEcdCkAQjhkZMHIh22LPG7fNh1enJP1NKWDqYiiABnjFCY7E0zHYtQ==
+  dependencies:
+    which "^5.0.0"
+
 "@oclif/core@^4", "@oclif/core@^4.0.8":
   version "4.0.8"
   resolved "https://registry.npmjs.org/@oclif/core/-/core-4.0.8.tgz"
@@ -1590,6 +1597,13 @@
   integrity sha512-06OCtnTXtWOZBJlRApleWndH4JsRVs1pDCc8dLSQp+7PpUpX3ePdHyeNSFTeSe7FtKyQkrlPvHwJOW3SLd8Oyg==
   dependencies:
     undici-types "~5.26.4"
+
+"@types/npmcli__promise-spawn@^6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@types/npmcli__promise-spawn/-/npmcli__promise-spawn-6.0.3.tgz#0eb417022d29f3ca6108fc64f1994e071671e797"
+  integrity sha512-4EQlesp5HtYHPXMXd4uuI+Q9hELEU0eVg/HBRLkqGC5U2ohwXZduCottmzPpb4tWCB+w4kQ3XNPlHIdXvCTyFw==
+  dependencies:
+    "@types/node" "*"
 
 "@types/tiny-async-pool@^2.0.3":
   version "2.0.3"
@@ -3398,6 +3412,11 @@ isexe@^2.0.0:
   resolved "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
+isexe@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/isexe/-/isexe-3.1.1.tgz#4a407e2bd78ddfb14bea0c27c6f7072dde775f0d"
+  integrity sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==
+
 jake@^10.8.5:
   version "10.9.1"
   resolved "https://registry.npmjs.org/jake/-/jake-10.9.1.tgz"
@@ -4818,6 +4837,13 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+which@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/which/-/which-5.0.0.tgz#d93f2d93f79834d4363c7d0c23e00d07c466c8d6"
+  integrity sha512-JEdGzHwwkrbWoGOlIHqQ5gtprKGOenpDHpxE9zVR1bWbOtYRyPPHMe9FaP6x61CmNaTThSkb0DAJte5jD+DmzQ==
+  dependencies:
+    isexe "^3.1.1"
 
 widest-line@^3.1.0:
   version "3.1.0"
