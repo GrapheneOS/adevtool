@@ -16,7 +16,7 @@ import { downloadMissingDeviceImages } from '../images/download'
 import { maybePlural, withSpinner } from '../util/cli'
 import { createSubTmp, exists, isDirectory, mount, TempState, withTempDir } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
-import { run, spawnAsyncNoOut } from '../util/process'
+import { run, spawnAsync, spawnAsyncNoOut } from '../util/process'
 import { isSparseImage } from '../util/sparse'
 import { listZipFiles } from '../util/zip'
 
@@ -347,6 +347,8 @@ export async function prepareDeviceImages(
     let imageToUnpack: DeviceImage | null = null
     if (images.factoryImage !== undefined && !images.factoryImage.isGrapheneOsImage()) {
       imageToUnpack = images.factoryImage
+    } else if (images.otaImage !== undefined) {
+      imageToUnpack = images.otaImage
     }
 
     if (imageToUnpack === null) {
@@ -392,8 +394,12 @@ async function unpackImage(imageToUnpack: DeviceImage, destDir: string) {
 
   await fs.mkdir(destTmpDir, { recursive: true })
 
-  assert(imageToUnpack.type === ImageType.Factory)
-  await unpackFactoryImage(imageToUnpack.getPath(), imageToUnpack, destTmpDir)
+  if (imageToUnpack.type == ImageType.Factory) {
+    await unpackFactoryImage(imageToUnpack.getPath(), imageToUnpack, destTmpDir)
+  } else {
+    assert(imageToUnpack.type === ImageType.Ota)
+    await unpackOtaImage(imageToUnpack, destTmpDir)
+  }
 
   // remove write access to prevent accidental modification of unpacked files
   await spawnAsyncNoOut('chmod', ['-R', 'a-w', destTmpDir])
@@ -476,6 +482,57 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
   } finally {
     await fd.close()
   }
+}
+
+async function unpackOtaImage(image: DeviceImage, out: string) {
+  let otaPath = image.getPath()
+
+  let otaZip = await yauzl.open(otaPath)
+
+  let payloadBinOffset: number | null = null
+
+  try {
+    for await (let entry of otaZip) {
+      if (entry.filename === 'payload.bin') {
+        // this operation initializes entry.fileDataOffset
+        ;(await otaZip.openReadStream(entry, { validateCrc32: false })).destroy()
+
+        let off = entry.fileDataOffset
+        assert(off !== null, 'payload.bin fileDataOffset is null')
+        payloadBinOffset = off
+        break
+      }
+    }
+  } finally {
+    otaZip.close()
+  }
+
+  if (payloadBinOffset === null) {
+    throw new Error('payloadBinOffset is null')
+  }
+
+  await spawnAsync(
+    await getHostBinPath('ota_extractor'),
+    ['-payload', otaPath, '-payload_offset', payloadBinOffset.toString(), '-output_dir', out],
+    s => {
+      return s.includes('INFO:ota_extractor.cc') || s.length === 0
+    },
+  )
+
+  let fsType = image.deviceConfig.device.system_fs_type
+
+  let jobs = []
+
+  for (let fileName of await fs.readdir(out)) {
+    let job = async () => {
+      let file = path.resolve(out, fileName)
+      if (await unpackFsImage(file, fsType, out)) {
+        await fs.rm(file)
+      }
+    }
+    jobs.push(job())
+  }
+  await Promise.all(jobs)
 }
 
 async function unpackFsImageZipEntry(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot: string) {

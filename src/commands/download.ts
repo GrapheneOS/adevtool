@@ -3,7 +3,7 @@ import assert from 'assert'
 
 import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs, resolveBuildId } from '../config/device'
 import { IMAGE_DOWNLOAD_DIR } from '../config/paths'
-import { prepareFactoryImages } from '../frontend/source'
+import { prepareDeviceImages } from '../frontend/source'
 import { ImageType, loadBuildIndex } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadDeviceImages } from '../images/download'
@@ -69,8 +69,8 @@ export default class Download extends Command {
     }
 
     if (flags.unpack) {
-      assert(types.includes(ImageType.Factory), 'missing "-t factory"')
-      let imageMap = prepareFactoryImages(await index, await deviceConfigs, flags.buildId)
+      assert(types.includes(ImageType.Factory) || types.includes(ImageType.Ota), 'missing "-t factory|ota"')
+      let imageMap = prepareDeviceImages(await index, types, await deviceConfigs, flags.buildId)
 
       for (let [deviceBuildId, deviceImages] of await imageMap) {
         this.log(`${deviceBuildId}: '${deviceImages.unpackedFactoryImageDir}'`)
