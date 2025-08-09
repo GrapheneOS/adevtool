@@ -184,8 +184,8 @@ export default class GenerateFull extends Command {
     }),
     parallel: Flags.boolean({
       char: 'p',
-      description: 'generate devices in parallel (causes buggy progress spinners)',
-      default: false,
+      description: 'generate devices in parallel',
+      default: true,
     }),
     verbose: Flags.boolean({ char: 'v' }),
     updateSpec: Flags.boolean({
