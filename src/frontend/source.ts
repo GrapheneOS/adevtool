@@ -14,7 +14,7 @@ import { BuildIndex, ImageType } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadMissingDeviceImages } from '../images/download'
 import { maybePlural, withSpinner } from '../util/cli'
-import { createSubTmp, exists, mount, TempState, withTempDir } from '../util/fs'
+import { createSubTmp, exists, isDirectory, mount, TempState, withTempDir } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 import { run, spawnAsyncNoOut } from '../util/process'
 import { isSparseImage } from '../util/sparse'
@@ -344,27 +344,26 @@ export async function prepareDeviceImages(
   let destinationDirNames: string[] = []
 
   for (let images of imagesMap.values()) {
-    let factoryImage = images.factoryImage
-    if (factoryImage === undefined) {
+    let imageToUnpack: DeviceImage | null = null
+    if (images.factoryImage !== undefined && !images.factoryImage.isGrapheneOsImage()) {
+      imageToUnpack = images.factoryImage
+    }
+
+    if (imageToUnpack === null) {
       continue
     }
 
-    let dirName = getUnpackedFactoryDirName(images.factoryImage)
+    let dirName = getUnpackedImageDirName(imageToUnpack)
     let dir = path.join(IMAGE_DOWNLOAD_DIR, 'unpacked', dirName)
     images.unpackedFactoryImageDir = dir
 
-    let isAlreadyUnpacked = false
-    try {
-      isAlreadyUnpacked = (await fs.stat(dir)).isDirectory()
-    } catch {
-      /* empty */
+    if (await isDirectory(dir)) {
+      continue
     }
 
-    if (!isAlreadyUnpacked) {
-      let factoryImagePath = images.factoryImage.getPath()
-      destinationDirNames.push(dirName)
-      jobs.push(unpackFactoryImage(factoryImagePath, factoryImage, dir))
-    }
+    destinationDirNames.push(dirName)
+
+    jobs.push(unpackImage(imageToUnpack, dir))
   }
 
   if (jobs.length > 0) {
@@ -378,7 +377,33 @@ export async function prepareDeviceImages(
   return imagesMap
 }
 
-function getUnpackedFactoryDirName(image: DeviceImage) {
+async function unpackImage(imageToUnpack: DeviceImage, destDir: string) {
+  if (await isDirectory(destDir)) {
+    await spawnAsyncNoOut('chmod', ['-R', 'u+w', destDir])
+    await spawnAsyncNoOut('rm', ['-r', destDir])
+  }
+
+  let destTmpDir = destDir + '-tmp'
+
+  if (await isDirectory(destTmpDir)) {
+    await spawnAsyncNoOut('chmod', ['-R', 'u+w', destTmpDir])
+    await fs.rm(destTmpDir, { recursive: true, force: true })
+  }
+
+  await fs.mkdir(destTmpDir, { recursive: true })
+
+  assert(imageToUnpack.type === ImageType.Factory)
+  await unpackFactoryImage(imageToUnpack.getPath(), imageToUnpack, destTmpDir)
+
+  // remove write access to prevent accidental modification of unpacked files
+  await spawnAsyncNoOut('chmod', ['-R', 'a-w', destTmpDir])
+
+  await fs.rename(destTmpDir, destDir)
+
+  console.log('unpacked ' + getUnpackedImageDirName(imageToUnpack))
+}
+
+function getUnpackedImageDirName(image: DeviceImage) {
   return image.deviceConfig.device.name + '-' + image.buildId
 }
 
@@ -437,38 +462,15 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
         entry.uncompressedSize,
       )
 
-      let unpackedTmp = out + '-tmp'
       let promises = []
-
-      let rmTmpDir = false
-      try {
-        await fs.access(unpackedTmp)
-        rmTmpDir = true
-      } catch {
-        /* empty */
-      }
-
-      if (rmTmpDir) {
-        await spawnAsyncNoOut('chmod', ['--recursive', 'u+w', unpackedTmp])
-        await fs.rm(unpackedTmp, { recursive: true, force: true })
-      }
-
-      await fs.mkdir(unpackedTmp, { recursive: true })
 
       let fsType = image.deviceConfig.device.system_fs_type
 
       for await (let innerEntry of innerZip) {
-        promises.push(unpackFsImage(innerEntry, fsType, unpackedTmp))
+        promises.push(unpackFsImageZipEntry(innerEntry, fsType, out))
       }
 
       await Promise.all(promises)
-
-      // remove write access to prevent accidental modification of unpacked files
-      await spawnAsyncNoOut('chmod', ['--recursive', 'a-w', unpackedTmp])
-
-      await fs.rename(unpackedTmp, out)
-
-      console.log('unpacked ' + getUnpackedFactoryDirName(image))
       return
     }
   } finally {
@@ -476,7 +478,7 @@ async function unpackFactoryImage(factoryImagePath: string, image: DeviceImage, 
   }
 }
 
-async function unpackFsImage(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot: string) {
+async function unpackFsImageZipEntry(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot: string) {
   let fsImageName = entry.filename
 
   let expectedExt = '.img'
@@ -497,7 +499,26 @@ async function unpackFsImage(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot
   let writeStream = (await fs.open(fsImagePath, 'w')).createWriteStream()
   await pipeline(readStream, writeStream)
 
-  let destinationDir = path.join(unpackedTmpRoot, fsImageBaseName)
+  await unpackFsImage(fsImagePath, fsType, unpackedTmpRoot)
+  await fs.rm(fsImagePath)
+}
+
+async function unpackFsImage(fsImagePath: string, fsType: FsType, baseDestinationDir: string) {
+  let fsImageName = path.basename(fsImagePath)
+
+  let expectedExt = '.img'
+  let ext = path.extname(fsImageName)
+  if (ext !== expectedExt) {
+    return false
+  }
+
+  let fsImageBaseName = path.basename(fsImageName, expectedExt)
+
+  if (!ALL_SYS_PARTITIONS.has(fsImageBaseName)) {
+    return false
+  }
+
+  let destinationDir = path.join(baseDestinationDir, fsImageBaseName)
   await fs.mkdir(destinationDir)
 
   if (fsType === FsType.EXT4) {
@@ -506,8 +527,7 @@ async function unpackFsImage(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot
     assert(fsType === FsType.EROFS)
     await unpackErofs(fsImagePath, destinationDir)
   }
-
-  await fs.rm(fsImagePath)
+  return true
 }
 
 async function unpackExt4(fsImagePath: string, destinationDir: string) {
