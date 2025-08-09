@@ -14,7 +14,7 @@ import { BuildIndex, ImageType } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadMissingDeviceImages } from '../images/download'
 import { maybePlural, withSpinner } from '../util/cli'
-import { createSubTmp, exists, isDirectory, mount, TempState, withTempDir } from '../util/fs'
+import { createSubTmp, exists, isDirectory, listFilesRecursive, mount, TempState, withTempDir } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 import { run, spawnAsync, spawnAsyncNoOut } from '../util/process'
 import { isSparseImage } from '../util/sparse'
@@ -359,7 +359,7 @@ export async function prepareDeviceImages(
     let dir = path.join(IMAGE_DOWNLOAD_DIR, 'unpacked', dirName)
     images.unpackedFactoryImageDir = dir
 
-    if (await isDirectory(dir)) {
+    if (await isDirectory(path.join(dir, UNPACKED_APEXES_DIR_NAME))) {
       continue
     }
 
@@ -535,6 +535,63 @@ async function unpackOtaImage(image: DeviceImage, out: string) {
   await Promise.all(jobs)
 }
 
+async function unpackApexes(unpackedPartitionDir: string, baseUnpackedImageDir: string) {
+  let jobs: Promise<unknown>[] = []
+
+  for await (let file of listFilesRecursive(unpackedPartitionDir)) {
+    let extName = path.extname(file)
+    if (!(extName === '.apex' || extName === '.capex')) {
+      continue
+    }
+
+    let baseUnpackedApexesDir = path.join(baseUnpackedImageDir, UNPACKED_APEXES_DIR_NAME)
+    let dirPath = path.join(baseUnpackedApexesDir, path.relative(baseUnpackedImageDir, file))
+
+    jobs.push(unpackApex(file, dirPath))
+  }
+
+  await Promise.all(jobs)
+}
+
+async function unpackApex(apexPath: string, dstPath: string) {
+  await fs.mkdir(dstPath, { recursive: true })
+
+  let fd = await fs.open(apexPath, 'r')
+  try {
+    let fdSize = (await fd.stat()).size
+    let zip = await yauzl.fromReader(new FdReader(fd, 0, fdSize), fdSize)
+
+    let unpacked = false
+
+    for await (let entry of zip) {
+      let name = entry.filename
+      let isOriginalApex = name === 'original_apex'
+      let isPayloadImg = name === 'apex_payload.img'
+      if (!isOriginalApex && !isPayloadImg) {
+        continue
+      }
+      let readStream = zip.openReadStream(entry, { validateCrc32: false })
+      let unpackedEntry = path.join(dstPath, 'extracted__' + name)
+      let writeStream = (await fs.open(unpackedEntry, 'w')).createWriteStream()
+      await pipeline(await readStream, writeStream)
+      if (isOriginalApex) {
+        await unpackApex(unpackedEntry, dstPath)
+      } else {
+        await unpackExt4(unpackedEntry, dstPath)
+      }
+      await fs.rm(unpackedEntry)
+      unpacked = true
+      break
+    }
+
+    if (!unpacked) {
+      throw new Error('unable to unpack ' + apexPath)
+    }
+  } finally {
+    await fd.close()
+  }
+}
+
 async function unpackFsImageZipEntry(entry: yauzl.Entry, fsType: FsType, unpackedTmpRoot: string) {
   let fsImageName = entry.filename
 
@@ -584,7 +641,14 @@ async function unpackFsImage(fsImagePath: string, fsType: FsType, baseDestinatio
     assert(fsType === FsType.EROFS)
     await unpackErofs(fsImagePath, destinationDir)
   }
+  await unpackApexes(destinationDir, baseDestinationDir)
   return true
+}
+
+const UNPACKED_APEXES_DIR_NAME = 'unpacked_apexes'
+
+export function getUnpackedApexesDir(images: DeviceImages) {
+  return path.join(images.unpackedFactoryImageDir, UNPACKED_APEXES_DIR_NAME)
 }
 
 async function unpackExt4(fsImagePath: string, destinationDir: string) {
