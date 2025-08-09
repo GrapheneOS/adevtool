@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs'
 
+import { VendorDirectories } from '../blobs/build'
 import { DeviceConfig } from '../config/device'
 import { PropResults } from './generate'
-import { VendorDirectories } from '../blobs/build'
 
 function createReadme(device: string, friendlyDevice: string) {
   // Hard-coded here for convenient formatting

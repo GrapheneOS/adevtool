@@ -5,8 +5,16 @@ import { CopyOptions, promises as fs } from 'fs'
 import path from 'path'
 
 import { createVendorDirs, VendorDirectories } from '../blobs/build'
+import {
+  decodeConfigs,
+  downloadAllConfigs,
+  fetchUpdateConfig,
+  getCarrierSettingsUpdatesDir,
+  getVersionsMap,
+} from '../blobs/carrier'
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
+import { processOverlays } from '../blobs/overlays2'
 import { DEVICE_CONFIG_FLAGS, DeviceBuildId, DeviceConfig, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
 import {
   CARRIER_SETTINGS_DIR,
@@ -45,14 +53,6 @@ import {
   parseFileTreeSpecYaml,
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive, withTempDir } from '../util/fs'
-import {
-  decodeConfigs,
-  downloadAllConfigs,
-  fetchUpdateConfig,
-  getCarrierSettingsUpdatesDir,
-  getVersionsMap,
-} from '../blobs/carrier'
-import { processOverlays } from '../blobs/overlays2'
 
 const doDevice = (
   dirs: VendorDirectories,

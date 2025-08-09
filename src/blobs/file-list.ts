@@ -1,11 +1,11 @@
 import path from 'path'
 
-import { BlobEntry, partPathToSrcPath, srcPathToPartPath } from './entry'
-import { exists, listFilesRecursive } from '../util/fs'
-import { createActionSpinner, stopActionSpinner } from '../util/cli'
-import { parseLines } from '../util/parse'
-import { MAKEFILE_HEADER } from '../util/headers'
 import { Filters, filterValues } from '../config/filters'
+import { createActionSpinner, stopActionSpinner } from '../util/cli'
+import { exists, listFilesRecursive } from '../util/fs'
+import { MAKEFILE_HEADER } from '../util/headers'
+import { parseLines } from '../util/parse'
+import { BlobEntry, partPathToSrcPath, srcPathToPartPath } from './entry'
 
 export function parseFileList(list: string) {
   let entries = []

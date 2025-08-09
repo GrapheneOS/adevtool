@@ -1,12 +1,11 @@
+import path from 'path'
 import { loadPartitionProps, PartitionProps } from '../blobs/props'
 import { loadPartVintfInfo, PartitionVintfInfo } from '../blobs/vintf'
 import { minimizeModules, parseModuleInfo, SoongModuleInfo } from '../build/soong-info'
 import { parsePartContexts, SelinuxPartContexts } from '../selinux/contexts'
-import { withSpinner } from '../util/cli'
+import { updateMultiMap } from '../util/data'
 import { readFile } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
-import path from 'path'
-import { updateMultiMap } from '../util/data'
 
 const STATE_VERSION = 5
 

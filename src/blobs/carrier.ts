@@ -1,22 +1,22 @@
-import path from 'path'
+import chalk from 'chalk'
 import fetch from 'node-fetch'
 import os from 'os'
-import chalk from 'chalk'
+import path from 'path'
 
-import { Response } from '../proto-ts/vendor/adevtool/assets/response'
-import { Request } from '../proto-ts/vendor/adevtool/assets/request'
+import assert from 'assert'
+import { createWriteStream, promises as fs } from 'fs'
+import { promises as stream } from 'stream'
+import { DeviceConfig } from '../config/device'
+import { CARRIER_SETTINGS_DIR, OS_CHECKOUT_DIR } from '../config/paths'
 import { CarrierList } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_list'
 import {
   CarrierSettings,
   MultiCarrierSettings,
 } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_settings'
+import { Request } from '../proto-ts/vendor/adevtool/assets/request'
+import { Response } from '../proto-ts/vendor/adevtool/assets/response'
 import { exists, listFilesRecursive, TMP_PREFIX } from '../util/fs'
-import assert from 'assert'
-import { createWriteStream, promises as fs } from 'fs'
-import { promises as stream } from 'stream'
 import { spawnAsyncStdin } from '../util/process'
-import { CARRIER_SETTINGS_DIR, OS_CHECKOUT_DIR } from '../config/paths'
-import { DeviceConfig } from '../config/device'
 
 const PROTO_PATH = `${OS_CHECKOUT_DIR}/packages/apps/CarrierConfig2/src/com/google/carrier`
 

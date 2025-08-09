@@ -3,6 +3,7 @@ import ora from 'ora'
 import path from 'path'
 import { flattenAllApexs } from '../blobs/apex'
 
+import assert from 'assert'
 import { generateBuild, VendorDirectories, writeBuildFiles } from '../blobs/build'
 import { BlobEntry } from '../blobs/entry'
 import { combinedPartPathToEntry, diffLists, listPart, serializeBlobList } from '../blobs/file-list'
@@ -10,6 +11,7 @@ import { parsePresignedRecursive, updatePresignedBlobs } from '../blobs/presigne
 import { diffPartitionProps, loadPartitionProps, PartitionProps } from '../blobs/props'
 import { diffPartVintfManifests, loadPartVintfInfo, writePartVintfManifests } from '../blobs/vintf'
 import { findOverrideModules } from '../build/overrides'
+import { ApkModule, TYPE_APK } from '../build/soong'
 import { removeSelfModules } from '../build/soong-info'
 import { DeviceConfig } from '../config/device'
 import { filterKeys, Filters, filterValue, filterValues } from '../config/filters'
@@ -26,8 +28,6 @@ import {
 import { generateFileContexts } from '../selinux/labels'
 import { exists, readFile, TempState } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
-import { ApkModule, TYPE_APK } from '../build/soong'
-import assert from 'assert'
 
 export interface PropResults {
   stockProps: PartitionProps

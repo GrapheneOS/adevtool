@@ -2,10 +2,10 @@ import assert from 'assert'
 import { promises as fs } from 'fs'
 import * as unzipit from 'unzipit'
 
-import { FastbootPack, EntryType } from './fastboot-pack'
 import { PartitionProps } from '../blobs/props'
 import { getAbOtaPartitions } from '../frontend/generate'
 import { NodeFileReader } from '../util/zip'
+import { EntryType, FastbootPack } from './fastboot-pack'
 
 export const ANDROID_INFO = 'android-info.txt'
 

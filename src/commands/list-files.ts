@@ -2,8 +2,8 @@ import { Args, Command, Flags } from '@oclif/core'
 import { promises as fs } from 'fs'
 import { listPart } from '../blobs/file-list'
 
-import { ALL_SYS_PARTITIONS } from '../util/partitions'
 import { withWrappedSrc, WRAPPED_SOURCE_FLAGS } from '../frontend/source'
+import { ALL_SYS_PARTITIONS } from '../util/partitions'
 
 export default class ListFiles extends Command {
   static description = 'list system files and symlinks important for blobs'

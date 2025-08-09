@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const NODE_MAJOR_VERSION = process.versions.node.split('.')[0];
+const NODE_MAJOR_VERSION = process.versions.node.split('.')[0]
 
 if (NODE_MAJOR_VERSION < 18) {
-  throw new Error('This tool requires NodeJS 18 or later');
+  throw new Error('This tool requires NodeJS 18 or later')
 }
 
 const expectedPathEnding = '/vendor/adevtool/bin/run'
@@ -12,7 +12,7 @@ let validCwd = false
 if (__filename.startsWith(cwd)) {
   let ending = __filename.substring(cwd.length)
   if (ending === expectedPathEnding) {
-      validCwd = true
+    validCwd = true
   }
 }
 
@@ -27,5 +27,5 @@ if (!validCwd) {
 
 void (async () => {
   const oclif = await import('@oclif/core')
-  await oclif.execute({dir: __dirname, development: true}, )
+  await oclif.execute({ dir: __dirname, development: true })
 })()

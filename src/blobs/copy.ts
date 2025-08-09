@@ -1,9 +1,9 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 
-import { BlobEntry } from './entry'
 import { startActionSpinner, stopActionSpinner } from '../util/cli'
 import { readFile } from '../util/fs'
+import { BlobEntry } from './entry'
 
 export async function copyBlobs(entries: Iterable<BlobEntry>, srcDir: string, destDir: string) {
   let spinner = startActionSpinner('Copying files')

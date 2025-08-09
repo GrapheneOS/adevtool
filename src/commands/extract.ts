@@ -1,11 +1,11 @@
 import { Args, Command, Flags } from '@oclif/core'
 import chalk from 'chalk'
 
-import { parseFileList } from '../blobs/file-list'
-import { copyBlobs } from '../blobs/copy'
 import { createVendorDirs, generateBuild, writeBuildFiles } from '../blobs/build'
-import { readFile } from '../util/fs'
+import { copyBlobs } from '../blobs/copy'
+import { parseFileList } from '../blobs/file-list'
 import { withWrappedSrc, WRAPPED_SOURCE_FLAGS } from '../frontend/source'
+import { readFile } from '../util/fs'
 
 export default class Extract extends Command {
   static description = 'extract proprietary files'

@@ -1,11 +1,11 @@
 import { Args, Command, Flags } from '@oclif/core'
-import { promises as fs } from 'fs'
 import chalk from 'chalk'
+import { promises as fs } from 'fs'
 
 import { parseFileList, serializeBlobList } from '../blobs/file-list'
 import { enumeratePresignedBlobs, parsePresignedRecursive, updatePresignedBlobs } from '../blobs/presigned'
-import { readFile } from '../util/fs'
 import { withWrappedSrc, WRAPPED_SOURCE_FLAGS } from '../frontend/source'
+import { readFile } from '../util/fs'
 
 export default class CheckPresigned extends Command {
   static description = 'check for APKs that should be presigned'

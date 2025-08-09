@@ -1,11 +1,11 @@
+import assert from 'assert'
+import { readFile } from 'node:fs/promises'
+import path from 'path'
 import { DeviceConfig } from '../config/device'
+import { Filters } from '../config/filters'
+import { getHostBinPath } from '../config/paths'
 import { spawnAsyncStdin } from '../util/process'
 import { VendorDirectories } from './build'
-import { getHostBinPath } from '../config/paths'
-import { Filters } from '../config/filters'
-import assert from 'assert'
-import path from 'path'
-import { readFile } from 'node:fs/promises'
 
 export async function processOverlays(config: DeviceConfig, dirs: VendorDirectories, stockSrc: string) {
   let arsclibPath = getHostBinPath('arsclib')

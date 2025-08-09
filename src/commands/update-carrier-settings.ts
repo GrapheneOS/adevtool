@@ -1,7 +1,7 @@
 import { Command, Flags } from '@oclif/core'
 
-import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
 import { downloadAllConfigs, fetchUpdateConfig, getCarrierSettingsUpdatesDir } from '../blobs/carrier'
+import { DEVICE_CONFIG_FLAGS, loadDeviceConfigs } from '../config/device'
 import { forEachDevice } from '../frontend/devices'
 
 export default class UpdateCarrierSettings extends Command {

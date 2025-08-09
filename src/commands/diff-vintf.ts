@@ -1,6 +1,6 @@
 import { Args, Command, Flags } from '@oclif/core'
-import { promises as fs } from 'fs'
 import chalk from 'chalk'
+import { promises as fs } from 'fs'
 
 import { diffVintfHals, getHalFqNames, loadPartVintfInfo, serializeVintfHals } from '../blobs/vintf'
 import { EXT_PARTITIONS } from '../util/partitions'

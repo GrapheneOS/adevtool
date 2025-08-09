@@ -1,14 +1,14 @@
 import { Command, Flags } from '@oclif/core'
 import path from 'path'
 
-import { DEVICE_CONFIG_FLAGS, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
-import { decodeConfigs } from '../blobs/carrier'
-import { forEachDevice } from '../frontend/devices'
-import { BuildIndex, loadBuildIndex } from '../images/build-index'
-import { prepareFactoryImages } from '../frontend/source'
-import { exists } from '../util/fs'
-import { CARRIER_SETTINGS_FACTORY_PATH, VENDOR_MODULE_SKELS_DIR } from '../config/paths'
 import assert from 'assert'
+import { decodeConfigs } from '../blobs/carrier'
+import { DEVICE_CONFIG_FLAGS, getDeviceBuildId, loadDeviceConfigs } from '../config/device'
+import { CARRIER_SETTINGS_FACTORY_PATH, VENDOR_MODULE_SKELS_DIR } from '../config/paths'
+import { forEachDevice } from '../frontend/devices'
+import { prepareFactoryImages } from '../frontend/source'
+import { BuildIndex, loadBuildIndex } from '../images/build-index'
+import { exists } from '../util/fs'
 
 export default class DumpCarrierSettings extends Command {
   static description = 'generate protoc dumps of configs from factory image.'

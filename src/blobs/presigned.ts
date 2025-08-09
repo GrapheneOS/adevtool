@@ -1,10 +1,10 @@
 import path from 'path'
 
-import { parseSeappContexts } from '../selinux/seapp'
-import { aapt2 } from '../util/process'
-import { listFilesRecursive, readFile } from '../util/fs'
-import { BlobEntry } from './entry'
 import { Filters, filterValue } from '../config/filters'
+import { parseSeappContexts } from '../selinux/seapp'
+import { listFilesRecursive, readFile } from '../util/fs'
+import { aapt2 } from '../util/process'
+import { BlobEntry } from './entry'
 
 export async function parsePresignedRecursive(sepolicyDirs: Array<string>) {
   let contexts = []
