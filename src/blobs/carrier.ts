@@ -7,7 +7,7 @@ import assert from 'assert'
 import { createWriteStream, promises as fs } from 'fs'
 import { promises as stream } from 'stream'
 import { DeviceConfig } from '../config/device'
-import { CARRIER_SETTINGS_DIR, OS_CHECKOUT_DIR } from '../config/paths'
+import { CARRIER_SETTINGS_DIR, getHostBinPath, OS_CHECKOUT_DIR } from '../config/paths'
 import { CarrierList } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_list'
 import {
   CarrierSettings,
@@ -160,7 +160,7 @@ export async function decodeConfigs(cfgPath: string, outDir: string) {
 }
 
 async function decodeConfig(args: ReadonlyArray<string>, inputFile: string, outputFile: string) {
-  const decoded = await spawnAsyncStdin('protoc', args, await fs.readFile(inputFile))
+  const decoded = await spawnAsyncStdin(await getHostBinPath('aprotoc'), args, await fs.readFile(inputFile))
   await fs.writeFile(outputFile, decoded)
 }
 
