@@ -25,6 +25,8 @@ if (!validCwd) {
   process.exit(1)
 }
 
+process.env.PATH = cwd + '/prebuilts/build-tools/path/linux-x86:' + process.env.PATH
+
 void (async () => {
   const oclif = await import('@oclif/core')
   await oclif.execute({ dir: __dirname, development: true })
