@@ -47,7 +47,7 @@ import { writeReadme } from '../frontend/readme'
 import { DeviceImages, prepareDeviceImages } from '../frontend/source'
 import { BuildIndex, ImageType, loadBuildIndex } from '../images/build-index'
 import { SelinuxPartResolutions } from '../selinux/contexts'
-import { gitDiff, withSpinner } from '../util/cli'
+import { gitDiff } from '../util/cli'
 import {
   DIR_SPEC_PLACEHOLDER,
   FileTreeComparison,
@@ -65,6 +65,7 @@ async function doDevice(
   customSrc: string,
   factoryPath: string | undefined,
   skipCopy: boolean,
+  verbose: boolean,
 ) {
   // customSrc can point to a (directory containing) system state JSON
   let customState = await loadCustomState(config, customSrc)
@@ -73,16 +74,14 @@ async function doDevice(
   let namedEntries = new Map<string, BlobEntry>()
 
   // 1. Diff files
-  await withSpinner('Enumerating files', spinner =>
-    enumerateFiles(spinner, config.filters.files, config.filters.dep_files, namedEntries, customState, stockSrc),
-  )
+  if (verbose) console.log('Enumerating files')
+  await enumerateFiles(config.filters.files, config.filters.dep_files, namedEntries, customState, stockSrc)
 
   // 2. Overrides
   let buildPkgs: string[] = []
   if (config.generate.overrides) {
-    let builtModules = await withSpinner('Replacing blobs with buildable modules', () =>
-      resolveOverrides(config, customState, namedEntries),
-    )
+    if (verbose) console.log('Replacing blobs with buildable modules')
+    let builtModules = await resolveOverrides(config, customState, namedEntries)
     buildPkgs.push(...builtModules)
   }
   // After this point, we only need entry objects
@@ -90,7 +89,8 @@ async function doDevice(
 
   // 3. Presigned
   if (config.generate.presigned) {
-    await withSpinner('Marking apps as presigned', spinner => updatePresigned(spinner, config, entries, stockSrc))
+    if (verbose) console.log('Marking apps as presigned')
+    await updatePresigned(config, entries, stockSrc)
   }
 
   // 5. Extract
@@ -102,19 +102,20 @@ async function doDevice(
   // 6. Props
   let propResults: PropResults | null = null
   if (config.generate.props) {
-    propResults = await withSpinner('Extracting properties', () => extractProps(config, customState, stockSrc))
+    if (verbose) console.log('Extracting properties')
+    propResults = await extractProps(config, customState, stockSrc)
   }
 
   // 7. SELinux policies
   let sepolicyResolutions: SelinuxPartResolutions | null = null
   if (config.generate.sepolicy_dirs) {
-    sepolicyResolutions = await withSpinner('Adding missing SELinux policies', () =>
-      resolveSepolicyDirs(config, customState, dirs, stockSrc),
-    )
+    if (verbose) console.log('Adding missing SELinux policies')
+    sepolicyResolutions = await resolveSepolicyDirs(config, customState, dirs, stockSrc)
   }
 
   // 8. Overlays
   if (config.generate.overlays) {
+    if (verbose) console.log('Processing overlays')
     let overlayPkgs = await processOverlays(config, dirs, stockSrc)
     buildPkgs.push(...overlayPkgs)
   }
@@ -122,9 +123,8 @@ async function doDevice(
   // 9. vintf manifests
   let vintfManifestPaths: Map<string, string> | null = null
   if (config.generate.vintf) {
-    vintfManifestPaths = await withSpinner('Extracting vintf manifests', () =>
-      extractVintfManifests(customState, dirs, stockSrc),
-    )
+    if (verbose) console.log('Extracting vintf manifests')
+    vintfManifestPaths = await extractVintfManifests(customState, dirs, stockSrc)
   }
 
   // 10. Firmware
@@ -134,9 +134,8 @@ async function doDevice(
       throw new Error('Factory firmware extraction depends on properties')
     }
 
-    fwPaths = await withSpinner('Extracting firmware', () =>
-      extractFirmware(config, dirs, propResults!.stockProps, factoryPath!),
-    )
+    if (verbose) console.log('Extracting firmware')
+    fwPaths = await extractFirmware(config, dirs, propResults!.stockProps, factoryPath!)
   }
 
   let vendorLinkerConfig = config.platform.vendor_linker_config
@@ -148,19 +147,17 @@ async function doDevice(
   }
 
   // 11. Build files
-  await withSpinner('Generating build files', () =>
-    generateBuildFiles(
-      config,
-      dirs,
-      entries,
-      buildPkgs,
-      propResults,
-      fwPaths,
-      vintfManifestPaths,
-      vendorLinkerConfigPath,
-      sepolicyResolutions,
-      stockSrc,
-    ),
+  await generateBuildFiles(
+    config,
+    dirs,
+    entries,
+    buildPkgs,
+    propResults,
+    fwPaths,
+    vintfManifestPaths,
+    vendorLinkerConfigPath,
+    sepolicyResolutions,
+    stockSrc,
   )
 
   await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults)])
@@ -190,7 +187,7 @@ export default class GenerateFull extends Command {
       description: 'generate devices in parallel (causes buggy progress spinners)',
       default: false,
     }),
-
+    verbose: Flags.boolean({ char: 'v' }),
     updateSpec: Flags.boolean({
       description:
         'update vendor module FileTreeSpec in vendor-specs/ instead of requiring it to be equal to the reference (current) spec',
@@ -222,7 +219,7 @@ export default class GenerateFull extends Command {
         // Prepare output directories
         let vendorDirs = await createVendorDirs(config.device.vendor, config.device.name)
 
-        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, factoryPath, flags.skipCopy)
+        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, factoryPath, flags.skipCopy, flags.verbose)
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular && !flags.doNotDownloadCarrierSettings) {
@@ -234,7 +231,9 @@ export default class GenerateFull extends Command {
           const srcCsDir = getCarrierSettingsUpdatesDir(config)
           const dstCsDir = getCarrierSettingsVendorDir(vendorDirs)
           if (await exists(srcCsDir)) {
-            this.log(chalk.bold(`Updating carrier settings from ${path.relative(OS_CHECKOUT_DIR, srcCsDir)}`))
+            if (flags.verbose) {
+              this.log(`Updating carrier settings from ${path.relative(OS_CHECKOUT_DIR, srcCsDir)}`)
+            }
             const srcVersions = await getVersionsMap(srcCsDir)
             const dstVersions = await getVersionsMap(dstCsDir)
             for await (let file of listFilesRecursive(srcCsDir)) {
@@ -245,7 +244,7 @@ export default class GenerateFull extends Command {
               const srcVer = srcVersions.get(carrierName) ?? 0
               const dstVer = dstVersions.get(carrierName) ?? 0
               if (srcVer < dstVer) {
-                console.log(`skipping copying ${file} due to older version (${srcVer}<${dstVer})`)
+                if (flags.verbose) console.log(`skipping copying ${file} due to older version (${srcVer}<${dstVer})`)
                 continue
               }
               const destFile = path.join(dstCsDir, path.basename(file))
@@ -257,7 +256,7 @@ export default class GenerateFull extends Command {
 
         if (flags.updateSpec) {
           let cpSkelPromise = copyVendorSkel(vendorDirs, config)
-          await writeVendorFileTreeSpec(vendorDirs, config)
+          await writeVendorFileTreeSpec(vendorDirs, config, flags.verbose)
           await cpSkelPromise
           await decodeConfigs(
             getCarrierSettingsVendorDir(vendorDirs),
@@ -265,6 +264,9 @@ export default class GenerateFull extends Command {
           )
         } else {
           try {
+            if (flags.verbose) {
+              this.log('Verifying FileTreeSpec')
+            }
             await compareToReferenceFileTreeSpec(vendorDirs, config)
           } catch (e) {
             await fs.rm(vendorDirs.out, { recursive: true })
@@ -272,6 +274,7 @@ export default class GenerateFull extends Command {
           }
         }
         await writeVersionCheckFile(config, vendorDirs)
+        this.log('Generated vendor module at ' + vendorDirs.out)
       },
       config => config.device.name,
     )
@@ -279,8 +282,6 @@ export default class GenerateFull extends Command {
 }
 
 async function compareToReferenceFileTreeSpec(vendorDirs: VendorDirectories, config: DeviceConfig) {
-  console.log(chalk.bold('Verifying FileTreeSpec'))
-
   let specFile = getVendorModuleTreeSpecFile(config)
   if (!(await exists(specFile))) {
     throw new Error(
@@ -347,12 +348,13 @@ To update it, use the --${GenerateFull.flags.updateSpec.name} flag.`)
   }
 }
 
-async function writeVendorFileTreeSpec(dirs: VendorDirectories, config: DeviceConfig) {
+async function writeVendorFileTreeSpec(dirs: VendorDirectories, config: DeviceConfig, verbose: boolean) {
   let fileTreeSpec = getFileTreeSpec(dirs.out)
 
   let dstFile = getVendorModuleTreeSpecFile(config)
   await fs.mkdir(path.parse(dstFile).dir, { recursive: true })
   await fs.writeFile(dstFile, fileTreeSpecToYaml(await fileTreeSpec))
+  if (verbose) console.log('Updated FileTreeSpec at ' + dstFile)
 }
 
 // see readme in vendor-skels/ dir

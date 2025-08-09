@@ -1,5 +1,4 @@
 import { promises as fs } from 'fs'
-import ora from 'ora'
 import path from 'path'
 
 import assert from 'assert'
@@ -50,7 +49,6 @@ export async function loadCustomState(config: DeviceConfig, customSrc: string) {
 }
 
 export async function enumerateFiles(
-  spinner: ora.Ora | null,
   filters: Filters,
   forceIncludeFilters: Filters | null,
   namedEntries: Map<string, BlobEntry>,
@@ -77,10 +75,6 @@ export async function enumerateFiles(
       let entry = combinedPartPathToEntry(partition, combinedPartPath)
       namedEntries.set(combinedPartPath, entry)
     }
-
-    if (spinner !== null) {
-      spinner.text = partition
-    }
   }
 }
 
@@ -104,16 +98,14 @@ export async function resolveOverrides(
   return builtModules
 }
 
-export async function updatePresigned(spinner: ora.Ora, config: DeviceConfig, entries: BlobEntry[], stockSrc: string) {
+export async function updatePresigned(config: DeviceConfig, entries: BlobEntry[], stockSrc: string) {
   let presignedPkgs = await parsePresignedRecursive(config.platform.sepolicy_dirs)
   await updatePresignedBlobs(
     await getHostBinPath('aapt2'),
     stockSrc,
     presignedPkgs,
     entries,
-    entry => {
-      spinner.text = entry.srcPath
-    },
+    undefined,
     config.filters.presigned,
   )
 }

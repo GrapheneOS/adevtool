@@ -37,7 +37,7 @@ async function doDevice(config: DeviceConfig, stockSrc: string, skipCopy: boolea
   let dirs = await createVendorDirs(config.device.vendor, config.device.name)
 
   // 1. Diff files
-  await enumerateFiles(null, config.filters.dep_files, null, namedEntries, null, stockSrc)
+  await enumerateFiles(config.filters.dep_files, null, namedEntries, null, stockSrc)
 
   // After this point, we only need entry objects
   let entries = Array.from(namedEntries.values())

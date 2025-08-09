@@ -25,7 +25,9 @@ export async function processOverlays(config: DeviceConfig, dirs: VendorDirector
 
   let stdin = Buffer.from(JSON.stringify(cmd), 'utf-8')
   let out = await spawnAsyncStdin(arsclibPath, ['--json-stdin'], stdin)
-  console.log(out)
+  if (out.length > 0) {
+    console.log(out)
+  }
   return (await readFile(moduleListPath)).toString('utf-8').split('\n')
 }
 
