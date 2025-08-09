@@ -7,18 +7,20 @@ export async function forEachDevice<Device>(
   deviceKey: (device: Device) => string = d => d as string,
 ) {
   let jobs = []
-  let isMultiDevice = devices.length > 1
   for (let device of devices) {
-    if (isMultiDevice) {
-      console.log(`${chalk.bold(chalk.blueBright(deviceKey(device)))}`)
-    }
-
     let job = callback(device)
     if (parallel) {
       jobs.push(job)
     } else {
+      if (devices.length > 1) {
+        console.log(`${chalk.bold(chalk.blueBright(deviceKey(device)))}`)
+      }
       await job
     }
+  }
+
+  if (parallel && devices.length >= 2) {
+    console.log('Devices: ' + devices.map(d => deviceKey(d)).join(' | '))
   }
 
   await Promise.all(jobs)
