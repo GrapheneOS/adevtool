@@ -319,7 +319,7 @@ PRODUCT_PACKAGES += \
     boringssl_self_test32 \
     capo \
     CellBroadcastReceiverOverlay \
-    chre_atoms_log:64 \
+    chre_atoms_log \
     chremetrics-cpp \
     citadel_updater \
     citadeld \
@@ -479,7 +479,7 @@ PRODUCT_PACKAGES += \
     libgxp \
     libhbmsvmanager_jni__system_ext \
     libhidltransport.vendor \
-    libhidparser:64 \
+    libhidparser \
     libhwbinder.vendor \
     libhwjpeg \
     libion_exynos \
@@ -493,14 +493,14 @@ PRODUCT_PACKAGES += \
     libmemtrack-pixel \
     libmetrics_logger \
     libminijail.vendor \
+    libnos \
     libnos_citadeld_proxy \
     libnos_client_citadel \
+    libnos_datagram \
     libnos_datagram_citadel \
-    libnos_datagram:64 \
-    libnos_feature:64 \
+    libnos_feature \
     libnos_transport \
-    libnos:64 \
-    libnosprotos:64 \
+    libnosprotos \
     liboemcrypto \
     liboffloadeffect \
     libOpenCL-pixel \

@@ -261,6 +261,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.fingerprint.ta.name=g7a.app \
     ro.build.device_family=CM4KM4TK4TG4
 
+PRODUCT_SYSTEM_DLKM_PROPERTIES += \
+    ro.product.model_for_attestation=Pixel 9a \
+    ro.product.brand_for_attestation=google \
+    ro.product.name_for_attestation=tegu \
+    ro.product.device_for_attestation=tegu \
+    ro.product.manufacturer_for_attestation=Google
+
 PRODUCT_VENDOR_DLKM_PROPERTIES += \
     ro.product.model_for_attestation=Pixel 9a \
     ro.product.brand_for_attestation=google \
@@ -459,7 +466,7 @@ PRODUCT_PACKAGES += \
     cbd \
     cc \
     CellBroadcastReceiverOverlay \
-    chre_atoms_log:64 \
+    chre_atoms_log \
     chremetrics-cpp \
     citadel_updater \
     citadeld \
@@ -569,7 +576,7 @@ PRODUCT_PACKAGES += \
     libaudioserviceexampleimpl \
     libavservices_minijail.vendor \
     libbinder_trusty \
-    libbluetooth_audio_session_aidl:64 \
+    libbluetooth_audio_session_aidl \
     libbw_av1dec \
     libbw_av1enc \
     libc2filterplugin \
@@ -638,7 +645,7 @@ PRODUCT_PACKAGES += \
     libgxp \
     libhidlmemory.vendor \
     libhidltransport.vendor \
-    libhidparser:64 \
+    libhidparser \
     libhwbinder.vendor \
     libhwjpeg \
     libion_exynos \
@@ -661,14 +668,14 @@ PRODUCT_PACKAGES += \
     libmodem_svc_proto_legacy_soong \
     libnbaio_mono \
     libnetutils.vendor \
+    libnos \
     libnos_citadeld_proxy \
     libnos_client_citadel \
+    libnos_datagram \
     libnos_datagram_citadel \
-    libnos_datagram:64 \
-    libnos_feature:64 \
+    libnos_feature \
     libnos_transport \
-    libnos:64 \
-    libnosprotos:64 \
+    libnosprotos \
     liboemcrypto \
     liboemservice \
     liboemservice_proxy \
