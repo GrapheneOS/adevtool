@@ -9,7 +9,7 @@ import { pipeline } from 'stream/promises'
 import yauzl from 'yauzl-promise'
 import { DeviceBuildId, DeviceConfig, FsType, getDeviceBuildId, resolveBuildId } from '../config/device'
 
-import { IMAGE_DOWNLOAD_DIR } from '../config/paths'
+import { getHostBinPath, IMAGE_DOWNLOAD_DIR } from '../config/paths'
 import { BuildIndex, ImageType } from '../images/build-index'
 import { DeviceImage } from '../images/device-image'
 import { downloadMissingDeviceImages } from '../images/download'
@@ -527,11 +527,15 @@ async function unpackExt4(fsImagePath: string, destinationDir: string) {
     )
   }
 
-  await spawnAsyncNoOut('debugfs', ['-R', `rdump / "${destinationDir}"`, fsImagePath], isStderrLineAllowed)
+  await spawnAsyncNoOut(
+    await getHostBinPath('debugfs'),
+    ['-R', `rdump / "${destinationDir}"`, fsImagePath],
+    isStderrLineAllowed,
+  )
 }
 
 async function unpackErofs(fsImagePath: string, destinationDir: string) {
-  await spawnAsyncNoOut('fsck.erofs', ['--extract=' + destinationDir, fsImagePath])
+  await spawnAsyncNoOut(await getHostBinPath('fsck.erofs'), ['--extract=' + destinationDir, fsImagePath])
 }
 
 class FdReader extends yauzl.Reader {
