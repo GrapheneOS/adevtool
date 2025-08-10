@@ -81,7 +81,7 @@ async function doDevice(
   let buildPkgs: string[] = []
   if (config.generate.overrides) {
     let builtModules = await withSpinner('Replacing blobs with buildable modules', () =>
-      resolveOverrides(config, customState, dirs, namedEntries),
+      resolveOverrides(config, customState, namedEntries),
     )
     buildPkgs.push(...builtModules)
   }

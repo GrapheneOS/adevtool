@@ -7,7 +7,7 @@ import { updateMultiMap } from '../util/data'
 import { readFile } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
 
-const STATE_VERSION = 5
+const STATE_VERSION = 6
 
 export interface SystemState {
   deviceInfo: {
@@ -26,8 +26,8 @@ type SerializedSystemState = {
   version: number
 } & SystemState
 
-export function serializeSystemState(state: SystemState) {
-  minimizeModules(state.moduleInfo)
+export function serializeSystemState(state: SystemState, systemRoot: string) {
+  state.moduleInfo = minimizeModules(state.moduleInfo, systemRoot)
 
   let diskState = {
     version: STATE_VERSION,
@@ -65,9 +65,8 @@ export function parseSystemState(json: string) {
   return diskState as SystemState
 }
 
-export async function collectSystemState(device: string, outRoot: string) {
-  let systemRoot = `${outRoot}/target/product/${device}`
-  let moduleInfoPath = `${systemRoot}/module-info.json`
+export async function collectSystemState(device: string, systemRoot: string) {
+  let moduleInfoPath = path.join(systemRoot, 'module-info.json')
   let state = {
     deviceInfo: {
       name: device,

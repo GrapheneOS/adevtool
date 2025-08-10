@@ -11,7 +11,6 @@ import { diffPartitionProps, loadPartitionProps, PartitionProps } from '../blobs
 import { diffPartVintfManifests, loadPartVintfInfo, writePartVintfManifests } from '../blobs/vintf'
 import { findOverrideModules } from '../build/overrides'
 import { ApkModule, TYPE_APK } from '../build/soong'
-import { removeSelfModules } from '../build/soong-info'
 import { DeviceConfig } from '../config/device'
 import { filterKeys, Filters, filterValue, filterValues } from '../config/filters'
 import { getHostBinPath } from '../config/paths'
@@ -88,23 +87,18 @@ export async function enumerateFiles(
 export async function resolveOverrides(
   config: DeviceConfig,
   customState: SystemState,
-  dirs: VendorDirectories,
   namedEntries: Map<string, BlobEntry>,
 ) {
-  let targetPrefix = `out/target/product/${config.device.name}/`
   let targetPaths = Array.from(namedEntries.keys())
     // Never use existing modules for dep files (e.g. generated in prep) to avoid feedback loop
     .filter(p => !filterValue(config.filters.dep_files, p))
-    // Convert to installed paths
-    .map(cPartPath => `${targetPrefix}${cPartPath}`)
 
   let modulesMap = customState.moduleInfo
-  removeSelfModules(modulesMap, dirs.proprietary)
   let { modules: builtModules, builtPaths } = findOverrideModules(targetPaths, modulesMap)
 
   // Remove new modules from entries
   for (let path of builtPaths) {
-    namedEntries.delete(path.replace(targetPrefix, ''))
+    namedEntries.delete(path)
   }
 
   return builtModules

@@ -25,7 +25,11 @@ export function findOverrideModules(overridePaths: Iterable<string>, modulesMap:
   let multilibs = new Set<string>()
   for (let [name, module] of modulesMap.entries()) {
     if (name.endsWith('_32')) {
-      multilibs.add(module.module_name)
+      let moduleName = module.module_name
+      if (moduleName === undefined) {
+        moduleName = name
+      }
+      multilibs.add(moduleName)
     }
   }
 
@@ -34,7 +38,11 @@ export function findOverrideModules(overridePaths: Iterable<string>, modulesMap:
   for (let [key, module] of modulesMap.entries()) {
     if (module.installed !== undefined) {
       for (let path of module.installed) {
-        pathMap.set(path, [key, module.module_name])
+        let moduleName = module.module_name
+        if (moduleName === undefined) {
+          moduleName = key
+        }
+        pathMap.set(path, [key, moduleName])
       }
     }
   }
