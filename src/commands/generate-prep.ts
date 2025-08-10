@@ -22,7 +22,7 @@ import { DeviceImages, prepareFactoryImages } from '../frontend/source'
 import { loadBuildIndex } from '../images/build-index'
 
 export async function generatePrep(config: DeviceConfig, stockSrc: string) {
-  await doDevice(config, stockSrc, false)
+  return await doDevice(config, stockSrc, false)
 }
 
 async function doDevice(config: DeviceConfig, stockSrc: string, skipCopy: boolean) {
@@ -63,6 +63,7 @@ async function doDevice(config: DeviceConfig, stockSrc: string, skipCopy: boolea
   await writeVersionCheckFile(config, dirs)
 
   console.log('generated prep vendor module at ' + dirs.out)
+  return dirs.out
 }
 
 export default class GeneratePrep extends Command {
