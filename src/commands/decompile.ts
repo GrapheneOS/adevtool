@@ -23,7 +23,7 @@ export default class Decompile extends Command {
     let { flags } = await this.parse(Decompile)
 
     let devices = await loadDeviceConfigs(flags.devices)
-    let images = await prepareFactoryImages(await loadBuildIndex(), devices, flags.buildId)
+    let images = await prepareFactoryImages(await loadBuildIndex(), devices, flags.buildId != null ? [flags.buildId] : null)
     for (let img of images.values()) {
       let items: DecompiledItem[] = []
       let tasks: Promise<unknown>[] = []
