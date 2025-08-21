@@ -177,7 +177,10 @@ class FlagDecoder {
 `
 
     for (let comment of comments) {
-      contents += '  # ' + comment + '\n'
+      let lines = comment.split('\n')
+      for (let line of lines) {
+         contents += '  # ' + line + '\n'
+      }
     }
 
     contents += '}\n'
