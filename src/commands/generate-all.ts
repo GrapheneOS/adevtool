@@ -106,9 +106,11 @@ async function doDevice(
     }
 
     for (let entry of entries) {
-      entry.diskSrcPath = path.join(backportSourceDevicePath, entry.srcPath)
-      if (!(await exists(entry.diskSrcPath))) {
-        throw new Error(`path ${entry.diskSrcPath} doesn't exist`)
+      if (replaceFiles.delete(entry.srcPath)) {
+        entry.diskSrcPath = path.join(backportSourceDevicePath, entry.srcPath)
+        if (!(await exists(entry.diskSrcPath))) {
+          throw new Error(`path ${entry.diskSrcPath} doesn't exist`)
+        }
       }
     }
 
