@@ -25,7 +25,7 @@ import {
 } from '../selinux/contexts'
 import { isFile, readFile } from '../util/fs'
 import { ALL_SYS_PARTITIONS } from '../util/partitions'
-import { deviceMapping } from '../config/hardcoded-config'
+import { deviceBackportConfig } from '../build/hardcoded-backport-config'
 
 export interface PropResults {
   stockProps: PartitionProps
@@ -112,20 +112,24 @@ export async function updatePresigned(config: DeviceConfig, entries: BlobEntry[]
 }
 
 function replaceWithHardcodedFirmwareProps(config: DeviceConfig, props: Map<string, string>) {
-  const deviceDetails = deviceMapping[`${config.device.name}`]
+  const firmwareInfo = deviceBackportConfig[config.device.name].firmware
+  if (!firmwareInfo) {
+    console.warn(`firmwareInfo is null, skipping firmware backport props for ${config.device.name}`)
+    return
+  }
 
   for (let key of props.keys()) {
     if (key == "ro.build.expect.bootloader") {
-        props.set("ro.build.expect.bootloader", deviceDetails['version-bootloader'])
+        props.set("ro.build.expect.bootloader", firmwareInfo['version-bootloader'])
     }
 
     if (key == "ro.build.expect.baseband") {
-      props.set("ro.build.expect.baseband", deviceDetails['version-baseband'])
+      props.set("ro.build.expect.baseband", firmwareInfo['version-baseband'])
     }
   }
 }
 
-export async function extractProps(config: DeviceConfig, customState: SystemState | null, stockSrc: string) {
+export async function extractProps(config: DeviceConfig, customState: SystemState | null, stockSrc: string, maybeBackport?: boolean) {
   let stockProps = await loadPartitionProps(stockSrc)
   let customProps = customState?.partitionProps ?? new Map<string, Map<string, string>>()
 
@@ -211,8 +215,9 @@ export async function extractFirmware(
   dirs: VendorDirectories,
   stockProps: PartitionProps,
   factoryPath: string,
+  backportFactoryPath?: string,
 ) {
-  let fwImages = await extractFactoryFirmware(factoryPath, stockProps, config)
+  let fwImages = await extractFactoryFirmware(factoryPath, stockProps, config, backportFactoryPath)
   let fwPaths = await writeFirmwareImages(fwImages, dirs.firmware)
 
   // Generate android-info.txt from device and versions

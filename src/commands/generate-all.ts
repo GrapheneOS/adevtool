@@ -20,6 +20,7 @@ import {
   DeviceConfig,
   getDeviceBuildId,
   loadDeviceConfigs2,
+  makeDeviceBuildId,
 } from '../config/device'
 import {
   CARRIER_SETTINGS_DIR,
@@ -57,6 +58,8 @@ import {
   parseFileTreeSpecYaml,
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive } from '../util/fs'
+import { deviceBackportConfig } from '../build/hardcoded-backport-config'
+import { Filters } from '../config/filters'
 
 async function doDevice(
   dirs: VendorDirectories,
@@ -66,6 +69,8 @@ async function doDevice(
   factoryPath: string | undefined,
   skipCopy: boolean,
   verbose: boolean,
+  backportFactoryPath: string | undefined,
+  backportSourceDevicePath: string | undefined,
 ) {
   // customSrc can point to a (directory containing) system state JSON
   let customState = await loadCustomState(config, customSrc)
@@ -91,6 +96,73 @@ async function doDevice(
   if (config.generate.presigned) {
     if (verbose) console.log('Marking apps as presigned')
     await updatePresigned(config, entries, stockSrc)
+  }
+
+  // backports (replacements)
+  let replaceFiles = new Set(deviceBackportConfig[config.device.name].replaceFiles)
+  if (replaceFiles.size > 0) {
+    if (!backportSourceDevicePath) {
+      throw new Error(`missing backportSourceDevice for ${config.device.name}`);
+    }
+
+    for (let entry of entries) {
+      entry.diskSrcPath = path.join(backportSourceDevicePath, entry.srcPath)
+      if (!(await exists(entry.diskSrcPath))) {
+        throw new Error(`path ${entry.diskSrcPath} doesn't exist`)
+      }
+    }
+
+    if (replaceFiles.size > 0) {
+      throw new Error(`these files didn't exist so they couldn't be replaced: ${JSON.stringify(Array.from(replaceFiles))}`)
+    }
+  }
+
+  // backports (new files)
+  let newFiles = deviceBackportConfig[config.device.name].newFiles
+  if (newFiles.length > 0) {
+    if (!backportSourceDevicePath) {
+      throw new Error(`missing backportSourceDevice for ${config.device.name}`);
+    }
+
+    let currentEntriesSrcPaths = new Set(entries.map(e => e.srcPath))
+    for (let newFile of newFiles) {
+      let newFilePath = path.join(backportSourceDevicePath, newFile)
+      if (!(await exists(newFilePath))) {
+        throw new Error(`path ${newFilePath} doesn't exist`)
+      }
+    }
+
+    let backportedEntries = new Map<string, BlobEntry>()
+
+    let backportFilter: Filters = {
+      include: true,
+      match: new Set(newFiles),
+      prefix: [],
+      suffix: [],
+      substring: [],
+      regex: [],
+    }
+
+    await enumerateFiles(
+      backportFilter,
+      null,
+      backportedEntries,
+      null,
+      backportSourceDevicePath as string,
+    )
+
+    for (let backportedEntry of backportedEntries.values()) {
+      if (currentEntriesSrcPaths.has(backportedEntry.srcPath)) {
+        throw new Error(`path ${backportedEntry.diskSrcPath} already in current image!`)
+      }
+
+      backportedEntry.diskSrcPath = path.join(backportSourceDevicePath, backportedEntry.srcPath)
+      // should exist from enumerateFiles, but just a sanity check
+      if (!(await exists(backportedEntry.diskSrcPath))) {
+        throw new Error(`path ${backportedEntry.diskSrcPath} doesn't exist; check the hardcoded config`)
+      }
+      entries.push(backportedEntry)
+    }
   }
 
   // 5. Extract
@@ -135,7 +207,7 @@ async function doDevice(
     }
 
     if (verbose) console.log('Extracting firmware')
-    fwPaths = await extractFirmware(config, dirs, propResults!.stockProps, factoryPath!)
+    fwPaths = await extractFirmware(config, dirs, propResults!.stockProps, factoryPath!, backportFactoryPath)
   }
 
   let vendorLinkerConfig = config.platform.vendor_linker_config
@@ -207,7 +279,7 @@ export default class GenerateFull extends Command {
 
     let devices = await loadDeviceConfigs2(flags)
     let index: BuildIndex = await loadBuildIndex()
-    let images: Map<DeviceBuildId, DeviceImages> = await prepareDeviceImages(index, [ImageType.Factory], devices)
+    let images: Map<DeviceBuildId, DeviceImages> = await prepareDeviceImages(index, [ImageType.Factory], devices, undefined, true)
 
     await forEachDevice(
       devices,
@@ -216,10 +288,14 @@ export default class GenerateFull extends Command {
         let deviceImages = images.get(getDeviceBuildId(config))!
         let stockSrc = deviceImages.unpackedFactoryImageDir
         let factoryPath = deviceImages.factoryImage.getPath()
+        let backportDeviceId = deviceBackportConfig[config.device.name].sourceBuildId
+        let backportDeviceImages = images.get(makeDeviceBuildId(config.device.name, backportDeviceId))!
+        let backportFactoryPath = backportDeviceImages.factoryImage.getPath();
+        let backportSourceDevicePath = backportDeviceImages.unpackedFactoryImageDir
         // Prepare output directories
         let vendorDirs = await createVendorDirs(config.device.vendor, config.device.name)
 
-        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, factoryPath, flags.skipCopy, flags.verbose)
+        await doDevice(vendorDirs, config, stockSrc, flags.customSrc, factoryPath, flags.skipCopy, flags.verbose, backportFactoryPath, backportSourceDevicePath)
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular && !flags.doNotDownloadCarrierSettings) {

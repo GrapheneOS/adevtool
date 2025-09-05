@@ -7,15 +7,20 @@ import { getAbOtaPartitions } from '../frontend/generate'
 import { NodeFileReader } from '../util/zip'
 import { EntryType, FastbootPack } from './fastboot-pack'
 import { DeviceConfig } from '../config/device'
-import { deviceMapping } from '../config/hardcoded-config'
+import { deviceBackportConfig } from '../build/hardcoded-backport-config'
+import { config } from 'process'
 
 export const ANDROID_INFO = 'android-info.txt'
 
 export type FirmwareImages = Map<string, Buffer>
 
-async function extractFactoryZipFirmware(path: string, images: FirmwareImages, config: DeviceConfig) {
-  await overrideFirmware(images, config)
-  return;
+async function extractFactoryZipFirmware(path: string, images: FirmwareImages, config: DeviceConfig, backportPath?: string) {
+  if (deviceBackportConfig[config.device.name].firmware) {
+    if (!backportPath) {
+      throw new Error(`backportPath is null for ${config.device.name}`)
+    }
+    path = backportPath
+  }
 
   let reader = new NodeFileReader(path)
 
@@ -35,37 +40,13 @@ async function extractFactoryZipFirmware(path: string, images: FirmwareImages, c
   }
 }
 
-async function overrideFirmware(images: FirmwareImages, config: DeviceConfig) {
-  const firmwareDir = process.env.FIRMWARE_DIR;
-  const hardcodedConfig = deviceMapping[`${config.device.name}`]
-
-  if (!firmwareDir) {
-    throw new Error('Value of FIRMWARE_DIR is not set')
+async function extractFactoryDirFirmware(path: string, images: FirmwareImages, config: DeviceConfig, backportPath?: string) {
+  if (deviceBackportConfig[config.device.name].firmware) {
+    if (!backportPath) {
+      throw new Error(`backportPath is null for ${config.device.name}`)
+    }
+    path = backportPath
   }
-
-  if (hardcodedConfig['modem-name'] == "") {
-    const loadedImages = await Promise.all(
-      [
-        fs.readFile(`${firmwareDir}/${hardcodedConfig['bootloader-name']}`)
-      ]
-    )
-    images.set('bootloader.img', loadedImages[0])
-  } else {
-    const loadedImages = await Promise.all(
-      [
-        fs.readFile(`${firmwareDir}/${hardcodedConfig['bootloader-name']}`),
-        fs.readFile(`${firmwareDir}/${hardcodedConfig['modem-name']}`)
-      ]
-    )
-    images.set('bootloader.img', loadedImages[0])
-    images.set('radio.img', loadedImages[1])
-  }
-}
-
-async function extractFactoryDirFirmware(path: string, images: FirmwareImages, config: DeviceConfig) {
-
-  await overrideFirmware(images, config)
-  return;
 
   for (let file of await fs.readdir(path)) {
     if (file.startsWith('bootloader-')) {
@@ -79,13 +60,13 @@ async function extractFactoryDirFirmware(path: string, images: FirmwareImages, c
 }
 
 // Path can be a directory or zip
-export async function extractFactoryFirmware(path: string, stockProps: PartitionProps, config: DeviceConfig) {
+export async function extractFactoryFirmware(path: string, stockProps: PartitionProps, config: DeviceConfig, backportPath?: string) {
   let images: FirmwareImages = new Map<string, Buffer>()
 
   if ((await fs.stat(path)).isDirectory()) {
-    await extractFactoryDirFirmware(path, images, config)
+    await extractFactoryDirFirmware(path, images, config, backportPath)
   } else {
-    await extractFactoryZipFirmware(path, images, config)
+    await extractFactoryZipFirmware(path, images, config, backportPath)
   }
 
   let abPartitions = new Set(getAbOtaPartitions(stockProps)!)
@@ -124,16 +105,18 @@ export function generateAndroidInfo(
   stockAbOtaPartitions: string[],
 ) {
 
-  const hardcodedConfig = deviceMapping[`${device}`]
-  const modem = hardcodedConfig['version-baseband']
-  const bootloader = hardcodedConfig['version-bootloader']
+  const backportFirmwareInfo = deviceBackportConfig[device].firmware
+  if (backportFirmwareInfo) {
+    blVersion = backportFirmwareInfo['version-bootloader']
+    radioVersion = backportFirmwareInfo['version-baseband']
+  }
 
   let android_info = `require board=${device}
 
-require version-bootloader=${bootloader}
+require version-bootloader=${blVersion}
 `
-  if (modem != undefined) {
-    android_info += `require version-baseband=${modem}\n`
+  if (radioVersion != undefined) {
+    android_info += `require version-baseband=${radioVersion}\n`
   }
 
   if (stockAbOtaPartitions.includes('vendor_kernel_boot')) {
