@@ -21,6 +21,37 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "tegu": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      // TPU
+      "vendor/firmware/google/edgetpu-rio.fw",
+      // Bluetooth
+      "vendor/firmware/brcm/BCM.hcd",
+      "vendor/firmware/brcm/BTFW_B.hcd",
+      // WiFi
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4383_a3",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/fw_bcmdhd.map_4383_a3",
+      "vendor/firmware/bcmdhd.cal_4383_a3",
+      // AOC
+      "vendor/firmware/aoc.bin",
+      // GXP
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      // Mali
+      "vendor/firmware/mali_csffw-r54p0.bin",
+      // qm35
+      "vendor/firmware/qm35_fw_pkg.bin",
+      "vendor/firmware/qm35_fw_pkg_prod.bin",
+      // st54l
+      "vendor/firmware/st54l_conf.bin",
+      // gnss
+      "vendor/firmware/kepler.bin",
+      // dauntless
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
     ],
     newFiles: [
     ],
@@ -34,6 +65,26 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "comet": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/1540a.app",
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM_200.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4390_b1",
+      "vendor/firmware/fw_bcmdhd.map_4390_b1",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/kepler.bin",
+      "vendor/firmware/mali_csffw-r54p0.bin",
+      "vendor/firmware/ntn_modem/modem.bin",
+      "vendor/firmware/ntn_modem/version.cfg",
+      "vendor/firmware/qm35_fw_pkg.bin",
+      "vendor/firmware/qm35_fw_pkg_prod.bin",
+      "vendor/firmware/st54l_conf.bin",
     ],
     newFiles: [
     ],
@@ -47,6 +98,25 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "komodo": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM_200.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4390_b1",
+      "vendor/firmware/fw_bcmdhd.map_4390_b1",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/kepler.bin",
+      "vendor/firmware/mali_csffw-r54p0.bin",
+      "vendor/firmware/ntn_modem/modem.bin",
+      "vendor/firmware/ntn_modem/version.cfg",
+      "vendor/firmware/qm35_fw_pkg.bin",
+      "vendor/firmware/qm35_fw_pkg_prod.bin",
+      "vendor/firmware/st54l_conf.bin",
     ],
     newFiles: [
     ],
@@ -60,6 +130,25 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "caiman": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM_200.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4390_b1",
+      "vendor/firmware/fw_bcmdhd.map_4390_b1",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/kepler.bin",
+      "vendor/firmware/mali_csffw-r54p0.bin",
+      "vendor/firmware/ntn_modem/modem.bin",
+      "vendor/firmware/ntn_modem/version.cfg",
+      "vendor/firmware/qm35_fw_pkg.bin",
+      "vendor/firmware/qm35_fw_pkg_prod.bin",
+      "vendor/firmware/st54l_conf.bin",
     ],
     newFiles: [
     ],
@@ -73,6 +162,23 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "tokay": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM_200.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4390_b1",
+      "vendor/firmware/fw_bcmdhd.map_4390_b1",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/kepler.bin",
+      "vendor/firmware/mali_csffw-r54p0.bin",
+      "vendor/firmware/ntn_modem/modem.bin",
+      "vendor/firmware/ntn_modem/version.cfg",
+      "vendor/firmware/st54l_conf.bin",
     ],
     newFiles: [
     ],
@@ -86,6 +192,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "akita": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM.hcd",
+      "vendor/firmware/brcm/BTFW_B.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4383_a3",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/fw_bcmdhd.map_4383_a3",
+      "vendor/firmware/g7a.app",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/kepler.bin",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -99,6 +223,22 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "husky": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM.hcd",
+      "vendor/firmware/brcm/BTFW_B.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4398_d0",
+      "vendor/firmware/fw_bcmdhd.map_4398_d0",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/mali_csffw-r54p0.bin",
+      "vendor/firmware/qm35_fw_pkg.bin",
+      "vendor/firmware/qm35_fw_pkg_prod.bin",
     ],
     newFiles: [
     ],
@@ -112,6 +252,20 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "shiba": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BCM.hcd",
+      "vendor/firmware/brcm/BTFW_B.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin_4398_d0",
+      "vendor/firmware/fw_bcmdhd.map_4398_d0",
+      "vendor/firmware/google/edgetpu-rio.fw",
+      "vendor/firmware/google/gxp-callisto.fw",
+      "vendor/firmware/gxp_callisto_fw_core0",
+      "vendor/firmware/gxp_callisto_fw_core1",
+      "vendor/firmware/gxp_callisto_fw_core2",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -125,6 +279,20 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "felix": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/1540.app",
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BTFW_D.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/google/edgetpu-janeiro.fw",
+      "vendor/firmware/gxp_fw_core0",
+      "vendor/firmware/gxp_fw_core1",
+      "vendor/firmware/gxp_fw_core2",
+      "vendor/firmware/gxp_fw_core3",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -138,6 +306,17 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "tangorpro": {
     sourceBuildId: `${ANDROID_16_QPR1_DEFAULT_BUILD_ID}.A1`,
     replaceFiles: [
+      "vendor/firmware/1540.app",
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/google/edgetpu-janeiro.fw",
+      "vendor/firmware/gxp_fw_core0",
+      "vendor/firmware/gxp_fw_core1",
+      "vendor/firmware/gxp_fw_core2",
+      "vendor/firmware/gxp_fw_core3",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -151,6 +330,19 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "lynx": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/Data.msc",
+      "vendor/firmware/amss20.bin",
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/g7.app",
+      "vendor/firmware/google/edgetpu-janeiro.fw",
+      "vendor/firmware/gxp_fw_core0",
+      "vendor/firmware/gxp_fw_core1",
+      "vendor/firmware/gxp_fw_core2",
+      "vendor/firmware/gxp_fw_core3",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -164,6 +356,20 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "cheetah": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BTFW_D.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/g7.app",
+      "vendor/firmware/google/edgetpu-janeiro.fw",
+      "vendor/firmware/gxp_fw_core0",
+      "vendor/firmware/gxp_fw_core1",
+      "vendor/firmware/gxp_fw_core2",
+      "vendor/firmware/gxp_fw_core3",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -177,6 +383,20 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "panther": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/aoc.bin",
+      "vendor/firmware/brcm/BTFW_D.hcd",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/g7.app",
+      "vendor/firmware/google/edgetpu-janeiro.fw",
+      "vendor/firmware/gxp_fw_core0",
+      "vendor/firmware/gxp_fw_core1",
+      "vendor/firmware/gxp_fw_core2",
+      "vendor/firmware/gxp_fw_core3",
+      "vendor/firmware/mali_csffw-r54p0.bin",
     ],
     newFiles: [
     ],
@@ -190,8 +410,17 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "bluejay": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/cs40l20.bin",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/g7.app",
+      "vendor/firmware/google/edgetpu-abrolhos.fw",
     ],
     newFiles: [
+      "vendor/firmware/brcm/BTFW_D.hcd",
     ],
     firmware: {
       "version-bootloader": "bluejay-16.3-13642543",
@@ -203,8 +432,17 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "raven": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/cs40l20.bin",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/g6.app",
+      "vendor/firmware/google/edgetpu-abrolhos.fw",
     ],
     newFiles: [
+      "vendor/firmware/brcm/BTFW_D.hcd",
     ],
     firmware: {
       "version-bootloader": "slider-16.3-13642543",
@@ -216,8 +454,17 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "oriole": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceFiles: [
+      "vendor/firmware/cs40l20.bin",
+      "vendor/firmware/dauntless/d3m2.ec.bin",
+      "vendor/firmware/dauntless/evt.ec.bin",
+      "vendor/firmware/dauntless/proto11.ec.bin",
+      "vendor/firmware/fw_bcmdhd.bin",
+      "vendor/firmware/fw_bcmdhd.map",
+      "vendor/firmware/g6.app",
+      "vendor/firmware/google/edgetpu-abrolhos.fw",
     ],
     newFiles: [
+      "vendor/firmware/brcm/BTFW_D.hcd",
     ],
     firmware: {
       "version-bootloader": "slider-16.3-13642543",
