@@ -115,7 +115,7 @@ export function generateAndroidInfo(
 
 require version-bootloader=${blVersion}
 `
-  if (radioVersion != undefined) {
+  if (radioVersion != undefined && radioVersion.length > 0) {
     android_info += `require version-baseband=${radioVersion}\n`
   }
 
