@@ -55,6 +55,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       // NeuralNetwork
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice-V1-ndk.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal-V1-ndk.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -91,6 +109,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -126,6 +162,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -161,6 +215,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -194,6 +266,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -228,6 +318,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -260,6 +368,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -290,6 +416,24 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "system_ext/priv-app/ril-extension/ril-extension.apk",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -320,6 +464,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/lib64/libgril_oem-google.so",
+      "system_ext/framework/google-ril.jar",
     ],
     newFiles: [
     ],
@@ -347,6 +494,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/lib64/libgril_oem-google.so",
+      "system_ext/framework/google-ril.jar",
     ],
     newFiles: [
     ],
@@ -376,6 +526,23 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -406,6 +573,23 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -436,6 +620,23 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril-aidl.so", // used by rild_exynos
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
     ],
@@ -460,6 +661,22 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
@@ -485,6 +702,22 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
@@ -510,6 +743,22 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
 
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
+
+      "vendor/bin/hw/rild_exynos",
+      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
+      "vendor/lib64/libril_sitril.so", // used by rild_exynos
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "system_ext/app/OemRilHookService/OemRilHookService.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/priv-app/ShannonIms/ShannonIms.apk",
+      "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
