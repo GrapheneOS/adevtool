@@ -52,6 +52,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/dauntless/d3m2.ec.bin",
       "vendor/firmware/dauntless/evt.ec.bin",
       "vendor/firmware/dauntless/proto11.ec.bin",
+      // NeuralNetwork
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -85,6 +88,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/qm35_fw_pkg.bin",
       "vendor/firmware/qm35_fw_pkg_prod.bin",
       "vendor/firmware/st54l_conf.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -117,6 +123,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/qm35_fw_pkg.bin",
       "vendor/firmware/qm35_fw_pkg_prod.bin",
       "vendor/firmware/st54l_conf.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -149,6 +158,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/qm35_fw_pkg.bin",
       "vendor/firmware/qm35_fw_pkg_prod.bin",
       "vendor/firmware/st54l_conf.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -179,6 +191,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/ntn_modem/modem.bin",
       "vendor/firmware/ntn_modem/version.cfg",
       "vendor/firmware/st54l_conf.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -210,6 +225,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_callisto_fw_core2",
       "vendor/firmware/kepler.bin",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -239,6 +257,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/mali_csffw-r54p0.bin",
       "vendor/firmware/qm35_fw_pkg.bin",
       "vendor/firmware/qm35_fw_pkg_prod.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -266,6 +287,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_callisto_fw_core1",
       "vendor/firmware/gxp_callisto_fw_core2",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -293,6 +317,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_fw_core2",
       "vendor/firmware/gxp_fw_core3",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -317,6 +344,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_fw_core2",
       "vendor/firmware/gxp_fw_core3",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -343,6 +373,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_fw_core2",
       "vendor/firmware/gxp_fw_core3",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -370,6 +403,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_fw_core2",
       "vendor/firmware/gxp_fw_core3",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -397,6 +433,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/gxp_fw_core2",
       "vendor/firmware/gxp_fw_core3",
       "vendor/firmware/mali_csffw-r54p0.bin",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
     ],
@@ -418,6 +457,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/fw_bcmdhd.map",
       "vendor/firmware/g7.app",
       "vendor/firmware/google/edgetpu-abrolhos.fw",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
@@ -440,6 +482,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/fw_bcmdhd.map",
       "vendor/firmware/g6.app",
       "vendor/firmware/google/edgetpu-abrolhos.fw",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
@@ -462,6 +507,9 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/firmware/fw_bcmdhd.map",
       "vendor/firmware/g6.app",
       "vendor/firmware/google/edgetpu-abrolhos.fw",
+
+      "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
+      "vendor/lib64/libdarwinn_hal.so",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
