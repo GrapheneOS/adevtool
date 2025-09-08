@@ -1362,6 +1362,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/firmware/bcmdhd.cal_ROW:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd.cal_ROW \
     vendor/google_devices/bluejay/proprietary/vendor/firmware/brcm/BCM.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/brcm/BCM.hcd \
     vendor/google_devices/bluejay/proprietary/vendor/firmware/brcm/BTFW_B.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/brcm/BTFW_B.hcd \
+    vendor/google_devices/bluejay/proprietary/vendor/firmware/brcm/BTFW_D.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/brcm/BTFW_D.hcd \
     vendor/google_devices/bluejay/proprietary/vendor/firmware/carrierconfig/build.info:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/build.info \
     vendor/google_devices/bluejay/proprietary/vendor/firmware/carrierconfig/cfg.db:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/cfg.db \
     vendor/google_devices/bluejay/proprietary/vendor/firmware/carrierconfig/cfg.sha2:$(TARGET_COPY_OUT_VENDOR)/firmware/carrierconfig/cfg.sha2 \
