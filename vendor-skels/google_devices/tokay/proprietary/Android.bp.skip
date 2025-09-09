@@ -2210,6 +2210,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libedgetpu_litert",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_litert.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libedgetpu_tachyon.google",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/libedgetpu_tachyon.google.so" ] } },

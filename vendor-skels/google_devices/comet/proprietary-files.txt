@@ -3850,3 +3850,4 @@ vendor/lib64/vendor.radio.protocol.sit.stream.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
+vendor/lib64/libedgetpu_litert.so

@@ -593,6 +593,7 @@ PRODUCT_PACKAGES += \
     libdump \
     libdumpstateutil.vendor \
     libedgetpu_client.google \
+    libedgetpu_litert \
     libedgetpu_tachyon.google \
     libedgetpu_tflite_compiler \
     libedgetpu_util \
