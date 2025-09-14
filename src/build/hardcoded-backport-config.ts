@@ -901,21 +901,42 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl",
       "vendor/lib64/libdarwinn_hal.so",
 
-      "vendor/bin/hw/rild_exynos",
-      "vendor/lib64/libgooglerilmemmonitor.so", // used by rild_exynos
-      "vendor/lib64/libgril_oem-google.so",
-      "vendor/lib64/libril_gfeature.so", // used by rild_exynos
-      "vendor/lib64/libril_sitril.so", // used by rild_exynos
-      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
-      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", // used by rild_exynos
-      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so", // used by rild_exynos
-      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so", // used by rild_exynos
-      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "product/priv-app/EuiccGoogle/EuiccGoogle.apk",
       "system_ext/app/OemRilHookService/OemRilHookService.apk",
-      "system_ext/framework/google-ril.jar",
-      "system_ext/framework/oemrilhook.jar",
       "system_ext/priv-app/ShannonIms/ShannonIms.apk",
       "system_ext/priv-app/ShannonRcs/ShannonRcs.apk",
+      "system_ext/framework/google-ril.jar",
+      "system_ext/framework/oemrilhook.jar",
+      "system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so",
+      "system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so",
+      "system_ext/priv-app/EuiccGoogleOverlay/EuiccGoogleOverlay.apk",
+      "system_ext/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk",
+      "system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk",
+      "system_ext/priv-app/OemRilService/OemRilService.apk",
+      "vendor/apex/com.google.pixel.euicc.update.apex",
+      "vendor/bin/hw/rild_exynos",
+      "vendor/bin/hw/vendor.google.radioext@1.0-service",
+      "vendor/lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so",
+      "vendor/lib64/libgooglerilmemmonitor.so",
+      "vendor/lib64/libgril_oem-google.so",
+      "vendor/lib64/libmodem_svc_proto_legacy_soong.so",
+      "vendor/lib64/libril_gfeature.so",
+      "vendor/lib64/libril_sitril.so",
+      "vendor/lib64/libsitril-audio.so",
+      "vendor/lib64/libsitril-client.so",
+      "vendor/lib64/libsitril-gps.so",
+      "vendor/lib64/libsitril-ims.so",
+      "vendor/lib64/modem_android_property_manager_impl.so",
+      "vendor/lib64/modem_clock_manager_impl.so",
+      "vendor/lib64/modem_log_dumper.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so", 
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so",
+      "vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so",
+
+      "vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+      "vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so",
+      "vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so", // readelf -d vendor/lib64/libgril_oem-google.so
+      "vendor/lib64/com.google.input-V2-ndk.so",
 
       "vendor/lib64/libedgetpu_client.google.so",
       "vendor/lib64/libedgetpu_tachyon.google.so",
@@ -924,11 +945,6 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
       "system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so",
       "system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so",
       "vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service",
-
-      "product/priv-app/EuiccGoogle/EuiccGoogle.apk",
-      "system_ext/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk",
-      "system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk",
-      "vendor/apex/com.google.pixel.euicc.update.apex",
     ],
     newFiles: [
       "vendor/firmware/brcm/BTFW_D.hcd",
