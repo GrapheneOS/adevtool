@@ -23,6 +23,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "tegu": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       // TPU
@@ -104,6 +105,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "comet": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/1540a.app",
@@ -174,6 +176,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "komodo": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -243,6 +246,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "caiman": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -312,6 +316,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "tokay": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -379,6 +384,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "akita": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -447,6 +453,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "husky": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -513,6 +520,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "shiba": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -577,6 +585,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "felix": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/1540.app",
@@ -664,6 +673,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "lynx": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/Data.msc",
@@ -725,6 +735,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "cheetah": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -787,6 +798,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "panther": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -849,6 +861,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "bluejay": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
@@ -905,6 +918,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "raven": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
@@ -960,6 +974,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   "oriole": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
+      "vendor/firmware/carrierconfig",
     ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
