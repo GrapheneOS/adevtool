@@ -1,6 +1,8 @@
 export interface BackportConfig {
   // The newer build ID where the backports are sourced from
   sourceBuildId: string
+  // replaces files in directories listed from sourceBuildId
+  replaceDirectories: string[]
   replaceFiles: string[]
   newFiles: string[]
   firmware?: FirmwareBackportInfo
@@ -20,6 +22,8 @@ const ANDROID_16_QPR1_DEFAULT_BUILD_ID = "BP3A.250905.014"
 export const deviceBackportConfig: Record<string, BackportConfig> = {
   "tegu": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       // TPU
       "vendor/firmware/google/edgetpu-rio.fw",
@@ -99,6 +103,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "comet": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/1540a.app",
       "vendor/firmware/aoc.bin",
@@ -167,6 +173,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "komodo": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BCM_200.hcd",
@@ -234,6 +242,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "caiman": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BCM_200.hcd",
@@ -301,6 +311,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "tokay": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BCM_200.hcd",
@@ -366,6 +378,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "akita": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BCM.hcd",
@@ -432,6 +446,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "husky": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BCM.hcd",
@@ -496,6 +512,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "shiba": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BCM.hcd",
@@ -558,6 +576,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "felix": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/1540.app",
       "vendor/firmware/aoc.bin",
@@ -604,6 +624,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "tangorpro": {
     sourceBuildId: `${ANDROID_16_QPR1_DEFAULT_BUILD_ID}.A1`,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/1540.app",
       "vendor/firmware/aoc.bin",
@@ -641,6 +663,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "lynx": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/Data.msc",
       "vendor/firmware/amss20.bin",
@@ -700,6 +724,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "cheetah": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BTFW_D.hcd",
@@ -760,6 +786,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "panther": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
       "vendor/firmware/brcm/BTFW_D.hcd",
@@ -820,6 +848,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "bluejay": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
       "vendor/firmware/dauntless/d3m2.ec.bin",
@@ -874,6 +904,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "raven": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
       "vendor/firmware/dauntless/d3m2.ec.bin",
@@ -927,6 +959,8 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
   },
   "oriole": {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
+    replaceDirectories: [
+    ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
       "vendor/firmware/dauntless/d3m2.ec.bin",
