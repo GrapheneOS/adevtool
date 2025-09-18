@@ -100,12 +100,42 @@ async function doDevice(
 
   // backports (replacements)
   let replaceFiles = new Set(deviceBackportConfig[config.device.name].replaceFiles)
+  let replaceDirectories = new Set(deviceBackportConfig[config.device.name].replaceDirectories)
+  let replaceOrAddFiles: Set<string> = new Set()
+  let entriesToRemove: Set<string> = new Set()
+  if (backportSourceDevicePath) {
+    for (let replaceDirectory of replaceDirectories) {
+      let entriesInReplaceDir = entries.filter(e => e.srcPath.startsWith(replaceDirectory))
+      let entriesToMaybeRemove = new Set(entriesInReplaceDir.map(e => e.srcPath))
+      let replaceDiskDir = path.join(backportSourceDevicePath, replaceDirectory)
+      for await (let replaceDiskFile of listFilesRecursive(replaceDiskDir)) {
+        let replaceOrAddFile =
+            replaceDiskFile.replace(backportSourceDevicePath, "")
+                           .replace("/", "")
+        entriesToMaybeRemove.delete(replaceOrAddFile)
+        replaceOrAddFiles.add(replaceOrAddFile)
+      }
+      for (let entryToRemove of entriesToMaybeRemove) {
+        entriesToRemove.add(entryToRemove)
+      }
+    }
+  }
+
+  entries = entries.filter(e => !entriesToRemove.has(e.srcPath))
+
   if (replaceFiles.size > 0) {
     if (!backportSourceDevicePath) {
       throw new Error(`missing backportSourceDevice for ${config.device.name}`);
     }
 
     for (let entry of entries) {
+      if (replaceOrAddFiles.delete(entry.srcPath)) {
+        entry.diskSrcPath = path.join(backportSourceDevicePath, entry.srcPath)
+        if (!(await exists(entry.diskSrcPath))) {
+          throw new Error(`path ${entry.diskSrcPath} doesn't exist`)
+        }
+      }
+
       if (replaceFiles.delete(entry.srcPath)) {
         entry.diskSrcPath = path.join(backportSourceDevicePath, entry.srcPath)
         if (!(await exists(entry.diskSrcPath))) {
@@ -121,6 +151,9 @@ async function doDevice(
 
   // backports (new files)
   let newFiles = deviceBackportConfig[config.device.name].newFiles
+  for (let addedFile of replaceOrAddFiles) {
+    newFiles.push(addedFile)
+  }
   if (newFiles.length > 0) {
     if (!backportSourceDevicePath) {
       throw new Error(`missing backportSourceDevice for ${config.device.name}`);
