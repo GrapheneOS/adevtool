@@ -105,6 +105,9 @@ async function doDevice(
   let entriesToRemove: Set<string> = new Set()
   if (backportSourceDevicePath) {
     for (let replaceDirectory of replaceDirectories) {
+      if (!replaceDirectory.endsWith("/")) {
+        throw new Error(`replaceDirectory entries must end with "/", violating entry: ${replaceDirectory}`)
+      }
       let entriesInReplaceDir = entries.filter(e => e.srcPath.startsWith(replaceDirectory))
       let entriesToMaybeRemove = new Set(entriesInReplaceDir.map(e => e.srcPath))
       let replaceDiskDir = path.join(backportSourceDevicePath, replaceDirectory)
