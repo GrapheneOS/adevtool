@@ -24,6 +24,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -107,6 +108,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -179,6 +181,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -250,6 +253,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -321,6 +325,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -390,6 +395,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -460,6 +466,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -528,6 +535,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -594,6 +602,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -683,6 +692,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -746,6 +756,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
@@ -810,6 +821,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "vendor/firmware/uecapconfig/",
       "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
