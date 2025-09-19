@@ -1,5 +1,5 @@
 canonical_name: "fet_tw"
-version: 70000000354
+version: 72000000354
 apns {
   apn {
     name: "\351\201\240\345\202\263\351\233\273\344\277\241(Far EasTone) (Internet)"

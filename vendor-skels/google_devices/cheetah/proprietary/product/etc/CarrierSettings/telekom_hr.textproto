@@ -1,5 +1,5 @@
 canonical_name: "telekom_hr"
-version: 70000000011
+version: 72000000012
 apns {
   apn {
     name: "Internet"
@@ -143,6 +143,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "mmi_two_digit_number_pattern_string_array"
     text_array {
       item: "92"
@@ -162,5 +166,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1739493474
+  seconds: 1747816764
 }

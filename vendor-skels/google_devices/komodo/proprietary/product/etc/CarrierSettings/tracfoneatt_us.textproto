@@ -1,5 +1,5 @@
 canonical_name: "tracfoneatt_us"
-version: 70000000009
+version: 72000000009
 apns {
   apn {
     name: "Tracfone AT&T"
@@ -843,5 +843,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540187
+  seconds: 1742982557
 }

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gb"
-version: 70000000015
+version: 72000000016
 apns {
   apn {
     name: "Vodafone UK Data"
@@ -81,10 +81,6 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "121"
-  }
-  config {
-    key: "editable_wfc_mode_bool"
-    bool_value: false
   }
   config {
     key: "epsfb_silent_retry_error_code_string_array"
@@ -337,5 +333,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1739962060
+  seconds: 1747202453
 }

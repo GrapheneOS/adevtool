@@ -1,5 +1,5 @@
 canonical_name: "cellcom_il"
-version: 70000000009
+version: 72000000009
 apns {
   apn {
     name: "Cellcom Internet"

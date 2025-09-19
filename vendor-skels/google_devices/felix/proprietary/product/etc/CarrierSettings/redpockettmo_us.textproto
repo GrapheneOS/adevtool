@@ -1,5 +1,5 @@
 canonical_name: "redpockettmo_us"
-version: 70000000012
+version: 72000000012
 apns {
   apn {
     name: "Red Pocket Mobile"
@@ -278,5 +278,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540166
+  seconds: 1742382130
 }

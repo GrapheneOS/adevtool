@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ie"
-version: 70000000025
+version: 72000000026
 apns {
   apn {
     name: "Internet"
@@ -227,6 +227,10 @@ configs {
     }
   }
   config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
     key: "prefer_3g_visibility_bool"
     bool_value: false
   }
@@ -256,5 +260,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946258
+  seconds: 1747202410
 }

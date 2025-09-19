@@ -1,5 +1,5 @@
 canonical_name: "strata_us"
-version: 70000000008
+version: 72000000008
 apns {
   apn {
     name: "Rinainternet"

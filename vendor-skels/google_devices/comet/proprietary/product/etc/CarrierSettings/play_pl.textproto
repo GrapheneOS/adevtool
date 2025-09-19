@@ -1,5 +1,5 @@
 canonical_name: "play_pl"
-version: 70000000015
+version: 72000000017
 apns {
   apn {
     name: "Play Internet"
@@ -88,6 +88,10 @@ configs {
     text_array {
       item: "26003"
     }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
   }
   config {
     key: "ignore_rtt_mode_setting_bool"
@@ -186,6 +190,14 @@ configs {
         }
       }
     }
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 20000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 20000
   }
   config {
     key: "imsvoice.voice_qos_precondition_supported_bool"
@@ -303,5 +315,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946296
+  seconds: 1747202462
 }

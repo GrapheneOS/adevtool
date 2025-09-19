@@ -1,11 +1,12 @@
 canonical_name: "elisa1_fi"
-version: 70000000003
+version: 72000000006
 apns {
   apn {
     name: "Saunalahti Internet"
     value: "internet.saunalahti"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
   }
   apn {
     name: "Saunalahti MMS"
@@ -83,17 +84,25 @@ configs {
     int_value: 20000
   }
   config {
-    key: "imsemergency.emergency_domain_preference_int_array"
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
     int_array {
-      item: 2
-      item: 1
+      item: 6
+      item: 3
     }
   }
   config {
-    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
     int_array {
-      item: 2
-      item: 1
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
     }
   }
   config {
@@ -195,5 +204,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732679856
+  seconds: 1747202470
 }

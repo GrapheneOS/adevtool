@@ -1,5 +1,5 @@
 canonical_name: "yes_my"
-version: 70000000003
+version: 72000000003
 apns {
   apn {
     name: "Yes 4G"

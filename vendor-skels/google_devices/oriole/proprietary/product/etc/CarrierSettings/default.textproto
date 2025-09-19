@@ -1,13 +1,9 @@
 canonical_name: "default"
-version: 70000000068
+version: 72000000070
 configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
     bool_value: true
-  }
-  config {
-    key: "carrier_data_call_retry_network_requested_max_count_int"
-    int_value: 20
   }
   config {
     key: "carrier_eri_file_name_string"
@@ -122,6 +118,10 @@ configs {
   config {
     key: "imsrtt.text_rs_bandwidth_bps_int"
     int_value: 153
+  }
+  config {
+    key: "imssms.sms_max_retry_over_ims_count_int"
+    int_value: 0
   }
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
@@ -473,5 +473,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1739962003
+  seconds: 1749144090
 }

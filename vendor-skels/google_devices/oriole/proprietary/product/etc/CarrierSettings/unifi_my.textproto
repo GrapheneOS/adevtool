@@ -1,5 +1,5 @@
 canonical_name: "unifi_my"
-version: 70000000006
+version: 72000000007
 apns {
   apn {
     name: "Internet"
@@ -12,13 +12,17 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -69,7 +73,11 @@ configs {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1706100344
+  seconds: 1744165618
 }

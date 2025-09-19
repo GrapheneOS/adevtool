@@ -1,5 +1,5 @@
 canonical_name: "antel_uy"
-version: 70000000004
+version: 72000000004
 apns {
   apn {
     name: "Vera 1"

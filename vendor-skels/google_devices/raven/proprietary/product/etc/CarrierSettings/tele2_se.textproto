@@ -1,5 +1,5 @@
 canonical_name: "tele2_se"
-version: 70000000501
+version: 72000000501
 apns {
   apn {
     name: "Tele2 Internet"

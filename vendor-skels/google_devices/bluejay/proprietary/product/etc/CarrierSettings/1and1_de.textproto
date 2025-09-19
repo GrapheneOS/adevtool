@@ -1,5 +1,5 @@
 canonical_name: "1and1_de"
-version: 70000000023
+version: 72000000024
 apns {
   apn {
     name: "1&1 Internet"
@@ -43,10 +43,6 @@ configs {
   config {
     key: "allow_hold_call_during_emergency_bool"
     bool_value: false
-  }
-  config {
-    key: "call_barring_visibility_bool"
-    bool_value: true
   }
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
@@ -347,5 +343,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741781010
+  seconds: 1749144101
 }

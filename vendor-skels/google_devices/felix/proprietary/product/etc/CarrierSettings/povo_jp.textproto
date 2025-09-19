@@ -1,5 +1,5 @@
 canonical_name: "povo_jp"
-version: 70000000014
+version: 72000000014
 apns {
   apn {
     name: "povo"
@@ -460,5 +460,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540166
+  seconds: 1742382130
 }

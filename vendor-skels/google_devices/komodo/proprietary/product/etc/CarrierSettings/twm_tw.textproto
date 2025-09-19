@@ -1,5 +1,5 @@
 canonical_name: "twm_tw"
-version: 70000000008
+version: 72000000009
 apns {
   apn {
     name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247(TW Mobile) (Internet)"
@@ -115,6 +115,10 @@ configs {
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
     bool_value: false
+  }
+  config {
+    key: "imsss.terminal_based_call_waiting_sync_type_int"
+    int_value: 0
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
@@ -281,5 +285,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1740560776
+  seconds: 1749144181
 }

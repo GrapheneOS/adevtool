@@ -1,5 +1,5 @@
 canonical_name: "fizz_ca"
-version: 70000000014
+version: 72000000015
 apns {
   apn {
     name: "mobile.bm"
@@ -76,6 +76,14 @@ configs {
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
+  }
+  config {
+    key: "dial_string_replace_string_array"
+    text_array {
+      item: "611:+15146470998"
+      item: "*611:+15146470998"
+      item: "#611:+15146470998"
+    }
   }
   config {
     key: "editable_enhanced_4g_lte_bool"
@@ -366,5 +374,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1740119814
+  seconds: 1748421131
 }

@@ -1,5 +1,5 @@
 canonical_name: "shaw_ca"
-version: 70000000024
+version: 72000000024
 apns {
   apn {
     name: "Internet"

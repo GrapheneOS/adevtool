@@ -1,5 +1,5 @@
 canonical_name: "talkmobile_gb"
-version: 70000000015
+version: 72000000015
 apns {
   apn {
     name: "Talkmob WAP"

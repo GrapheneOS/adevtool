@@ -1,10 +1,11 @@
 canonical_name: "ice_no"
-version: 70000000007
+version: 72000000008
 apns {
   apn {
     name: "ice.net Internet"
     value: "ice.net"
     type: DEFAULT
+    protocol: IPV4V6
   }
   apn {
     name: "ice.net MMS"
@@ -142,5 +143,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946296
+  seconds: 1744165658
 }

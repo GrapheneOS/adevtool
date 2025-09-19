@@ -1,5 +1,5 @@
 canonical_name: "att4g_mx"
-version: 70000000007
+version: 72000000009
 apns {
   apn {
     name: "AT&T Internet"
@@ -43,6 +43,14 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: false
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
   }
   config {
     key: "editable_wfc_mode_bool"
@@ -239,5 +247,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1744682510
+  seconds: 1749144156
 }

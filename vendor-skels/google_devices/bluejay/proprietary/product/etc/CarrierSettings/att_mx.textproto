@@ -1,5 +1,5 @@
 canonical_name: "att_mx"
-version: 70000000021
+version: 72000000021
 apns {
   apn {
     name: "AT&T 5G Internet"
@@ -99,6 +99,10 @@ configs {
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
   }
   config {
     key: "editable_wfc_mode_bool"
@@ -436,5 +440,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1746114225
+  seconds: 1749144101
 }

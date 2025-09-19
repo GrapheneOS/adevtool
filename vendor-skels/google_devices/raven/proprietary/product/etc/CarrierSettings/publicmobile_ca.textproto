@@ -1,5 +1,5 @@
 canonical_name: "publicmobile_ca"
-version: 70000000026
+version: 72000000027
 apns {
   apn {
     name: "Tethered Mobile Internet"
@@ -227,11 +227,11 @@ configs {
   }
   config {
     key: "imsvoice.audio_rtcp_inactivity_timer_millis_int"
-    int_value: 14000
+    int_value: 30000
   }
   config {
     key: "imsvoice.audio_rtp_inactivity_timer_millis_int"
-    int_value: 14000
+    int_value: 30000
   }
   config {
     key: "imsvoice.conference_factory_uri_string"
@@ -448,5 +448,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1743565756
 }

@@ -1,5 +1,5 @@
 canonical_name: "docomo_jp"
-version: 70000000369
+version: 72000000369
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"

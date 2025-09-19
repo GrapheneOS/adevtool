@@ -1,5 +1,5 @@
 canonical_name: "dish5gsa_us"
-version: 70000000003
+version: 72000000004
 apns {
   apn {
     name: "internet"
@@ -37,6 +37,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
   config {
     key: "apn.settings_default_protocol_string"
     text_value: "IPV4V6"
@@ -338,6 +342,10 @@ configs {
     }
   }
   config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
     key: "recipientLimit"
     int_value: 20
   }
@@ -367,5 +375,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1727870767
+  seconds: 1749144169
 }

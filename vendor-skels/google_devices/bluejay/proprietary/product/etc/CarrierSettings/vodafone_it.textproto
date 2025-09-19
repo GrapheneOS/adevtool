@@ -1,5 +1,5 @@
 canonical_name: "vodafone_it"
-version: 70000000014
+version: 72000000015
 apns {
   apn {
     name: "Tethering Internet"
@@ -227,6 +227,10 @@ configs {
     }
   }
   config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
     key: "qns.block_iwlan_in_international_roaming_without_wwan_bool"
     bool_value: true
   }
@@ -249,5 +253,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732242306
+  seconds: 1747202398
 }

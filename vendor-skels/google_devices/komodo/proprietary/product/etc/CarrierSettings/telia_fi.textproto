@@ -1,5 +1,5 @@
 canonical_name: "telia_fi"
-version: 70000000018
+version: 72000000018
 apns {
   apn {
     name: "Telia Internet"

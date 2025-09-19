@@ -1,5 +1,5 @@
 canonical_name: "uqmobile5gsa_jp"
-version: 70000000006
+version: 72000000006
 apns {
   apn {
     name: "UQ mobile"
@@ -504,5 +504,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1743656466
+  seconds: 1743565855
 }

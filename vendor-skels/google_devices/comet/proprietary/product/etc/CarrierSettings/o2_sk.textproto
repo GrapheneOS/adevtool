@@ -1,5 +1,5 @@
 canonical_name: "o2_sk"
-version: 70000000012
+version: 72000000013
 apns {
   apn {
     name: "O2 internet"
@@ -127,16 +127,9 @@ configs {
       item: 6
       item: 5
       item: 2
-      item: 0
       item: 8
       item: 9
       item: 11
-    }
-  }
-  config {
-    key: "imsss.ut_terminal_based_services_int_array"
-    int_array {
-      item: 10
     }
   }
   config {
@@ -216,5 +209,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946296
+  seconds: 1747202462
 }

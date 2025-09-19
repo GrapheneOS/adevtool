@@ -1,5 +1,5 @@
 canonical_name: "telekom_pl"
-version: 70000000020
+version: 72000000022
 apns {
   apn {
     name: "Internet"
@@ -60,6 +60,10 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+48602950000"
   }
   config {
     key: "display_hd_audio_property_bool"
@@ -182,6 +186,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -277,5 +285,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741179687
+  seconds: 1747816749
 }

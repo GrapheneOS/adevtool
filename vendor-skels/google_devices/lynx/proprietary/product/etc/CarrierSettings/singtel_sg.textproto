@@ -1,5 +1,5 @@
 canonical_name: "singtel_sg"
-version: 70000000016
+version: 72000000016
 apns {
   apn {
     name: "Singtel (PostPaid)"

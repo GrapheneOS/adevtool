@@ -1,5 +1,5 @@
 canonical_name: "congstar_de"
-version: 70000000009
+version: 72000000010
 apns {
   apn {
     name: "Internet"
@@ -248,6 +248,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "imsvoice.ringback_timer_millis_int"
     int_value: 130000
   }
@@ -415,5 +419,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946296
+  seconds: 1747816827
 }

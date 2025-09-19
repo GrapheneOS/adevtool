@@ -1,5 +1,5 @@
 canonical_name: "tusass_gl"
-version: 70000000001
+version: 72000000001
 apns {
   apn {
     name: "Tele Internet"

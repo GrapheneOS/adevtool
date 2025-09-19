@@ -1,5 +1,5 @@
 canonical_name: "cellcom_us"
-version: 70000000004
+version: 72000000006
 apns {
   apn {
     name: "Cellcom"
@@ -1234,6 +1234,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "rilext.exiting_ecc_mode_after_epdn_disconnected_enable"
+    bool_value: true
+  }
+  config {
     key: "rtt_supported_bool"
     bool_value: true
   }
@@ -1336,5 +1340,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721964304
+  seconds: 1749144194
 }

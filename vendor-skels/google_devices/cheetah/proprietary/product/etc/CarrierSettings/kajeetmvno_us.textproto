@@ -1,5 +1,5 @@
 canonical_name: "kajeetmvno_us"
-version: 70000000004
+version: 72000000004
 apns {
   apn {
     name: "Kajeet MVNO"
@@ -672,5 +672,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540160
+  seconds: 1742382123
 }

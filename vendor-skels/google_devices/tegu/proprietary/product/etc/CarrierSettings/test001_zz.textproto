@@ -1,5 +1,5 @@
 canonical_name: "test001_zz"
-version: 70000000004
+version: 72000000006
 apns {
   apn {
     name: "TEST_DEFAULT"
@@ -10,13 +10,15 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
-    user_visible: false
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
   config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
@@ -26,6 +28,10 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
   config {
@@ -80,5 +86,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1738826962
+  seconds: 1748421166
 }

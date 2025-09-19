@@ -1,5 +1,5 @@
 canonical_name: "telenet_be"
-version: 70000000008
+version: 72000000009
 apns {
   apn {
     name: "Telenet Internet"
@@ -53,12 +53,6 @@ configs {
   config {
     key: "ignore_rtt_mode_setting_bool"
     bool_value: true
-  }
-  config {
-    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
-    int_array {
-      item: 3
-    }
   }
   config {
     key: "imsss.ut_iptype_home_int"
@@ -153,5 +147,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946287
+  seconds: 1746619449
 }

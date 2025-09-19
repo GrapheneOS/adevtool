@@ -1,5 +1,5 @@
 canonical_name: "esimgo_gb"
-version: 70000000001
+version: 72000000002
 apns {
   apn {
     name: "eSIM Go Data"
@@ -60,10 +60,6 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
-  }
-  config {
-    key: "editable_wfc_mode_bool"
-    bool_value: false
   }
   config {
     key: "feature_access_codes_string_array"
@@ -295,5 +291,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741940407
+  seconds: 1747202388
 }

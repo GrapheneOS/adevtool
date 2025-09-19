@@ -1,5 +1,5 @@
 canonical_name: "skt_kr"
-version: 70000000003
+version: 72000000003
 apns {
   apn {
     name: "SKT IMS"

@@ -1,5 +1,5 @@
 canonical_name: "u264ab_ca"
-version: 70000000010
+version: 72000000010
 apns {
   apn {
     name: "U+264A CA"

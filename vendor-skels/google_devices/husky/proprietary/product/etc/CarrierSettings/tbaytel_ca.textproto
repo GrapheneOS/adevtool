@@ -1,5 +1,5 @@
 canonical_name: "tbaytel_ca"
-version: 70000000013
+version: 72000000014
 apns {
   apn {
     name: "Tbaytel Tethering"
@@ -50,6 +50,14 @@ apns {
     type: XCAP
     bearer_bitmask: "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|17|20"
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "Emergency"
+    value: "EMERGENCY"
+    type: EMERGENCY
+    protocol: IPV6
     roaming_protocol: IPV4V6
     user_visible: false
   }
@@ -426,5 +434,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741940442
+  seconds: 1744165647
 }

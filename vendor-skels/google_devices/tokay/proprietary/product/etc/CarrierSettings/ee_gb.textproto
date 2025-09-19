@@ -1,5 +1,5 @@
 canonical_name: "ee_gb"
-version: 70000000007
+version: 72000000009
 apns {
   apn {
     name: "IMS"
@@ -144,6 +144,28 @@ configs {
   config {
     key: "ims.sip_timer_j_millis_int"
     int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -326,5 +348,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730360190
+  seconds: 1747202462
 }

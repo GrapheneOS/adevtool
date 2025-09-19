@@ -1,5 +1,5 @@
 canonical_name: "starhub_sg"
-version: 70000000432
+version: 72000000432
 apns {
   apn {
     name: "SH Data Postpaid"

@@ -1,5 +1,5 @@
 canonical_name: "esn_gb"
-version: 70000000002
+version: 72000000003
 apns {
   apn {
     name: "IMS"
@@ -110,6 +110,13 @@ configs {
     int_array {
       item: 2
       item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+    int_array {
+      item: 6
+      item: 3
     }
   }
   config {
@@ -303,5 +310,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003606
+  seconds: 1743565855
 }

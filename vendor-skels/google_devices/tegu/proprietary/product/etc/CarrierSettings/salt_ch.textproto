@@ -1,5 +1,5 @@
 canonical_name: "salt_ch"
-version: 70000000006
+version: 72000000006
 apns {
   apn {
     name: "Salt Internet"

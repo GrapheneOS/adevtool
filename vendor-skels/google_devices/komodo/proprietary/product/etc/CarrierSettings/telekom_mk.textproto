@@ -1,25 +1,23 @@
 canonical_name: "telekom_mk"
-version: 70000000005
+version: 72000000008
 apns {
   apn {
-    name: "T-Mobile MK Internet"
-    value: ""
-    type: IA
-  }
-  apn {
-    name: "T-Mobile MK Internet"
+    name: "Internet"
     value: "internet"
     type: DEFAULT
     type: SUPL
     user: "internet"
     password: "t-mobile"
+    authtype: 1
+    protocol: IPV4V6
   }
   apn {
-    name: "T-Mobile MK MMS"
+    name: "MMS"
     value: "mms"
     type: MMS
     user: "mms"
     password: "mms"
+    authtype: 1
     mmsc: "http://mms.t-mobile.com.mk"
     mmsc_proxy: "62.162.155.227"
     mmsc_proxy_port: "8080"
@@ -50,6 +48,10 @@ configs {
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+38970121212"
   }
   config {
     key: "display_hd_audio_property_bool"
@@ -127,6 +129,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -138,7 +144,11 @@ configs {
     key: "maxMessageSize"
     int_value: 102400
   }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1724912524
+  seconds: 1749144181
 }

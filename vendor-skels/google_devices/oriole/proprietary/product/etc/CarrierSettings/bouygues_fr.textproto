@@ -1,5 +1,5 @@
 canonical_name: "bouygues_fr"
-version: 70000000344
+version: 72000000344
 apns {
   apn {
     name: "Bouygues Telecom"

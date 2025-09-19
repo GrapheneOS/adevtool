@@ -1,5 +1,5 @@
 canonical_name: "elisa2_fi"
-version: 70000000014
+version: 72000000016
 apns {
   apn {
     name: "Elisa Internet"
@@ -92,17 +92,25 @@ configs {
     int_value: 20000
   }
   config {
-    key: "imsemergency.emergency_domain_preference_int_array"
+    key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
     int_array {
-      item: 2
-      item: 1
+      item: 6
+      item: 3
     }
   }
   config {
-    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
     int_array {
-      item: 2
-      item: 1
+      item: 6
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
     }
   }
   config {
@@ -212,5 +220,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946296
+  seconds: 1747202462
 }

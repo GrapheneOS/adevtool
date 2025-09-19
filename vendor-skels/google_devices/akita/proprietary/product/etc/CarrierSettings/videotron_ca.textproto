@@ -1,5 +1,5 @@
 canonical_name: "videotron_ca"
-version: 70000000009
+version: 72000000010
 apns {
   apn {
     name: "Media"
@@ -88,6 +88,14 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "dial_string_replace_string_array"
+    text_array {
+      item: "611:+15143809140"
+      item: "*611:+15143809140"
+      item: "#611:+15143809140"
+    }
   }
   config {
     key: "editable_enhanced_4g_lte_bool"
@@ -376,5 +384,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1740119832
+  seconds: 1748421152
 }

@@ -1,5 +1,5 @@
 canonical_name: "freedommobile_ca"
-version: 70000000066
+version: 72000000066
 apns {
   apn {
     name: "Internet"

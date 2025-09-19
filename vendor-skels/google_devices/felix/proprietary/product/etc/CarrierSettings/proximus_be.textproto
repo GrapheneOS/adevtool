@@ -1,5 +1,5 @@
 canonical_name: "proximus_be"
-version: 70000000014
+version: 72000000015
 apns {
   apn {
     name: "Proximus Internet"
@@ -45,6 +45,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.mnc001.mcc206.pub.3gppnetwork.org"
+  }
   config {
     key: "bsf.bsf_server_port_int"
     int_value: 8090
@@ -197,5 +201,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946265
+  seconds: 1743565790
 }

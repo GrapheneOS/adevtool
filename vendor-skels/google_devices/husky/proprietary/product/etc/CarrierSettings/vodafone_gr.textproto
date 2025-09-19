@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gr"
-version: 70000000011
+version: 72000000012
 apns {
   apn {
     name: "Vodafone GR"
@@ -73,6 +73,10 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "121"
+  }
+  config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -170,6 +174,10 @@ configs {
     text_value: "epdg.epc.mnc005.mcc202.pub.3gppnetwork.org"
   }
   config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: true
   }
@@ -179,5 +187,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1740426837
+  seconds: 1747202443
 }
