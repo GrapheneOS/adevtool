@@ -24,6 +24,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       // TPU
@@ -106,6 +107,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/1540a.app",
@@ -177,6 +179,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -247,6 +250,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -317,6 +321,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -385,6 +390,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -454,6 +460,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -521,6 +528,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -586,6 +594,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/1540.app",
@@ -674,6 +683,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/Data.msc",
@@ -736,6 +746,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -799,6 +810,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/aoc.bin",
@@ -862,6 +874,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
@@ -919,6 +932,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
@@ -975,6 +989,7 @@ export const deviceBackportConfig: Record<string, BackportConfig> = {
     sourceBuildId: ANDROID_16_QPR1_DEFAULT_BUILD_ID,
     replaceDirectories: [
       "vendor/firmware/carrierconfig/",
+      "product/etc/CarrierSettings/",
     ],
     replaceFiles: [
       "vendor/firmware/cs40l20.bin",
