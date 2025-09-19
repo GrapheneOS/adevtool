@@ -1,5 +1,5 @@
 canonical_name: "ee_gb"
-version: 70000000015
+version: 72000000016
 apns {
   apn {
     name: "IMS"
@@ -143,6 +143,14 @@ configs {
   config {
     key: "ims.sip_timer_j_millis_int"
     int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -317,5 +325,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1723067530
+  seconds: 1747202431
 }

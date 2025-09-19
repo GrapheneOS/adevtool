@@ -1,5 +1,5 @@
 canonical_name: "kddimvno_jp"
-version: 70000000007
+version: 72000000007
 apns {
   apn {
     name: "IMS"
@@ -339,5 +339,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1743656457
+  seconds: 1743565845
 }

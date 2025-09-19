@@ -1,5 +1,5 @@
 canonical_name: "tmobile_at"
-version: 70000000004
+version: 72000000005
 apns {
   apn {
     name: "T-Mobile IMS"
@@ -198,6 +198,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "imsvoice.ringback_timer_millis_int"
     int_value: 130000
   }
@@ -274,5 +278,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946304
+  seconds: 1747816840
 }

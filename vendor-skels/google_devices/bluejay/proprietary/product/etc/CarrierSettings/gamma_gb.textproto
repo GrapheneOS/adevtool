@@ -1,5 +1,5 @@
 canonical_name: "gamma_gb"
-version: 70000000020
+version: 72000000020
 apns {
   apn {
     name: "GAMMA"

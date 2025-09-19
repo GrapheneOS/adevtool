@@ -1,5 +1,5 @@
 canonical_name: "foroyatele_fo"
-version: 70000000004
+version: 72000000004
 apns {
   apn {
     name: "FT"

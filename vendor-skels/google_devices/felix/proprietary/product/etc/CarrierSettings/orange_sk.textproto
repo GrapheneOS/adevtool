@@ -1,5 +1,5 @@
 canonical_name: "orange_sk"
-version: 70000000016
+version: 72000000017
 apns {
   apn {
     name: "Orange SK"
@@ -200,6 +200,34 @@ configs {
     }
   }
   config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -75
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_without_cellular_int_array"
+    int_array {
+      item: -85
+      item: -90
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -75
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_without_cellular_int_array"
+    int_array {
+      item: -85
+      item: -90
+    }
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -221,5 +249,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1739962029
+  seconds: 1746619428
 }

@@ -1,5 +1,5 @@
 canonical_name: "simple_us"
-version: 70000000584
+version: 72000000586
 apns {
   apn {
     name: "SIMPLE"
@@ -625,5 +625,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1739349292
+  seconds: 1749144090
 }

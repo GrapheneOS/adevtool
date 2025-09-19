@@ -1,5 +1,5 @@
 canonical_name: "idea_in"
-version: 70000000020
+version: 72000000021
 apns {
   apn {
     name: "Idea Internet"
@@ -108,6 +108,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\", \"36\", \"9000-9003\", \"10500\", \"11001\", \"11011\", \"8192\"],\"RetryArray\": [\"30\", \"60\", \"1800\", \"3600\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
     key: "iwlan.mcc_mncs_string_array"
     text_array {
       item: "404-13"
@@ -183,5 +187,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185465
+  seconds: 1747202421
 }

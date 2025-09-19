@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 70000000062
+version: 72000000062
 apns {
   apn {
     name: "Vodafone DE"

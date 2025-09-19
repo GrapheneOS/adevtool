@@ -1,5 +1,5 @@
 canonical_name: "tmobile_us"
-version: 70000000011
+version: 72000000012
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -758,6 +758,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_entitlement_status_refresh_days_int"
+    int_value: 1
+  }
+  config {
     key: "satellite_entitlement_supported_bool"
     bool_value: true
   }
@@ -842,5 +846,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1747187280
+  seconds: 1747816840
 }

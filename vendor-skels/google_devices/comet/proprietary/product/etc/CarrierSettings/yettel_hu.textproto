@@ -1,5 +1,5 @@
 canonical_name: "yettel_hu"
-version: 70000000015
+version: 72000000015
 apns {
   apn {
     name: "Yettel online"

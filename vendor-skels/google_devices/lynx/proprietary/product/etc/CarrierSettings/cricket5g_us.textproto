@@ -1,5 +1,5 @@
 canonical_name: "cricket5g_us"
-version: 70000000013
+version: 72000000013
 apns {
   apn {
     name: "internet"

@@ -1,5 +1,5 @@
 canonical_name: "plus_pl"
-version: 70000000009
+version: 72000000010
 apns {
   apn {
     name: "Plus Internet"
@@ -52,6 +52,10 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+48601222222"
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -197,5 +201,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1720003562
+  seconds: 1749144101
 }

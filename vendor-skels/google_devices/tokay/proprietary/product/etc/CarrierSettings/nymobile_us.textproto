@@ -1,5 +1,5 @@
 canonical_name: "nymobile_us"
-version: 70000000004
+version: 72000000004
 apns {
   apn {
     name: "NY Mobile"
@@ -711,5 +711,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540187
+  seconds: 1742382160
 }

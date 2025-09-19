@@ -1,5 +1,5 @@
 canonical_name: "2degrees_nz"
-version: 70000000008
+version: 72000000008
 apns {
   apn {
     name: "2Degrees Internet"

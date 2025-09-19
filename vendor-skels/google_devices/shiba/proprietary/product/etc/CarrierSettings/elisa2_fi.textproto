@@ -1,5 +1,5 @@
 canonical_name: "elisa2_fi"
-version: 70000000014
+version: 72000000015
 apns {
   apn {
     name: "Elisa Internet"
@@ -89,6 +89,14 @@ configs {
   config {
     key: "ims.sip_timer_t4_millis_int"
     int_value: 20000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
@@ -189,5 +197,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1732679835
+  seconds: 1747202443
 }

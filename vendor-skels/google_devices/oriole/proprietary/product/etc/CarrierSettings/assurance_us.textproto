@@ -1,5 +1,5 @@
 canonical_name: "assurance_us"
-version: 70000000151
+version: 72000000151
 apns {
   apn {
     name: "Tether"

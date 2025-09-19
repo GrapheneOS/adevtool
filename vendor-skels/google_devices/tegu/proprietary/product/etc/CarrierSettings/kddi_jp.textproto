@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 70000000009
+version: 72000000009
 apns {
   apn {
     name: "5G NET"
@@ -567,5 +567,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1743656466
+  seconds: 1743565855
 }

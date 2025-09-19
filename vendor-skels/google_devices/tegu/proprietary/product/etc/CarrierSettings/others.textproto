@@ -1,4 +1,4 @@
-version: 70000000032
+version: 72000000039
 setting {
   canonical_name: "019mobile_il"
   apns {
@@ -3151,48 +3151,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "25901"
-  apns {
-    apn {
-      name: "Orange_Internet_GPRS"
-      value: "wap.orange.md"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Orange_MMS_GPRS"
-      value: "mms.orange.md"
-      type: MMS
-      mmsc: "http://mms/mms"
-      mmsc_proxy: "192.168.127.125"
-      mmsc_proxy_port: "3128"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "25902"
-  apns {
-    apn {
-      name: "Moldcell Internet"
-      value: "internet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "Moldcell MMS"
-      value: "mms"
-      type: MMS
-      mmsc: "http://mms.moldcell.md/cmmsc/post"
-      mmsc_proxy: "10.0.10.10"
-      mmsc_proxy_port: "9401"
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "25905"
   apns {
     apn {
@@ -3400,34 +3358,6 @@ setting {
       mmsc: "http://mmc1/servlets/mms"
       mmsc_proxy: "10.1.11.19"
       mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "27602"
-  configs {
-    config {
-      key: "default_vm_number_string"
-      text_value: "135"
-    }
-  }
-}
-setting {
-  canonical_name: "28001"
-  apns {
-    apn {
-      name: "Cyta"
-      value: "cytamobile"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://mmsc.cyta.com.cy"
-      mmsc_proxy: "212.31.96.161"
-      mmsc_proxy_port: "8080"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
     }
   }
   configs {
@@ -11287,19 +11217,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "41301"
-  apns {
-    apn {
-      name: "Mobitel"
-      value: "default"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "41302"
   apns {
     apn {
@@ -11317,19 +11234,6 @@ setting {
   apns {
     apn {
       name: "Etisalat"
-      value: "default"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "41305"
-  apns {
-    apn {
-      name: "Airtel"
       value: "default"
       type: DEFAULT
       type: SUPL
@@ -11935,19 +11839,6 @@ setting {
   apns {
     apn {
       name: "Namaste / NT Mobile"
-      value: "default"
-      type: DEFAULT
-      type: SUPL
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "42902"
-  apns {
-    apn {
-      name: "Ncell"
       value: "default"
       type: DEFAULT
       type: SUPL
@@ -12678,35 +12569,6 @@ setting {
       mmsc: "http://10.18.2.172:38090"
       mmsc_proxy: "10.18.2.183"
       mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "45403"
-  apns {
-    apn {
-      name: "3 LTE"
-      value: "mobile.lte.three.com.hk"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      authtype: 1
-      mmsc: "http://mms.um.three.com.hk:10021/mmsc"
-      mmsc_proxy: "mms.three.com.hk"
-      mmsc_proxy_port: "8799"
-    }
-    apn {
-      name: "3"
-      value: "mobile.three.com.hk"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      authtype: 1
-      mmsc: "http://mms.um.three.com.hk:10021/mmsc"
-      mmsc_proxy: "mms.three.com.hk"
-      mmsc_proxy_port: "8799"
     }
   }
   configs {
@@ -18760,6 +18622,12 @@ setting {
       roaming_protocol: IPV4V6
       user_visible: false
     }
+    apn {
+      name: "Telstra XCAP"
+      value: "hos"
+      type: XCAP
+      user_visible: false
+    }
   }
   configs {
     config {
@@ -18781,6 +18649,14 @@ setting {
     config {
       key: "carrier_name_string"
       text_value: "ALDImobile"
+    }
+    config {
+      key: "carrier_supports_ss_over_ut_bool"
+      bool_value: true
+    }
+    config {
+      key: "carrier_ussd_method_int"
+      int_value: 2
     }
     config {
       key: "carrier_volte_available_bool"
@@ -18809,6 +18685,20 @@ setting {
     config {
       key: "ims.ims_user_agent_string"
       text_value: "Telstra #MANUFACTURE# #HWSKU# Android#AV# #BUILD#"
+    }
+    config {
+      key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+      bool_value: false
+    }
+    config {
+      key: "imsss.xcap_over_ut_supported_rats_int_array"
+      int_array {
+        item: 5
+        item: 6
+        item: 3
+        item: 1
+        item: 2
+      }
     }
     config {
       key: "lte_rsrp_thresholds_int_array"
@@ -19816,6 +19706,28 @@ setting {
       key: "carrier_vt_available_bool"
       bool_value: true
     }
+    config {
+      key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
+      int_array {
+        item: 6
+        item: 3
+      }
+    }
+    config {
+      key: "imsemergency.emergency_over_ims_supported_3gpp_network_types_int_array"
+      int_array {
+        item: 6
+        item: 3
+      }
+    }
+    config {
+      key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+      int_array {
+        item: 6
+        item: 3
+        item: 5
+      }
+    }
   }
 }
 setting {
@@ -20069,6 +19981,29 @@ setting {
     }
   }
   configs {
+  }
+}
+setting {
+  canonical_name: "iway_ch"
+  apns {
+    apn {
+      name: "internet"
+      value: "internet"
+      type: DEFAULT
+      type: SUPL
+      type: FOTA
+      type: IA
+      type: DUN
+      protocol: IPV4V6
+      roaming_protocol: IPV4V6
+    }
+  }
+  configs {
+    config {
+      key: "read_only_apn_types_string_array"
+      text_array {
+      }
+    }
   }
 }
 setting {
@@ -20563,20 +20498,6 @@ setting {
       key: "prefer_2g_bool"
       bool_value: true
     }
-  }
-}
-setting {
-  canonical_name: "lycamobile_dk"
-  apns {
-    apn {
-      name: "lycamobile"
-      value: "data.lycamobile.dk"
-      type: DEFAULT
-      type: SUPL
-      authtype: 1
-    }
-  }
-  configs {
   }
 }
 setting {
@@ -22285,20 +22206,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "telekom_al"
-  apns {
-    apn {
-      name: "Telekom"
-      value: "internet.t"
-      type: DEFAULT
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-  }
-  configs {
-  }
-}
-setting {
   canonical_name: "telfort_nl"
   apns {
     apn {
@@ -22729,327 +22636,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "vodafonelab_de"
-  apns {
-    apn {
-      name: "VF DE Web Lab 32"
-      value: "web32.testnetz-vd2.de"
-      type: DEFAULT
-      type: IA
-      type: XCAP
-      bearer_bitmask: "1|2|3|9|10|11|13|14|15|20"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "VF DE IMS Lab 32"
-      value: "ims32.testnetz-vd2.de"
-      type: IMS
-      bearer_bitmask: "14|18|20"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "bsf.bsf_server_port_int"
-      int_value: 443
-    }
-    config {
-      key: "bsf.bsf_transport_type_int"
-      int_value: 3
-    }
-    config {
-      key: "carrier_certificate_string_array"
-      text_array {
-        item: "0318ED2A8B33CE173C7ABE3F647D263810994CF489C8FCD27A8CAAFCF2822A88:com.appseleration.android.selfcare,com.appseleration.speedtest"
-      }
-    }
-    config {
-      key: "carrier_nr_availabilities_int_array"
-      int_array {
-        item: 1
-        item: 2
-      }
-    }
-    config {
-      key: "carrier_supports_ss_over_ut_bool"
-      bool_value: true
-    }
-    config {
-      key: "carrier_ussd_method_int"
-      int_value: 2
-    }
-    config {
-      key: "carrier_volte_available_bool"
-      bool_value: true
-    }
-    config {
-      key: "carrier_wfc_ims_available_bool"
-      bool_value: true
-    }
-    config {
-      key: "check_pricing_with_carrier_data_roaming_bool"
-      bool_value: true
-    }
-    config {
-      key: "default_vm_number_string"
-      text_value: "5500"
-    }
-    config {
-      key: "editable_wfc_mode_bool"
-      bool_value: false
-    }
-    config {
-      key: "emergency_notification_delay_int"
-      int_value: 30000
-    }
-    config {
-      key: "enabledMMS"
-      bool_value: false
-    }
-    config {
-      key: "hide_enhanced_4g_lte_bool"
-      bool_value: true
-    }
-    config {
-      key: "hide_lte_plus_data_icon_bool"
-      bool_value: false
-    }
-    config {
-      key: "ignore_rtt_mode_setting_bool"
-      bool_value: true
-    }
-    config {
-      key: "ims.ims_user_agent_string"
-      text_value: "#MANUFACTURE# #MODEL# Android #AV# #BUILD# EU00025"
-    }
-    config {
-      key: "ims.ipsec_authentication_algorithms_int_array"
-      int_array {
-        item: 1
-      }
-    }
-    config {
-      key: "ims.ipsec_encryption_algorithms_int_array"
-      int_array {
-        item: 0
-        item: 2
-      }
-    }
-    config {
-      key: "ims.ipv4_sip_mtu_size_cellular_int"
-      int_value: 1280
-    }
-    config {
-      key: "ims.ipv6_sip_mtu_size_cellular_int"
-      int_value: 1280
-    }
-    config {
-      key: "imsemergency.emergency_domain_preference_roaming_int_array"
-      int_array {
-        item: 2
-        item: 1
-      }
-    }
-    config {
-      key: "imsss.network_initiated_ussd_over_ims_supported_bool"
-      bool_value: false
-    }
-    config {
-      key: "imsss.ut_as_server_port_int"
-      int_value: 443
-    }
-    config {
-      key: "imsss.ut_iptype_home_int"
-      int_value: 0
-    }
-    config {
-      key: "imsss.ut_iptype_roaming_int"
-      int_value: 0
-    }
-    config {
-      key: "imsss.ut_transport_type_int"
-      int_value: 3
-    }
-    config {
-      key: "imsss.xcap_over_ut_supported_rats_int_array"
-      int_array {
-        item: 6
-        item: 3
-        item: 1
-        item: 2
-      }
-    }
-    config {
-      key: "imsvoice.audio_codec_capability_payload_types_bundle"
-      bundle {
-        config {
-          key: "imsvoice.amrnb_payload_type_int_array"
-          int_array {
-            item: 102
-          }
-        }
-        config {
-          key: "imsvoice.amrwb_payload_type_int_array"
-          int_array {
-            item: 104
-          }
-        }
-        config {
-          key: "imsvoice.dtmfnb_payload_type_int_array"
-          int_array {
-            item: 97
-          }
-        }
-        config {
-          key: "imsvoice.dtmfwb_payload_type_int_array"
-          int_array {
-            item: 96
-          }
-        }
-        config {
-          key: "imsvoice.evs_payload_type_int_array"
-          int_array {
-            item: 127
-          }
-        }
-      }
-    }
-    config {
-      key: "imsvoice.evs_payload_description_bundle"
-      bundle {
-        config {
-          key: "127"
-          bundle {
-            config {
-              key: "imsvoice.evs_codec_attribute_bitrate_int_array"
-              int_array {
-                item: 0
-                item: 6
-              }
-            }
-            config {
-              key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
-              int_value: 2
-            }
-          }
-        }
-      }
-    }
-    config {
-      key: "imsvoice.minimum_session_expires_timer_sec_int"
-      int_value: 600
-    }
-    config {
-      key: "imsvoice.ringback_timer_millis_int"
-      int_value: 120000
-    }
-    config {
-      key: "imsvoice.ringing_timer_millis_int"
-      int_value: 120000
-    }
-    config {
-      key: "imswfc.emergency_call_over_emergency_pdn_bool"
-      bool_value: true
-    }
-    config {
-      key: "iwlan.child_sa_rekey_hard_timer_sec_int"
-      int_value: 14450
-    }
-    config {
-      key: "iwlan.child_sa_rekey_soft_timer_sec_int"
-      int_value: 14400
-    }
-    config {
-      key: "iwlan.diffie_hellman_groups_int_array"
-      int_array {
-        item: 14
-      }
-    }
-    config {
-      key: "iwlan.ike_rekey_hard_timer_in_sec"
-      int_value: 86500
-    }
-    config {
-      key: "iwlan.ike_rekey_soft_timer_sec_int"
-      int_value: 86400
-    }
-    config {
-      key: "iwlan.ike_remote_id_type_int"
-      int_value: 11
-    }
-    config {
-      key: "iwlan.key_error_policy_config_string"
-      text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
-    }
-    config {
-      key: "prefer_2g_bool"
-      bool_value: true
-    }
-    config {
-      key: "qns.block_iwlan_in_international_roaming_without_wwan_bool"
-      bool_value: true
-    }
-    config {
-      key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
-      int_array {
-        item: 5000
-        item: 5000
-        item: 5000
-      }
-    }
-    config {
-      key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
-      int_array {
-        item: 5000
-        item: 5000
-        item: 5000
-      }
-    }
-    config {
-      key: "qns.sos_transport_type_int"
-      int_value: 2
-    }
-    config {
-      key: "qns.xcap_transport_type_int"
-      int_value: 0
-    }
-    config {
-      key: "rtt_downgrade_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "rtt_supported_bool"
-      bool_value: true
-    }
-    config {
-      key: "rtt_supported_while_roaming_bool"
-      bool_value: true
-    }
-    config {
-      key: "show_4g_for_lte_data_icon_bool"
-      bool_value: true
-    }
-    config {
-      key: "voicemail_notification_persistent_bool"
-      bool_value: true
-    }
-    config {
-      key: "volte_replacement_rat_int"
-      int_value: 3
-    }
-    config {
-      key: "wfc_spn_format_idx_int"
-      int_value: 11
-    }
-    config {
-      key: "wfc_spn_use_root_locale"
-      bool_value: true
-    }
-  }
-}
-setting {
   canonical_name: "wimo_mx"
   apns {
     apn {
@@ -23248,5 +22834,5 @@ setting {
   }
 }
 last_updated {
-  seconds: 1741940466
+  seconds: 1750852995
 }

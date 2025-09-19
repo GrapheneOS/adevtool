@@ -1,5 +1,5 @@
 canonical_name: "meo_pt"
-version: 70000000016
+version: 72000000017
 apns {
   apn {
     name: "tmn internet"
@@ -12,6 +12,7 @@ apns {
     type: DEFAULT
     type: SUPL
     type: DUN
+    protocol: IPV4V6
     user_editable: false
   }
   apn {
@@ -224,5 +225,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185431
+  seconds: 1744165618
 }

@@ -1,5 +1,5 @@
 canonical_name: "tracfonetmo_us"
-version: 70000000016
+version: 72000000016
 apns {
   apn {
     name: "Tracfone"
@@ -373,5 +373,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540160
+  seconds: 1742382123
 }

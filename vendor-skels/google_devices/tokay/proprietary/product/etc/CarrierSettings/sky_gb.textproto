@@ -1,5 +1,5 @@
 canonical_name: "sky_gb"
-version: 70000000017
+version: 72000000017
 apns {
   apn {
     name: "SKY MMS"

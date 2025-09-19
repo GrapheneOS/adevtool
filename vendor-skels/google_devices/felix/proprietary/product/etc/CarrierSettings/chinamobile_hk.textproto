@@ -1,5 +1,5 @@
 canonical_name: "chinamobile_hk"
-version: 70000000004
+version: 72000000005
 apns {
   apn {
     name: "CMHK MMS"
@@ -17,7 +17,7 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -25,7 +25,15 @@ apns {
 }
 configs {
   config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
   config {
@@ -75,7 +83,11 @@ configs {
     text_array {
     }
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1706100369
+  seconds: 1748421131
 }

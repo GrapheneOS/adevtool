@@ -1,5 +1,5 @@
 canonical_name: "321communications_us"
-version: 70000000004
+version: 72000000004
 apns {
   apn {
     name: "321 Communications"

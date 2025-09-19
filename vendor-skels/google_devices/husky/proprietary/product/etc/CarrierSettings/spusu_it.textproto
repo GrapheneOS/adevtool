@@ -1,5 +1,5 @@
 canonical_name: "spusu_it"
-version: 70000000003
+version: 72000000003
 apns {
   apn {
     name: "spusu"
@@ -13,7 +13,7 @@ apns {
     name: "ims"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -21,7 +21,19 @@ apns {
 }
 configs {
   config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
   config {
@@ -41,6 +53,22 @@ configs {
     int_value: 0
   }
   config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc056.mcc222.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+    }
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -52,7 +80,11 @@ configs {
     key: "rtt_supported_while_roaming_bool"
     bool_value: true
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1746613943
+  seconds: 1746619443
 }

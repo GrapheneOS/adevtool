@@ -1,5 +1,5 @@
 canonical_name: "vodafone_nz"
-version: 70000000009
+version: 72000000010
 apns {
   apn {
     name: "VFNZ Gateway"
@@ -108,6 +108,10 @@ configs {
     }
   }
   config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -117,5 +121,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1709519152
+  seconds: 1747202443
 }

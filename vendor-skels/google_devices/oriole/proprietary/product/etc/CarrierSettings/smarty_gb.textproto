@@ -1,5 +1,5 @@
 canonical_name: "smarty_gb"
-version: 70000000537
+version: 72000000537
 apns {
   apn {
     name: "SMARTY"

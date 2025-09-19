@@ -1,5 +1,5 @@
 canonical_name: "default"
-version: 70000000010
+version: 72000000011
 configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
@@ -127,6 +127,10 @@ configs {
   config {
     key: "imsrtt.text_rs_bandwidth_bps_int"
     int_value: 153
+  }
+  config {
+    key: "imssms.sms_max_retry_over_ims_count_int"
+    int_value: 0
   }
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
@@ -534,5 +538,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1739962082
+  seconds: 1749144194
 }

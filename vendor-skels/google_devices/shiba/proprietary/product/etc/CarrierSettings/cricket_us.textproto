@@ -1,5 +1,5 @@
 canonical_name: "cricket_us"
-version: 70000000012
+version: 72000000012
 apns {
   apn {
     name: "internet"

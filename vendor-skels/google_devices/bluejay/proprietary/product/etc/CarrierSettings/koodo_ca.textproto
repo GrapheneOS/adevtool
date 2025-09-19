@@ -1,5 +1,5 @@
 canonical_name: "koodo_ca"
-version: 70000000027
+version: 72000000028
 apns {
   apn {
     name: "Koodo SP"
@@ -245,11 +245,11 @@ configs {
   }
   config {
     key: "imsvoice.audio_rtcp_inactivity_timer_millis_int"
-    int_value: 14000
+    int_value: 30000
   }
   config {
     key: "imsvoice.audio_rtp_inactivity_timer_millis_int"
-    int_value: 14000
+    int_value: 30000
   }
   config {
     key: "imsvoice.conference_factory_uri_string"
@@ -466,5 +466,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185440
+  seconds: 1743565766
 }

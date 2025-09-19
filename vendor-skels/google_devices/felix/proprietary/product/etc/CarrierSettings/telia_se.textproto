@@ -1,5 +1,5 @@
 canonical_name: "telia_se"
-version: 70000000013
+version: 72000000013
 apns {
   apn {
     name: "Telia MMS"

@@ -1,5 +1,5 @@
 canonical_name: "erate_no"
-version: 70000000008
+version: 72000000008
 apns {
   apn {
     name: "eRate Internet"
@@ -159,5 +159,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1746613959
+  seconds: 1746619456
 }

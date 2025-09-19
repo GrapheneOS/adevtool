@@ -1,5 +1,5 @@
 canonical_name: "telcel_mx"
-version: 70000000011
+version: 72000000012
 apns {
   apn {
     name: "Internet"
@@ -90,6 +90,10 @@ configs {
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
+  }
+  config {
+    key: "display_hd_audio_property_bool"
+    bool_value: false
   }
   config {
     key: "display_no_data_notification_on_permanent_failure_bool"
@@ -234,5 +238,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1744682513
+  seconds: 1747202453
 }

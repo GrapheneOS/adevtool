@@ -1,5 +1,5 @@
 canonical_name: "h3g27202_ie"
-version: 70000000013
+version: 72000000013
 apns {
   apn {
     name: "3"

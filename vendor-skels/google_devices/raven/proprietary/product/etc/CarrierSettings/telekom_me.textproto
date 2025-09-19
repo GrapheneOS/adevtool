@@ -1,5 +1,5 @@
 canonical_name: "telekom_me"
-version: 70000000003
+version: 72000000004
 apns {
   apn {
     name: "T-Mobile ME Internet"
@@ -102,7 +102,11 @@ configs {
       }
     }
   }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
 }
 last_updated {
-  seconds: 1724912449
+  seconds: 1747816737
 }

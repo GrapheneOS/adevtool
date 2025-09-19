@@ -1,20 +1,19 @@
 canonical_name: "asda_gb"
-version: 70000000009
+version: 72000000010
 apns {
   apn {
-    name: "ASDA internet"
-    value: "my.internet"
+    name: "ASDA Mobile"
+    value: "MY.INTERNET"
     type: DEFAULT
     type: MMS
     type: SUPL
-    proxy: "212.183.137.12"
-    port: "8799"
     user: "wap"
     password: "wap"
     authtype: 1
     mmsc: "http://mms.ad.vodafone.co.uk/servlets/mms"
     mmsc_proxy: "212.183.137.12"
     mmsc_proxy_port: "8799"
+    protocol: IPV4V6
   }
   apn {
     name: "IMS"
@@ -165,5 +164,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1730360183
+  seconds: 1752159093
 }

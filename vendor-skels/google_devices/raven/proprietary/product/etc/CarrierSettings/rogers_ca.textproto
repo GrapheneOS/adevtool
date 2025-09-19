@@ -1,5 +1,5 @@
 canonical_name: "rogers_ca"
-version: 70000000072
+version: 72000000072
 apns {
   apn {
     name: "Rogers Tethering"

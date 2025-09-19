@@ -1,5 +1,5 @@
 canonical_name: "ais_th"
-version: 70000000005
+version: 72000000005
 apns {
   apn {
     name: "AIS Internet"

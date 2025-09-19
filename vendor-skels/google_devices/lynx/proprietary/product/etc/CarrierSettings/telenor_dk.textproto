@@ -1,11 +1,12 @@
 canonical_name: "telenor_dk"
-version: 70000000014
+version: 72000000015
 apns {
   apn {
     name: "Telenor Internet"
     value: "Internet"
     type: DEFAULT
     type: SUPL
+    protocol: IPV4V6
   }
   apn {
     name: "Telenor MMS"
@@ -236,5 +237,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946272
+  seconds: 1744165641
 }

@@ -907,6 +907,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/airbus_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_de.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/airbus_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_fr.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/airtel_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_in.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/airtel_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_lk.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/ais_th.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ais_th.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/alcom_fi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alcom_fi.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/alestra_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alestra_mx.pb \
@@ -917,6 +918,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/antel_uy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/antel_uy.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/appalachian_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/appalachian_us.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/apt_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/apt_tw.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/apua_ag.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/apua_ag.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/asda_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/asda_gb.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/assurance_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/assurance_us.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/astca_as.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/astca_as.pb \
@@ -974,6 +976,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/cricket5g_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cricket5g_us.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/cspire_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cspire_nl.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/cspire_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cspire_us.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/cytamobile_cy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cytamobile_cy.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/default.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/default.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/digi_hu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_hu.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/digi_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_my.pb \
@@ -1030,6 +1033,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/gibtel_gi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gibtel_gi.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/giffgaff_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/giffgaff_gb.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/giga_sg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/giga_sg.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/gigs_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gigs_gb.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/globe_ph.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/globe_ph.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/gomobile_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gomobile_mt.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/grameenphone_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/grameenphone_bd.pb \
@@ -1037,6 +1041,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/guuk_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/guuk_es.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/h3_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_hk.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/h3_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_ie.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/h3_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_lk.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/h3_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_se.pb \
@@ -1046,7 +1051,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/help_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/help_at.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/homobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/homobile_it.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/hotmobile_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/hotmobile_il.pb \
-    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/humane_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/humane_us.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/ice_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ice_no.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/idea_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idea_in.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/idmobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idmobile_gb.pb \
@@ -1081,6 +1085,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lum_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lum_ca.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lyca_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lyca_es.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lyca_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lyca_us.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lycamobile_dk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_dk.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lycamobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_gb.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lycamobile_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_pt.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/lycamobile_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lycamobile_se.pb \
@@ -1098,13 +1103,16 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/mettel_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mettel_us.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/mobifone_vn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobifone_vn.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/mobily_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobily_sa.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/moldcell_md.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/moldcell_md.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/monacotelecom_mc.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/monacotelecom_mc.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/movistar_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_cl.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/movistar_co.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_co.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/movistar_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_es.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/movistar_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/movistar_mx.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/mtel_me.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mtel_me.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/mucho_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mucho_ch.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/mvnoconnect_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mvnoconnect_us.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/ncell_np.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ncell_np.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/nema_fo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nema_fo.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/netcomgroup_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/netcomgroup_fr.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/newww_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/newww_mx.pb \
@@ -1122,6 +1130,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/o2prepaid_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2prepaid_de.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/o2prepaid_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2prepaid_gb.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/omantel_om.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/omantel_om.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/one_al.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one_al.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/one_me.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one_me.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/onecall_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/onecall_no.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/only_yt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/only_yt.pb \
@@ -1134,6 +1143,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_fr.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_gp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_gp.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_lu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_lu.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_md.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_md.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_pl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_pl.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_re.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_re.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/orange_ro.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/orange_ro.pb \
@@ -1187,6 +1197,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/sky_ie.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sky_ie.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/sky_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sky_mx.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/skylo_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/skylo_zz.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/slt_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/slt_lk.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/smart_ph.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smart_ph.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/smartfren_id.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smartfren_id.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/smartless_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/smartless_us.pb \
@@ -1317,6 +1328,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/viti_pf.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/viti_pf.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vivacom_bg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vivacom_bg.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vivo_br.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vivo_br.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_al.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_al.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_au.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_au.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_cz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_cz.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_de.pb \
@@ -1335,6 +1347,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_qa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_qa.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_ro.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_ro.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafone_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafone_tr.pb \
+    vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/vodafonelab_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/vodafonelab_de.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/walmart_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/walmart_mx.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/webbing_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/webbing_hk.pb \
     vendor/google_devices/caiman/proprietary/product/etc/CarrierSettings/wim_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/wim_mx.pb \

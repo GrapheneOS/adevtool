@@ -1,5 +1,5 @@
 canonical_name: "consumercellulartmo_us"
-version: 70000000011
+version: 72000000011
 apns {
   apn {
     name: "Consumer Cellular"
@@ -381,5 +381,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1742540187
+  seconds: 1742382160
 }

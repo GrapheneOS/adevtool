@@ -1,5 +1,5 @@
 canonical_name: "telekom_si"
-version: 70000000003
+version: 72000000004
 apns {
   apn {
     name: "Mobilni Internet"
@@ -157,6 +157,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "iwlan_handover_policy_string_array"
     text_array {
       item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
@@ -196,5 +200,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946304
+  seconds: 1747816840
 }

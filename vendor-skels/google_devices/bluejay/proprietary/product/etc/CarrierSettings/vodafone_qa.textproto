@@ -1,5 +1,5 @@
 canonical_name: "vodafone_qa"
-version: 70000000006
+version: 72000000006
 apns {
   apn {
     name: "Voda internet"

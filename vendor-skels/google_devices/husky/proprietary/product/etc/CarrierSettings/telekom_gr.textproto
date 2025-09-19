@@ -1,5 +1,5 @@
 canonical_name: "telekom_gr"
-version: 70000000012
+version: 72000000013
 apns {
   apn {
     name: "Cosmote Internet"
@@ -113,6 +113,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: true
   }
@@ -130,5 +134,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1740560751
+  seconds: 1747816800
 }

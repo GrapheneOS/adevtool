@@ -1,5 +1,5 @@
 canonical_name: "consumercellulartmo_us"
-version: 70000000578
+version: 72000000578
 apns {
   apn {
     name: "Consumer Cellular"

@@ -1,5 +1,5 @@
 canonical_name: "verizon_us"
-version: 70000000014
+version: 72000000017
 apns {
   apn {
     name: "Verizon"
@@ -1034,6 +1034,10 @@ configs {
     int_value: 65283
   }
   config {
+    key: "nr_advanced_pci_change_secondary_timer_seconds_int"
+    int_value: 60
+  }
+  config {
     key: "nr_timers_reset_on_plmn_change_bool"
     bool_value: true
   }
@@ -1282,6 +1286,10 @@ configs {
     int_value: 20
   }
   config {
+    key: "rilext.exiting_ecc_mode_after_epdn_disconnected_enable"
+    bool_value: true
+  }
+  config {
     key: "rtt_supported_bool"
     bool_value: true
   }
@@ -1401,5 +1409,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741781053
+  seconds: 1749144194
 }
