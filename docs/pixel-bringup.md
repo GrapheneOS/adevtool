@@ -20,7 +20,7 @@ The factory images ZIP will be saved in `~/stock_images`. Full OTA packages are 
 
 ## 2. Create a config
 
-Create a simple YAML config file to get started with your device. The [example config](../config/examples/device.yml) has detailed documentation for all possible config values, but this is the bare minimum you need to start:
+Create a simple YAML config file to get started with your device. The [example config](https://github.com/kdrag0n/adevtool/blob/main/config/examples/device.yml) has detailed documentation for all possible config values, but this is the bare minimum you need to start:
 
 ```yaml
 device:
@@ -59,7 +59,7 @@ m installclean
 m
 ```
 
-**The first build is expected to fail — don't panic.** Read the errors to determine which dependencies are missing and add the missing files to the `filters: dep_files` section of the config accordingly. See the [Pixel 2020](../config/pixel/snippets/2020.yml#L26) config for reference.
+**The first build is expected to fail — don't panic.** Read the errors to determine which dependencies are missing and add the missing files to the `filters: dep_files` section of the config accordingly. See the [Pixel 2020](https://github.com/kdrag0n/adevtool/blob/main/config/pixel/snippets/2020.yml#L26) config for reference.
 
 After adding the missing files, generate the vendor module again (step 2) and attempt another build. Repeat until the build completes successfully.
 
@@ -117,6 +117,6 @@ To fix features and improve the quality of your bringup, review the following ge
 - SELinux policies and partitions: `proprietary/BoardConfigVendor.mk`
 - System properties and built packages: `proprietary/device-vendor.mk`
 
-Add filters and regenerate the module until everything looks good. It will be helpful to use [existing Pixel configs](../config/pixel) as references.
+Add filters and regenerate the module until everything looks good. It will be helpful to use [existing Pixel configs](../config/device) as references.
 
-If you get a new Pixel device working with no apparent bugs, congrats! Please consider contributing official support for the device [by making a pull request](https://github.com/kdrag0n/adevtool/compare).
+If you get a new Pixel device working with no apparent bugs, congrats! Please consider contributing official support for the device [by making a pull request](https://github.com/GrapheneOS/adevtool/compare).
