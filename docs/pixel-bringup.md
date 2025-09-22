@@ -117,6 +117,6 @@ To fix features and improve the quality of your bringup, review the following ge
 - SELinux policies and partitions: `proprietary/BoardConfigVendor.mk`
 - System properties and built packages: `proprietary/device-vendor.mk`
 
-Add filters and regenerate the module until everything looks good. It will be helpful to use [existing Pixel configs](https://github.com/kdrag0n/adevtool/blob/main/config/pixel) as references.
+Add filters and regenerate the module until everything looks good. It will be helpful to use [existing Pixel configs](../config/device) as references.
 
-If you get a new Pixel device working with no apparent bugs, congrats! Please consider contributing official support for the device [by making a pull request](https://github.com/kdrag0n/adevtool/compare).
+If you get a new Pixel device working with no apparent bugs, congrats! Please consider contributing official support for the device [by making a pull request](https://github.com/GrapheneOS/adevtool/compare).
