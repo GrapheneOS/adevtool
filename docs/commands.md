@@ -8,10 +8,6 @@ All commands that accept stock system images, with the exception of comparison c
 
 Given a device codename, vendor name, stock system source, and LineageOS proprietary-files.txt list, extract proprietary files and generate build files.
 
-Speed comparison with LineageOS extract-utils:
-
-[![Speed comparison with LineageOS extract-utils](https://asciinema.org/a/eUMNIrKtBrln1CwE1zCUnJO8w.svg)](https://asciinema.org/a/eUMNIrKtBrln1CwE1zCUnJO8w)
-
 <details>
 <summary>Command-line help</summary>
 
