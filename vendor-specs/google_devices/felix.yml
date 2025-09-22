@@ -3803,7 +3803,7 @@ proprietary/vendor/apex: dir
 proprietary/vendor/apex/com.google.android.widevine-13130248.apex: b14e9475714b2f5b78fb8341efc473758cccb2185abfc53a604750d17506a7d2
 proprietary/vendor/apex/com.google.pixel.camera.hal.apex: 1dde2e880d100a8c958a45a42922a6d6cef1ffd786b45cc0750ee329e8a27952
 proprietary/vendor/apex/com.google.pixel.euicc.update.apex: 9159689b25f07450440b1a33f4e2f0f68a1f7239647ff53871347dcd7f14d29f
-proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: 278a027a9c87df2f498196fc1bd24dcc17cf2fc0c27057243e9fa79a7b2a170a
+proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: e2302974e1467ccf597fa9d4c3e985ae49a69d1e55298ad0122fd1a8b6ee2ad1
 proprietary/vendor/bin: dir
 proprietary/vendor/bin/aocd: 98a33da6e3de973f68e99a0783998ab432b8f6f91e760bf27231a40a555d0570
 proprietary/vendor/bin/aocxd: 96988bb3069ab36436d7538e3a49df72711024808e97bdaf1af3a395a2e19267

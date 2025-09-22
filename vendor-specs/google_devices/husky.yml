@@ -2703,7 +2703,7 @@ proprietary/vendor/apex/com.google.android.hardware.biometrics.fingerprint.apex:
 proprietary/vendor/apex/com.google.android.widevine-13130248.apex: 690513a869688bf1f2d4167c73c7b0e57c4a75e798318af0e79d9ae4c7d6ae55
 proprietary/vendor/apex/com.google.pixel.camera.hal.apex: d111e291f07d5bb3ab93534e6882e6157525ba654f2334a489cd9e4f8d930524
 proprietary/vendor/apex/com.google.pixel.euicc.update.apex: 464b8838e479b3eef9dc11a09bab3741d819d293f788e041f2e3ba3ba55cfcd9
-proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: 55058186fdbd8289fd6139e0907d7e37f65c62157e7a8462b34dc99725f3b534
+proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: 836f8c0fef285680dc9c260e4916250dcb0ae9b4657d815666cb87d09c57ecd8
 proprietary/vendor/bin: dir
 proprietary/vendor/bin/aocd: a43df4e322d4d841bd6049508ae4038fa7857666c67dc003f35a63dca2203026
 proprietary/vendor/bin/aocxd: 8bf26b993061331c3768adae16e5cbf46c50be38ef7234fddcabffd2044caeaa
