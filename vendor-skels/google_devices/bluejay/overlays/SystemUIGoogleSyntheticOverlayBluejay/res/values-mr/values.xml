@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">अधिक जाणून घ्या</string>
+    <string name="battery_management_action">चार्ज सायकलची संख्या पहा</string>
+    <string name="battery_replacement_early_notify_des">तुमची बॅटरी ३७५ चार्ज सायकलवर आहे. बॅटरी ओव्हरहीटिंगच्या संभाव्य समस्येमुळे, तुमची बॅटरी ४०० चार्ज सायकलवर पोहोचते, तेव्हा बॅटरी क्षमता आणि चार्जिंग परफॉर्मन्स कमी होतो व बॅटरी बदलण्याची शिफारस केली जाते. सपोर्टशी संबंधित पर्याय उपलब्ध आहेत, अधिक माहितीसाठी &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ला भेट द्या.</string>
+    <string name="battery_replacement_notify_des">बॅटरी ओव्हरहीटिंगच्या संभाव्य समस्येमुळे, बॅटरी क्षमता आणि चार्जिंग परफॉर्मन्स कमी झाला आहे व बॅटरी बदलण्याची शिफारस केली आहे. सपोर्टशी संबंधित पर्याय उपलब्ध आहेत, अधिक माहितीसाठी &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ला भेट द्या.</string>
+    <string name="battery_replacement_notify_title">बॅटरी बदलण्याची शिफारस केली आहे</string>
+</resources>

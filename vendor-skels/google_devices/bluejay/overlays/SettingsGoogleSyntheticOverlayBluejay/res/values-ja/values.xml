@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">バッテリーの充電サイクルが 375 回に達しました。バッテリーが過熱する可能性があるため、バッテリーの充電サイクルが 400 回に達すると、バッテリー容量と充電性能が低下します。バッテリーの交換をおすすめします。サポート オプションをご利用いただけます。詳しくは &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; をご覧ください。</string>
+    <string name="battery_tip_replacement_summary">バッテリーが過熱する可能性があるため、バッテリー容量と充電性能が低下しています。バッテリーの交換をおすすめします。サポート オプションをご利用いただけます。詳しくは &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; をご覧ください。</string>
+    <string name="charge_cycle_count">充電サイクル回数</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.android.settings.SettingsGoogleSyntheticOverlayBluejay">
+    <application xmlns:android="http://schemas.android.com/apk/res/android" android:hasCode="false"/>
+    <overlay xmlns:android="http://schemas.android.com/apk/res/android" android:isStatic="true" android:priority="0" android:targetPackage="com.android.settings"/>
+</manifest>

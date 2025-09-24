@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Tìm hiểu thêm</string>
+    <string name="battery_management_action">Xem số chu kỳ</string>
+    <string name="battery_replacement_early_notify_des">Pin của bạn đã đạt đến 375 chu kỳ sạc. Khi pin này đạt đến 400 chu kỳ sạc, dung lượng pin và hiệu suất sạc sẽ giảm do pin có thể bị quá nóng. Bạn nên thay pin. Hãy truy cập vào &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; để biết thêm thông tin về các phương thức hỗ trợ.</string>
+    <string name="battery_replacement_notify_des">Dung lượng pin và hiệu suất sạc sẽ giảm do pin có thể bị quá nóng. Bạn nên thay pin. Hãy truy cập vào &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; để biết thêm thông tin về các phương thức hỗ trợ.</string>
+    <string name="battery_replacement_notify_title">Nên thay pin</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">"La bateria ha arribat als 375 cicles de càrrega. A causa d'un possible problema de sobreescalfament, quan la bateria arribi als 400 cicles de càrrega, la capacitat de la bateria i el rendiment de la càrrega es reduiran i es recomanarà substituir la bateria. Hi ha opcions d'assistència disponibles. Visita &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; per obtenir més informació."</string>
+    <string name="battery_tip_replacement_summary">"A causa d'un possible problema de sobreescalfament, la capacitat de la bateria i el rendiment de la càrrega s'han reduït; es recomana substituir la bateria. Hi ha opcions d'assistència disponibles. Visita &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; per obtenir més informació."</string>
+    <string name="charge_cycle_count">Nombre de cicles de càrrega</string>
+</resources>

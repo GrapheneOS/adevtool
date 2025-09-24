@@ -645,6 +645,7 @@ PRODUCT_PACKAGES += \
     SettingsGoogle__bluejay__auto_generated_rro_vendor \
     SettingsGoogleBluejayOverlay \
     SettingsGoogleSyntheticOverlay \
+    SettingsGoogleSyntheticOverlayBluejay \
     SettingsIntelligenceGoogleSyntheticOverlay \
     SettingsOverlayG1AZG \
     SettingsOverlayGB17L \
@@ -661,6 +662,7 @@ PRODUCT_PACKAGES += \
     SystemUIGoogle__bluejay__auto_generated_rro_product \
     SystemUIGoogle__bluejay__auto_generated_rro_vendor \
     SystemUIGoogleSyntheticOverlay \
+    SystemUIGoogleSyntheticOverlayBluejay \
     SystemUIGXOverlay \
     TeleService__bluejay__auto_generated_rro_product \
     TeleService__bluejay__auto_generated_rro_vendor \

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Más información</string>
+    <string name="battery_management_action">Ver número de ciclos</string>
+    <string name="battery_replacement_early_notify_des">Tu batería ha completado 375 ciclos de carga. Para evitar un posible sobrecalentamiento de la batería, cuando la batería alcance los 400 ciclos de carga, la capacidad de la batería y el rendimiento de la carga se reducirán, por lo que se recomienda sustituir la batería. Hay opciones de asistencia disponibles. Consulta &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para obtener más información.</string>
+    <string name="battery_replacement_notify_des">Para evitar un posible sobrecalentamiento de la batería, la capacidad de la batería y el rendimiento de la carga se han reducido, por lo que se recomienda sustituir la batería. Hay opciones de asistencia disponibles. Consulta &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para obtener más información.</string>
+    <string name="battery_replacement_notify_title">Sustitución de la batería recomendada</string>
+</resources>

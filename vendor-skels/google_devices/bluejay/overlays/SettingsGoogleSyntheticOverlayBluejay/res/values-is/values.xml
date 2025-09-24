@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Rafhlaðan þín hefur náð 375 endurhleðslum. Vegna hættu á að rafhlaðan ofhitni verður dregið úr rýmd hennar og hleðsluafköstum þegar hún hefur verið endurhlaðin 400 sinnum. Mælt er með því að skipta um rafhlöðu. Aðstoð stendur til boða, sjá &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; varðandi frekari upplýsingar.</string>
+    <string name="battery_tip_replacement_summary">Vegna hættu á að rafhlaðan ofhitni hefur verið dregið úr rýmd hennar og hleðsluafköstum og mælt er með því að skipta um rafhlöðu. Aðstoð stendur til boða, sjá &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; varðandi frekari upplýsingar.</string>
+    <string name="charge_cycle_count">Fjöldi endurhleðslna</string>
+</resources>

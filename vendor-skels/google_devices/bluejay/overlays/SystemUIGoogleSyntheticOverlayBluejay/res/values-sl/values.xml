@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Več o tem</string>
+    <string name="battery_management_action">Ogled števila ciklov</string>
+    <string name="battery_replacement_early_notify_des">Baterija je dosegla 375 polnilnih ciklov. Ko bo baterija dosegla 400 polnilnih ciklov, se bosta zaradi preprečevanja morebitne težave s pregrevanjem baterije zmogljivost baterije in učinkovitost polnjenja zmanjšali, zato je priporočena zamenjava baterije. Na voljo so možnosti podpore. Za več informacij obiščite &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Zaradi preprečevanja morebitne težave s pregrevanjem baterije sta zmogljivost baterije in učinkovitost polnjenja zmanjšani, zato je priporočena zamenjava baterije. Na voljo so možnosti podpore. Za več informacij obiščite &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Priporočena je zamenjava baterije</string>
+</resources>

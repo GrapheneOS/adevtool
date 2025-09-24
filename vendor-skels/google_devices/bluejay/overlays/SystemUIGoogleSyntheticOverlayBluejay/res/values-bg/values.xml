@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Научете повече</string>
+    <string name="battery_management_action">Преглед на броя цикли</string>
+    <string name="battery_replacement_early_notify_des">Батерията ви е на 375 цикъла на зареждане. Когато тя достигне 400 цикъла, поради потенциален проблем с прегряването ѝ капацитетът и ефективността на зареждане ще бъдат намалени и се препоръчва подмяната ѝ. Налице са опции за поддръжка. За повече информация посетете &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Поради потенциален проблем с прегряване на батерията капацитетът ѝ и ефективността на зареждането са намалени. Препоръчва се подмяна на батерията. Налице са опции за поддръжка. За повече информация посетете &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Препоръчва се подмяна на батерията</string>
+</resources>

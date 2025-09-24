@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Bateriak 375 karga-ziklo izan ditu. Bateria gehiegi berotzeagatiko arazoak egongo direnez agian, 400 karga-ziklotara heltzen denean bateriaren ahalmena eta kargatzeko prozesuaren errendimendua txikiagotuko dira, eta bateria aldatzea gomendatzen da. Laguntza-aukerak daude. Informazio gehiago lortzeko, joan &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; helbidera.</string>
+    <string name="battery_tip_replacement_summary">Bateria gehiegi berotzeagatiko arazoak egongo direnez agian, bateriaren ahalmena eta kargatzeko prozesuaren errendimendua txikiagotzen dira, eta bateria aldatzea gomendatzen da. Laguntza-aukerak daude. Informazio gehiago lortzeko, joan &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; helbidera.</string>
+    <string name="charge_cycle_count">Karga-ziklo kopurua</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Mëso më shumë</string>
+    <string name="battery_management_action">Shiko numrin e cikleve</string>
+    <string name="battery_replacement_early_notify_des">Bateria jote ka kryer 375 cikle karikimi. Për shkak të një problemi të mundshëm në lidhje me mbinxehjen e baterisë, kur bateria të arrijë 400 cikle karikimi, kapaciteti i baterisë dhe performanca e karikimit do të reduktohen dhe rekomandohet zëvendësimi i baterisë. Ofrohen opsione për mbështetjen. Vizito &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; për më shumë informacione.</string>
+    <string name="battery_replacement_notify_des">Për shkak të një problemi të mundshëm në lidhje me mbinxehjen e baterisë, kapaciteti i baterisë dhe performanca e karikimit janë reduktuar dhe rekomandohet zëvendësimi i baterisë. Ofrohen opsione për mbështetjen. Vizito &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; për më shumë informacione.</string>
+    <string name="battery_replacement_notify_title">Rekomandohet zëvendësimi i baterisë</string>
+</resources>

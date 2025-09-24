@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Bateria osiągnęła 375 cykli ładowania. Po osiągnięciu 400 cykli jej pojemność i wydajność ładowania zostaną ograniczone ze względu na potencjalny problem z przegrzewaniem się. Zalecamy wówczas wymianę baterii. Dostępne są opcje pomocy. Więcej informacji znajdziesz na stronie &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_summary">Ze względu na potencjalny problem z przegrzewaniem się baterii jej pojemność i wydajność ładowania zostały ograniczone. Zalecamy wymianę baterii. Dostępne są opcje pomocy. Więcej informacji znajdziesz na stronie &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="charge_cycle_count">Liczba cykli ładowania</string>
+</resources>

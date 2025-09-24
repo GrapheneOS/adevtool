@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">შეიტყვეთ მეტი</string>
+    <string name="battery_management_action">ციკლების რაოდენობის ნახვა</string>
+    <string name="battery_replacement_early_notify_des">თქვენი ბატარეა დამუხტვის 375-ე ციკლზეა. ბატარეის გადახურების პოტენციური პრობლემის გამო, როდესაც თქვენი ბატარეა დამუხტვის მე-400 ციკლს მიაღწევს, შემცირდება ბატარეის ტევადობა და დატენის ეფექტურობა, შესაბამისად, რეკომენდებულია ბატარეის გამოცვლა. მხარდაჭერის ვარიანტებზე დამატებითი ინფორმაცია ხელმისაწვდომია აქ: &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">ბატარეის გადახურების პოტენციური პრობლემის გამო მცირდება ბატარეის ტევადობა და დატენის ეფექტურობა, შესაბამისად, რეკომენდებულია ბატარეის გამოცვლა. მხარდაჭერის ვარიანტებზე დამატებითი ინფორმაცია ხელმისაწვდომია აქ: &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">რეკომენდებულია ბატარეის გამოცვლა</string>
+</resources>

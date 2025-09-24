@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Ketahui lebih lanjut</string>
+    <string name="battery_management_action">Lihat kiraan kitaran</string>
+    <string name="battery_replacement_early_notify_des">Bateri anda telah melalui 375 kitaran pengecasan. Oleh sebab kemungkinan masalah bateri menjadi terlalu panas, apabila bateri anda mencapai 400 kitaran pengecasan, kapasiti bateri dan prestasi pengecasan akan dikurangkan, dan penggantian bateri akan disyorkan. Pilihan sokongan tersedia, lawati &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; untuk mendapatkan maklumat lanjut.</string>
+    <string name="battery_replacement_notify_des">Oleh sebab kemungkinan masalah bateri menjadi terlalu panas, kapasiti bateri dan prestasi pengecasan dikurangkan, dan penggantian bateri akan disyorkan. Pilihan sokongan tersedia, lawati &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; untuk mendapatkan maklumat lanjut.</string>
+    <string name="battery_replacement_notify_title">Penggantian bateri disyorkan</string>
+</resources>

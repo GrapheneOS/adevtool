@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Bateria a ajuns la 375 de cicluri de încărcare. Din cauza unei posibile probleme de supraîncălzire a bateriei, când bateria atinge 400 de cicluri de încărcare, capacitatea bateriei și performanța de încărcare se vor reduce și se recomandă înlocuirea bateriei. Sunt disponibile opțiuni de asistență. Accesează &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; pentru mai multe informații.</string>
+    <string name="battery_tip_replacement_summary">Din cauza unei posibile probleme de supraîncălzire a bateriei, capacitatea bateriei și performanța de încărcare sunt reduse și se recomandă înlocuirea bateriei. Sunt disponibile opțiuni de asistență. Accesează &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; pentru mai multe informații.</string>
+    <string name="charge_cycle_count">Numărul de cicluri de încărcare</string>
+</resources>

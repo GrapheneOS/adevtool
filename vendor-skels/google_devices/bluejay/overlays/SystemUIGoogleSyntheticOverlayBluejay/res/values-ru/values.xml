@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Подробнее</string>
+    <string name="battery_management_action">Посмотреть число циклов</string>
+    <string name="battery_replacement_early_notify_des">Батарея прошла 375 циклов зарядки. Когда число циклов достигнет 400, она может начать перегреваться, поэтому ее емкость и эффективность зарядки будут снижены. Рекомендуем заменить батарею. Чтобы узнать больше, перейдите по ссылке &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Емкость батареи и эффективность зарядки снижены из-за возможной проблемы с перегревом. Рекомендуем заменить батарею. Чтобы узнать больше, перейдите по ссылке &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Рекомендуем заменить батарею</string>
+</resources>

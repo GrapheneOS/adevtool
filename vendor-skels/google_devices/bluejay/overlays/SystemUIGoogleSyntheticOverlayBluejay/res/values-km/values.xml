@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">ស្វែងយល់បន្ថែម</string>
+    <string name="battery_management_action">មើលចំនួនវដ្ដ</string>
+    <string name="battery_replacement_early_notify_des">ថ្មរបស់អ្នកឈានដល់វដ្ដសាកថ្ម 375 វដ្ដហើយ។ ដោយសារបញ្ហាឡើងកម្ដៅថ្មខ្លាំងដែលអាចកើតឡើង នៅពេលថ្មរបស់អ្នកឈានដល់វដ្ដសាកថ្ម 400 វដ្ដ កាប៉ាស៊ីតេបន្ទុករបស់ថ្ម និងប្រតិបត្តិការ​សាកថ្មនឹងថយចុះ ហើយការប្ដូរថ្មត្រូវបានណែនាំ។ អាចប្រើជម្រើសជំនួយបាន សូមចូលទៅកាន់ &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ដើម្បីទទួលបានព័ត៌មានបន្ថែម។</string>
+    <string name="battery_replacement_notify_des">ដោយសារបញ្ហាឡើងកម្ដៅថ្មខ្លាំងដែលអាចកើតឡើង កាប៉ាស៊ីតេបន្ទុករបស់ថ្ម និងប្រតិបត្តិការ​សាកថ្មនឹងថយចុះ ហើយការប្ដូរថ្មត្រូវបានណែនាំ។ អាចប្រើជម្រើសជំនួយបាន សូមចូលទៅកាន់ &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ដើម្បីទទួលបានព័ត៌មានបន្ថែម។</string>
+    <string name="battery_replacement_notify_title">ការប្ដូរថ្មត្រូវបានណែនាំ</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Даведацца больш</string>
+    <string name="battery_management_action">Паглядзець колькасць цыклаў</string>
+    <string name="battery_replacement_early_notify_des">На акумулятары адбываецца 375 цыкл зарадкі. Калі колькасць цыклаў зарадкі дасягне 400, яго ёмістасць і прадукцыйнасць зарадкі знізяцца – для ўстаранення патэнцыяльнай праблемы перагрэву акумулятара. Рэкамендуем замяніць акумулятар. Вам даступныя пэўныя варыянты падтрымкі – дадатковую інфармацыю глядзіце на старонцы &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Ёмістасць і прадукцыйнасць зарадкі зніжаны – для ўстаранення патэнцыяльнай праблемы перагрэву акумулятара. Рэкамендуем замяніць акумулятар. Вам даступныя пэўныя варыянты падтрымкі – дадатковую інфармацыю глядзіце на старонцы &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Рэкамендуецца замяніць акумулятар</string>
+</resources>

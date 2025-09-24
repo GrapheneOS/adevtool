@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">瞭解詳情</string>
+    <string name="battery_management_action">查看週期數</string>
+    <string name="battery_replacement_early_notify_des">電池充電週期已達 375 次。電池可能有過熱的問題，因此充電週期達 400 次時，容量和充電效能會降低，建議更換電池。歡迎前往 &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; 進一步瞭解可用的支援選項。</string>
+    <string name="battery_replacement_notify_des">電池可能有過熱問題，容量和充電效能已降低，建議更換電池。歡迎前往 &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; 進一步瞭解可用的支援選項。</string>
+    <string name="battery_replacement_notify_title">建議更換電池</string>
+</resources>

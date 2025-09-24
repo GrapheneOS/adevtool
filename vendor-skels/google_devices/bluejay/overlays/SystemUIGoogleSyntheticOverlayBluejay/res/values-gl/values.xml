@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Máis información</string>
+    <string name="battery_management_action">Ver número de ciclos</string>
+    <string name="battery_replacement_early_notify_des">A túa batería leva 375 ciclos de carga. Debido a un posible problema de sobrequecemento da batería, cando esta chegue aos 400 ciclos, a súa capacidade e o rendemento de carga veranse reducidos, polo que se recomenda substituíla. Dispós de opcións de asistencia. Tes máis información en &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Debido a un posible problema de sobrequecemento da batería, esta ten reducidos a capacidade e o rendemento de carga, polo que se recomenda substituíla. Dispós de opcións de asistencia. Tes máis información en &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Recoméndase substituír a batería</string>
+</resources>

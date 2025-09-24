@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">మరింత తెలుసుకోండి</string>
+    <string name="battery_management_action">సైకిల్ కౌంట్‌ను చూడండి</string>
+    <string name="battery_replacement_early_notify_des">మీ బ్యాటరీ 375 ఛార్జ్ సైకిల్స్ వద్ద ఉంది. బ్యాటరీ ఓవర్‌హీట్ అయ్యే అవకాశమున్నందున, మీ బ్యాటరీ 400 ఛార్జ్ సైకిల్స్‌ను చేరుకున్నప్పుడు, బ్యాటరీ సామర్థ్యం, ఛార్జింగ్ రేట్ తగ్గించబడతాయి, ఇంకా బ్యాటరీని రీప్లెస్ చేయడం సిఫార్సు చేయబడింది. సపోర్ట్ ఆప్షన్‌లు అందుబాటులో ఉన్నాయి, మరింత సమాచారం కోసం &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; కు వెళ్లండి.</string>
+    <string name="battery_replacement_notify_des">బ్యాటరీ ఓవర్‌హీట్ అయ్యే అవకాశమున్నందున, బ్యాటరీ సామర్థ్యం, ఛార్జింగ్ రేట్ తగ్గించబడ్డాయి, ఇంకా బ్యాటరీని రీప్లెస్ చేయడం సిఫార్సు చేయబడింది. సపోర్ట్ ఆప్షన్‌లు అందుబాటులో ఉన్నాయి, మరింత సమాచారం కోసం &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; కు వెళ్లండి.</string>
+    <string name="battery_replacement_notify_title">బ్యాటరీని రీప్లేస్ చేయమని సిఫార్సు చేయబడింది</string>
+</resources>

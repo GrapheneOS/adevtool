@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">ባትሪዎ 375 የኃይል መሙያ ዑደቶች ላይ ደርሷል። የባትሪ ግለት ችግር ሊሆን በሚችል ምክንያት ባትሪዎ 400 የኃይል መሙያ ዑደቶች ላይ ሲደርስ የባትሪ አቅም እና የኃይል መሙላት አፈጻጸም ይቀንሳል እና ባትሪን መተካት ይመከራል። የድጋፍ አማራጮች ይገኛሉ፣ ተጨማሪ መረጃ ለማግኘት &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ላይ ይጎብኙ።</string>
+    <string name="battery_tip_replacement_summary">የባትሪ ግለት ችግር ሊሆን በሚችል ምክንያት የባትሪ አቅም እና የኃይል መሙላት አፈጻጸም ይቀንሳል እና ባትሪን መተካት ይመከራል። የድጋፍ አማራጮች ይገኛሉ፣ ተጨማሪ መረጃ ለማግኘት &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ላይ ይጎብኙ።</string>
+    <string name="charge_cycle_count">የኃይል መሙያ ዑደት ቁጥር</string>
+</resources>

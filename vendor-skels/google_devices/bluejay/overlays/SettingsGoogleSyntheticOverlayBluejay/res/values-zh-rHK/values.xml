@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">電池充電週期已達 375 次。由於電池可能有過熱問題，當充電週期達 400 次時，電池容量和充電效能均會降低，因此我們建議你更換電池。你可選擇其他支援選項，詳情請瀏覽 &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;。</string>
+    <string name="battery_tip_replacement_summary">由於電池可能有過熱問題，導致電池容量和充電效能均會降低，因此我們建議你更換電池。你可選擇其他支援選項，詳情請瀏覽 &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;。</string>
+    <string name="charge_cycle_count">充電週期數</string>
+</resources>

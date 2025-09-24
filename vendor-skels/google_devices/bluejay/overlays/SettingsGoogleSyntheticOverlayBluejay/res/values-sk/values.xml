@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Vaša batéria dosiahla 375 nabíjacích cyklov. Po dosiahnutí 400 nabíjacích cyklov sa jej kapacita a rýchlosť nabíjania v dôsledku možného prehrievania znížia. V tom prípade sa odporúča jej výmena. K dispozícii sú možnosti podpory. Viac sa dozviete na &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_summary">V dôsledku možného prehrievania batérie sa jej kapacita a rýchlosť nabíjania znížia. V tom prípade sa odporúča jej výmena. K dispozícii sú možnosti podpory. Viac sa dozviete na &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="charge_cycle_count">Počet nabíjacích cyklov</string>
+</resources>

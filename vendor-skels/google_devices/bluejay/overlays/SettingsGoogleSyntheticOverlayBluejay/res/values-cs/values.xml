@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Vaše baterie dosáhla 375 nabíjecích cyklů. Vzhledem k možnému problému s přehříváním se po dosažení 400 nabíjecích cyklů sníží její kapacita a nabíjecí výkon a doporučuje se ji vyměnit. K dispozici jsou možnosti podpory, další informace najdete na stránce &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_summary">Kvůli možnému problému s přehříváním baterie se sníží její kapacita a nabíjecí výkon a doporučuje se ji vyměnit. K dispozici jsou možnosti podpory, další informace najdete na stránce &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="charge_cycle_count">Počet nabíjecích cyklů</string>
+</resources>

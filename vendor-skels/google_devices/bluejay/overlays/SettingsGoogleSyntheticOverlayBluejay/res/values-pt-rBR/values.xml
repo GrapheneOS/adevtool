@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Sua bateria atingiu 375 ciclos de carga. Devido a um possível problema de superaquecimento, a capacidade e o desempenho de carregamento serão reduzidos quando ela atingir 400 ciclos de carga. Recomendamos trocar a bateria. Há opções de suporte disponíveis. Acesse &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para saber mais.</string>
+    <string name="battery_tip_replacement_summary">Devido a um possível problema de superaquecimento, a capacidade e o desempenho de carregamento serão reduzidos. Recomendamos trocar a bateria. Há opções de suporte disponíveis. Acesse &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para saber mais.</string>
+    <string name="charge_cycle_count">Contagem de ciclos de carga</string>
+</resources>

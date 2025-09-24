@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Pasiekti 375 akumuliatoriaus įkrovimo ciklai. Kai pasiekiama 400 akumuliatoriaus įkrovimo ciklų, akumuliatoriaus talpa ir įkrovimo našumas sumažėja, todėl dėl galimo akumuliatoriaus perkaitinimo rekomenduojama pakeisti akumuliatorių. Yra palaikymo parinkčių. Jei reikia daugiau informacijos, apsilankykite adresu &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_summary">Dėl galimo akumuliatoriaus perkaitimo sumažėjo akumuliatoriaus talpa ir įkrovimo našumas, todėl rekomenduojama pakeisti akumuliatorių. Yra palaikymo parinkčių. Jei reikia daugiau informacijos, apsilankykite adresu &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="charge_cycle_count">Įkrovimo ciklų skaičius</string>
+</resources>

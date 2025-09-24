@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Meer informatie</string>
+    <string name="battery_management_action">Aantal cycli bekijken</string>
+    <string name="battery_replacement_early_notify_des">Je batterij heeft 375 laadcycli gehad. Als je batterij 400 laadcycli heeft bereikt, worden de batterijcapaciteit en laadprestaties verminderd en wordt batterijvervanging aanbevolen vanwege een mogelijk probleem met oververhitting van de batterij. Er zijn supportopties beschikbaar. Ga naar &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; voor meer informatie.</string>
+    <string name="battery_replacement_notify_des">Vanwege een mogelijk probleem met oververhitting van de batterij zijn de batterijcapaciteit en laadprestaties verminderd en wordt batterijvervanging aanbevolen. Er zijn supportopties beschikbaar. Ga naar &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; voor meer informatie.</string>
+    <string name="battery_replacement_notify_title">Batterijvervanging aanbevolen</string>
+</resources>

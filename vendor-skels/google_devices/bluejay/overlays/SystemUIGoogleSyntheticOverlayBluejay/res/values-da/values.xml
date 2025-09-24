@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Få flere oplysninger</string>
+    <string name="battery_management_action">Se antallet af cyklusser</string>
+    <string name="battery_replacement_early_notify_des">Dit batteri har gennemgået 375 opladningscyklusser. På grund af potentiel overophedning af batteriet reduceres batterikapaciteten og opladningseffektiviteten, når dit batteri har nået 400 opladningscyklusser, og det anbefales derfor, at du udskifter batteriet. Der er flere tilgængelige supportmuligheder. Gå til &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; for at få flere oplysninger.</string>
+    <string name="battery_replacement_notify_des">På grund af potentiel overophedning af batteriet reduceres batterikapaciteten og opladningseffektiviteten, og det anbefales derfor, at du udskifter batteriet. Der er flere tilgængelige supportmuligheder. Gå til &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; for at få flere oplysninger.</string>
+    <string name="battery_replacement_notify_title">Udskiftning af batteri anbefales</string>
+</resources>

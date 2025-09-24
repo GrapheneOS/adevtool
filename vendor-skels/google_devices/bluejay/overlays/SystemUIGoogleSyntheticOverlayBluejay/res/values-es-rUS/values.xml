@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Más información</string>
+    <string name="battery_management_action">Ver recuento de ciclos</string>
+    <string name="battery_replacement_early_notify_des">La batería tiene 375 ciclos de carga. Debido a un posible problema de sobrecalentamiento, cuando alcance los 400 ciclos de carga, la capacidad de la batería y el rendimiento de carga se reducirán. Además, recomendamos su reemplazo. Visita &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para obtener más información y conocer las opciones de asistencia disponibles.</string>
+    <string name="battery_replacement_notify_des">Debido a un posible problema de sobrecalentamiento, se redujeron la capacidad de la batería y el rendimiento de carga. Además, recomendamos su reemplazo. Visita &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para obtener más información y conocer las opciones de asistencia disponibles.</string>
+    <string name="battery_replacement_notify_title">Se recomienda reemplazar la batería</string>
+</resources>

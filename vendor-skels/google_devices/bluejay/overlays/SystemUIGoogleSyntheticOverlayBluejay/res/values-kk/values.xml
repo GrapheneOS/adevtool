@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Толық ақпарат</string>
+    <string name="battery_management_action">Цикл санын көру</string>
+    <string name="battery_replacement_early_notify_des">Батарея 375 заряд цикліне жетті. Батареяның қызып кетуі мүмкін болғандықтан, батарея 400 заряд цикліне жеткен кезде, батарея сыйымдылығы мен зарядтау өнімділігі азайтылады. Бұл жағдайда батареяны ауыстырған жөн. Қолдау опциялары қолжетімді. Қосымша ақпарат алу үшін &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; бетіне өтіңіз.</string>
+    <string name="battery_replacement_notify_des">Батареяның қызып кетуі мүмкін болғандықтан, батарея сыйымдылығы мен зарядтау өнімділігі азайтылады. Бұл жағдайда батареяны ауыстырған жөн. Қолдау опциялары қолжетімді. Қосымша ақпарат алу үшін &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; бетіне өтіңіз.</string>
+    <string name="battery_replacement_notify_title">Батареяны ауыстырған дұрыс</string>
+</resources>

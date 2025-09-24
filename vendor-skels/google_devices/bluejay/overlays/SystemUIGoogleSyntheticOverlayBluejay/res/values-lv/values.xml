@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Uzzināt vairāk</string>
+    <string name="battery_management_action">Skatīt ciklu skaitu</string>
+    <string name="battery_replacement_early_notify_des">Jūsu akumulatoram ir veikti 375 uzlādes cikli. Iespējamas akumulatora pārkaršanas problēmas dēļ, kad akumulators sasniegs 400 uzlādes ciklus, akumulatora ietilpība un uzlādes veiktspēja samazināsies un būs ieteicams nomainīt akumulatoru. Ir pieejamas atbalsta iespējas. Lai iegūtu plašāku informāciju, apmeklējiet vietni &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Iespējamas akumulatora pārkaršanas problēmas dēļ akumulatora ietilpība un uzlādes veiktspēja ir samazinājusies un ir ieteicams nomainīt akumulatoru. Ir pieejamas atbalsta iespējas. Lai iegūtu plašāku informāciju, apmeklējiet vietni &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Ieteicams nomainīt akumulatoru</string>
+</resources>

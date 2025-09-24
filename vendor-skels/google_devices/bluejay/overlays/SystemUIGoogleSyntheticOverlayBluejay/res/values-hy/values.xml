@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Իմանալ ավելին</string>
+    <string name="battery_management_action">Տեսնել ցիկլերի քանակը</string>
+    <string name="battery_replacement_early_notify_des">Ձեր մարտկոցը լիցքավորման 375 ցիկլ է անցել։ Երբ ցիկլերի քանակը հասնի 400-ի, մարտկոցը կարող է սկսել գերտաքանալ, ուստի դրա տարողունակությունը և լիցքավորման արդյունավետությունը կնվազեցվեն։ Խորհուրդ ենք տալիս փոխարինել մարտկոցը։ Կան աջակցման տարբերակներ։ Լրացուցիչ տեղեկությունների համար անցեք &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; էջ։</string>
+    <string name="battery_replacement_notify_des">Մարտկոցի տարողունակությունը և լիցքավորման արդյունավետությունը նվազեցվել են գերտաքացման հնարավոր խնդրի պատճառով։ Խորհուրդ ենք տալիս փոխարինել մարտկոցը։ Կան աջակցման տարբերակներ։ Լրացուցիչ տեղեկությունների համար անցեք &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; էջ։</string>
+    <string name="battery_replacement_notify_title">Խորհուրդ է տրվում փոխարինել մարտկոցը</string>
+</resources>

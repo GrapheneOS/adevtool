@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">ပိုလေ့လာရန်</string>
+    <string name="battery_management_action">အားသွင်းအကြိမ်ရေ ကြည့်ရန်</string>
+    <string name="battery_replacement_early_notify_des">သင်၏ဘက်ထရီသည် အားသွင်းခြင်းသံသရာ ၃၇၅ သို့ ရောက်နေပါပြီ။ ဖြစ်နိုင်ချေရှိသော ဘက်ထရီအပူလွန်ကဲမှုပြဿနာကြောင့် သင်၏ဘက်ထရီသည် အားသွင်းခြင်းသံသရာ ၄၀၀ သို့ ရောက်သောအခါ ဘက်ထရီသိုလှောင်နိုင်မှု ပမာဏနှင့် အားသွင်းနှုန်း လျော့ကျသွားမည်ဖြစ်ပြီး ဘက်ထရီလဲရန် အကြံပြုပါသည်။ ပံ့ပိုးကူညီမှုရွေးစရာများ ရနိုင်သည်။ နောက်ထပ်အချက်အလက်အတွက် &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; သို့ ဝင်ကြည့်ပါ။</string>
+    <string name="battery_replacement_notify_des">ဖြစ်နိုင်ချေရှိသော ဘက်ထရီအပူလွန်ကဲမှုပြဿနာကြောင့် ဘက်ထရီသိုလှောင်နိုင်မှု ပမာဏနှင့် အားသွင်းနှုန်း လျော့ကျသွားပြီး ဘက်ထရီလဲရန် အကြံပြုပါသည်။ ပံ့ပိုးကူညီမှုရွေးစရာများ ရနိုင်သည်။ နောက်ထပ်အချက်အလက်အတွက် &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; သို့ ဝင်ကြည့်ပါ။</string>
+    <string name="battery_replacement_notify_title">ဘက်ထရီလဲရန် အကြံပြုထားသည်</string>
+</resources>

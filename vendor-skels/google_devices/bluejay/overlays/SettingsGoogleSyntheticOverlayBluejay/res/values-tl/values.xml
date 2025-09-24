@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Umabot na sa 375 cycle ng pag-charge ang baterya mo. Dahil sa potensyal na isyu sa pag-overheat ng baterya, kapag umabot na sa 400 cycle ng pag-charge ang baterya mo, mababawasan ang kapasidad ng baterya at performance ng pag-charge at inirerekomenda ang pagpapalit ng baterya. Available ang mga opsyon sa suporta, bumisita sa &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para sa higit pang impormasyon.</string>
+    <string name="battery_tip_replacement_summary">Dahil sa potensyal na isyu sa pag-overheat ng baterya, nabawasan ang kapasidad ng baterya at performance ng pag-charge, at inirerekomenda ang pagpapalit ng baterya. Available ang mga opsyon sa suporta, bumisita sa &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para sa higit pang impormasyon.</string>
+    <string name="charge_cycle_count">Bilang ng cycle ng pag-charge</string>
+</resources>

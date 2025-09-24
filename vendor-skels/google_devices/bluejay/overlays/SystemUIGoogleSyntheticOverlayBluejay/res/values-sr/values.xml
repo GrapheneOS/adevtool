@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Сазнајте више</string>
+    <string name="battery_management_action">Прикажи број циклуса</string>
+    <string name="battery_replacement_early_notify_des">Батерија је на 375 циклуса пуњења. Због потенцијалног проблема са прегревањем, када батерија достигне 400 циклуса пуњења, њен капацитет и учинак пуњења се смањују, па препоручујемо да је замените. Доступне су опције подршке. Више информација потражите на &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Због потенцијалног проблема са прегревањем, капацитет батерије и учинак пуњења су се смањили, па препоручујемо да је замените. Доступне су опције подршке. Више информација потражите на &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Препоручујемо замену батерије</string>
+</resources>

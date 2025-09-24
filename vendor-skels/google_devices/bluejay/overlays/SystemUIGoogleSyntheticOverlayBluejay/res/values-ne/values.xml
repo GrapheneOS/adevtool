@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">थप जान्नुहोस्</string>
+    <string name="battery_management_action">साइकल काउन्ट हेर्नुहोस्</string>
+    <string name="battery_replacement_early_notify_des">तपाईंको ब्याट्री हाल ३७५ औँ चार्ज साइकलमा चलिरहेको छ। तपाईंको ब्याट्रीको चार्ज साइकल ४०० पुगेपछि ब्याट्री धेरै तात्ने समस्या आउन सक्ने र ब्याट्रीको क्षमता र चार्जिङ पर्फर्मेन्स पनि घट्ने भएकाले तपाईंलाई ब्याट्री फेर्न सिफारिस गरिन्छ। ग्राहक सेवासम्बन्धी विकल्पहरू उपलब्ध छन्। थप जानकारी प्राप्त गर्न &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; मा जानुहोस्।</string>
+    <string name="battery_replacement_notify_des">ब्याट्री धेरै तात्ने समस्या आउन सक्ने र ब्याट्रीको क्षमता र चार्जिङ पर्फर्मेन्स पनि घट्ने भएकाले तपाईंलाई ब्याट्री फेर्न सिफारिस गरिन्छ। ग्राहक सेवासम्बन्धी विकल्पहरू उपलब्ध छन्। थप जानकारी प्राप्त गर्न &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; मा जानुहोस्।</string>
+    <string name="battery_replacement_notify_title">ब्याट्री बदल्न सिफारिस गरिएको छ</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">En savoir plus</string>
+    <string name="battery_management_action">Voir le nombre de cycles</string>
+    <string name="battery_replacement_early_notify_des">"Votre batterie a effectué 375 cycles de charge. En raison d'un risque de surchauffe de la batterie, lorsque votre batterie aura atteint 400 cycles de charge, sa capacité et ses performances de charge seront réduites, et nous vous recommandons de la remplacer. Des options d'assistance sont disponibles. Pour en savoir plus, consultez &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;."</string>
+    <string name="battery_replacement_notify_des">"En raison d'un problème potentiel de surchauffe de la batterie, sa capacité et ses performances de recharge sont réduites. Nous vous recommandons de la remplacer. Des options d'assistance sont disponibles. Pour en savoir plus, consultez &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;."</string>
+    <string name="battery_replacement_notify_title">Remplacement de la batterie recommandé</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Μάθετε περισσότερα</string>
+    <string name="battery_management_action">Εμφάνιση πλήθους κύκλων</string>
+    <string name="battery_replacement_early_notify_des">Η μπαταρία σας έχει 375 κύκλους φόρτισης. Λόγω πιθανού προβλήματος υπερθέρμανσης της μπαταρίας, όταν η μπαταρία συμπληρώσει 400 κύκλους φόρτισης, η χωρητικότητα μπαταρίας και η απόδοση φόρτισης θα μειωθούν και συνιστάται η αντικατάστασή της. Υπάρχουν διαθέσιμες επιλογές υποστήριξης. Επισκεφτείτε τη διεύθυνση &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; για περισσότερες πληροφορίες.</string>
+    <string name="battery_replacement_notify_des">Λόγω πιθανού προβλήματος υπερθέρμανσης της μπαταρίας, η χωρητικότητα μπαταρίας και η απόδοση φόρτισης θα μειωθούν και συνιστάται η αντικατάστασή της. Υπάρχουν διαθέσιμες επιλογές υποστήριξης. Επισκεφτείτε τη διεύθυνση &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; για περισσότερες πληροφορίες.</string>
+    <string name="battery_replacement_notify_title">Συνιστάται αντικατάσταση της μπαταρίας</string>
+</resources>

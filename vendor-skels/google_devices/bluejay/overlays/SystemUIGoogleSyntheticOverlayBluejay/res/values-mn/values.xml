@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Нэмэлт мэдээлэл авах</string>
+    <string name="battery_management_action">Мөчлөгийн тоог харах</string>
+    <string name="battery_replacement_early_notify_des">Таны батарей 375-р цэнэглэх мөчлөгт байна. Батарей хэт халж болзошгүй асуудлын улмаас таны батарей 400 цэнэглэх мөчлөгт хүрэх үед батарейн багтаамж, цэнэглэх явц багасах бөгөөд батарейг солихыг зөвлөдөг. Янз бүрийн аргаар тусламж авч болно. Нэмэлт мэдээлэл авах бол &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; URL-д зочилно уу.</string>
+    <string name="battery_replacement_notify_des">Батарей хэт халж болзошгүй асуудлын улмаас батарейн багтаамж, цэнэглэх явц багасах бөгөөд батарейг солихыг зөвлөдөг. Янз бүрийн аргаар тусламж авч болно. Нэмэлт мэдээлэл авах бол &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; URL-д зочилно уу.</string>
+    <string name="battery_replacement_notify_title">Батарейг солихыг зөвлөж байна</string>
+</resources>

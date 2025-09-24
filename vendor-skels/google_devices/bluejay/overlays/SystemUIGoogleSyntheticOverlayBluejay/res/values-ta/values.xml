@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">மேலும் அறிக</string>
+    <string name="battery_management_action">சுழற்சியின் எண்ணிக்கையைக் காட்டு</string>
+    <string name="battery_replacement_early_notify_des">உங்கள் பேட்டரி 375வது சார்ஜ் சைக்கிள்களில் உள்ளது. பேட்டரி அதிக சூடாகி சிக்கல் ஏற்படும் காரணத்தால் உங்கள் பேட்டரி 400 சார்ஜ் சைக்கிள்களை அடையும்போது பேட்டரி திறனும் சார்ஜிங் செயல்திறனும் குறையும், இதனால் பேட்டரியை மாற்றும்படி பரிந்துரைக்கப்படுகிறது. உதவி விருப்பங்கள் உள்ளன, கூடுதல் தகவல்களுக்கு &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; எனும் பக்கத்தைப் பாருங்கள்.</string>
+    <string name="battery_replacement_notify_des">பேட்டரி அதிக சூடாகி சிக்கல் ஏற்படும் காரணத்தால் பேட்டரி திறனும் சார்ஜிங் செயல்திறனும் குறையும், இதனால் பேட்டரியை மாற்றும்படி பரிந்துரைக்கப்படுகிறது. உதவி விருப்பங்கள் உள்ளன, கூடுதல் தகவல்களுக்கு &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; எனும் பக்கத்தைப் பாருங்கள்.</string>
+    <string name="battery_replacement_notify_title">பேட்டரியை மாற்றும்படி பரிந்துரைக்கப்படுகிறது</string>
+</resources>

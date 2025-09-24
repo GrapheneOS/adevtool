@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Pelajari lebih lanjut</string>
+    <string name="battery_management_action">Lihat jumlah siklus</string>
+    <string name="battery_replacement_early_notify_des">Baterai Anda telah melalui 375 siklus pengisian daya. Karena potensi masalah panas berlebih pada baterai, saat baterai mencapai 400 siklus pengisian daya, kapasitas baterai dan performa pengisian daya akan berkurang dan Anda sebaiknya mengganti baterai. Opsi dukungan tersedia, buka &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; untuk mengetahui informasi selengkapnya.</string>
+    <string name="battery_replacement_notify_des">Karena potensi masalah panas berlebih pada baterai, kapasitas baterai dan performa pengisian daya berkurang, dan Anda sebaiknya mengganti baterai. Opsi dukungan tersedia, buka &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; untuk mengetahui informasi selengkapnya.</string>
+    <string name="battery_replacement_notify_title">Disarankan mengganti baterai</string>
+</resources>

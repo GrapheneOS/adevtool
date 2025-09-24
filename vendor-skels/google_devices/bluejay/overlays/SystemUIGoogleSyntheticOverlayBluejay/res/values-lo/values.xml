@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">ສຶກສາເພີ່ມເຕີມ</string>
+    <string name="battery_management_action">ເບິ່ງຈຳນວນຮອບ</string>
+    <string name="battery_replacement_early_notify_des">ແບັດເຕີຣີຂອງທ່ານມີຮອບການສາກໄຟ 375 ຮອບ. ເນື່ອງຈາກບັນຫາຄວາມຮ້ອນເກີນຂອງແບັດເຕີຣີ, ເມື່ອແບັດເຕີຣີຂອງທ່ານຮອດ 400 ຮອບການສາກໄຟ, ຄວາມຈຸແບັດເຕີຣີ ແລະ ປະສິດທິພາບການສາກໄຟຈະຫຼຸດລົງ ແລະ ແນະນຳໃຫ້ປ່ຽນແບັດເຕີຣີໃໝ່. ມີຕົວເລືອກການສະໜັບສະໜູນໃຫ້, ເຂົ້າເບິ່ງ &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ສຳລັບຂໍ້ມູນເພີ່ມເຕີມ.</string>
+    <string name="battery_replacement_notify_des">ເນື່ອງຈາກບັນຫາຄວາມຮ້ອນເກີນຂອງແບັດເຕີຣີ, ຄວາມຈຸແບັດເຕີຣີ ແລະ ປະສິດທິພາບການສາກໄຟຫຼຸດລົງ ແລະ ແນະນຳໃຫ້ປ່ຽນແບັດເຕີຣີໃໝ່. ມີຕົວເລືອກການສະໜັບສະໜູນໃຫ້, ເຂົ້າເບິ່ງ &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ສຳລັບຂໍ້ມູນເພີ່ມເຕີມ.</string>
+    <string name="battery_replacement_notify_title">ແນະນຳໃຫ້ປ່ຽນແບັດເຕີຣີ</string>
+</resources>

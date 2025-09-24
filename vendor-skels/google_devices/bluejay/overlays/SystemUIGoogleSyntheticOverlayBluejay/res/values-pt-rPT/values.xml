@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Saber mais</string>
+    <string name="battery_management_action">Veja o número de ciclos</string>
+    <string name="battery_replacement_early_notify_des">A sua bateria tem 375 ciclos de carregamento. Devido a um potencial problema de sobreaquecimento da bateria, quando a bateria atingir 400 ciclos de carregamento, a capacidade da bateria e o desempenho de carregamento vão ser reduzidos e é recomendada a substituição da bateria. Existem opções de apoio técnico disponíveis. Visite &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para mais informações.</string>
+    <string name="battery_replacement_notify_des">Devido a um potencial problema de sobreaquecimento da bateria, a capacidade da bateria e o desempenho de carregamento estão reduzidos, e é recomendada a substituição da bateria. Existem opções de apoio técnico disponíveis. Visite &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para mais informações.</string>
+    <string name="battery_replacement_notify_title">Substituição da bateria recomendada</string>
+</resources>

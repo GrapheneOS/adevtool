@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">Lisateave</string>
+    <string name="battery_management_action">Vaadake tsüklite arvu</string>
+    <string name="battery_replacement_early_notify_des">Teie aku on läbinud 375 laadimistsüklit. Aku võimaliku ülekuumenemise tõttu väheneb pärast 400 laadimistsüklit aku mahtuvus ja laadimisvõimsus ning on soovitatav aku välja vahetada. Saadaval on toevalikud, lisateavet leiate saidilt &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_des">Aku võimaliku ülekuumenemise tõttu väheneb selle mahtuvus ja laadimisvõimsus ning on soovitatav aku välja vahetada. Saadaval on toevalikud, lisateavet leiate saidilt &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_replacement_notify_title">Soovitatav on akuvahetus</string>
+</resources>

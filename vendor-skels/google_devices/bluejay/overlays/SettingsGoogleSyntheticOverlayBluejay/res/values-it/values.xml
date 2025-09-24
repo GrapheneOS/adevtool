@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">La tua batteria ha raggiunto 375 cicli di ricarica. A causa di un potenziale problema di surriscaldamento della batteria, quando la batteria raggiunge i 400 cicli di ricarica, la capacità della batteria e le prestazioni della ricarica vengono ridotte ed è consigliata la sostituzione della batteria. Sono disponibili opzioni di assistenza. Per saperne di più, visita la pagina &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_summary">A causa di un potenziale problema di surriscaldamento della batteria, la capacità della batteria e le prestazioni della ricarica sono ridotte ed è consigliata la sostituzione della batteria. Sono disponibili opzioni di assistenza. Per saperne di più, visita la pagina &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="charge_cycle_count">Numero di cicli di ricarica</string>
+</resources>

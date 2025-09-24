@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">مزید جانیں</string>
+    <string name="battery_management_action">چارج سائیکل کی تعداد دیکھیں</string>
+    <string name="battery_replacement_early_notify_des">‏آپ کی بیٹری 375 چارج سائیکلز پر ہے۔ بیٹری کے اوورہیٹنگ کے ممکنہ مسئلے کی وجہ سے، جب آپ کی بیٹری 400 چارج سائیکلز تک پہنچ جائے گی تو بیٹری کی گنجائش اور چارجنگ پرفارمنس کم ہو جائے گی اور بیٹری کی تبدیلی کی تجویز کی جاتی ہے۔ سپورٹ کے اختیارات دستیاب ہیں، معلومات کے لیے &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ملاحظہ کریں۔</string>
+    <string name="battery_replacement_notify_des">‏بیٹری کے اوورہیٹنگ کے ممکنہ مسئلے کی وجہ سے، بیٹری کی گنجائش اور چارجنگ پرفارمنس کم ہو جاتی ہے اور بیٹری کی تبدیلی کی تجویز کی جاتی ہے۔ سپورٹ کے اختیارات دستیاب ہیں، معلومات کے لیے &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ملاحظہ کریں۔</string>
+    <string name="battery_replacement_notify_title">بیٹری کی تبدیلی کی تجویز کی گئی ہے</string>
+</resources>

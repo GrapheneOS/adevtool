@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_health_notify_learn_more">વધુ જાણો</string>
+    <string name="battery_management_action">સાઇકલની સંખ્યા જુઓ</string>
+    <string name="battery_replacement_early_notify_des">તમારી બૅટરી 375 ચાર્જ સાઇકલ પર છે. બૅટરી ઓવરહીટિંગની સંભવિત સમસ્યાને કારણે, જ્યારે તમારી બૅટરી 400 ચાર્જ સાઇકલ પર પહોંચે, ત્યારે બૅટરીની ક્ષમતા અને ચાર્જિંગનું પર્ફોર્મન્સ ઘટશે અને બૅટરી બદલવાનો સુઝાવ આપવામાં આવે છે. સપોર્ટના વિકલ્પો ઉપલબ્ધ છે, વધુ માહિતી માટે &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;ની મુલાકાત લો.</string>
+    <string name="battery_replacement_notify_des">બૅટરી ઓવરહીટિંગની સંભવિત સમસ્યાને કારણે, બૅટરીની ક્ષમતા અને ચાર્જિંગના પર્ફોર્મન્સમાં ઘટાડો થાય છે અને બૅટરી બદલવાનો સુઝાવ આપવામાં આવે છે. સપોર્ટના વિકલ્પો ઉપલબ્ધ છે, વધુ માહિતી માટે &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;ની મુલાકાત લો.</string>
+    <string name="battery_replacement_notify_title">બૅટરી બદલવાનો સુઝાવ આપવામાં આવે છે</string>
+</resources>

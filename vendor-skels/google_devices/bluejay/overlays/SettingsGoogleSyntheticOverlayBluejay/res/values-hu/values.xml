@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_tip_early_replacement_summary">Az akkumulátor elérte a 375. töltési ciklust. Az akkumulátor túlmelegedésének lehetséges problémája miatt, amikor az akkumulátor eléri a 400 töltési ciklust, az akkumulátor kapacitása és töltési teljesítménye csökken, ezért javasoljuk az akkumulátor cseréjét. Különböző támogatási lehetőségek állnak rendelkezésre. További információért látogasson el a &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; oldalra.</string>
+    <string name="battery_tip_replacement_summary">Az akkumulátor túlmelegedésének lehetséges problémája miatt csökkent az akkumulátor kapacitása és töltési teljesítménye, ezért javasoljuk a cseréjét. Különböző támogatási lehetőségek állnak rendelkezésre. További információért látogasson el a &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; oldalra.</string>
+    <string name="charge_cycle_count">A töltési ciklusok száma</string>
+</resources>
