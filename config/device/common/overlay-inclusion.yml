@@ -722,6 +722,7 @@ filters:
       - com.android.settings:array/when_to_start_screensaver_values_no_battery|*
       - com.android.settings:bool/config_adaptive_alert_vibration_enabled = true
       - com.android.settings:bool/config_adaptive_touch_sensitivity_enabled = true
+      - com.android.settings:bool/config_auto_data_switch_enables_cross_sim_calling = true
       - com.android.settings:bool/config_battery_first_use_date_enabled = false
       - com.android.settings:bool/config_clear_calling_enabled = false
       - com.android.settings:bool/config_clear_calling_enabled = true

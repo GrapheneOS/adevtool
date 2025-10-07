@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="config_auto_data_switch_enables_cross_sim_calling">true</bool>
     <bool name="config_show_smooth_display">true</bool>
     <bool name="config_show_touch_sensitivity">true</bool>
     <integer name="config_vibration_supported_intensity_levels">3</integer>
