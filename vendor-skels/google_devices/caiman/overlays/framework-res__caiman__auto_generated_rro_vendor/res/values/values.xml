@@ -324,6 +324,8 @@
     <string name="config_mms_user_agent_profile_url">http://www.gstatic.com/android/sms/GR83Y.xml</string>
     <string name="config_quickPickupSensorType">com.google.sensor.quick_pickup</string>
     <string name="config_radio_access_family">GSM|CDMA|EVDO|WCDMA|LTE</string>
+    <string name="config_satellite_sim_plmn_identifier">90198</string>
+    <string name="config_satellite_sim_spn_identifier">Skylo</string>
     <string name="config_wlan_data_service_package">com.google.android.iwlan</string>
     <string name="config_wlan_network_service_package">com.google.android.iwlan</string>
 </resources>
