@@ -321,8 +321,6 @@ filters:
       - android:string/config_satellite_gateway_service_package = com.google.android.apps.stargate
       - android:string/config_satellite_nidd_apn_name = pixel.ntn
       - android:string/config_satellite_service_package = com.google.android.satellite
-      - android:string/config_satellite_sim_plmn_identifier|*
-      - android:string/config_satellite_sim_spn_identifier = Skylo
       - android:string/config_satellite_test_with_esp_replies_intent_action = com.google.android.apps.stargate.ACTION_ESOS_QUESTIONNAIRE_TEST_WITH_ESP_REPLIES
       - android:string/config_secondaryHomePackage = com.google.android.apps.nexuslauncher
       - android:string/config_servicesExtensionPackage = com.google.android.ext.services

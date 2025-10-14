@@ -450,6 +450,8 @@ filters:
       - android:string/config_quickPickupSensorType = com.google.sensor.quick_pickup
       - android:string/config_radio_access_family = GSM|CDMA|EVDO|WCDMA|LTE
       - android:string/config_rearDisplayPhysicalAddress|*
+      - android:string/config_satellite_sim_plmn_identifier = 90198
+      - android:string/config_satellite_sim_spn_identifier = Skylo
       - android:string/config_secondaryBuiltInDisplayCutoutRectApproximation|*
       - android:string/config_secondaryBuiltInDisplayCutout|*
       - android:string/config_secondaryDisplayShape|*
