@@ -222,6 +222,7 @@ export async function processSepolicy(
       let customRecovery = new Set(custom.recovery)
       let recoveryBody = disassembled.recovery.filter(e => !customRecovery.has(e)).join('\n')
       let recovery = 'recovery_only(`\n' + recoveryBody + "\n')"
+      await fs.mkdir(sepolicyDirPath, { recursive: true })
       await fs.writeFile(path.join(sepolicyDirPath, 'recovery_sepolicy_ext.te'), recovery)
     })()
 
