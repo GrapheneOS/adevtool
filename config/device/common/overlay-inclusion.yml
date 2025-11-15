@@ -815,6 +815,7 @@ filters:
       - com.android.settings:string/battery_missing_link_message|*
       - com.android.settings:string/battery_tip_early_replacement_summary|*
       - com.android.settings:string/battery_tip_replacement_summary|*
+      - com.android.settings:string/battery_tip_replacement_title|*
       - com.android.settings:string/biometrics_unlock_set_unlock_password|*
       - com.android.settings:string/biometrics_unlock_set_unlock_pattern|*
       - com.android.settings:string/biometrics_unlock_set_unlock_pin|*

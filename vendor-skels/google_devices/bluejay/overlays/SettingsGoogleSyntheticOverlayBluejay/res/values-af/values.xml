@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Jou battery het 375 laaisiklusse bereik. As gevolg van ’n probleem met moontlike oorverhitting van die battery, sal die batterykapasiteit en -laaiprestasie verminder word wanneer jou battery 400 laaisiklusse bereik en word batteryvervanging aanbeveel. Steundienste-opsies is beskikbaar. Besoek &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; vir meer inligting.</string>
     <string name="battery_tip_replacement_summary">As gevolg van ’n probleem met moontlike oorverhitting van die battery, sal die batterykapasiteit en -laaiprestasie verminder word en word batteryvervanging aanbeveel. Steundienste-opsies is beskikbaar. Besoek &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; vir meer inligting.</string>
+    <string name="battery_tip_replacement_title">Batteryvervanging word aanbeveel</string>
     <string name="charge_cycle_count">Laaisiklustelling</string>
 </resources>

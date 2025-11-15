@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Betri yako imefikia mizunguko 375 ya kuchaji. Kutokana na tatizo linaloweza kutokea la betri kupata joto kupita kiasi, wakati betri yako imefikia mizunguko 400 ya kuchaji, uwezo wa betri na utendaji wa kuchaji utapungua na tunapendekeza ubadilishe betri. Chaguo za usaidizi zinapatikana, tembelea &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ili upate maelezo zaidi.</string>
     <string name="battery_tip_replacement_summary">Kutokana na tatizo linaloweza kutokea la betri kupata joto kupita kiasi, uwezo wa betri na utendaji wa kuchaji hupungua na tunapendekeza ubadilishe betri. Chaguo za usaidizi zinapatikana, tembelea &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ili upate maelezo zaidi.</string>
+    <string name="battery_tip_replacement_title">Tunapendekeza ubadilishe betri</string>
     <string name="charge_cycle_count">Idadi ya mizunguko ya kuchaji</string>
 </resources>

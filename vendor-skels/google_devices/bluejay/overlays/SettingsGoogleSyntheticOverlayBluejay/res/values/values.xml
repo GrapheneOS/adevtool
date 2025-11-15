@@ -2,6 +2,7 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Your battery has reached 375 charge cycles. Due to a potential battery overheating issue, when your battery reaches 400 charge cycles the battery capacity and charging performance will be reduced and battery replacement is recommended. Support options are available, visit &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; for more information.</string>
     <string name="battery_tip_replacement_summary">Due to a potential battery overheating issue, battery capacity and charging performance are reduced, and battery replacement is recommended. Support options are available, visit &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; for more information.</string>
+    <string name="battery_tip_replacement_title">Battery replacement recommended</string>
     <string name="charge_cycle_count">Charge cycle count</string>
     <string name="help_url_battery_replacement">https://g.co/pixel/6abattery</string>
 </resources>

@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Batareyangiz quvvatlash sikli 375 ga yetdi. Batareya qizib ketishi bilan aloqador muammo tufayli batareyangiz quvvatlash sikli 400 ga yetganda batareya sigʻimi va quvvatlash unumdorligi kamayadi hamda batareyani almashtirish tavsiya etiladi. Yordam variantlari mavjud, batafsil axborot uchun &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; manziliga kiring.</string>
     <string name="battery_tip_replacement_summary">Batareya qizib ketishi bilan aloqador muammo tufayli batareya sigʻimi va quvvatlash unumdorligi kamayadi hamda batareyani almashtirish tavsiya etiladi. Yordam variantlari mavjud, batafsil axborot uchun &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; manziliga kiring.</string>
+    <string name="battery_tip_replacement_title">Batareyani almashtirish tavsiya etiladi</string>
     <string name="charge_cycle_count">Quvvatlash sikli soni</string>
 </resources>

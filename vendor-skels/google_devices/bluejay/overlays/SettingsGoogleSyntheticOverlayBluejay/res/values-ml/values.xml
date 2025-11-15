@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">നിങ്ങളുടെ ബാറ്ററി 375 ചാർജ് സൈക്കിൾ പൂർത്തിയാക്കി. ബാറ്ററി ഓവർ ഹീറ്റ് ആകാൻ സാധ്യതയുള്ളതിനാൽ, 400 ചാർജ് സൈക്കിൾ പൂർത്തിയാക്കുമ്പോൾ, ബാറ്ററി കപ്പാസിറ്റിയും ചാർജിംഗ് പ്രകടനവും കുറയും, ബാറ്ററി മാറ്റുന്നതാണ് നല്ലത്. പിന്തുണാ ഓപ്‌ഷനുകൾ ലഭ്യമാണ്, കൂടുതൽ വിവരങ്ങൾക്ക് &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; സന്ദർശിക്കുക.</string>
     <string name="battery_tip_replacement_summary">ബാറ്ററി ഓവർ ഹീറ്റ് ആകാൻ സാധ്യതയുള്ളതിനാൽ ബാറ്ററി കപ്പാസിറ്റിയും ചാർജിംഗ് പ്രകടനവും കുറയും, ബാറ്ററി മാറ്റുന്നതാണ് നല്ലത്. പിന്തുണാ ഓപ്‌ഷനുകൾ ലഭ്യമാണ്, കൂടുതൽ വിവരങ്ങൾക്ക് &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; സന്ദർശിക്കുക.</string>
+    <string name="battery_tip_replacement_title">ബാറ്ററി മാറ്റാൻ നിർദ്ദേശിക്കുന്നു</string>
     <string name="charge_cycle_count">ചാർജ് സൈക്കിളിന്റെ എണ്ണം</string>
 </resources>

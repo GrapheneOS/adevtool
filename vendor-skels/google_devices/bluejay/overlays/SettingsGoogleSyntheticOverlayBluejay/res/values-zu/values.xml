@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Ibhethri lakho selifinyelele umjikelezo wokushaja wama-375. Ngenxa yokuthi kungase kube nenkinga yokushisa ngokweqile kwebhethri, lapho ibhethri yakho lifinyelela umjikelezo wokushaja wama-400 womthamo webhethri futhi isivinini sokushaja sizoncipha futhi kunconywa ukuba kushintshwe ibhethri. Okungakhethwa kukho kosekelo kuyatholakala, vakashela okuthi &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ukuze uthole ulwazi olwengeziwe.</string>
     <string name="battery_tip_replacement_summary">Ngenxa yokuthi kungenzeka kube nenkinga yokushisa ngokweqile kwebhethri, umthamo webhethri kanye nesivinini sokushaja zincishisiwe, futhi kunconywa ukuba kushintshwe ibhethri. Okungakhethwa kukho kosekelo kuyatholakala, vakashela okuthi &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ukuze uthole ulwazi olwengeziwe.</string>
+    <string name="battery_tip_replacement_title">Ukushintshwa kwebhethri kuyanconywa</string>
     <string name="charge_cycle_count">Isibalo sohlelo lokukhokhisa</string>
 </resources>

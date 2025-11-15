@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">"Votre pile a atteint 375 cycles de charge. Si la pile dépasse 400 cycles de charge, elle pourrait surchauffer, ce qui entraînerait une baisse de sa capacité et de ses performances de recharge. Il est recommandé de la remplacer à ce stade. Des options d'assistance sont offertes, visitez &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; pour en savoir plus."</string>
     <string name="battery_tip_replacement_summary">"En raison d'un problème potentiel de surchauffe de la pile, la capacité de la pile et les performances de recharge seront réduites. Il est recommandé de la remplacer. Des options d'assistance sont offertes, visitez &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; pour en savoir plus."</string>
+    <string name="battery_tip_replacement_title">Il est recommandé de remplacer la pile</string>
     <string name="charge_cycle_count">Nombre de cycles de charge</string>
 </resources>

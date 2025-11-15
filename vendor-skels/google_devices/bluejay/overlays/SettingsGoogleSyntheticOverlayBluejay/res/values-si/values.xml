@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">ඔබේ බැටරිය ආරෝපණ චක්‍ර 375කට ළඟා වී ඇත. බැටරියේ අධි තාපන ගැටලුවක් හේතුවෙන්, ඔබේ බැටරිය ආරෝපණ චක්‍ර 400කට ළඟා වූ විට බැටරි ධාරිතාව සහ ආරෝපණ ක්‍රියාකාරිත්වය අඩු වන අතර බැටරි ප්‍රතිස්ථාපනය කිරීම නිර්දේශ කරනු ලැබේ. සහය විකල්ප තිබේ, වැඩිදුර තොරතුරු සඳහා &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; වෙත පිවිසෙන්න.</string>
     <string name="battery_tip_replacement_summary">බැටරියේ අධි තාපන ගැටලුවක් හේතුවෙන්, බැටරි ධාරිතාව සහ ආරෝපණ ක්‍රියාකාරිත්වය අඩු වන අතර, බැටරි ප්‍රතිස්ථාපනය කිරීම නිර්දේශ කරනු ලැබේ. සහය විකල්ප තිබේ, වැඩිදුර තොරතුරු සඳහා &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; වෙත පිවිසෙන්න.</string>
+    <string name="battery_tip_replacement_title">බැටරි ප්‍රතිස්ථාපනය නිර්දේශිතයි</string>
     <string name="charge_cycle_count">ආරෝපණ චක්‍ර ගණන</string>
 </resources>

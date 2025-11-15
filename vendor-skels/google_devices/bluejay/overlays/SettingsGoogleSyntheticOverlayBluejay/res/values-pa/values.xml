@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">"ਤੁਹਾਡੀ ਬੈਟਰੀ 375 ਚਾਰਜ ਚੱਕਰਾਂ ਤੱਕ ਪਹੁੰਚ ਗਈ ਹੈ। ਬੈਟਰੀ ਦੇ ਜ਼ਿਆਦਾ ਗਰਮ ਹੋਣ ਦੀ ਸੰਭਾਵੀ ਸਮੱਸਿਆ ਕਰਕੇ, ਜਦੋਂ ਤੁਹਾਡੀ ਬੈਟਰੀ 400 ਚਾਰਜ ਚੱਕਰਾਂ 'ਤੇ ਪਹੁੰਚ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਬੈਟਰੀ ਸਮਰੱਥਾ ਅਤੇ ਚਾਰਜਿੰਗ ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਜਾਵੇਗੀ ਅਤੇ ਬੈਟਰੀ ਬਦਲਣ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਸਹਾਇਤਾ ਸੰਬੰਧੀ ਵਿਕਲਪ ਉਪਲਬਧ ਹਨ, ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; 'ਤੇ ਜਾਓ।"</string>
     <string name="battery_tip_replacement_summary">"ਬੈਟਰੀ ਦੇ ਜ਼ਿਆਦਾ ਗਰਮ ਹੋਣ ਦੀ ਸੰਭਾਵੀ ਸਮੱਸਿਆ ਕਰਕੇ, ਬੈਟਰੀ ਸਮਰੱਥਾ ਅਤੇ ਚਾਰਜਿੰਗ ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਹੋ ਗਈਆਂ ਹਨ ਅਤੇ ਬੈਟਰੀ ਬਦਲਣ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਸਹਾਇਤਾ ਸੰਬੰਧੀ ਵਿਕਲਪ ਉਪਲਬਧ ਹਨ, ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; 'ਤੇ ਜਾਓ।"</string>
+    <string name="battery_tip_replacement_title">ਬੈਟਰੀ ਬਦਲਣ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ</string>
     <string name="charge_cycle_count">ਚਾਰਜ ਚੱਕਰ ਦੀ ਗਿਣਤੀ</string>
 </resources>

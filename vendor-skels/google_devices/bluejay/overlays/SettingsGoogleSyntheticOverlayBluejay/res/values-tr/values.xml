@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Piliniz 375 şarj döngüsüne ulaştı. Aşırı ısınma sorunu yaşama olasılığı nedeniyle, piliniz 400 şarj döngüsüne ulaştığında pil kapasitesi ve şarj performansı azalır. Bu durumda pilin değiştirilmesi önerilir. Destek seçeneklerinden yararlanabilirsiniz. Daha fazla bilgi için &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; adresini ziyaret edin.</string>
     <string name="battery_tip_replacement_summary">Aşırı ısınma sorunu nedeniyle pil kapasitesi ve şarj performansı azaldı. Pilin değiştirilmesi önerilir. Destek seçeneklerinden yararlanabilirsiniz. Daha fazla bilgi için &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; adresini ziyaret edin.</string>
+    <string name="battery_tip_replacement_title">Pilin değiştirilmesi önerilir</string>
     <string name="charge_cycle_count">Şarj döngü sayısı</string>
 </resources>

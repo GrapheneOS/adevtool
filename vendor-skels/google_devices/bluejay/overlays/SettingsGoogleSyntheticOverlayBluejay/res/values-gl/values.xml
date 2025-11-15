@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">A túa batería alcanzou os 375 ciclos de carga. Debido a un posible problema de sobrequecemento da batería, cando esta chegue aos 400 ciclos, a súa capacidade e o rendemento de carga veranse reducidos, polo que se recomenda substituíla. Dispós de opcións de asistencia. Tes máis información en &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
     <string name="battery_tip_replacement_summary">Debido a un posible problema de sobrequecemento da batería, esta ten reducidos a capacidade e o rendemento de carga, polo que se recomenda substituíla. Dispós de opcións de asistencia. Tes máis información en &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_title">Recoméndase substituír a batería</string>
     <string name="charge_cycle_count">Número de ciclos de carga</string>
 </resources>

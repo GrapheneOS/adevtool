@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">‏הסוללה שלך עברה 375 מחזורי טעינה. עלולה להיווצר בעיה של התחממות יתר של הסוללה. לכן, אחרי 400 מחזורי טעינה, קיבולת הסוללה מצטמצמת וקצב הטעינה איטי יותר. בשלב הזה מומלץ להחליף את הסוללה. מידע נוסף על אפשרויות התמיכה זמין בכתובת &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
     <string name="battery_tip_replacement_summary">‏עלולה להיווצר בעיה של התחממות יתר של הסוללה. לכן, קיבולת הסוללה מצומצמת וקצב הטעינה איטי יותר. מומלץ להחליף את הסוללה. מידע נוסף על אפשרויות התמיכה זמין בכתובת &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_title">מומלץ להחליף את הסוללה</string>
     <string name="charge_cycle_count">מספר מחזורי הטעינה</string>
 </resources>

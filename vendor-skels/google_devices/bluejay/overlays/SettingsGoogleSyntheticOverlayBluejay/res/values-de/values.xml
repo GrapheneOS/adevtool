@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Dein Akku hat 375 Ladezyklen erreicht. Da sich der Akku potenziell überhitzen kann, werden nach 400 Ladezyklen die Akkukapazität und die Ladeleistung reduziert und es wird ein Akkutausch empfohlen. Informationen zu den verfügbaren Supportoptionen findest du unter &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
     <string name="battery_tip_replacement_summary">Da sich der Akku potenziell überhitzen kann, wurden die Akkukapazität und die Ladeleistung reduziert und es wird ein Akkutausch empfohlen. Informationen zu den verfügbaren Supportoptionen findest du unter &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt;.</string>
+    <string name="battery_tip_replacement_title">Akkutausch empfohlen</string>
     <string name="charge_cycle_count">Anzahl der Ladezyklen</string>
 </resources>

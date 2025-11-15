@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Tu batería ha alcanzado los 375 ciclos de carga. Para evitar un posible sobrecalentamiento de la batería, cuando la batería alcance los 400 ciclos de carga, la capacidad de la batería y el rendimiento de la carga se reducirán, por lo que se recomienda sustituir la batería. Hay opciones de asistencia disponibles. Consulta &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para obtener más información.</string>
     <string name="battery_tip_replacement_summary">Para evitar un posible sobrecalentamiento de la batería, la capacidad de la batería y el rendimiento de la carga se han reducido, por lo que se recomienda sustituir la batería. Hay opciones de asistencia disponibles. Consulta &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; para obtener más información.</string>
+    <string name="battery_tip_replacement_title">Sustitución de la batería recomendada</string>
     <string name="charge_cycle_count">Número de ciclos de carga</string>
 </resources>

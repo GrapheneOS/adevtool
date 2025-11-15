@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Je batterij heeft 375 laadcycli bereikt. Als je batterij 400 laadcycli heeft bereikt, worden de batterijcapaciteit en laadprestaties verminderd en wordt batterijvervanging aanbevolen vanwege een mogelijk probleem met oververhitting van de batterij. Er zijn supportopties beschikbaar. Ga naar &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; voor meer informatie.</string>
     <string name="battery_tip_replacement_summary">Vanwege een mogelijk probleem met oververhitting van de batterij zijn de batterijcapaciteit en laadprestaties verminderd en wordt batterijvervanging aanbevolen. Er zijn supportopties beschikbaar. Ga naar &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; voor meer informatie.</string>
+    <string name="battery_tip_replacement_title">Batterijvervanging aanbevolen</string>
     <string name="charge_cycle_count">Aantal laadcycli</string>
 </resources>

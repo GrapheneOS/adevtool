@@ -18,6 +18,7 @@ synthetic_overlays:
       string:
         - battery_tip_early_replacement_summary
         - battery_tip_replacement_summary
+        - battery_tip_replacement_title
         - charge_cycle_count
         - help_url_battery_replacement
 

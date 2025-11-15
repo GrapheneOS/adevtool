@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">तुमची बॅटरी ३७५ चार्ज सायकलवर पोहोचली आहे. बॅटरी ओव्हरहीटिंगच्या संभाव्य समस्येमुळे, तुमची बॅटरी ४०० चार्ज सायकलवर पोहोचते, तेव्हा बॅटरी क्षमता आणि चार्जिंग परफॉर्मन्स कमी होतो व बॅटरी बदलण्याची शिफारस केली जाते. सपोर्टशी संबंधित पर्याय उपलब्ध आहेत, अधिक माहितीसाठी &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ला भेट द्या.</string>
     <string name="battery_tip_replacement_summary">बॅटरी ओव्हरहीटिंगच्या संभाव्य समस्येमुळे, बॅटरी क्षमता आणि चार्जिंग परफॉर्मन्स कमी झाला आहे व बॅटरी बदलण्याची शिफारस केली आहे. सपोर्टशी संबंधित पर्याय उपलब्ध आहेत, अधिक माहितीसाठी &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; ला भेट द्या.</string>
+    <string name="battery_tip_replacement_title">बॅटरी बदलण्याची शिफारस केली आहे</string>
     <string name="charge_cycle_count">चार्ज सायकलची संख्या</string>
 </resources>

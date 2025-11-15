@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Bateri anda telah mencapai 375 kitaran pengecasan. Oleh sebab kemungkinan masalah bateri menjadi terlalu panas, apabila bateri anda mencapai 400 kitaran pengecasan kapasiti bateri dan prestasi pengecasan akan dikurangkan serta penggantian bateri disyorkan. Pilihan sokongan tersedia, lawati &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; untuk mendapatkan maklumat lanjut.</string>
     <string name="battery_tip_replacement_summary">Oleh sebab kemungkinan masalah bateri menjadi terlalu panas, kapasiti bateri dan prestasi pengecasan dikurangkan serta penggantian bateri disyorkan. Pilihan sokongan tersedia, lawati &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; untuk mendapatkan maklumat lanjut.</string>
+    <string name="battery_tip_replacement_title">Penggantian bateri disyorkan</string>
     <string name="charge_cycle_count">Kiraan kitaran caj</string>
 </resources>

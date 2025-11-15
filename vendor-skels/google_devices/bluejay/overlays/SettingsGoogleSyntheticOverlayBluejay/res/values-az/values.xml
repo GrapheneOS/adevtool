@@ -2,5 +2,6 @@
 <resources>
     <string name="battery_tip_early_replacement_summary">Batareyanız 375 şarj dövrünə çatıb. Batareyanın potensial olaraq həddindən artıq qızması problemi səbəbilə batareyanız 400 doldurma dövrünə çatdıqda batareyanın tutumu və şarj performansı azalacaq və batareyanın dəyişdirilməsi tövsiyə olunur. Dəstək seçimləri əlçatandır: Daha ətraflı məlumat üçün &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; saytına daxil olun.</string>
     <string name="battery_tip_replacement_summary">Batareyanın potensial olaraq həddindən artıq qızması probleminə görə batareya tutumu və şarj performansı azalır və batareyanın dəyişdirilməsi tövsiyə olunur. Dəstək seçimləri əlçatandır: Daha ətraflı məlumat üçün &lt;u&gt;g.co/pixel/6abattery&lt;/u&gt; saytına daxil olun.</string>
+    <string name="battery_tip_replacement_title">Batareyanın dəyişdirilməsi tövsiyə olunur</string>
     <string name="charge_cycle_count">Şarj dövrü sayı</string>
 </resources>
