@@ -505,6 +505,11 @@ TARGET_COPY_OUT_ODM_DLKM := odm_dlkm`)
     addBlock(blocks, lines)
   }
 
+  blocks.push(
+    '# BUILD_BROKEN_DUP_RULES is needed for overriding AOSP-available files with extracted prebuilts\n' +
+      'BUILD_BROKEN_DUP_RULES := true',
+  )
+
   await fs.writeFile(path.join(dirs.out, 'BoardConfig.mk'), finishBlocks(blocks))
 }
 

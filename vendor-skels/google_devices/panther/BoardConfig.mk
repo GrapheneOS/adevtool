@@ -75,3 +75,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += vendor/google_devices/panther/sepolicy/vendor
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/google_devices/panther/sepolicy/system_ext/public
 PRODUCT_PUBLIC_SEPOLICY_DIRS += vendor/google_devices/panther/sepolicy/product/public
 SELINUX_IGNORE_NEVERALLOWS := true
+
+# BUILD_BROKEN_DUP_RULES is needed for overriding AOSP-available files with extracted prebuilts
+BUILD_BROKEN_DUP_RULES := true
