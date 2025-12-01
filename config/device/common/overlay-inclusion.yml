@@ -869,6 +869,8 @@ filters:
       - com.android.settings:string/dream_secondary_button_title|*
       - com.android.settings:string/edge_to_edge_navigation_summary|*
       - com.android.settings:string/enable_glanceable_hub_toggle_summary|*
+      - com.android.settings:string/emission_frequency_summary|*
+      - com.android.settings:string/emission_frequency_title|*
       - com.android.settings:string/fast_pair_device_not_found_other_device_description|*
       - com.android.settings:string/fast_pair_device_not_found_tws_headphone_description|*
       - com.android.settings:string/fingerprint_acquired_imager_dirty_udfps|*

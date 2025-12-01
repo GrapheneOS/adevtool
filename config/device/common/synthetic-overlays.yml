@@ -27,6 +27,8 @@ synthetic_overlays:
         - charging_optimization_reach_limit_charge_label
         - charging_optimization_reach_limit_remaining_time_label
         - charging_optimization_remaining_time_label
+        - emission_frequency_summary
+        - emission_frequency_title
         - help_uri_5g_dsds
         - help_uri_about
         - help_uri_about_phone_v2

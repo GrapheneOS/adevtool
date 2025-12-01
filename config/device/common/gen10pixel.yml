@@ -306,7 +306,6 @@ filters:
       - com.android.settings:raw/udfps_edu_lottie|*
       - com.android.settings:string/doze_always_on_wallpaper_description|*
       - com.android.settings:string/doze_always_on_wallpaper_title|*
-      - com.android.settings:string/emission_frequency_summary|*
       - com.android.settings:string/frr_notification_reset_fingerprint_description|*
       - com.android.systemui:array/config_doze_brightness_sensor_to_wallpaper_scrim_opacity = -1;51;0;0;0
       - com.android.systemui:bool/config_minmode_enabled = true
