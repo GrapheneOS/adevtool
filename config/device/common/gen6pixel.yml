@@ -4,6 +4,8 @@ includes:
 device:
   platform: gs101
   build_id: BP3A.250905.014
+  backport_build_id: BP4A.251205.006
+  backport_base_firmware: true
 
 filters:
   file_exclusions:
