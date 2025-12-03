@@ -4,6 +4,9 @@ includes:
 device:
   platform: laguna
   build_id: BD3A.251105.010.E1
+  backport_build_id: BP4A.251205.006
+  backport_base_firmware: true
+
 
 package_exclusions:
   - com.google.android.apps.bard # Gemini

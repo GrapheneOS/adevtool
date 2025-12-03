@@ -3,3 +3,6 @@ includes:
 
 device:
   platform: zuma
+  backport_build_id: BP4A.251205.006
+  backport_base_firmware: true
+
