@@ -1,5 +1,5 @@
 require board=comet
 
-require version-bootloader=ripcurrentpro-16.3-13642544
-require version-baseband=g5400c-250605-251024-B-14326965
+require version-bootloader=ripcurrentpro-16.4-14097580
+require version-baseband=g5400c-250908-251105-B-14386369
 require partition-exists=vendor_kernel_boot
