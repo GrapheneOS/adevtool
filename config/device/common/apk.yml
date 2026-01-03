@@ -793,6 +793,7 @@ unique_base_apks:
   - product/app/Music/Music.apk
   - product/app/PdfViewerGOS/PdfViewerGOS.apk
   - product/app/PhotoTable/PhotoTable.apk
+  - product/app/SpeechServicesApp/SpeechServicesApp.apk
   - product/app/ThemesStub/ThemesStub.apk
   - product/app/TrichromeChrome/TrichromeChrome.apk
   - product/app/TrichromeLibrary/TrichromeLibrary.apk
