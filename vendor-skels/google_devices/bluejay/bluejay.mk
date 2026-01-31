@@ -1361,7 +1361,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/system_ext/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up \
     vendor/google_devices/bluejay/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1-security.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1-security.img \
     vendor/google_devices/bluejay/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img \
-    vendor/google_devices/bluejay/proprietary/vendor_dlkm/etc/init.insmod.bluejay.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.bluejay.cfg \
     vendor/google_devices/bluejay/proprietary/vendor_ramdisk/lib/firmware/drv2624.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/lib/firmware/drv2624.bin \
     vendor/google_devices/bluejay/proprietary/vendor_ramdisk/system/etc/fstab.gs101:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs101 \
     vendor/google_devices/bluejay/proprietary/vendor_ramdisk/system/etc/fstab.gs101-fips:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs101-fips \

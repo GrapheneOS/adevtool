@@ -5,7 +5,7 @@ README.md: 982cac6e61cdbf5cd9c3dc0fdc543d18a7c70cc153e5a79ec5c7031ab6687f07
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: 1336bfbf615e07d5c5df2d544748acbffe7435e958f4dfb384ae4304f6cf1de3
-bluejay.mk: 690353ee6a9376a51bc5046bcf870595d2cbf7ed533abc9f71407a2411c33e39
+bluejay.mk: f956b3f8f6821f5e9d42147e42daf7ce38728745312d63313376696047ef6e16
 cmds-for-envsetup.sh: 56fa26e2f60b5443f006b106242af91d221d91fc7f544979ed4f3ba00008c7b5
 firmware: dir
 firmware/abl.img: c26ac0fff157a537ad00f00b612cb91cd9c9b18600d9fcc1ad02f4a6438cd304
@@ -4750,9 +4750,6 @@ proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.
 proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so: 8084cfa0cffee567dbc0d1bb63fdbf2e9ab9ff2d626f8c1d595e89a99bb11544
 proprietary/vendor/lib64/vendor_chre_atoms_log.so: aba309cfc53787c1b7dcd36be3c22f1d42dc080da6e30e0dc7a3b0f912d25de6
 proprietary/vendor/lib64/vendor_chre_metrics-cpp.so: d549d33ba723c03880b1b1d36128a24eab0a3145864595650517890548549ca3
-proprietary/vendor_dlkm: dir
-proprietary/vendor_dlkm/etc: dir
-proprietary/vendor_dlkm/etc/init.insmod.bluejay.cfg: d72353272c74d87540155a9e09c89a6c86a16578c90b37870b00b7f041b48ad7
 proprietary/vendor_ramdisk: dir
 proprietary/vendor_ramdisk/lib: dir
 proprietary/vendor_ramdisk/lib/firmware: dir

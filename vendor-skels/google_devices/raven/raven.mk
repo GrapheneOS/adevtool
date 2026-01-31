@@ -1390,7 +1390,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v0-security.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v0-security.img \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v0.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v0.img \
     vendor/google_devices/raven/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img \
-    vendor/google_devices/raven/proprietary/vendor_dlkm/etc/init.insmod.raven.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.raven.cfg \
     vendor/google_devices/raven/proprietary/vendor_ramdisk/lib/firmware/drv2624.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/lib/firmware/drv2624.bin \
     vendor/google_devices/raven/proprietary/vendor_ramdisk/system/etc/fstab.gs101:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs101 \
     vendor/google_devices/raven/proprietary/vendor_ramdisk/system/etc/fstab.gs101-fips:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs101-fips \

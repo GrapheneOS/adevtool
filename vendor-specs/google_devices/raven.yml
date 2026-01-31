@@ -4981,9 +4981,6 @@ proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.
 proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so: 8084cfa0cffee567dbc0d1bb63fdbf2e9ab9ff2d626f8c1d595e89a99bb11544
 proprietary/vendor/lib64/vendor_chre_atoms_log.so: aba309cfc53787c1b7dcd36be3c22f1d42dc080da6e30e0dc7a3b0f912d25de6
 proprietary/vendor/lib64/vendor_chre_metrics-cpp.so: d549d33ba723c03880b1b1d36128a24eab0a3145864595650517890548549ca3
-proprietary/vendor_dlkm: dir
-proprietary/vendor_dlkm/etc: dir
-proprietary/vendor_dlkm/etc/init.insmod.raven.cfg: 5ea610d6cef2614d77145cada77d38e1f1047590a55857819f1c0fa9842cfcc4
 proprietary/vendor_ramdisk: dir
 proprietary/vendor_ramdisk/lib: dir
 proprietary/vendor_ramdisk/lib/firmware: dir
@@ -4992,7 +4989,7 @@ proprietary/vendor_ramdisk/system: dir
 proprietary/vendor_ramdisk/system/etc: dir
 proprietary/vendor_ramdisk/system/etc/fstab.gs101: 06d94291a0bdaf437b54b861418b2c759e9ac1310de1bb44dddd9f6b7bc5e0f8
 proprietary/vendor_ramdisk/system/etc/fstab.gs101-fips: 06d94291a0bdaf437b54b861418b2c759e9ac1310de1bb44dddd9f6b7bc5e0f8
-raven.mk: c20848d27fe27fd17fd337d109791783667652dae34b09deeacf7cc3750cd700
+raven.mk: db3ced3b532cc197fb8a2ce0e2645988c1d48a7d1897b403c77065e0de7429fa
 sepolicy: dir
 sepolicy/product: dir
 sepolicy/product/private: dir

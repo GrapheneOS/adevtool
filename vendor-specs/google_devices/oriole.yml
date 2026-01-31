@@ -19,7 +19,7 @@ firmware/modem.img: 87e221885a76b5e2139ac245013e81e6d95762cae301d0628d4ba4928512
 firmware/pbl.img: ff30197652be20c20376f8a69355edb09b123e19090654000ea7686ff0f8bc6d
 firmware/radio.img: 9f4a6e04c9aea0d334e789830026012757ba103732c968a921e4e5037786a4ac
 firmware/tzsw.img: 72ec9397796e4e59ba3cc158a1833a9f425bbf0d232800117df45fcc217fb829
-oriole.mk: 2e13b86a0aa6ac8c0d8a0c4782b5841f89cbf52320aa7d6d1ea3b218c27fb326
+oriole.mk: 243455799cb6fd76158a1ab08538f5c575357dbcbc701a908feda7c62e6b795c
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir
@@ -4757,9 +4757,6 @@ proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.
 proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so: 8084cfa0cffee567dbc0d1bb63fdbf2e9ab9ff2d626f8c1d595e89a99bb11544
 proprietary/vendor/lib64/vendor_chre_atoms_log.so: aba309cfc53787c1b7dcd36be3c22f1d42dc080da6e30e0dc7a3b0f912d25de6
 proprietary/vendor/lib64/vendor_chre_metrics-cpp.so: d549d33ba723c03880b1b1d36128a24eab0a3145864595650517890548549ca3
-proprietary/vendor_dlkm: dir
-proprietary/vendor_dlkm/etc: dir
-proprietary/vendor_dlkm/etc/init.insmod.oriole.cfg: 37121a8571b8ee6ef7cf22dd743fee9c755376070d4794982adcdc2648e3faff
 proprietary/vendor_ramdisk: dir
 proprietary/vendor_ramdisk/lib: dir
 proprietary/vendor_ramdisk/lib/firmware: dir
