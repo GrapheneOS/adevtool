@@ -136,6 +136,9 @@ filters:
       - vendor/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so
       - vendor_ramdisk/lib/firmware/drv2624.bin
 
+replacement_module_exclusions:
+  - TrichromeLibrary # external/vanadium | product/app/TrichromeLibrary/TrichromeLibrary.apk
+
 replacement_module_inclusions:
   - android.frameworks.stats-V1-cpp.vendor:64 # frameworks/hardware/interfaces/stats/aidl | vendor/lib64/android.frameworks.stats-V1-cpp.so
   - android.frameworks.stats-V1-ndk.vendor:64 # frameworks/hardware/interfaces/stats/aidl | vendor/lib64/android.frameworks.stats-V1-ndk.so
@@ -268,3 +271,8 @@ replacement_module_inclusions:
   - libui.vendor:64 # frameworks/native/libs/ui | vendor/lib64/libui.so
   - libunwindstack.vendor:64 # system/unwinding/libunwindstack | vendor/lib64/libunwindstack.so
   - nfc_nci.st21nfc.default:64 # hardware/st/nfc/st21nfc | vendor/lib64/nfc_nci.st21nfc.default.so
+
+unique_base_apks:
+  - product/app/TrichromeChromeDualArch/TrichromeChromeDualArch.apk
+  - product/app/TrichromeLibraryDualArch/TrichromeLibraryDualArch.apk
+  - product/app/TrichromeWebViewDualArch/TrichromeWebViewDualArch.apk

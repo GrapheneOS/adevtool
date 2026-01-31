@@ -16,6 +16,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 
+PRODUCT_PACKAGES += \
+    TrichromeWebViewDualArch \
+    TrichromeChromeDualArch
+
 #
 # All components inherited here go to vendor image
 #
