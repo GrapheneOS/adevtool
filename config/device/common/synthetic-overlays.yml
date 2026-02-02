@@ -5,6 +5,7 @@ synthetic_overlays:
     targetPackage: com.android.settings
     resourcesToInclude:
       bool:
+        - config_auto_data_switch_enables_cross_sim_calling
         - config_show_smooth_display
         - config_show_touch_sensitivity
       drawable:
