@@ -1,5 +1,6 @@
 device:
   name: tegu
+  build_id: BP4A.260205.001
 
 includes:
   - common/gen9pixel.yml

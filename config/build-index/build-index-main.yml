@@ -66,6 +66,18 @@ rango BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 0765b33ad248fcb365e5c8cf59fc61da58a8da7c0e38ff14e8592d9e470bf114 rango-bp4a.260105.004.e1-factory-0765b33a.zip
   ota: 4835c6abb8a3a98ea9b1314eb05358a16895091e29a084abfd9874089f56a2d9 rango-ota-bp4a.260105.004.e1-4835c6ab.zip
+rango BP4A.260205.001:
+  desc: Feb 2026
+  factory: f2b43fde15fab871529887872d9a11436126be708670db38253f1b45e92ea238 rango-bp4a.260205.001-factory-f2b43fde.zip
+  ota: 0a5ed0e7912476661a70a1c2cdad4ac5a112ad763c5bcff54c819031b6932482 rango-ota-bp4a.260205.001-0a5ed0e7.zip
+rango BP4A.260205.001.A1:
+  desc: Feb 2026, EMEA
+  factory: a25a8e5049c630cd69f9ec0b7d9f12b4177c5ba7dbedda856f2f025a62d6dca5 rango-bp4a.260205.001.a1-factory-a25a8e50.zip
+  ota: 1f2535e9d199c5878d76352fadfcd586177e72d8d04866a9be01d17976aa4a42 rango-ota-bp4a.260205.001.a1-1f2535e9.zip
+rango BP4A.260205.001.C1:
+  desc: Feb 2026, JP
+  factory: 592165880658fd0785cc9520e36f61584cc54c972b0362ed88a2c820c6d04613 rango-bp4a.260205.001.c1-factory-59216588.zip
+  ota: e9969baa9e1406e83790845a87025452b7eeaa25a1a02097068e89611020a382 rango-ota-bp4a.260205.001.c1-e9969baa.zip
 mustang BD1A.250702.001:
   desc: Aug 2025
   factory: c37e6f51b65c0ea421e3049d0499aec63a4be2fa6459d13c58b96174b6ae62c7 mustang-bd1a.250702.001-factory-c37e6f51.zip
@@ -154,6 +166,18 @@ mustang BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 5702ec26affbce5906b5e1f9b93ea65897b648f06e83931b410721c717abcdfd mustang-bp4a.260105.004.e1-factory-5702ec26.zip
   ota: 3020d211cf6e70ea00cb482416256470df0547cf069a471ecd4029e9ad107b93 mustang-ota-bp4a.260105.004.e1-3020d211.zip
+mustang BP4A.260205.001:
+  desc: Feb 2026
+  factory: 2c0c3730422128148e20e8c4adbc86d8dd2fa16cbb1a5ade44f14d5673c9ac79 mustang-bp4a.260205.001-factory-2c0c3730.zip
+  ota: 8089c798a04e8e8633e810e2103680ecd9265cdc3eac51d30a225338d8cd7604 mustang-ota-bp4a.260205.001-8089c798.zip
+mustang BP4A.260205.001.A1:
+  desc: Feb 2026, EMEA
+  factory: c5c6ee64447d88eae7f7d0711e4569de964c1d0a9cb686be6370443f60cea642 mustang-bp4a.260205.001.a1-factory-c5c6ee64.zip
+  ota: 3b67b8206edd24d06e37c7505e5f4aef734e30259e810e753666c8ff8ef27dce mustang-ota-bp4a.260205.001.a1-3b67b820.zip
+mustang BP4A.260205.001.C1:
+  desc: Feb 2026, JP
+  factory: 5ad4c2d1194874ad9e2370b92c3f23268cbb11d692f34fa1cf3810f5435de1cf mustang-bp4a.260205.001.c1-factory-5ad4c2d1.zip
+  ota: 9a99581b348717dce317331bbaba2144ce5b216a6019154be4199b94e791921e mustang-ota-bp4a.260205.001.c1-9a99581b.zip
 blazer BD1A.250702.001:
   desc: Aug 2025
   factory: f2267c453f3c983897df0a02fefde5838fd75ab051f37553e19df947efd9b00a blazer-bd1a.250702.001-factory-f2267c45.zip
@@ -242,6 +266,18 @@ blazer BP4A.260105.004.E1:
   desc: Jan 2026
   factory: cfaec27d6fbf8c4c7c6801abbbfb4d0b8c14844643a6664647428aefc417fafd blazer-bp4a.260105.004.e1-factory-cfaec27d.zip
   ota: 1299b022b448d547c31a9a255ad7db9f689a9b88a0160f6cfb79ade5ae3ef7a6 blazer-ota-bp4a.260105.004.e1-1299b022.zip
+blazer BP4A.260205.001:
+  desc: Feb 2026
+  factory: 680c0b75197562060cec1c7b1d5c84d4c0887d9fedca867631f26e3b9d2dc2c5 blazer-bp4a.260205.001-factory-680c0b75.zip
+  ota: 645f9a1b274d5bf229f34f92ff2ee93a509dec817559fce7ed3cc3a58aec4ab5 blazer-ota-bp4a.260205.001-645f9a1b.zip
+blazer BP4A.260205.001.A1:
+  desc: Feb 2026, EMEA
+  factory: 8567270fab0bfde354a0bdfb11c550e9e89247f05a8b38dcde61cc324aa7d497 blazer-bp4a.260205.001.a1-factory-8567270f.zip
+  ota: d2dc701a46ac6bb404c383a0efea8fd75f80141e2f87a3ad0cc87003f638ffaa blazer-ota-bp4a.260205.001.a1-d2dc701a.zip
+blazer BP4A.260205.001.C1:
+  desc: Feb 2026, JP
+  factory: 021c8fd4b376cc06d17241027c174b17392a30030d0d4e95f1c2becaecac8f4c blazer-bp4a.260205.001.c1-factory-021c8fd4.zip
+  ota: cd5081667ddb3ade6cc94462a795614faededef1f470c0e9146a2c754b9eaca0 blazer-ota-bp4a.260205.001.c1-cd508166.zip
 frankel BD1A.250702.001:
   desc: Aug 2025
   factory: 1a0ca67007d2607e83d8dd173ad932626e9ebf06814203a40d978418401c07b3 frankel-bd1a.250702.001-factory-1a0ca670.zip
@@ -330,6 +366,18 @@ frankel BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 7b882d470d20b566a8513e763266e273397cb83774bd2552b9cdb688d311839d frankel-bp4a.260105.004.e1-factory-7b882d47.zip
   ota: 431f57e1b87e825a60871bda6d7f30a0b81ea0c8c7d53ea30a30f76e0420215c frankel-ota-bp4a.260105.004.e1-431f57e1.zip
+frankel BP4A.260205.001:
+  desc: Feb 2026
+  factory: aeef4e913dbf289f9d5a21b74e1de8ec0ef894ba59f932631367f05b76295086 frankel-bp4a.260205.001-factory-aeef4e91.zip
+  ota: e731958824e11c80cdf9bff0689494e7c391cc5d85ae4dc862222b261a26a792 frankel-ota-bp4a.260205.001-e7319588.zip
+frankel BP4A.260205.001.A1:
+  desc: Feb 2026, EMEA
+  factory: 7f12161cafc5119faa84f76537d3eb9c92f6820df8e6895bcd7ea3f59b472405 frankel-bp4a.260205.001.a1-factory-7f12161c.zip
+  ota: 45fc362735e6be0ce003e20a6064cb5957ada50e0d292152208896410501cc06 frankel-ota-bp4a.260205.001.a1-45fc3627.zip
+frankel BP4A.260205.001.C1:
+  desc: Feb 2026, JP
+  factory: 0771dd5d4db8e964861bd6ccb865abb1ed1a6c1baa21009e6101b41c73816fad frankel-bp4a.260205.001.c1-factory-0771dd5d.zip
+  ota: 335f8604c94bc57f999d9d2cd8ed28782ac1c5de51e26b5473160fa963f99479 frankel-ota-bp4a.260205.001.c1-335f8604.zip
 tegu BD4A.240925.111:
   desc: Apr 2025
   factory: eb8b02663f40b73b7f0b8d945ca100f3223b05715253268a5ac664a13e26f758 tegu-bd4a.240925.111-factory-eb8b0266.zip
@@ -421,6 +469,18 @@ tegu BP4A.260105.004.E1:
   desc: Jan 2026
   factory: ecc7a50b3fca74b634c925dc9e9e47bd9de7a002d6790f45de850c49b567c4e2 tegu-bp4a.260105.004.e1-factory-ecc7a50b.zip
   ota: f4618450a1d735fa759abb58add6af65a5a955f56d46a8dc2d154f6ecc757b8f tegu-ota-bp4a.260105.004.e1-f4618450.zip
+tegu BP4A.260205.001:
+  desc: Feb 2026
+  factory: 1c69f00afef92eb1464d9609c4e5c9d102c9e6bf677ccc2da01baaff29c0dff7 tegu-bp4a.260205.001-factory-1c69f00a.zip
+  ota: 344107f5ed45742ac0a722a83d29ee5421f425127707e47667c9fb759c9125f2 tegu-ota-bp4a.260205.001-344107f5.zip
+tegu BP4A.260205.001.B1:
+  desc: Feb 2026, VZW
+  factory: 360419c373486612d7016fa35ef69fc7339ca50aca8709f1d49875a0899cc5fa tegu-bp4a.260205.001.b1-factory-360419c3.zip
+  ota: 53a24ddb3b545f97ba9989c243a0eb5090b8b7bb9c8f58d42006f3058d4be643 tegu-ota-bp4a.260205.001.b1-53a24ddb.zip
+tegu BP4A.260205.001.C1:
+  desc: Feb 2026, JP
+  factory: 515cddf594a0c45c106cde69ac6fb3408173774da10b2b92aa89985e460285de tegu-bp4a.260205.001.c1-factory-515cddf5.zip
+  ota: 0b6195325bf274527eb69b011542f11c555dd95b28974f22aa2335d6fa0c9567 tegu-ota-bp4a.260205.001.c1-0b619532.zip
 comet AD1A.240530.030:
   desc: Aug 2024
   factory: 77dca5840fa82483f836934ca634ee332728009444e9d2dc125a251bb9ac869e comet-ad1a.240530.030-factory-77dca584.zip
@@ -603,6 +663,14 @@ comet BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 9fa78e872af57544489a2740fbf7056110ddf404172349a693cfc1154688a39c comet-bp4a.260105.004.e1-factory-9fa78e87.zip
   ota: 7cbdefd84e72ae16cec29a14eff44635aec1f1af9fc9f14f27dbb3cad9858464 comet-ota-bp4a.260105.004.e1-7cbdefd8.zip
+comet BP4A.260205.002:
+  desc: Feb 2026
+  factory: f5d0eeaf5d4f87e60b9793016e8797ebfc213fc9925e81b91d1dd512bee6e558 comet-bp4a.260205.002-factory-f5d0eeaf.zip
+  ota: 8244fce19753ee5d3bb7e17b48d09d08dd4490f530c58ba7776259e3691e40c4 comet-ota-bp4a.260205.002-8244fce1.zip
+comet BP4A.260205.002.A1:
+  desc: Feb 2026, EMEA
+  factory: bb13005cd2463f7495efd303eb8d757e190a186af18bc6b77fc6fc0957522d66 comet-bp4a.260205.002.a1-factory-bb13005c.zip
+  ota: 49c0510656bf3c5dcbdbe5a62d48efeb606f580451637c1f05dec4ff802e8e92 comet-ota-bp4a.260205.002.a1-49c05106.zip
 komodo AD1A.240530.030:
   desc: Aug 2024
   factory: fb963bd65cdf9f933692fda3937144f400bde59cfbd74dcaf76f003911480711 komodo-ad1a.240530.030-factory-fb963bd6.zip
@@ -790,6 +858,14 @@ komodo BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 4ac7565138f4d327c2127284ca3974b3722333b98c371716080d0fa4e24d93f5 komodo-bp4a.260105.004.e1-factory-4ac75651.zip
   ota: fb641847d0f2979d014c7fa4afb29bb85c945a0e5d4494a47bcdcbc3f3674d52 komodo-ota-bp4a.260105.004.e1-fb641847.zip
+komodo BP4A.260205.002:
+  desc: Feb 2026
+  factory: aaec48342537c9d0e8beb8cb9d57a64296ca7f171eb4641e4251312b8c3c469b komodo-bp4a.260205.002-factory-aaec4834.zip
+  ota: de3f063655cc0944dca97b2560556198259d97ec673e73b1a75ad20fa3fd64fc komodo-ota-bp4a.260205.002-de3f0636.zip
+komodo BP4A.260205.002.A1:
+  desc: Feb 2026, EMEA
+  factory: f56c44168321a5d4805da3db8356222a3df7575099cb071eda95ef2fcc091cfe komodo-bp4a.260205.002.a1-factory-f56c4416.zip
+  ota: 4f4c447be9189c2fd207b0541f49408e04872d6610b287863441d243fe7ac2d8 komodo-ota-bp4a.260205.002.a1-4f4c447b.zip
 caiman AD1A.240530.030:
   desc: Aug 2024
   factory: 5e2727b97027f14ff26f89b68ce04559c0caf43ce8feda39e6ca3e5925c66309 caiman-ad1a.240530.030-factory-5e2727b9.zip
@@ -977,6 +1053,14 @@ caiman BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 7b8ad0def0395eac402d4290f0a1a2704e55a47d323f7fa6d025bf4e76f6e1ac caiman-bp4a.260105.004.e1-factory-7b8ad0de.zip
   ota: 471cf941f9bbb907fadc9893d4d741a8d18403c7a0ca93e18a69d76c6bd8af42 caiman-ota-bp4a.260105.004.e1-471cf941.zip
+caiman BP4A.260205.002:
+  desc: Feb 2026
+  factory: df6fb7c724ba17f88c243a3cb9caad4ff7f2c9168c521c28976a9e16011d78a6 caiman-bp4a.260205.002-factory-df6fb7c7.zip
+  ota: befabf0709db30db9f12b7e166ab15d6706093903500dbc82afc56e84e9d5d1c caiman-ota-bp4a.260205.002-befabf07.zip
+caiman BP4A.260205.002.A1:
+  desc: Feb 2026, EMEA
+  factory: e2358a57d4dbdef306a4d928af425bb86a5ba2c7abe910ae5d90b5ff947e44d8 caiman-bp4a.260205.002.a1-factory-e2358a57.zip
+  ota: 35514b122de8d6d66650b94b7b6459d1efb66b959c72e64fcb3aea1d2e6a3ca7 caiman-ota-bp4a.260205.002.a1-35514b12.zip
 tokay AD1A.240530.030.A1:
   desc: Aug 2024, India only
   factory: c00748c817eba73c1f70695132ae71a9db6c4d0adb486ba1827a7d231378863d tokay-ad1a.240530.030.a1-factory-c00748c8.zip
@@ -1169,6 +1253,14 @@ tokay BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 1d16cccebcd2f0648fbbd42acc4c30e6205cca50019cd2d08d360ca94581fd9d tokay-bp4a.260105.004.e1-factory-1d16ccce.zip
   ota: df04f5c198a2721a5e6ffa9ccb5099d72625f8020ad98534bab5d7a77b83f9f0 tokay-ota-bp4a.260105.004.e1-df04f5c1.zip
+tokay BP4A.260205.002:
+  desc: Feb 2026
+  factory: 4517745065c8a16f4b26d4454261bfbaed4698d15c06df1da9f891872f40644a tokay-bp4a.260205.002-factory-45177450.zip
+  ota: 9de5536577fd5cf7707c9aee69eacc42f674c3c6cef7cf0e50ffde1e94717afc tokay-ota-bp4a.260205.002-9de55365.zip
+tokay BP4A.260205.002.A1:
+  desc: Feb 2026, EMEA
+  factory: dd26efddb7fc88a5517a3a4c607fa6b47b26426213986c92fd881e4de5cc2c2a tokay-bp4a.260205.002.a1-factory-dd26efdd.zip
+  ota: 0dee9168d1e2425d3fb78e3318fa8c15135e6a2774f58065291ccfb8d6238712 tokay-ota-bp4a.260205.002.a1-0dee9168.zip
 akita UD2A.231203.054:
   desc: May 2024, EMEA, APAC, JP
   factory: b3a902d4ece1f67ab85ac165d58c543d48dd3af1cc822944636d4f96e12df059 akita-ud2a.231203.054-factory-b3a902d4.zip
@@ -1364,6 +1456,10 @@ akita BP4A.260105.004.E1:
   desc: Jan 2026
   factory: d9bc5fb86d5f6c22eb0b17e15051cf22a77c9a83442060b109922190747ac9ad akita-bp4a.260105.004.e1-factory-d9bc5fb8.zip
   ota: aa1349789e21565dfb6481e210e8cce47f8ae47712428366b459b2675c0b9598 akita-ota-bp4a.260105.004.e1-aa134978.zip
+akita BP4A.260205.001:
+  desc: Feb 2026
+  factory: 661cb49bab85398126ef0bf44e4d81282c4c87e19f4dffa0e3f90017c32d08b0 akita-bp4a.260205.001-factory-661cb49b.zip
+  ota: cb9dc506c4139b8b05faead9e3cd13fd6586de857b3f6734b347f427a22a1bac akita-ota-bp4a.260205.001-cb9dc506.zip
 husky UD1A.230803.022.A3:
   desc: Sep 2023, Verizon
   factory: a95417f6ace90bb3ed39f86966bf9f32aad0505c29d5698dc19dddb9739f37bc husky-ud1a.230803.022.a3-factory-a95417f6.zip
@@ -1619,6 +1715,10 @@ husky BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 1a9ef6a564a71039b85fd5d3aefec887925b4878b24409fac01c3021b6d5e727 husky-bp4a.260105.004.e1-factory-1a9ef6a5.zip
   ota: d17f8338291dc51e245ac87eebfd8993e2a4aaf67902ad288e9ff4116d1531e4 husky-ota-bp4a.260105.004.e1-d17f8338.zip
+husky BP4A.260205.001:
+  desc: Feb 2026
+  factory: 61e8656110a3799189d2124d8b85c79c6ed5bbc89a26543080b5055ac0db5213 husky-bp4a.260205.001-factory-61e86561.zip
+  ota: ab7f2d5402fcfb86b4351c8d606326299189cd91accf51087a58e4be3a5d0d50 husky-ota-bp4a.260205.001-ab7f2d54.zip
 shiba UD1A.230803.022.A5:
   desc: Sep 2023, US Non Verizon/AT&T/T-Mobile carriers/CA/TW
   factory: 85c06d1dd95b2e157ea1ba3c78fc2df8dabeb42dcd58c9cdb6f015e2c0c7b455 shiba-ud1a.230803.022.a5-factory-85c06d1d.zip
@@ -1874,6 +1974,10 @@ shiba BP4A.260105.004.E1:
   desc: Jan 2026
   factory: c7cb1dddab0b2766ce84ec85c753cb9939830fbbccf9cea189494f08ed2410c1 shiba-bp4a.260105.004.e1-factory-c7cb1ddd.zip
   ota: d9a1c2a58f42f0cab777a410b415765e4602fe7b28ab3b3ad207f14310f49df4 shiba-ota-bp4a.260105.004.e1-d9a1c2a5.zip
+shiba BP4A.260205.001:
+  desc: Feb 2026
+  factory: 35b8480d70480bbef52e99837f18beb539a8894807d1b02696f206d035c70282 shiba-bp4a.260205.001-factory-35b8480d.zip
+  ota: 3d2eff349beea526c2f24d7ec7c9b438382e1b3838303532f1093e350153e368 shiba-ota-bp4a.260205.001-3d2eff34.zip
 felix TD3A.230203.070.A1:
   desc: Jun 2023
   factory: d935f0196d7959c916e4f42e25d92e05cd7d2ca0c01080ee46fc35fa996e302b felix-td3a.230203.070.a1-factory-d935f019.zip
@@ -2150,6 +2254,10 @@ felix BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 71a34bddea437901683671586492275a317fbbf5e8c0543a7b7456864898cccf felix-bp4a.260105.004.e1-factory-71a34bdd.zip
   ota: 4129f029db34e1e92f5919e27abd03a57d7708449b5e1a4f08dc570ce1a96d87 felix-ota-bp4a.260105.004.e1-4129f029.zip
+felix BP4A.260205.001:
+  desc: Feb 2026
+  factory: 31fd0632ff11a84a711389d106f3d4f96c9b1959ab99eaec332abb375b772b1e felix-bp4a.260205.001-factory-31fd0632.zip
+  ota: b8f82d69dc402b09ea1c313724e1958d9d888e2090a324e0951fe3a16ff7ff53 felix-ota-bp4a.260205.001-b8f82d69.zip
 tangorpro TD2A.230203.028:
   desc: Jun 2023
   factory: 55b7fab7178e0cc88a70d432d73edf498ace0277d81ee34867aeaa943b46a7fa tangorpro-td2a.230203.028-factory-55b7fab7.zip
@@ -2307,6 +2415,10 @@ tangorpro BP4A.260105.004.E1:
   desc: Jan 2026
   factory: a3a616db596cffac0b8c2b6410836eb319d331d282e20367027d172ca63769d2 tangorpro-bp4a.260105.004.e1-factory-a3a616db.zip
   ota: de708c2c05d62594baaf136a7e4b6efa33180ad65525a0603ce9e66f46fc5d43 tangorpro-ota-bp4a.260105.004.e1-de708c2c.zip
+tangorpro BP4A.260205.001:
+  desc: Feb 2026
+  factory: 2808cbaf6fdb9527c02150253d624de2986e98df3d342755b8efd54f583ce8ad tangorpro-bp4a.260205.001-factory-2808cbaf.zip
+  ota: 3f225ce33c8a1599bd135b1b8bba365fcc6c1d1105926cc3a1c1ac1deef648d2 tangorpro-ota-bp4a.260205.001-3f225ce3.zip
 lynx TD4A.221205.042:
   desc: May 2023
   factory: f94007e2844eabb0b4f2203f31776cc9f907021458a258f69f57eed4ef3d24f2 lynx-td4a.221205.042-factory-f94007e2.zip
@@ -2574,6 +2686,10 @@ lynx BP4A.260105.004.E1:
   desc: Jan 2026
   factory: 579db81b02a9316f62490430a8a7a26f95f870a37e404274453def8d04dbfd1c lynx-bp4a.260105.004.e1-factory-579db81b.zip
   ota: 96874bc79a6b0ca9b2107d39ac2c46352a232f446fcadff0b4254d8f3c2151c4 lynx-ota-bp4a.260105.004.e1-96874bc7.zip
+lynx BP4A.260205.001:
+  desc: Feb 2026
+  factory: 8835b45342febb3014c2bdca0fa40e5cc65175a62a1c4a3d7f0a6953241358ff lynx-bp4a.260205.001-factory-8835b453.zip
+  ota: 080be25459621da200ead6c6326e72292783988b42325ee1a10820b5de746c91 lynx-ota-bp4a.260205.001-080be254.zip
 cheetah TD1A.220804.009.A2:
   desc: Oct 2022
   factory: 8e7393e1bd7f86d76d75cdea988d5e4ebfded3a50fac26d774b9eb07152c1ed5 cheetah-td1a.220804.009.a2-factory-8e7393e1.zip

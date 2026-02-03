@@ -3,3 +3,4 @@ includes:
 
 device:
   platform: zumapro
+  build_id: BP4A.260205.002
