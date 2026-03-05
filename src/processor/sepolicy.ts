@@ -292,7 +292,9 @@ export async function processSepolicy(
           yamlPath: ['', part, 'mac_permissions_entries'],
         } as EntryFilterSpec,
       } as ProcessXmlCmd
-      writtenAny ||= (await processXml(cmd)).length > 0
+      if ((await processXml(cmd)).length > 0) {
+        writtenAny = true
+      }
     })()
 
     await Promise.all(contextsJobs.concat(...[macPermsJob, typesJob, sepolicyExtJob]))
