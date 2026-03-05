@@ -28,6 +28,8 @@ backport_files:
     - priv-app/ShannonRcs/ShannonRcs.apk
   vendor:
     - apex/com.google.pixel.euicc.update.apex
+    - bin/aocd
+    - bin/aocxd
     - bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl
     - bin/hw/android.hardware.thermal-service.pixel
     - bin/hw/rild_exynos
@@ -37,6 +39,10 @@ backport_files:
     - bin/shared_modem_platform
     - etc/powervr.ini
     - lib64/aconfig_gpu_flags_c_lib.so
+    - lib64/aoc_aconfig_flags_c_lib.so
+    - lib64/aoc_aud_ext.so
+    - lib64/aoc_audio_stereo_spatializer.so
+    - lib64/aocx-V2-ndk.so
     - lib64/com.google.input-V2-ndk.so
     - lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so
     - lib64/egl/libEGL_powervr.so
@@ -45,6 +51,10 @@ backport_files:
     - lib64/egl/libGLESv2_powervr.so
     - lib64/hw/vulkan.powervr.so
     - lib64/libaconfig_storage_read_api_cc.so
+    - lib64/libaoc.so
+    - lib64/libaoc_waves.so
+    - lib64/libaoctuningdecoder.so
+    - lib64/libaocx.so
     - lib64/libc++.so
     - lib64/libcustomer_gralloc_ddk_api.so
     - lib64/libdarwinn_hal.so
@@ -76,6 +86,7 @@ backport_files:
     - lib64/modem_clock_manager_impl.so
     - lib64/modem_log_dumper.so
     - lib64/vendor.google.bluetooth_ext-V1-ndk.so
+    - lib64/vendor.google.whitechapel.audio.hal.utils.aoc.so
     - lib64/vendor.google.whitechapel.audio.audioext@4.0.so
     - lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so
     - lib64/vendor.samsung_slsi.telephony.hardware.oemservice-V1-ndk.so
