@@ -11,6 +11,7 @@ export async function copyBlobs(
   pathResolver: PathResolver,
   destDirLocalNamespace: string,
   destDirRootNamespace: string,
+  device: string,
 ) {
   let promises = Array.from(entries).map(async entry => {
     let srcPath = entry.partPath.resolve(pathResolver)
@@ -47,7 +48,7 @@ export async function copyBlobs(
     }
 
     if (patched === undefined) {
-      patched = await maybePatch(entry, srcPath)
+      patched = await maybePatch(entry, srcPath, device)
     }
 
     let destDir = entry.useRootSoongNamespace === true ? destDirRootNamespace : destDirLocalNamespace
@@ -63,7 +64,7 @@ export async function copyBlobs(
   await Promise.all(promises)
 }
 
-async function maybePatch(entry: BlobEntry, srcPath: string) {
+async function maybePatch(entry: BlobEntry, srcPath: string, device: string) {
   let relPath = entry.partPath.relPath
   switch (entry.partPath.partition) {
     case Partition.Vendor: {

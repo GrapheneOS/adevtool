@@ -128,6 +128,7 @@ async function doDevice(
     pathResolver,
     dirs.proprietary,
     path.join(dirs.out, PROPRIETARY_DIR_IN_ROOT_SOONG_NAMESPACE),
+    config.device.name,
   )
 
   if (verbose) log('Extracting vintf manifests')
