@@ -27,6 +27,7 @@ backport_files:
     - priv-app/ShannonIms/ShannonIms.apk
     - priv-app/ShannonRcs/ShannonRcs.apk
   vendor:
+    - apex/com.google.pixel.camera.hal.apex
     - apex/com.google.pixel.euicc.update.apex
     - bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl
     - bin/hw/android.hardware.thermal-service.pixel

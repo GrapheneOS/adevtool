@@ -3186,7 +3186,7 @@ proprietary/system_ext/priv-app/ShannonRcs/ShannonRcs.apk: abfc03fdb2657c152bebf
 proprietary/vendor: dir
 proprietary/vendor/apex: dir
 proprietary/vendor/apex/com.google.android.widevine-13130248.apex: 3b2fcfa22277b76469114147283a2c40dea55380b4eafa24aed2efff298a1642
-proprietary/vendor/apex/com.google.pixel.camera.hal.apex: 17e64a631aa69e952fbfaae22da5426896b4f72a4048a183170cfed3eb18cc95
+proprietary/vendor/apex/com.google.pixel.camera.hal.apex: d7cf547014e56775eb9a54eac5b5ee48b037c8b5f5f13e472e91cad1d91736ce
 proprietary/vendor/apex/com.google.pixel.euicc.update.apex: c40a934898dc1112f6d65eaafc97f4a0b82144f6421bf9965bfb1d0c20cbd4bd
 proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: 958e745e7918ce9ca82b6fb9ad79ffa7a8bcd6d523cf4fe4307733828b64099b
 proprietary/vendor/bin: dir

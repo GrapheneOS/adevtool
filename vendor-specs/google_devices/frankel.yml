@@ -3072,7 +3072,7 @@ proprietary/system_ext/priv-app/ril-extension/ril-extension.apk: 87eec6f1f5a71b1
 proprietary/vendor: dir
 proprietary/vendor/apex: dir
 proprietary/vendor/apex/com.google.android.widevine-13130248.apex: 87373b43ea691085d7ca974d51fc1e8b4fc35b719281641e1c1420d077b9a71e
-proprietary/vendor/apex/com.google.pixel.camera.hal.apex: 826ce610f6ab2cd2fb67350fb59b7e58f89c3b9787e374f1e8712a8b9a1b7c76
+proprietary/vendor/apex/com.google.pixel.camera.hal.apex: b67e4b9147f8cd6276db3dd0fbd5b6841ce6ce3e92f7161a4399769288a197e3
 proprietary/vendor/apex/com.google.pixel.euicc.update.apex: 752455181ed4484e469119491498ed70806a74c5ca7f8be92f7bc33f87db5524
 proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: 8babc4a7ccb2545e95d0a9eef34097acda3592f7a594fa49f49273631e840620
 proprietary/vendor/bin: dir

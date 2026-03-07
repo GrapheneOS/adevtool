@@ -4955,7 +4955,7 @@ proprietary/system_ext/priv-app/UwbVendorService/UwbVendorService.apk: 33d1f45a3
 proprietary/vendor: dir
 proprietary/vendor/apex: dir
 proprietary/vendor/apex/com.google.android.widevine-13130248.apex: ba0e3533d48a4fccc6a63ba8ee7520cfacae83e0f9332c8b8e5659cab134c092
-proprietary/vendor/apex/com.google.pixel.camera.hal.apex: e8e384e1b6cb56e771f4d72650bf2ca8666eb52f01b9a086b52b8162d99d20e0
+proprietary/vendor/apex/com.google.pixel.camera.hal.apex: 3a7068f4949088740d620384a0dd8f78eced8ce7244b0d938c96625255cd0ee8
 proprietary/vendor/apex/com.google.pixel.wifi.ext.apex: a4e45dc95e50a5469c175857426cb5e3faf028903f5bc04d6f8a3e96a851d012
 proprietary/vendor/bin: dir
 proprietary/vendor/bin/aocd: 37ed95e0b46a73c30205f6527dd37aa4da93eca348a423b0d27fdb605be6484c
