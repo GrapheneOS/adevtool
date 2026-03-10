@@ -3,8 +3,10 @@ import { promises as fs } from 'fs'
 import assert from 'assert'
 import path from 'path'
 import { readFile } from '../util/fs'
+import { spawnAsync, spawnAsyncNoOut } from '../util/process'
 import { Partition, PathResolver } from '../util/partitions'
 import { BlobEntry } from './entry'
+import { CARRIER_DB_OVERRIDES } from './carrier-db-overrides'
 
 export async function copyBlobs(
   entries: Iterable<BlobEntry>,
@@ -60,8 +62,37 @@ export async function copyBlobs(
     } else {
       await fs.copyFile(srcPath, outPath)
     }
+
+    if (
+      entry.partPath.partition === Partition.Vendor &&
+      entry.partPath.relPath === 'firmware/carrierconfig/cfg.db'
+    ) {
+      await patchModemCarrierConfig(outPath)
+    }
   })
   await Promise.all(promises)
+}
+
+async function patchModemCarrierConfig(dbPath: string) {
+  await fs.chmod(dbPath, 0o644)
+  for (let override of CARRIER_DB_OVERRIDES) {
+    const result = await spawnAsync('sqlite3', [
+      dbPath,
+      `SELECT COUNT(*) FROM carrier_info WHERE mccmnc = '${override.mccmnc}';`,
+    ])
+    if (parseInt(result.trim(), 10) > 0) {
+      throw new Error(
+        `cfg.db already contains mccmnc ${override.mccmnc} (${override.name}) — ` +
+          `the carrier_info override is no longer needed and should be removed`,
+      )
+    }
+    await spawnAsyncNoOut('sqlite3', [
+      dbPath,
+      `INSERT INTO carrier_info (carrier_id, mccmnc, imsi_prefix_xpattern, spn, gid1, gid2) ` +
+        `VALUES (${override.carrier_id}, '${override.mccmnc}', '${override.imsi_prefix_xpattern}', ` +
+        `'${override.spn}', '${override.gid1}', '${override.gid2}');`,
+    ])
+  }
 }
 
 async function maybePatch(entry: BlobEntry, srcPath: string, device: string) {
