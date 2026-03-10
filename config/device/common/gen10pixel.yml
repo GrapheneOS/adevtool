@@ -25,6 +25,7 @@ backport_files:
     - etc/thermal_info_config_throttling.json
     - etc/thermal_info_config_vt.json
     - etc/thermal_info_config_wingboard.json
+    - etc/vt_estimation_model_display.tflite
     - lib64/libperfmgr.so
     - lib64/libpixelatoms_defs.so
     - lib64/libpixelstats.so

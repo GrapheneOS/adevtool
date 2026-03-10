@@ -969,6 +969,7 @@ filters:
       - vendor/etc/uwb/samsung_uwb_region.json
       - vendor/etc/vt_estimation_model.tflite
       - vendor/etc/vt_estimation_model_bottom_spk.tflite
+      - vendor/etc/vt_estimation_model_display.tflite
       - vendor/etc/vt_estimation_model_top_spk.tflite
       - vendor/etc/vt_estimation_odpm_model.tflite
       - vendor/etc/vt_prediction_lstm_model.tflite

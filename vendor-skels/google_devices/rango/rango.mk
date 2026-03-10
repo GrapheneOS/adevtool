@@ -1857,6 +1857,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/rango/proprietary/vendor/etc/uwb/samsung_uwb_hal_conf.json:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/samsung_uwb_hal_conf.json \
     vendor/google_devices/rango/proprietary/vendor/etc/uwb/samsung_uwb_region.json:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/samsung_uwb_region.json \
     vendor/google_devices/rango/proprietary/vendor/etc/vt_estimation_model_bottom_spk.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model_bottom_spk.tflite \
+    vendor/google_devices/rango/proprietary/vendor/etc/vt_estimation_model_display.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model_display.tflite \
     vendor/google_devices/rango/proprietary/vendor/etc/vt_estimation_model_top_spk.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model_top_spk.tflite \
     vendor/google_devices/rango/proprietary/vendor/etc/vt_estimation_model.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite \
     vendor/google_devices/rango/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
