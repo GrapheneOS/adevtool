@@ -3108,7 +3108,7 @@ proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint-service.goodix
 proprietary/vendor/bin/hw/android.hardware.bluetooth-service.bcmbtlinux: f07908bee2001d63fb9223db90be3eb65281444d10121e88d02aea4bda467ffe
 proprietary/vendor/bin/hw/android.hardware.boot-service.default-pixel: 04b3c228ef59817e715bced710490800f776b13a853aa68befc3dcebf27dfd82
 proprietary/vendor/bin/hw/android.hardware.composer.hwc3-service.pixel: 38a2c97487be0df6d61bdac1e66aa066b61d7819495c9fe2159b6b3cb96b2d69
-proprietary/vendor/bin/hw/android.hardware.contexthub-service.generic: 91ce47259aeca3f4cff7e512a54d2bdeac1684337eb34d2e9ad67659ec81fda9
+proprietary/vendor/bin/hw/android.hardware.contexthub-service.generic: c07a8838c6c4be8aae6bc037803c31d1811e96991370f071e3c35076e6f6365a
 proprietary/vendor/bin/hw/android.hardware.dumpstate-service: 4f8043d52e606ad1ef2778d93c0e779fc7298d7b55540a722d87ee4f3f4d40e2
 proprietary/vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging: 9a5d1320aa10430302a49886893b481996c5a4feeb78c77b256dcaf74d984928
 proprietary/vendor/bin/hw/android.hardware.gnss-service: 1cb950e84b948af9b1f53e6351f8794035f8e791ac5f829deaa1c9856491b2fa

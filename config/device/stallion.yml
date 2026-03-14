@@ -8,6 +8,7 @@ backport_files:
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
   vendor:
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
+    - bin/hw/android.hardware.contexthub-service.generic
 
 includes:
   - common/gen9pixel.yml
