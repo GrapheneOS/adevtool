@@ -635,6 +635,8 @@ PRODUCT_PACKAGES += \
     com.google.edgetpu.tachyon-service \
     com.google.edgetpu_app_service-V4-ndk \
     com.google.edgetpu_app_service-V4-ndk.system_ext \
+    com.google.edgetpu_app_service-V6-ndk \
+    com.google.edgetpu_app_service-V6-ndk.system_ext \
     com.google.edgetpu_vendor_service-V2-ndk \
     com.google.edgetpu_vendor_service-V2-ndk.system_ext \
     com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk \

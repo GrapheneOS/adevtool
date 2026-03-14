@@ -222,6 +222,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "com.google.edgetpu_app_service-V6-ndk.system_ext",
+    owner: "google_devices",
+    stem: "com.google.edgetpu_app_service-V6-ndk",
+    target: {
+        android_arm64: { srcs: [ "system_ext/lib64/com.google.edgetpu_app_service-V6-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "com.google.edgetpu_vendor_service-V2-ndk.system_ext",
     owner: "google_devices",
     stem: "com.google.edgetpu_vendor_service-V2-ndk",
@@ -1922,6 +1936,17 @@ cc_prebuilt_library_shared {
     name: "com.google.edgetpu_app_service-V4-ndk",
     owner: "google_devices",
     target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.google.edgetpu_app_service-V6-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "vendor/lib64/com.google.edgetpu_app_service-V6-ndk.so" ] } },
     compile_multilib: "64",
     check_elf_files: false,
     prefer: true,

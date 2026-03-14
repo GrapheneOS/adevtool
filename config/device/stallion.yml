@@ -3,6 +3,12 @@ device:
   build_id: BD6A.251031.001.A4
   backport_build_id: CP1A.260305.018
 
+backport_files:
+  system_ext:
+    - lib64/com.google.edgetpu_app_service-V6-ndk.so
+  vendor:
+    - lib64/com.google.edgetpu_app_service-V6-ndk.so
+
 includes:
   - common/gen9pixel.yml
 
