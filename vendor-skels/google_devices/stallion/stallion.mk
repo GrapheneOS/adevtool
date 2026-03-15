@@ -622,6 +622,7 @@ PRODUCT_PACKAGES += \
     capo \
     cbd \
     cc \
+    chremetrics-cpp \
     citadel_updater \
     citadeld \
     columbus \

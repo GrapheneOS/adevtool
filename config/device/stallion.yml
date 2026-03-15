@@ -9,7 +9,9 @@ backport_files:
   vendor:
     - bin/hw/android.hardware.bluetooth-service.bcmbtlinux
     - bin/hw/android.hardware.contexthub-service.generic
+    - lib64/chremetrics-cpp.so
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
+    - lib64/vendor_chre_metrics-cpp.so
     - lib64/vendor.google.bluetooth_ext-V4-ndk.so
 
 extra_packages:
