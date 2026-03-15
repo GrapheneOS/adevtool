@@ -527,6 +527,9 @@ export async function generateBuildFiles(
   let packages: BuildSystemPackages[] = []
   packages.push(...buildPkgs)
   packages.push({ type: 'file-based packages', names: Array.from(allNamedModules.keys()).sort() })
+  if (config.extra_packages.length > 0) {
+    packages.push({ type: 'extra packages', names: config.extra_packages })
+  }
 
   if (symlinks.length > 0) {
     packages.push({ type: 'inclusion of symlinks', names: ['device_symlinks'] })

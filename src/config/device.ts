@@ -93,6 +93,9 @@ export interface DeviceConfig {
   backport_dirs: { [part: string]: string[] }
   backport_files: { [part: string]: string[] }
 
+  // Additional AOSP packages to include in PRODUCT_PACKAGES.
+  extra_packages: string[]
+
   apk_map: { [apk_path: string]: ApkMapping }
   apex_map: { [apex_path: string]: ApexMapping }
   unique_base_apks: string[]
@@ -238,6 +241,8 @@ const DEFAULT_CONFIG_BASE = {
 
   backport_dirs: {},
   backport_files: {},
+
+  extra_packages: [],
 
   apk_map: {},
   apex_map: {},
