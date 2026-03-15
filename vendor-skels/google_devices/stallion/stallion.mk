@@ -879,6 +879,7 @@ PRODUCT_PACKAGES += \
     vendor.google.battery_mitigation.service_static \
     vendor.google.bluetooth_ext-V1-ndk \
     vendor.google.bluetooth_ext-V3-ndk \
+    vendor.google.bluetooth_ext-V4-ndk \
     vendor.google.edgetpu_app_service@1.0-service \
     vendor.google.edgetpu_vendor_service@1.0-service \
     vendor.google.gnss_ext-V1-ndk \
@@ -919,7 +920,8 @@ PRODUCT_PACKAGES += \
 
 # extra packages
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.socket-V1-ndk.vendor
+    android.hardware.bluetooth.socket-V1-ndk.vendor \
+    android.hardware.bluetooth.ranging-V2-ndk.vendor
 
 # inclusion of symlinks
 PRODUCT_PACKAGES += \

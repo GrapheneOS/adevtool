@@ -7,12 +7,15 @@ backport_files:
   system_ext:
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
   vendor:
+    - bin/hw/android.hardware.bluetooth-service.bcmbtlinux
     - bin/hw/android.hardware.contexthub-service.generic
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
+    - lib64/vendor.google.bluetooth_ext-V4-ndk.so
 
 extra_packages:
   # needed by vendor/bin/hw/android.hardware.contexthub-service.generic
   - android.hardware.bluetooth.socket-V1-ndk.vendor # hardware/interfaces/bluetooth/socket/aidl | vendor/lib64/android.hardware.bluetooth.socket-V1-ndk.so
+  - android.hardware.bluetooth.ranging-V2-ndk.vendor # hardware/interfaces/bluetooth/ranging/aidl | vendor/lib64/android.hardware.bluetooth.ranging-V2-ndk.so
 
 includes:
   - common/gen9pixel.yml
