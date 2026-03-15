@@ -922,7 +922,8 @@ PRODUCT_PACKAGES += \
 # extra packages
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.socket-V1-ndk.vendor \
-    android.hardware.bluetooth.ranging-V2-ndk.vendor
+    android.hardware.bluetooth.ranging-V2-ndk.vendor \
+    android.hardware.usb-V4-ndk.vendor
 
 # inclusion of symlinks
 PRODUCT_PACKAGES += \
