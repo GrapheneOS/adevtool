@@ -917,6 +917,10 @@ PRODUCT_PACKAGES += \
     wfc-pkt-router \
     wpa_supplicant
 
+# extra packages
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.socket-V1-ndk.vendor
+
 # inclusion of symlinks
 PRODUCT_PACKAGES += \
     device_symlinks
