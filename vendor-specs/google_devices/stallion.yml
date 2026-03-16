@@ -3125,7 +3125,7 @@ proprietary/vendor/bin/hw/android.hardware.power.stats-service.pixel: c4f82ea109
 proprietary/vendor/bin/hw/android.hardware.secure_element-service.uicc: a7ad52bfc4d59490bc4a6187dcce6d388fff0c9b4cb462cb7ea56f846ed766b3
 proprietary/vendor/bin/hw/android.hardware.security.keymint-service.citadel: b19364a6eb6b61e85455f84345e4c6e14aab58051c6b9b52aecee487e49e861a
 proprietary/vendor/bin/hw/android.hardware.thermal-service.pixel: 658ad5acdb7cce34ecf3f92884b4aef32f174213a5b741fb2fd4f4b4567d2019
-proprietary/vendor/bin/hw/android.hardware.usb-service: 9ad060969aa977e2fcc44a572ea3de92d88bcb84c426038aa608a11ff09733d2
+proprietary/vendor/bin/hw/android.hardware.usb-service: b5ded428caa6a37c3ec59b579c2cbec4ec6e26cec01b135f9e64b0d6a8777c8a
 proprietary/vendor/bin/hw/android.hardware.usb.gadget-service: 9f247e71fe3435ff58709e6c5e3cfa3ff2ac5acbce39b6efef0ad0a85dfad694
 proprietary/vendor/bin/hw/android.hardware.vibrator-service.cs40l26: 9c62eea47f1f29d23c400557efadc8dc54d8468970706a2bdd036ec3b6aa8cad
 proprietary/vendor/bin/hw/android.hardware.weaver-service.citadel: 99547fa57d1063a97b3d05acf7f5107481390c7f159e3bd919b11d1174f17b1e
