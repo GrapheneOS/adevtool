@@ -12,6 +12,7 @@ backport_files:
     - bin/hw/android.hardware.usb-service
     - lib64/chremetrics-cpp.so
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
+    - lib64/libpixelstats.so
     - lib64/pixelatoms-cpp.so
     - lib64/vendor_chre_metrics-cpp.so
     - lib64/vendor.google.bluetooth_ext-V4-ndk.so
