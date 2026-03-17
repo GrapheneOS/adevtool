@@ -9,6 +9,7 @@ package_inclusions:
     include_uses_permissions:
       - android.permission.CAMERA_OPEN_CLOSE_LISTENER
       - android.permission.CONTROL_DISPLAY_BRIGHTNESS
+      - android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS
       - android.permission.CREATE_USERS
       - android.permission.DEVICE_POWER
       - android.permission.INTERNAL_SYSTEM_WINDOW
@@ -18,6 +19,7 @@ package_inclusions:
       - android.permission.STATUS_BAR_SERVICE
       - android.permission.SYSTEM_ALERT_WINDOW
       - android.permission.VIBRATE
+      - android.permission.WRITE_SETTINGS
       - com.android.pixeldisplayservice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
     pregrantable_permissions:
       - android.permission.INTERACT_ACROSS_USERS_FULL

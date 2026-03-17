@@ -6,6 +6,8 @@ device:
 backport_files:
   system_ext:
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
+    - lib64/libpixeldisplaymanager_jni.so
+    - priv-app/PixelDisplayService/PixelDisplayService.apk
   vendor:
     - bin/hw/android.hardware.bluetooth-service.bcmbtlinux
     - bin/hw/android.hardware.contexthub-service.generic

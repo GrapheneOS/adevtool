@@ -419,6 +419,7 @@ android_app_import {
     name: "PixelDisplayService",
     owner: "google_devices",
     apk: "system_ext/priv-app/PixelDisplayService/PixelDisplayService.apk",
+    optional_uses_libs: [ "androidx.window.extensions", "androidx.window.sidecar" ],
     dex_preopt: { enabled: true },
     certificate: "platform",
     privileged: true,
