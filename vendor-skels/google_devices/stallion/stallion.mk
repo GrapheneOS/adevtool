@@ -4599,6 +4599,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/vendor/firmware/uecapconfig/WINDTRE_8851100888085059077.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WINDTRE_8851100888085059077.binarypb \
     vendor/google_devices/stallion/proprietary/vendor/lib64/libaconfig_storage_read_api_cc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaconfig_storage_read_api_cc.so \
     vendor/google_devices/stallion/proprietary/vendor/lib64/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so \
+    vendor/google_devices/stallion/proprietary/vendor/lib64/libjsoncpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjsoncpp.so \
     vendor/google_devices/stallion/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     vendor/google_devices/stallion/proprietary/vendor/etc/audio/bluenote/exported.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/bluenote/exported.xml \
     vendor/google_devices/stallion/proprietary/vendor/etc/audio/config/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/config/audio_platform_configuration.xml \

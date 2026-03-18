@@ -492,6 +492,10 @@ export async function generateBuildFiles(
           copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
           continue
         }
+        if (resolvedName === 'libjsoncpp' && config.device.name === 'stallion') {
+          copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
+          continue
+        }
       }
 
 

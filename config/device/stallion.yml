@@ -14,6 +14,7 @@ backport_files:
     - bin/hw/android.hardware.usb-service
     - lib64/chremetrics-cpp.so
     - lib64/com.google.edgetpu_app_service-V6-ndk.so
+    - lib64/libjsoncpp.so
     - lib64/libpixelstats.so
     - lib64/pixelatoms-cpp.so
     - lib64/vendor_chre_metrics-cpp.so
@@ -554,6 +555,7 @@ filters:
     - vendor/etc/init/hw/init.stallion.rc
     - vendor/firmware/CPS4041_A0_06.bin
     - vendor/firmware/g7b.app
+    - vendor/lib64/libjsoncpp.so
     - vendor/lib64/libprotobuf-cpp-full-21.12.so
     - vendor/lib64/libprotobuf-cpp-lite-21.12.so
 
