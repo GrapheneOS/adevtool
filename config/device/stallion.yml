@@ -28,6 +28,9 @@ extra_packages:
   # needed by vendor/bin/hw/android.hardware.contexthub-service.generic
   - android.hardware.bluetooth.socket-V1-ndk.vendor # hardware/interfaces/bluetooth/socket/aidl | vendor/lib64/android.hardware.bluetooth.socket-V1-ndk.so
   - android.hardware.bluetooth.ranging-V2-ndk.vendor # hardware/interfaces/bluetooth/ranging/aidl | vendor/lib64/android.hardware.bluetooth.ranging-V2-ndk.so
+  # BD6A.251031.001.A4 is a 16 QPR1 image, so Multiuser isn't in stock.
+  # TODO: Remove when stallion is not using 16 QPR1 image
+  - Multiuser # packages/apps/Multiuser | system_ext/priv-app/Multiuser (on different Pixel 16 QPR2 images)
 
 includes:
   - common/gen9pixel.yml
