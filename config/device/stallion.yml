@@ -12,7 +12,10 @@ backport_files:
   vendor:
     - bin/hw/android.hardware.bluetooth-service.bcmbtlinux
     - bin/hw/android.hardware.contexthub-service.generic
+    - bin/hw/android.hardware.gnss-service
+    - bin/hw/android.hardware.gnss-service.pixel
     - bin/hw/android.hardware.usb-service
+    - bin/hw/gnssd
     - bin/modem_logging_control
     - bin/pixelstats-vendor
     - lib64/chremetrics-cpp.so
@@ -23,6 +26,7 @@ backport_files:
     - lib64/pixelatoms-cpp.so
     - lib64/vendor_chre_metrics-cpp.so
     - lib64/vendor.google.bluetooth_ext-V4-ndk.so
+    - lib64/vendor.google.gnss_ext-V1-ndk.so
 
 extra_packages:
   # needed by vendor/bin/hw/android.hardware.contexthub-service.generic

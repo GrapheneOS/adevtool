@@ -3111,8 +3111,8 @@ proprietary/vendor/bin/hw/android.hardware.composer.hwc3-service.pixel: 38a2c974
 proprietary/vendor/bin/hw/android.hardware.contexthub-service.generic: c07a8838c6c4be8aae6bc037803c31d1811e96991370f071e3c35076e6f6365a
 proprietary/vendor/bin/hw/android.hardware.dumpstate-service: 4f8043d52e606ad1ef2778d93c0e779fc7298d7b55540a722d87ee4f3f4d40e2
 proprietary/vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging: 9a5d1320aa10430302a49886893b481996c5a4feeb78c77b256dcaf74d984928
-proprietary/vendor/bin/hw/android.hardware.gnss-service: 1cb950e84b948af9b1f53e6351f8794035f8e791ac5f829deaa1c9856491b2fa
-proprietary/vendor/bin/hw/android.hardware.gnss-service.pixel: 9babc80d46c1bc5d1fadea6e8af8880b7b5550c5ffe25d4e35cd86b59ba8ff50
+proprietary/vendor/bin/hw/android.hardware.gnss-service: 86569119484cf80d4d327ba39cf3f0339cfd97c445d23bb24cc83bd7bb01b202
+proprietary/vendor/bin/hw/android.hardware.gnss-service.pixel: 91051cb689bf17eadc15dcdd8fbfb2caa5af80221e6e8ec03b2585d97e3452d5
 proprietary/vendor/bin/hw/android.hardware.graphics.allocator-V2-service: 0603a530fd95d8cd4fffcfa2a3282bac3dd7873028282319f488a06b067a0128
 proprietary/vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging: 7a19eeeb1ab37ca0a787bd4e966605d965fc90d4b7baed1cde84fb06a08921e8
 proprietary/vendor/bin/hw/android.hardware.health-service.zumapro: f7b0d7368b29844c53cdc4eeacc67f2ca1cf60d9e6199aa2b8e646d5008fee10
@@ -3135,7 +3135,7 @@ proprietary/vendor/bin/hw/citadeld: 075e90f3ef7412a5bf6eb072cd2e6b66571b53cef40d
 proprietary/vendor/bin/hw/com.google.edgetpu.tachyon-service: 1f6403feab6b706788e800654066398344c74d2fd94cbf191f49395b10560b17
 proprietary/vendor/bin/hw/disable_contaminant_detection.sh: 6862135002a2ccf681e2c7bc195910dbb0ca97d4e7597cafba382dedc2fdfdb3
 proprietary/vendor/bin/hw/gnss_test: fe52303ba71122cad4fca0ab94123b39d9e6f5073f72269319921eae1ec2aa96
-proprietary/vendor/bin/hw/gnssd: 75c87caa742581d85fbe9823720667a005119a112817d306036a918a67f6348f
+proprietary/vendor/bin/hw/gnssd: c11ba4edebb7565bc2eb21e1caaa8a055be8276abf237edafa9a020f45559a89
 proprietary/vendor/bin/hw/google.hardware.media.c2@2.0-service: a7400c396a7dfe63d6823c7a1fb4c32ee08627cd4cddf14a5440197412b30ac5
 proprietary/vendor/bin/hw/hostapd: 4fbdcce78a0221c483816bb674042b512f8e81c23e8e33bffbe38dded90d7962
 proprietary/vendor/bin/hw/init_citadel: 6c3ecbfd628cc7c3fab8c6d4457f8d97589b69742a3dc178bf32955749b730b8
@@ -6548,7 +6548,7 @@ proprietary/vendor/lib64/vendor.google.battery_mitigation.service_static.so: 278
 proprietary/vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so: 469be2f97743b898d1eda03a4767b0133db411429261c671a58d615e41dafa2e
 proprietary/vendor/lib64/vendor.google.bluetooth_ext-V3-ndk.so: c7965074da6e843f067303d1a84ce3d86e2fdc65a4e98b7aeb6aed2e0d1e7084
 proprietary/vendor/lib64/vendor.google.bluetooth_ext-V4-ndk.so: d78e3e36959ce6574d1df85f3b73dffcb2ea4a471e9d868ea0b40f5151d196bf
-proprietary/vendor/lib64/vendor.google.gnss_ext-V1-ndk.so: ebfc710fb2f2117d9a47a34f1fc512f11910f7204ed384e45619499997fdcfb2
+proprietary/vendor/lib64/vendor.google.gnss_ext-V1-ndk.so: 0d9cfd033ab9aaeed18df55270bcbe4c4854ab3858c4914b217f321d23a9a6a0
 proprietary/vendor/lib64/vendor.google.google_battery-V4-ndk.so: 7f043848890015cb002b7f278d5bd68d42e3cdc10be1470f9f94074e53839d5c
 proprietary/vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so: ac25f89e46bf124e63ecda1153ee66d4ff8f2dd94d1cbbeb46958ae48d251e25
 proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so: 9588f552926e2780fcf7ea434940196beefc91c8fb781a9d9ed60e3d65ea6fbe
