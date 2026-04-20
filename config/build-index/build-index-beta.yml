@@ -699,3 +699,5 @@ mustang CP21.260330.008:
 rango CP21.260330.008:
   factory: fe87b79c73eb2836b5f8032aaac32b6fcbbc29fd51f9b6c4e27dbe41fc8bb7fe https://dl.google.com/developers/android/cinnamonbun/images/factory/rango_beta-cp21.260330.008-factory-fe87b79c.zip
   ota: 9346cf610eb6428cacd367a252d181bef8a6eecce665f584eb90ad83839485e6 https://dl.google.com/developers/android/cinnamonbun/images/ota/rango_beta-ota-cp21.260330.008-9346cf61.zip
+stallion CP21.260330.008:
+  factory: c5f32eb307c5a1be70dbe5b355595a6e165df06d8200c849704aa6b7e5a25df3 https://dl.google.com/developers/android/cinnamonbun/images/factory/stallion_beta-cp21.260330.008-factory-c5f32eb3.zip
