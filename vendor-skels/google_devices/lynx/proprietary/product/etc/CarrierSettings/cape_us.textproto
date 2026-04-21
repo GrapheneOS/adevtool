@@ -1,6 +1,10 @@
 canonical_name: "cape_us"
 version: 75000000001
 configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
 }
 last_updated {
   seconds: 1762942351

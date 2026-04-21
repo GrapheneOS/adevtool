@@ -10,6 +10,7 @@ import { SmartBuffer } from 'smart-buffer'
 import { promises as stream } from 'stream'
 import { DeviceConfig } from '../config/device'
 import { CARRIER_SETTINGS_DIR, getHostBinPath, OS_CHECKOUT_DIR } from '../config/paths'
+import { CARRIER_SETTINGS_PATCHES } from './carrier-db-overrides'
 import { CarrierList } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_list'
 import {
   CarrierSettings,
@@ -247,4 +248,30 @@ export async function getVersionsMap(dir: string): Promise<Map<string, number>> 
 
 export function getCarrierSettingsUpdatesDir(config: DeviceConfig) {
   return path.join(CARRIER_SETTINGS_DIR, config.device.vendor, config.device.name)
+}
+
+export async function patchCarrierSettings(csDir: string) {
+  for (const [carrierName, patches] of Object.entries(CARRIER_SETTINGS_PATCHES)) {
+    const pbFile = path.join(csDir, `${carrierName}.pb`)
+    if (!(await exists(pbFile))) {
+      continue
+    }
+    const data = await fs.readFile(pbFile)
+    const settings = CarrierSettings.decode(data)
+    if (!settings.configs) {
+      settings.configs = { config: [] }
+    }
+    for (const entry of patches) {
+      const i = settings.configs.config.findIndex(c => c.key === entry.key)
+      if (i >= 0) {
+        settings.configs.config[i] = entry
+      } else {
+        settings.configs.config.push(entry)
+      }
+    }
+    const encoded = CarrierSettings.encode(settings).finish()
+    await fs.chmod(pbFile, 0o644)
+    await fs.writeFile(pbFile, encoded)
+    log(`Patched carrier settings: ${carrierName}`)
+  }
 }

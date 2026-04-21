@@ -1,3 +1,5 @@
+import { CarrierConfig_Config } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_settings'
+
 export interface CarrierDbOverride {
   name: string
   carrier_id: number
@@ -20,3 +22,9 @@ export const CARRIER_DB_OVERRIDES: CarrierDbOverride[] = [
     gid2: '%',
   },
 ]
+
+// Per-carrier CarrierSettings config overrides applied after extraction/download.
+export const CARRIER_SETTINGS_PATCHES: Record<string, CarrierConfig_Config[]> = {
+  cape_us: [{ key: 'carrier_volte_available_bool', boolValue: true }],
+  cape_ca: [{ key: 'carrier_volte_available_bool', boolValue: true }],
+}
