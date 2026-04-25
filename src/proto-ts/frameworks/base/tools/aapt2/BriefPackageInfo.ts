@@ -20,6 +20,7 @@ export interface BriefPackageInfo {
   contentProviderAuthority: string[];
   usesLibrary: string[];
   optionalUsesLibrary: string[];
+  library: string[];
 }
 
 function createBaseBriefPackageInfo(): BriefPackageInfo {
@@ -33,6 +34,7 @@ function createBaseBriefPackageInfo(): BriefPackageInfo {
     contentProviderAuthority: [],
     usesLibrary: [],
     optionalUsesLibrary: [],
+    library: [],
   };
 }
 
@@ -64,6 +66,9 @@ export const BriefPackageInfo: MessageFns<BriefPackageInfo> = {
     }
     for (const v of message.optionalUsesLibrary) {
       writer.uint32(74).string(v!);
+    }
+    for (const v of message.library) {
+      writer.uint32(82).string(v!);
     }
     return writer;
   },
@@ -147,6 +152,14 @@ export const BriefPackageInfo: MessageFns<BriefPackageInfo> = {
           message.optionalUsesLibrary.push(reader.string());
           continue;
         }
+        case 10: {
+          if (tag !== 82) {
+            break;
+          }
+
+          message.library.push(reader.string());
+          continue;
+        }
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -201,6 +214,7 @@ export const BriefPackageInfo: MessageFns<BriefPackageInfo> = {
         : globalThis.Array.isArray(object?.optional_uses_library)
         ? object.optional_uses_library.map((e: any) => globalThis.String(e))
         : [],
+      library: globalThis.Array.isArray(object?.library) ? object.library.map((e: any) => globalThis.String(e)) : [],
     };
   },
 
@@ -233,6 +247,9 @@ export const BriefPackageInfo: MessageFns<BriefPackageInfo> = {
     if (message.optionalUsesLibrary?.length) {
       obj.optionalUsesLibrary = message.optionalUsesLibrary;
     }
+    if (message.library?.length) {
+      obj.library = message.library;
+    }
     return obj;
   },
 
@@ -250,6 +267,7 @@ export const BriefPackageInfo: MessageFns<BriefPackageInfo> = {
     message.contentProviderAuthority = object.contentProviderAuthority?.map((e) => e) || [];
     message.usesLibrary = object.usesLibrary?.map((e) => e) || [];
     message.optionalUsesLibrary = object.optionalUsesLibrary?.map((e) => e) || [];
+    message.library = object.library?.map((e) => e) || [];
     return message;
   },
 };
