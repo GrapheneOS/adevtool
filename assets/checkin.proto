@@ -1,0 +1,928 @@
+// Copyright 2014 The Chromium Authors
+// Use of this source code is governed by a BSD-style license that can be
+// found in the https://chromium.googlesource.com/chromium/src/+/refs/heads/main/LICENSE file.
+//
+// Based on https://chromium.googlesource.com/chromium/src/google_apis/+/refs/heads/main/gcm/protocol/checkin.proto
+//
+// Requests are sent to `https://android.clients.google.com/checkin` with `Content-Type:
+// application/x-protobuffer`, optionally gzipped.
+
+syntax = "proto2";
+
+package android.checkin;
+
+// Main request sent to the Android Checkin endpoint. Devices send this every few hours.
+//
+// In Play services 26.13.32, many optional fields in this message and in `CheckinPayload` are
+// controlled by the Phenotype flag `Checkin_includedFields`.
+message CheckinRequest {
+  // Plaintext IMEI from `TelephonyManager.getImei(int)`, chosen from the available modem
+  // slots.
+  //
+  // When multiple slots are present, GmsCore ranks the returned IMEIs to pick a stable slot,
+  // but the value sent here is the original unhashed IMEI. Omitted when phone-state access is
+  // unavailable or when the chosen value is null or numerically zero.
+  optional string imei = 1;
+
+  // Android ID currently stored for checkin/Gservices state.
+  //
+  // Zero before the device has been assigned an Android ID.
+  //
+  // The value `<android_id>:<security_token>` is persisted both inside the GMS data directory
+  // and in a platform backup at `/data/misc_ce/<userid>/checkin/checkin_id_token`. When the
+  // in-package copy is missing, GMS reads the backup and restores the in-package copy from it.
+  // Because the backup lives outside the GMS data directory, it survives `pm clear
+  // com.google.android.gms`: a subsequent checkin still sends the previously-minted Android
+  // ID. To truly reset the ID, the backup at `/data/misc_ce/<userid>/checkin/` must also be
+  // removed.
+  //
+  // The backup directory is labeled by sepolicy so that only the privileged GMS domain on
+  // stock Android can write it. On configurations where GMS runs in a less-privileged domain
+  // (for example sandboxed Play Services running as a regular untrusted app), the backup
+  // writes fail with EACCES and the persistence mechanism degrades silently: the in-package
+  // copy is still written, but cross-clear survival is lost, so `pm clear` does reset the ID
+  // in that environment.
+  optional int64 current_android_id = 2;
+
+  // Local Gservices digest of device provisioning read from the Gservices key `"digest"`.
+  //
+  // The Gservices provider computes it as `"1-"` plus the lowercase hex SHA-1 of the sorted
+  // local Gservices `main` table, excluding the `digest` row. With an empty table on first checkin,
+  // this is `"1-da39a3ee5e6b4b0d3255bfef95601890afd80709"`, equivalent to
+  // `MessageDigest.getInstance("SHA-1").digest(new byte[0])`. If the key lookup does not yield a
+  // value, the request builder's fallback is an empty string.
+  optional string digest = 3;
+
+  // Main payload block with device, network, subscription, and reason data.
+  optional CheckinPayload payload = 4;
+
+  // Current default locale from `Locale.getDefault().toLanguageTag()`, in BCP 47 format such
+  // as `en-US`.
+  optional string locale = 6;
+
+  // MAC addresses from active non-cellular network interfaces, with separators removed.
+  //
+  // Entries stay in the same order as `network_interface_type`.
+  repeated string mac_addr = 9;
+
+  // Plaintext MEID from `TelephonyManager.getMeid()` for devices declaring feature
+  // `android.hardware.telephony.cdma`.
+  //
+  // Omitted when unavailable, null, or numerically zero.
+  optional string meid = 10;
+
+  // Repeated account cookie values for Google accounts.
+  //
+  // Each account contributes two entries: first the bracketed account name, then the
+  // corresponding auth token. An empty string is emitted when no Google accounts are
+  // available.
+  repeated string account_auth_cookie = 11;
+
+  // Default time zone ID from `TimeZone.getDefault().getID()`, such as `America/Toronto`.
+  optional string timezone_id = 12;
+
+  // Current checkin security token stored from a prior successful response. Used to validate the
+  // checkin request.
+  //
+  // Zero before the device has been assigned a security token.
+  optional fixed64 current_security_token = 13;
+
+  // Version of checkin protocol.
+  //
+  // There are currently two versions:
+  //
+  // - version field missing: android IDs are assigned based on
+  //   hardware identifiers.  unsecured in the sense that you can
+  //   "unregister" someone's phone by sending a registration request
+  //   with their IMEI/MEID/MAC.
+  //
+  // - version=2: android IDs are assigned randomly.  The device is
+  //   sent a security token that must be included in all future
+  //   checkins for that android id.
+  //
+  // - version=3: same as version 2, but the 'fragment' field is
+  //   provided, and the device understands incremental updates to the
+  //   gservices table (ie, only returning the keys whose values have
+  //   changed.)
+  //
+  // (version=1 was skipped to avoid confusion with the "missing"
+  // version field that is effectively version 1.)
+  optional int32 checkin_protocol_version = 14;
+
+  // OTA package verification certificate fingerprints from
+  // `/system/etc/security/otacerts.zip`.
+  //
+  // For each ZIP entry, the client reads the uncompressed entry contents with
+  // `ZipFile.getInputStream(entry)`, computes SHA-1 over those bytes, and stores
+  // `Base64.encodeToString(digest, Base64.NO_WRAP)`. `Base64.NO_WRAP` uses the standard Base64
+  // alphabet without line wrapping and keeps `=` padding; a 20-byte SHA-1 digest therefore
+  // encodes as a 28-character string ending in `=`.
+  //
+  // The certificate entry is not parsed before hashing, so this is not a digest of
+  // `X509Certificate.getPublicKey().getEncoded()` or DER-normalized certificate data.
+  repeated string ota_cert = 15;
+
+  // Device serial number from `Build.getSerial()` when allowed, otherwise from legacy
+  // `Build.SERIAL`.
+  //
+  // Omitted when unavailable, empty, or equal to `"unknown"`.
+  optional string serial = 16;
+
+  // Legacy `TelephonyManager.getDeviceId()` fallback.
+  //
+  // This field is only populated when the returned value is already an 8-character hexadecimal
+  // string, so it is usually absent on modern phones.
+  optional string imei_fallback = 17;
+
+  // Device capability and display configuration block.
+  optional DeviceConfiguration device_configuration = 18;
+
+  // An array parallel to mac_addr, describing the type of interface.
+  // Currently accepted values: "wifi", "ethernet", "bluetooth".  If
+  // not present, "wifi" is assumed.
+  repeated string network_interface_type = 19;
+
+  // Request fragment index. Play services 26.13.32 always sends `0`.
+  optional int32 fragment_index = 20;
+
+  // Android user serial number from `UserManager.getUserSerialNumber(int)`, called for the
+  // current GmsCore user/profile identifier.
+  optional int32 user_serial_number = 22;
+
+  // Management and signing-certificate information for the package that owns Google services
+  // on the device.
+  optional GsfVersionInfo gms_version_info = 23;
+
+  // Opaque DroidGuard result string for the `"checkin"` request.
+  //
+  // The input binder is derived from the current Android ID, available telephony identifiers,
+  // and active non-cellular interface data.
+  optional string droidguard_checkin_result = 24;
+
+  // Last server `device_data_version_info` string persisted from a prior checkin response.
+  optional string device_data_version_info = 25;
+
+  // Restriction mode reported for certain device classes.
+  optional CheckinRestriction checkin_restriction = 26;
+
+  // Wearable pairing network ID and secret from the local wearable pairing store, if the
+  // device is paired with a wearable.
+  optional WearablePairing wearable_pairing = 27;
+
+  // Requests that the response include system update information.
+  //
+  // Set from the checkin request Bundle key `"CheckinService_fetchSystemUpdates"` or matching
+  // service intent state.
+  optional bool fetch_system_updates = 29;
+
+  // Whether `Settings.Global.getInt("euicc_provisioned") == 1`.
+  //
+  // Gated by Phenotype flag `checkin_send_euicc_provisioned` (defaults to false).
+  optional bool euicc_provisioned = 30;
+
+  // When true, asks the server to refresh the Android ID instead of reusing the current one.
+  optional bool refresh_android_id = 31;
+
+  // Whether `UserManager.isUserOfType("android.os.usertype.full.GUEST")` is true for the
+  // current user.
+  optional GuestType guest_type = 32;
+
+  // Whether `UserManager.isHeadlessSystemUserMode()` is true.
+  optional bool is_headless_system_user_mode = 33;
+
+  // Whether `UserManager.isMainUser()` is true for the current user.
+  optional bool is_main_user = 34;
+
+  // Structured hardware key-attestation result.
+  //
+  // Controlled by Phenotype flag `enable_key_attestation` in package
+  // `com.google.android.gms.checkin`, which defaults to true. When sibling flag
+  // `take_challenge_from_server` in the same package is enabled, the attestation challenge uses
+  // previously stored server `time_ms` when available; on first checkin before any server time is
+  // stored, it falls back to `Instant.now().toEpochMilli()`. That flag also defaults to true.
+  optional KeyAttestationResult key_attestation = 35;
+}
+
+// Response returned by the Android Checkin endpoint.
+message CheckinResponse {
+  // Whether the server accepted the checkin / statistics were recorded properly.
+  required bool status_ok = 1;
+
+  // Server commands to materialize and broadcast as Android intents.
+  repeated CheckinIntent intent = 2;
+
+  // Server time in milliseconds since the Unix epoch.
+  optional int64 time_ms = 3;
+
+  // Provisioning is sent if the request included an obsolete digest.
+  //
+  // For version <= 2, 'digest' contains the digest that should be
+  // sent back to the server on the next checkin, and 'setting'
+  // contains the entire gservices table (which replaces the entire
+  // current table on the device).
+  //
+  // for version >= 3, 'digest' will be absent.  If 'settings_diff'
+  // is false, then 'setting' contains the entire table, as in version
+  // 2.  If 'settings_diff' is true, then 'delete_setting' contains
+  // the keys to delete, and 'setting' contains only keys to be added
+  // or for which the value has changed.  All other keys in the
+  // current table should be left untouched.  If 'settings_diff' is
+  // absent, don't touch the existing gservices table.
+  //
+  // Note: delete_setting seems to be missing in Play services 26.13.32
+  optional bytes digest = 4;
+
+  // Gservices key/value pairs to write locally.
+  repeated GservicesEntry gservices_entry = 5;
+
+  // Android ID from the request, or newly assigned
+  //
+  // The same value is also delivered in the `gservices_entry` row named `"android_id"`, encoded as
+  // a decimal string.
+  optional fixed64 android_id = 7;
+
+  // New security token assigned by the server.
+  optional fixed64 security_token = 8;
+
+  // Whether the response should be treated as a full Gservices set rather than a partial
+  // update.
+  optional bool settings_diff = 9;
+
+  // repeated string delete_setting = 10; // seems to be missing in Play services 26.13.32
+
+  // Server version string persisted for later checkins.
+  optional string version_info = 11;
+
+  // Server device-data version string persisted for later checkins.
+  optional string device_data_version_info = 12;
+
+  // Auth tokens that should be invalidated locally.
+  repeated string invalidate_auth_token = 13;
+}
+
+// ======================================================================
+// Payload sub-messages
+// ======================================================================
+
+// Main body of a checkin request.
+//
+// As with `CheckinRequest`, many optional fields in this message are controlled by the Phenotype
+// flag `Checkin_includedFields`.
+message CheckinPayload {
+  // Build and device identity block.
+  optional DeviceInfo device_info = 1;
+
+  // Miliseconds since the Unix epoch of the device's last successful checkin. Used for incremental
+  // log upload across checkins.
+  optional int64 last_checkin_msec = 2;
+
+  // Recent `DropBoxManager` entries such as crashes, tombstones, and ANRs.
+  repeated DropBoxLogEntry log_entry = 3;
+
+  // Test harness marker strings.
+  //
+  // Play services 26.13.32 uses "te.bots" when the device is running in the Android test harness according to
+  // `ActivityManager.isRunningInTestHarness()`.
+  repeated string test_harness_marker = 5;
+
+  // Current network operator MCCMNC from `TelephonyManager.getNetworkOperator()`.
+  optional string network_operator_mccmnc = 6;
+
+  // Current SIM operator MCCMNC from `TelephonyManager.getSimOperator()`.
+  optional string sim_operator_mccmnc = 7;
+
+  // Active network summary from `ConnectivityManager.getActiveNetworkInfo()`, formatted as
+  // `<NetworkInfo.getTypeName()>:<NetworkInfo.getSubtypeName()>:<roaming-flag>`.
+  //
+  // The final segment is `r` when roaming and empty otherwise.
+  optional string network_connectivity_info = 8;
+
+  // Current GmsCore user/profile identifier.
+  //
+  // This is the integer passed to `UserManager.getUserSerialNumber(int)` for the outer
+  // `CheckinRequest.user_serial_number` field.
+  optional int32 user_serial_number = 9;
+
+  // High-level form-factor classification such as phone, tablet, TV, or wearable.
+  optional DeviceFormFactor device_form_factor = 14;
+
+  // Metadata explaining why this checkin ran.
+  optional CheckinReason checkin_reason = 15;
+
+  // One entry for each active subscription from
+  // `SubscriptionManager.getActiveSubscriptionInfoList()`, with a legacy `TelephonyManager`
+  // fallback when active-subscription details are unavailable.
+  repeated SimCardInfo sim_card = 16;
+
+  // Whether `TelephonyManager.isVoiceCapable()` is true.
+  optional bool is_voice_capable = 18;
+
+  // Active network type name from `ConnectivityManager.getActiveNetworkInfo().getTypeName()`,
+  // such as `WIFI` or `MOBILE`.
+  optional string network_type = 19;
+
+  // Whether the active SIM or ICC is lock-enabled, lock-disabled, or unavailable.
+  optional IccLockState icc_lock_state = 20;
+
+  // Carrier ID for the active SIM from `TelephonyManager.getSimCarrierId()`, as defined by
+  // Android's carrier ID database.
+  optional int32 sim_carrier_id = 21;
+}
+
+// Build, software, and product metadata reported during checkin.
+message DeviceInfo {
+  // `Build.FINGERPRINT`.
+  optional string build_fingerprint = 1;
+
+  // `Build.HARDWARE`.
+  optional string hardware = 2;
+
+  // `Build.BRAND`.
+  optional string brand = 3;
+
+  // Radio or baseband version from `Build.getRadioVersion()`.
+  //
+  // If the live value is unavailable, the client may fall back to the last cached radio
+  // version.
+  //
+  // On devices with multiple phone slots, this is a comma-joined string, one entry per slot in
+  // order. The framework's `Build.getRadioVersion()` reads the multi-value system property
+  // whose entries are populated per-slot by the radio interface layer after each modem
+  // initializes, and joins them with `,`. A dual-SIM device backed by a single physical modem
+  // typically reports the same value twice (e.g. on tokay/Pixel 9:
+  // `"g5400c-251201-260127-B-14784805,g5400c-251201-260127-B-14784805"`), because both phone
+  // slots query the same modem and get the same string. A device with no active phone slots
+  // may omit the field or send an empty string.
+  optional string radio_version = 4;
+
+  // `Build.BOOTLOADER`.
+  optional string bootloader_version = 5;
+
+  // Primary client ID string reported for this device.
+  optional string client_id = 6;
+
+  // `Build.TIME / 1000`, in seconds since the Unix epoch.
+  optional int64 build_time_seconds = 7;
+
+  // Installed GmsCore version code from `PackageManager.getPackageInfo(...).versionCode`.
+  //
+  // The server gates response volume on this value.
+  optional int32 gms_version_code = 8;
+
+  // `Build.DEVICE`.
+  optional string device = 9;
+
+  // `Build.VERSION.SDK_INT`.
+  optional int32 sdk_version = 10;
+
+  // `Build.MODEL`.
+  optional string model = 11;
+
+  // `Build.MANUFACTURER`.
+  optional string manufacturer = 12;
+
+  // `Build.PRODUCT`.
+  optional string product = 13;
+
+  // Whether `/system/recovery-from-boot.p` exists on disk, as tested with `File.exists()`.
+  //
+  // In AOSP, `recovery-from-boot.p` is a binary patch used with `install-recovery.sh` and
+  // `applypatch` to reconstruct or install the recovery image from the boot image on devices
+  // with a separate recovery partition. It is not the OTA package itself, and is usually
+  // absent on devices that use A/B updates or recovery-as-boot.
+  optional bool recovery_from_boot_patch_exists = 14;
+
+  // Per-slot client ID strings for different Google components.
+  repeated ClientIdAssignment client_id_assignment = 15;
+
+  // `Build.VERSION.SECURITY_PATCH`.
+  optional string security_patch = 19;
+
+  // Per-partition build metadata for partitions that this client chooses to enumerate at
+  // runtime.
+  repeated PartitionBuildInfo partition_build_info = 23;
+
+  // Device ODM SKU.
+  //
+  // Uses `Build.ODM_SKU` when available; some devices fall back to
+  // `SystemProperties.get("ro.boot.product.hardware.id", "unknown")`.
+  optional string odm_sku = 24;
+}
+
+// Hardware and configuration capability block.
+message DeviceConfiguration {
+  // Required touchscreen type from `ConfigurationInfo.reqTouchScreen`.
+  optional TouchscreenType touch_screen = 1;
+
+  // Required keyboard type from `ConfigurationInfo.reqKeyboardType`.
+  optional KeyboardType keyboard = 2;
+
+  // Required navigation type from `ConfigurationInfo.reqNavigation`.
+  optional NavigationType navigation = 3;
+
+  // REQUIRED for HTTP 200: must be present on the wire (proto2 has-bit set), even when value
+  // is the proto2 default. Missing -> HTTP 400 with `[["er",...,3],["di",N]]`.
+  // Screen size bucket derived from the device's physical size in density-independent pixels.
+  optional ScreenLayout screen_layout = 4;
+
+  // REQUIRED for HTTP 200: must be present on the wire even when value is `false`.
+  // Whether `ConfigurationInfo.reqInputFeatures` includes
+  // `ConfigurationInfo.INPUT_FEATURE_HARD_KEYBOARD`.
+  optional bool has_hard_keyboard = 5;
+
+  // REQUIRED for HTTP 200: must be present on the wire even when value is `false`.
+  // Whether `ConfigurationInfo.reqInputFeatures` includes
+  // `ConfigurationInfo.INPUT_FEATURE_FIVE_WAY_NAV`.
+  optional bool has_five_way_navigation = 6;
+
+  // REQUIRED for HTTP 200: must be present on the wire.
+  // Stable display density in DPI from `DisplayMetrics.densityDpi`.
+  optional int32 screen_density_dpi = 7;
+
+  // REQUIRED for HTTP 200: must be present on the wire.
+  // OpenGL ES version encoded as `(major << 16) | minor`.
+  optional int32 gl_es_version = 8;
+
+  // Sorted names returned by `PackageManager.getSystemSharedLibraryNames()`.
+  repeated string system_shared_library = 9;
+
+  // Sorted feature names returned by `PackageManager.getSystemAvailableFeatures()`.
+  //
+  // Note that this will gate flags that get returned, e.g. android.hardware.telephony.euicc is
+  // necessary to get `euicc.*` and `euiccpixel.*` gservices flags in the response.
+  repeated string system_available_feature = 10;
+
+  // Supported ABIs for the device.
+  repeated string native_platform = 11;
+
+  // REQUIRED for HTTP 200: must be present on the wire.
+  // Smaller dimension returned by `DisplayManager.getStableDisplaySize()`, in pixels.
+  optional int32 screen_width_px = 12;
+
+  // REQUIRED for HTTP 200: must be present on the wire.
+  // Larger dimension returned by `DisplayManager.getStableDisplaySize()`, in pixels.
+  optional int32 screen_height_px = 13;
+
+  // Locales from `Context.getAssets().getLocales()`.
+  repeated string system_supported_locale = 14;
+
+  // OpenGL extension names reported by `GLES10.glGetString(...)` for the `GL_EXTENSIONS`
+  // string.
+  repeated string gl_extension = 15;
+
+  // REQUIRED for HTTP 200: must be present on the wire.
+  // `Configuration.smallestScreenWidthDp`.
+  optional int32 smallest_screen_width_dp = 18;
+
+  // Whether `ActivityManager.isLowRamDevice()` is true.
+  optional bool low_ram_device = 19;
+
+  // `ActivityManager.getMemoryInfo().totalMem`.
+  optional int64 total_memory_bytes = 20;
+
+  // `Runtime.getRuntime().availableProcessors()`.
+  optional int32 cpu_core_count = 21;
+
+  // Feature names and versions from `FeatureInfo.name` and `FeatureInfo.version` in
+  // `PackageManager.getSystemAvailableFeatures()`.
+  repeated FeatureWithVersion available_feature_with_version = 26;
+
+  // Whether `KeyguardManager.isDeviceSecure()` is true.
+  optional bool is_device_secure = 28;
+
+  // Value of `SystemProperties.get("ro.oem.key1", "")`. On Pixels this is the SKU code,
+  // identical to `device_configuration.odm_sku` (e.g. `GUR25` on a US/CA Pixel 9). Emitted
+  // only when the property is set to a non-empty value; absent when unset.
+  optional string oem_key = 29;
+
+  // REQUIRED for HTTP 200: must be present on the wire.
+  // Screen size classification derived from `Configuration.screenLayout` after masking and
+  // normalization.
+  optional ScreenLayout screen_layout_legacy = 30;
+}
+
+// ======================================================================
+// Identity, accounts, carrier
+// ======================================================================
+
+// One `DropBoxManager` entry included in the payload.
+message DropBoxLogEntry {
+  // DropBox tag from `DropBoxManager.Entry.getTag()`, such as `system_app_crash` or
+  // `system_tombstone`.
+  optional string tag = 1;
+
+  // Entry body text from `DropBoxManager.Entry.getText(...)`, or a compact summary string when
+  // the full entry body is not sent.
+  optional string data = 2;
+
+  // Entry timestamp from `DropBoxManager.Entry.getTimeMillis()`, in milliseconds since the
+  // Unix epoch.
+  optional int64 time_ms = 3;
+}
+
+// Intent-like command returned by the server.
+message CheckinIntent {
+  // Action string passed to `Intent.setAction(...)`.
+  required string action = 1;
+
+  // Data URI string passed to `Intent.setData(Uri.parse(...))`.
+  optional string data_uri = 2;
+
+  // MIME type passed to `Intent.setType(...)`.
+  optional string mime_type = 3;
+
+  // One extra key/value pair.
+  repeated group Extra = 5 {
+    // Extra key name.
+    required string key = 6;
+
+    // Extra value string.
+    optional string value = 7;
+  }
+
+  // Package name passed to `Intent.setPackage(...)`.
+  optional string target_package = 8;
+}
+
+// One Gservices key/value pair returned by the server to the device's Gservices database
+//
+// Both fields are wire-type bytes but hold ASCII strings in practice. When the key is
+// `"android_id"`, the value is a decimal integer string for the new Android ID.
+message GservicesEntry {
+  // Gservices key.
+  optional bytes name = 1;
+
+  // Gservices value.
+  optional bytes value = 2;
+}
+
+// Reason metadata attached to a checkin.
+message CheckinReason {
+  // Why the checkin ran.
+  optional CheckinReasonCode reason = 1;
+
+  // One-based attempt count for this checkin.
+  optional int32 retry_count = 2;
+
+  // Package name that requested the checkin, or `"unspecified"`.
+  optional string source_package = 3;
+
+  // Caller class name when available.
+  optional string source_class = 4;
+
+  // Whether the caller asked for forced execution.
+  optional bool force = 5;
+}
+
+// Per-subscription telephony information for one active SIM or eSIM profile.
+//
+// Preferentially populated from `SubscriptionManager.getActiveSubscriptionInfoList()`. On older
+// or restricted devices, GmsCore falls back to process-wide `TelephonyManager` methods.
+message SimCardInfo {
+  // SIM operator MCCMNC from `TelephonyManager.getSimOperator()`.
+  //
+  // When a subscription ID is available, this is read from a subscription-specific
+  // `TelephonyManager`.
+  optional string sim_operator = 1;
+
+  // Human-readable carrier name from `SubscriptionInfo.getCarrierName()`.
+  optional string carrier_name = 2;
+
+  // String form of `SubscriptionInfo.getDataRoaming()`, usually `"0"` or `"1"`.
+  optional string data_roaming = 3;
+
+  // Roles for which this subscription is currently the default choice.
+  //
+  // Compared against `SubscriptionManager.getDefaultVoiceSubscriptionId()`,
+  // `SubscriptionManager.getDefaultDataSubscriptionId()`, and
+  // `SubscriptionManager.getDefaultSmsSubscriptionId()`.
+  repeated SubscriptionRole default_for = 4;
+
+  // Shortened or privacy-filtered form of `TelephonyManager.getSubscriberId()` for this
+  // subscription.
+  optional string subscriber_id_truncated = 6;
+
+  // `TelephonyManager.getGroupIdLevel1()`
+  optional string group_id_level1 = 7;
+
+  // Hashed bytes derived from `TelephonyManager.getSubscriberId()` for this subscription.
+  optional bytes subscriber_id_hash = 8;
+
+  // Carrier ID for this subscription from `TelephonyManager.getSimCarrierId()`, as defined by
+  // Android's carrier ID database.
+  optional int32 sim_carrier_id = 9;
+}
+
+// Helper shape for one non-cellular network interface.
+//
+// The request does not send this message directly; it sends the MAC and the interface type in
+// separate parallel arrays.
+message NetworkInterfacePair {
+  // MAC address with separators removed.
+  required string mac_addr = 1;
+
+  // Interface type name, such as `ethernet`.
+  required string interface_type_name = 2;
+}
+
+// Package ownership and certificate information for the package that currently manages Google
+// services on the device.
+message GsfVersionInfo {
+  // Package name of the managing package.
+  optional string package_name = 1;
+
+  // SHA-1 digest of that package's signing certificate.
+  optional bytes version_hash = 2;
+
+  // SHA-256 digest of that package's signing certificate.
+  optional bytes checksum = 5;
+
+  // Ownership and profile-management mode for that package.
+  optional AccountMode account_mode = 6;
+}
+
+// Wearable pairing identity stored on the phone.
+//
+// Read from the local wearable pairing store keys `"network_id"` and `"network_secret"`.
+message WearablePairing {
+  // Wearable network ID.
+  optional string network_id = 1;
+
+  // Wearable network secret.
+  optional string network_secret = 2;
+}
+
+// Result of the optional hardware key-attestation flow for AndroidKeyStore alias
+// `checkin_attestation`.
+//
+// GmsCore builds an EC P-256 / SHA-256 attestation key with
+// `KeyGenParameterSpec.Builder`, sets the challenge with
+// `setAttestationChallenge(...)`, and first tries normal AndroidKeyStore key generation. If that
+// fails with a matching `KeyStoreException` on a device advertising StrongBox support, it retries
+// with `setIsStrongBoxBacked(true)`.
+//
+// The integrity payload is the certificate chain at `certificate_chain_der`, not the challenge.
+// Per AOSP `KeyGenParameterSpec.Builder#setAttestationChallenge` javadoc: when the key lives in
+// secure hardware that supports attestation, "the certificate will be signed by a chain of
+// certificates rooted at a trustworthy CA key", so that hardware-rooted chain is what lets the
+// server verify the attested device properties and IDs.
+//
+// The attestation key and its certificate chain are short-lived. GmsCore sets
+// `setCertificateNotBefore` to one minute before generation time (a clock-skew buffer) and
+// `setCertificateNotAfter` to ten minutes after that, giving the cert a ~10-minute validity
+// window. The temporary `checkin_attestation` keystore entry is deleted after the chain is
+// read, so each checkin produces a fresh chain.
+//
+// The challenge value's only job is freshness. From the same javadoc: "The purpose of the
+// challenge value is to enable relying parties to verify that the key was created in response
+// to a specific request. If attestation is desired but no challenge is needed, any non-`null`
+// value may be used, including an empty byte array." Servers don't validate the content -- just
+// the signature over it. So on a synthesized request, any non-null challenge works.
+//
+// See:
+// https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder#setAttestationChallenge(byte[])
+//
+// For reference, GmsCore's actual derivation of the challenge bytes: with sibling flag
+// `take_challenge_from_server` enabled (the default), the 8-byte big-endian encoding of the
+// previous successful checkin response's stored server `time_ms` if available, otherwise the
+// 8-byte big-endian encoding of `Instant.now().toEpochMilli()`. When the flag is disabled, the
+// UTF-8 bytes of `Instant.now().toString()`. On a true first checkin no server `time_ms` has
+// been stored yet, so the challenge falls back to local time regardless of the flag.
+//
+// When `PackageManager.hasSystemFeature("android.software.device_id_attestation")` returns true,
+// GmsCore calls `setAttestationIds(...)` to bind unique device identifiers into the attestation
+// extension. In this checkin path that means SERIAL
+// and/or IMEI, never MEID: GmsCore passes `{ID_TYPE_IMEI, ID_TYPE_SERIAL}` when both are
+// available, `{ID_TYPE_SERIAL}` when only serial is available, `{ID_TYPE_IMEI}` when only IMEI is
+// available, and skips the call when neither is available.
+//
+// On the same builder, GmsCore also calls `setDevicePropertiesAttestationIncluded(true)`, which
+// adds `Build.BRAND`, `Build.DEVICE`, `Build.MANUFACTURER`, `Build.MODEL`, and `Build.PRODUCT` to
+// the attestation extension.
+//
+// The `setAttestationIds(...)` path requires
+// `android.permission.READ_PRIVILEGED_PHONE_STATE` (protection level
+// `signature|privileged|role`), and Keystore2 enforces that requirement during key generation.
+//
+// This checkin path does not call `setUniqueIdIncluded(true)`. If generation succeeds, GmsCore
+// reads the temporary `checkin_attestation` certificate chain back from AndroidKeyStore,
+// DER-encodes each certificate into `certificate_chain_der`, copies the challenge bytes into
+// `challenge_echo`, and deletes the temporary key entry.
+//
+// On failure (e.g. Sandboxed Google Play will fail to generate the `checkin_attestation` key due
+// to the `READ_PRIVILEGED_PHONE_STATE` requirement for `setAttestationIds`), GmsCore may still
+// send `hardware_revision` plus an `error` block instead of a certificate chain. However, the
+// server still accepts checkins that report a key generation failure.
+message KeyAttestationResult {
+  // DER-encoded X.509 certificate chain returned by AndroidKeyStore, using
+  // `Certificate.getEncoded()` for each certificate.
+  repeated bytes certificate_chain_der = 1;
+
+  // Attestation challenge bytes given to `KeyGenParameterSpec.Builder.setAttestationChallenge(...)`
+  //
+  // In this checkin path, with `take_challenge_from_server` enabled (the default), the bytes
+  // are the 8-byte big-endian encoding of milliseconds: the previous successful checkin
+  // response's stored server `time_ms` when available, or `Instant.now().toEpochMilli()`
+  // otherwise. When the flag is disabled, the bytes are the UTF-8 encoding of
+  // `Instant.now().toString()` instead.
+  optional bytes challenge_echo = 2;
+
+  // Hardware revision from `SystemProperties.get("ro.boot.hardware.revision", "")`.
+  optional string hardware_revision = 3;
+
+  // Error block sent when device ID attestation was attempted but key generation or
+  // certificate creation failed.
+  optional KeyAttestationError error = 4;
+}
+
+// Error information for a failed key-attestation attempt.
+message KeyAttestationError {
+  // Numeric error code from `android.security.KeyStoreException.getNumericErrorCode()`.
+  optional int32 error_code = 1;
+
+  // Short human-readable error message.
+  //
+  // Truncated before sending.
+  optional string error_message = 2;
+}
+
+// One client ID assigned to one logical slot.
+message ClientIdAssignment {
+  // Which client ID slot this value belongs to.
+  optional ClientIdSlot slot = 1;
+
+  // Client ID string for that slot.
+  optional string value = 2;
+}
+
+// Build metadata for one partition such as `system`, `vendor`, or `product`.
+message PartitionBuildInfo {
+  // Partition name.
+  optional string partition_name = 1;
+
+  // Device name for the partition, usually from `ro.product.{partition}.device`.
+  optional string partition_device = 2;
+
+  // Partition build fingerprint, usually from `ro.{partition}.build.fingerprint`.
+  optional string partition_fingerprint = 3;
+
+  // Partition build date in UTC seconds, usually from `ro.{partition}.build.date.utc`.
+  optional string partition_build_date_utc = 4;
+}
+
+// One system feature together with its version number.
+message FeatureWithVersion {
+  // Feature name.
+  optional string feature_name = 1;
+
+  // Feature version.
+  optional int32 version = 2;
+}
+
+// ======================================================================
+// Enums
+// ======================================================================
+
+// Restriction mode attached to `CheckinRequest.checkin_restriction`.
+enum CheckinRestriction {
+  NO_RESTRICTION = 0;
+  SW_DEVICE = 1;
+  LATCHSKY_DEVICE = 2;
+}
+
+// Guest-user classification for `CheckinRequest.guest_type`.
+enum GuestType {
+  TYPE_UNKNOWN = 0;
+  FULL_GUEST = 1;
+}
+
+// High-level device category.
+enum DeviceFormFactor {
+  FORM_FACTOR_OTHER = 1;
+  PHONE = 2;
+  TABLET = 3;
+  TV = 4;
+  GLASS = 5;
+  CAR = 6;
+  WEARABLE = 7;
+  THINGS = 8;
+  CHROMEOS_ARC = 9;
+  BSTAR = 10;
+  DESKTOP = 11;
+}
+
+// Logical destination slot for a client ID string.
+enum ClientIdSlot {
+  BASE_CLIENT_ID = 1;
+  SEARCH_CLIENT_ID = 2;
+  VOICESEARCH_CLIENT_ID = 3;
+  MAPS_CLIENT_ID = 4;
+  YOUTUBE_CLIENT_ID = 5;
+  MARKET_CLIENT_ID = 6;
+  SHOPPER_CLIENT_ID = 7;
+  WALLET_CLIENT_ID = 8;
+  CHROME_CLIENT_ID = 9;
+  PLAYTX_CLIENT_ID = 10;
+  PLAYAX_CLIENT_ID = 11;
+  PROGRAM_CLIENT_ID = 12;
+  PROGRAM2_CLIENT_ID = 13;
+  SEARCH_A2_CLIENT_ID = 14;
+  RSVD_A2_CLIENT_ID = 15;
+  RSVD_A3_CLIENT_ID = 16;
+}
+
+// Reason code for `CheckinReason.reason`.
+//
+// Only values whose meaning could be tied to a specific trigger path in the analyzed build are
+// given semantic names. Values ending in `_UNVERIFIED` are known wire values, but their exact
+// trigger is not pinned down here.
+enum CheckinReasonCode {
+  REASON_UNKNOWN = 0;
+  STARTUP_OR_MODULE_UPDATE = 1;
+  REASON_CODE_2_UNVERIFIED = 2;
+  REASON_CODE_3_UNVERIFIED = 3;
+  ACCOUNT_CHANGE = 4;
+  // Forced when the per-subscription SIM-identity string (serial + IMSI per active
+  // subscription, or a "no-sim" sentinel) differs from the value GMS cached on the previous
+  // checkin. Also fires after `pm clear` of GMS because the cached value is then missing and
+  // the comparison always reports "changed", so this reason on the first checkin after a data
+  // clear does not necessarily mean the SIM actually changed.
+  SUBSCRIBER_ID_CHANGED = 5;
+  SYSTEM_UPGRADE = 6;
+  SECRET_CODE = 7;
+  SCHEDULED_OR_CHECKIN_BROADCAST = 8;
+  CHECKIN_NOW = 9;
+  C2DM_CHECKIN_TICKLE = 10;
+  REASON_CODE_11_UNVERIFIED = 11;
+  REASON_CODE_12_UNVERIFIED = 12;
+  REASON_CODE_13_UNVERIFIED = 13;
+  REASON_CODE_14_UNVERIFIED = 14;
+  DEVICE_OWNER_CHANGED = 15;
+  C2DM_CHECKIN_TICKLE_UPLOAD_NONE = 16;
+  OTA_UPDATE_UI = 17;
+  REASON_CODE_18_UNVERIFIED = 18;
+  REASON_CODE_19_UNVERIFIED = 19;
+  REASON_CODE_20_UNVERIFIED = 20;
+  NETWORK_CALLBACK = 21;
+}
+
+// Touchscreen classification matching Android's `Configuration.TOUCHSCREEN_*` constants.
+enum TouchscreenType {
+  TOUCHSCREEN_UNDEFINED = 0;
+  TOUCHSCREEN_NOTOUCH = 1;
+  TOUCHSCREEN_STYLUS = 2;
+  TOUCHSCREEN_FINGER = 3;
+}
+
+// Keyboard classification matching Android's `Configuration.KEYBOARD_*` constants.
+enum KeyboardType {
+  KEYBOARD_UNDEFINED = 0;
+  KEYBOARD_NOKEYS = 1;
+  KEYBOARD_QWERTY = 2;
+  KEYBOARD_12KEY = 3;
+}
+
+// Navigation classification matching Android's `Configuration.NAVIGATION_*` constants.
+enum NavigationType {
+  NAVIGATION_UNDEFINED = 0;
+  NAVIGATION_NONAV = 1;
+  NAVIGATION_DPAD = 2;
+  NAVIGATION_TRACKBALL = 3;
+  NAVIGATION_WHEEL = 4;
+}
+
+// Screen size bucket matching the size bits of `Configuration.screenLayout`.
+enum ScreenLayout {
+  SCREENLAYOUT_UNDEFINED = 0;
+  SCREENLAYOUT_SMALL = 1;
+  SCREENLAYOUT_NORMAL = 2;
+  SCREENLAYOUT_LARGE = 3;
+  SCREENLAYOUT_XLARGE = 4;
+}
+
+// Default-role labels for one subscription.
+enum SubscriptionRole {
+  ROLE_VOICE = 0;
+  ROLE_DATA = 1;
+  ROLE_SMS = 2;
+}
+
+// ICC or SIM lock state.
+//
+// `ICC_LOCK_UNSET` means no active subscription state was available.
+enum IccLockState {
+  ICC_LOCK_UNSET = 0;
+  ICC_LOCK_ENABLED = 1;
+  ICC_LOCK_DISABLED = 2;
+}
+
+// Ownership or profile-management mode for `GsfVersionInfo.package_name`.
+enum AccountMode {
+  ACCOUNT_MODE_PERSONAL_DEFAULT = 0;
+  ACCOUNT_MODE_PERSONAL_DEVICE_OWNER = 1;
+  ACCOUNT_MODE_PERSONAL_PROFILE_OWNER = 2;
+  ACCOUNT_MODE_PERSONAL_PROFILE_OWNER_ORG_OWNED = 3;
+  ACCOUNT_MODE_NON_PERSONAL_DEVICE_OWNER = 1001;
+  ACCOUNT_MODE_NON_PERSONAL_PROFILE_OWNER = 1002;
+  ACCOUNT_MODE_NON_PERSONAL_PROFILE_OWNER_ORG_OWNED = 1003;
+}
