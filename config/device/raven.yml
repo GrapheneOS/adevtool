@@ -1,5 +1,6 @@
 device:
   name: raven
+  stable_display_size: { width: 1440, height: 3120 }
 
 includes:
   - common/gen6pixel.yml

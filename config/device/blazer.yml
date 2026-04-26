@@ -1,5 +1,6 @@
 device:
   name: blazer
+  stable_display_size: { width: 1280, height: 2856 }
 
 includes:
   - common/gen10pixel.yml

@@ -1,5 +1,6 @@
 device:
   name: cheetah
+  stable_display_size: { width: 1440, height: 3120 }
   build_id: BP4A.251205.006
 
 includes:

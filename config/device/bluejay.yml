@@ -1,5 +1,6 @@
 device:
   name: bluejay
+  stable_display_size: { width: 1080, height: 2400 }
 
 includes:
   - common/gen6pixel.yml

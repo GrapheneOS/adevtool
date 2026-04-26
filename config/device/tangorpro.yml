@@ -1,5 +1,6 @@
 device:
   name: tangorpro
+  stable_display_size: { width: 2560, height: 1600 }
   has_cellular: false
 
 includes:

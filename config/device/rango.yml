@@ -1,5 +1,6 @@
 device:
   name: rango
+  stable_display_size: { width: 2076, height: 2152 }
 
 includes:
   - common/gen10pixel.yml

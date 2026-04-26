@@ -22,6 +22,11 @@ export enum FsType {
   EROFS = 'erofs',
 }
 
+export interface DisplaySize {
+  width: number
+  height: number
+}
+
 export interface DeviceConfig {
   // Required
   device: {
@@ -39,6 +44,15 @@ export interface DeviceConfig {
     has_cellular: boolean
     // ignored when undefined
     platform_security_patch_level_override?: string
+    // This information is required to make a GMS checkin. For some devices, these values are only
+    // in the kernel / online specs, so not easily parsable from unpacked factory image.
+    // stable_display_size is the value returned by DisplayManager.getStableDisplaySize().
+    // DisplayManagerService.loadStableDisplayValuesLocked() loads it from persisted state or the
+    // framework stable-display resource defaults. GmsCore derives smallest_screen_width_dp and
+    // screen_layout_legacy from Resources.Configuration rather than this API. For foldables, use
+    // the unfolded/stable display size here; folded checkin captures can differ because
+    // Resources.Configuration reports the current folded display.
+    stable_display_size?: DisplaySize
   }
 
   platform: {

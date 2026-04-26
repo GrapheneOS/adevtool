@@ -1,5 +1,6 @@
 device:
   name: komodo
+  stable_display_size: { width: 1344, height: 2992 }
 
 includes:
   - common/gen9pixel.yml

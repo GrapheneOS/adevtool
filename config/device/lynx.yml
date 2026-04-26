@@ -1,5 +1,6 @@
 device:
   name: lynx
+  stable_display_size: { width: 1080, height: 2400 }
 
 includes:
   - common/gen7pixel.yml

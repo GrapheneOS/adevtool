@@ -1,5 +1,6 @@
 device:
   name: tokay
+  stable_display_size: { width: 1080, height: 2424 }
 
 includes:
   - common/gen9pixel.yml

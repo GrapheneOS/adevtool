@@ -1,5 +1,6 @@
 device:
   name: felix
+  stable_display_size: { width: 1080, height: 2092 }
 
 includes:
   - common/gen7pixel.yml
