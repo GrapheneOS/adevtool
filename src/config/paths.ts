@@ -40,6 +40,7 @@ export const VENDOR_MODULE_SKELS_DIR = path.join(ADEVTOOL_DIR, 'vendor-skels')
 
 export const CARRIER_SETTINGS_DIR = path.join(ADEVTOOL_DIR, 'carrier-settings')
 export const CARRIER_SETTINGS_FACTORY_PATH = 'product/etc/CarrierSettings'
+export const GSERVICES_FLAGS_DIR = path.join(ADEVTOOL_DIR, 'gservices-flags')
 
 let builtDependencies = process.env['ADEVTOOL_SKIP_DEP_BUILD'] === '1'
 

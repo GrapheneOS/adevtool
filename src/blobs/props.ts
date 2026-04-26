@@ -111,6 +111,54 @@ export async function loadPartitionProps(
 
 export const BOOTLOADER_VERSION_PROP = 'ro.build.expect.bootloader'
 export const BASEBAND_VERSION_PROP = 'ro.build.expect.baseband'
+export const MULTI_SIM_CONFIG_PROP = 'persist.radio.multisim.config'
+export const BUILD_DATE_UTC_PROP = 'ro.build.date.utc'
+export const BUILD_FINGERPRINT_PROP = 'ro.build.fingerprint'
+export const BUILD_ID_PROP = 'ro.build.id'
+export const BUILD_TAGS_PROP = 'ro.build.tags'
+export const BUILD_TYPE_PROP = 'ro.build.type'
+export const BUILD_VERSION_INCREMENTAL_PROP = 'ro.build.version.incremental'
+export const BUILD_VERSION_RELEASE_OR_CODENAME_PROP = 'ro.build.version.release_or_codename'
+export const BUILD_VERSION_SDK_PROP = 'ro.build.version.sdk'
+export const BUILD_VERSION_SECURITY_PATCH_PROP = 'ro.build.version.security_patch'
+export const BOOT_HARDWARE_PROP = 'ro.boot.hardware'
+export const HARDWARE_PROP = 'ro.hardware'
+export const INCREMENTAL_ENABLE_PROP = 'ro.incremental.enable'
+export const LOW_RAM_PROP = 'ro.config.low_ram'
+export const OPENGL_ES_VERSION_PROP = 'ro.opengles.version'
+export const PRODUCT_CPU_ABILIST_PROP = 'ro.product.cpu.abilist'
+export const PRODUCT_FIRST_API_LEVEL_PROP = 'ro.product.first_api_level'
+export const SCREEN_DENSITY_PROP = 'ro.sf.lcd_density'
+
+// Precedence for duplicate properties loaded from regular partition build.prop
+// files. system/core/init/property_service.cpp#PropertyLoadBootDefaults()
+// loads them from least to most product-specific, and
+// system/core/init/property_service.cpp#LoadProperties() lets later duplicate
+// values override earlier ones.
+export const BUILD_PROP_PARTITION_PRECEDENCE: readonly Partition[] = [
+  Partition.Product,
+  Partition.Odm,
+  Partition.Vendor,
+  Partition.SystemExt,
+  Partition.System,
+]
+
+// Source order used by
+// system/core/init/property_service.cpp#property_initialize_ro_product_props()
+// when deriving bare `ro.product.<name>` values from
+// `ro.product.<source>.<name>` variants. This mirrors
+// system/core/init/property_service.cpp#RO_PRODUCT_PROPS_DEFAULT_SOURCE_ORDER.
+export const RO_PRODUCT_PROPS_DEFAULT_SOURCE_ORDER: readonly Partition[] = BUILD_PROP_PARTITION_PRECEDENCE
+
+// Source order used by
+// system/core/init/property_service.cpp#property_initialize_ro_cpu_abilist()'s
+// kAbilistSources for deriving ro.product.cpu.abilist*.
+export const RO_CPU_ABILIST_SOURCE_ORDER: readonly Partition[] = [
+  Partition.Product,
+  Partition.Odm,
+  Partition.Vendor,
+  Partition.System,
+]
 
 export function diffPartitionProps(partPropsRef: PartitionProps, partPropsNew: PartitionProps) {
   let partChanges = new Map<string, PropChanges>()
