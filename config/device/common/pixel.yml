@@ -23,6 +23,10 @@ device:
   build_id: BP4A.260205.001
   backport_build_id: CP1A.260405.005
   backport_base_firmware: true
+  gservices_flags:
+    prefix:
+      - euicc.
+      - euiccpixel.
 
 filters:
   partitions:

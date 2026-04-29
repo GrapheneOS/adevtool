@@ -56,6 +56,16 @@ export async function loadAndMergeConfig(configPath: string, baseConfig: Readonl
       }),
     )
   }
+  // Additional non-top-level filter fields can follow this pattern or be
+  // generalized if more are added.
+  if (merged.device?.gservices_flags !== undefined) {
+    try {
+      merged.device.gservices_flags = parseFilters(merged.device.gservices_flags as SerializedFilters)
+    } catch (e) {
+      log('failed to parse device.gservices_flags filters')
+      throw e
+    }
+  }
 
   // Finally, cast it to the parsed config type
   delete merged.includes

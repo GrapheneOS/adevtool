@@ -53,6 +53,7 @@ export interface DeviceConfig {
     // the unfolded/stable display size here; folded checkin captures can differ because
     // Resources.Configuration reports the current folded display.
     stable_display_size?: DisplaySize
+    gservices_flags: Filters
   }
 
   platform: {
@@ -211,6 +212,7 @@ const DEFAULT_CONFIG_BASE = {
   device: {
     is_beta_build_id: false,
     is_beta_backport_build_id: false,
+    gservices_flags: structuredClone(EMPTY_INCLUDE_FILTERS),
   },
   platform: {
     namespaces: [],
