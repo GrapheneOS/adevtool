@@ -6,6 +6,7 @@ import type { GservicesCheckinRequestVariant, GservicesFlagsOutputGroup } from '
 import {
   decodeCheckinBinaryToTextproto,
   generateGservicesCheckinRequestVariants,
+  getDefaultGservicesBuildId,
   randomHexSerial,
   updateGservicesFlagsFromRequestVariants,
 } from '../blobs/checkin'
@@ -124,11 +125,12 @@ export default class UpdateGservicesFlags extends Command {
         if (buildIndex === undefined) {
           throw new Error('build index was not loaded')
         }
-        let buildId = flags.buildId ?? 'cur'
+        let buildId = getGservicesBuildId(device, flags.buildId)
         // Pass an explicit build-id list so prepareFactoryImages doesn't
         // auto-expand to `[device.build_id, device.backport_build_id]` and
-        // download backports we don't need for checkin synthesis. `'cur'` is
-        // the per-device sentinel that resolves to `device.build_id`.
+        // download unrelated backports. If Euicc APKs come from a configured
+        // backport, synthesize checkin from that build by default because those
+        // packages are the consumers of the generated Gservices flags.
         images = await prepareFactoryImages(buildIndex, [device], [buildId])
         let img = images?.get(getDeviceBuildId(device, buildId))
         if (img === undefined) {
@@ -229,11 +231,15 @@ async function deleteGservicesFactoryImageIfNeeded(
     return
   }
 
-  let deviceBuildId = getDeviceBuildId(device, buildIdOverride ?? 'cur')
+  let deviceBuildId = getDeviceBuildId(device, getGservicesBuildId(device, buildIdOverride))
   let image = images.get(deviceBuildId)
   if (image !== undefined) {
     await deleteUnpackedDeviceImages(new Map([[deviceBuildId, image]]))
   }
+}
+
+function getGservicesBuildId(device: DeviceConfig, buildIdOverride: string | undefined) {
+  return buildIdOverride ?? getDefaultGservicesBuildId(device)
 }
 
 async function generateTextprotoRequestVariant(

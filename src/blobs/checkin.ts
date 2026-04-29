@@ -1014,6 +1014,31 @@ export interface GservicesFlag {
   value: string
 }
 
+// Filename heuristic for current Pixel backport config. If Google renames the
+// Euicc APKs or moves them into a backport directory, update-gservices-flags
+// callers can still override the selected build with --buildId.
+function isGservicesBackportedEuiccApk(relPath: string) {
+  if (!relPath.endsWith('.apk')) {
+    return false
+  }
+  let apkName = path.basename(relPath, '.apk')
+  return apkName.startsWith('EuiccGoogle') || apkName.startsWith('EuiccSupportPixel')
+}
+
+export function getDefaultGservicesBuildId(config: DeviceConfig) {
+  let backportBuildId = config.device.backport_build_id
+  if (backportBuildId === undefined) {
+    return config.device.build_id
+  }
+
+  for (let files of Object.values(config.backport_files)) {
+    if (files.some(isGservicesBackportedEuiccApk)) {
+      return backportBuildId
+    }
+  }
+  return config.device.build_id
+}
+
 export function getAllGservicesFlags(responseBinary: Buffer): GservicesFlag[] {
   let decoded = CheckinResponse.decode(responseBinary)
   let flagsByName = new Map<string, GservicesFlag>()
