@@ -1,6 +1,9 @@
 device:
   name: raven
   stable_display_size: { width: 1440, height: 3120 }
-
+  odm_skus:
+    - GLU0G # 5G Sub 6GHz
+    - G8V0U # 5G mmWave + Sub 6GHz
+    - GF5KQ # For Japan only: 5G mmWave + Sub 6GHz JP
 includes:
   - common/gen6pixel.yml

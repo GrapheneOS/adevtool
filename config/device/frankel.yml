@@ -1,6 +1,9 @@
 device:
   name: frankel
   stable_display_size: { width: 1344, height: 2992 }
-
+  odm_skus:
+    - GLBW0 # US: 5G mmWave + Sub 6GHz
+    - GL066 # JP: 5G Sub 6GHz
+    - GK2MP # ROW: 5G Sub 6GHz
 includes:
   - common/gen10pixel.yml

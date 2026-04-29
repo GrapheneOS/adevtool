@@ -1,6 +1,9 @@
 device:
   name: komodo
   stable_display_size: { width: 1344, height: 2992 }
-
+  odm_skus:
+    - GGX8B # US: 5G mmWave + Sub 6GHz
+    - GQ57S # JP: 5G Sub 6GHz
+    - GZC4K # BE/FR/Rest of world: 5G Sub 6GHz
 includes:
   - common/gen9pixel.yml

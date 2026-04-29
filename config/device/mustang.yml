@@ -1,6 +1,9 @@
 device:
   name: mustang
   stable_display_size: { width: 1344, height: 2992 }
-
+  odm_skus:
+    - GUL82 # US: 5G mmWave + Sub 6GHz
+    - GYPW4 # JP: 5G Sub 6GHz
+    - G45RY # ROW: 5G Sub 6GHz
 includes:
   - common/gen10pixel.yml

@@ -1,7 +1,9 @@
 device:
   name: rango
   stable_display_size: { width: 2076, height: 2152 }
-
+  odm_skus:
+    - GU0NP # Global except JP: 5G mmWave + Sub 6GHz
+    - GM66V # JP: 5G mmWave + Sub 6GHz
 includes:
   - common/gen10pixel.yml
 

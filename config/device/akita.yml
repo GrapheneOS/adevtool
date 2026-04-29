@@ -1,6 +1,10 @@
 device:
   name: akita
   stable_display_size: { width: 1080, height: 2400 }
-
+  odm_skus:
+    - GKV4X # 5G Sub 6GHz NA
+    - G6GPR # 5G Sub 6GHz ROW
+    - G8HHN # 5G mmWave + Sub 6GHz
+    - G576D # 5G Sub 6GHz JP
 includes:
   - common/gen8pixel.yml

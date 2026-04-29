@@ -1,6 +1,10 @@
 device:
   name: tangorpro
   stable_display_size: { width: 2560, height: 1600 }
+  # Pixel Tablet model ID in this declaration of conformity, unsure if other IDs:
+  # https://support.google.com/product-documentation/answer/13533212?hl=en
+  odm_skus:
+    - GTU8P
   has_cellular: false
 
 includes:

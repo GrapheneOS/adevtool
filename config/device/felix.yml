@@ -1,6 +1,12 @@
 device:
   name: felix
   stable_display_size: { width: 1080, height: 2092 }
-
+  odm_skus:
+    - G9FPL # 5G mmWave + Sub 6GHz
+    # JP SKU is G0B96 (digit zero), not GOB96 (letter O) as printed on
+    # support.google.com/pixelphone/answer/7158570. Confirmed via the
+    # ro.boot.hardware.sku trigger in init.felix.rc and the
+    # SettingsOverlayG0B96 directory in the felix-CP1A factory image.
+    - G0B96 # 5G mmWave + Sub 6GHz JP
 includes:
   - common/gen7pixel.yml

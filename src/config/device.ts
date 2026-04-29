@@ -44,6 +44,7 @@ export interface DeviceConfig {
     has_cellular: boolean
     // ignored when undefined
     platform_security_patch_level_override?: string
+    odm_skus: string[]
     // This information is required to make a GMS checkin. For some devices, these values are only
     // in the kernel / online specs, so not easily parsable from unpacked factory image.
     // stable_display_size is the value returned by DisplayManager.getStableDisplaySize().
@@ -212,6 +213,7 @@ const DEFAULT_CONFIG_BASE = {
   device: {
     is_beta_build_id: false,
     is_beta_backport_build_id: false,
+    odm_skus: [],
     gservices_flags: structuredClone(EMPTY_INCLUDE_FILTERS),
   },
   platform: {

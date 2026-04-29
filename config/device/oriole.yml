@@ -1,6 +1,9 @@
 device:
   name: oriole
   stable_display_size: { width: 1080, height: 2400 }
-
+  odm_skus:
+    - GB7N6 # 5G Sub 6GHz
+    - G9S9B # 5G mmWave + Sub 6GHz
+    - GR1YH # For Japan only: 5G Sub 6GHz JP
 includes:
   - common/gen6pixel.yml

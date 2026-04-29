@@ -1,6 +1,9 @@
 device:
   name: blazer
   stable_display_size: { width: 1280, height: 2856 }
-
+  odm_skus:
+    - G4QUR # US: 5G mmWave + Sub 6GHz
+    - GN4F5 # JP: 5G Sub 6GHz
+    - GEHN3 # ROW: 5G Sub 6GHz
 includes:
   - common/gen10pixel.yml

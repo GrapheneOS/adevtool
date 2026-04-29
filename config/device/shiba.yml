@@ -1,6 +1,14 @@
 device:
   name: shiba
   stable_display_size: { width: 1080, height: 2400 }
-
+  odm_skus:
+    - G9BQD # For NA (US and CA) only: 5G Sub 6GHz NA
+    - GKWS6 # For NA (US and CA) only: 5G mmWave + Sub 6GHz
+    # JP SKU is GZPF0 (digit zero), not GZPFO (letter O) as printed on
+    # support.google.com/pixelphone/answer/7158570. Confirmed via the
+    # ro.boot.hardware.sku triggers in init.shiba.rc and init.zuma.rc
+    # across shiba-BP4A, shiba-CP1A, and shiba-CP21 factory images.
+    - GZPF0 # For Japan only: 5G Sub 6GHz JP
+    - GPJ41 # Rest of the world: 5G Sub 6GHz
 includes:
   - common/gen8pixel.yml

@@ -1,6 +1,9 @@
 device:
   name: tokay
   stable_display_size: { width: 1080, height: 2424 }
-
+  odm_skus:
+    - G2YBB # US: 5G mmWave + Sub 6GHz
+    - G1B60 # JP: 5G Sub 6GHz
+    - GUR25 # BE/FR/Rest of world: 5G Sub 6GHz
 includes:
   - common/gen9pixel.yml

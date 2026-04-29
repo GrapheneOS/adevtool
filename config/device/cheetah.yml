@@ -1,6 +1,10 @@
 device:
   name: cheetah
   stable_display_size: { width: 1440, height: 3120 }
+  odm_skus:
+    - GP4BC # 5G Sub 6GHz
+    - GE2AE # 5G mmWave + Sub 6GHz
+    - GFE4J # For Japan only: 5G mmWave + Sub 6GHz JP
   build_id: BP4A.251205.006
 
 includes:

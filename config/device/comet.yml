@@ -1,6 +1,9 @@
 device:
   name: comet
   stable_display_size: { width: 2076, height: 2152 }
+  odm_skus:
+    - GC15S # 5G mmWave + Sub 6GHz JP
+    - GGH2X # 5G mmWave + Sub 6GHz
 includes:
   - common/gen9pixel.yml
 

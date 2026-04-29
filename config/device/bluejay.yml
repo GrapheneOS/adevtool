@@ -1,7 +1,11 @@
 device:
   name: bluejay
   stable_display_size: { width: 1080, height: 2400 }
-
+  odm_skus:
+    - GX7AS # For ROW (US, CA, TW, SG, IN): 5G Sub 6GHz
+    - G1AZG # For EMEA+ (UK, DE, IE, FR, ES, IT, AU, DK, NO, SE, NL): 5G Sub 6GHz
+    - GB62Z # For Verizon only: 5G mmWave + Sub 6GHz
+    - GB17L # For Japan only: 5G Sub 6GHz JP2
 includes:
   - common/gen6pixel.yml
 

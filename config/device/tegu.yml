@@ -1,8 +1,11 @@
 device:
   name: tegu
   stable_display_size: { width: 1080, height: 2424 }
+  odm_skus:
+    - GXQ96 # 5G Sub 6GHz US
+    - GTF7P # 5G Sub 6GHz ROW
+    - G3Y12 # 5G Sub 6GHz JP
   build_id: BP4A.260205.001
 
 includes:
   - common/gen9pixel.yml
-

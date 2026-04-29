@@ -1,6 +1,9 @@
 device:
   name: husky
   stable_display_size: { width: 1344, height: 2992 }
-
+  odm_skus:
+    - GC3VE # 5G Sub 6GHz
+    - G1MNW # 5G mmWave + Sub 6GHz
+    - GE9DP # For Japan only: 5G mmWave + Sub 6GHz JP
 includes:
   - common/gen8pixel.yml

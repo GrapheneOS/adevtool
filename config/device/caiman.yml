@@ -1,6 +1,9 @@
 device:
   name: caiman
   stable_display_size: { width: 1280, height: 2856 }
-
+  odm_skus:
+    - GR83Y # US: 5G mmWave + Sub 6GHz
+    - GWVK6 # JP: 5G Sub 6GHz
+    - GEC77 # BE/FR/Rest of world: 5G Sub 6GHz
 includes:
   - common/gen9pixel.yml

@@ -1,7 +1,11 @@
 device:
   name: lynx
   stable_display_size: { width: 1080, height: 2400 }
-
+  odm_skus:
+    - GWKK3 # 5G Sub 6GHz
+    - GHL1X # 5G Sub 6GHz
+    - G0DZQ # 5G mmWave + Sub 6GHz
+    - G82U8 # For Japan only: 5G Sub 6GHz JP
 includes:
   - common/gen7pixel.yml
 

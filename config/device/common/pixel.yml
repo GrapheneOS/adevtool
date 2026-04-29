@@ -20,6 +20,8 @@ device:
   vendor: google_devices
   system_fs_type: ext4
   has_cellular: true
+  # Pixel phone model IDs are listed in the Network sections of:
+  # https://support.google.com/pixelphone/answer/7158570?hl=en
   build_id: BP4A.260205.001
   backport_build_id: CP1A.260405.005
   backport_base_firmware: true

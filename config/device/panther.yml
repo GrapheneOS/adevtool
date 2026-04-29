@@ -1,6 +1,15 @@
 device:
   name: panther
   stable_display_size: { width: 1080, height: 2400 }
+  odm_skus:
+    - GVU6C # 5G Sub 6GHz
+    - GQML3 # 5G mmWave + Sub 6GHz
+    # JP SKU is G03Z5 (digit zero), not GO3Z5 (letter O) as printed on
+    # support.google.com/pixelphone/answer/7158570. The factory image's
+    # ro.boot.hardware.sku trigger, SettingsOverlayG03Z5, the JP BT
+    # calibration file bluetooth_power_limits_G03Z5_JP.csv, and the
+    # device's own regulatory_content.html all agree on G03Z5.
+    - G03Z5 # For Japan only: 5G Sub 6GHz JP
   build_id: BP4A.251205.006
 
 includes:
