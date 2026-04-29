@@ -7,7 +7,8 @@ protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto
     build/soong/linkerconfig/proto/linker_config.proto \
     frameworks/base/tools/aapt2/BriefPackageInfo.proto \
     packages/apps/CarrierConfig2/src/com/google/carrier/carrier_{settings,list}.proto \
-    packages/modules/common/proto/classpaths.proto
+    packages/modules/common/proto/classpaths.proto \
+    system/apex/proto/apex_manifest.proto
     #frameworks/base/proto/src/apk_parser_config.proto
 
 protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto_out vendor/adevtool/src/proto-ts \
