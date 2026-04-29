@@ -19,6 +19,91 @@ export const SYSCONFIG_DIR_NAMES = [
   'permissions', // legacy alias for sysconfig dir
 ]
 
+export interface SysconfigXmlFile {
+  partition?: Partition
+  dirName: string
+  path: string
+}
+
+export interface GetSysconfigXmlFilesOptions {
+  dirNames?: readonly string[]
+  partitions?: readonly Partition[]
+  partitionSubdirs?: Partial<Record<Partition, readonly string[]>>
+  platformLast?: boolean
+  includeApexes?: boolean
+}
+
+function sortSysconfigXmlFileNames(names: string[], platformLast: boolean) {
+  names.sort()
+  if (!platformLast) {
+    return names
+  }
+  return names.filter(n => n !== 'platform.xml').concat(names.filter(n => n === 'platform.xml'))
+}
+
+async function getXmlFilesInSysconfigDir(
+  dirPath: string,
+  dirName: string,
+  partition: Partition | undefined,
+  platformLast: boolean,
+): Promise<SysconfigXmlFile[]> {
+  if (!(await isDirectory(dirPath))) {
+    return []
+  }
+  let names = (await fs.readdir(dirPath, { withFileTypes: true }))
+    .filter(entry => entry.isFile() && entry.name.endsWith('.xml'))
+    .map(entry => entry.name)
+
+  return sortSysconfigXmlFileNames(names, platformLast).map(name => ({
+    partition,
+    dirName,
+    path: path.join(dirPath, name),
+  }))
+}
+
+export async function getSysconfigXmlFiles(
+  pathResolver: PathResolver,
+  options: GetSysconfigXmlFilesOptions = {},
+): Promise<SysconfigXmlFile[]> {
+  let dirNames = options.dirNames ?? SYSCONFIG_DIR_NAMES
+  let partitions = options.partitions ?? Array.from(ALL_SYS_PARTITIONS)
+  let platformLast = options.platformLast ?? false
+
+  let partJobs = partitions.map(async partition => {
+    let dirJobs = dirNames.map(async dirName => {
+      let dirPath = pathResolver.resolve(partition, path.join('etc', dirName))
+      return getXmlFilesInSysconfigDir(dirPath, dirName, partition, platformLast)
+    })
+    let files = (await Promise.all(dirJobs)).flat()
+    let subdirs = options.partitionSubdirs?.[partition] ?? []
+    for (let subdir of subdirs) {
+      let subdirJobs = dirNames.map(async dirName => {
+        let dirPath = pathResolver.resolve(partition, path.join('etc', dirName, subdir))
+        return getXmlFilesInSysconfigDir(dirPath, dirName, partition, platformLast)
+      })
+      files.push(...(await Promise.all(subdirJobs)).flat())
+    }
+    return files
+  })
+  let files = (await Promise.all(partJobs)).flat()
+
+  if (options.includeApexes) {
+    let apexRoot = pathResolver.resolveUnpackedApexPath(Partition.System, 'apex')
+    if (await isDirectory(apexRoot)) {
+      let apexDirs = (await fs.readdir(apexRoot, { withFileTypes: true }))
+        .filter(entry => entry.isDirectory())
+        .map(entry => path.join(apexRoot, entry.name, 'etc/permissions'))
+        .sort()
+      let apexDirJobs = apexDirs.map(dirPath =>
+        getXmlFilesInSysconfigDir(dirPath, 'permissions', undefined, platformLast),
+      )
+      files.push(...(await Promise.all(apexDirJobs)).flat())
+    }
+  }
+
+  return files
+}
+
 export async function processSysconfig(
   deviceConfig: DeviceConfig,
   pathResolver: PathResolver,
@@ -204,25 +289,15 @@ export async function processSysconfig(
 
 export async function loadSysconfigs(pathResolver: PathResolver) {
   let result: string[] = []
-  let partJobs = Array.from(ALL_SYS_PARTITIONS).map(async partition => {
-    let partConfigs = SYSCONFIG_DIR_NAMES.map(async sysconfigDirName => {
-      let sysconfigDirPath = pathResolver.resolve(partition, 'etc/' + sysconfigDirName)
-      if (!(await isDirectory(sysconfigDirPath))) {
-        return
-      }
-      let dirConfigs = (await fs.readdir(sysconfigDirPath, { withFileTypes: true })).sort().map(async dirEntry => {
-        assert(dirEntry.isFile())
-        let filePath = path.join(sysconfigDirPath, dirEntry.name)
-        let file = await fs.readFile(filePath)
-        getRootChildren(file, ['config', 'permissions', 'exceptions']).rootChildren.forEach(entry =>
-          result.push(stringifyXml([entry])),
-        )
-      })
-      await Promise.all(dirConfigs)
-    })
-    await Promise.all(partConfigs)
-  })
-  await Promise.all(partJobs)
+  let files = await getSysconfigXmlFiles(pathResolver)
+  await Promise.all(
+    files.map(async xmlFile => {
+      let file = await fs.readFile(xmlFile.path)
+      getRootChildren(file, ['config', 'permissions', 'exceptions']).rootChildren.forEach(entry =>
+        result.push(stringifyXml([entry])),
+      )
+    }),
+  )
   result.sort()
   return result
 }
