@@ -10,6 +10,7 @@ import { DeviceConfig, DisplaySize } from '../config/device'
 import { filterValue } from '../config/filters'
 import { ADEVTOOL_DIR, getHostBinPath, GSERVICES_FLAGS_DIR } from '../config/paths'
 import { getSysconfigXmlFiles } from '../processor/sysconfig'
+import { ApexManifest } from '../proto-ts/system/apex/proto/apex_manifest'
 import {
   CheckinReasonCode,
   CheckinRequest,
@@ -367,9 +368,50 @@ function* walkSysconfigElements(nodes: unknown[]): Generator<SysconfigElement> {
 
 interface RuntimePathContext {
   resolver: PathResolver
+  apexDirsByName: Map<string, string>
 }
 
-// Mirror runtime-mount path resolution against the unpacked image.
+// This can become a shared unpacked-APEX runtime-name index for the rest of
+// adevtool if other processors need to resolve /apex/<manifest.name> paths.
+// If duplicate manifest names exist across partitions, the last one wins here;
+// apexd normally only activates one package for a given runtime mount name.
+async function loadApexDirsByName(resolver: PathResolver): Promise<Map<string, string>> {
+  let result = new Map<string, string>()
+  let apexRoot = resolver.resolveUnpackedApexPath(Partition.System, 'apex')
+  if (!(await isDirectory(apexRoot))) {
+    return result
+  }
+  for (let entry of await fs.readdir(apexRoot, { withFileTypes: true })) {
+    if (!entry.isDirectory()) {
+      continue
+    }
+    let apexDir = path.join(apexRoot, entry.name)
+    result.set(entry.name, apexDir)
+    if (entry.name.endsWith('.apex')) {
+      result.set(entry.name.slice(0, -'.apex'.length), apexDir)
+    }
+
+    let manifestPath = path.join(apexDir, 'apex_manifest.pb')
+    try {
+      let manifest = ApexManifest.decode(await fs.readFile(manifestPath))
+      if (manifest.name) {
+        result.set(manifest.name, apexDir)
+      }
+    } catch {
+      continue
+    }
+  }
+  return result
+}
+
+// Mirror runtime-mount path resolution against the unpacked image. APEX
+// entries use ApexManifest.name as the /apex/<name> mount point, which can
+// differ from the unpacked directory name:
+// system/apex/apexd/apex_file.h#GetManifest()
+// system/apex/apexd/apex_manifest.cpp#GetPackageId()
+// system/apex/apexd/apexd.cpp#GetPackageMountPoint()
+// system/apex/apexd/apexd.cpp#GetActiveMountPoint()
+// system/apex/apexd/apexd.cpp#ActivatePackageImpl()
 function translateRuntimePath(ctx: RuntimePathContext, raw: string): string | undefined {
   if (!raw) {
     return undefined
@@ -384,7 +426,24 @@ function translateRuntimePath(ctx: RuntimePathContext, raw: string): string | un
   let mount = parts[0]
   let suffix = parts.slice(1).join('/')
   if (mount === 'apex') {
-    return ctx.resolver.resolveUnpackedApexPath(Partition.System, path.join('apex', suffix))
+    // Sysconfig XML references the active /apex/<manifest.name> bind mount.
+    // apexd creates the versioned /apex/<name>@<version> mount with
+    // GetPackageMountPoint(), then ActivatePackageImpl() bind-mounts it to
+    // GetActiveMountPoint(), which is /apex/<manifest.name>.
+    // Example: /apex/com.android.ipsec/javalib/android.net.ipsec.ike.jar
+    // comes from the unpacked com.google.android.ipsec.apex directory, whose
+    // ApexManifest name is com.android.ipsec. Resolving by the unpacked
+    // directory name alone would look for com.android.ipsec and miss the
+    // actual com.google.android.ipsec.apex directory.
+    let apexName = parts[1]
+    if (apexName === undefined) {
+      return undefined
+    }
+    let apexDir = ctx.apexDirsByName.get(apexName)
+    if (apexDir === undefined) {
+      return undefined
+    }
+    return path.join(apexDir, parts.slice(2).join('/'))
   }
   let part = RUNTIME_MOUNT_PARTITIONS[mount]
   if (part === undefined) {
@@ -630,6 +689,7 @@ export async function collectFeaturesAndLibraries(
   let lowRam = propsIsTrue(props, LOW_RAM_PROP)
   let runtimePathContext: RuntimePathContext = {
     resolver,
+    apexDirsByName: await loadApexDirsByName(resolver),
   }
 
   // SystemConfig reads sysconfig and permissions XML from the runtime-mounted
