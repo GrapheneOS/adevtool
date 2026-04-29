@@ -30,7 +30,6 @@ export interface GetSysconfigXmlFilesOptions {
   partitions?: readonly Partition[]
   partitionSubdirs?: Partial<Record<Partition, readonly string[]>>
   platformLast?: boolean
-  includeApexes?: boolean
 }
 
 function sortSysconfigXmlFileNames(names: string[], platformLast: boolean) {
@@ -86,20 +85,6 @@ export async function getSysconfigXmlFiles(
     return files
   })
   let files = (await Promise.all(partJobs)).flat()
-
-  if (options.includeApexes) {
-    let apexRoot = pathResolver.resolveUnpackedApexPath(Partition.System, 'apex')
-    if (await isDirectory(apexRoot)) {
-      let apexDirs = (await fs.readdir(apexRoot, { withFileTypes: true }))
-        .filter(entry => entry.isDirectory())
-        .map(entry => path.join(apexRoot, entry.name, 'etc/permissions'))
-        .sort()
-      let apexDirJobs = apexDirs.map(dirPath =>
-        getXmlFilesInSysconfigDir(dirPath, 'permissions', undefined, platformLast),
-      )
-      files.push(...(await Promise.all(apexDirJobs)).flat())
-    }
-  }
 
   return files
 }

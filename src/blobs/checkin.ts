@@ -77,6 +77,7 @@ const SYSCONFIG_FEATURE_LIBRARY_PARTITIONS: readonly Partition[] = [
   Partition.Product,
   Partition.SystemExt,
 ]
+const CHECKIN_APEX_SOURCE_PARTITIONS: readonly Partition[] = SYSCONFIG_FEATURE_LIBRARY_PARTITIONS
 
 // Runtime mount names mirror the android.os.Environment roots SystemConfig
 // reads when loading sysconfig/permissions XML:
@@ -371,24 +372,52 @@ interface RuntimePathContext {
   apexDirsByName: Map<string, string>
 }
 
+async function getCheckinUnpackedApexDirs(resolver: PathResolver): Promise<string[]> {
+  let result: string[] = []
+  for (let partition of CHECKIN_APEX_SOURCE_PARTITIONS) {
+    let apexRoot = resolver.resolveUnpackedApexPath(partition, 'apex')
+    if (!(await isDirectory(apexRoot))) {
+      continue
+    }
+    for (let entry of await fs.readdir(apexRoot, { withFileTypes: true })) {
+      if (entry.isDirectory()) {
+        result.push(path.join(apexRoot, entry.name))
+      }
+    }
+  }
+  return result.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
+}
+
+async function getCheckinApexPermissionXmlPaths(resolver: PathResolver): Promise<string[]> {
+  let apexDirs = await getCheckinUnpackedApexDirs(resolver)
+  let xmlPathGroups = await Promise.all(
+    apexDirs.map(async apexDir => {
+      let permissionsDir = path.join(apexDir, 'etc', 'permissions')
+      if (!(await isDirectory(permissionsDir))) {
+        return []
+      }
+      return (await fs.readdir(permissionsDir, { withFileTypes: true }))
+        .filter(entry => entry.isFile() && entry.name.endsWith('.xml'))
+        .map(entry => path.join(permissionsDir, entry.name))
+        .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))
+    }),
+  )
+  return xmlPathGroups.flat()
+}
+
 // This can become a shared unpacked-APEX runtime-name index for the rest of
 // adevtool if other processors need to resolve /apex/<manifest.name> paths.
 // If duplicate manifest names exist across partitions, the last one wins here;
 // apexd normally only activates one package for a given runtime mount name.
 async function loadApexDirsByName(resolver: PathResolver): Promise<Map<string, string>> {
   let result = new Map<string, string>()
-  let apexRoot = resolver.resolveUnpackedApexPath(Partition.System, 'apex')
-  if (!(await isDirectory(apexRoot))) {
-    return result
-  }
-  for (let entry of await fs.readdir(apexRoot, { withFileTypes: true })) {
-    if (!entry.isDirectory()) {
-      continue
-    }
-    let apexDir = path.join(apexRoot, entry.name)
-    result.set(entry.name, apexDir)
-    if (entry.name.endsWith('.apex')) {
-      result.set(entry.name.slice(0, -'.apex'.length), apexDir)
+  for (let apexDir of await getCheckinUnpackedApexDirs(resolver)) {
+    let apexDirName = path.basename(apexDir)
+    result.set(apexDirName, apexDir)
+    for (let suffix of ['.apex', '.capex']) {
+      if (apexDirName.endsWith(suffix)) {
+        result.set(apexDirName.slice(0, -suffix.length), apexDir)
+      }
     }
 
     let manifestPath = path.join(apexDir, 'apex_manifest.pb')
@@ -397,8 +426,8 @@ async function loadApexDirsByName(resolver: PathResolver): Promise<Map<string, s
       if (manifest.name) {
         result.set(manifest.name, apexDir)
       }
-    } catch {
-      continue
+    } catch (e) {
+      console.warn(`warning: failed to decode APEX manifest ${manifestPath}: ${errorMessage(e)}`)
     }
   }
   return result
@@ -705,26 +734,32 @@ export async function collectFeaturesAndLibraries(
   // frameworks/base/services/core/java/com/android/server/SystemConfig.java#readAllPermissionsFromXml()
   // platform.xml is processed last to mirror framework layering, although it's
   // likely order doesn't matter in practice.
-  let sysconfigXmlFiles = await getSysconfigXmlFiles(resolver, {
-    dirNames: ['sysconfig', 'permissions'],
-    partitions: SYSCONFIG_FEATURE_LIBRARY_PARTITIONS,
-    partitionSubdirs: getSystemConfigSkuSubdirs(args.sku),
-    platformLast: true,
-    includeApexes: true,
-  })
+  let sysconfigXmlPaths = (
+    await getSysconfigXmlFiles(resolver, {
+      dirNames: ['sysconfig', 'permissions'],
+      partitions: SYSCONFIG_FEATURE_LIBRARY_PARTITIONS,
+      partitionSubdirs: getSystemConfigSkuSubdirs(args.sku),
+      platformLast: true,
+    })
+  ).map(xmlFile => xmlFile.path)
+  // SystemConfig also reads permissions XML from all active /apex mounts.
+  // Checkin needs more than system APEXes: rango's stock request includes
+  // android.hardware.thread_network from
+  // vendor/apex/com.google.rango.hardware.threadnetwork.apex/etc/permissions/android.hardware.thread_network.prebuilt.xml.
+  sysconfigXmlPaths.push(...(await getCheckinApexPermissionXmlPaths(resolver)))
 
-  for (let xmlFile of sysconfigXmlFiles) {
+  for (let xmlPath of sysconfigXmlPaths) {
     let text: string
     try {
-      text = await fs.readFile(xmlFile.path, 'utf8')
+      text = await fs.readFile(xmlPath, 'utf8')
     } catch (e) {
-      throw new Error(`failed to read sysconfig XML ${xmlFile.path}: ${errorMessage(e)}`)
+      throw new Error(`failed to read sysconfig XML ${xmlPath}: ${errorMessage(e)}`)
     }
     let parsed: unknown
     try {
       parsed = sysconfigXmlParser.parse(text)
     } catch (e) {
-      throw new Error(`failed to parse sysconfig XML ${xmlFile.path}: ${errorMessage(e)}`)
+      throw new Error(`failed to parse sysconfig XML ${xmlPath}: ${errorMessage(e)}`)
     }
     if (!Array.isArray(parsed)) {
       continue
