@@ -1,14 +1,14 @@
 import { Command, Flags } from '@oclif/core'
 
 import { downloadAllConfigs, fetchUpdateConfig, getCarrierSettingsUpdatesDir } from '../blobs/carrier'
+import { BUILD_VERSION_SDK_PROP, loadPartitionProps } from '../blobs/props'
 import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, loadDeviceConfigs2, makeDeviceBuildId } from '../config/device'
 import { forEachDevice } from '../frontend/devices'
-import { getSdkVersion, processProps } from '../frontend/generate'
 import { prepareFactoryImages } from '../frontend/source'
 import { loadBuildIndex } from '../images/build-index'
 import { mapGet } from '../util/data'
 import { log } from '../util/log'
-import { PathResolver, PathResolverContext } from '../util/partitions'
+import { Partition, PathResolver, PathResolverContext } from '../util/partitions'
 
 export default class UpdateCarrierSettings extends Command {
   static description = 'download updated carrier protobuf configs.'
@@ -28,7 +28,7 @@ export default class UpdateCarrierSettings extends Command {
   async run() {
     let { flags } = await this.parse(UpdateCarrierSettings)
     let devices = await loadDeviceConfigs2(flags)
-    let factoryImages = await prepareFactoryImages(await loadBuildIndex(), devices)
+    let buildIndex = await loadBuildIndex()
     await forEachDevice(
       devices,
       false,
@@ -36,13 +36,15 @@ export default class UpdateCarrierSettings extends Command {
         if (config.device.has_cellular) {
           const buildId = config.device.build_id
           const outDir = flags.out ?? getCarrierSettingsUpdatesDir(config)
+          let factoryImages = await prepareFactoryImages(buildIndex, [config], [buildId])
           let factoryImageDir = mapGet(
             factoryImages,
             makeDeviceBuildId(config.device.name, buildId),
           ).unpackedFactoryImageDir
-          let sdkVersion = getSdkVersion(
-            await processProps(config, null, new PathResolver(factoryImageDir, PathResolverContext.UNPACKED_IMAGE)),
+          let stockProps = await loadPartitionProps(
+            new PathResolver(factoryImageDir, PathResolverContext.UNPACKED_IMAGE),
           )
+          let sdkVersion = mapGet(mapGet(stockProps, Partition.System), BUILD_VERSION_SDK_PROP)
           const updateConfig = await fetchUpdateConfig(config.device.name, buildId, sdkVersion, flags.debug)
           if (flags.debug) log(updateConfig)
           await downloadAllConfigs(updateConfig, outDir, flags.debug)
