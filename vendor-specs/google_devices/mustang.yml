@@ -6685,7 +6685,6 @@ sysconfig/product/default-permissions/default-permissions.xml: d7fbe7e60926dde54
 sysconfig/product/permissions: dir
 sysconfig/product/permissions/android.hardware.telephony.euicc.mep.xml: 5f3a2ee052a41e9f42110057cd60a87117a22d7f358571199c44f1929030c412
 sysconfig/product/permissions/android.hardware.telephony.euicc.xml: 211bb53d65e73aedfb0a9afb4d65e5891417811ae28d2438324d6b3f3b5bde0d
-sysconfig/product/permissions/android.hardware.telephony.satellite.xml: e18ea780088a89016a5115e7624da6cb21ec2747a3033b1dd0ca7c66fc4002c5
 sysconfig/product/permissions/androidx.camera.extensions.impl.xml: 2f608136ec90b7331625c1cd63965fe4d2227affe2db331f00e3200aa1d81a98
 sysconfig/product/permissions/com.google.android.dialer.support.xml: 42c0ad27676d0b7d21150d6586672b2567ac272f5f24657110914b090631bdb7
 sysconfig/product/permissions/com.google.pixel.camera.connectivity.impl.xml: 2e4338cd3a461a36a6a72ac8fbafa76ea8f158b160766b4d3bd2d6e982eb6e96

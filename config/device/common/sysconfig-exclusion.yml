@@ -43,6 +43,7 @@ sysconfig_exclusions:
       <component class="com.android.storagemanager.deletionhelper.DeletionHelperActivity" enabled="false"/>
     </component-override>
   - <feature name="android.hardware.biometrics.face"/>
+  - <feature name="android.hardware.telephony.satellite"/>
   - <feature name="android.software.communal_mode"/>
   - <feature name="android.software.game_service"/>
   - <feature name="android.software.wallet_location_based_suggestions"/>

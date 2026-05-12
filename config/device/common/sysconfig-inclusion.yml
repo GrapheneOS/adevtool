@@ -9,7 +9,6 @@ sysconfig_inclusions:
   - <feature name="android.hardware.strongbox_keystore" version="300"/>
   - <feature name="android.hardware.telephony.euicc"/>
   - <feature name="android.hardware.telephony.euicc.mep"/>
-  - <feature name="android.hardware.telephony.satellite"/>
   - <feature name="android.hardware.uwb"/>
   - <feature name="android.hardware.vulkan.compute" version="0"/>
   - <feature name="android.hardware.vulkan.level" version="1"/>
