@@ -1,0 +1,11 @@
+rust_binary {
+    name: "gos-dhdutil",
+    srcs: ["src/main.rs"],
+    vendor: true,
+    init_rc: ["gos-dhdutil.rc"],
+    edition: "2021",
+    rustlibs: [
+        "liblibc",
+        "librustutils",
+    ],
+}

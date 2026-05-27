@@ -1,0 +1,10 @@
+on property:vendor.gos.dhdutil.request=*
+    start vendor.gos-dhdutil
+
+service vendor.gos-dhdutil /vendor/bin/gos-dhdutil ${vendor.gos.dhdutil.request}
+    class main
+    capabilities NET_ADMIN
+    user wifi
+    group wifi inet
+    disabled
+    oneshot

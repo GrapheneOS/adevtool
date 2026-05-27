@@ -1,0 +1,2 @@
+vendor.gos.dhdutil.request u:object_r:vendor_gos_dhdutil_prop:s0 exact string
+vendor.gos.dhdutil.result u:object_r:vendor_gos_dhdutil_prop:s0 exact string

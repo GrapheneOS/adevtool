@@ -63,4 +63,10 @@ ifneq ($(BOARD_WITHOUT_RADIO),true)
     PRODUCT_PACKAGES += CarrierConfig2 GosTelephonyProviderOverlay GosTelephonyOverlay
 endif
 
+# lynx uses Qualcomm wlan.ko, and tangorpro uses synadhd.ko. This helper only
+# drives the Broadcom DHD induce_error iovar used by the other Pixel Wi-Fi drivers.
+ifeq ($(filter lynx tangorpro,$(TARGET_PRODUCT)),)
+    PRODUCT_PACKAGES += gos-dhdutil
+endif
+
 PRODUCT_PACKAGES += restrict-pixel-health-association

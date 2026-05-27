@@ -1,0 +1,11 @@
+type gos_dhdutil, domain;
+type gos_dhdutil_exec, exec_type, vendor_file_type, file_type;
+vendor_public_prop(vendor_gos_dhdutil_prop)
+
+init_daemon_domain(gos_dhdutil)
+net_domain(gos_dhdutil)
+
+allow gos_dhdutil self:global_capability_class_set net_admin;
+allowxperm gos_dhdutil self:udp_socket ioctl SIOCDEVPRIVATE;
+set_prop(gos_dhdutil, vendor_gos_dhdutil_prop)
+set_prop(shell, vendor_gos_dhdutil_prop)
