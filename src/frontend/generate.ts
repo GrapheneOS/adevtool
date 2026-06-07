@@ -497,6 +497,10 @@ export async function generateBuildFiles(
             copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
             continue
           }
+          if (resolvedName === 'libc++.system') {
+            copyFiles.push(`${dirs.proprietary}/${entry.partPath.asPseudoPath()}:$(TARGET_COPY_OUT_SYSTEM)/${entry.partPath.relPath}`)
+            continue
+          }
         }
       }
 

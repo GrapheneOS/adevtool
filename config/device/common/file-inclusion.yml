@@ -83,6 +83,7 @@ filters:
       - recovery/system/lib64/hw/android.hardware.fastboot@1.1-impl.pixel.so
       - recovery/system/lib64/librecovery_ui_ext.so
       - recovery/system/lib64/libtrusty.so
+      - system/lib64/libc++.so
       - system/lib64/liblmkd_flags_c.so
       - system/lib64/libstatslog_gpustats.so
       - system/lib64/libstatslog_inputflinger.so

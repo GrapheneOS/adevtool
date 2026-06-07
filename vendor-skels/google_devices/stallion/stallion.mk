@@ -1547,6 +1547,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/DKA_0302_25.up:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/DKA_0302_25.up \
     vendor/google_devices/stallion/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1.img \
     vendor/google_devices/stallion/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/Felica_Tag_66_Changer.apdu:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/Felica_Tag_66_Changer.apdu \
+    vendor/google_devices/stallion/proprietary/system/lib64/libc++.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libc++.so \
     vendor/google_devices/stallion/proprietary/vendor_dlkm/etc/init.insmod.stallion.cfg:$(TARGET_COPY_OUT_VENDOR_DLKM)/etc/init.insmod.stallion.cfg \
     vendor/google_devices/stallion/proprietary/vendor_ramdisk/system/etc/fstab.zuma:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.zuma \
     vendor/google_devices/stallion/proprietary/vendor_ramdisk/system/etc/fstab.zuma-fips:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.zuma-fips \
