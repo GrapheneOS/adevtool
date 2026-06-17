@@ -1,4 +1,4 @@
-use rustutils::system_properties;
+use rustutils::android::system_properties;
 use std::io;
 use std::mem;
 use std::os::fd::{AsRawFd, FromRawFd, OwnedFd};
