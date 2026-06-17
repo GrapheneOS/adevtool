@@ -2,6 +2,7 @@ user=_app isPrivApp=true name=com.google.android.euicc domain=euicc_app type=pri
 user=_app seinfo=platform name=com.android.hbmsvmanager domain=hbmsvmanager_app type=app_data_file levelFrom=all
 user=_app isPrivApp=true name=com.shannon.rcsservice domain=vendor_rcs_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.rcsservice:shannonrcsservice domain=vendor_rcs_app levelFrom=all
+user=_app isPrivApp=true name=.ShannonImsService domain=vendor_ims_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.imsservice domain=vendor_ims_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.imsservice:remote domain=vendor_ims_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.qualifiednetworksservice domain=vendor_ims_app levelFrom=all

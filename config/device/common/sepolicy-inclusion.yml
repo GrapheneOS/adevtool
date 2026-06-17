@@ -29,6 +29,7 @@ sepolicy_inclusions:
         - persist.rilext. u:object_r:system_ril_ext_prop:s0
         - rilext. u:object_r:system_ril_ext_prop:s0
       system_ext_seapp_contexts:
+        - user=_app isPrivApp=true name=.ShannonImsService domain=vendor_ims_app levelFrom=all
         - user=_app isPrivApp=true name=com.google.android.euicc domain=euicc_app type=privapp_data_file levelFrom=user
         - user=_app isPrivApp=true name=com.google.android.rilextension domain=rilextensionservice_app levelFrom=all
         - user=_app isPrivApp=true name=com.samsung.slsi.telephony.oemril domain=oemrilservice_app levelFrom=all
