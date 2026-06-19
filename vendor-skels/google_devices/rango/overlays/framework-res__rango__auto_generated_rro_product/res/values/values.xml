@@ -119,7 +119,6 @@
         <item>0</item>
     </array>
     <bool name="config_biometricFrrNotificationEnabled">true</bool>
-    <bool name="config_cv_available">true</bool>
     <bool name="config_evenDimmerEnabled">true</bool>
     <bool name="config_flexibleSplitRatios">true</bool>
     <bool name="config_fold_lock_behavior">true</bool>

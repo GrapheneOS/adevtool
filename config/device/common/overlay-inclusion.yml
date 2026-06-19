@@ -146,7 +146,6 @@ filters:
       - android:bool/config_buttonTextAllCaps = false
       - android:bool/config_canInternalDisplayHostDesktops = true
       - android:bool/config_cbrs_supported = true
-      - android:bool/config_cv_available = true
       - android:bool/config_decoupleStatusBarAndDisplayCutoutFromScreenSize = true
       - android:bool/config_deskDockEnablesAccelerometer = false
       - android:bool/config_device_volte_available = true

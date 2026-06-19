@@ -3,3 +3,12 @@ includes:
 
 device:
   platform: laguna
+
+filters:
+  overlay_inclusions:
+    match:
+      - android:bool/config_cv_available = true
+  overlay_keys:
+    match:
+      # This hides the Night Mode setting with internal-only unavailable Pixel Comfort View settings
+      - android:bool/config_cv_available = true

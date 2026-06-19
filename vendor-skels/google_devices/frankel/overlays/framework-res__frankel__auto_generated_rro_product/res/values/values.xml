@@ -63,7 +63,6 @@
         <item>0</item>
     </array>
     <bool name="config_biometricFrrNotificationEnabled">true</bool>
-    <bool name="config_cv_available">true</bool>
     <bool name="config_evenDimmerEnabled">true</bool>
     <bool name="config_keyboardVibrationSettingsSupported">true</bool>
     <bool name="config_refreshRateSynchronizationEnabled">true</bool>
