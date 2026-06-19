@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – vollständig geladen</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Fertig geladen</string>
     <string name="charging_optimization_remaining_time_label">Spätestens um %1$s vollständig geladen</string>
+    <string name="comfort_filters_all_modes_off_summary">Aus</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Augenkomfort-Modus, Nachtlicht aktiviert</string>
+    <string name="comfort_filters_comfort_view_on_summary">Augenkomfort-Modus aktiviert</string>
+    <string name="comfort_filters_entry_title">Komfortfilter</string>
+    <string name="comfort_filters_night_light_on_summary">Nachtlicht aktiviert</string>
+    <string name="comfort_filters_settings_page_main_summary">Mit diesen Filtern kannst du die Belastung für deine Augen verringern. Der Augenkomfort-Modus gibt dem Display eine weichere, pastellfarbene Optik und das Nachtlicht reduziert abends grelles blaues Licht.</string>
+    <string name="comfort_filters_settings_page_main_title">Augenkomfort-Filter</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Passt die Darstellung an deine Umgebung an</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamisch</string>
+    <string name="comfort_view_intensity_title">Intensität</string>
+    <string name="comfort_view_main_switch_title">Augenkomfort-Modus</string>
     <string name="emission_frequency_summary">Emissionsfrequenz anpassen, um die Anzeige für empfindliche Augen zu verbessern</string>
     <string name="emission_frequency_title">Helligkeit für empfindliche Augen anpassen</string>
+    <string name="keywords_comfort_filters">Augenkomfort-Filter, Augenkomfort, Augenkomfort-Modus, Nachtlicht</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Weitere Informationen zur Entsperrung per Fingerabdruck deines Pixel findest du unter &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Bei Verwendung eines Displayschutzes die Berührungsempfindlichkeit erhöhen und die Touchreaktion verbessern</string>
     <string name="touch_sensitivity_title">Displayschutzmodus</string>

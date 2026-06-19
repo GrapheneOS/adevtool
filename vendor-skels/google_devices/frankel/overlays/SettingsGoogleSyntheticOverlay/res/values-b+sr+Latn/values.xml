@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – Punjenje je završeno</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Punjenje je završeno</string>
     <string name="charging_optimization_remaining_time_label">Punjenje se završava do %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Isključeno</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Prikaz za udobnost, Noćno svetlo je uključeno</string>
+    <string name="comfort_filters_comfort_view_on_summary">Prikaz za udobnost je uključen</string>
+    <string name="comfort_filters_entry_title">Filteri za udobnost</string>
+    <string name="comfort_filters_night_light_on_summary">Noćno svetlo je uključeno</string>
+    <string name="comfort_filters_settings_page_main_summary">Smanjite naprezanje očiju pomoću filtera. Prikaz za udobnost daje ekranu mekši, pastelniji izgled, a Noćno svetlo ograničava jako plavo svetlo noću.</string>
+    <string name="comfort_filters_settings_page_main_title">Filteri za udobnost</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Prilagođava se na osnovu okruženja</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dinamički</string>
+    <string name="comfort_view_intensity_title">Intenzitet</string>
+    <string name="comfort_view_main_switch_title">Prikaz za udobnost</string>
     <string name="emission_frequency_summary">Prilagodite učestalost emisije da biste poboljšali doživljaj gledanja za osetljive oči</string>
     <string name="emission_frequency_title">Prilagodite osvetljenost osetljivim očima</string>
+    <string name="keywords_comfort_filters">filteri za udobnost, zaštita za oči, prikaz za udobnost, noćno svetlo</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Saznajte više o Pixel otključavanju otiskom prsta na &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Povećajte osetljivost dodira i poboljšajte dodir dok koristite zaštitu za ekran</string>
     <string name="touch_sensitivity_title">Režim zaštite za ekran</string>

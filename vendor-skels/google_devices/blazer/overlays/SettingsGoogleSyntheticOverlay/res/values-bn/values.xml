@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - চার্জিং সম্পূর্ণ হয়েছে</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">চার্জিং সম্পূর্ণ হয়েছে</string>
     <string name="charging_optimization_remaining_time_label">%1$s-এ চার্জিং শেষ হবে</string>
+    <string name="comfort_filters_all_modes_off_summary">বন্ধ আছে</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">আরামদায়ক ভিউ, নাইট লাইট চালু আছে</string>
+    <string name="comfort_filters_comfort_view_on_summary">আরামদায়ক ভিউ চালু আছে</string>
+    <string name="comfort_filters_entry_title">আরামদায়ক ফিল্টার</string>
+    <string name="comfort_filters_night_light_on_summary">নাইট লাইট চালু আছে</string>
+    <string name="comfort_filters_settings_page_main_summary">"ফিল্টার ব্যবহার করে চোখের উপর চাপ কমায়। 'আরামদায়ক ভিউ' আপনার স্ক্রিনকে আরও সফ্ট, আরও প্যাস্টেল লুক দেয় এবং 'নাইট লাইট' মোডের মাধ্যমে রাতে ক্ষতিকর নীল আলো সীমিত করা হয়।"</string>
+    <string name="comfort_filters_settings_page_main_title">আরামদায়ক ফিল্টার</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">আপনার পরিবেশের উপর ভিত্তি করে অ্যাডজাস্ট করা হয়</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">ডায়নামিক</string>
+    <string name="comfort_view_intensity_title">তীব্রতা</string>
+    <string name="comfort_view_main_switch_title">আরামদায়ক ভিউ</string>
     <string name="emission_frequency_summary">সংবেদনশীল চোখের জন্য দেখার অভিজ্ঞতা উন্নত করতে নির্গমনের ফ্রিকোয়েন্সি অ্যাডজাস্ট করুন</string>
     <string name="emission_frequency_title">সংবেদনশীল চোখের জন্য স্ক্রিনের উজ্জ্বলতা অ্যাডজাস্ট করুন</string>
+    <string name="keywords_comfort_filters">আরামদায়ক ফিল্টার, চোখের জন্য আরামদায়ক, আরামদায়ক ভিউ, নাইট লাইট</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"এই লিঙ্ক থেকে ফিঙ্গারপ্রিন্টের সাহায্যে Pixel আনলক করা সম্পর্কে আরও জানুন: &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">স্পর্শ সংবেদনশীলতা বাড়ান এবং স্ক্রিন প্রোটেকটর ব্যবহার করার সময় স্পর্শ বোঝার ক্ষমতা উন্নত করুন</string>
     <string name="touch_sensitivity_title">স্ক্রিন প্রোটেকটর মোড</string>

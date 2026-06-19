@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - សាកថ្មពេញ</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">សាកថ្មពេញ</string>
     <string name="charging_optimization_remaining_time_label">សាកថ្មពេញត្រឹមម៉ោង %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">បិទ</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">ទិដ្ឋភាពស្រួលមើល ពន្លឺពេលយប់ត្រូវបានបើក</string>
+    <string name="comfort_filters_comfort_view_on_summary">ទិដ្ឋភាពស្រួលមើលត្រូវបានបើក</string>
+    <string name="comfort_filters_entry_title">ហ្វីលធើស្រួលមើល</string>
+    <string name="comfort_filters_night_light_on_summary">ពន្លឺពេលយប់ត្រូវបានបើក</string>
+    <string name="comfort_filters_settings_page_main_summary">កាត់បន្ថយការចុករួយភ្នែកតាមរយៈហ្វីលធើ។ ទិដ្ឋភាពស្រួលមើលធ្វើឱ្យអេក្រង់របស់អ្នកមើលទៅកាន់តែស្រទន់ និងមានពណ៌ត្រជាក់ភ្នែក ហើយមុខងារពន្លឺពេលយប់ដាក់កំហិតលើពន្លឺពណ៌ខៀវដែលចាំងខ្លាំងនៅពេលយប់។</string>
+    <string name="comfort_filters_settings_page_main_title">ហ្វីលធើស្រួលមើល</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">កែតម្រូវដោយផ្អែកតាមមជ្ឈដ្ឋានរបស់អ្នក</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">ឌីណាមិក</string>
+    <string name="comfort_view_intensity_title">កម្រិត</string>
+    <string name="comfort_view_main_switch_title">ទិដ្ឋភាពស្រួលមើល</string>
     <string name="emission_frequency_summary">កែតម្រូវប្រេកង់ពន្លឺដែលបញ្ចេញ ដើម្បីកែលម្អបទពិសោធមើលសម្រាប់ភ្នែកដែលភ្ញោចនឹងពន្លឺ</string>
     <string name="emission_frequency_title">កែតម្រូវកម្រិតពន្លឺសម្រាប់ភ្នែកដែលភ្ញោចនឹងពន្លឺ</string>
+    <string name="keywords_comfort_filters">ហ្វីលធើស្រួលមើល, មុខងារការពារភ្នែក, ទិដ្ឋភាពស្រួលមើល, ពន្លឺពេលយប់</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"ស្វែងយល់បន្ថែមអំពីការដោះសោ​ដោយប្រើ​ស្នាមម្រាមដៃនៅលើ Pixel តាមរយៈ &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;។"</string>
     <string name="touch_sensitivity_summary">បង្កើនកម្រិតរំញោចនឹងការ​ចុច និង​កែលម្អ​ការ​ចុច​នៅ​ពេល​ប្រើប្រាស់​កញ្ចក់​ការពារ​អេក្រង់</string>
     <string name="touch_sensitivity_title">មុខងារ​កញ្ចក់​ការពារ​អេក្រង់</string>

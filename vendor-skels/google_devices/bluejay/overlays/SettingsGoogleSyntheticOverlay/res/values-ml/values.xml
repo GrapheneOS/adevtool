@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - ചാർജ്ജ് ചെയ്യൽ പൂർത്തിയായി</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">ചാർജ്ജ് ചെയ്യൽ പൂർത്തിയായി</string>
     <string name="charging_optimization_remaining_time_label">%1$s-നകം പൂർണ്ണമായി ചാർജ് ചെയ്തു</string>
+    <string name="comfort_filters_all_modes_off_summary">ഓഫാണ്</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">കംഫർട്ട് കാഴ്‌ച, നൈറ്റ് ലൈറ്റ് ഓണാണ്</string>
+    <string name="comfort_filters_comfort_view_on_summary">കംഫർട്ട് കാഴ്‌ച ഓണാണ്</string>
+    <string name="comfort_filters_entry_title">കംഫർട്ട് ഫിൽട്ടറുകൾ</string>
+    <string name="comfort_filters_night_light_on_summary">നൈറ്റ് ലൈറ്റ് ഓണാണ്</string>
+    <string name="comfort_filters_settings_page_main_summary">ഫിൽട്ടറുകൾ ഉപയോഗിച്ച് കണ്ണിന്റെ ആയാസം കുറയ്ക്കുക. കംഫർട്ട് കാഴ്‌ച നിങ്ങളുടെ സ്‌ക്രീനിന് മൃദുവായ കൂടുതൽ പാസ്‌റ്റൽ രൂപം നൽകുന്നു, നൈറ്റ് ലൈറ്റ് രാത്രിയിൽ തീവ്രത കൂടിയ നീല വെളിച്ചം പരിമിതപ്പെടുത്തുന്നു.</string>
+    <string name="comfort_filters_settings_page_main_title">കംഫർട്ട് ഫിൽട്ടറുകൾ</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">നിങ്ങളുടെ അന്തരീക്ഷത്തിന് അനുസരിച്ച് ക്രമീകരിക്കുന്നു</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">ഡൈനാമിക്</string>
+    <string name="comfort_view_intensity_title">തീവ്രത</string>
+    <string name="comfort_view_main_switch_title">കംഫർട്ട് കാഴ്‌ച</string>
     <string name="emission_frequency_summary">സെൻസിറ്റീവായ കണ്ണുകൾക്കായി കാഴ്ചാനുഭവം മെച്ചപ്പെടുത്താൻ എമിഷൻ ഫ്രീക്വൻസി ക്രമീകരിക്കുക</string>
     <string name="emission_frequency_title">സെൻസിറ്റീവായ കണ്ണുകൾക്കായി തെളിച്ചം ക്രമീകരിക്കുക</string>
+    <string name="keywords_comfort_filters">കംഫർട്ട് ഫിൽട്ടറുകൾ, ഐ കംഫർട്ട്, കംഫർട്ട് കാഴ്‌ച, നൈറ്റ് ലൈറ്റ്</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Pixel ഫിംഗർപ്രിന്റ് അൺലോക്കിനെ കുറിച്ച് ഇതിൽ നിന്ന് കൂടുതലറിയുക &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">സ്പർശന സെൻസിറ്റിവിറ്റി വർദ്ധിപ്പിക്കുക, സ്ക്രീൻ പ്രൊട്ടക്ടർ ഉപയോഗിക്കുമ്പോൾ സ്പർശനം മെച്ചപ്പെടുത്തുക</string>
     <string name="touch_sensitivity_title">സ്ക്രീൻ പ്രൊട്ടക്ടർ മോഡ്</string>

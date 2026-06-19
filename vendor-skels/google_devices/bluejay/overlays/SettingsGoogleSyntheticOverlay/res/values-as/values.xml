@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s • চাৰ্জিং সম্পূৰ্ণ হৈছে</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">চাৰ্জিং সম্পূৰ্ণ হৈছে</string>
     <string name="charging_optimization_remaining_time_label">%1$sলৈকে চাৰ্জিং সম্পূৰ্ণ হ’ব</string>
+    <string name="comfort_filters_all_modes_off_summary">অফ আছে</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">কম্ফ’ৰ্ট ভিউ, নাইট লাইট অন আছে</string>
+    <string name="comfort_filters_comfort_view_on_summary">কম্ফ’ৰ্ট ভিউ অন আছে</string>
+    <string name="comfort_filters_entry_title">কম্ফ’ৰ্ট ফিল্টাৰ</string>
+    <string name="comfort_filters_night_light_on_summary">নাইট লাইট অন আছে</string>
+    <string name="comfort_filters_settings_page_main_summary">ফিল্টাৰৰ জৰিয়তে চকুৰ ওপৰত পৰা চাপ হ্ৰাস কৰক। কম্ফ’ৰ্ট ভিউৱে আপোনাৰ স্ক্ৰীনক এটা কোমল, অধিক পেষ্টেল ৰূপ প্ৰদান কৰে আৰু নৈশ উজ্জ্বলতা ৰাতি তীব্ৰ নীলা পোহৰ সীমিত কৰে।</string>
+    <string name="comfort_filters_settings_page_main_title">কম্ফ’ৰ্ট ফিল্টাৰ</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">আপোনাৰ পৰিৱেশৰ ওপৰত ভিত্তি কৰি সামঞ্জস্য কৰে</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">ডাইনামিক</string>
+    <string name="comfort_view_intensity_title">তীব্ৰতা</string>
+    <string name="comfort_view_main_switch_title">কম্ফ’ৰ্ট ভিউ</string>
     <string name="emission_frequency_summary">সংবেদনশীল চকুৰ বাবে চোৱাৰ অভিজ্ঞতা উন্নত কৰিবলৈ নিৰ্গমনৰ সঘনতা মিলাওক</string>
     <string name="emission_frequency_title">সংবেদনশীল চকুৰ বাবে উজ্জ্বলতা মিলাওক</string>
+    <string name="keywords_comfort_filters">কম্ফ’ৰ্ট ফিল্টাৰ, আই কম্ফ’ৰ্ট, কম্ফ’ৰ্ট ভিউ, নাইট লাইট</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">Pixelৰ ফিংগাৰপ্ৰিন্ট আনলকৰ বিষয়ে &lt;a href=’http://g.co/pixel/fingerprintunlock’&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;ত অধিক জানক।</string>
     <string name="touch_sensitivity_summary">স্পৰ্শৰ সংবেদনশীলতা বৃদ্ধি কৰক আৰু স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ব্যৱহাৰ কৰাৰ সময়ত স্পৰ্শ উন্নত কৰক</string>
     <string name="touch_sensitivity_title">স্ক্ৰীনৰ সুৰক্ষা প্ৰদানকাৰী ম’ড</string>

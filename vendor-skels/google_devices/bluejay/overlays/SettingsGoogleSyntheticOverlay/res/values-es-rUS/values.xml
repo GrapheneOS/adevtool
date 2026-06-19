@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Carga completa</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Carga completa</string>
     <string name="charging_optimization_remaining_time_label">Terminará de cargarse a la(s) %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Desactivados</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Vista cómoda y Luz nocturna activadas</string>
+    <string name="comfort_filters_comfort_view_on_summary">Vista cómoda activada</string>
+    <string name="comfort_filters_entry_title">Filtros de comodidad</string>
+    <string name="comfort_filters_night_light_on_summary">Luz nocturna activada</string>
+    <string name="comfort_filters_settings_page_main_summary">Reduce la fatiga visual con filtros. La Vista cómoda le da a la pantalla un aspecto más suave y pastel, y la Luz nocturna limita la luz azul intensa por la noche.</string>
+    <string name="comfort_filters_settings_page_main_title">Filtros de comodidad</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Se ajusta según el entorno</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dinámico</string>
+    <string name="comfort_view_intensity_title">Intensidad</string>
+    <string name="comfort_view_main_switch_title">Vista cómoda</string>
     <string name="emission_frequency_summary">Ajusta la frecuencia de emisión para una mejor visualización en ojos sensibles</string>
     <string name="emission_frequency_title">Ajustar el brillo para ojos sensibles</string>
+    <string name="keywords_comfort_filters">Filtros de comodidad, Comodidad visual, Vista cómoda, Luz nocturna</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Más información sobre el Desbloqueo con huellas dactilares de Pixel en &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Aumenta la sensibilidad al tacto y mejora el control táctil con un protector de pantalla</string>
     <string name="touch_sensitivity_title">Modo protector de pantalla</string>

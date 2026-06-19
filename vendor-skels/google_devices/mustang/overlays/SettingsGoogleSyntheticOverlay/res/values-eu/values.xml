@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Guztiz kargatu da</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Guztiz kargatu da</string>
     <string name="charging_optimization_remaining_time_label">Ordu honetan egongo da guztiz kargatuta: %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Desaktibatuta</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Erosotasun moduko ikuspegia, Gaueko argia aktibatuta</string>
+    <string name="comfort_filters_comfort_view_on_summary">Erosotasun moduko ikuspegia aktibatuta</string>
+    <string name="comfort_filters_entry_title">Erosotasun moduko iragazkiak</string>
+    <string name="comfort_filters_night_light_on_summary">Gaueko argia aktibatuta</string>
+    <string name="comfort_filters_settings_page_main_summary">Murriztu neke bisuala iragazkiekin. Erosotasun moduko ikuspegiak pantailaren koloreak leuntzen eta pastel-estiloko egiten ditu, eta Gaueko argia eginbideak argi urdin indartsua mugatzen du gauean.</string>
+    <string name="comfort_filters_settings_page_main_title">Erosotasun moduko iragazkiak</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Ingurunearen arabera doitzen da</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dinamikoa</string>
+    <string name="comfort_view_intensity_title">Intentsitatea</string>
+    <string name="comfort_view_main_switch_title">Erosotasun moduko ikuspegia</string>
     <string name="emission_frequency_summary">Doitu emisioen maiztasuna, begi sentikorretarako hobea izan dadin</string>
     <string name="emission_frequency_title">Doitu argitasuna begi sentikorretarako</string>
+    <string name="keywords_comfort_filters">Erosotasun moduko iragazkiak, Begien erosotasuna, Erosotasun moduko ikuspegia, Gaueko argia</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Lortu informazio gehiago hatz-marka bidez desblokeatzeko Pixel-en eginbideari buruz hemen: &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Handitu ukipen-sentikortasuna eta hobetu ukipena pantaila babesteko osagarri bat erabiltzean</string>
     <string name="touch_sensitivity_title">Pantaila babesteko osagarriaren modua</string>

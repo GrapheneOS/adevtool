@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Imemaliza kuchaji</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Imemaliza kuchaji</string>
     <string name="charging_optimization_remaining_time_label">Itamaliza kuchaji kufikia saa %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Imezimwa</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Mwonekano wa Starehe, umewasha Mwanga wa Usiku</string>
+    <string name="comfort_filters_comfort_view_on_summary">Umewasha Mwonekano wa Starehe</string>
+    <string name="comfort_filters_entry_title">Vichujio vya Starehe</string>
+    <string name="comfort_filters_night_light_on_summary">Umewasha Mwanga wa Usiku</string>
+    <string name="comfort_filters_settings_page_main_summary">Punguza uchovu wa macho kwa kutumia vichujio. Mwonekano wa Starehe huipa skrini yako mwonekano laini wa rangi ya krayoni na Mwanga wa Usiku hupunguza mwangaza mkali wa samawati wakati wa usiku.</string>
+    <string name="comfort_filters_settings_page_main_title">Vichujio vya Starehe</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Hubadilisha kulingana na mazingira yako</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Nyumbufu</string>
+    <string name="comfort_view_intensity_title">Kiwango</string>
+    <string name="comfort_view_main_switch_title">Mwonekano wa Starehe</string>
     <string name="emission_frequency_summary">Rekebisha marudio ya kutolewa kwa mwangaza ili uboreshe hali ya utazamaji kwa macho yanayoathiriwa na mwangaza</string>
     <string name="emission_frequency_title">"Rekebisha ung'aavu kwa macho yanayoathiriwa na mwangaza"</string>
+    <string name="keywords_comfort_filters">Vichujio vya Starehe, Starehe ya Macho, Mwonekano wa Starehe, Mwanga wa Usiku</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Pata maelezo zaidi kuhusu kufungua Pixel kwa alama ya kidole kwenye &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Ongeza kiwango cha hisi unapogusa na uboreshe matumizi ya kugusa wakati una kilinda skrini</string>
     <string name="touch_sensitivity_title">Hali ya ulinzi wa skrini</string>

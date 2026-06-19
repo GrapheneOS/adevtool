@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – Lataus valmis</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Lataus valmis</string>
     <string name="charging_optimization_remaining_time_label">Lataus valmis %1$s mennessä</string>
+    <string name="comfort_filters_all_modes_off_summary">Pois päältä</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Mukava näkymä, yövalo päällä</string>
+    <string name="comfort_filters_comfort_view_on_summary">Mukava näkymä päällä</string>
+    <string name="comfort_filters_entry_title">Mukavuussuodattimet</string>
+    <string name="comfort_filters_night_light_on_summary">Yövalo on päällä</string>
+    <string name="comfort_filters_settings_page_main_summary">Vähennä silmien rasitusta suodattimilla. Mukava näkymä antaa näytölle pehmeämmän, pastellisävyisemmän ulkoasun, ja yövalo rajoittaa sinistä valoa yöllä.</string>
+    <string name="comfort_filters_settings_page_main_title">Mukavuussuodattimet</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Säätyy ympäristön mukaan</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynaaminen</string>
+    <string name="comfort_view_intensity_title">Voimakkuus</string>
+    <string name="comfort_view_main_switch_title">Mukava näkymä</string>
     <string name="emission_frequency_summary">Säädä näyttötiheyttä, jotta katselukokemus on parempi herkille silmille</string>
     <string name="emission_frequency_title">Säädä kirkkautta herkille silmille</string>
+    <string name="keywords_comfort_filters">Mukavuussuodattimet, silmien mukavuus, mukavuusnäkymä, yövalo</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Lue lisää Pixelin sormenjälkiavauksesta osoitteessa &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Lisää kosketuksen herkkyyttä ja paranna kosketuskäyttöä, kun näytönsuojus on käytössä</string>
     <string name="touch_sensitivity_title">Näytönsuojustila</string>

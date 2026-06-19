@@ -28,6 +28,17 @@ synthetic_overlays:
         - charging_optimization_reach_limit_charge_label
         - charging_optimization_reach_limit_remaining_time_label
         - charging_optimization_remaining_time_label
+        - comfort_filters_all_modes_off_summary
+        - comfort_filters_comfort_view_on_night_light_on_summary
+        - comfort_filters_comfort_view_on_summary
+        - comfort_filters_entry_title
+        - comfort_filters_night_light_on_summary
+        - comfort_filters_settings_page_main_summary
+        - comfort_filters_settings_page_main_title
+        - comfort_view_ambient_adaptive_switch_summary
+        - comfort_view_ambient_adaptive_switch_title
+        - comfort_view_intensity_title
+        - comfort_view_main_switch_title
         - emission_frequency_summary
         - emission_frequency_title
         - help_uri_5g_dsds
@@ -140,6 +151,7 @@ synthetic_overlays:
         - help_url_wifi
         - help_url_wifi_p2p
         - help_url_wireless_charging
+        - keywords_comfort_filters
         - security_settings_fingerprint_v2_enroll_introduction_message_learn_more
         - touch_sensitivity_summary
         - touch_sensitivity_title

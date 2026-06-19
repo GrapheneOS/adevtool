@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - சார்ஜாகிவிட்டது</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">சார்ஜாகிவிட்டது</string>
     <string name="charging_optimization_remaining_time_label">%1$sக்கு சார்ஜிங் நிறைவாகும்</string>
+    <string name="comfort_filters_all_modes_off_summary">ஆஃப்</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">கம்ஃபர்ட் வியூ, நைட் லைட் ஆன் செய்யப்பட்டுள்ளன</string>
+    <string name="comfort_filters_comfort_view_on_summary">கம்ஃபர்ட் வியூ ஆன் செய்யப்பட்டுள்ளது</string>
+    <string name="comfort_filters_entry_title">கம்ஃபர்ட் ஃபில்டர்கள்</string>
+    <string name="comfort_filters_night_light_on_summary">நைட் லைட் ஆன் செய்யப்பட்டுள்ளது</string>
+    <string name="comfort_filters_settings_page_main_summary">ஃபில்டர்கள் மூலம் கண் எரிச்சலைக் குறைக்கலாம். கம்ஃபர்ட் வியூ அம்சம் உங்கள் திரைக்கு மேலும் மென்மையான, இதமான தோற்றத்தை அளிக்கும்; நைட் லைட் அம்சம் இரவு நேரத்தில் கடுமையான நீல ஒளியைக் குறைக்கும்.</string>
+    <string name="comfort_filters_settings_page_main_title">கம்ஃபர்ட் ஃபில்டர்கள்</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">உங்கள் சுற்றுப்புறத்திற்கு ஏற்றவாறு சரிசெய்துகொள்ளும்</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">டைனமிக்</string>
+    <string name="comfort_view_intensity_title">ஒளிச்செறிவு</string>
+    <string name="comfort_view_main_switch_title">கம்ஃபர்ட் வியூ</string>
     <string name="emission_frequency_summary">அதிக உணர்திறன் கொண்ட கண்களுக்கு ஏற்ப பார்வை அனுபவத்தை மேம்படுத்த உமிழ்வு இடைவெளியைச் சரிசெய்யலாம்</string>
     <string name="emission_frequency_title">அதிக உணர்திறன் கொண்ட கண்களுக்கு ஏற்ப ஒளிர்வைச் சரிசெய்தல்</string>
+    <string name="keywords_comfort_filters">கம்ஃபர்ட் ஃபில்டர்கள், ஐ கம்ஃபர்ட், கம்ஃபர்ட் வியூ, நைட் லைட்</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Pixel சாதனத்தின் ‘கைரேகை அன்லாக்’ அம்சம் குறித்து மேலும் அறிய &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt; என்ற இணைப்பிற்குச் செல்லுங்கள்."</string>
     <string name="touch_sensitivity_summary">ஸ்கிரீன் கார்டைப் பயன்படுத்தும்போது தொடுதல் உணர்திறனை அதிகரிக்கும் மற்றும் தொடுதலை மேம்படுத்தும்</string>
     <string name="touch_sensitivity_title">ஸ்கிரீன் கார்டுப் பயன்முறை</string>

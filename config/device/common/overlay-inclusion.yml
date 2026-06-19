@@ -1094,6 +1094,17 @@ filters:
       - com.android.settings:string/charging_optimization_title|*
       - com.android.settings:string/charging_sounds_title|*
       - com.android.settings:string/communal_settings_title|*
+      - com.android.settings:string/comfort_filters_all_modes_off_summary|*
+      - com.android.settings:string/comfort_filters_comfort_view_on_night_light_on_summary|*
+      - com.android.settings:string/comfort_filters_comfort_view_on_summary|*
+      - com.android.settings:string/comfort_filters_entry_title|*
+      - com.android.settings:string/comfort_filters_night_light_on_summary|*
+      - com.android.settings:string/comfort_filters_settings_page_main_summary|*
+      - com.android.settings:string/comfort_filters_settings_page_main_title|*
+      - com.android.settings:string/comfort_view_ambient_adaptive_switch_summary|*
+      - com.android.settings:string/comfort_view_ambient_adaptive_switch_title|*
+      - com.android.settings:string/comfort_view_intensity_title|*
+      - com.android.settings:string/comfort_view_main_switch_title|*
       - com.android.settings:string/config_limited_warranty_overlay_package_name|*
       - com.android.settings:string/config_regulatory_info_overlay_package_name|*
       - com.android.settings:string/data_connection_5g_plus|*
@@ -1220,6 +1231,7 @@ filters:
       - com.android.settings:string/help_url_wifi = intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_wi_fi;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_wifi;end
       - com.android.settings:string/help_url_wifi_p2p = intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_wi_fi_p2p;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_wifi_p2p;end
       - com.android.settings:string/help_url_wireless_charging = https://support.google.com/pixelphone?p=eu_ecodesign_charging
+      - com.android.settings:string/keywords_comfort_filters|*
       - com.android.settings:string/keywords_wifi_calling|*
       - com.android.settings:string/link_locale_picker_footer_learn_more|*
       - com.android.settings:string/location_settings_footer_learn_more_link|*

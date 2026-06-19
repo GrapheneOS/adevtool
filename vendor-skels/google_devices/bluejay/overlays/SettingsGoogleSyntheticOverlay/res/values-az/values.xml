@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Şarjetmə tamamlandı</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Şarjetmə tamamlandı</string>
     <string name="charging_optimization_remaining_time_label">%1$s radələrinə qədər şarjetmə bitəcək</string>
+    <string name="comfort_filters_all_modes_off_summary">Deaktiv</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Rahat görünüş, Gecə işığı aktivdir</string>
+    <string name="comfort_filters_comfort_view_on_summary">Rahat görünüş aktivdir</string>
+    <string name="comfort_filters_entry_title">Rahatlıq filtrləri</string>
+    <string name="comfort_filters_night_light_on_summary">Gecə işığı aktivdir</string>
+    <string name="comfort_filters_settings_page_main_summary">Filtrlərlə göz yorğunluğunu azaldın. Komfort görünüş ekranınıza daha yumşaq, daha pastel görünüş verir və Gecə işığı gecə sərt mavi işığı məhdudlaşdırır.</string>
+    <string name="comfort_filters_settings_page_main_title">Komfort filtrləri</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Ətrafınıza əsasən tənzimləyir</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dinamik</string>
+    <string name="comfort_view_intensity_title">İntensivlik</string>
+    <string name="comfort_view_main_switch_title">Komfort görünüş</string>
     <string name="emission_frequency_summary">Həssas gözlər üçün baxış təcrübəsini yaxşılaşdırmaq məqsədilə emissiya tezliyini tənzimləyin</string>
     <string name="emission_frequency_title">Həssas gözlər üçün parlaqlığı tənzimləyin</string>
+    <string name="keywords_comfort_filters">Rahatlıq filtrləri, Göz rahatlığı, Rahat görünüş, Gecə işığı</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Pixel barmaq izi ilə kiliddən çıxarma haqqında ətraflı məlumat: &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Ekran qoruyucusu istifadə edərkən toxunma həssaslığını artırın və toxunuşu yaxşılaşdırın</string>
     <string name="touch_sensitivity_title">Ekran qoruyucu rejimi</string>

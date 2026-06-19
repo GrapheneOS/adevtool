@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Helemaal opgeladen</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Helemaal opgeladen</string>
     <string name="charging_optimization_remaining_time_label">Helemaal opgeladen om %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Uit</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Comfortweergave, Nachtverlichting aan</string>
+    <string name="comfort_filters_comfort_view_on_summary">Comfortweergave aan</string>
+    <string name="comfort_filters_entry_title">Comfortfilters</string>
+    <string name="comfort_filters_night_light_on_summary">Nachtverlichting aan</string>
+    <string name="comfort_filters_settings_page_main_summary">"Belast je ogen minder met behulp van filters. Comfortweergave geeft je scherm een zachtere, meer pastelachtige look en Nachtverlichting beperkt 's nachts belastend blauw licht."</string>
+    <string name="comfort_filters_settings_page_main_title">Comfortfilters</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Past zich aan je omgeving aan</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamisch</string>
+    <string name="comfort_view_intensity_title">Intensiteit</string>
+    <string name="comfort_view_main_switch_title">Comfortweergave</string>
     <string name="emission_frequency_summary">Pas de emissiefrequentie aan om de kijkervaring voor gevoelige ogen te verbeteren</string>
     <string name="emission_frequency_title">Helderheid aanpassen voor gevoelige ogen</string>
+    <string name="keywords_comfort_filters">Comfortfilters, Oogcomfort, Comfortweergave, Nachtverlichting</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Ga voor meer informatie over Ontgrendelen met vingerafdruk op de Pixel naar &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Verhoog de aanraakgevoeligheid en verbeter de aanraakreactie als je een screenprotector gebruikt</string>
     <string name="touch_sensitivity_title">Modus voor screenprotector</string>

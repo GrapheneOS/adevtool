@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - چارجنگ مکمل ہو گئی</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">چارجنگ مکمل ہو گئی</string>
     <string name="charging_optimization_remaining_time_label">‫%1$s تک چارج مکمل ہو گیا</string>
+    <string name="comfort_filters_all_modes_off_summary">آف ہے</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">سہولت منظر، نائٹ لائٹ آن ہے</string>
+    <string name="comfort_filters_comfort_view_on_summary">سہولت منظر آن ہے</string>
+    <string name="comfort_filters_entry_title">سہولت کے فلٹرز</string>
+    <string name="comfort_filters_night_light_on_summary">نائٹ لائٹ آن ہے</string>
+    <string name="comfort_filters_settings_page_main_summary">فلٹرز کے ساتھ آنکھوں کی تھکن کم کریں۔ سہولت منظر آپ کی اسکرین کو نرم اور زیادہ پیسٹل رنگوں والا بناتا ہے، اور نائٹ لائٹ رات کے وقت شدید نیلی روشنی کو محدود کرتی ہے۔</string>
+    <string name="comfort_filters_settings_page_main_title">سہولت کے فلٹرز</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">آپ کے ماحول کے مطابق ایڈجسٹ ہوتا ہے</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">ڈائنیمک</string>
+    <string name="comfort_view_intensity_title">شدت</string>
+    <string name="comfort_view_main_switch_title">سہولت منظر</string>
     <string name="emission_frequency_summary">حساس آنکھوں کے لیے دیکھنے کے تجربے کو بہتر بنانے کے لیے اخراج کی فریکوئنسی کو ایڈجسٹ کریں</string>
     <string name="emission_frequency_title">حساس آنکھوں کے لیے چمک کو ایڈجسٹ کریں</string>
+    <string name="keywords_comfort_filters">سہولت فلٹرز، آنکھوں کی سہولت، سہولت منظر، نائٹ لائٹ</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"‏&lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt; پر Pixel فنگر پرنٹ اَن لاک کے بارے میں مزید جانیں۔"</string>
     <string name="touch_sensitivity_summary">اسکرین پروٹیکٹر استعمال کرتے وقت ٹچ کی حساسیت میں اضافہ کریں اور ٹچ کو بہتر بنائیں</string>
     <string name="touch_sensitivity_title">اسکرین پروٹیکٹر موڈ</string>

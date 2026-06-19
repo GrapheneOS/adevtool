@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Tapos nang mag-charge</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Tapos nang mag-charge</string>
     <string name="charging_optimization_remaining_time_label">Matatapos mag-charge nang %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Naka-off</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Comfort View, Naka-on ang Night Light</string>
+    <string name="comfort_filters_comfort_view_on_summary">Naka-on ang Comfort View</string>
+    <string name="comfort_filters_entry_title">Mga Comfort Filter</string>
+    <string name="comfort_filters_night_light_on_summary">Naka-on ang Night Light</string>
+    <string name="comfort_filters_settings_page_main_summary">Bawasan ang pagkapagod ng mata sa pamamagitan ng mga filter. Binibigyan ng Comfort View ang iyong screen ng mas magaan at mas pastel na hitsura, at nililimitahan ng Night Light ang matinding blue light sa gabi.</string>
+    <string name="comfort_filters_settings_page_main_title">Mga Comfort Filter</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Nag-a-adjust batay sa iyong kapaligiran</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamic</string>
+    <string name="comfort_view_intensity_title">Intensity</string>
+    <string name="comfort_view_main_switch_title">Comfort View</string>
     <string name="emission_frequency_summary">I-adjust ang frequency ng emission para mapahusay ang experience sa panonood para sa mga sensitibong mata</string>
     <string name="emission_frequency_title">I-adjust ang liwanag para sa mga sensitibong mata</string>
+    <string name="keywords_comfort_filters">Mga Comfort filter, Eye Comfort, Comfort View, Night Light</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Matuto pa tungkol sa pag-unlock gamit ang fingerprint sa Pixel sa &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Pataasin ang pagkasensitibo sa pagpindot at pahusayin ito kapag gumagamit ng screen protector</string>
     <string name="touch_sensitivity_title">Screen protector mode</string>

@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">"%1$s - La càrrega s'ha completat"</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">"La càrrega s'ha completat"</string>
     <string name="charging_optimization_remaining_time_label">"S'acabarà de carregar a les %1$s"</string>
+    <string name="comfort_filters_all_modes_off_summary">Desactivat</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Vista còmoda, Llum nocturna activada</string>
+    <string name="comfort_filters_comfort_view_on_summary">Vista còmoda activada</string>
+    <string name="comfort_filters_entry_title">Filtres de confort</string>
+    <string name="comfort_filters_night_light_on_summary">Llum nocturna activada</string>
+    <string name="comfort_filters_settings_page_main_summary">Redueix la fatiga visual amb filtres. Vista còmoda dona a la pantalla un aspecte més suau i de color pastel, i Llum nocturna limita la llum blava intensa a la nit.</string>
+    <string name="comfort_filters_settings_page_main_title">Filtres de confort</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">"S'ajusta en funció de l'entorn"</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dinàmic</string>
+    <string name="comfort_view_intensity_title">Intensitat</string>
+    <string name="comfort_view_main_switch_title">Vista còmoda</string>
     <string name="emission_frequency_summary">"Ajusta la freqüència d'emissió per millorar l'experiència de visualització si tens els ulls sensibles"</string>
     <string name="emission_frequency_title">Ajusta la brillantor per a ulls sensibles</string>
+    <string name="keywords_comfort_filters">Filtres de confort, Confort per a la vista, Vista còmoda, Llum nocturna</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Obtén més informació sobre el desbloqueig amb empremta digital de Pixel a &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">"Augmenta la sensibilitat tàctil i millora la resposta tàctil quan s'utilitza un protector de pantalla"</string>
     <string name="touch_sensitivity_title">Mode de protector de pantalla</string>

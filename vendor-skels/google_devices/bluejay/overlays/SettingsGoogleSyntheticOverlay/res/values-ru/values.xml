@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s, зарядка завершена</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Зарядка завершена</string>
     <string name="charging_optimization_remaining_time_label">Зарядка завершится к %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Отключено</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Режим комфорта, ночная подсветка включена</string>
+    <string name="comfort_filters_comfort_view_on_summary">Режим комфорта включен</string>
+    <string name="comfort_filters_entry_title">Фильтры для зрительного комфорта</string>
+    <string name="comfort_filters_night_light_on_summary">Ночная подсветка включена</string>
+    <string name="comfort_filters_settings_page_main_summary">Фильтры помогают снизить нагрузку на глаза. Режим комфорта делает цвета на экране более мягкими и пастельными, а ночная подсветка ограничивает резкий голубой свет в ночное время.</string>
+    <string name="comfort_filters_settings_page_main_title">Фильтры для зрительного комфорта</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Регулировка в зависимости от окружения</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Динамически</string>
+    <string name="comfort_view_intensity_title">Интенсивность</string>
+    <string name="comfort_view_main_switch_title">Режим комфорта</string>
     <string name="emission_frequency_summary">Настройка частоты мерцания экрана для снижения нагрузки на чувствительные глаза</string>
     <string name="emission_frequency_title">Регулировать яркость для чувствительных глаз</string>
+    <string name="keywords_comfort_filters">Фильтры комфорта, Комфорт для глаз, Режим комфорта, Ночная подсветка</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Подробнее о разблокировке Pixel по отпечатку пальца: &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Повысить чувствительность экрана к касанию при использовании защитной пленки или стекла</string>
     <string name="touch_sensitivity_title">Поддержка защиты экрана</string>

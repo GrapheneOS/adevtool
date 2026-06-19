@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – Har laddats</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Färdigladdat</string>
     <string name="charging_optimization_remaining_time_label">Har laddat klart kl. %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Av</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Komfortvy, nattljus är aktiverat</string>
+    <string name="comfort_filters_comfort_view_on_summary">Komfortvy är aktiverat</string>
+    <string name="comfort_filters_entry_title">Komfortfilter</string>
+    <string name="comfort_filters_night_light_on_summary">Nattljus är aktiverat</string>
+    <string name="comfort_filters_settings_page_main_summary">Minska ögonansträngningen med filter. Med Komfortvy får skärmen ett mjukare, mer pastellfärgat utseende och Nattljus begränsar det skarpa blå ljuset på natten.</string>
+    <string name="comfort_filters_settings_page_main_title">Komfortfilter</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Justeras utifrån omgivningen</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamisk</string>
+    <string name="comfort_view_intensity_title">Intensitet</string>
+    <string name="comfort_view_main_switch_title">Komfortvy</string>
     <string name="emission_frequency_summary">Justera utsläppsfrekvensen för att förbättra tittarupplevelsen för personer med känsliga ögon</string>
     <string name="emission_frequency_title">Justera ljusstyrkan för personer med känsliga ögon</string>
+    <string name="keywords_comfort_filters">Komfortfilter, Lättnad för ögonen, Komfortvy, Nattljus</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Läs mer om fingeravtryckslås för Pixel på &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Öka tryckkänsligheten för bättre tryckrespons när du använder ett skärmskydd</string>
     <string name="touch_sensitivity_title">Skärmskyddsläge</string>

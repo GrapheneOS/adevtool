@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Цэнэглэж дууслаа</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Цэнэглэж дууслаа</string>
     <string name="charging_optimization_remaining_time_label">%1$s гэхэд цэнэглэж дуусна</string>
+    <string name="comfort_filters_all_modes_off_summary">Унтраалттай</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Тав тухтай харагдах байдал, Шөнийн гэрэл асаалттай</string>
+    <string name="comfort_filters_comfort_view_on_summary">Тав тухтай харагдах байдал асаалттай</string>
+    <string name="comfort_filters_entry_title">Тав тухтай филтер</string>
+    <string name="comfort_filters_night_light_on_summary">Шөнийн гэрэл асаалттай</string>
+    <string name="comfort_filters_settings_page_main_summary">Филтерээр нүдний ачааллыг багасгаарай. Тав тухтай харагдах байдал таны дэлгэцийг харахад зөөлөн, илүү цайвар өнгөтэй болгодог бол Шөнийн гэрэл нь шөнөөр хурц хөх гэрлийг хязгаарладаг.</string>
+    <string name="comfort_filters_settings_page_main_title">Тав тухтай филтер</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Таны хүрээлэн буй орчинд тулгуурлан тохируулна</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Динамик</string>
+    <string name="comfort_view_intensity_title">Эрчим</string>
+    <string name="comfort_view_main_switch_title">Тав тухтай харагдах байдал</string>
     <string name="emission_frequency_summary">Эмзэг нүдэнд зориулж үзэх хэрэглээг сайжруулахын тулд ялгарлын давтамжийг тохируулна уу</string>
     <string name="emission_frequency_title">Эмзэг нүдэнд зориулж гэрэлтүүлгийг тохируулах</string>
+    <string name="keywords_comfort_filters">Тав тухтай филтер, Нүд амраагч, Тав тухтай харагдах байдал, Шөнийн гэрэл</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"&lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt; дээрээс Pixel-н Хурууны хээгээр түгжээ тайлах талаар нэмэлт мэдээлэл авна уу."</string>
     <string name="touch_sensitivity_summary">Дэлгэц хамгаалагчийг ашиглаж байх үед хүрэлтийн мэдрэгшлийг нэмж, хүрэлтийг сайжруулна уу</string>
     <string name="touch_sensitivity_title">Дэлгэц хамгаалагч горим</string>

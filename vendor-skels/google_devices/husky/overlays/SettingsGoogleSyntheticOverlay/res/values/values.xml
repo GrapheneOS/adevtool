@@ -9,6 +9,17 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Done charging</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Done charging</string>
     <string name="charging_optimization_remaining_time_label">Done charging by %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Off</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Comfort View, Night Light On</string>
+    <string name="comfort_filters_comfort_view_on_summary">Comfort View On</string>
+    <string name="comfort_filters_entry_title">Comfort Filters</string>
+    <string name="comfort_filters_night_light_on_summary">Night Light On</string>
+    <string name="comfort_filters_settings_page_main_summary">Reduce eye strain with filters. Comfort View gives your screen a softer, more pastel look, and Night Light limits harsh blue light at night.</string>
+    <string name="comfort_filters_settings_page_main_title">Comfort Filters</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Adjusts based on your environment</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamic</string>
+    <string name="comfort_view_intensity_title">Intensity</string>
+    <string name="comfort_view_main_switch_title">Comfort View</string>
     <string name="emission_frequency_summary">Adjust emission frequency to improve viewing experience for sensitive eyes</string>
     <string name="emission_frequency_title">Adjust brightness for sensitive eyes</string>
     <string name="help_uri_5g_dsds">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=pixel_5G_and_DSDS;end</string>
@@ -121,6 +132,7 @@
     <string name="help_url_wifi">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_wi_fi;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_wifi;end</string>
     <string name="help_url_wifi_p2p">intent:#Intent;action=com.google.android.gms.googlehelp.LAUNCH;S.EXTRA_CONTEXT=android_wi_fi_p2p;S.EXTRA_BACKUP_URI=https%3A%2F%2Fsupport.google.com%2Fmobile%2F%3Fp%3Dsettings_wifi_p2p;end</string>
     <string name="help_url_wireless_charging">https://support.google.com/pixelphone?p=eu_ecodesign_charging</string>
+    <string name="keywords_comfort_filters">Comfort filters, Eye Comfort, Comfort View, Night Light</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Learn more about Pixel fingerprint unlock at &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Increase touch sensitivity and improve touch when using a screen protector</string>
     <string name="touch_sensitivity_title">Screen protector mode</string>

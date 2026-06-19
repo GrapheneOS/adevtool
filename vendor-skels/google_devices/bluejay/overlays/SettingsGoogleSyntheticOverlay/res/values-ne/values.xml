@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - चार्ज पूरा भयो</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">चार्ज पूरा भयो</string>
     <string name="charging_optimization_remaining_time_label">%1$s सम्ममा पूरा चार्ज हुने छ</string>
+    <string name="comfort_filters_all_modes_off_summary">अफ छन्</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">कम्फर्ट भ्यू र रात्रि प्रकाश अन छन्</string>
+    <string name="comfort_filters_comfort_view_on_summary">कम्फर्ट भ्यू अन छ</string>
+    <string name="comfort_filters_entry_title">कम्फर्ट फिल्टरहरू</string>
+    <string name="comfort_filters_night_light_on_summary">रात्रि प्रकाश अन छ</string>
+    <string name="comfort_filters_settings_page_main_summary">फिल्टरहरू प्रयोग गरेर आँखाको थकान कम गर्नुहोस्। कम्फर्ट भ्यूले तपाईंको स्क्रिन अझ मधुर बनाउँछ र स्क्रिनमा प्यास्टेल रङ प्रयोग गर्छ भने रात्रि प्रकाशले रातिको समयमा तेजिलो निलो प्रकाश कम गर्छ।</string>
+    <string name="comfort_filters_settings_page_main_title">कम्फर्ट फिल्टरहरू</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">आफ्नो वातावरणका आधारमा मिलाउनुहोस्</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">गतिशील</string>
+    <string name="comfort_view_intensity_title">तीव्रता</string>
+    <string name="comfort_view_main_switch_title">कम्फर्ट भ्यू</string>
     <string name="emission_frequency_summary">संवेदनशील आँखाहरूका हकमा हेराइको अनुभव अझ राम्रो बनाउन उत्सर्जनको फ्रिक्वेन्सी मिलाउनुहोस्</string>
     <string name="emission_frequency_title">संवेदनशील आँखाहरूका हकमा चमक मिलाउनुहोस्</string>
+    <string name="keywords_comfort_filters">कम्फर्ट फिल्टरहरू, आई कम्फर्ट, कम्फर्ट भ्यू, रात्रि प्रकाश</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"&lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt; मा गई Pixel फिंगरप्रिन्ट अनलकका बारेमा थप जान्नुहोस्।"</string>
     <string name="touch_sensitivity_summary">स्क्रिन प्रोटेक्टर प्रयोग गर्दा टच सेन्सिटिभिटी बढाउनुहोस् र टचले अझ राम्रोसँग काम गर्ने बनाउनुहोस्</string>
     <string name="touch_sensitivity_title">स्क्रिन प्रोटेक्टर मोड</string>

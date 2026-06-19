@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - 充电完成</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">完成充电</string>
     <string name="charging_optimization_remaining_time_label">%1$s 前充满电</string>
+    <string name="comfort_filters_all_modes_off_summary">已关闭</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">护眼模式、夜间光效已开启</string>
+    <string name="comfort_filters_comfort_view_on_summary">护眼模式已开启</string>
+    <string name="comfort_filters_entry_title">护眼滤镜</string>
+    <string name="comfort_filters_night_light_on_summary">夜间光效已开启</string>
+    <string name="comfort_filters_settings_page_main_summary">使用滤镜减轻眼睛疲劳。护眼模式让屏幕色彩更柔和、淡雅，夜间光效则能在夜晚有效减少刺眼的蓝光。</string>
+    <string name="comfort_filters_settings_page_main_title">护眼滤镜</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">根据环境自动调整</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">动态</string>
+    <string name="comfort_view_intensity_title">强度</string>
+    <string name="comfort_view_main_switch_title">护眼模式</string>
     <string name="emission_frequency_summary">调整发光频率，改善眼睛敏感者的查看体验</string>
     <string name="emission_frequency_title">为眼睛敏感者调整亮度</string>
+    <string name="keywords_comfort_filters">护眼滤镜, 眼部舒适, 护眼模式, 夜间光效, Comfort filters, Eye Comfort, Comfort View, Night Light</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"如需详细了解 Pixel 指纹解锁，请访问 &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;。"</string>
     <string name="touch_sensitivity_summary">在使用屏幕保护膜时提升触控灵敏度和改进触控效果</string>
     <string name="touch_sensitivity_title">屏幕保护膜模式</string>

@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - Recharge terminée</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Recharge terminée</string>
     <string name="charging_optimization_remaining_time_label">Fin de la recharge à %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Désactivés</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Affichage Confort et Éclairage nocturne activés</string>
+    <string name="comfort_filters_comfort_view_on_summary">Affichage Confort activé</string>
+    <string name="comfort_filters_entry_title">Filtres de confort</string>
+    <string name="comfort_filters_night_light_on_summary">Éclairage nocturne activé</string>
+    <string name="comfort_filters_settings_page_main_summary">"Réduisez la fatigue visuelle avec des filtres. L'affichage Confort donne à votre écran un aspect plus doux et plus pastel, et l'Éclairage nocturne limite la lumière bleue intense la nuit."</string>
+    <string name="comfort_filters_settings_page_main_title">Filtres de confort</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">"S'ajuste en fonction de votre environnement"</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamique</string>
+    <string name="comfort_view_intensity_title">Intensité</string>
+    <string name="comfort_view_main_switch_title">Affichage Confort</string>
     <string name="emission_frequency_summary">"Ajustez la fréquence d'émission pour améliorer l'expérience de visionnement pour les yeux sensibles"</string>
     <string name="emission_frequency_title">Ajuster la luminosité pour les yeux sensibles</string>
+    <string name="keywords_comfort_filters">Filtres de confort, Confort visuel, affichage Confort, Éclairage nocturne</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Pour en savoir plus sur le Déverrouillage par empreinte digitale du Pixel, consultez la page &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">"Augmentez la sensibilité au toucher et améliorez le contrôle tactile lorsque vous utilisez un protecteur d'écran"</string>
     <string name="touch_sensitivity_title">"Mode protecteur d'écran"</string>

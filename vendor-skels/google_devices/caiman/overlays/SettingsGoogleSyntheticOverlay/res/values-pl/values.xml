@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – koniec ładowania</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Koniec ładowania</string>
     <string name="charging_optimization_remaining_time_label">Koniec ładowania do %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Wyłączone</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Widok zmniejszający zmęczenie oczu, Podświetlenie nocne włączone</string>
+    <string name="comfort_filters_comfort_view_on_summary">Widok zmniejszający zmęczenie oczu włączony</string>
+    <string name="comfort_filters_entry_title">Filtry dla wygody</string>
+    <string name="comfort_filters_night_light_on_summary">Podświetlenie nocne włączone</string>
+    <string name="comfort_filters_settings_page_main_summary">Ogranicz zmęczenie wzroku za pomocą filtrów. Widok zmniejszający zmęczenie oczu sprawia, że ekran jest stonowany i ma bardziej pastelowe kolory. Ponadto funkcja podświetlenia nocnego ogranicza ostre niebieskie światło w nocy.</string>
+    <string name="comfort_filters_settings_page_main_title">Filtry dla wygody</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Dostosowuje się do otoczenia</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dynamiczny</string>
+    <string name="comfort_view_intensity_title">Intensywność</string>
+    <string name="comfort_view_main_switch_title">Widok zmniejszający zmęczenie oczu</string>
     <string name="emission_frequency_summary">Dostosuj częstotliwość emisji, aby poprawić komfort oglądania dla osób o wrażliwych oczach</string>
     <string name="emission_frequency_title">Dostosuj jasność do wrażliwych oczu</string>
+    <string name="keywords_comfort_filters">Filtry zmniejszające zmęczenie oczu, zmniejszanie zmęczenia oczu, widok zmniejszający zmęczenie oczu, Podświetlenie nocne</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Więcej informacji o odblokowywaniu odciskiem palca na urządzeniu Pixel znajdziesz na stronie &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Zwiększ czułość ekranu podczas korzystania z osłony ekranu</string>
     <string name="touch_sensitivity_title">Tryb osłony ekranu</string>

@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s - ਚਾਰਜਿੰਗ ਪੂਰੀ ਹੋ ਗਈ</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">ਚਾਰਜਿੰਗ ਪੂਰੀ ਹੋ ਗਈ</string>
     <string name="charging_optimization_remaining_time_label">%1$s ਤੱਕ ਚਾਰਜਿੰਗ ਦੀ ਪ੍ਰਕਿਰਿਆ ਪੂਰੀ ਹੋ ਜਾਵੇਗੀ</string>
+    <string name="comfort_filters_all_modes_off_summary">ਬੰਦ</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">ਸਹਿਜ ਦ੍ਰਿਸ਼, ਨਾਈਟ ਲਾਈਟ ਚਾਲੂ ਹੈ</string>
+    <string name="comfort_filters_comfort_view_on_summary">ਸਹਿਜ ਦ੍ਰਿਸ਼ ਚਾਲੂ ਹੈ</string>
+    <string name="comfort_filters_entry_title">ਸਹਿਜ ਫਿਲਟਰ</string>
+    <string name="comfort_filters_night_light_on_summary">ਨਾਈਟ ਲਾਈਟ ਚਾਲੂ ਹੈ</string>
+    <string name="comfort_filters_settings_page_main_summary">ਫਿਲਟਰਾਂ ਦੀ ਮਦਦ ਨਾਲ ਅੱਖਾਂ ਦੀ ਥਕਾਵਟ ਨੂੰ ਘੱਟ ਕਰੋ। ਸਹਿਜ ਦ੍ਰਿਸ਼ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ ਨੂੰ ਇੱਕ ਨਰਮ, ਵਧੇਰੇ ਪੇਸਟਲ ਦਿੱਖ ਦਿੰਦਾ ਹੈ ਅਤੇ ਨਾਈਟ ਲਾਈਟ ਵਿਸ਼ੇਸਤਾ ਰਾਤ ਨੂੰ ਤੇਜ਼ ਨੀਲੀ ਰੋਸ਼ਨੀ ਨੂੰ ਸੀਮਤ ਕਰਦੀ ਹੈ।</string>
+    <string name="comfort_filters_settings_page_main_title">ਸਹਿਜ ਫਿਲਟਰ</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਮਾਹੌਲ ਦੇ ਹਿਸਾਬ ਨਾਲ ਕੰਮ ਕਰਦੀ ਹੈ</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">ਪਰਿਵਰਤਨਸ਼ੀਲ</string>
+    <string name="comfort_view_intensity_title">ਤੀਬਰਤਾ</string>
+    <string name="comfort_view_main_switch_title">ਸਹਿਜ ਦ੍ਰਿਸ਼</string>
     <string name="emission_frequency_summary">ਸੰਵੇਦਨਸ਼ੀਲ ਅੱਖਾਂ ਵਾਲੇ ਲੋਕਾਂ ਵਾਸਤੇ ਦੇਖਣ ਦਾ ਅਨੁਭਵ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਨਿਕਾਸੀ ਸੰਬੰਧੀ ਵਾਰਵਾਰਤਾ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ</string>
     <string name="emission_frequency_title">ਸੰਵੇਦਨਸ਼ੀਲ ਅੱਖਾਂ ਵਾਲੇ ਲੋਕਾਂ ਕਈ ਚਮਕ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ</string>
+    <string name="keywords_comfort_filters">ਸਹਿਜ ਫਿਲਟਰ, ਅੱਖਾਂ ਲਈ ਸਹਿਜ, ਸਹਿਜ ਦ੍ਰਿਸ਼, ਨਾਈਟ ਲਾਈਟ</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Pixel ਦੀ ਫਿੰਗਰਪ੍ਰਿੰਟ ਅਣਲਾਕ ਵਿਸ਼ੇਸ਼ਤਾ ਬਾਰੇ &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt; 'ਤੇ ਹੋਰ ਜਾਣੋ।"</string>
     <string name="touch_sensitivity_summary">ਸਪਰਸ਼ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਵਧਾਓ ਅਤੇ ਸਕ੍ਰੀਨ ਗਾਰਡ ਵਰਤਣ ਦੌਰਾਨ ਸਪਰਸ਼ ਨੂੰ ਬਿਹਤਰ ਬਣਾਓ</string>
     <string name="touch_sensitivity_title">ਸਕ੍ਰੀਨ ਗਾਰਡ ਮੋਡ</string>

@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – Заряджання завершено</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Заряджання завершено</string>
     <string name="charging_optimization_remaining_time_label">Заряджання завершиться до %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Вимкнено</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Режим комфортного перегляду, нічний екран увімкнено</string>
+    <string name="comfort_filters_comfort_view_on_summary">Режим комфортного перегляду ввімкнено</string>
+    <string name="comfort_filters_entry_title">Фільтри для комфорту</string>
+    <string name="comfort_filters_night_light_on_summary">Нічний екран увімкнено</string>
+    <string name="comfort_filters_settings_page_main_summary">Зменште напруження очей за допомогою фільтрів. Режим комфортного перегляду пом’якшує деталі зображення на екрані й надає йому пастельних відтінків, а нічний екран приглушує різке синє світло вночі.</string>
+    <string name="comfort_filters_settings_page_main_title">Фільтри для комфорту</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Коригується залежно від середовища</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Динамічний</string>
+    <string name="comfort_view_intensity_title">Інтенсивність</string>
+    <string name="comfort_view_main_switch_title">Режим комфортного перегляду</string>
     <string name="emission_frequency_summary">Налаштувати частоту випромінювання, щоб зробити перегляд комфортнішим для чутливих очей</string>
     <string name="emission_frequency_title">Налаштувати яскравість для чутливих очей</string>
+    <string name="keywords_comfort_filters">Фільтри для комфорту, комфортний перегляд, режим комфортного перегляду, нічний екран</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Докладніше про розблокування телефона Pixel відбитком пальця читайте на сторінці &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Збільште чутливість екрана для кращого сенсорного введення, коли використовуєте захисне скло чи плівку</string>
     <string name="touch_sensitivity_title">Режим захисного скла</string>

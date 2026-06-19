@@ -9,8 +9,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – laadimine on lõppenud</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Laadimine on lõppenud</string>
     <string name="charging_optimization_remaining_time_label">Laadimine lõpeb %1$s</string>
+    <string name="comfort_filters_all_modes_off_summary">Väljas</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Mugavuskuva, öövalgus on sisse lülitatud</string>
+    <string name="comfort_filters_comfort_view_on_summary">Mugavuskuva on sisse lülitatud</string>
+    <string name="comfort_filters_entry_title">Mugavusfiltrid</string>
+    <string name="comfort_filters_night_light_on_summary">Öövalgus on sisse lülitatud</string>
+    <string name="comfort_filters_settings_page_main_summary">Vähendage filtrite abil silmade koormust. Mugav vaade muudab teie ekraanivaate pehmemaks ja pastelsemaks ning Öövalgus vähendab öösel järsu sinise valguse hulka.</string>
+    <string name="comfort_filters_settings_page_main_title">Mugavusfiltrid</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Kohandub teie keskkonna põhjal</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dünaamiline</string>
+    <string name="comfort_view_intensity_title">Intensiivsus</string>
+    <string name="comfort_view_main_switch_title">Mugavuskuva</string>
     <string name="emission_frequency_summary">Reguleerige kiirgussagedust, et parandada vaatamiskogemust tundlike silmade jaoks</string>
     <string name="emission_frequency_title">Reguleeri eredust tundlike silmade jaoks</string>
+    <string name="keywords_comfort_filters">Mugavusfiltrid, silmade mugavus, mugavuskuva, öövalgus</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Lisateave Pixeli sõrmejäljega avamise funktsiooni kohta: &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Suurendab puudutuse tundlikkust ja täiustab puudutuste toimimist ekraanikaitse kasutamisel</string>
     <string name="touch_sensitivity_title">Ekraanikaitse režiim</string>

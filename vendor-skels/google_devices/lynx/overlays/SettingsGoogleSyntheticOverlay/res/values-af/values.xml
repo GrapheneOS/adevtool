@@ -5,8 +5,20 @@
     <string name="charging_optimization_reach_limit_charge_label">%1$s – Klaar gelaai</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Klaar gelaai</string>
     <string name="charging_optimization_remaining_time_label">Sal teen %1$s klaar gelaai wees</string>
+    <string name="comfort_filters_all_modes_off_summary">Af</string>
+    <string name="comfort_filters_comfort_view_on_night_light_on_summary">Gemak-aansig, Aandbeligting is aan</string>
+    <string name="comfort_filters_comfort_view_on_summary">Gemak-aansig is aan</string>
+    <string name="comfort_filters_entry_title">Gemak-filters</string>
+    <string name="comfort_filters_night_light_on_summary">Aandbeligting is aan</string>
+    <string name="comfort_filters_settings_page_main_summary">Verminder oogstremming met filters. Gemakaansig gee jou skerm ’n sagter, meer pastelkleurige voorkoms, en Aandbeligting beperk skerp blou lig in die nag.</string>
+    <string name="comfort_filters_settings_page_main_title">Gemakfilters</string>
+    <string name="comfort_view_ambient_adaptive_switch_summary">Verstel op grond van jou omgewing</string>
+    <string name="comfort_view_ambient_adaptive_switch_title">Dinamies</string>
+    <string name="comfort_view_intensity_title">Intensiteit</string>
+    <string name="comfort_view_main_switch_title">Gemakaansig</string>
     <string name="emission_frequency_summary">Verstel uitlatingfrekwensie om kykervaring vir sensitiewe oë te verbeter</string>
     <string name="emission_frequency_title">Verstel helderheid vir sensitiewe oë</string>
+    <string name="keywords_comfort_filters">Gemak-filters, Ooggemak, Gemak-aansig, Aandbeligting</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"Meer inligting oor Pixel-vingerafdrukslot by &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;."</string>
     <string name="touch_sensitivity_summary">Vergroot raaksensitiwiteit en verbeter aanraking wanneer ’n skermbeskermer gebruik word</string>
     <string name="touch_sensitivity_title">Skermbeskermermodus</string>
