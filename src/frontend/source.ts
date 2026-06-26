@@ -1,5 +1,5 @@
 import assert from 'assert'
-import { createReadStream, promises as fs } from 'fs'
+import { createReadStream, promises as fs, ReadOptionsWithBuffer } from 'fs'
 import { FileHandle, FileReadOptions } from 'fs/promises'
 import hasha from 'hasha'
 import path from 'path'
@@ -584,11 +584,12 @@ class FdReader extends yauzl.Reader {
     // do not initialize buffer contents, assert below ensures that it's fully written out
     let buffer = Buffer.allocUnsafe(length)
 
-    let opts = {
-      buffer,
-      length,
+    let opts: ReadOptionsWithBuffer<any> = {
+      buffer: buffer,
+      length: length,
+      offset: 0,
       position: this.off + start,
-    } as FileReadOptions
+    }
 
     assert((await this.fd.read(opts)).bytesRead === length)
     return buffer
