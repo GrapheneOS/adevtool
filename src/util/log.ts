@@ -69,7 +69,7 @@ function updateStatusLines() {
   }
 }
 
-let pendingWrites: unknown[] = []
+let pendingWrites: (string | Buffer | Uint8Array)[] = []
 let currentStatus: string | null = null
 
 let isClearPending = false
