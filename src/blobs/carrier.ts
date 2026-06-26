@@ -60,7 +60,7 @@ export async function fetchUpdateConfig(
     log(`requestData: ${outFile}`)
     await fs.writeFile(outFile, JSON.stringify(Request.toJSON(requestData), null, 4))
   }
-  const encodedRequest = Request.encode(requestData).finish()
+  const encodedRequest = Buffer.from(Request.encode(requestData).finish())
   if (debug) {
     const reqFile = path.join(tmpDir, 'encodedRequestData')
     await fs.writeFile(reqFile, encodedRequest)
