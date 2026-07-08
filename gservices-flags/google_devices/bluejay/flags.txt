@@ -3,4 +3,3 @@ euiccpixel.experiment.Ota__b3_blocking_patch_sku_list none
 euiccpixel.experiment.Ota__euicc_full_flash_image_v1_security_location esim-full-v1-security.img
 euiccpixel.experiment.Ota__min_mdk_version_st54k 0105
 euiccpixel.experiment.Ota__should_search_patch_from_apex_path false
-euiccpixel.experiment.Ota__support_metrics_upload true

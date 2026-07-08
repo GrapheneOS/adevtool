@@ -22,10 +22,16 @@ device:
   # Pixel phone model IDs are listed in the Network sections of:
   # https://support.google.com/pixelphone/answer/7158570?hl=en
   build_id: CP2A.260705.006
-  gservices_flags:
+  gservices_flags_inclusions:
     prefix:
       - euicc.
       - euiccpixel.
+  gservices_flags_exclusions:
+    match:
+      # EuiccSupportPixel is kept isolated from sandboxed GmsCore, so its GoogleApi clients for
+      # UsageReporting / Clearcut are not expected to connect. This flag makes EuiccSupportPixel
+      # schedule recurring metrics upload jobs that eventually attempt those GMS APIs.
+      - euiccpixel.experiment.Ota__support_metrics_upload
 
 filters:
   partitions:

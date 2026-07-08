@@ -58,12 +58,14 @@ export async function loadAndMergeConfig(configPath: string, baseConfig: Readonl
   }
   // Additional non-top-level filter fields can follow this pattern or be
   // generalized if more are added.
-  if (merged.device?.gservices_flags !== undefined) {
-    try {
-      merged.device.gservices_flags = parseFilters(merged.device.gservices_flags as SerializedFilters)
-    } catch (e) {
-      log('failed to parse device.gservices_flags filters')
-      throw e
+  for (let key of ['gservices_flags_inclusions', 'gservices_flags_exclusions']) {
+    if (merged.device?.[key] !== undefined) {
+      try {
+        merged.device[key] = parseFilters(merged.device[key] as SerializedFilters)
+      } catch (e) {
+        log(`failed to parse device.${key} filters`)
+        throw e
+      }
     }
   }
 

@@ -1091,7 +1091,11 @@ export function getAllGservicesFlags(responseBinary: Buffer): GservicesFlag[] {
 }
 
 export function getFilteredGservicesFlags(config: DeviceConfig, responseBinary: Buffer): GservicesFlag[] {
-  return getAllGservicesFlags(responseBinary).filter(entry => filterValue(config.device.gservices_flags, entry.name))
+  return getAllGservicesFlags(responseBinary).filter(
+    entry =>
+      filterValue(config.device.gservices_flags_inclusions, entry.name) &&
+      !filterValue(config.device.gservices_flags_exclusions, entry.name),
+  )
 }
 
 /**
