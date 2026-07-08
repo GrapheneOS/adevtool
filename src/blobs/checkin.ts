@@ -9,6 +9,8 @@ import * as zlib from 'zlib'
 import { DeviceConfig, DisplaySize } from '../config/device'
 import { filterValue } from '../config/filters'
 import { ADEVTOOL_DIR, getHostBinPath, GSERVICES_FLAGS_DIR } from '../config/paths'
+import type { GservicesFlag } from '../gservices/flags'
+import { serializeGservicesFlags } from '../gservices/flags'
 import { getSysconfigXmlFiles } from '../processor/sysconfig'
 import { ApexManifest } from '../proto-ts/system/apex/proto/apex_manifest'
 import {
@@ -1044,11 +1046,6 @@ export interface CheckinHttpResponse {
   body: Buffer
 }
 
-export interface GservicesFlag {
-  name: string
-  value: string
-}
-
 // Filename heuristic for current Pixel backport config. If Google renames the
 // Euicc APKs or moves them into a backport directory, update-gservices-flags
 // callers can still override the selected build with --buildId.
@@ -1095,17 +1092,6 @@ export function getFilteredGservicesFlags(config: DeviceConfig, responseBinary: 
     entry =>
       filterValue(config.device.gservices_flags_inclusions, entry.name) &&
       !filterValue(config.device.gservices_flags_exclusions, entry.name),
-  )
-}
-
-/**
- * Serializes gservices flags for plaintext storage
- * @param flags to serialize
- * @returns Multi-line string of the gservices flags serialized in format "name value"
- */
-function serializeGservicesFlags(flags: GservicesFlag[]): string {
-  return (
-    flags.map(row => `${row.name} ${row.value.replaceAll('\n', '\\n')}`).join('\n') + (flags.length > 0 ? '\n' : '')
   )
 }
 

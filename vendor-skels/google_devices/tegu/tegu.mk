@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/tegu/dev
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/tegu/apk-parser-config \
+    vendor/google_devices/tegu/gservices-flags \
     vendor/google_devices/tegu/overlays \
     vendor/google_devices/tegu/proprietary \
     vendor/google_devices/tegu/sysconfig \
@@ -580,6 +581,10 @@ PRODUCT_PACKAGES += \
     UdfpsOverlay \
     framework-res__tegu__auto_generated_rro_product \
     framework-res__tegu__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

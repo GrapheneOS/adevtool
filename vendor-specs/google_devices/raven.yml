@@ -19,6 +19,9 @@ firmware/modem.img: e2cdc914300ffb5e93c3ace1a4398fe8f01a1d9efd31f1d7ee1f9e0037fd
 firmware/pbl.img: 259c013ffbc0ca616b9499cfe998c2a886490e7b2ac714238d7c9af66da206bc
 firmware/radio.img: 27055fff8b07ba6790791df5535f1428f9cdb38b624b52827a98a3c69aee10e7
 firmware/tzsw.img: 93b91039d2b38c9e267d7b1b5763a7761ee8054d51a668e29e5d4c2fcafc9cd3
+gservices-flags: dir
+gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
+gservices-flags/flags.txt: 3f8ff3f302b84410b908971ae859130b0b299d4e2da963d6593135c736c070ae
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir
@@ -5118,7 +5121,7 @@ proprietary/vendor_ramdisk/system: dir
 proprietary/vendor_ramdisk/system/etc: dir
 proprietary/vendor_ramdisk/system/etc/fstab.gs101: 492ee89dd2bc92c428740612f0219a5d5611207bfb736d1228b631a8310b2953
 proprietary/vendor_ramdisk/system/etc/fstab.gs101-fips: 492ee89dd2bc92c428740612f0219a5d5611207bfb736d1228b631a8310b2953
-raven.mk: 480f1fdaba7fb05d5ff176d6d8b07bd0c5cdef6e698a8cbf1bbe4863daf5373c
+raven.mk: 08f0eb067aea7a54a733b86ed05679caa25c5a57de9ffcbe5a3eed5b71658087
 sepolicy: dir
 sepolicy/product: dir
 sepolicy/product/private: dir

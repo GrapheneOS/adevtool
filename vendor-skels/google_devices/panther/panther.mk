@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/panther/
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/panther/apk-parser-config \
+    vendor/google_devices/panther/gservices-flags \
     vendor/google_devices/panther/overlays \
     vendor/google_devices/panther/proprietary \
     vendor/google_devices/panther/sysconfig \
@@ -562,6 +563,10 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogleRelease__panther__auto_generated_rro_vendor \
     framework-res__panther__auto_generated_rro_product \
     framework-res__panther__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

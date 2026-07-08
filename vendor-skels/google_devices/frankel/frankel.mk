@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/frankel/
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/frankel/apk-parser-config \
+    vendor/google_devices/frankel/gservices-flags \
     vendor/google_devices/frankel/overlays \
     vendor/google_devices/frankel/proprietary \
     vendor/google_devices/frankel/sysconfig \
@@ -585,6 +586,10 @@ PRODUCT_PACKAGES += \
     UltrasonicOverlay \
     framework-res__frankel__auto_generated_rro_product \
     framework-res__frankel__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

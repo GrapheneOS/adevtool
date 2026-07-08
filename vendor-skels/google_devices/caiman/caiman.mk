@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/caiman/d
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/caiman/apk-parser-config \
+    vendor/google_devices/caiman/gservices-flags \
     vendor/google_devices/caiman/overlays \
     vendor/google_devices/caiman/proprietary \
     vendor/google_devices/caiman/sysconfig \
@@ -584,6 +585,10 @@ PRODUCT_PACKAGES += \
     UwbOverlayCM4Gsi \
     framework-res__caiman__auto_generated_rro_product \
     framework-res__caiman__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

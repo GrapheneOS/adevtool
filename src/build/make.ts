@@ -155,6 +155,7 @@ export async function genProductMakefile(
   dirs: VendorDirectories,
   pathResolver: PathResolver,
   customState: SystemState | null,
+  extraSoongNamespaces: string[] = [],
 ) {
   let blocks = startBlocks()
 
@@ -190,6 +191,7 @@ endif`)
   addContBlock(blocks, 'PRODUCT_SOONG_NAMESPACES', [
     // TODO pass namespaces from places where these parts are generated
     path.join(dirs.out, 'apk-parser-config'),
+    ...extraSoongNamespaces,
     path.join(dirs.out, 'overlays'),
     path.join(dirs.out, 'proprietary'),
     path.join(dirs.out, 'sysconfig'),

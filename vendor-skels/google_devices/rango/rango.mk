@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/rango/de
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/rango/apk-parser-config \
+    vendor/google_devices/rango/gservices-flags \
     vendor/google_devices/rango/overlays \
     vendor/google_devices/rango/proprietary \
     vendor/google_devices/rango/sysconfig \
@@ -603,6 +604,10 @@ PRODUCT_PACKAGES += \
     WifiOverlayRango \
     framework-res__rango__auto_generated_rro_product \
     framework-res__rango__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

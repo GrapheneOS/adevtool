@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/komodo/d
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/komodo/apk-parser-config \
+    vendor/google_devices/komodo/gservices-flags \
     vendor/google_devices/komodo/overlays \
     vendor/google_devices/komodo/proprietary \
     vendor/google_devices/komodo/sysconfig \
@@ -584,6 +585,10 @@ PRODUCT_PACKAGES += \
     UwbOverlayKM4Gsi \
     framework-res__komodo__auto_generated_rro_product \
     framework-res__komodo__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/mustang/
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/mustang/apk-parser-config \
+    vendor/google_devices/mustang/gservices-flags \
     vendor/google_devices/mustang/overlays \
     vendor/google_devices/mustang/proprietary \
     vendor/google_devices/mustang/sysconfig \
@@ -590,6 +591,10 @@ PRODUCT_PACKAGES += \
     UwbOverlayMT5Gsi \
     framework-res__mustang__auto_generated_rro_product \
     framework-res__mustang__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

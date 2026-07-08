@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/comet/de
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/comet/apk-parser-config \
+    vendor/google_devices/comet/gservices-flags \
     vendor/google_devices/comet/overlays \
     vendor/google_devices/comet/proprietary \
     vendor/google_devices/comet/sysconfig \
@@ -594,6 +595,10 @@ PRODUCT_PACKAGES += \
     WifiOverlay2024Mid_CT3 \
     framework-res__comet__auto_generated_rro_product \
     framework-res__comet__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

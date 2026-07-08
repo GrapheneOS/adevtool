@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/raven/de
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/raven/apk-parser-config \
+    vendor/google_devices/raven/gservices-flags \
     vendor/google_devices/raven/overlays \
     vendor/google_devices/raven/proprietary \
     vendor/google_devices/raven/sysconfig \
@@ -546,6 +547,10 @@ PRODUCT_PACKAGES += \
     UdfpsOverlay \
     framework-res__raven__auto_generated_rro_product \
     framework-res__raven__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

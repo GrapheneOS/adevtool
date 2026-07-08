@@ -29,6 +29,7 @@ import { parseSystemState, SystemState } from '../config/system-state'
 import { extractFactoryFirmware, writeFirmwareImages } from '../images/firmware'
 import { BriefApkInfo } from '../processor/apk-processor'
 import { SystemServerClasspathJar } from '../processor/classpath'
+import { generateGservicesFlags } from '../processor/gservices-flags'
 import { getCertDigests, SepolicyDirs } from '../processor/sepolicy'
 import { SYSCONFIG_DIR_NAMES } from '../processor/sysconfig'
 import { VintfPaths } from '../processor/vintf'
@@ -524,8 +525,20 @@ export async function generateBuildFiles(
     copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
   }
 
+  let gservicesFlags = await generateGservicesFlags(config, dirs.out)
+  let extraSoongNamespaces: string[] = []
+  if (gservicesFlags.soongNamespace !== undefined) {
+    extraSoongNamespaces.push(gservicesFlags.soongNamespace)
+  }
+
   let packages: BuildSystemPackages[] = []
   packages.push(...buildPkgs)
+  if (gservicesFlags.packageNames.length > 0) {
+    packages.push({
+      type: 'Gservices flags',
+      names: gservicesFlags.packageNames,
+    })
+  }
   packages.push({ type: 'file-based packages', names: Array.from(allNamedModules.keys()).sort() })
   if (config.extra_packages.length > 0) {
     packages.push({ type: 'extra packages', names: config.extra_packages })
@@ -574,6 +587,7 @@ export async function generateBuildFiles(
       dirs,
       pathResolver,
       customState,
+      extraSoongNamespaces,
     ),
   )
 

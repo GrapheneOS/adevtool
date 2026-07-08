@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/cheetah/
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/cheetah/apk-parser-config \
+    vendor/google_devices/cheetah/gservices-flags \
     vendor/google_devices/cheetah/overlays \
     vendor/google_devices/cheetah/proprietary \
     vendor/google_devices/cheetah/sysconfig \
@@ -561,6 +562,10 @@ PRODUCT_PACKAGES += \
     UdfpsOverlay \
     framework-res__cheetah__auto_generated_rro_product \
     framework-res__cheetah__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \

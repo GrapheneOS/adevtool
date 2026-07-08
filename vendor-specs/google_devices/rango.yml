@@ -33,6 +33,9 @@ firmware/gsa_fw.img: a43f8a57b34360df45a9e8fa5200db75b7aa0ad5e220723004717c25c5d
 firmware/modem.img: 6c6524b3d66c3851165c838651bda183fabbd0744a2fe1426d58b018d460cffd
 firmware/radio.img: 10096e0514bff198c210a373e6b86bcef73adad27fe1ad1ce2cd79afe35a98f5
 firmware/tzsw.img: e101d26e61d58d8a147171c79e8fb23e5a1543b69576001b5ad98f29ecb8d0d7
+gservices-flags: dir
+gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
+gservices-flags/flags.txt: 01153ea2667c6cbb838fe6adad958a9af5432970deb58cd059622c5dc1e755ab
 overlays: dir
 overlays/AmbientCueOverlay: dir
 overlays/AmbientCueOverlay/Android.bp: 1d197f1edf799e16ab7788bddc38254286b520466f6209b5d32aaf8d41913ea4
@@ -6945,7 +6948,7 @@ proprietary/vendor_ramdisk/system/etc: dir
 proprietary/vendor_ramdisk/system/etc/fstab.gem5: 232ebf49ef4632a41db9dca58a9252103cfd76a3be15308c49d71fb341376c81
 proprietary/vendor_ramdisk/system/etc/fstab.laguna: 3e7985c32db43f1b550a5f672c1f791345c6b7d1da45df30d54a5e2244875b07
 proprietary/vendor_ramdisk/system/etc/fstab.laguna-fips: 481d64e89b4c97f72b9106242725f29e36a60dc26a7ac591f53b8b431311012b
-rango.mk: 5abfe3d2a1dbba2a94cab6bf4c90692e1f648efac2f863de932d8e080f147c82
+rango.mk: 03dd2cbc7f61914db0f479361211012dc09d55728f89349a7936f6ead4479b3d
 sepolicy: dir
 sepolicy/product: dir
 sepolicy/product/private: dir

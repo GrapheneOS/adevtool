@@ -11,6 +11,7 @@ $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/blazer/d
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google_devices/blazer/apk-parser-config \
+    vendor/google_devices/blazer/gservices-flags \
     vendor/google_devices/blazer/overlays \
     vendor/google_devices/blazer/proprietary \
     vendor/google_devices/blazer/sysconfig \
@@ -590,6 +591,10 @@ PRODUCT_PACKAGES += \
     UwbOverlayMT5Gsi \
     framework-res__blazer__auto_generated_rro_product \
     framework-res__blazer__auto_generated_rro_vendor
+
+# Gservices flags
+PRODUCT_PACKAGES += \
+    adevtool_gservices_flags
 
 # file-based packages
 PRODUCT_PACKAGES += \
