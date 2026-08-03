@@ -185,11 +185,25 @@ export class ApplyBulletinPatches extends Command {
         assert(dirs.length === 1)
         let yearMonth = dirs[0]
         let basePath = path.join(unpackedSrc, yearMonth)
-        let bulletinJsonPath = path.join(basePath, yearMonth + '-android-bulletin-partner-preview.json')
-        assert(await isFile(bulletinJsonPath), bulletinJsonPath)
-        let patchIndexJsonPath = path.join(basePath, yearMonth + '-android-bulletin-partner-preview-patches-index.json')
+        let patchIndices = (await fs.readdir(basePath)).filter(e => e.endsWith('-patches-index.json'))
+        assert(patchIndices.length === 1, util.inspect(patchIndices))
+        let patchIndexJsonName = patchIndices[0]
+        let namePrefixLength = (yearMonth + '-android-bulletin-partner-preview').length
+        let nameSuffixLength = '-patches-index.json'.length
+        assert(namePrefixLength + nameSuffixLength <= patchIndexJsonName.length, patchIndexJsonName)
+        let nameInfix = patchIndexJsonName.substring(namePrefixLength, patchIndexJsonName.length - nameSuffixLength)
+        let patchIndexJsonPath = path.join(basePath, patchIndexJsonName)
         assert(await isFile(patchIndexJsonPath), patchIndexJsonPath)
-        let patchesZip = path.join(basePath, yearMonth + '-android-bulletin-partner-preview-patches.zip')
+
+        let bulletinJsonPath = path.join(
+          basePath,
+          yearMonth + '-android-bulletin-partner-preview' + nameInfix + '.json',
+        )
+        assert(await isFile(bulletinJsonPath), bulletinJsonPath)
+        let patchesZip = path.join(
+          basePath,
+          yearMonth + '-android-bulletin-partner-preview' + nameInfix + '-patches.zip',
+        )
         assert(await isFile(patchIndexJsonPath), patchesZip)
         let res = await spawnAsync2({
           command: '/bin/unzip',
@@ -199,7 +213,7 @@ export class ApplyBulletinPatches extends Command {
         assert(res.length === 0)
         let patchesDirPath = path.join(
           basePath,
-          yearMonth + '-android-bulletin-partner-preview-patches/patches',
+          yearMonth + '-android-bulletin-partner-preview' + nameInfix + '-patches/patches',
           manifestConfig.aosp_revision,
         )
         assert(await isDirectory(patchesDirPath), patchesDirPath)
