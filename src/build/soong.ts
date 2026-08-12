@@ -329,7 +329,7 @@ export function blobToSoongModule(
     }
     if (entry.partPath.relPath.startsWith('priv-app/')) {
       let res = objGet(config.package_inclusions, apkInfo.packageName)
-      if (res.flags?.includes('include_as_untrusted_app') !== true) {
+      if (res.flags?.includes('FLAG_INCLUDE_AS_UNTRUSTED_APP') !== true) {
         apkModule.privileged = true
       }
     }

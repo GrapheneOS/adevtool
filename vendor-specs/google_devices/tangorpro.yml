@@ -4,7 +4,7 @@ BoardConfig.mk: 05e09a1382ff35f9623bdd2b79d736afd74ae09e914b4dece3dc78dfc72d13ac
 README.md: 18956bd57461b0635927439681702c11ad0b3030fc5798b20636db0000ebdf49
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
-apk-parser-config/apk-parser-config.pb: 66429067ad7aa20c06b1dee189a288ca484c7c397a1aa596b9ab4d59fe12c933
+apk-parser-config/apk-parser-config.pb: ee060aa585064d4768c70de4adb45f4c2994cef3db4608b07d1740dfc297e55d
 cmds-for-envsetup.sh: b07f01ec1b91ad061e16a542179dd271f8286829c55d6e87756901df0f33aea1
 firmware: dir
 firmware/abl.img: 8cec2127103786f7715a29a380cfbc66454f2d932a38f3305ebb50b5a5aa51bf
@@ -5628,7 +5628,6 @@ sysconfig/product/permissions/androidx.camera.extensions.impl.xml: 2f608136ec90b
 sysconfig/product/permissions/com.google.pixel.camera.connectivity.impl.xml: 2e4338cd3a461a36a6a72ac8fbafa76ea8f158b160766b4d3bd2d6e982eb6e96
 sysconfig/product/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml: be7ba89ebf4666e298e71ada62b3e2defe7d206ed62d75fc8c445d48ed1f294a
 sysconfig/product/permissions/com.google.pixel.camera.services.lyricconfigprovider.impl.xml: b2b96a01cd23f80e5bbebcd8a5907abfc3389be5d081a297481f86bce502d28f
-sysconfig/product/permissions/privapp-permissions-google-p.xml: 42ead61934e199911709adb5e5dc4cdb75bbc1f006ae0d36beacc18c5375c27e
 sysconfig/product/sysconfig: dir
 sysconfig/product/sysconfig/component-overrides.xml: 2427b40a8a66f4b3ef2999ca13a7eb8dc9a3d54e22d0d31e232ecd07e5c6da9b
 sysconfig/product/sysconfig/contextual_search.xml: d7f46aa3758f6edb3840342b49fcc387d394c58bd62ae6ce4af2ca956c615d8e

@@ -148,7 +148,7 @@ package_inclusions:
     include_uses_permissions:
       - com.google.android.pixelnfc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
     flags:
-      - include_as_untrusted_app
+      - FLAG_INCLUDE_AS_UNTRUSTED_APP
 
   com.samsung.slsi.telephony.oemril:
     max_known_version: 2
@@ -195,20 +195,22 @@ package_inclusions:
       - com.google.android.providers.gsf.permission.READ_GSERVICES
     pregrantable_permissions:
       - android.permission.CAMERA
-      - android.permission.CAPTURE_AUDIO_OUTPUT
       - android.permission.POST_NOTIFICATIONS
     remove_permissions:
       # Pixel Camera Services currently doesn't use any of these permissions.
-      # [1] states that PCS (Pixel Camera Servicss) is planned "to be able act as a media
+      # [1] states that PCS (Pixel Camera Services) is planned "to be able act as a media
       # app and use Exoplayer for playing recorded video files". This functionality is
       # not implemented in the current release as of January 2024.
       # [1] https://android.googlesource.com/device/google/gs-common/+/46d6a8821196ab313a5f28c009ce9b2548ea2569
       - android.permission.BLUETOOTH_CONNECT
       - android.permission.BLUETOOTH_SCAN
+      - android.permission.CAPTURE_AUDIO_OUTPUT
       - android.permission.CHANGE_NETWORK_STATE
       - android.permission.CHANGE_WIFI_STATE
       - android.permission.INTERNET
       - android.permission.INTERACT_ACROSS_USERS
+      # needed for the Connected Cameras feature that is currently unsupported on GrapheneOS:
+      # https://support.google.com/pixelphone/answer/15985851?hl=en
       - android.permission.MANAGE_USB
       - android.permission.MODIFY_AUDIO_ROUTING
       - android.permission.MODIFY_AUDIO_SETTINGS
@@ -221,7 +223,7 @@ package_inclusions:
       #
       # Also, Play Store would be unable to update Pixel Camera Services if it was allowed to see
       # it due to the fs-verity requirements for system package updates.
-      - isolate_from_gmscore_and_finsky
+      - FLAG_ISOLATE_FROM_GMSCORE_AND_FINSKY
 
   com.google.android.euicc:
     max_known_version: 235496
@@ -265,7 +267,7 @@ package_inclusions:
     flags:
       # EuiccGoogle is a privileged app, block it from interacting with unprivileged
       # parts of sandboxed Google Play
-      - isolate_from_gmscore_and_finsky
+      - FLAG_ISOLATE_FROM_GMSCORE_AND_FINSKY
 
   com.google.android.euiccoverlay:
     max_known_version: auto
@@ -316,8 +318,8 @@ package_inclusions:
       - android.permission.INTERNET
     flags:
       # EuiccSupportPixel is a privileged package, block it from interacting with unprivileged
-      # parts of GMS
-      - isolate_from_user_apps
+      # parts of GMS and other user-installed packages
+      - FLAG_ISOLATE_FROM_USER_APPS
 
   com.google.euiccpixel.permissions:
     max_known_version: 1
@@ -372,19 +374,23 @@ installable_packages:
   - com.android.chrome
   - com.android.vending # Play Store
   - com.google.android.aicore
+  - com.google.android.apps.accessibility.voiceaccess
   - com.google.android.apps.adm # Find Hub
+  - com.google.android.apps.ai.icons
   - com.google.android.apps.aiwallpapers
+  - com.google.android.apps.bard # Gemini
   - com.google.android.apps.books
   - com.google.android.apps.chromecast.app
   - com.google.android.apps.docs
   - com.google.android.apps.docs.editors.docs
   - com.google.android.apps.docs.editors.sheets
   - com.google.android.apps.docs.editors.slides
+  - com.google.android.apps.emojiwallpaper
   - com.google.android.apps.gmm
+  - com.google.android.apps.kids.home
   - com.google.android.apps.magicportrait
-  - com.google.android.gms
-  - com.google.android.apps.mediashell
   - com.google.android.apps.maps
+  - com.google.android.apps.mediashell
   - com.google.android.apps.messaging
   - com.google.android.apps.nbu.files
   - com.google.android.apps.photos
@@ -404,11 +410,12 @@ installable_packages:
   - com.google.android.apps.security.securityhub
   - com.google.android.apps.tachyon
   - com.google.android.apps.tips # Pixel Tips
+  - com.google.android.apps.tycho # Google Fi
   - com.google.android.apps.wallpaper
   - com.google.android.apps.wallpaper.nexus
   - com.google.android.apps.wallpaper.pixel
-  - com.google.android.apps.wearables.maestro.companion # Google Pixel Buds
   - com.google.android.apps.warp
+  - com.google.android.apps.wearables.maestro.companion # Google Pixel Buds
   - com.google.android.apps.weather
   - com.google.android.apps.wellbeing # Digital Wellbeing
   - com.google.android.apps.work.clouddpc
@@ -452,10 +459,14 @@ installable_packages:
   - com.google.android.trichromelibrary
   - com.google.android.tts
   - com.google.android.tungsten.setupwraith
+  - com.google.android.wallpaper.effects
+  - com.google.android.wallpaper.weathereffects
   - com.google.android.webview
   - com.google.android.wfcactivation # Wi-Fi Calling setup
   - com.google.android.youtube
   - com.google.ar.core # "Google Play Services for AR"
+  - com.google.pixel.livewallpaper
+  - com.google.pixel.wallpapers23
   - com.ustwo.lwp
 
 package_exclusions:
@@ -586,9 +597,6 @@ package_exclusions:
   - com.google.android.adbd
   - com.google.android.adservices
   - com.google.android.adservices.api
-  - com.google.android.apps.accessibility.voiceaccess
-  - com.google.android.apps.ai.icons
-  - com.google.android.apps.bard # Gemini
   - com.google.android.apps.betterbug
   - com.google.android.apps.betterbug.partners
   - com.google.android.apps.camera.tools.propsetter
@@ -599,7 +607,6 @@ package_exclusions:
   - com.google.android.apps.customization.pixel
   - com.google.android.apps.diagnosticstool
   - com.google.android.apps.dreamliner
-  - com.google.android.apps.emojiwallpaper
   - com.google.android.apps.gcs # Google Connectivity Services
   - com.google.android.apps.gmm.dev
   - com.google.android.apps.gmm.fishfood
@@ -608,7 +615,6 @@ package_exclusions:
   - com.google.android.apps.healthdata
   - com.google.android.apps.helprtc # Google Support Services
   - com.google.android.apps.internal.betterbug
-  - com.google.android.apps.kids.home
   - com.google.android.apps.nest.castauth
   - com.google.android.apps.nest.dockmanager.app
   - com.google.android.apps.nexuslauncher
@@ -627,7 +633,6 @@ package_exclusions:
   - com.google.android.apps.setupwizard.searchselector
   - com.google.android.apps.stargate
   - com.google.android.apps.turbo # Device Health Services
-  - com.google.android.apps.tycho # Google Fi
   - com.google.android.appsearch
   - com.google.android.appsearch.apk
   - com.google.android.art
@@ -742,8 +747,6 @@ package_exclusions:
   - com.google.android.videos # Google TV
   - com.google.android.virtualmachine.res
   - com.google.android.volta
-  - com.google.android.wallpaper.effects
-  - com.google.android.wallpaper.weathereffects
   - com.google.android.webapp.service
   - com.google.android.wifi
   - com.google.android.wifi.dialog
@@ -762,8 +765,6 @@ package_exclusions:
   - com.google.pixel.exo
   - com.google.pixel.gate.android.daemon
   - com.google.pixel.gate.android.pysupport
-  - com.google.pixel.livewallpaper
-  - com.google.pixel.wallpapers23
   - com.google.RilConfigService # TODO
   - com.google.SSRestartDetector
   - com.google.touch.touchinspector

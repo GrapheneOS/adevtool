@@ -7,12 +7,12 @@ import { serializeBlueprint, SoongModule } from '../build/soong'
 import { DeviceConfig } from '../config/device'
 import { SystemState } from '../config/system-state'
 import {
+  ApcPackageConfig,
+  ApcPackageConfig_Flag,
   ApkParserConfig,
-  ApkParsingConfig,
-  ApkParsingConfig_Flag,
 } from '../proto-ts/frameworks/base/proto/src/apk_parser_config'
 import { BriefPackageInfo } from '../proto-ts/frameworks/base/tools/aapt2/BriefPackageInfo'
-import { mapGet, mapSet, objSet } from '../util/data'
+import { assertDefined, mapGet, mapSet, objSet } from '../util/data'
 import { isDirectory } from '../util/fs'
 import { log } from '../util/log'
 import { Partition, PathResolver } from '../util/partitions'
@@ -40,9 +40,7 @@ export async function processApks(
   customState: SystemState,
   dirs: VendorDirectories,
 ) {
-  let pkgToCertDigest = new Map<string, string>()
-
-  let installablePkgsConfig = new Set<string>(config.installable_packages)
+  let installablePkgNames = new Set<string>(config.installable_packages)
 
   let packageInclusions = config.package_inclusions
   let packageExclusions = new Set(config.package_exclusions)
@@ -50,21 +48,22 @@ export async function processApks(
   let allPackageNames = new Set<string>()
 
   let apc = {
-    permissions: {},
-    permissionGroups: {},
-    contentProviderAuthorities: {},
+    permissionOwners: {},
+    permissionGroupOwners: {},
+    contentProviderAuthorityOwners: {},
     nonInstallablePackages: [],
     parsingConfigs: {},
     installablePackages: {},
   } as ApkParserConfig
 
-  let installablePkgs = infos.filter(info => installablePkgsConfig.has(info.briefPackageInfo.packageName))
+  let installablePkgs = infos.filter(info => installablePkgNames.has(info.briefPackageInfo.packageName))
   let certDigestsMap = await getCertDigests(
     installablePkgs.map(pkg => pkg.apkPath),
     sdkVersion,
   )
 
   let sdkVersionNum = parseInt(sdkVersion)
+  assert(!Number.isNaN(sdkVersionNum), sdkVersion)
 
   for (let bpiExt of infos) {
     let bpi = bpiExt.briefPackageInfo
@@ -74,9 +73,9 @@ export async function processApks(
 
     let inclusionConfig = packageInclusions[pkgName]
     if (inclusionConfig === undefined) {
-      if (installablePkgsConfig.has(pkgName)) {
+      if (installablePkgNames.has(pkgName)) {
         let certDigest = mapGet(certDigestsMap, bpiExt.apkPath)
-        objSet(apc.installablePackages, pkgName, certDigest)
+        objSet(apc.installablePackages, pkgName, { certSha256: certDigest, minVersion: bpi.versionCode })
       } else {
         apc.nonInstallablePackages.push(pkgName)
         if (!packageExclusions.has(pkgName)) {
@@ -89,25 +88,25 @@ export async function processApks(
         }
       }
     } else {
-      let maxVersionStr = inclusionConfig.max_known_version
-      if (maxVersionStr !== undefined) {
-        let maxVersion = maxVersionStr === 'auto' ? sdkVersionNum : parseInt(maxVersionStr)
-        if (maxVersion !== undefined && bpi.versionCode > maxVersion) {
-          log(`${bpi.packageName} version (${bpi.versionCode}) is greater than the max_known_version (${maxVersion})`)
-        }
-        let knownUsesPerms = new Set(
-          (inclusionConfig.include_uses_permissions ?? []).concat(
-            inclusionConfig.pregrantable_permissions ?? [],
-            inclusionConfig.remove_permissions ?? [],
-          ),
-        )
-        let unknownPerms = bpi.usesPermission.filter(p => !knownUsesPerms.has(p))
-        if (unknownPerms.length > 0) {
-          unknownPerms.sort()
-          log(`${pkgName} has unknown uses-permissions:`)
-          for (let p of unknownPerms) {
-            log('      - ' + p)
-          }
+      assert(!installablePkgNames.has(pkgName), pkgName)
+      let maxVersionStr = assertDefined(inclusionConfig.max_known_version)
+      let maxVersion = maxVersionStr === 'auto' ? sdkVersionNum : parseInt(maxVersionStr)
+      assert(!Number.isNaN(maxVersion), maxVersionStr)
+      if (bpi.versionCode > maxVersion) {
+        log(`${bpi.packageName} version (${bpi.versionCode}) is greater than the max_known_version (${maxVersion})`)
+      }
+      let knownUsesPerms = new Set(
+        (inclusionConfig.include_uses_permissions ?? []).concat(
+          inclusionConfig.pregrantable_permissions ?? [],
+          inclusionConfig.remove_permissions ?? [],
+        ),
+      )
+      let unknownPerms = bpi.usesPermission.filter(p => !knownUsesPerms.has(p))
+      if (unknownPerms.length > 0) {
+        unknownPerms.sort()
+        log(`${pkgName} has unknown uses-permissions:`)
+        for (let p of unknownPerms) {
+          log('      - ' + p)
         }
       }
 
@@ -115,9 +114,9 @@ export async function processApks(
       let flags = inclusionConfig.flags
       if (flags !== undefined) {
         for (let flag of flags) {
-          // @ts-expect-error: flag is required to be part of ApkParsingConfig.Flag enum
-          let intVal = ApkParsingConfig_Flag[flag]
-          assert(intVal !== undefined)
+          // @ts-expect-error: flag is required to be part of ApcPackageConfig.Flag enum
+          let intVal = ApcPackageConfig_Flag[flag]
+          assert(intVal !== undefined && intVal < 31)
           flagsInt |= 1 << (intVal as number)
         }
         assert(flagsInt !== 0)
@@ -125,20 +124,16 @@ export async function processApks(
       let skipUsesPermissions = inclusionConfig.remove_permissions
       if (flagsInt !== 0 || skipUsesPermissions !== undefined) {
         let parsingConfig = {
-          skipUsesPermission: skipUsesPermissions ?? [],
+          usesPermissionsToIgnore: skipUsesPermissions ?? [],
           flags: flagsInt,
-        } as ApkParsingConfig
+        } as ApcPackageConfig
         objSet(apc.parsingConfigs, bpi.packageName, parsingConfig)
       }
       apc.nonInstallablePackages.push(pkgName)
     }
 
-    assert(!pkgToCertDigest.has(pkgName))
-
-    pkgToCertDigest.set(pkgName, '')
-
     for (let auth of new Set(bpi.contentProviderAuthority)) {
-      objSet(apc.contentProviderAuthorities, auth, pkgName)
+      objSet(apc.contentProviderAuthorityOwners, auth, pkgName)
     }
 
     // some apps have duplicate permission declarations
@@ -160,10 +155,10 @@ export async function processApks(
       }
     }
     for (let perm of perms) {
-      objSet(apc.permissions, perm, pkgName)
+      objSet(apc.permissionOwners, perm, pkgName)
     }
     for (let permGroup of bpi.permissionGroup) {
-      objSet(apc.permissionGroups, permGroup, pkgName)
+      objSet(apc.permissionGroupOwners, permGroup, pkgName)
     }
   }
 
@@ -197,6 +192,9 @@ export async function processApks(
 
   let packageNameMapping = new Map<string, string>()
   let presentBasePackages = new Set<string>()
+
+  let unpackedApexesPrefix = pathResolver.getUnpackedApexDir() + '/'
+  let apkInApex = infos.filter(info => info.apkPath.startsWith(unpackedApexesPrefix))
 
   for (let [part, filePaths] of Object.entries(customState.partitionFiles)) {
     for (let relPath of filePaths) {
@@ -238,9 +236,6 @@ export async function processApks(
         }
         presentBasePackages.add(apkMapping.aosp_apk_name)
       }
-
-      let unpackedApexesPrefix = pathResolver.getUnpackedApexDir() + '/'
-      let apkInApex = infos.filter(info => info.apkPath.startsWith(unpackedApexesPrefix))
 
       if (relPath.endsWith('.apex') || relPath.endsWith('.capex')) {
         let pseudoPath = path.join(part, relPath)

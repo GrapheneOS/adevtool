@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<permissions>
-  <privapp-permissions package="com.google.android.apps.camera.services">
-    <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
-  </privapp-permissions>
-</permissions>

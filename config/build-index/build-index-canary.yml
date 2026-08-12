@@ -1,3 +1,87 @@
+oriole ZP11.260717.006:
+  factory: 3675e0b1fe321d2c5aa03dcf2d6efbf8a1a368e6c3fd98d461f065e102a58ff4 https://dl.google.com/developers/android/CANARY/images/factory/oriole_beta-zp11.260717.006-factory-3675e0b1.zip
+raven ZP11.260717.006:
+  factory: ee767e34122bfab799fc0a56c6c98a29f53ec6b0d9cdcd63b8818434f5a3b2e1 https://dl.google.com/developers/android/CANARY/images/factory/raven_beta-zp11.260717.006-factory-ee767e34.zip
+bluejay ZP11.260717.006:
+  factory: aeb62b88c41d02add417989afc72bd216df3319f86837b6d3f07a3be7b42b219 https://dl.google.com/developers/android/CANARY/images/factory/bluejay_beta-zp11.260717.006-factory-aeb62b88.zip
+panther ZP11.260717.006:
+  factory: f2b54193fbeba3420a45244a8afadfd13e332143ab963c546a0889acbbffd42d https://dl.google.com/developers/android/CANARY/images/factory/panther_beta-zp11.260717.006-factory-f2b54193.zip
+cheetah ZP11.260717.006:
+  factory: 71070fcd822885f410474e747d6a7671a588179757ea24930ba8a24445069869 https://dl.google.com/developers/android/CANARY/images/factory/cheetah_beta-zp11.260717.006-factory-71070fcd.zip
+lynx ZP11.260717.006:
+  factory: c266224fb03ef4ffecfde6492074242e82bdbf6c0550bb6d0c088aaa5ea0d09d https://dl.google.com/developers/android/CANARY/images/factory/lynx_beta-zp11.260717.006-factory-c266224f.zip
+felix ZP11.260717.006:
+  factory: 6d9502663b3aa79395524985743d424acc19ff630cd8ad66be86ef4ed435a5b4 https://dl.google.com/developers/android/CANARY/images/factory/felix_beta-zp11.260717.006-factory-6d950266.zip
+tangorpro ZP11.260717.006:
+  factory: 0fab0c8920df4d7106ab6e5d47250cb48e5bac2dc70f15ad2882eb8dceea386c https://dl.google.com/developers/android/CANARY/images/factory/tangorpro_beta-zp11.260717.006-factory-0fab0c89.zip
+shiba ZP11.260717.006:
+  factory: 78620801fd16ea38afd92b1b4a435b19e999da5b7358d5daf27bafedda29f723 https://dl.google.com/developers/android/CANARY/images/factory/shiba_beta-zp11.260717.006-factory-78620801.zip
+husky ZP11.260717.006:
+  factory: 3540529b9fe0b98a9acd093cbffdd75a3d0a3a94a6e2940ee938373228ddf145 https://dl.google.com/developers/android/CANARY/images/factory/husky_beta-zp11.260717.006-factory-3540529b.zip
+akita ZP11.260717.006:
+  factory: 5970fe973824d93aff70db36a9e88107b02a83cba8d00aab3ab94f08421dd264 https://dl.google.com/developers/android/CANARY/images/factory/akita_beta-zp11.260717.006-factory-5970fe97.zip
+tokay ZP11.260717.006:
+  factory: e59e92e21ff17219e47ce1182a98e96f42469563c04931488fc0b24ccb4e33da https://dl.google.com/developers/android/CANARY/images/factory/tokay_beta-zp11.260717.006-factory-e59e92e2.zip
+caiman ZP11.260717.006:
+  factory: 6c16ced6194b96eb8cefefc54ff9adeb2dfd3f154c54685a839e0039dae8b2c1 https://dl.google.com/developers/android/CANARY/images/factory/caiman_beta-zp11.260717.006-factory-6c16ced6.zip
+komodo ZP11.260717.006:
+  factory: 576d8c28faae34803ff1341f6e93a40f538878338676b1522e8d21503be05304 https://dl.google.com/developers/android/CANARY/images/factory/komodo_beta-zp11.260717.006-factory-576d8c28.zip
+comet ZP11.260717.006:
+  factory: 1458a2a54aee238e74a7f57f86e963dc60de86661ae6c6d7dd85c48eea8f00d5 https://dl.google.com/developers/android/CANARY/images/factory/comet_beta-zp11.260717.006-factory-1458a2a5.zip
+tegu ZP11.260717.006:
+  factory: ad65308e10b6082368dd3579bfa42957161210073e8d905ae2c4176f430b17e7 https://dl.google.com/developers/android/CANARY/images/factory/tegu_beta-zp11.260717.006-factory-ad65308e.zip
+frankel ZP11.260717.006:
+  factory: 2f6970d7034ba0512488f3dbd7fba68055de5e7ccde52527746f8aa945709345 https://dl.google.com/developers/android/CANARY/images/factory/frankel_beta-zp11.260717.006-factory-2f6970d7.zip
+blazer ZP11.260717.006:
+  factory: f3a0dbf34b16e74b17282f6b4b63fbbbbec59dd68256b8bf8a490f042ad46acd https://dl.google.com/developers/android/CANARY/images/factory/blazer_beta-zp11.260717.006-factory-f3a0dbf3.zip
+mustang ZP11.260717.006:
+  factory: 346b7e6dab293eb0bf82cb105fa50e804416921274fa025aaeca0c435060af21 https://dl.google.com/developers/android/CANARY/images/factory/mustang_beta-zp11.260717.006-factory-346b7e6d.zip
+rango ZP11.260717.006:
+  factory: 9afdd3bfbab1bc1c7bd85cceff7ce3513de5aa3fecf471302c8544738132feac https://dl.google.com/developers/android/CANARY/images/factory/rango_beta-zp11.260717.006-factory-9afdd3bf.zip
+stallion ZP11.260717.006:
+  factory: d82b67f891d8fa162a1a99c12a8a586d38d5b42c96913578e5395df5af114989 https://dl.google.com/developers/android/CANARY/images/factory/stallion_beta-zp11.260717.006-factory-d82b67f8.zip
+oriole ZP11.260618.005:
+  factory: db7cff7950d8527c0d228f76c8db7db9b0d3d6f0863b23277ffd9419c72e4566 https://dl.google.com/developers/android/CANARY/images/factory/oriole_beta-zp11.260618.005-factory-db7cff79.zip
+raven ZP11.260618.005:
+  factory: 5946356569c15cf4b345fbd27b06aef747c7c101be1b1732172ff3583a817582 https://dl.google.com/developers/android/CANARY/images/factory/raven_beta-zp11.260618.005-factory-59463565.zip
+bluejay ZP11.260618.005:
+  factory: 9bad3ec67bf78ba3387b00942cd7fe6d5dd32576bc2948c30cd4fde7b103c008 https://dl.google.com/developers/android/CANARY/images/factory/bluejay_beta-zp11.260618.005-factory-9bad3ec6.zip
+panther ZP11.260618.005:
+  factory: c7ade2caa8a86d93139b5a9f0de15c94aa2c4dbbaab6a48b00ff53dd8ed90f6d https://dl.google.com/developers/android/CANARY/images/factory/panther_beta-zp11.260618.005-factory-c7ade2ca.zip
+cheetah ZP11.260618.005:
+  factory: f58b6389ae44bde98a9979cdc5885c75384ecc4463a7ec3dddafd7a3bae2fa8d https://dl.google.com/developers/android/CANARY/images/factory/cheetah_beta-zp11.260618.005-factory-f58b6389.zip
+lynx ZP11.260618.005:
+  factory: f363272298d356f186e846237a7f46527ed059b5489375839f1ba84903d7cfbf https://dl.google.com/developers/android/CANARY/images/factory/lynx_beta-zp11.260618.005-factory-f3632722.zip
+felix ZP11.260618.005:
+  factory: 4e407691042c954636d474ae185f5063e36ca4893489965ededeb61be334c70e https://dl.google.com/developers/android/CANARY/images/factory/felix_beta-zp11.260618.005-factory-4e407691.zip
+tangorpro ZP11.260618.005:
+  factory: afc85de8230d497c7317e2c6b914cf4e563220512deb21d3ba708dc67be41d4b https://dl.google.com/developers/android/CANARY/images/factory/tangorpro_beta-zp11.260618.005-factory-afc85de8.zip
+shiba ZP11.260618.005:
+  factory: 2c1fe77edfc1bf172cb18983d582dd603c3a2e8eaf4cc9cb78d14e37f26e7299 https://dl.google.com/developers/android/CANARY/images/factory/shiba_beta-zp11.260618.005-factory-2c1fe77e.zip
+husky ZP11.260618.005:
+  factory: 39fccffda56eed21c9fdc4f5e173015dd89d6cefd3e4a6e90e28fd746d1ada56 https://dl.google.com/developers/android/CANARY/images/factory/husky_beta-zp11.260618.005-factory-39fccffd.zip
+akita ZP11.260618.005:
+  factory: f5ff876a5d2d53f67a8b6db8544e66f8b2492aec9a8270ab1242a962af6c80f6 https://dl.google.com/developers/android/CANARY/images/factory/akita_beta-zp11.260618.005-factory-f5ff876a.zip
+tokay ZP11.260618.005:
+  factory: 1e3149f2d6c6a138cd9307799f9bba94efb7c1d59a30e45cd9faa901f842b56c https://dl.google.com/developers/android/CANARY/images/factory/tokay_beta-zp11.260618.005-factory-1e3149f2.zip
+caiman ZP11.260618.005:
+  factory: c58caaa85c5766e6dacf56e740618d6c1c95ac95c20a41ff2f6fba468c6da062 https://dl.google.com/developers/android/CANARY/images/factory/caiman_beta-zp11.260618.005-factory-c58caaa8.zip
+komodo ZP11.260618.005:
+  factory: f97e474f664e0163b5a9545db7ab140ca51f9e753cfa50eccae5f020198c583f https://dl.google.com/developers/android/CANARY/images/factory/komodo_beta-zp11.260618.005-factory-f97e474f.zip
+comet ZP11.260618.005:
+  factory: 9a7b415a7adc3a7217dcd7c6df4d3e62679984234bb4640313dcd490c2abebb5 https://dl.google.com/developers/android/CANARY/images/factory/comet_beta-zp11.260618.005-factory-9a7b415a.zip
+tegu ZP11.260618.005:
+  factory: 4a97b53a19909cc1aa9bac6ac6b67932ed5997eeaaa5b2d76f3849abca84f8d4 https://dl.google.com/developers/android/CANARY/images/factory/tegu_beta-zp11.260618.005-factory-4a97b53a.zip
+frankel ZP11.260618.005:
+  factory: 22e890a89384d2cf46bcb54366d2d0f13a33d8fac75a477a0045c17cc105d9f5 https://dl.google.com/developers/android/CANARY/images/factory/frankel_beta-zp11.260618.005-factory-22e890a8.zip
+blazer ZP11.260618.005:
+  factory: 2b67303c1376af376bfdf2f42aa1706c67590f3503fb728f4ab12beda0926d00 https://dl.google.com/developers/android/CANARY/images/factory/blazer_beta-zp11.260618.005-factory-2b67303c.zip
+mustang ZP11.260618.005:
+  factory: 2beefba9e96a9f7990b26466896131316255b0efb0e60c93817c1f859cfdfdab https://dl.google.com/developers/android/CANARY/images/factory/mustang_beta-zp11.260618.005-factory-2beefba9.zip
+rango ZP11.260618.005:
+  factory: bc0036793e00083ce4a365475a8765da6d10585d9bd9acdb86b6c0a1aff112db https://dl.google.com/developers/android/CANARY/images/factory/rango_beta-zp11.260618.005-factory-bc003679.zip
+stallion ZP11.260618.005:
+  factory: 3ef1b79163f34ee6d485636f0af61204c3d75a99ecc06abeffc4557840e00ae4 https://dl.google.com/developers/android/CANARY/images/factory/stallion_beta-zp11.260618.005-factory-3ef1b791.zip
 oriole ZP11.260515.009:
   factory: 29e8fb5753a8ebdc0e19319afa4ad7bfa77b31bd08b0fa4a0aa012bf80b0d8ea https://dl.google.com/developers/android/CANARY/images/factory/oriole_beta-zp11.260515.009-factory-29e8fb57.zip
 raven ZP11.260515.009:
