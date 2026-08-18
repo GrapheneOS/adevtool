@@ -129,7 +129,10 @@ async function doDevice(
 
   if (pathResolver.overlay !== undefined && !skipElfChecks) {
     if (verbose) log('Checking backported ELF files')
-    let elfIssues = await checkBackportedElfs(entries, pathResolver)
+    let elfIssues = await checkBackportedElfs(entries, pathResolver, [
+      ...customState.extraModules,
+      ...config.extra_packages,
+    ])
     if (elfIssues !== null) {
       // oclif reformats multi-line error messages, so log before exiting
       log(elfIssues)

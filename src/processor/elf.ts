@@ -14,6 +14,7 @@ const LLVM_BINUTILS_DIR = path.join(OS_CHECKOUT_DIR, 'prebuilts/clang/host/linux
 const LLVM_READOBJ = path.join(LLVM_BINUTILS_DIR, 'llvm-readobj')
 const LLVM_CXXFILT = path.join(LLVM_BINUTILS_DIR, 'llvm-cxxfilt')
 const READOBJ_BATCH_SIZE = 32
+const ANDROID_INTERFACE_LIBRARY = /^android\..+(?:-V\d+-(?:ndk|cpp)|@\d+\.\d+)\.so$/
 
 interface ElfSymbol {
   name: string
@@ -238,6 +239,7 @@ class ElfEnvironment {
 export async function checkBackportedElfs(
   entries: BlobEntry[],
   targetResolver: PathResolver,
+  sourceBuiltPackages: string[] = [],
 ): Promise<string | null> {
   let overlay = targetResolver.overlay
   if (overlay === undefined) {
@@ -265,6 +267,7 @@ export async function checkBackportedElfs(
 
   let sourceEnvironment = new ElfEnvironment(sourceResolver, parser)
   let targetEnvironment = new ElfEnvironment(targetResolver, parser)
+  let sourcePackages = new Set(sourceBuiltPackages)
   let issues: ElfIssues[] = []
 
   for (let root of roots) {
@@ -273,7 +276,11 @@ export async function checkBackportedElfs(
     let missingNeeded: MissingNeeded[] = []
     for (let needed of root.info.needed) {
       let sourceProvider = sourceClosure.directProviders.get(needed)
-      if (sourceProvider !== undefined && !targetClosure.directProviders.has(needed)) {
+      if (
+        sourceProvider !== undefined &&
+        !isSourceBuiltInterface(sourceProvider, sourcePackages) &&
+        !targetClosure.directProviders.has(needed)
+      ) {
         missingNeeded.push({ name: needed, sourceProvider })
       }
     }
@@ -285,6 +292,7 @@ export async function checkBackportedElfs(
       let sourceProvider = findSymbolProvider(sourceClosure.nodes, symbol)
       if (
         sourceProvider === undefined ||
+        isSourceBuiltInterface(sourceProvider, sourcePackages) ||
         missingNeededProviderPaths.has(sourceProvider.filePath) ||
         findSymbolProvider(targetClosure.nodes, symbol) !== undefined
       ) {
@@ -306,6 +314,17 @@ export async function checkBackportedElfs(
     return await formatIssues(issues)
   }
   return null
+}
+
+function isSourceBuiltInterface(provider: ElfNode, packages: Set<string>) {
+  let soname = provider.info.soname
+  if (provider.partPath.partition !== Partition.Vendor || !ANDROID_INTERFACE_LIBRARY.test(soname)) {
+    return false
+  }
+
+  let module = soname.slice(0, -'.so'.length) + '.vendor'
+  let arch = provider.info.elfClass === 1 ? ':32' : ':64'
+  return packages.has(module) || packages.has(module + arch)
 }
 
 function parseReadObjFile(record: ReadObjFile, filePath: string): ElfInfo {
