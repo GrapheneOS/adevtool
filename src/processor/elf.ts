@@ -34,16 +34,16 @@ interface ElfInfo {
 
 // llvm-readobj --elf-output-style=JSON sturcture
 interface ReadObjSymbol {
-  Symbol: {
-    Name: { Name: string }
-    Binding: { Name: string }
-    Other: { Value: number }
-    Section: { Name: string }
+  Symbol?: {
+    Name?: { Name?: string }
+    Binding?: { Name?: string }
+    Other?: { Value?: number }
+    Section?: { Name?: string }
   }
 }
 
 interface ReadObjFile {
-  FileSummary: { LoadName: string }
+  FileSummary?: { LoadName?: string }
   ElfHeader: {
     Ident: { Class: { Value: number } }
     Machine: { Value: number }
@@ -94,27 +94,19 @@ class ElfParser {
 
     for (let i = 0; i < uncachedPaths.length; i += READOBJ_BATCH_SIZE) {
       let paths = uncachedPaths.slice(i, i + READOBJ_BATCH_SIZE)
-      let output: string
-      try {
-        output = await spawnAsync(LLVM_READOBJ, [
-          '--elf-output-style=JSON',
-          '--file-header',
-          '--needed-libs',
-          '--dyn-symbols',
-          ...paths,
-        ])
-      } catch (e) {
-        throw new Error(`failed to inspect ELF files: ${e instanceof Error ? e.message : e}`)
-      }
-
       let records: ReadObjFile[]
       try {
-        records = JSON.parse(output)
-      } catch (e) {
-        throw new Error(`failed to parse llvm-readobj output: ${e instanceof Error ? e.message : e}`)
-      }
-      if (!Array.isArray(records) || records.length !== paths.length) {
-        throw new Error('unexpected llvm-readobj output')
+        records = await runReadObj(paths)
+      } catch {
+        // one bad file fails the whole batch; retry per file to identify it
+        records = []
+        for (let filePath of paths) {
+          try {
+            records.push(...(await runReadObj([filePath])))
+          } catch (e) {
+            throw new Error(`failed to inspect ELF file ${filePath}: ${e instanceof Error ? e.message : e}`)
+          }
+        }
       }
 
       for (let j = 0; j < paths.length; ++j) {
@@ -128,6 +120,27 @@ class ElfParser {
     }
     return infos
   }
+}
+
+async function runReadObj(paths: string[]): Promise<ReadObjFile[]> {
+  let output = await spawnAsync(LLVM_READOBJ, [
+    '--elf-output-style=JSON',
+    '--file-header',
+    '--needed-libs',
+    '--dyn-symbols',
+    ...paths,
+  ])
+
+  let records: ReadObjFile[]
+  try {
+    records = JSON.parse(output)
+  } catch (e) {
+    throw new Error(`failed to parse llvm-readobj output: ${e instanceof Error ? e.message : e}`)
+  }
+  if (!Array.isArray(records) || records.length !== paths.length) {
+    throw new Error('unexpected llvm-readobj output')
+  }
+  return records
 }
 
 class ElfEnvironment {
@@ -328,7 +341,11 @@ function isSourceBuiltInterface(provider: ElfNode, packages: Set<string>) {
 }
 
 function parseReadObjFile(record: ReadObjFile, filePath: string): ElfInfo {
-  if (record?.ElfHeader?.Ident?.Class === undefined || record.ElfHeader.Machine === undefined) {
+  if (
+    record?.ElfHeader?.Ident?.Class?.Value === undefined ||
+    record.ElfHeader.Machine?.Value === undefined ||
+    typeof record.ElfHeader.Type !== 'string'
+  ) {
     throw new Error('missing ELF header in llvm-readobj output for ' + filePath)
   }
 
@@ -336,17 +353,30 @@ function parseReadObjFile(record: ReadObjFile, filePath: string): ElfInfo {
   let exports = new Map<string, Set<string>>()
   for (let entry of record.DynamicSymbols ?? []) {
     let symbol = entry.Symbol
-    let parsedName = parseSymbolName(symbol.Name.Name)
+    let name = symbol?.Name?.Name
+    let binding = symbol?.Binding?.Name
+    let section = symbol?.Section?.Name
+    let other = symbol?.Other?.Value
+    if (
+      typeof name !== 'string' ||
+      typeof binding !== 'string' ||
+      typeof section !== 'string' ||
+      typeof other !== 'number'
+    ) {
+      throw new Error('malformed dynamic symbol in llvm-readobj output for ' + filePath)
+    }
+
+    let parsedName = parseSymbolName(name)
     if (parsedName.name.length === 0) {
       continue
     }
 
-    if (symbol.Section.Name === 'Undefined') {
+    if (section === 'Undefined') {
       // weak undefined symbols are allowed to stay unresolved at runtime
-      if (symbol.Binding.Name !== 'Weak') {
+      if (binding !== 'Weak') {
         imports.set(symbolKey(parsedName), parsedName)
       }
-    } else if (symbol.Binding.Name !== 'Local' && !isHidden(symbol.Other.Value)) {
+    } else if (binding !== 'Local' && !isHidden(other)) {
       let versions = exports.get(parsedName.name)
       if (versions === undefined) {
         versions = new Set<string>()
