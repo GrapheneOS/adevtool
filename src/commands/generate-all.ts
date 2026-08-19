@@ -79,10 +79,11 @@ async function doDevice(
   dirs: VendorDirectories,
   config: DeviceConfig,
   pathResolver: PathResolver,
+  kernelPathResolver: PathResolver,
   customSrc: string,
   verbose: boolean,
 ) {
-  let kernelCopy = copyKernel(pathResolver, dirs)
+  let kernelCopy = copyKernel(kernelPathResolver, dirs)
 
   // customSrc can point to a (directory containing) system state JSON
   let customState = await loadCustomState(config, customSrc)
@@ -229,6 +230,7 @@ export default class GenerateFull extends Command {
         let images: Map<DeviceBuildId, DeviceImages> = await prepareDeviceImages(index, [ImageType.Factory], [config])
         let deviceImages = mapGet(images, getDeviceBuildId(config))
         let pathResolver = new PathResolver(deviceImages.unpackedFactoryImageDir)
+        let kernelPathResolver = new PathResolver(deviceImages.unpackedFactoryImageDir)
         let backportBuildId = config.device.backport_build_id
         if (backportBuildId !== undefined) {
           let backportDeviceImages = mapGet(images, getDeviceBuildId(config, backportBuildId))
@@ -260,11 +262,15 @@ export default class GenerateFull extends Command {
             fileOverlays,
             fileOverlaysByDir,
           }
+
+          if (config.device.backport_kernel) {
+            kernelPathResolver = new PathResolver(backportDeviceImages.unpackedFactoryImageDir)
+          }
         }
         // Prepare output directories
         let vendorDirs = await createVendorDirs(config.device.vendor, config.device.name)
 
-        let deviceInfo = await doDevice(vendorDirs, config, pathResolver, flags.customSrc, flags.verbose)
+        let deviceInfo = await doDevice(vendorDirs, config, pathResolver, kernelPathResolver, flags.customSrc, flags.verbose)
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular && !flags.doNotDownloadCarrierSettings) {
