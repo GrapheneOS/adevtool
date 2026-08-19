@@ -73,6 +73,8 @@ export async function spawnAsync2(cmd: SpawnCmd) {
     let stdoutBufs: Buffer[] = []
     let stderrBufs: Buffer[] = []
 
+    proc.on('error', reject)
+
     let handleStdoutBuffer =
       cmd.handleStdoutBuffer ??
       (buf => {
