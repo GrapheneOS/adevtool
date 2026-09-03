@@ -7,6 +7,8 @@
 
     <bool name="config_GoogleCamera_needs_seinfo_for_access_to_accelerators">true</bool>
 
+    <integer name="setting_default_display_color_mode">0</integer> <!-- COLOR_MODE_NATURAL -->
+
     <string name="config_gnssPsdsType">samsung</string>
 
     <bool name="config_usbPortSecuritySupported">true</bool>
