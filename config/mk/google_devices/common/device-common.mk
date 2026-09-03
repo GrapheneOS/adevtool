@@ -35,10 +35,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
-# use the Natural display color mode by default
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.sys.sf.color_saturation=1.0
-
 PRODUCT_CHARACTERISTICS := nosdcard
 
 WIFI_PRIV_CMD_UPDATE_MBO_CELL_STATUS := enabled
