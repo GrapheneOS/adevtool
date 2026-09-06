@@ -5,6 +5,7 @@ sepolicy_inclusions:
         - com.google.pixel.camera.services.binder.IServiceBinder/default u:object_r:camera_binder_service:s0
         - com.google.pixel.camera.services.cameraidremapper.ICameraIdRemapper/default u:object_r:camera_cameraidremapper_service:s0
         - com.google.pixel.camera.services.lyricconfigprovider.ILyricConfigProvider/default u:object_r:camera_lyricconfigprovider_service:s0
+        - com.google.pixel.camera.services.lyricmaintenancetaskprovider.ILyricMaintenanceTaskProvider/default u:object_r:camera_lyricmaintenancetaskprovider_service:s0
         - telephony.oem.oemrilhook u:object_r:radio_service:s0
       product_seapp_contexts:
         - user=system seinfo=platform name=com.google.pixel.camera.services domain=vendor_pbcs_app type=system_app_data_file levelFrom=all
@@ -26,6 +27,8 @@ sepolicy_inclusions:
         - /system_ext/bin/mosey_server u:object_r:mosey_server_exec:s0
         - /system_ext/bin/sconed u:object_r:sconed_exec:s0
       system_ext_property_contexts:
+        - dev.mnt.dev.userdata u:object_r:userdisk_prop:s0 exact string
+        - dev.mnt.rootdisk.root u:object_r:rootdisk_prop:s0 exact string
         - ims.emergency_call_fail_cause u:object_r:ims_prop:s0 prefix int
         - ims.reg_retry_time u:object_r:ims_prop:s0 prefix int
         - persist.device_config.pixel_faceauth. u:object_r:device_config_faceauth_native_prop:s0
@@ -82,6 +85,7 @@ sepolicy_inclusions:
         - persist.vendor.dpa. u:object_r:vendor_google_dpa_prop:s0
         - persist.vendor.fingerprint. u:object_r:vendor_fingerprint_prop:s0
         - persist.vendor.gps u:object_r:vendor_gps_prop:s0
+        - persist.vendor.intelligence u:object_r:vendor_intelligence_prop:s0
         - persist.vendor.meta. u:object_r:vendor_meta_prop:s0
         - persist.vendor.mtk.volte.enable u:object_r:vendor_mtk_ims_config_prop:s0
         - persist.vendor.mtk.vonr.enable u:object_r:vendor_mtk_ims_config_prop:s0
@@ -120,6 +124,7 @@ sepolicy_inclusions:
         - vendor.mtk.wwan.vote.location u:object_r:vendor_gps_prop:s0
         - vendor.nos.citadel.init_version_old u:object_r:vendor_nos_citadel_init_version_old:s0
         - vendor.nos.citadel.updates_tried u:object_r:vendor_nos_citadel_updates_tried:s0
+        - vendor.pixel.system.phenotype.Perf__pixelmd_config u:object_r:vendor_pixelmd_config_experiment_prop:s0
         - vendor.pixel.system.phenotype.Perf__zram_swap_size_experiment u:object_r:vendor_pixel_zram_swap_size_experiment_prop:s0
         - vendor.pixel.system.phenotype.Perf__zram_writeback_size_experiment u:object_r:vendor_pixel_zram_swap_size_experiment_prop:s0
         - vendor.radio.testing.ecc u:object_r:vendor_radio_test_ecc_prop:s0
@@ -1407,6 +1412,7 @@ sepolicy_inclusions:
         - android.hardware.radio.sim.IRadioSim/se2 u:object_r:hal_vendor_radio_external_service:s0
         - android.hardware.radio.voice.IRadioVoice/imsSlot1 u:object_r:hal_vendor_radio_external_service:s0
         - android.hardware.radio.voice.IRadioVoice/imsSlot2 u:object_r:hal_vendor_radio_external_service:s0
+        - com.google.android.lyric.intelligentcamerahal.IIntelligentCameraHal/default u:object_r:vendor_intelligent_camera_hal_service:s0
         - com.google.pixel.modem_logging.IVendorModemLogging/default u:object_r:hal_modem_logging_service:s0
         - com.google.pixel.modem_logging.alcedo_t900.IAlcedoT900ModemLogging/default u:object_r:hal_modem_logging_service:s0
         - com.google.pixel.modem_logging.log_files.IVendorModemLogFiles/default u:object_r:hal_modem_logging_service:s0

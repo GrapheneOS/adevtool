@@ -19,6 +19,7 @@ vintf_inclusions:
   - android.hardware.audio::IDevicesFactory/default
   - android.hardware.authsecret.IAuthSecret/default
   - android.hardware.biometrics.fingerprint.IFingerprint/default
+  - android.hardware.bluetooth.audio.IBluetoothAudioProviderFactory/default
   - android.hardware.bluetooth.finder.IBluetoothFinder/default
   - android.hardware.bluetooth.IBluetoothHci/default
   - android.hardware.bluetooth.lmp_event.IBluetoothLmpEvent/default
@@ -120,6 +121,7 @@ vintf_inclusions:
   - android.hardware.radio::IRadio/slot2
   - android.hardware.radio::ISap/slot1
   - android.hardware.radio::ISap/slot2
+  - android.hardware.secure_element.ISecureElement/eSE1
   - android.hardware.secure_element.ISecureElement/SIM1
   - android.hardware.secure_element.ISecureElement/SIM2
   - android.hardware.secure_element::ISecureElement/eSE1
@@ -149,6 +151,7 @@ vintf_inclusions:
   - android.hidl.allocator::IAllocator/ashmem
   - android.hidl.memory::IMapper/ashmem
   - android.hidl.token::ITokenManager/default
+  - android.se.omapi.ISecureElementService/default
   - android.system.wifi.keystore::IKeystore/default
   - android.vendor.samsung_slsi.telephony.hardware.radio::IOemSamsungslsi/slot1
   - android.vendor.samsung_slsi.telephony.hardware.radio::IOemSamsungslsi/slot2

@@ -166,47 +166,132 @@ filters:
       - recovery/vendor_dlkm/etc # symlink
       - system/apex/com.android.npumanager.capex
       - system/apex/com.google.android.adbd.apex
+      - system/apex/com.google.android.adbd.capex
       - system/apex/com.google.android.adservices.apex
+      - system/apex/com.google.android.adservices.capex
       - system/apex/com.google.android.appsearch.apex
+      - system/apex/com.google.android.appsearch.capex
       - system/apex/com.google.android.art.apex
+      - system/apex/com.google.android.art.capex
       - system/apex/com.google.android.bt.apex
+      - system/apex/com.google.android.bt.capex
       - system/apex/com.google.android.cellbroadcast.apex
+      - system/apex/com.google.android.cellbroadcast.capex
       - system/apex/com.google.android.configinfrastructure.apex
+      - system/apex/com.google.android.configinfrastructure.capex
       - system/apex/com.google.android.conscrypt.apex
+      - system/apex/com.google.android.conscrypt.capex
       - system/apex/com.google.android.crashrecovery.apex
+      - system/apex/com.google.android.crashrecovery.capex
       - system/apex/com.google.android.devicelock.apex
       - system/apex/com.google.android.extservices.apex
+      - system/apex/com.google.android.extservices.capex
       - system/apex/com.google.android.healthfitness.apex
       - system/apex/com.google.android.ipsec.apex
+      - system/apex/com.google.android.ipsec.capex
       - system/apex/com.google.android.media.apex
+      - system/apex/com.google.android.media.capex
       - system/apex/com.google.android.media.swcodec.apex
+      - system/apex/com.google.android.media.swcodec.capex
       - system/apex/com.google.android.mediaprovider.apex
+      - system/apex/com.google.android.mediaprovider.capex
       - system/apex/com.google.android.neuralnetworks.apex
+      - system/apex/com.google.android.neuralnetworks.capex
       - system/apex/com.google.android.nfcservices.apex
+      - system/apex/com.google.android.nfcservices.capex
       - system/apex/com.google.android.ondevicepersonalization.apex
+      - system/apex/com.google.android.ondevicepersonalization.capex
       - system/apex/com.google.android.os.statsd.apex
       - system/apex/com.google.android.permission.apex
+      - system/apex/com.google.android.permission.capex
       - system/apex/com.google.android.profiling.apex
+      - system/apex/com.google.android.profiling.capex
       - system/apex/com.google.android.resolv.apex
+      - system/apex/com.google.android.resolv.capex
       - system/apex/com.google.android.rkpd.apex
       - system/apex/com.google.android.scheduling.apex
+      - system/apex/com.google.android.scheduling.capex
       - system/apex/com.google.android.sdkext.apex
       - system/apex/com.google.android.telephonycore.apex
+      - system/apex/com.google.android.telephonycore.capex
       - system/apex/com.google.android.tethering.apex
+      - system/apex/com.google.android.tethering.capex
       - system/apex/com.google.android.tzdata6.apex
       - system/apex/com.google.android.uprobestats.apex
+      - system/apex/com.google.android.uprobestats.capex
       - system/apex/com.google.android.uwb.apex
+      - system/apex/com.google.android.uwb.capex
       - system/apex/com.google.android.virt.apex
       - system/apex/com.google.android.webapp.apex
       - system/apex/com.google.android.webapp.capex
       - system/apex/com.google.android.wifi.apex
+      - system/apex/com.google.android.wifi.capex
       - system/app/GoogleBluetoothLegacyMigration/GoogleBluetoothLegacyMigration.apk
+      - system/bin/omapi
       - system/bin/tradeinmode
+      - system/bin/zygote_cli
+      - system/etc/bpf/wakeupsources/wakeupsourcesIter.bpf
+      - system/etc/compatconfig/SystemUI-compat-config.xml
+      - system/etc/hal_uuid_map_config.xml
+      - system/etc/init/omapi.rc
       - system/etc/init/tradeinmode.rc
+      - system/etc/init/zygote_next64.rc
       - system/etc/security/cacerts/53a1b57a.0 # Chunghwa Telecom, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
       - system/etc/security/cacerts/60afe812.0 # NetLock, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
+      - system/etc/security/cacerts/64316a39.0
       - system/etc/security/cacerts/9d6523ce.0 # Chunghwa Telecom, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
+      - system/etc/tracing_descriptors.gz
+      - system/framework/oat/arm64/apex@com.android.wifi@javalib@service-wifi.jar@classes.art
       - system/framework/tradeinmode.jar
+      - system/lib64/android.hardware.vibrator-V5-ndk.so
+      - system/lib64/android.server.display.flags-aconfig-cc.so
+      - system/lib64/libaconfig_flags.dylib.so
+      - system/lib64/libaconfig_flags_rust.dylib.so
+      - system/lib64/libandroid_hardware_common_V2.dylib.so
+      - system/lib64/libandroid_hardware_secure_element_V1.dylib.so
+      - system/lib64/libandroid_hardware_usb_aoa.dylib.so
+      - system/lib64/libandroid_se_omapi_V2.dylib.so
+      - system/lib64/libaoa_svc_rs.dylib.so
+      - system/lib64/libarchivestager.so
+      - system/lib64/libbssl_crypto.dylib.so
+      - system/lib64/libcommand_fds.dylib.so
+      - system/lib64/libconst_oid.dylib.so
+      - system/lib64/libder.dylib.so
+      - system/lib64/libdowncast.dylib.so
+      - system/lib64/libelfutils.so
+      - system/lib64/libflagset.dylib.so
+      - system/lib64/libfragile.dylib.so
+      - system/lib64/libfutures_channel.dylib.so
+      - system/lib64/libfutures_io.dylib.so
+      - system/lib64/libfutures_sink.dylib.so
+      - system/lib64/libfutures_task.dylib.so
+      - system/lib64/libfutures_util.dylib.so
+      - system/lib64/libgoogletest_rust.dylib.so
+      - system/lib64/libjni_legacy.dylib.so
+      - system/lib64/libjni_sys_legacy.dylib.so
+      - system/lib64/liblibbz2_rs_sys.dylib.so
+      - system/lib64/libmockall.dylib.so
+      - system/lib64/libnativewindow_bindgen.dylib.so
+      - system/lib64/libnativewindow_rs.dylib.so
+      - system/lib64/libnum_traits.dylib.so
+      - system/lib64/libomapi.dylib.so
+      - system/lib64/libpackagemanager_aidl.dylib.so
+      - system/lib64/libpredicates.dylib.so
+      - system/lib64/libpredicates_core.dylib.so
+      - system/lib64/libpredicates_tree.dylib.so
+      - system/lib64/libprotobuf-cpp-full-6.33.5-absl20260526.so
+      - system/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so
+      - system/lib64/libserde_xml_rs.dylib.so
+      - system/lib64/libslab.dylib.so
+      - system/lib64/libstrum.dylib.so
+      - system/lib64/libtermcolor.dylib.so
+      - system/lib64/libtermtree.dylib.so
+      - system/lib64/libusb_flags_lib_rust.dylib.so
+      - system/lib64/libwrapfd.so
+      - system/lib64/libxml_rust.dylib.so
+      - system/lib64/libzmij.dylib.so
+      - system/lib64/libzygote_species_android_native.so
+      - system/lib64/libzygote_statslog.dylib.so
       - system_ext/apex/com.android.hardware.biometrics.face.virtual.apex
       - system_ext/apex/com.android.hardware.biometrics.fingerprint.virtual.apex
       - system_ext/apex/com.google.android.compos.apex

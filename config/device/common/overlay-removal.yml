@@ -57,15 +57,20 @@ filters:
       - android:array/config_allowedSecureInstantAppSettings = advertising_id;limit_ad_tracking
       - android:array/config_allowlistPersonalContextHintPublishing = com.google.android.as;com.google.android.apps.pixel.psi;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts
       - android:array/config_allowlistPersonalContextHintPublishing = com.google.android.as;com.google.android.apps.pixel.psi;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts;com.google.android.projection.gearhead;com.google.android.apps.nexuslauncher
+      - android:array/config_allowlistPersonalContextHintPublishing = com.google.android.as;com.google.android.apps.pixel.psi;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.inputmethod.latin;com.google.android.contacts;com.google.android.projection.gearhead;com.google.android.apps.nexuslauncher
       - android:array/config_allowlistPersonalContextHintReceiving = com.google.android.as;com.google.android.apps.pixel.psi;com.android.personalcontext
+      - android:array/config_allowlistPersonalContextHintReceiving = com.google.android.as;com.google.android.apps.pixel.psi;com.android.personalcontext;com.google.android.googlequicksearchbox;com.google.android.apps.agentunderstander.debug
       - android:array/config_allowlistPersonalContextInsightFiltering = com.google.android.apps.nexuslauncher;com.android.systemui
       - android:array/config_allowlistPersonalContextInsightPublishing = com.google.android.apps.pixel.psi;com.android.personalcontext
+      - android:array/config_allowlistPersonalContextInsightPublishing = com.google.android.apps.pixel.psi;com.android.personalcontext;com.google.android.googlequicksearchbox;com.google.android.apps.agentunderstander.debug
       - android:array/config_allowlistPersonalContextInsightReceiving = com.google.android.apps.nexuslauncher;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts;com.google.android.apps.pixel.psi;com.google.android.projection.gearhead;com.android.systemui;com.google.android.as.oss
       - android:array/config_allowlistPersonalContextInsightReceiving = com.google.android.apps.nexuslauncher;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.contacts;com.google.android.apps.pixel.psi;com.google.android.projection.gearhead;com.android.systemui;com.google.android.as.oss;com.google.android.as
+      - android:array/config_allowlistPersonalContextInsightReceiving = com.google.android.apps.nexuslauncher;com.google.android.dialer;com.google.android.apps.messaging;com.google.android.apps.weather;com.google.android.apps.pixel.relationships;com.google.android.inputmethod.latin;com.google.android.contacts;com.google.android.apps.pixel.psi;com.google.android.projection.gearhead;com.android.systemui;com.google.android.as.oss
       - android:array/config_allowlistPersonalContextVisualizers = com.google.android.apps.pixel.psi;com.android.systemui;com.google.android.as.oss
       - android:array/config_appFunctionDeviceSettingsPackages = com.android.settings;com.google.android.permissioncontroller;com.google.android.apps.wellbeing
       - android:array/config_appFunctionsDeviceSettingsPackages = com.android.settings;com.google.android.permission;com.google.android.apps.wellbeing
       - android:array/config_appInteractionDeviceAssistancePackages = com.android.settings;com.google.android.permissioncontroller;com.google.android.apps.wellbeing
+      - android:array/config_appInteractionDeviceAssistancePackages = com.android.settings;com.google.android.permissioncontroller;com.google.android.apps.wellbeing;com.google.android.gms;com.google.android.apps.pixel.support;com.google.android.apps.nexuslauncher
       - android:array/config_backupHealthConnectDataAndSettingsKnownSigners = 4F59009D33D5B8C60E4B14623A771EBA08E5C02D2F0A124DE8D184AA9DAF00B4;5F2391277B1DBD489000467E4C2FA6AF802430080457DCE2F618992E9DFB5402;3B062A8FD947C2574749F6609E51D29C4C86525248DD94A3D5D6CD8C338A4D84
       - android:array/config_batteryPackageTypeService = com.google.android.gms
       - android:array/config_biometric_protected_package_names = com.google.android.crossdeviceaccessservice
@@ -148,6 +153,7 @@ filters:
       - android:array/vendor_required_apps_managed_device|*
       - android:array/vendor_required_apps_managed_profile|*
       - android:array/vendor_required_apps_managed_user|*
+      - android:array/vendor_required_trust_token_roots = owEBIAYhWCCxt37pU23uFJWvBtcG9D+OIz0TXdDyOjZsmPfGBFzYDg==;owEBIAYhWCDgLh7H78+Ycl34O5PKZ10MCg/ARI+LnUhQhCJE/J47HQ==;owEBIAYhWCC83FrJxHEFSnvnEAkuWOfXEms632xIZbRD19Ukcv5yKQ==;owEBIAYhWCAwpfJWuS+kCXNx0FPvUP8R/XOzmK5X+FAJxIpQ7UPxFQ==;owEBIAYhWCBoPXYnI9Gv3OKjW1bgWbsPGRRyiCxPKrjA6HhO8QpQAQ==;owEBIAYhWCDxRtMvYT/atVVP2iLtVqymariwTZGuAG2Z2jJE8sQBtg==;owEBIAYhWCAZnIrJPitioKaLC0/9+GMCil440MQGVVT/J+DhQDiwoQ==;owEBIAYhWCCFiLF8e+uSIlhss7zmjfK00ZxvHYU7z9z45mJzttKzqg==;owEBIAYhWCA7lFHa7uG43C9i4CFqPnaydO9t+1q258dKmugr3MiTcg==;owEBIAYhWCAPigBeCY3564lp2UQdzI3y8EEEhzJD2iYfFF+cTDvKjA==;owEBIAYhWCDgJCwPya0EUCO4mdNI1lr1tzPcnegnF4l2GA6sM58GDg==;owEBIAYhWCCCFWs+7+hWILo5o2nAY4e9WYv5oKwUB+ZqPdJ9WA6QlA== # TODO investigate
       - android:bool/config_adaptive_sleep_available = true
       - android:bool/config_allowDisablingAssistDisclosure = true
       - android:bool/config_assistLongPressHomeEnabledDefault
@@ -207,6 +213,7 @@ filters:
       - android:integer/config_storageManagerDaystoRetainDefault = 60
       - android:integer/config_textClassifierPersonalContextMergeStrategy = 2
       - android:integer/config_textClassifierPersonalContextTimeoutMillis = 1000
+      - android:integer/vendor_required_trust_token_roots_timestamp = 1779874873
       - android:string/battery_saver_description_with_learn_more|* # contains reference to "Hey Google" hotword
       - android:string/config_allowlistProviderServicePackage = com.google.android.gms
       - android:string/config_appsAuthorizedForSharedAccounts = ;com.android.vending;com.android.settings;
@@ -367,6 +374,9 @@ filters:
       - android:string/config_satellite_test_with_esp_replies_intent_action = com.google.android.apps.stargate.ACTION_ESOS_QUESTIONNAIRE_TEST_WITH_ESP_REPLIES
       - android:string/config_secondaryHomePackage = com.google.android.apps.nexuslauncher
       - android:string/config_servicesExtensionPackage = com.google.android.ext.services
+      - android:string/config_setupWizardAssistiveOptionsActivity = com.google.android.pixel.setupwizard/.ASSISTIVE_OPTIONS # TODO consider adding SetupWizard2 equivalent
+      - android:string/config_shareCastPackage = com.google.android.gms
+      - android:string/config_shareCastRouteId = Share-Cast-Route-Id
       - android:string/config_sharedConnectivityServiceIntentAction = com.google.android.gms.magictether.BIND
       - android:string/config_sharedConnectivityServicePackage = com.google.android.gms
       - android:string/config_supervisedUserCreationPackage = com.google.android.gms
@@ -413,6 +423,7 @@ filters:
       - com.android.cellbroadcastservice/CellBroadcastServiceCustomization:array/additional_cell_broadcast_receiver_packages = com.google.android.apps.safetyhub
       - com.android.cellbroadcastservice/CellBroadcastServiceCustomization:array/test_cell_broadcast_receiver_packages = com.googlecode.android_scripting
       - com.android.documentsui/DocumentsUICustomization:bool/is_launcher_enabled = false
+      - com.android.documentsui/DocumentsUICustomization:color/customColorSurfaceEffect4|*
       - com.android.documentsui/DocumentsUICustomization:string/config_fontFamily = google-sans
       - com.android.documentsui/DocumentsUICustomization:string/config_fontFamilyMedium = google-sans-medium
       - com.android.documentsui/DocumentsUICustomization:string/preferred_root_package = com.google.android

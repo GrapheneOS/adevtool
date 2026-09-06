@@ -31,11 +31,8 @@ filters:
       - android:array/config_ambientThresholdLevels = 1;2;3;4;5;6;7;8;9;10;11;13;15;17;19;20;22;25;27;30;32;35;37;40;50;60;70;80;90;100;200;300;400;500;600;700;800;900;1000;2000;3000;4000
       - android:array/config_ambientThresholdLevels = 2;3;4;5;6;7;8;9;10;20;30;40;50;60;70;80;90;100;200;300;400;500;1000;2000;3000;4000
       - android:array/config_ambientThresholdsOfPeakRefreshRate|*
-      - android:array/config_angleAllowList = com.dreamgames.royalmatch;com.dts.freefiremax;com.dxx.firenow;com.gramgames.mergedragons;com.ludo.king;com.mojang.minecraftpe;com.my.defense;com.nintendo.zaka;com.os.airforce;com.playrix.fishdomdd.gplay;io.teslatech.callbreak;jp.konami.prospia;net.peakgames.toonblast
-      - android:array/config_angleAllowList = com.dreamgames.royalmatch;com.dts.freefiremax;com.dxx.firenow;com.gramgames.mergedragons;com.ludo.king;com.mojang.minecraftpe;com.my.defense;com.nintendo.zaka;com.os.airforce;com.playrix.fishdomdd.gplay;io.teslatech.callbreak;jp.konami.prospia;net.peakgames.toonblast;com.yottagames.gameofmafia;com.Sunborn.SnqxExilium.Glo;com.haoplay.game.and.exilium;com.rockstargames.gtasa;com.h73.jhqyna;com.sega.CrazyTaxiplayhaven;en.haoplay.and.rm
-      - android:array/config_angleAllowList = com.dreamgames.royalmatch;com.dts.freefiremax;com.dxx.firenow;com.gramgames.mergedragons;com.ludo.king;com.mojang.minecraftpe;com.my.defense;com.nintendo.zaka;com.os.airforce;com.playrix.fishdomdd.gplay;io.teslatech.callbreak;jp.konami.prospia;net.peakgames.toonblast;com.yottagames.gameofmafia;com.Sunborn.SnqxExilium.Glo;com.haoplay.game.and.exilium;com.rockstargames.gtasa;com.h73.jhqyna;com.sega.CrazyTaxiplayhaven;en.haoplay.and.rm;com.netease.g108na
-      - android:array/config_angleDenyList = net.kishonti.gfxbench;net.kishonti.gfxbench.vulkan.v50005.corporate;net.kishonti.gfxbench.vulkan.v50100.corporate;com.blizzard.diablo.immortal
-      - android:array/config_angleDenyList = net.kishonti.gfxbench;net.kishonti.gfxbench.vulkan.v50005.corporate;net.kishonti.gfxbench.vulkan.v50100.corporate;com.blizzard.diablo.immortal;com.zhiliaoapp.musically;com.ss.android.ugc.trill;com.betterment;com.lilithgames.xgame.gp;com.farlightgames.xgame.gp.kr;com.farlightgames.xgame.gp.jp;com.farlightgames.xgame.gp.tw;com.farlightgames.xgame.gp.vn;com.nianticlabs.monsterhunter;com.nexon.hit2;com.nexon.hit2tw;com.nexon.hit2jp;com.netmarble.enngb;com.netmarble.enn;com.netmarble.ennt
+      - android:array/config_angleAllowList|*
+      - android:array/config_angleDenyList|*
       - android:array/config_autoBrightnessDisplayValuesNitsIdle|*
       - android:array/config_autoBrightnessDisplayValuesNits|*
       - android:array/config_autoBrightnessLevelsIdle|*
@@ -160,6 +157,8 @@ filters:
       - android:bool/config_device_wfc_ims_available = true
       - android:bool/config_disable_all_cb_messages = true
       - android:bool/config_disable_video_capability_when_wfc_off = true
+      - android:bool/config_displayBrightnessAsyncSensorReadingEnabled = false
+      - android:bool/config_displayBrightnessAsyncSensorReadingEnabled = true
       - android:bool/config_displayWhiteBalanceAvailable = true
       - android:bool/config_displayWhiteBalanceEnabledDefault = true
       - android:bool/config_dozeAlwaysOnDisplayAvailable = false
@@ -218,6 +217,7 @@ filters:
       - android:bool/config_isWindowManagerCameraCompatSplitScreenAspectRatioEnabled = true
       - android:bool/config_isWindowManagerCameraCompatTreatmentEnabled = true
       - android:bool/config_keepDreamingWhenUnplugging = true
+      - android:bool/config_keyboardVibrationSettingsIntensitySupported = true
       - android:bool/config_keyboardVibrationSettingsSupported = true
       - android:bool/config_keyguardUserSwitcher|*
       - android:bool/config_knownNetworksEnabledForService = false
@@ -1003,6 +1003,7 @@ filters:
       - com.android.settings:bool/config_show_premium_sms = false
       - com.android.settings:bool/config_show_restrict_to_wireless_charging = false
       - com.android.settings:bool/config_show_restrict_to_wireless_charging = true
+      - com.android.settings:bool/config_show_satellite_connectivity_toggle = false
       - com.android.settings:bool/config_show_sim_info = false
       - com.android.settings:bool/config_show_sim_info = true
       - com.android.settings:bool/config_show_smooth_display = true
@@ -1360,6 +1361,8 @@ filters:
       - com.android.systemui:array/doze_brightness_sensor_name_posture_mapping|*
       - com.android.systemui:array/doze_single_tap_uses_prox_posture_mapping|*
       - com.android.systemui:array/entryvalues_font_size|*
+      - com.android.systemui:array/nits_to_brightness_curve|*
+      - com.android.systemui:array/nits|*
       - com.android.systemui:array/proximity_sensor_posture_mapping|*
       - com.android.systemui:array/proximity_sensor_secondary_posture_mapping|*
       - com.android.systemui:bool/can_use_one_handed_bouncer|*
@@ -1582,6 +1585,7 @@ filters:
       - com.android.uwb.resources/UwbCustomization:bool/android_specific_timesync_supported = true
       - com.android.uwb.resources/UwbCustomization:bool/background_ranging_enabled = true
       - com.android.uwb.resources/UwbCustomization:bool/ccc_absolute_uwb_initiation_time_enabled = true
+      - com.android.uwb.resources/UwbCustomization:bool/config_isDlTdoaRangingIndexesUpdateSupported = false
       - com.android.uwb.resources/UwbCustomization:bool/enable_16_byte_hopmodekey = true
       - com.android.uwb.resources/UwbCustomization:bool/enable_azimuth_mirroring = false
       - com.android.uwb.resources/UwbCustomization:bool/enable_filters = true
