@@ -84,6 +84,7 @@ filters:
       - recovery/system/etc/vintf/manifest/android.hardware.health-service.zuma.xml
       - recovery/system/etc/vintf/manifest/android.hardware.health-service.zumapro.xml
       - recovery/system/lib64/hw/android.hardware.fastboot@1.1-impl.pixel.so
+      - recovery/system/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so
       - recovery/system/lib64/librecovery_ui_ext.so
       - recovery/system/lib64/libtrusty.so
       - system/etc/angle/feature_config_vk.binarypb
@@ -92,16 +93,23 @@ filters:
       - system/lib64/libstatslog_inputflinger.so
       - system/lib64/libstatslog_surfaceflinger_bootstrap.so
       - system/lib64/logd_flags_c_lib.so
+      - system/usr/keylayout/Vendor_057e_Product_2006.kl
+      - system/usr/keylayout/Vendor_057e_Product_2007.kl
+      - system/usr/keylayout/Vendor_0f0d_Product_01b3.kl
+      - system/usr/keylayout/Vendor_0f0d_Product_01b4.kl
+      - system/usr/keylayout/Vendor_2dc8_Product_6006.kl
       - system_ext/app/PersistentBackgroundServices/pixelcoex/camera_coex_table.json
       - system_ext/app/PersistentBackgroundServices/pixelcoex/display_coex_table.json
       - system_ext/bin/backup_ota_log.sh
       - system_ext/bin/convert_to_ext4.sh
       - system_ext/bin/gs_watchdogd
+      - system_ext/bin/hw/android.hidl.allocator@1.0-service
       - system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
       - system_ext/bin/hw/vendor.google.whitechapel.audio.hal.parserservice
       - system_ext/bin/mosey_server
       - system_ext/bin/sconed
       - system_ext/bin/userdata_alias_remove
+      - system_ext/etc/init/android.hidl.allocator@1.0-service.rc
       - system_ext/etc/init/init.gs_watchdogd.rc
       - system_ext/etc/init/init.pms.rc
       - system_ext/etc/init/mosey.rc
@@ -269,6 +277,7 @@ filters:
       - vendor/bin/gia
       - vendor/bin/gpu_probe
       - vendor/bin/gpuflag
+      - vendor/bin/hw/android.hardware.audio.service
       - vendor/bin/hw/android.hardware.audio.service-aidl.aoc
       - vendor/bin/hw/android.hardware.authsecret-service.citadel
       - vendor/bin/hw/android.hardware.biometrics.fingerprint-service.fpc42
@@ -291,6 +300,7 @@ filters:
       - vendor/bin/hw/android.hardware.gnss-service.pixel
       - vendor/bin/hw/android.hardware.gnss@2.1-service-brcm
       - vendor/bin/hw/android.hardware.graphics.allocator-V2-service
+      - vendor/bin/hw/android.hardware.graphics.composer@2.4-service
       - vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging
       - vendor/bin/hw/android.hardware.health-service.gs101
       - vendor/bin/hw/android.hardware.health-service.gs201
@@ -310,6 +320,7 @@ filters:
       - vendor/bin/hw/android.hardware.qorvo.uwb-service
       - vendor/bin/hw/android.hardware.qorvo.uwb.service
       - vendor/bin/hw/android.hardware.samsung.uwb-service
+      - vendor/bin/hw/android.hardware.secure_element-service.thales
       - vendor/bin/hw/android.hardware.secure_element-service.uicc
       - vendor/bin/hw/android.hardware.secure_element@1.2-service-gto
       - vendor/bin/hw/android.hardware.secure_element@1.2-service-gto-ese2
@@ -428,8 +439,13 @@ filters:
       - vendor/bin/wl
       - vendor/etc/a2dp_audio_policy_configuration_7_0.xml
       - vendor/etc/a2dp_in_audio_policy_configuration_7_0.xml
+      - vendor/etc/aidl/hfp/hfp_codec_capabilities.xml
+      - vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs
       - vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json
+      - vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs
       - vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json
+      - vendor/etc/aidl/le_audio/aidl_default_audio_set_configurations.json
+      - vendor/etc/aidl/le_audio/aidl_default_audio_set_scenarios.json
       - vendor/etc/ambient_estimation_model.tflite
       - vendor/etc/angle/feature_config_vk.binarypb
       - vendor/etc/aoc/BLUETOOTH.dat
@@ -604,82 +620,106 @@ filters:
       - vendor/etc/display_settings.xml
       - vendor/etc/displayconfig/display_aical_google-bzea.pb
       - vendor/etc/displayconfig/display_aical_google-cgyda.pb
+      - vendor/etc/displayconfig/display_aical_google-dcsda.pb
+      - vendor/etc/displayconfig/display_aical_google-dcsdb.pb
       - vendor/etc/displayconfig/display_aical_google-flea.pb
       - vendor/etc/displayconfig/display_aical_google-fleb.pb
       - vendor/etc/displayconfig/display_aical_google-iyida.pb
       - vendor/etc/displayconfig/display_aical_google-iyidb.pb
       - vendor/etc/displayconfig/display_aical_google-mtea.pb
+      - vendor/etc/displayconfig/display_aical_google-pkkda.pb
       - vendor/etc/displayconfig/display_aical_google-rgea.pb
       - vendor/etc/displayconfig/display_aical_google-rgeb.pb
       - vendor/etc/displayconfig/display_aical_google-staea.pb
       - vendor/etc/displayconfig/display_cgc_inference_google-bzea.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-cgyda.tflite
+      - vendor/etc/displayconfig/display_cgc_inference_google-dcsda.tflite
+      - vendor/etc/displayconfig/display_cgc_inference_google-dcsdb.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-flea.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-fleb.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-iyida.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-iyidb.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-mtea.tflite
+      - vendor/etc/displayconfig/display_cgc_inference_google-pkkda.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-rgea.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-rgeb.tflite
       - vendor/etc/displayconfig/display_cgc_inference_google-staea.tflite
       - vendor/etc/displayconfig/display_cgc_pool_google-bzea.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-cgyda.bin
+      - vendor/etc/displayconfig/display_cgc_pool_google-dcsda.bin
+      - vendor/etc/displayconfig/display_cgc_pool_google-dcsdb.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-flea.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-fleb.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-iyida.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-iyidb.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-mtea.bin
+      - vendor/etc/displayconfig/display_cgc_pool_google-pkkda.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-rgea.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-rgeb.bin
       - vendor/etc/displayconfig/display_cgc_pool_google-staea.bin
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-bzea.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-cgyda.pb
+      - vendor/etc/displayconfig/display_colorcal_desc_data_google-dcsda.pb
+      - vendor/etc/displayconfig/display_colorcal_desc_data_google-dcsdb.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-flea.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-fleb.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-iyida.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-iyidb.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-mtea.pb
+      - vendor/etc/displayconfig/display_colorcal_desc_data_google-pkkda.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-rgea.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-rgeb.pb
       - vendor/etc/displayconfig/display_colorcal_desc_data_google-staea.pb
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-bzea.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-cgyda.tflite
+      - vendor/etc/displayconfig/display_hbm_regamma_inference_google-dcsda.tflite
+      - vendor/etc/displayconfig/display_hbm_regamma_inference_google-dcsdb.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-flea.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-fleb.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-iyida.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-iyidb.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-mtea.tflite
+      - vendor/etc/displayconfig/display_hbm_regamma_inference_google-pkkda.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-rgea.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-rgeb.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_inference_google-staea.tflite
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-bzea.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-cgyda.bin
+      - vendor/etc/displayconfig/display_hbm_regamma_pool_google-dcsda.bin
+      - vendor/etc/displayconfig/display_hbm_regamma_pool_google-dcsdb.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-flea.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-fleb.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-iyida.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-iyidb.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-mtea.bin
+      - vendor/etc/displayconfig/display_hbm_regamma_pool_google-pkkda.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-rgea.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-rgeb.bin
       - vendor/etc/displayconfig/display_hbm_regamma_pool_google-staea.bin
       - vendor/etc/displayconfig/display_layout_configuration.xml
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-bzea.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-cgyda.tflite
+      - vendor/etc/displayconfig/display_nbm_regamma_inference_google-dcsda.tflite
+      - vendor/etc/displayconfig/display_nbm_regamma_inference_google-dcsdb.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-flea.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-fleb.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-iyida.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-iyidb.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-mtea.tflite
+      - vendor/etc/displayconfig/display_nbm_regamma_inference_google-pkkda.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-rgea.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-rgeb.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_inference_google-staea.tflite
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-bzea.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-cgyda.bin
+      - vendor/etc/displayconfig/display_nbm_regamma_pool_google-dcsda.bin
+      - vendor/etc/displayconfig/display_nbm_regamma_pool_google-dcsdb.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-flea.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-fleb.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-iyida.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-iyidb.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-mtea.bin
+      - vendor/etc/displayconfig/display_nbm_regamma_pool_google-pkkda.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-rgea.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-rgeb.bin
       - vendor/etc/displayconfig/display_nbm_regamma_pool_google-staea.bin
@@ -687,15 +727,20 @@ filters:
       - vendor/etc/displayconfig/display_port_1.xml
       - vendor/etc/displayconfig/display_sharpness_google-bzea_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-cgyda_0.pb
+      - vendor/etc/displayconfig/display_sharpness_google-dcsda_0.pb
+      - vendor/etc/displayconfig/display_sharpness_google-dcsdb_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-flea_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-fleb_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-iyida_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-iyidb_1.pb
       - vendor/etc/displayconfig/display_sharpness_google-mtea_0.pb
+      - vendor/etc/displayconfig/display_sharpness_google-pkkda_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-rgea_0.pb
       - vendor/etc/displayconfig/display_sharpness_google-rgeb_1.pb
       - vendor/etc/displayconfig/display_text_classifier.tflite
       - vendor/etc/displayconfig/ltm_td_common.pb
+      - vendor/etc/displayconfig/smoothcal_lut_data-google-dcsda.txt
+      - vendor/etc/displayconfig/smoothcal_lut_data-google-dcsdb.txt
       - vendor/etc/displayconfig/smoothcal_lut_data-google-flea.txt
       - vendor/etc/displayconfig/smoothcal_lut_data-google-fleb.txt
       - vendor/etc/displayconfig/smoothcal_lut_data-google-rgeb.txt
@@ -734,6 +779,7 @@ filters:
       - vendor/etc/fstab.zumapro-fips
       - vendor/etc/future_vt_prediction_model.tflite
       - vendor/etc/ggauge.ini
+      - vendor/etc/gnss/bypass.bin
       - vendor/etc/gnss/ca.pem
       - vendor/etc/gnss/gnss.cer
       - vendor/etc/gnss/gnss_dbg_ctrl.cfg
@@ -751,6 +797,7 @@ filters:
       - vendor/etc/hearing_aid_audio_policy_configuration_7_0.xml
       - vendor/etc/init.common.cfg
       - vendor/etc/init/android.hardware.audio.service-aidl.aoc.rc
+      - vendor/etc/init/android.hardware.audio.service.rc
       - vendor/etc/init/android.hardware.authsecret-service.citadel.rc
       - vendor/etc/init/android.hardware.bluetooth-service.bcmbtlinux.rc
       - vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
@@ -765,6 +812,7 @@ filters:
       - vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc
       - vendor/etc/init/android.hardware.gnss-service.mediatek.rc
       - vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc
+      - vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
       - vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc
       - vendor/etc/init/android.hardware.health-service.gs101.rc
       - vendor/etc/init/android.hardware.health-service.gs201.rc
@@ -786,6 +834,7 @@ filters:
       - vendor/etc/init/android.hardware.secure_element@1.2-service-gto.rc
       - vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
       - vendor/etc/init/android.hardware.secure_element@1.2-uicc-service.rc
+      - vendor/etc/init/android.hardware.secure_element_gto.rc
       - vendor/etc/init/android.hardware.security.keymint-service.citadel.rc
       - vendor/etc/init/android.hardware.security.secretkeeper.trusty.rc
       - vendor/etc/init/android.hardware.sensors-service-multihal.rc
@@ -835,6 +884,7 @@ filters:
       - vendor/etc/init/hw/init.caiman.rc
       - vendor/etc/init/hw/init.cheetah.rc
       - vendor/etc/init/hw/init.comet.rc
+      - vendor/etc/init/hw/init.cubs.rc
       - vendor/etc/init/hw/init.dpa.rc
       - vendor/etc/init/hw/init.efs.rc
       - vendor/etc/init/hw/init.felix.rc
@@ -847,6 +897,7 @@ filters:
       - vendor/etc/init/hw/init.gs201.storage.rc
       - vendor/etc/init/hw/init.gs201.usb.rc
       - vendor/etc/init/hw/init.husky.rc
+      - vendor/etc/init/hw/init.kodiak.rc
       - vendor/etc/init/hw/init.komodo.rc
       - vendor/etc/init/hw/init.laguna.rc
       - vendor/etc/init/hw/init.laguna.usb.rc
@@ -911,6 +962,8 @@ filters:
       - vendor/etc/init/init.touch.gti1.rc
       - vendor/etc/init/init.touch.ical0.rc
       - vendor/etc/init/init.touch.ical1.rc
+      - vendor/etc/init/init.touch.permissions.gti0.rc
+      - vendor/etc/init/init.touch.permissions.gti1.rc
       - vendor/etc/init/init.touch.predump.rc
       - vendor/etc/init/init.touch.rc
       - vendor/etc/init/init.touch.syna.rc
@@ -948,8 +1001,10 @@ filters:
       - vendor/etc/init/pixel-ubp-experiment.rc
       - vendor/etc/init/pixel-zram-comp-algorithm-experiment.rc
       - vendor/etc/init/pixel-zram-swap-size-experiment.rc
+      - vendor/etc/init/pixel-zygote-boost-experiment.rc
       - vendor/etc/init/pixel.gralloc.allocator-service.rc
       - vendor/etc/init/pixel.gralloc.allocator-V2-service.rc
+      - vendor/etc/init/pixelmd-experiment.rc
       - vendor/etc/init/pixelmd.rc
       - vendor/etc/init/pixelstats-vendor.gs101.rc
       - vendor/etc/init/pixelstats-vendor.gs201.rc
@@ -1236,10 +1291,12 @@ filters:
       - vendor/etc/panel_ctrl_google-cgyda_cal0.pb
       - vendor/etc/panel_ctrl_google-cm4_cal0.pb
       - vendor/etc/panel_ctrl_google-ct3b_cal0.pb
+      - vendor/etc/panel_ctrl_google-dcsdb_cal0.pb
       - vendor/etc/panel_ctrl_google-iyida_cal0.pb
       - vendor/etc/panel_ctrl_google-iyidb_cal1.pb
       - vendor/etc/panel_ctrl_google-km4_cal0.pb
       - vendor/etc/panel_ctrl_google-mtea_cal0.pb
+      - vendor/etc/panel_ctrl_google-pkkda_cal0.pb
       - vendor/etc/panel_ctrl_google-rgea_cal0.pb
       - vendor/etc/pixelstats_config.json
       - vendor/etc/pmgd/config.json
@@ -1268,6 +1325,7 @@ filters:
       - vendor/etc/res/values/charger/animation.txt
       - vendor/etc/seccomp_policy/codec2.vendor.base.policy
       - vendor/etc/seccomp_policy/codec2.vendor.ext.policy
+      - vendor/etc/security/supplemental_security_patches.xml
       - vendor/etc/sensors/device_cal_info
       - vendor/etc/sensors/hals.conf
       - vendor/etc/sound_trigger_configuration.xml
@@ -1393,7 +1451,9 @@ filters:
       - vendor/firmware/CPS4041_A0_04.bin
       - vendor/firmware/CPS4041_A0_05.bin
       - vendor/firmware/CPS4041_A0_06.bin
+      - vendor/firmware/CPS4041_A0_07.bin
       - vendor/firmware/CPS4041_A0_08.bin
+      - vendor/firmware/CPS4041_A0_09.bin
       - vendor/firmware/CPS4041_A0_0A.bin
       - vendor/firmware/CPS4041_BL.bin
       - vendor/firmware/CPS8200.signed.bin
@@ -1448,8 +1508,16 @@ filters:
       - vendor/firmware/fast_switch7.txt
       - vendor/firmware/fast_switch8.txt
       - vendor/firmware/filter_ie
+      - vendor/firmware/focaltech_4cs4_fw.bin
+      - vendor/firmware/focaltech_4cs4_fw_b.bin
+      - vendor/firmware/focaltech_fl_fw.bin
+      - vendor/firmware/focaltech_fl_fw_b.bin
       - vendor/firmware/focaltech_testconf.ini
+      - vendor/firmware/focaltech_testconf_4cs4.ini
+      - vendor/firmware/focaltech_testconf_4cs4_b.ini
       - vendor/firmware/focaltech_testconf_b.ini
+      - vendor/firmware/focaltech_testconf_fl.ini
+      - vendor/firmware/focaltech_testconf_fl_b.ini
       - vendor/firmware/focaltech_ts_fw.bin
       - vendor/firmware/focaltech_ts_fw_b.bin
       - vendor/firmware/ftm5_fw.ftb
@@ -1497,6 +1565,7 @@ filters:
       - vendor/firmware/logstrs.bin
       - vendor/firmware/m3.bin
       - vendor/firmware/mali_csffw-legacy-r56p0.bin
+      - vendor/firmware/mali_csffw-r49p0.bin
       - vendor/firmware/mali_csffw-r50p0.bin
       - vendor/firmware/mali_csffw-r51p0.bin
       - vendor/firmware/mali_csffw-r52p0.bin
@@ -1569,10 +1638,15 @@ filters:
       - vendor/firmware/syna/BTFW_B.hcd
       - vendor/firmware/synaptics.img
       - vendor/firmware/synaptics.img_S3908TG
+      - vendor/firmware/synaptics_4cs4.img
+      - vendor/firmware/synaptics_4cs4_ba.img
+      - vendor/firmware/synaptics_4cs4_bb.img
       - vendor/firmware/synaptics_b.img
       - vendor/firmware/synaptics_bz.img
       - vendor/firmware/synaptics_c.img
       - vendor/firmware/synaptics_cgy4.img
+      - vendor/firmware/synaptics_mt.img
+      - vendor/firmware/synaptics_pkk4.img
       - vendor/firmware/ti_sp_tuning.bin
       - vendor/firmware/tismartpa_driver_tuning.bin
       - vendor/firmware/tx_mcu.signed.bin
@@ -1597,8 +1671,109 @@ filters:
       - vendor/lib64/aconfig_gpu_img_flags_c_lib.so
       - vendor/lib64/aconfig_gsc_flags_c_lib.so
       - vendor/lib64/aconfig_ultrasonic_udfps_flags_c_lib.so
+      - vendor/lib64/android.frameworks.sensorservice-V1-ndk.so
+      - vendor/lib64/android.frameworks.sensorservice@1.0.so
+      - vendor/lib64/android.frameworks.stats-V1-cpp.so
+      - vendor/lib64/android.frameworks.stats-V1-ndk.so
+      - vendor/lib64/android.frameworks.stats-V2-ndk.so
+      - vendor/lib64/android.frameworks.stats-V3-ndk.so
+      - vendor/lib64/android.hardware.audio.common-util.so
+      - vendor/lib64/android.hardware.audio.common-V5-ndk.so
+      - vendor/lib64/android.hardware.audio.common@2.0.so
+      - vendor/lib64/android.hardware.audio.common@5.0.so
+      - vendor/lib64/android.hardware.audio.common@7.0-enums.so
+      - vendor/lib64/android.hardware.audio.common@7.0-util.so
+      - vendor/lib64/android.hardware.audio.common@7.0.so
+      - vendor/lib64/android.hardware.audio.common@7.1-enums.so
+      - vendor/lib64/android.hardware.audio.common@7.1-util.so
+      - vendor/lib64/android.hardware.audio.core-V4-ndk.so
+      - vendor/lib64/android.hardware.audio.core.sounddose-V4-ndk.so
+      - vendor/lib64/android.hardware.audio.effect-V4-ndk.so
+      - vendor/lib64/android.hardware.audio.effect@7.0-util.so
+      - vendor/lib64/android.hardware.audio.effect@7.0.so
+      - vendor/lib64/android.hardware.audio@7.0.so
+      - vendor/lib64/android.hardware.audio@7.1-util.so
+      - vendor/lib64/android.hardware.audio@7.1.so
       - vendor/lib64/android.hardware.authsecret-impl.nos.so
+      - vendor/lib64/android.hardware.authsecret-V1-ndk.so
+      - vendor/lib64/android.hardware.biometrics.common-V3-ndk.so
+      - vendor/lib64/android.hardware.biometrics.fingerprint-V3-ndk.so
+      - vendor/lib64/android.hardware.bluetooth-V1-ndk.so
+      - vendor/lib64/android.hardware.bluetooth.audio-impl.so
+      - vendor/lib64/android.hardware.bluetooth.audio-V6-ndk.so
+      - vendor/lib64/android.hardware.bluetooth.audio@2.0.so
+      - vendor/lib64/android.hardware.bluetooth.audio@2.1.so
+      - vendor/lib64/android.hardware.bluetooth.finder-V1-ndk.so
+      - vendor/lib64/android.hardware.bluetooth.lmp_event-V1-ndk.so
+      - vendor/lib64/android.hardware.bluetooth.ranging-V2-ndk.so
+      - vendor/lib64/android.hardware.bluetooth.socket-V2-ndk.so
+      - vendor/lib64/android.hardware.bluetooth@1.0.so
+      - vendor/lib64/android.hardware.bluetooth@1.1.so
+      - vendor/lib64/android.hardware.boot-V1-ndk.so
+      - vendor/lib64/android.hardware.boot@1.0.so
+      - vendor/lib64/android.hardware.boot@1.1.so
+      - vendor/lib64/android.hardware.common-V2-ndk.so
+      - vendor/lib64/android.hardware.common.fmq-V1-ndk.so
+      - vendor/lib64/android.hardware.contexthub-V5-ndk.so
+      - vendor/lib64/android.hardware.drm-V1-ndk.so
+      - vendor/lib64/android.hardware.drm-V2-ndk.so
+      - vendor/lib64/android.hardware.drm.common-V1-ndk.so
+      - vendor/lib64/android.hardware.dumpstate-V1-ndk.so
+      - vendor/lib64/android.hardware.gnss-V3-ndk.so
+      - vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so
+      - vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so
+      - vendor/lib64/android.hardware.gnss.visibility_control@1.0.so
+      - vendor/lib64/android.hardware.gnss@1.0.so
+      - vendor/lib64/android.hardware.gnss@1.1.so
+      - vendor/lib64/android.hardware.gnss@2.0.so
+      - vendor/lib64/android.hardware.gnss@2.1.so
+      - vendor/lib64/android.hardware.graphics.allocator-V2-ndk.so
+      - vendor/lib64/android.hardware.graphics.allocator@2.0.so
+      - vendor/lib64/android.hardware.graphics.allocator@3.0.so
+      - vendor/lib64/android.hardware.graphics.allocator@4.0.so
+      - vendor/lib64/android.hardware.graphics.bufferqueue@1.0.so
+      - vendor/lib64/android.hardware.graphics.bufferqueue@2.0.so
+      - vendor/lib64/android.hardware.graphics.common-V7-ndk.so
+      - vendor/lib64/android.hardware.graphics.common@1.0.so
+      - vendor/lib64/android.hardware.graphics.common@1.1.so
+      - vendor/lib64/android.hardware.graphics.common@1.2.so
+      - vendor/lib64/android.hardware.graphics.composer3-V5-ndk.so
+      - vendor/lib64/android.hardware.graphics.composer@2.1-resources.so
+      - vendor/lib64/android.hardware.graphics.composer@2.1.so
+      - vendor/lib64/android.hardware.graphics.composer@2.2-resources.so
+      - vendor/lib64/android.hardware.graphics.composer@2.2.so
+      - vendor/lib64/android.hardware.graphics.composer@2.3.so
+      - vendor/lib64/android.hardware.graphics.composer@2.4.so
+      - vendor/lib64/android.hardware.graphics.mapper@2.0.so
+      - vendor/lib64/android.hardware.graphics.mapper@2.1.so
+      - vendor/lib64/android.hardware.graphics.mapper@3.0.so
+      - vendor/lib64/android.hardware.graphics.mapper@4.0.so
+      - vendor/lib64/android.hardware.health-V1-ndk.so
+      - vendor/lib64/android.hardware.health-V4-ndk.so
+      - vendor/lib64/android.hardware.health-V5-ndk.so
+      - vendor/lib64/android.hardware.health.storage-V1-ndk.so
+      - vendor/lib64/android.hardware.input.common-V1-ndk.so
+      - vendor/lib64/android.hardware.input.processor-V1-ndk.so
+      - vendor/lib64/android.hardware.keymaster-V4-ndk.so
+      - vendor/lib64/android.hardware.light-V2-ndk.so
+      - vendor/lib64/android.hardware.media.bufferpool2-V2-ndk.so
+      - vendor/lib64/android.hardware.media.bufferpool@2.0.so
+      - vendor/lib64/android.hardware.media.c2-V2-ndk.so
+      - vendor/lib64/android.hardware.media.omx@1.0.so
+      - vendor/lib64/android.hardware.media@1.0.so
+      - vendor/lib64/android.hardware.memtrack-V1-ndk.so
+      - vendor/lib64/android.hardware.neuralnetworks-V4-ndk.so
+      - vendor/lib64/android.hardware.neuralnetworks@1.0.so
+      - vendor/lib64/android.hardware.neuralnetworks@1.1.so
+      - vendor/lib64/android.hardware.neuralnetworks@1.2.so
+      - vendor/lib64/android.hardware.neuralnetworks@1.3.so
+      - vendor/lib64/android.hardware.nfc-V1-ndk.so
+      - vendor/lib64/android.hardware.npu-V1-ndk.so
       - vendor/lib64/android.hardware.oemlock-impl.nos.so
+      - vendor/lib64/android.hardware.oemlock-V1-ndk.so
+      - vendor/lib64/android.hardware.power-V1-ndk.so
+      - vendor/lib64/android.hardware.power-V2-ndk.so
+      - vendor/lib64/android.hardware.power-V7-ndk.so
       - vendor/lib64/android.hardware.power.stats-impl.gs-common.so
       - vendor/lib64/android.hardware.power.stats-impl.gs101.so
       - vendor/lib64/android.hardware.power.stats-impl.gs201.so
@@ -1607,11 +1782,84 @@ filters:
       - vendor/lib64/android.hardware.power.stats-impl.pixel.so
       - vendor/lib64/android.hardware.power.stats-impl.zuma.so
       - vendor/lib64/android.hardware.power.stats-impl.zumapro.so
+      - vendor/lib64/android.hardware.power.stats-V2-ndk.so
+      - vendor/lib64/android.hardware.power@1.0.so
+      - vendor/lib64/android.hardware.power@1.1.so
+      - vendor/lib64/android.hardware.power@1.2.so
+      - vendor/lib64/android.hardware.radio-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.config-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.config@1.0.so
+      - vendor/lib64/android.hardware.radio.config@1.1.so
+      - vendor/lib64/android.hardware.radio.config@1.2.so
+      - vendor/lib64/android.hardware.radio.data-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.deprecated@1.0.so
+      - vendor/lib64/android.hardware.radio.messaging-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.modem-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.network-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.sap-V1-ndk.so
+      - vendor/lib64/android.hardware.radio.sim-V3-ndk.so
+      - vendor/lib64/android.hardware.radio.voice-V3-ndk.so
+      - vendor/lib64/android.hardware.radio@1.2.so
+      - vendor/lib64/android.hardware.radio@1.3.so
+      - vendor/lib64/android.hardware.radio@1.4.so
+      - vendor/lib64/android.hardware.radio@1.5.so
+      - vendor/lib64/android.hardware.radio@1.6.so
+      - vendor/lib64/android.hardware.secure_element-V1-ndk.so
       - vendor/lib64/android.hardware.secure_element.thales.libse.so
+      - vendor/lib64/android.hardware.secure_element@1.0.so
+      - vendor/lib64/android.hardware.secure_element@1.1.so
+      - vendor/lib64/android.hardware.secure_element@1.2.so
       - vendor/lib64/android.hardware.security.keymint-impl.nos.so
+      - vendor/lib64/android.hardware.security.keymint-V1-ndk.so
+      - vendor/lib64/android.hardware.security.keymint-V3-ndk.so
+      - vendor/lib64/android.hardware.security.rkp-V3-ndk.so
+      - vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so
+      - vendor/lib64/android.hardware.security.timestamp-V1-ndk.so
+      - vendor/lib64/android.hardware.sensors-V2-ndk.so
+      - vendor/lib64/android.hardware.sensors-V3-ndk.so
+      - vendor/lib64/android.hardware.sensors@1.0.so
+      - vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so
+      - vendor/lib64/android.hardware.sensors@2.0.so
+      - vendor/lib64/android.hardware.sensors@2.1.so
+      - vendor/lib64/android.hardware.soundtrigger3-V4-ndk.so
+      - vendor/lib64/android.hardware.soundtrigger@2.0-core.so
+      - vendor/lib64/android.hardware.soundtrigger@2.0.so
+      - vendor/lib64/android.hardware.soundtrigger@2.1.so
+      - vendor/lib64/android.hardware.soundtrigger@2.2.so
+      - vendor/lib64/android.hardware.soundtrigger@2.3.so
+      - vendor/lib64/android.hardware.tetheroffload.config@1.0.so
+      - vendor/lib64/android.hardware.tetheroffload.control@1.0.so
+      - vendor/lib64/android.hardware.tetheroffload.control@1.1.so
+      - vendor/lib64/android.hardware.thermal-V1-ndk.so
+      - vendor/lib64/android.hardware.thermal-V2-ndk.so
+      - vendor/lib64/android.hardware.thermal-V3-ndk.so
+      - vendor/lib64/android.hardware.thermal@1.0.so
+      - vendor/lib64/android.hardware.thermal@2.0.so
+      - vendor/lib64/android.hardware.usb-V4-ndk.so
+      - vendor/lib64/android.hardware.usb.flags-aconfig-cc-lib.so
+      - vendor/lib64/android.hardware.usb.gadget-V1-ndk.so
+      - vendor/lib64/android.hardware.usb.gadget-V2-ndk.so
+      - vendor/lib64/android.hardware.usb.gadget@1.0.so
+      - vendor/lib64/android.hardware.vibrator-V2-ndk.so
+      - vendor/lib64/android.hardware.vibrator-V3-ndk.so
       - vendor/lib64/android.hardware.weaver-bridge.nos.so
       - vendor/lib64/android.hardware.weaver-impl.nos.so
+      - vendor/lib64/android.hardware.weaver-V3-ndk.so
       - vendor/lib64/android.hardware.weaver2-impl.nos.so
+      - vendor/lib64/android.hardware.wifi.common-V2-ndk.so
+      - vendor/lib64/android.hardware.wifi.hostapd-V3-ndk.so
+      - vendor/lib64/android.hardware.wifi.supplicant-V5-ndk.so
+      - vendor/lib64/android.hidl.allocator@1.0.so
+      - vendor/lib64/android.hidl.memory.token@1.0.so
+      - vendor/lib64/android.hidl.memory@1.0.so
+      - vendor/lib64/android.hidl.safe_union@1.0.so
+      - vendor/lib64/android.hidl.token@1.0-utils.so
+      - vendor/lib64/android.hidl.token@1.0.so
+      - vendor/lib64/android.media.audio.common.types-V5-ndk.so
+      - vendor/lib64/android.media.audio.eraser.types-V2-ndk.so
+      - vendor/lib64/android.media.soundtrigger.types-V4-ndk.so
+      - vendor/lib64/android.system.keystore2-V1-ndk.so
+      - vendor/lib64/android.trusty.stats.nw.setter-cpp.so
       - vendor/lib64/aoc_aconfig_flags_c_lib.so
       - vendor/lib64/aoc_aud_ext.so
       - vendor/lib64/aoc_audio_stereo_spatializer.so
@@ -1650,6 +1898,7 @@ filters:
       - vendor/lib64/com.google.hardware.pixel.display-V17-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V21-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V22-ndk.so
+      - vendor/lib64/com.google.hardware.pixel.display-V23-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V4-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V9-ndk.so
       - vendor/lib64/com.google.input-V2-ndk.so
@@ -1678,10 +1927,13 @@ filters:
       - vendor/lib64/hardware.google.bluetooth.sar@1.1.so
       - vendor/lib64/hardware.google.ril_ext-V1-ndk.so
       - vendor/lib64/hardware.google.ril_ext-V2-ndk.so
+      - vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
+      - vendor/lib64/hw/android.hardware.audio@7.1-impl.so
       - vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so
       - vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
       - vendor/lib64/hw/android.hardware.gnss@2.1-impl-google.so
       - vendor/lib64/hw/android.hardware.graphics.allocator-aidl-impl.so
+      - vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
       - vendor/lib64/hw/android.hardware.vibrator-impl.cs40l25.so
       - vendor/lib64/hw/android.hardware.vibrator-impl.cs40l26-private.so
       - vendor/lib64/hw/android.hardware.vibrator-impl.cs40l26.so
@@ -1724,34 +1976,73 @@ filters:
       - vendor/lib64/lib_toolcommlayer.so
       - vendor/lib64/lib_vendor_gsc_atoms.so
       - vendor/lib64/libaconfig_display_pixel_hwc_flags.s
+      - vendor/lib64/libaconfig_storage_file.dylib.so
+      - vendor/lib64/libaconfig_storage_protos.dylib.so
+      - vendor/lib64/libaconfig_storage_read_api.dylib.so
       - vendor/lib64/libaconfig_storage_read_api_cc.so
       - vendor/lib64/libacryl.so
       - vendor/lib64/libacryl_hdr_plugin.so
       - vendor/lib64/libadaptedinfo.so
       - vendor/lib64/libalertv3.so
       - vendor/lib64/libAlgFx_HiFi3z.so
+      - vendor/lib64/libalsautils.so
+      - vendor/lib64/libalsautilsv2.so
       - vendor/lib64/libamcsextfile.so
+      - vendor/lib64/libandroid_log_sys.dylib.so
+      - vendor/lib64/libandroid_logger.dylib.so
+      - vendor/lib64/libanstyle.dylib.so
+      - vendor/lib64/libanyhow.dylib.so
       - vendor/lib64/libaoc.so
       - vendor/lib64/libaoc_waves.so
       - vendor/lib64/libaoctuningdecoder.so
       - vendor/lib64/libaocx.so
+      - vendor/lib64/libaudio_aidl_conversion_common_ndk.so
+      - vendor/lib64/libaudioaidlcommon.so
+      - vendor/lib64/libaudioaidlranges.so
+      - vendor/lib64/libaudioroutev2.so
+      - vendor/lib64/libaudioserviceexampleimpl.so
+      - vendor/lib64/libavservices_minijail.so
       - vendor/lib64/libbinder_trusty.so
+      - vendor/lib64/libbionic_bindgen.dylib.so
+      - vendor/lib64/libbitflags.dylib.so
       - vendor/lib64/libbluetooth_audio_session.so
+      - vendor/lib64/libbluetooth_audio_session_aidl.so
       - vendor/lib64/libbo_av1.so
       - vendor/lib64/libbtnv.so
       - vendor/lib64/libbw_av1dec.so
       - vendor/lib64/libbw_av1enc.so
+      - vendor/lib64/libbyteorder.dylib.so
+      - vendor/lib64/libbytes.dylib.so
       - vendor/lib64/libc++.so
       - vendor/lib64/libc2filterplugin.so
+      - vendor/lib64/libcap.so
       - vendor/lib64/libcarrierconfig.so
       - vendor/lib64/libcast_auth.so
       - vendor/lib64/libcast_auth_aidl-cpp.so
+      - vendor/lib64/libcfg_if.dylib.so
+      - vendor/lib64/libclang_rt.ubsan_standalone-aarch64-android.so
+      - vendor/lib64/libclap.dylib.so
+      - vendor/lib64/libclap_builder.dylib.so
+      - vendor/lib64/libclap_lex.dylib.so
       - vendor/lib64/libcld80211.so
+      - vendor/lib64/libcodec2.so
+      - vendor/lib64/libcodec2_aidl_noisurface.so
+      - vendor/lib64/libcodec2_aidl_V2.so
+      - vendor/lib64/libcodec2_hal_common.so
+      - vendor/lib64/libcodec2_hidl_plugin.so
+      - vendor/lib64/libcodec2_soft_common.so
       - vendor/lib64/libcodec2_soft_ddpdec.so
       - vendor/lib64/libcodec2_store_dolby.so
+      - vendor/lib64/libcodec2_vndk.so
+      - vendor/lib64/libcommand_fds.dylib.so
+      - vendor/lib64/libcppbor.so
+      - vendor/lib64/libcppcose_rkp.so
+      - vendor/lib64/libcurl.so
       - vendor/lib64/libcustom_nvram.so
       - vendor/lib64/libcustomer_gralloc_ddk_api.so
       - vendor/lib64/libcustomgnss.so
+      - vendor/lib64/libcutils_bindgen.dylib.so
+      - vendor/lib64/libcxx.dylib.so
       - vendor/lib64/libdapparamstorage.so
       - vendor/lib64/libdarwinn_hal.so
       - vendor/lib64/libdeccfg.so
@@ -1761,14 +2052,21 @@ filters:
       - vendor/lib64/libdisplaycolor.so
       - vendor/lib64/libdisplaypanel.so
       - vendor/lib64/libdisppower-pixel.so
+      - vendor/lib64/libdrm.so
       - vendor/lib64/libdrmresource.so
       - vendor/lib64/libdump.so
+      - vendor/lib64/libdumpstateutil.so
       - vendor/lib64/libedgetpu_client.google.so
       - vendor/lib64/libedgetpu_litert.so
       - vendor/lib64/libedgetpu_tachyon.google.so
       - vendor/lib64/libedgetpu_tflite_compiler.so
       - vendor/lib64/libedgetpu_util.so
+      - vendor/lib64/libeffectconfig.so
+      - vendor/lib64/libenv_filter.dylib.so
+      - vendor/lib64/libenv_logger.dylib.so
       - vendor/lib64/libepic_version_utils.dylib.so
+      - vendor/lib64/libevent.so
+      - vendor/lib64/libexpat.so
       - vendor/lib64/libExynosC2ComponentStore.so
       - vendor/lib64/libExynosC2H263Dec.so
       - vendor/lib64/libExynosC2H263Enc.so
@@ -1787,6 +2085,9 @@ filters:
       - vendor/lib64/libexynosutils.so
       - vendor/lib64/libexynosv4l2.so
       - vendor/lib64/libfile_op.so
+      - vendor/lib64/libflatbuffers-cpp.so
+      - vendor/lib64/libfmq.so
+      - vendor/lib64/libfoldhash.dylib.so
       - vendor/lib64/libfvsam_prm_parser.so
       - vendor/lib64/libgc2_av1_dec.so
       - vendor/lib64/libgc2_av1_enc.so
@@ -1819,9 +2120,16 @@ filters:
       - vendor/lib64/libgps.utils.so
       - vendor/lib64/libgpudataproducer.so
       - vendor/lib64/libgpuflag_aconfig_rust.dylib.so
+      - vendor/lib64/libgralloctypes.so
       - vendor/lib64/libgril_oem-google.so
+      - vendor/lib64/libgui.so
       - vendor/lib64/libgxp.so
+      - vendor/lib64/libhidlmemory.so
+      - vendor/lib64/libhidltransport.so
       - vendor/lib64/libhidparser.so
+      - vendor/lib64/libhwbinder.so
+      - vendor/lib64/libhwc2on1adapter.so
+      - vendor/lib64/libhwc2onfbadapter.so
       - vendor/lib64/libhwc_flags.so
       - vendor/lib64/libhwc_xrr_flags.so
       - vendor/lib64/libhwjpeg.so
@@ -1832,22 +2140,38 @@ filters:
       - vendor/lib64/libimgcodec_store.so
       - vendor/lib64/libIMGegl.so
       - vendor/lib64/libimsmediahalproxy_mtk.so
+      - vendor/lib64/libion.so
       - vendor/lib64/libion_exynos.so
       - vendor/lib64/libion_google.so
       - vendor/lib64/libjson.so
+      - vendor/lib64/libjsoncpp.so
+      - vendor/lib64/libkeymaster_messages.so
+      - vendor/lib64/libkeymaster_portable.so
+      - vendor/lib64/libkeymint_support_V3.so
       - vendor/lib64/libkeystore-engine-wifi-hidl.so
+      - vendor/lib64/liblazy_static.dylib.so
+      - vendor/lib64/liblibc.dylib.so
       - vendor/lib64/libloc_base_util.so
       - vendor/lib64/libloc_mq_client.so
+      - vendor/lib64/liblog_rust.dylib.so
+      - vendor/lib64/liblogger.dylib.so
       - vendor/lib64/liblowi_client.so
       - vendor/lib64/liblowi_common.so
       - vendor/lib64/liblowi_wifihal.so
+      - vendor/lib64/liblzma.so
       - vendor/lib64/libmahalcontroller.so
       - vendor/lib64/libMAM_Google_Pixel_Android.so
       - vendor/lib64/libmdmdetect.so
       - vendor/lib64/libmdspeech.so
       - vendor/lib64/libmedia_ecoservice.so
+      - vendor/lib64/libmedia_omx.so
+      - vendor/lib64/libmediautils_vendor.so
+      - vendor/lib64/libmemmap2.dylib.so
+      - vendor/lib64/libmemoffset.dylib.so
       - vendor/lib64/libmemtrack-pixel.so
+      - vendor/lib64/libmemunreachable.so
       - vendor/lib64/libmetrics_logger.so
+      - vendor/lib64/libminijail.so
       - vendor/lib64/libmipc.so
       - vendor/lib64/libmodem_ml_svc_proto.so
       - vendor/lib64/libmodem_svc_proto_legacy_soong.so
@@ -1866,6 +2190,12 @@ filters:
       - vendor/lib64/libmtktinyxml.so
       - vendor/lib64/libmtkutils.so
       - vendor/lib64/libnbaio_mono.so
+      - vendor/lib64/libneli.dylib.so
+      - vendor/lib64/libnetfilter_conntrack.so
+      - vendor/lib64/libnetutils.so
+      - vendor/lib64/libnfnetlink.so
+      - vendor/lib64/libnix.dylib.so
+      - vendor/lib64/libnl.so
       - vendor/lib64/libnos.so
       - vendor/lib64/libnos_citadeld_proxy.so
       - vendor/lib64/libnos_client_citadel.so
@@ -1880,6 +2210,7 @@ filters:
       - vendor/lib64/libNX_Google_Pixel_Android.so
       - vendor/lib64/liboemcrypto.so
       - vendor/lib64/liboemservice.so
+      - vendor/lib64/libonce_cell.dylib.so
       - vendor/lib64/libOpenCL-pixel.so
       - vendor/lib64/libOpenCL.so
       - vendor/lib64/libperfetto_c.so
@@ -1891,8 +2222,15 @@ filters:
       - vendor/lib64/libpixelhealth.so
       - vendor/lib64/libpixelstats.so
       - vendor/lib64/libpixelstatsflags.so
+      - vendor/lib64/libpng.so
+      - vendor/lib64/libpower.so
+      - vendor/lib64/libprocessgroup.so
       - vendor/lib64/libprotobuf-cpp-full-6.33.1.so
+      - vendor/lib64/libprotobuf-cpp-full-6.33.5-absl20260526.so
       - vendor/lib64/libprotobuf-cpp-lite-6.33.1.so
+      - vendor/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so
+      - vendor/lib64/libprotobuf.dylib.so
+      - vendor/lib64/libprotobuf_support.dylib.so
       - vendor/lib64/libPVROCL.so
       - vendor/lib64/libPVRScopeServices.so
       - vendor/lib64/libqfp-service.so
@@ -1910,8 +2248,12 @@ filters:
       - vendor/lib64/libril_sitril.so
       - vendor/lib64/librilfusion.so
       - vendor/lib64/librtxproto_aidl-default.so
+      - vendor/lib64/librustutils.dylib.so
       - vendor/lib64/libsensorndkbridge.so
       - vendor/lib64/libsensorsuez.so
+      - vendor/lib64/libserde.dylib.so
+      - vendor/lib64/libserde_core.dylib.so
+      - vendor/lib64/libsfplugin_ccodec_utils.so
       - vendor/lib64/libsighandler.so
       - vendor/lib64/libsit_oem.so
       - vendor/lib64/libsit_oem_proto.so
@@ -1922,24 +2264,39 @@ filters:
       - vendor/lib64/libsitril.so
       - vendor/lib64/libspeech_waveformaec_runner.so
       - vendor/lib64/libspeechenhancer.so
+      - vendor/lib64/libsqlite.so
       - vendor/lib64/libsrv_um.so
+      - vendor/lib64/libstagefright_aidl_bufferpool2.so
+      - vendor/lib64/libstagefright_bufferpool@2.0.1.so
+      - vendor/lib64/libstagefright_omx_utils.so
+      - vendor/lib64/libstagefright_xmlparser.so
+      - vendor/lib64/libstd.dylib.so
       - vendor/lib64/libstpreprocess21.so
       - vendor/lib64/libstreset21.so
       - vendor/lib64/libstreset23.so
       - vendor/lib64/libstreset24.so
       - vendor/lib64/libstreset25.so
       - vendor/lib64/libstreset26.so
+      - vendor/lib64/libstrsim.dylib.so
       - vendor/lib64/libsueznanoappclients.so
+      - vendor/lib64/libsystem_properties_bindgen_sys.dylib.so
       - vendor/lib64/libtachyon_core.so
       - vendor/lib64/libtachyon_dsp_core.so
       - vendor/lib64/libthermal_tflite_wrapper.so
+      - vendor/lib64/libthiserror.dylib.so
+      - vendor/lib64/libtinyalsa.so
+      - vendor/lib64/libtinyalsav2.so
       - vendor/lib64/libtinycompress.so
       - vendor/lib64/libtouchflow.so
       - vendor/lib64/libtrm.so
       - vendor/lib64/libufwriter.so
+      - vendor/lib64/libui.so
+      - vendor/lib64/libunwindstack.so
+      - vendor/lib64/libusbhost.so
       - vendor/lib64/libusc.so
       - vendor/lib64/libusf.so
       - vendor/lib64/libutils-default.so
+      - vendor/lib64/libutilscallstack.so
       - vendor/lib64/libvadprocessor.so
       - vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.so
       - vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
@@ -1948,6 +2305,8 @@ filters:
       - vendor/lib64/libwlcproto_aidl-default.so
       - vendor/lib64/libwpa_client.so
       - vendor/lib64/libwpfa.so
+      - vendor/lib64/libxml2.so
+      - vendor/lib64/libziparchive.so
       - vendor/lib64/modem_android_property_manager.so
       - vendor/lib64/modem_android_property_manager_impl.so
       - vendor/lib64/modem_clock_manager.so
@@ -1970,9 +2329,16 @@ filters:
       - vendor/lib64/sensors.usf.so
       - vendor/lib64/sensors.usf.v2.so
       - vendor/lib64/sideFpsSuez.so
+      - vendor/lib64/soundfx/libbundleaidl.so
+      - vendor/lib64/soundfx/libdownmixaidl.so
+      - vendor/lib64/soundfx/libdynamicsprocessingaidl.so
+      - vendor/lib64/soundfx/libhapticgeneratoraidl.so
+      - vendor/lib64/soundfx/libloudnessenhanceraidl.so
       - vendor/lib64/soundfx/liboffloadeffect.so
       - vendor/lib64/soundfx/libpixelhapticgeneratoraidl.so
+      - vendor/lib64/soundfx/libreverbaidl.so
       - vendor/lib64/soundfx/libspatialaudio.so
+      - vendor/lib64/soundfx/libvisualizeraidl.so
       - vendor/lib64/thermal-budget-interface-ndk.so
       - vendor/lib64/usf_v2_api.so
       - vendor/lib64/usf_v2_spectral_api.so
@@ -2017,6 +2383,7 @@ filters:
       - vendor/lib64/vendor.google.wireless_charger-V7-ndk.so
       - vendor/lib64/vendor.google.wireless_charger-V8-ndk.so
       - vendor/lib64/vendor.google.wireless_charger.service-V2-ndk.so
+      - vendor/lib64/vendor.google.wireless_charger.service-V3-ndk.so
       - vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so
       - vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V4-ndk.so
       - vendor/lib64/vendor.mediatek.hardware.mtkradioex.atci-V1-ndk.so
@@ -2070,51 +2437,3 @@ filters:
       - vendor_ramdisk/system/etc/fstab.zuma-fips
       - vendor_ramdisk/system/etc/fstab.zumapro
       - vendor_ramdisk/system/etc/fstab.zumapro-fips
-      - vendor/etc/displayconfig/display_aical_google-dcsda.pb
-      - vendor/etc/displayconfig/display_aical_google-dcsdb.pb
-      - vendor/etc/displayconfig/display_cgc_inference_google-dcsda.tflite
-      - vendor/etc/displayconfig/display_cgc_inference_google-dcsdb.tflite
-      - vendor/etc/displayconfig/display_cgc_pool_google-dcsda.bin
-      - vendor/etc/displayconfig/display_cgc_pool_google-dcsdb.bin
-      - vendor/etc/displayconfig/display_colorcal_desc_data_google-dcsda.pb
-      - vendor/etc/displayconfig/display_colorcal_desc_data_google-dcsdb.pb
-      - vendor/etc/displayconfig/display_hbm_regamma_inference_google-dcsda.tflite
-      - vendor/etc/displayconfig/display_hbm_regamma_inference_google-dcsdb.tflite
-      - vendor/etc/displayconfig/display_hbm_regamma_pool_google-dcsda.bin
-      - vendor/etc/displayconfig/display_hbm_regamma_pool_google-dcsdb.bin
-      - vendor/etc/displayconfig/display_nbm_regamma_inference_google-dcsda.tflite
-      - vendor/etc/displayconfig/display_nbm_regamma_inference_google-dcsdb.tflite
-      - vendor/etc/displayconfig/display_nbm_regamma_pool_google-dcsda.bin
-      - vendor/etc/displayconfig/display_nbm_regamma_pool_google-dcsdb.bin
-      - vendor/etc/displayconfig/display_sharpness_google-dcsda_0.pb
-      - vendor/etc/displayconfig/display_sharpness_google-dcsdb_0.pb
-      - vendor/etc/displayconfig/smoothcal_lut_data-google-dcsda.txt
-      - vendor/etc/displayconfig/smoothcal_lut_data-google-dcsdb.txt
-      - vendor/etc/init/hw/init.cubs.rc
-      - vendor/etc/panel_ctrl_google-dcsdb_cal0.pb
-      - vendor/firmware/CPS4041_A0_09.bin
-      - vendor/firmware/focaltech_4cs4_fw_b.bin
-      - vendor/firmware/focaltech_4cs4_fw.bin
-      - vendor/firmware/focaltech_fl_fw_b.bin
-      - vendor/firmware/focaltech_fl_fw.bin
-      - vendor/firmware/focaltech_testconf_4cs4_b.ini
-      - vendor/firmware/focaltech_testconf_4cs4.ini
-      - vendor/firmware/focaltech_testconf_fl_b.ini
-      - vendor/firmware/focaltech_testconf_fl.ini
-      - vendor/firmware/synaptics_4cs4_ba.img
-      - vendor/firmware/synaptics_4cs4_bb.img
-      - vendor/firmware/synaptics_4cs4.img
-      - vendor/firmware/synaptics_mt.img
-      - vendor/etc/displayconfig/display_aical_google-pkkda.pb
-      - vendor/etc/displayconfig/display_cgc_inference_google-pkkda.tflite
-      - vendor/etc/displayconfig/display_cgc_pool_google-pkkda.bin
-      - vendor/etc/displayconfig/display_colorcal_desc_data_google-pkkda.pb
-      - vendor/etc/displayconfig/display_hbm_regamma_inference_google-pkkda.tflite
-      - vendor/etc/displayconfig/display_hbm_regamma_pool_google-pkkda.bin
-      - vendor/etc/displayconfig/display_nbm_regamma_inference_google-pkkda.tflite
-      - vendor/etc/displayconfig/display_nbm_regamma_pool_google-pkkda.bin
-      - vendor/etc/displayconfig/display_sharpness_google-pkkda_0.pb
-      - vendor/etc/init/hw/init.kodiak.rc
-      - vendor/etc/panel_ctrl_google-pkkda_cal0.pb
-      - vendor/firmware/CPS4041_A0_07.bin
-      - vendor/firmware/synaptics_pkk4.img

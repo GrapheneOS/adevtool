@@ -9,22 +9,111 @@ sysconfig_inclusions:
       <component class=".dreams.DreamOverlayService" enabled="true"/>
       <component class="com.android.systemui.lowlightclock.LowLightClockDreamService" enabled="true"/>
     </component-override>
+  - <feature name="android.hardware.audio.low_latency"/>
+  - <feature name="android.hardware.audio.output"/>
+  - <feature name="android.hardware.audio.pro"/>
+  - <feature name="android.hardware.bluetooth"/>
+  - <feature name="android.hardware.bluetooth_le"/>
   - <feature name="android.hardware.bluetooth_le.channel_sounding"/>
+  - <feature name="android.hardware.camera"/>
+  - <feature name="android.hardware.camera.any"/>
+  - <feature name="android.hardware.camera.autofocus"/>
+  - <feature name="android.hardware.camera.capability.manual_post_processing"/>
+  - <feature name="android.hardware.camera.capability.manual_sensor"/>
+  - <feature name="android.hardware.camera.capability.raw"/>
+  - <feature name="android.hardware.camera.concurrent"/>
+  - <feature name="android.hardware.camera.flash"/>
+  - <feature name="android.hardware.camera.front"/>
+  - <feature name="android.hardware.camera.level.full"/>
+  - <feature name="android.hardware.context_hub"/>
+  - <feature name="android.hardware.device_unique_attestation"/>
+  - <feature name="android.hardware.faketouch"/>
   - <feature name="android.hardware.felica"/>
+  - <feature name="android.hardware.fingerprint"/>
+  - <feature name="android.hardware.location"/>
+  - <feature name="android.hardware.location.gps"/>
+  - <feature name="android.hardware.location.network"/>
+  - <feature name="android.hardware.microphone"/>
+  - <feature name="android.hardware.nfc"/>
+  - <feature name="android.hardware.nfc.any"/>
+  - <feature name="android.hardware.nfc.ese"/>
+  - <feature name="android.hardware.nfc.hce"/>
+  - <feature name="android.hardware.nfc.hcef"/>
   - <feature name="android.hardware.nfc.uicc"/>
   - <feature name="android.hardware.npu"/>
+  - <feature name="android.hardware.opengles.aep"/>
+  - <feature name="android.hardware.screen.landscape"/>
+  - <feature name="android.hardware.screen.portrait"/>
+  - <feature name="android.hardware.se.omapi.ese"/>
+  - <feature name="android.hardware.se.omapi.uicc"/>
+  - <feature name="android.hardware.security.model.compatible"/>
+  - <feature name="android.hardware.sensor.accelerometer"/>
+  - <feature name="android.hardware.sensor.barometer"/>
+  - <feature name="android.hardware.sensor.compass"/>
+  - <feature name="android.hardware.sensor.dynamic.head_tracker"/>
+  - <feature name="android.hardware.sensor.gyroscope"/>
+  - <feature name="android.hardware.sensor.hifi_sensors"/>
+  - <feature name="android.hardware.sensor.hinge_angle"/>
+  - <feature name="android.hardware.sensor.light"/>
+  - <feature name="android.hardware.sensor.proximity"/>
+  - <feature name="android.hardware.sensor.stepcounter"/>
+  - <feature name="android.hardware.sensor.stepdetector"/>
   - <feature name="android.hardware.strongbox_keystore" version="300"/>
   - <feature name="android.hardware.strongbox_keystore" version="400"/>
+  - <feature name="android.hardware.telephony"/>
+  - <feature name="android.hardware.telephony.calling"/>
+  - <feature name="android.hardware.telephony.carrierlock"/>
+  - <feature name="android.hardware.telephony.data"/>
   - <feature name="android.hardware.telephony.euicc"/>
   - <feature name="android.hardware.telephony.euicc.mep"/>
+  - <feature name="android.hardware.telephony.gsm"/>
+  - <feature name="android.hardware.telephony.ims"/>
+  - <feature name="android.hardware.telephony.ims.singlereg"/>
+  - <feature name="android.hardware.telephony.messaging"/>
+  - <feature name="android.hardware.telephony.radio.access"/>
+  - <feature name="android.hardware.telephony.subscription"/>
+  - <feature name="android.hardware.touchscreen"/>
+  - <feature name="android.hardware.touchscreen.multitouch"/>
+  - <feature name="android.hardware.touchscreen.multitouch.distinct"/>
+  - <feature name="android.hardware.touchscreen.multitouch.jazzhand"/>
+  - <feature name="android.hardware.usb.accessory"/>
+  - <feature name="android.hardware.usb.host"/>
   - <feature name="android.hardware.uwb"/>
   - <feature name="android.hardware.vulkan.compute" version="0"/>
   - <feature name="android.hardware.vulkan.level" version="1"/>
   - <feature name="android.hardware.vulkan.version" version="4206592"/>
   - <feature name="android.hardware.vulkan.version" version="4210688"/>
+  - <feature name="android.hardware.wifi"/>
+  - <feature name="android.hardware.wifi.aware"/>
+  - <feature name="android.hardware.wifi.direct"/>
+  - <feature name="android.hardware.wifi.passpoint"/>
+  - <feature name="android.hardware.wifi.rtt"/>
+  - <feature name="android.software.activities_on_secondary_displays" notLowRam="true"/>
+  - <feature name="android.software.aiseal"/>
+  - <feature name="android.software.app_widgets"/>
+  - <feature name="android.software.autofill"/>
+  - <feature name="android.software.backup"/>
+  - <feature name="android.software.cant_save_state"/>
+  - <feature name="android.software.companion_device_setup"/>
+  - <feature name="android.software.controls"/>
+  - <feature name="android.software.cts"/>
+  - <feature name="android.software.device_admin"/>
+  - <feature name="android.software.device_id_attestation"/>
   - <feature name="android.software.freeform_window_management"/>
+  - <feature name="android.software.home_screen"/>
+  - <feature name="android.software.input_methods"/>
+  - <feature name="android.software.ipsec_tunnel_migration"/>
+  - <feature name="android.software.ipsec_tunnels"/>
+  - <feature name="android.software.managed_users" notLowRam="true"/>
+  - <feature name="android.software.midi"/>
   - <feature name="android.software.opengles.deqp.level" version="132711169"/>
   - <feature name="android.software.opengles.deqp.level" version="132776705"/>
+  - <feature name="android.software.picture_in_picture" notLowRam="true"/>
+  - <feature name="android.software.print"/>
+  - <feature name="android.software.secure_lock_screen"/>
+  - <feature name="android.software.telecom"/>
+  - <feature name="android.software.verified_boot"/>
+  - <feature name="android.software.voice_recognizers" notLowRam="true"/>
   - <feature name="android.software.vulkan.deqp.level" version="132711169"/>
   - <feature name="android.software.vulkan.deqp.level" version="132776705"/>
   - <feature name="com.google.android.apps.dialer.SUPPORTED"/>
@@ -56,6 +145,7 @@ sysconfig_inclusions:
   - <feature name="com.google.android.feature.PIXEL_TABLET_2023_EXPERIENCE"/>
   - <feature name="com.google.android.feature.XR_PROJECTED"/>
   - <feature name="com.google.pixel.camera.concurrent_foldable_dual_front"/>
+  - <feature name="com.nxp.mifare"/>
   - <feature name="vendor.android.hardware.camera.preview-dis.back"/>
   - <feature name="vendor.android.hardware.camera.preview-dis.front"/>
   - |-

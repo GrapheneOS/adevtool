@@ -57,6 +57,7 @@ package_inclusions:
       - com.gsma.services.permission.RCS
       - com.shannon.rcsservice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
       - com.shannon.rcsservice.ext.permission.UCE
+      - com.shannon.rcsservice.permission.DEVICE_PROVISION
       - com.shannon.rcsservice.permission.READ
       - com.shannon.rcsservice.permission.WRITE
     pregrantable_permissions:
@@ -193,7 +194,7 @@ package_inclusions:
       - android.permission.MANAGE_USERS
 
   com.google.android.apps.camera.services:
-    max_known_version: 513910
+    max_known_version: 514018
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.ACCESS_WIFI_STATE
@@ -211,6 +212,7 @@ package_inclusions:
       - android.permission.CAPTURE_AUDIO_OUTPUT
       - android.permission.POST_NOTIFICATIONS
     remove_permissions:
+      - android.permission.ACCESS_LOCAL_NETWORK
       # Pixel Camera Services currently doesn't use any of these permissions.
       # [1] states that PCS (Pixel Camera Servicss) is planned "to be able act as a media
       # app and use Exoplayer for playing recorded video files". This functionality is
@@ -237,7 +239,7 @@ package_inclusions:
       - isolate_from_gmscore_and_finsky
 
   com.google.android.euicc:
-    max_known_version: 236971
+    max_known_version: 238486
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.CAMERA
@@ -347,7 +349,7 @@ package_inclusions:
       - android.permission.UPDATE_DEVICE_STATS
 
   com.google.euiccpixel:
-    max_known_version: 20235
+    max_known_version: 20245
     include_uses_permissions:
       - com.google.android.c2dm.permission.RECEIVE
       - com.google.android.providers.gsf.permission.READ_GSERVICES
@@ -778,6 +780,7 @@ package_exclusions:
   - com.google.android.settings.future.biometrics.faceenroll
   - com.google.android.settings.intelligence
   - com.google.android.setupwizard
+  - com.google.android.signature
   - com.google.android.soundpicker
   - com.google.android.storagemanager
   - com.google.android.tag

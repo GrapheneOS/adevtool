@@ -1,4 +1,6 @@
 sysprop_exclusions:
+  - android.transparency.enabled = true
+  - android.transparency.prevalence_url = androidbinarytransparency.googleapis.com
   - apexd.config.compressed_apex = true
   - com.google.android.setupwizard.complianceDate
   - dalvik.vm.allow_profile_code = true # TODO look further into this
@@ -59,6 +61,7 @@ sysprop_exclusions:
   - ro.build.version.base_os
   - ro.build.version.emergency_base_os # TODO look into it further
   - ro.build.version.incremental
+  - ro.build.version.sdk_full
   - ro.build.version.security_patch
   - ro.carriersetup.vzw_consent_page = true
   - ro.com.android.dataroaming = false
@@ -85,6 +88,8 @@ sysprop_exclusions:
   - ro.odm.build.tags
   - ro.odm.build.uuid
   - ro.odm.build.version.incremental
+  - ro.odm.build.version.sdk_full
+  - ro.odm.build.version.sdk_full
   - ro.odm_dlkm.build.date
   - ro.odm_dlkm.build.date.utc
   - ro.odm_dlkm.build.fingerprint
@@ -92,6 +97,7 @@ sysprop_exclusions:
   - ro.odm_dlkm.build.tags
   - ro.odm_dlkm.build.uuid
   - ro.odm_dlkm.build.version.incremental
+  - ro.odm_dlkm.build.version.sdk_full
   - ro.product.ab_ota_partitions # handled by AB_OTA_PARTITIONS declaration
   - ro.product.build.16k_page.enabled = true
   - ro.product.build.date
@@ -101,6 +107,7 @@ sysprop_exclusions:
   - ro.product.build.tags
   - ro.product.build.uuid
   - ro.product.build.version.incremental
+  - ro.product.build.version.sdk_full
   - ro.product.odm.name
   - ro.product.odm_dlkm.name
   - ro.product.product.name
@@ -124,6 +131,7 @@ sysprop_exclusions:
   - ro.system.build.tags
   - ro.system.build.uuid
   - ro.system.build.version.incremental
+  - ro.system.build.version.sdk_full
   - ro.system_dlkm.build.date
   - ro.system_dlkm.build.date.utc
   - ro.system_dlkm.build.fingerprint
@@ -131,6 +139,8 @@ sysprop_exclusions:
   - ro.system_dlkm.build.tags
   - ro.system_dlkm.build.uuid
   - ro.system_dlkm.build.version.incremental
+  - ro.system_dlkm.build.version.sdk_full
+  - ro.system_dlkm.build.version.sdk_full
   - ro.system_ext.build.date
   - ro.system_ext.build.date.utc
   - ro.system_ext.build.fingerprint
@@ -138,6 +148,7 @@ sysprop_exclusions:
   - ro.system_ext.build.tags
   - ro.system_ext.build.uuid
   - ro.system_ext.build.version.incremental
+  - ro.system_ext.build.version.sdk_full
   - ro.usb.data_protection.disable_when_locked.supported = true
   - ro.vendor.build.ab_ota_partitions # handled by AB_OTA_PARTITIONS declaration
   - ro.vendor.build.date
@@ -148,6 +159,7 @@ sysprop_exclusions:
   - ro.vendor.build.tags
   - ro.vendor.build.uuid
   - ro.vendor.build.version.incremental
+  - ro.vendor.build.version.sdk_full
   - ro.vendor.config.build_carrier
   - ro.vendor.primarydisplay.xrr.blocking_zone.min_refresh_rate_by_nits = 5:10
   - ro.vendor_dlkm.build.date
@@ -157,6 +169,7 @@ sysprop_exclusions:
   - ro.vendor_dlkm.build.tags
   - ro.vendor_dlkm.build.uuid
   - ro.vendor_dlkm.build.version.incremental
+  - ro.vendor_dlkm.build.version.sdk_full
   - ro.virtual_ab.ublk.enabled = true # intentionally disabled, see build/release repo
   - setupwizard.feature.baseline_setupwizard_enabled = true
   - setupwizard.feature.day_night_mode_enabled = true
