@@ -69,6 +69,7 @@ export async function processSepolicy(
   let typeAttrs = new Map<string, Set<string>>()
 
   let definedAttrs = new Set<string>(customState.sepolicy[Partition.System].typeAttrNames)
+  let definedTypes = new Set<string>()
 
   for (let part of EXT_SYS_PARTITIONS) {
     let selinuxDir = getSelinuxDir(part, pathResolver)
@@ -206,7 +207,14 @@ export async function processSepolicy(
           }
         }
         if (attrsSet.size === 0) {
+          if (
+            attrs.length === 0 &&
+            (customState.sepolicy[Partition.System].types[typeStr] !== undefined || definedTypes.has(typeStr))
+          ) {
+            continue
+          }
           typeLines.push('type ' + typeStr + (attrs.length > 0 ? ', ' + attrs.join(', ') : '') + ';')
+          definedTypes.add(typeStr)
           for (let attr of attrs) {
             attrsSet.add(attr)
           }
@@ -231,7 +239,7 @@ export async function processSepolicy(
           definedAttrs.add(attr)
         }
       }
-      let cilLines = renameBaseTypeattrs(parsedCil)
+      let cilLines = renameBaseTypeattrs(part, parsedCil)
 
       let customCilLines = new Set<string>(customSepolicy.cil)
 
@@ -271,7 +279,7 @@ export async function processSepolicy(
           version = version.slice(0, -1)
           assert(!version.includes('\n'), version)
           let typeSuffix = '_' + version
-          let allExpr = (await parseCil(filteredCilLines)).allExprs
+          let allExpr = (await parseCil(part, filteredCilLines)).allExprs
           let mapper = (token: string) => {
             if (token.endsWith(typeSuffix)) {
               return token.slice(0, -typeSuffix.length)
@@ -360,10 +368,12 @@ function fileNamePrefix(part: Partition) {
 
 async function parseCilFile(selinuxDir: string, part: Partition) {
   let cilFilePath = path.join(selinuxDir, fileNamePrefix(part) + '_sepolicy.cil')
-  return parseCil((await readFile(cilFilePath)).split('\n'))
+  return parseCil(part, (await readFile(cilFilePath)).split('\n'))
 }
 
-async function parseCil(cil: string[]) {
+const BASE_TYPEATTR_PREFIX = 'base_typeattr_'
+
+async function parseCil(partition: Partition, cil: string[]) {
   let parser = await require('s-expression')
 
   let typeattrExprs: unknown[][] = []
@@ -371,6 +381,7 @@ async function parseCil(cil: string[]) {
   let allExprs: unknown[][] = []
   let types: string[] = []
   let typeAttrNames: string[] = []
+  let partitionTypeAttrPrefix = `${partition}_typeattr_`
   for (let line of cil) {
     if (line.length == 0 || line.startsWith(';')) {
       continue
@@ -386,7 +397,7 @@ async function parseCil(cil: string[]) {
       case 'typeattributeset': {
         assert(expr.length === 3)
         let attr = expr[1]
-        if (attr.startsWith('base_typeattr_')) {
+        if (attr.startsWith(partitionTypeAttrPrefix) || attr.startsWith(BASE_TYPEATTR_PREFIX)) {
           otherExprs.push(expr)
         } else {
           typeattrExprs.push(expr)
@@ -396,7 +407,7 @@ async function parseCil(cil: string[]) {
       case 'typeattribute': {
         assert(expr.length === 2)
         let name = expr[1]
-        if (!name.startsWith('base_typeattr_')) {
+        if (!name.startsWith(partitionTypeAttrPrefix) && !name.startsWith(BASE_TYPEATTR_PREFIX)) {
           typeAttrNames.push(name)
         } else {
           otherExprs.push(expr)
@@ -425,7 +436,7 @@ async function parseCil(cil: string[]) {
 
   for (let expr of typeattrExprs) {
     let attr = expr[1] as string
-    assert(!attr.startsWith('base_typeattr_'))
+    assert(!attr.startsWith(BASE_TYPEATTR_PREFIX))
     assert(Array.isArray(expr[2]))
     for (let domain of expr[2]) {
       updateMultiMapObj(typeAttrs, domain, attr)
@@ -536,22 +547,24 @@ export async function getCertDigests(apkPaths: string[], sdkVersion: string) {
   return map
 }
 
-function renameBaseTypeattrs(cil: ParsedCil) {
+function renameBaseTypeattrs(partition: Partition, cil: ParsedCil) {
   let map = new Map<string, string>()
 
   let index = 0
+
+  let partitionTypeAttrPrefix = `${partition}_typeattr_`
 
   for (let expr of cil.otherExprs) {
     if (expr[0] === 'typeattribute') {
       assert(expr.length === 2)
       let name = expr[1] as string
-      // assert(name.startsWith('base_typeattr_'))
-      if (!name.startsWith('base_typeattr_')) {
+      // assert(name.startsWith(BASE_TYPEATTR_PREFIX))
+      if (!name.startsWith(partitionTypeAttrPrefix) && !name.startsWith(BASE_TYPEATTR_PREFIX)) {
         log('unexpected attr: ' + util.inspect(expr, false, 100))
         continue
       }
       assert(!map.has(name))
-      map.set(name, 'base_adevtool_typeattr_' + index)
+      map.set(name, `base_adevtool_${partition}_typeattr_` + index)
       index += 1
     }
   }
