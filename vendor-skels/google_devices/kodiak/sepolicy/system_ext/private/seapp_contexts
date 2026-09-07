@@ -1,5 +1,5 @@
 user=_app isPrivApp=true seinfo=EuiccSupportPixel name=com.google.euiccpixel domain=euiccpixel_app type=app_data_file levelFrom=all
-user=radio isPrivApp=true seinfo=platform name=com.android.imsstack domain=imsstack_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.android.imsstack domain=imsstack_app type=app_data_file levelFrom=all
 user=_app isPrivApp=true name=com.google.android.rilextension domain=rilextensionservice_app levelFrom=all
 user=_app seinfo=platform name=com.android.pixeldisplayservice domain=pixeldisplayservice_app type=app_data_file levelFrom=all
 user=_app seinfo=platform name=com.android.systemui domain=systemui_app type=app_data_file levelFrom=all

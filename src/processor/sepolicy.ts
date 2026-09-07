@@ -150,6 +150,17 @@ export async function processSepolicy(
           yamlPath: ['', part, 'contexts', contextsFileName],
         })
 
+        // AOSP ImsStack uses a separate app UID instead of android.uid.phone.
+        if (contextsFileName === 'system_ext_seapp_contexts' && customState.extraModules.includes('ImsStack')) {
+          const stockEntry =
+            'user=radio isPrivApp=true seinfo=platform name=com.android.imsstack ' +
+            'domain=imsstack_app type=app_data_file levelFrom=all'
+
+          filteredLines = filteredLines.map(entry =>
+            entry === stockEntry ? entry.replace('user=radio ', 'user=_app ') : entry,
+          )
+        }
+
         if (filteredLines.length > 0) {
           let name = contextsFileName
           let prefix = fileNamePrefix(part)
