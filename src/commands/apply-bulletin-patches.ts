@@ -288,6 +288,8 @@ ${gpgOut}`
       }
     }
 
+    let yearMonthOrigPatches = new Map<string, string[]>()
+
     // collect patches and CVE info from all provided bulletin sources
     for (let bulletinDir of bulletinDirs) {
       log(`===========================\nprocessing ${bulletinDir.yearMonth}: '${bulletinDir.baseDir}'`)
@@ -364,6 +366,7 @@ ${gpgOut}`
           switch (bulletinDir.type) {
             case BulletinType.Beta:
               filePath = path.join(bulletinDir.patchesDirPath, sha + '.patch')
+              updateMultiMap(yearMonthOrigPatches, bulletinDir.yearMonth, filePath)
               break
             case BulletinType.FinalSigned:
               assert(shaPatchMap !== null)
@@ -512,7 +515,18 @@ ${gpgOut}`
         for (let file of files) {
           copies.push(fs.copyFile(file, path.join(dstDir, path.basename(file))))
         }
-        copies.push(spawnAsyncNoOut('cp', ['-r', dir.patchesDirPath, dstDir]))
+        let dstPatchesDir = path.join(dstDir, 'patches')
+        if (dir.type === BulletinType.FinalSigned) {
+          copies.push(spawnAsyncNoOut('cp', ['-r', dir.patchesDirPath, dstPatchesDir]))
+        } else {
+          let patches = yearMonthOrigPatches.get(dir.yearMonth)
+          if (patches !== undefined) {
+            await fs.mkdir(dstPatchesDir)
+            for (let patch of patches) {
+              copies.push(fs.copyFile(patch, path.join(dstPatchesDir, path.basename(patch))))
+            }
+          }
+        }
       }
       await Promise.all(copies)
     }
