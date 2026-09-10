@@ -15,7 +15,7 @@ import { log } from '../util/log'
 import { spawnAsync2, spawnAsyncNoOut, spawnAsyncStdin, spawnAsyncUnchecked } from '../util/process'
 import { ManifestConfig } from './generate-manifest'
 
-export class ApplyBulletinPatches extends Command {
+export class ProcessBulletinPatches extends Command {
   static flags = {
     bulletinSource: Flags.file({ char: 'f', required: true, multiple: true }),
     osManifestConfig: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/config.yml') }),
@@ -26,7 +26,7 @@ export class ApplyBulletinPatches extends Command {
   }
 
   async run() {
-    let { flags } = await this.parse(ApplyBulletinPatches)
+    let { flags } = await this.parse(ProcessBulletinPatches)
     {
       let outStatus = await spawnGit(flags.outDir, ['status', '--short'])
       if (outStatus !== '') {
