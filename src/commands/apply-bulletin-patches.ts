@@ -670,8 +670,12 @@ async function onPatchApplicationFailure(
   repoPath: string,
   baseRevision: string,
   error: unknown,
-) {
-  await spawnGit(repoPath, ['am', '--abort'])
+): Promise<never> {
+  try {
+    await spawnGit(repoPath, ['am', '--abort'])
+  } catch (e) {
+    log(`am --abort failed in ${repoPath}: ${e}`)
+  }
   patchedRepos.push({ path: repoPath, baseRevision })
   await Promise.all(patchedRepos.map(async e => spawnGit(e.path, ['checkout', '--quiet', e.baseRevision])))
   log('Discarded applied patches')
