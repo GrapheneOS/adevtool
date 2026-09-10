@@ -473,6 +473,15 @@ ${gpgOut}`
         }
         assert(amOut.endsWith('\n'))
         log(amOut.slice(0, -1))
+
+        if (amOut.includes('No changes -- Patch already applied.')) {
+          let dstDir = path.join(skippedPatchesDir, repoPath)
+          await fs.mkdir(dstDir, { recursive: true })
+          let src = patchObj.srcFilePath
+          let dst = path.join(dstDir, path.basename(src))
+          await fs.copyFile(src, dst, fs.constants.COPYFILE_EXCL | fs.constants.COPYFILE_FICLONE)
+          log(`copied ${src} to ${dst}`)
+        }
       }
 
       try {
