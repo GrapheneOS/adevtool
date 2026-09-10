@@ -666,7 +666,13 @@ async function applyAdditionalPatches(repoPath: string, patches: Patch[]) {
         line => line === 'warning: reading patches from stdin/tty...',
       )
       assert(amOut.endsWith('\n'))
-      log('Additional patch: ' + amOut.slice(0, -1))
+      if (amOut.includes('No changes -- Patch already applied.')) {
+        await fs.rm(patchObj.srcFilePath)
+        log(amOut)
+        log(`removed already applied patch ${patchObj.srcFilePath}`)
+      } else {
+        log('Additional patch: ' + amOut.slice(0, -1))
+      }
     } catch (e) {
       log(`Unable to apply additional patch: '${patchObj.srcFilePath}'`)
       throw e
