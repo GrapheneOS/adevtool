@@ -44,41 +44,34 @@ export class PathResolver {
     readonly context: PathResolverContext = PathResolverContext.UNPACKED_IMAGE,
   ) {}
 
+  isOverlaid(part: Partition, relPath: string) {
+    let overlay = this.overlay
+    if (overlay === undefined) {
+      return false
+    }
+
+    if (overlay.fileOverlays[part]?.has(relPath)) {
+      return true
+    }
+
+    for (let dirOverlay of overlay.dirOverlays[part] ?? []) {
+      if (
+        dirOverlay === relPath ||
+        (relPath.length > dirOverlay.length && relPath[dirOverlay.length] === '/' && relPath.startsWith(dirOverlay))
+      ) {
+        return true
+      }
+    }
+    return false
+  }
+
   resolve(part: Partition, relPath: string | null = null) {
     let partPath = partitionRelativePath(part, this.context)
 
     if (relPath !== null) {
       let overlay = this.overlay
-      if (overlay !== undefined) {
-        let partFileOverlays = overlay.fileOverlays[part]
-        let shouldOverlay = false
-        if (partFileOverlays !== undefined) {
-          if (partFileOverlays.has(relPath)) {
-            shouldOverlay = true
-          }
-        }
-        if (!shouldOverlay) {
-          let partDirOverlays = overlay.dirOverlays[part]
-          if (partDirOverlays !== undefined) {
-            for (let dirOverlay of partDirOverlays) {
-              if (dirOverlay === relPath) {
-                shouldOverlay = true
-                break
-              }
-              if (
-                relPath.length > dirOverlay.length &&
-                relPath[dirOverlay.length] === '/' &&
-                relPath.startsWith(dirOverlay)
-              ) {
-                shouldOverlay = true
-                break
-              }
-            }
-          }
-        }
-        if (shouldOverlay) {
-          return path.join(overlay.basePath, partPath, relPath)
-        }
+      if (overlay !== undefined && this.isOverlaid(part, relPath)) {
+        return path.join(overlay.basePath, partPath, relPath)
       }
       return path.join(this.basePath, partPath, relPath)
     } else {

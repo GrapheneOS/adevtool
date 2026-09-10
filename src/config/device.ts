@@ -38,6 +38,7 @@ export interface DeviceConfig {
     backport_build_id: string | undefined
     is_beta_backport_build_id: boolean
     backport_base_firmware?: boolean
+    backport_kernel?: boolean
     prev_build_id: string
     has_cellular: boolean
     // ignored when undefined
