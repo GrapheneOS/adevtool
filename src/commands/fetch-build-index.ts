@@ -1,5 +1,5 @@
 import { Command, Flags } from '@oclif/core'
-import { YAMLMap } from 'yaml/types'
+import { YAMLMap } from 'yaml'
 
 import assert from 'assert'
 import YAML, { Document } from 'yaml'

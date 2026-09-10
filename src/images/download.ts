@@ -84,6 +84,10 @@ async function downloadImageInner(
   if (!resp.ok) {
     throw new Error(`${resp.status}: ${resp.statusText}; ${image.toString()} `)
   }
+  if (resp.body === null) {
+    throw new Error(`missing response body for ${image.toString()}`)
+  }
+
 
   let downloaded = 0
   let totalSizeStr: string | null
