@@ -59,3 +59,13 @@ function getKeysForCommit(map: Map<string, string>, value: string) {
     .filter(entry => entry[1].startsWith(value))
     .map(entry => entry[0])
 }
+
+export function isFullCommitHash(s: string) {
+  return s.length === 40 && s.match(/^[0-9a-f]{40}$/) !== null
+}
+
+export function assertIsFullCommitHash(s: string) {
+  if (!isFullCommitHash(s)) {
+    throw new Error('expected full commit hash, got ' + s)
+  }
+}
