@@ -8,8 +8,8 @@ import util from 'util'
 import xml2js from 'xml2js'
 import YAML from 'yaml'
 import { OS_CHECKOUT_DIR } from '../config/paths'
-import { assertDefined, mapGet, updateMultiMap, updateMultiSet } from '../util/data'
-import { isDirectory, isFile, listFilesRecursive, readFile } from '../util/fs'
+import { assertDefined, compareStrings, mapGet, updateMultiMap, updateMultiSet } from '../util/data'
+import { isDirectory, isFile, listFilesRecursive, readFile, removeEmptyDirsRecursive } from '../util/fs'
 import { spawnGit, spawnGitNoOut } from '../util/git'
 import { log } from '../util/log'
 import { spawnAsync2, spawnAsyncNoOut, spawnAsyncStdin, spawnAsyncUnchecked } from '../util/process'
@@ -34,16 +34,11 @@ export class ProcessBulletinPatches extends Command {
         return
       }
     }
-    let additionalPatchesDir = path.join(flags.outDir, 'additional-patches')
-    let skippedPatchesDir = path.join(flags.outDir, 'patches-to-skip')
 
-    let [additionalPatchesInfo, skippedPatchesInfo] = await Promise.all([
-      readPatchesDir(additionalPatchesDir),
-      readPatchesDir(skippedPatchesDir),
+    let [additionalPatchesDir, skippedPatchesDir] = await Promise.all([
+      readPatchesDir(path.join(flags.outDir, 'additional-patches'), true),
+      readPatchesDir(path.join(flags.outDir, 'patches-to-skip'), false),
     ])
-
-    log('Additional patches: ' + util.inspect(additionalPatchesInfo, false, Infinity))
-    log('Patches to skip: ' + util.inspect(skippedPatchesInfo, false, Infinity))
 
     let projectNamePathMap = new Map<string, string>()
     // reverse mapping
@@ -290,6 +285,9 @@ ${gpgOut}`
 
     let yearMonthOrigPatches = new Map<string, string[]>()
 
+    // repo path -> patch paths
+    let usedSkipEntries = new Map<string, string[]>()
+
     // collect patches and CVE info from all provided bulletin sources
     for (let bulletinDir of bulletinDirs) {
       log(`===========================\nprocessing ${bulletinDir.yearMonth}: '${bulletinDir.baseDir}'`)
@@ -355,12 +353,15 @@ ${gpgOut}`
           log('WARNING: skipping missing repo ' + repo)
           continue
         }
-        let skippedPatchesArr = await Promise.all(
-          (skippedPatchesInfo.patchMap.get(repoPath) ?? []).map(async patchPath => readFile(patchPath)),
-        )
-        let skippedPatches = new Set(skippedPatchesArr)
-        assert(skippedPatches.size === skippedPatchesArr.length)
         let repoPatches: Patch[] = []
+        let repoPatchesToSkip = new Map<string, string>()
+        for (let patch of skippedPatchesDir.patchMap.get(repoPath) ?? []) {
+          let prev = repoPatchesToSkip.get(patch.patchContents)
+          if (prev !== undefined) {
+            throw new Error(`${patch.srcFilePath} and ${prev} have the same contents`)
+          }
+          repoPatchesToSkip.set(patch.patchContents, patch.srcFilePath)
+        }
         for (let sha of shas) {
           let filePath: string
           switch (bulletinDir.type) {
@@ -374,7 +375,13 @@ ${gpgOut}`
               break
           }
           let patch: string = await readFile(filePath)
-          if (skippedPatches.has(patch)) {
+          let skippedPatch = repoPatchesToSkip.get(patch)
+          if (skippedPatch !== undefined) {
+            updateMultiMap(usedSkipEntries, repoPath, skippedPatch)
+            log(
+              `skipping ${path.relative(bulletinDir.patchesDirPath, filePath)} since ` +
+                `it's part of patches-to-skip: ${path.relative(skippedPatchesDir.dirPath, skippedPatch)}`,
+            )
             continue
           }
           let patchMessageStartMarker = '\n\n'
@@ -413,25 +420,22 @@ ${gpgOut}`
       }
     }
 
+    await pruneUnusedSkipEntries(skippedPatchesDir, usedSkipEntries)
+
     log('===========================')
 
-    for (let [repoPath, patchPaths] of additionalPatchesInfo.patchMap) {
+    for (let [repoPath, repoPatches] of additionalPatchesDir.patchMap) {
       let repo = mapGet(repoPathProjectNameMap, repoPath)
       let fullRepoPatches = fullRepoPatchesMap.get(repo)
       if (fullRepoPatches === undefined) {
         fullRepoPatches = []
         fullRepoPatchesMap.set(repo, fullRepoPatches)
       }
-      let patches = await Promise.all(
-        patchPaths.toSorted().map(async patchPath => {
-          return {
-            srcFilePath: patchPath,
-            patchContents: await readFile(patchPath),
-            isAdditional: true,
-          } as Patch
+      fullRepoPatches.push(
+        ...repoPatches.toSorted((a, b) => {
+          return compareStrings(a.srcFilePath, b.srcFilePath)
         }),
       )
-      fullRepoPatches.push(...patches)
     }
 
     let patchedRepos: PatchedRepo[] = []
@@ -478,7 +482,7 @@ ${gpgOut}`
         log(amOut.slice(0, -1))
 
         if (amOut.includes('No changes -- Patch already applied.')) {
-          let dstDir = path.join(skippedPatchesDir, repoPath)
+          let dstDir = path.join(skippedPatchesDir.dirPath, repoPath)
           await fs.mkdir(dstDir, { recursive: true })
           let src = patchObj.srcFilePath
           let dst = path.join(dstDir, path.basename(src))
@@ -717,29 +721,53 @@ const CVE_INFO_SEVERITY_PREFIX = 'Severity: '
 const CVE_INFO_TYPE_PREFIX = 'Type: '
 
 interface Patch {
-  patchContents: string // won't be same as contents of srcFilePath in most cases due to editing
+  patchContents: string // won't be same as contents of srcFilePath in some cases due to editing
   srcFilePath: string
   isAdditional: boolean
 }
 
 interface PatchesDir {
-  // repo path -> patches
-  patchMap: Map<string, string[]>
+  dirPath: string
+  // repo path -> repo patches
+  patchMap: Map<string, Patch[]>
 }
 
-async function readPatchesDir(dirPath: string) {
+async function readPatchesDir(dirPath: string, isAdditional: boolean) {
   if (!(await isDirectory(dirPath))) {
-    return { patchMap: new Map() } as PatchesDir
+    return { dirPath, patchMap: new Map() } as PatchesDir
   }
 
-  let patchMap = new Map<string, string[]>()
+  let patchMap = new Map<string, Patch[]>()
   for await (let filePath of listFilesRecursive(dirPath)) {
     if (!filePath.endsWith('.patch')) {
       continue
     }
-    updateMultiMap(patchMap, path.dirname(path.relative(dirPath, filePath)), filePath)
+    let patch = {
+      patchContents: await readFile(filePath),
+      srcFilePath: filePath,
+      isAdditional,
+    } as Patch
+    updateMultiMap(patchMap, path.dirname(path.relative(dirPath, filePath)), patch)
   }
-  return { patchMap } as PatchesDir
+  return { dirPath, patchMap } as PatchesDir
+}
+
+async function pruneUnusedSkipEntries(skippedPatchesDir: PatchesDir, usedSkipEntries: Map<string, string[]>) {
+  let dirPath = skippedPatchesDir.dirPath
+  for (let [repoPath, repoPatches] of skippedPatchesDir.patchMap) {
+    let usedPatchPaths = new Set(usedSkipEntries.get(repoPath) ?? [])
+    for (let patch of repoPatches) {
+      if (!usedPatchPaths.has(patch.srcFilePath)) {
+        await fs.rm(patch.srcFilePath)
+        log('removed unused entry from patches-to-skip: ' + path.relative(dirPath, patch.srcFilePath))
+      }
+    }
+  }
+  if (await isDirectory(dirPath)) {
+    await removeEmptyDirsRecursive(dirPath, dir => {
+      log('removed empty patches-to-skip dir: ' + path.relative(dirPath, dir))
+    })
+  }
 }
 
 enum BulletinType {
