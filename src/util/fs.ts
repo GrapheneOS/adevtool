@@ -16,6 +16,24 @@ export async function* listFilesRecursive(dir: string): AsyncGenerator<string> {
   }
 }
 
+export async function removeEmptyDirsRecursive(dir: string, onDirDeleted: (dirPath: string) => void) {
+  for (let de of await fs.readdir(dir, { withFileTypes: true })) {
+    if (!de.isDirectory()) {
+      continue
+    }
+    let childDir = path.resolve(dir, de.name)
+    await removeEmptyDirsRecursive(childDir, onDirDeleted)
+    try {
+      await fs.rmdir(childDir)
+      onDirDeleted(childDir)
+    } catch (e) {
+      if ((e as NodeJS.ErrnoException).code !== 'ENOTEMPTY') {
+        throw e
+      }
+    }
+  }
+}
+
 export async function exists(path: string) {
   try {
     await fs.access(path)

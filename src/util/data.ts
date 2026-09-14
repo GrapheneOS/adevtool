@@ -98,3 +98,10 @@ export async function filterAsync<T>(arr: readonly T[], predicate: (value: T) =>
   let bools = await Promise.all(arr.map(e => predicate(e)))
   return arr.filter((_, idx) => bools[idx])
 }
+
+export function compareStrings(a: string, b: string): number {
+  if (a === b) {
+    return 0
+  }
+  return a < b ? -1 : 1
+}
