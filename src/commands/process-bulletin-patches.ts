@@ -10,7 +10,7 @@ import YAML from 'yaml'
 import { OS_CHECKOUT_DIR } from '../config/paths'
 import { assertDefined, compareStrings, mapGet, updateMultiMap, updateMultiSet } from '../util/data'
 import { isDirectory, isFile, listFilesRecursive, readFile, removeEmptyDirsRecursive } from '../util/fs'
-import { spawnGit, spawnGitNoOut } from '../util/git'
+import { assertIsFullCommitHash, spawnGit, spawnGitNoOut } from '../util/git'
 import { log } from '../util/log'
 import { spawnAsync2, spawnAsyncNoOut, spawnAsyncStdin, spawnAsyncUnchecked } from '../util/process'
 import { ManifestConfig } from './generate-manifest'
@@ -20,6 +20,7 @@ export class ProcessBulletinPatches extends Command {
     bulletinSource: Flags.file({ char: 'f', required: true, multiple: true }),
     osManifestConfig: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/config.yml') }),
     osManifestFile: Flags.file({ default: path.join(OS_CHECKOUT_DIR, '.repo/manifests/default.xml') }),
+    ignoreCommits: Flags.string({ multiple: true, default: [] }),
     keepTempDir: Flags.boolean(),
     commitTitle: Flags.string(),
     outDir: Flags.file({ required: true }),
@@ -39,6 +40,14 @@ export class ProcessBulletinPatches extends Command {
       readPatchesDir(path.join(flags.outDir, 'additional-patches'), true),
       readPatchesDir(path.join(flags.outDir, 'patches-to-skip'), false),
     ])
+
+    let ignoreCommits = new Set<string>()
+    for (let e of flags.ignoreCommits) {
+      assertIsFullCommitHash(e)
+      assert(!ignoreCommits.has(e), e)
+      ignoreCommits.add(e)
+    }
+    let unusedIgnoreCommits = new Set(ignoreCommits)
 
     let projectNamePathMap = new Map<string, string>()
     // reverse mapping
@@ -363,6 +372,11 @@ ${gpgOut}`
           repoPatchesToSkip.set(patch.patchContents, patch.srcFilePath)
         }
         for (let sha of shas) {
+          if (ignoreCommits.has(sha)) {
+            unusedIgnoreCommits.delete(sha)
+            log(`skipping ${sha} since it's specified by --ignoreCommits`)
+            continue
+          }
           let filePath: string
           switch (bulletinDir.type) {
             case BulletinType.Beta:
@@ -418,6 +432,10 @@ ${gpgOut}`
         }
         fullRepoPatches.push(...repoPatches)
       }
+    }
+
+    if (unusedIgnoreCommits.size > 0) {
+      throw new Error('unused --ignoreCommits entries: ' + Array.from(unusedIgnoreCommits))
     }
 
     await pruneUnusedSkipEntries(skippedPatchesDir, usedSkipEntries)
@@ -668,7 +686,7 @@ async function readPatchesFromFinalBulletinDir(dir: BulletinDir) {
     assert(firstLine.startsWith(prefix))
     assert(firstLine.endsWith(suffix))
     let commitHash = firstLine.slice(prefix.length, firstLine.length - suffix.length)
-    assert(commitHash.length === 40)
+    assertIsFullCommitHash(commitHash)
     res.set(commitHash, patchPath)
   }
   return res
