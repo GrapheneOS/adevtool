@@ -493,7 +493,7 @@ ${gpgOut}`
             line => line === 'warning: reading patches from stdin/tty...',
           )
         } catch (e) {
-          log(`\nUnable to apply "${subject}" (path: '${patchObj.srcFilePath}'): ${e}`)
+          log(`\nUnable to apply "${subject}" (path: '${patchObj.srcFilePath}')`)
           await onPatchApplicationFailure(patchedRepos, repoPath, baseRevision, e)
         }
         assert(amOut.endsWith('\n'))
@@ -720,17 +720,21 @@ async function onPatchApplicationFailure(
   patchedRepos: PatchedRepo[],
   repoPath: string,
   baseRevision: string,
-  error: unknown,
+  originalError: unknown,
 ): Promise<never> {
   try {
     await spawnGit(repoPath, ['am', '--abort'])
-  } catch (e) {
-    log(`am --abort failed in ${repoPath}: ${e}`)
+  } catch (err) {
+    log(`am --abort failed in ${repoPath}: ${err}`)
   }
   patchedRepos.push({ path: repoPath, baseRevision })
-  await Promise.all(patchedRepos.map(async e => spawnGit(e.path, ['checkout', '--quiet', e.baseRevision])))
-  log('Discarded applied patches')
-  throw error
+  try {
+    await Promise.all(patchedRepos.map(async e => spawnGit(e.path, ['checkout', '--quiet', e.baseRevision])))
+    log('Discarded applied patches')
+  } catch (err) {
+    log(`failed to discard applied patches: ${err}`)
+  }
+  throw originalError
 }
 
 const CVE_INFO_HEADER = '\nCVE-Info: '
