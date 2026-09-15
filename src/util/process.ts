@@ -119,6 +119,8 @@ export async function spawnAsyncUnchecked(cmd: BaseSpawnCmd) {
     let stdoutBufs: Buffer[] = []
     let stderrBufs: Buffer[] = []
 
+    proc.on('error', reject)
+
     let handleStdoutBuffer =
       cmd.handleStdoutBuffer ??
       (buf => {
