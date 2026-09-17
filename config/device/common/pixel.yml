@@ -15,12 +15,19 @@ includes:
   - sysprop-inclusion.yml
   - vintf-inclusion.yml
 
+backport_dirs:
+  vendor:
+    - firmware/carrierconfig
+    - firmware/uecapconfig
+
 device:
   vendor: google_devices
   has_cellular: true
   # Pixel phone model IDs are listed in the Network sections of:
   # https://support.google.com/pixelphone/answer/7158570?hl=en
   build_id: CP2A.260805.005
+  backport_build_id: CP3A.260905.009
+  backport_radio_firmware: true
   gservices_flags_inclusions:
     prefix:
       - euicc.
