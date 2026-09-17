@@ -1497,6 +1497,7 @@ filters:
       - vendor/firmware/logstrs.bin
       - vendor/firmware/m3.bin
       - vendor/firmware/mali_csffw-legacy-r56p0.bin
+      - vendor/firmware/mali_csffw-r49p0.bin
       - vendor/firmware/mali_csffw-r50p0.bin
       - vendor/firmware/mali_csffw-r51p0.bin
       - vendor/firmware/mali_csffw-r52p0.bin

@@ -1,5 +1,6 @@
 includes:
   - apk.yml
+  - backport.yml
   - file-exclusion.yml
   - file-inclusion.yml
   - kernel-cmdline.yml
@@ -21,6 +22,8 @@ device:
   # Pixel phone model IDs are listed in the Network sections of:
   # https://support.google.com/pixelphone/answer/7158570?hl=en
   build_id: CP2A.260805.005
+  backport_build_id: CP3A.260905.009
+  backport_base_firmware: true
   gservices_flags_inclusions:
     prefix:
       - euicc.
