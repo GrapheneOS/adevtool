@@ -83,7 +83,7 @@ export async function loadPartitionProps(
     if (
       !isForPrepModule &&
       config !== null &&
-      config.device.backport_base_firmware &&
+      (config.device.backport_bootloader_firmware || config.device.backport_radio_firmware) &&
       pathResolver.context === PathResolverContext.UNPACKED_IMAGE &&
       partition === Partition.Vendor
     ) {
@@ -93,8 +93,11 @@ export async function loadPartitionProps(
         'build.prop',
       )
       let overlayProps = parseProps(await readFile(overlayPropsPath))
-      let overlaidProps = [BOOTLOADER_VERSION_PROP]
-      if (config.device.has_cellular) {
+      let overlaidProps = []
+      if (config.device.backport_bootloader_firmware) {
+        overlaidProps.push(BOOTLOADER_VERSION_PROP)
+      }
+      if (config.device.backport_radio_firmware && config.device.has_cellular) {
         overlaidProps.push(BASEBAND_VERSION_PROP)
         // overlaidProps.push('ro.vendor.build.svn')
       }

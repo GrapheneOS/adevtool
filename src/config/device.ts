@@ -37,7 +37,8 @@ export interface DeviceConfig {
     is_beta_build_id: boolean
     backport_build_id: string | undefined
     is_beta_backport_build_id: boolean
-    backport_base_firmware?: boolean
+    backport_bootloader_firmware: boolean
+    backport_radio_firmware: boolean
     prev_build_id: string
     has_cellular: boolean
     // ignored when undefined
@@ -212,6 +213,8 @@ const DEFAULT_CONFIG_BASE = {
   device: {
     is_beta_build_id: false,
     is_beta_backport_build_id: false,
+    backport_bootloader_firmware: false,
+    backport_radio_firmware: false,
     odm_skus: [],
     gservices_flags_inclusions: structuredClone(EMPTY_INCLUDE_FILTERS),
     gservices_flags_exclusions: structuredClone(EMPTY_INCLUDE_FILTERS),

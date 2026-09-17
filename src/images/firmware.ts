@@ -12,38 +12,51 @@ import { EntryType, parseFastbootPack } from './fastboot-pack'
 
 export type FirmwareImages = Map<string, Buffer>
 
+function getBaseFirmwareDirPath(pathResolver: PathResolver, backport: boolean) {
+  let root = backport ? assertDefined(pathResolver.overlay?.basePath) : pathResolver.basePath
+  return path.join(root, BASE_FIRMWARE_DIR)
+}
+
+function getBaseFirmwareNameInfix(config: DeviceConfig, backport: boolean) {
+  let isBeta = false
+  if (config.device.backport_build_id === undefined) {
+    isBeta = config.device.is_beta_build_id
+  } else {
+    if (config.device.is_beta_backport_build_id) {
+      isBeta = backport
+    }
+  }
+  return `-${config.device.name}${isBeta ? '_beta' : ''}-`
+}
+
 async function extractFactoryDirFirmware(
   config: DeviceConfig,
   stockProps: PartitionProps,
   pathResolver: PathResolver,
   images: FirmwareImages,
 ) {
-  let basePath =
-    config.device.backport_base_firmware === true
-      ? assertDefined(pathResolver.overlay?.basePath)
-      : pathResolver.basePath
-
-  let baseFwDirPath = path.join(basePath, BASE_FIRMWARE_DIR)
   let vendorProps = mapGet(stockProps, Partition.Vendor)
 
-  let blVersion = mapGet(vendorProps, BOOTLOADER_VERSION_PROP)
-
-  let isBetaImage
-  if (config.device.backport_build_id === undefined) {
-    isBetaImage = config.device.is_beta_build_id
-  } else {
-    isBetaImage = config.device.is_beta_backport_build_id
-  }
-
-  let imageInfix = `-${config.device.name}${isBetaImage ? '_beta' : ''}-`
-
-  images.set('bootloader.img', await fs.readFile(path.join(baseFwDirPath, `bootloader${imageInfix}${blVersion}.img`)))
+  let blVersion = images.set(
+    'bootloader.img',
+    await fs.readFile(
+      path.join(
+        getBaseFirmwareDirPath(pathResolver, config.device.backport_bootloader_firmware),
+        `bootloader${getBaseFirmwareNameInfix(config, config.device.backport_bootloader_firmware)}${mapGet(vendorProps, BOOTLOADER_VERSION_PROP)}.img`,
+      ),
+    ),
+  )
 
   let basebandVersion = vendorProps.get(BASEBAND_VERSION_PROP)
   if (basebandVersion !== undefined) {
     images.set(
       'radio.img',
-      await fs.readFile(path.join(baseFwDirPath, `radio${imageInfix}${basebandVersion.toLowerCase()}.img`)),
+      await fs.readFile(
+        path.join(
+          getBaseFirmwareDirPath(pathResolver, config.device.backport_radio_firmware),
+          `radio${getBaseFirmwareNameInfix(config, config.device.backport_radio_firmware)}${basebandVersion.toLowerCase()}.img`,
+        ),
+      ),
     )
   }
 }
