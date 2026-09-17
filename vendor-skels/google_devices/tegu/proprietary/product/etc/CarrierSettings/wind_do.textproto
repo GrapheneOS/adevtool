@@ -1,5 +1,5 @@
 canonical_name: "wind_do"
-version: 77000000002
+version: 79000000002
 apns {
   apn {
     name: "smart"

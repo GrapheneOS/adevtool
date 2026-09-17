@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gb"
-version: 77000000020
+version: 79000000021
 apns {
   apn {
     name: "Vodafone UK Data"
@@ -118,6 +118,29 @@ configs {
     text_array {
       item: "338|busy everywhere|1017"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -356,5 +379,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1771422497
+  seconds: 1779293178
 }

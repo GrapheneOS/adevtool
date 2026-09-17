@@ -1,5 +1,5 @@
 canonical_name: "telcel_mx"
-version: 77000000012
+version: 79000000013
 apns {
   apn {
     name: "Internet"
@@ -132,6 +132,20 @@ configs {
     int_value: 1
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
     int_array {
       item: 3
@@ -250,5 +264,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1747202470
+  seconds: 1779293184
 }

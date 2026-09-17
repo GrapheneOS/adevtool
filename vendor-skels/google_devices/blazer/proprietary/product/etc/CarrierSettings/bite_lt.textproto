@@ -1,5 +1,5 @@
 canonical_name: "bite_lt"
-version: 77000000005
+version: 79000000005
 apns {
   apn {
     name: "Bite Internet"

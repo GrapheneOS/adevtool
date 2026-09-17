@@ -1,0 +1,20 @@
+canonical_name: "onati_pf"
+version: 79000000001
+apns {
+  apn {
+    name: "Vini"
+    value: "internet"
+    type: DEFAULT
+    type: IA
+    type: SUPL
+  }
+}
+configs {
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1779293151
+}

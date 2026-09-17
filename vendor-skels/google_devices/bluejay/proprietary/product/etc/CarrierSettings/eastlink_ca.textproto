@@ -1,5 +1,5 @@
 canonical_name: "eastlink_ca"
-version: 77000000009
+version: 79000000010
 apns {
   apn {
     name: "Eastlink MMS"
@@ -34,6 +34,17 @@ apns {
   }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
+    key: "additional_nr_advanced_bands_int_array"
+    int_array {
+      item: 77
+      item: 78
+    }
+  }
   config {
     key: "carrier_nr_availabilities_int_array"
     int_array {
@@ -168,5 +179,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1774443026
+  seconds: 1775051934
 }

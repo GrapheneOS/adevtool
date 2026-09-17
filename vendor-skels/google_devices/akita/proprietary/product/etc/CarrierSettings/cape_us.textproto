@@ -1,5 +1,5 @@
 canonical_name: "cape_us"
-version: 77000000002
+version: 79000000003
 apns {
   apn {
     name: "Cape"
@@ -31,6 +31,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
   config {
     key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
     bool_value: false
@@ -126,5 +130,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617043
+  seconds: 1781711863
 }

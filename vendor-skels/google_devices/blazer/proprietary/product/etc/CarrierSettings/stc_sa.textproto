@@ -1,5 +1,5 @@
 canonical_name: "stc_sa"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "STC - GPRS"
@@ -85,6 +85,38 @@ configs {
     int_value: 0
   }
   config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 1
+      item: 2
+      item: 3
+      item: 4
+      item: 5
+      item: 6
+      item: 7
+      item: 12
+      item: 17
+      item: 18
+      item: 19
+      item: 20
+      item: 21
+      item: 13
+      item: 14
+      item: 15
+      item: 16
+      item: 0
+      item: 8
+      item: 11
+      item: 9
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
       item: 6
@@ -135,5 +167,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617073
+  seconds: 1779293191
 }

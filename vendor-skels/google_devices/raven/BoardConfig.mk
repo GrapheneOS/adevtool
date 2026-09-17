@@ -83,3 +83,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # needed for overriding AOSP-available files with extracted prebuilts
 BUILD_BROKEN_DUP_RULES := true
+
+# needed for partially backporting multi-partition libraries, e.g. libc++
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

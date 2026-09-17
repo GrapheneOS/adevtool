@@ -1,5 +1,5 @@
 require board=blazer
 
-require version-bootloader=deepspace-17.2-15372054
-require version-baseband=g5400i-260317-260429-B-15308590
+require version-bootloader=deepspace-17.4-16025385
+require version-baseband=g5400i-260604-260807-B-16035863
 require partition-exists=vendor_kernel_boot

@@ -1,5 +1,5 @@
 canonical_name: "a1_at"
-version: 77000000641
+version: 79000000641
 apns {
   apn {
     name: "A1 Internet"

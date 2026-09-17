@@ -1,5 +1,5 @@
 canonical_name: "dish5gsa_us"
-version: 77000000012
+version: 79000000012
 apns {
   apn {
     name: "internet"
@@ -419,5 +419,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1775495232
+  seconds: 1776866401
 }

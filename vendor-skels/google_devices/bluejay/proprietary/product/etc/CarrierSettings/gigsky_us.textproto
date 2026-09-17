@@ -1,0 +1,22 @@
+canonical_name: "gigsky_us"
+version: 79000000001
+apns {
+  apn {
+    name: "GigSky"
+    value: "gigsky"
+    type: DEFAULT
+  }
+}
+configs {
+  config {
+    key: "force_home_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "inflate_signal_strength_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1775051934
+}

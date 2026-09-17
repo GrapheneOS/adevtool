@@ -1,5 +1,5 @@
 canonical_name: "chatr_ca"
-version: 77000000009
+version: 79000000010
 apns {
   apn {
     name: "Chatr Tethering"
@@ -129,6 +129,29 @@ configs {
       item: 2
       item: 5
       item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -445,5 +468,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035414
+  seconds: 1779293184
 }

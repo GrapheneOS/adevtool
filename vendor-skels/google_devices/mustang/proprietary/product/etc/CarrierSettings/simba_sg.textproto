@@ -1,5 +1,5 @@
 canonical_name: "simba_sg"
-version: 77000000008
+version: 79000000009
 apns {
   apn {
     name: "SIMBA"
@@ -65,6 +65,13 @@ configs {
   config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "510|Call completed elsewhere|1014"
+      item: "332|*|338"
+    }
   }
   config {
     key: "imsemergency.emergency_domain_preference_int_array"
@@ -137,5 +144,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236747
+  seconds: 1781084833
 }

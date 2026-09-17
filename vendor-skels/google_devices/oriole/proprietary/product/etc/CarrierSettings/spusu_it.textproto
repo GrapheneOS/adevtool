@@ -1,5 +1,5 @@
 canonical_name: "spusu_it"
-version: 77000000004
+version: 79000000004
 apns {
   apn {
     name: "spusu"
@@ -61,5 +61,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236670
+  seconds: 1773236668
 }

@@ -1,5 +1,5 @@
 canonical_name: "ooredoo_mv"
-version: 77000000001
+version: 79000000001
 apns {
   apn {
     name: "Wataniya"

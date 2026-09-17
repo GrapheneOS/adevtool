@@ -1,0 +1,44 @@
+canonical_name: "zong_pk"
+version: 79000000001
+apns {
+  apn {
+    name: "ZONG WAP"
+    value: "zonginternet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "ZONG MMS"
+    value: "zongmms"
+    type: MMS
+    mmsc: "http://10.81.6.11:8080"
+    mmsc_proxy: "10.81.6.33"
+    mmsc_proxy_port: "8000"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1779888021
+}

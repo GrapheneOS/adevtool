@@ -1,0 +1,116 @@
+canonical_name: "defensemobile_us"
+version: 79000000001
+apns {
+  apn {
+    name: "Defense Mobile"
+    value: "PRODATA"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    mmsc: "http://mmsc.mobile.att.net"
+    mmsc_proxy: "proxy.mobile.att.net"
+    mmsc_proxy_port: "80"
+  }
+}
+configs {
+  config {
+    key: "csp_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "inflate_signal_strength_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "mmi_two_digit_number_pattern_string_array"
+    text_array {
+      item: "0"
+      item: "00"
+      item: "*0"
+      item: "*1"
+      item: "*2"
+      item: "*3"
+      item: "*4"
+      item: "*5"
+      item: "*6"
+      item: "*7"
+      item: "*8"
+      item: "*9"
+      item: "#0"
+      item: "#1"
+      item: "#2"
+      item: "#3"
+      item: "#4"
+      item: "#5"
+      item: "#6"
+      item: "#7"
+      item: "#8"
+      item: "#9"
+    }
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "310"
+      item: "311"
+      item: "312"
+      item: "313"
+      item: "314"
+      item: "315"
+      item: "316"
+    }
+  }
+  config {
+    key: "operator_name_filter_pattern_string"
+    text_value: "(.*)\\.{3}[12]$"
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 10
+  }
+  config {
+    key: "roaming_operator_string_array"
+    text_array {
+      item: "310110"
+      item: "310140"
+      item: "310400"
+      item: "310470"
+      item: "311170"
+    }
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_carrier_data_icon_pattern_string"
+    text_value: ".*\\.{3}[12]$"
+  }
+  config {
+    key: "support_pause_ims_video_calls_bool"
+    bool_value: false
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+}
+last_updated {
+  seconds: 1775051999
+}

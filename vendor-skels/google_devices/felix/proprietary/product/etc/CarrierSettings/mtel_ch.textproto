@@ -1,5 +1,5 @@
 canonical_name: "mtel_ch"
-version: 77000000001
+version: 79000000002
 apns {
   apn {
     name: "mtel"
@@ -19,6 +19,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
   config {
     key: "imsss.ut_supported_when_ps_data_off_bool"
     bool_value: false
@@ -128,5 +132,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617012
+  seconds: 1780502758
 }

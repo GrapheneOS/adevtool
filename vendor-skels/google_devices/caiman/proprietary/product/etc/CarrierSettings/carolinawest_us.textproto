@@ -1,5 +1,5 @@
 canonical_name: "carolinawest_us"
-version: 77000000011
+version: 79000000012
 apns {
   apn {
     name: "Carolina West Wireless"
@@ -85,6 +85,29 @@ configs {
   config {
     key: "httpParams"
     text_value: "X-MDN: ##LINE1##"
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsserviceentitlement.entitlement_server_url_string"
@@ -195,5 +218,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187386
+  seconds: 1779293178
 }

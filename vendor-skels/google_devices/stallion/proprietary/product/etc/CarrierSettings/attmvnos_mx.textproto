@@ -1,5 +1,5 @@
 canonical_name: "attmvnos_mx"
-version: 77000000006
+version: 79000000008
 apns {
   apn {
     name: "Internet 5G"
@@ -30,6 +30,10 @@ apns {
 configs {
   config {
     key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
     bool_value: true
   }
   config {
@@ -67,6 +71,20 @@ configs {
   config {
     key: "gsm_cdma_calls_can_be_hd_audio"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -250,5 +268,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1754475111
+  seconds: 1779293198
 }

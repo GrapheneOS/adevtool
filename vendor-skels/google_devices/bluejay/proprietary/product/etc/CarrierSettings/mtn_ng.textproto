@@ -1,15 +1,6 @@
 canonical_name: "mtn_ng"
-version: 77000000001
+version: 79000000002
 apns {
-  apn {
-    name: "MTN-WEB"
-    value: "internet"
-    type: DEFAULT
-    type: SUPL
-    user: "web"
-    password: "web"
-    authtype: 1
-  }
   apn {
     name: "MTN ACCESS"
     value: "web.gprs.mtnnigeria.net"
@@ -39,5 +30,5 @@ apns {
 configs {
 }
 last_updated {
-  seconds: 1753863600
+  seconds: 1779293139
 }

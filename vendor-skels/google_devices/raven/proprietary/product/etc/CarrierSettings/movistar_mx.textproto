@@ -1,5 +1,5 @@
 canonical_name: "movistar_mx"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Movistar INTERNET"
@@ -40,6 +40,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.mnc030.mcc334.pub.3gppnetwork.org"
@@ -120,5 +124,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912449
+  seconds: 1776866371
 }

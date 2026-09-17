@@ -1,5 +1,5 @@
 canonical_name: "sasktel_ca"
-version: 77000000016
+version: 79000000017
 apns {
   apn {
     name: "SaskTel"
@@ -133,43 +133,33 @@ configs {
     }
   }
   config {
-    key: "imsvoice.audio_codec_capability_payload_types_bundle"
-    bundle {
-      config {
-        key: "imsvoice.amrnb_payload_type_int_array"
-        int_array {
-          item: 98
-          item: 103
-        }
-      }
-      config {
-        key: "imsvoice.amrwb_payload_type_int_array"
-        int_array {
-          item: 100
-          item: 105
-        }
-      }
-      config {
-        key: "imsvoice.dtmfnb_payload_type_int_array"
-        int_array {
-          item: 97
-        }
-      }
-      config {
-        key: "imsvoice.dtmfwb_payload_type_int_array"
-        int_array {
-          item: 96
-        }
-      }
-    }
-  }
-  config {
     key: "imsvoice.conference_factory_uri_string"
     text_value: "conference@ibc.sasktel.com"
   }
   config {
     key: "imsvoice.conference_subscribe_type_int"
     int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 4
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
   }
   config {
     key: "imsvoice.ringback_timer_millis_int"
@@ -290,5 +280,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741179702
+  seconds: 1776243189
 }

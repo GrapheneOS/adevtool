@@ -1,5 +1,5 @@
 canonical_name: "xfinity2_us"
-version: 77000000014
+version: 79000000017
 apns {
   apn {
     name: "Verizon"
@@ -141,12 +141,12 @@ configs {
     bool_value: false
   }
   config {
-    key: "allow_hold_in_ims_call"
+    key: "allow_merge_wifi_calls_when_vowifi_off_bool"
     bool_value: false
   }
   config {
-    key: "allow_merge_wifi_calls_when_vowifi_off_bool"
-    bool_value: false
+    key: "auto_unhold_on_remote_disconnect_bool"
+    bool_value: true
   }
   config {
     key: "avoid_bad_wifi_bool"
@@ -499,6 +499,13 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsemergency.emergency_qos_precondition_supported_bool"
     bool_value: false
   }
@@ -713,10 +720,6 @@ configs {
   config {
     key: "imsvoice.mo_call_request_timeout_millis_int"
     int_value: 0
-  }
-  config {
-    key: "imsvoice.multiendpoint_supported_bool"
-    bool_value: true
   }
   config {
     key: "imsvoice.prack_supported_for_18x_bool"
@@ -1254,5 +1257,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1766559495
+  seconds: 1779887900
 }

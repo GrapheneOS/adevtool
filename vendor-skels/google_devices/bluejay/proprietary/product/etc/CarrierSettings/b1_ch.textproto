@@ -1,5 +1,5 @@
 canonical_name: "b1_ch"
-version: 77000000004
+version: 79000000003
 apns {
   apn {
     name: "MUCHO"
@@ -22,14 +22,10 @@ apns {
 }
 configs {
   config {
-    key: "carrier_volte_available_bool"
-    bool_value: true
-  }
-  config {
     key: "enabledMMS"
     bool_value: false
   }
 }
 last_updated {
-  seconds: 1775495207
+  seconds: 1775051934
 }

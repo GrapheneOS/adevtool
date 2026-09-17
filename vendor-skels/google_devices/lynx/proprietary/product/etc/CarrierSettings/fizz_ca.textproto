@@ -1,5 +1,5 @@
 canonical_name: "fizz_ca"
-version: 77000000024
+version: 79000000024
 apns {
   apn {
     name: "mobile.bm"

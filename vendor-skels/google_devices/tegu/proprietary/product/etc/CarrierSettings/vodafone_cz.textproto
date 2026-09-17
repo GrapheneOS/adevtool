@@ -1,5 +1,5 @@
 canonical_name: "vodafone_cz"
-version: 77000000010
+version: 79000000011
 apns {
   apn {
     name: "IMS"
@@ -107,10 +107,25 @@ configs {
     int_value: 1
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
     key: "imsemergency.emergency_domain_preference_roaming_int_array"
     int_array {
       item: 2
       item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -214,5 +229,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765981861
+  seconds: 1779293184
 }

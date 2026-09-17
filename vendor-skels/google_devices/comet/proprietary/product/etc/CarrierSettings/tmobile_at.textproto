@@ -1,5 +1,5 @@
 canonical_name: "tmobile_at"
-version: 77000000013
+version: 79000000013
 apns {
   apn {
     name: "T-Mobile IMS"

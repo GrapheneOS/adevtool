@@ -1,5 +1,5 @@
 canonical_name: "bluegrass_us"
-version: 77000000022
+version: 79000000025
 apns {
   apn {
     name: "Bluegrass"
@@ -122,11 +122,11 @@ configs {
     bool_value: false
   }
   config {
-    key: "allow_hold_in_ims_call"
-    bool_value: true
+    key: "allow_merge_wifi_calls_when_vowifi_off_bool"
+    bool_value: false
   }
   config {
-    key: "allow_merge_wifi_calls_when_vowifi_off_bool"
+    key: "auto_unhold_on_remote_disconnect_bool"
     bool_value: false
   }
   config {
@@ -809,6 +809,13 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsemergency.emergency_qos_precondition_supported_bool"
     bool_value: false
   }
@@ -1043,10 +1050,6 @@ configs {
   config {
     key: "imsvoice.mo_call_request_timeout_millis_int"
     int_value: 0
-  }
-  config {
-    key: "imsvoice.multiendpoint_supported_bool"
-    bool_value: true
   }
   config {
     key: "imsvoice.prack_supported_for_18x_bool"
@@ -1603,5 +1606,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1762942351
+  seconds: 1779887931
 }

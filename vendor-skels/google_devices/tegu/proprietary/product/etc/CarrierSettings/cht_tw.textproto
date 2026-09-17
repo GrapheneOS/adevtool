@@ -1,5 +1,5 @@
 canonical_name: "cht_tw"
-version: 77000000007
+version: 79000000009
 apns {
   apn {
     name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (Internet)"
@@ -113,11 +113,38 @@ configs {
     int_value: 32000
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsemergency.prefer_ims_emergency_when_voice_calls_on_cs_bool"
     bool_value: true
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
     bool_value: false
   }
   config {
@@ -266,5 +293,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617063
+  seconds: 1779887996
 }

@@ -1,5 +1,5 @@
 canonical_name: "att_mx"
-version: 77000000027
+version: 79000000028
 apns {
   apn {
     name: "Internet 5G"
@@ -52,6 +52,10 @@ configs {
   config {
     key: "bsf.bsf_server_port_int"
     int_value: 8443
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_default_wfc_ims_enabled_bool"
@@ -469,5 +473,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770215808
+  seconds: 1777477727
 }

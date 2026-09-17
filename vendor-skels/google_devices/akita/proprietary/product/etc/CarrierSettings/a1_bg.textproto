@@ -1,5 +1,5 @@
 canonical_name: "a1_bg"
-version: 77000000005
+version: 79000000006
 apns {
   apn {
     name: "Mtel Internet"
@@ -37,6 +37,10 @@ apns {
 }
 configs {
   config {
+    key: "allow_hold_in_rtt_call_bool"
+    bool_value: false
+  }
+  config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
   }
@@ -46,6 +50,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -93,10 +101,22 @@ configs {
     }
   }
   config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1725429772
+  seconds: 1779293171
 }

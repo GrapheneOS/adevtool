@@ -1,5 +1,5 @@
 canonical_name: "orange_pl"
-version: 77000000022
+version: 79000000024
 apns {
   apn {
     name: "Orange Internet"
@@ -43,10 +43,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "allow_hold_in_rtt_call_bool"
-    bool_value: false
-  }
   config {
     key: "call_barring_visibility_bool"
     bool_value: true
@@ -117,6 +113,29 @@ configs {
   config {
     key: "ims.request_uri_type_int"
     int_value: 1
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsemergency.emergency_registration_timer_millis_int"
@@ -338,5 +357,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819142
+  seconds: 1779293178
 }

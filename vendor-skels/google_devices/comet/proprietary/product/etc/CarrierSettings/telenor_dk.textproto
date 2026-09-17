@@ -1,5 +1,5 @@
 canonical_name: "telenor_dk"
-version: 77000000014
+version: 79000000016
 apns {
   apn {
     name: "Telenor Internet"
@@ -78,6 +78,29 @@ configs {
   config {
     key: "ims.sip_timer_t4_millis_int"
     int_value: 20000
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -166,10 +189,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "iwlan.add_ke_to_child_session_rekey_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 3600
   }
@@ -212,6 +231,10 @@ configs {
     int_value: 2097152
   }
   config {
+    key: "qns.support_wfc_in_international_roaming"
+    bool_value: false
+  }
+  config {
     key: "qns.xcap_rat_preference_int"
     int_value: 2
   }
@@ -237,5 +260,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187386
+  seconds: 1779887978
 }

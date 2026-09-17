@@ -1,5 +1,5 @@
 canonical_name: "unionwireless_us"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Union Wireless Data"
@@ -63,6 +63,13 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsserviceentitlement.entitlement_server_url_string"
     text_value: "https://aes.mnc020.mcc310.pub.3gppnetwork.org/des/ts43"
   }
@@ -88,5 +95,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1726812792
+  seconds: 1779293171
 }

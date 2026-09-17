@@ -1,5 +1,5 @@
 canonical_name: "giffgaff_gb"
-version: 77000000005
+version: 79000000006
 apns {
   apn {
     name: "giffgaff"
@@ -51,6 +51,29 @@ configs {
   config {
     key: "hide_lte_plus_data_icon_bool"
     bool_value: false
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsemergency.prefer_ims_emergency_when_voice_calls_on_cs_bool"
@@ -108,5 +131,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1774646590
+  seconds: 1779293184
 }

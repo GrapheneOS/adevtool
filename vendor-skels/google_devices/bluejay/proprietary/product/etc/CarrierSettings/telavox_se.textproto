@@ -1,5 +1,5 @@
 canonical_name: "telavox_se"
-version: 77000000006
+version: 79000000006
 apns {
   apn {
     name: "Telavox internet"

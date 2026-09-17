@@ -1,5 +1,5 @@
 canonical_name: "digi_ro"
-version: 77000000012
+version: 79000000013
 apns {
   apn {
     name: "Digi.Mobil"
@@ -44,6 +44,10 @@ configs {
   }
   config {
     key: "enabledMMS"
+    bool_value: false
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
     bool_value: false
   }
   config {
@@ -115,5 +119,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863609
+  seconds: 1780502744
 }

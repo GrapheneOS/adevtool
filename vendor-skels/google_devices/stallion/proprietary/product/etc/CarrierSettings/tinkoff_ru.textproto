@@ -1,5 +1,5 @@
 canonical_name: "tinkoff_ru"
-version: 77000000001
+version: 79000000001
 apns {
   apn {
     name: "Tinkoff Mobile"

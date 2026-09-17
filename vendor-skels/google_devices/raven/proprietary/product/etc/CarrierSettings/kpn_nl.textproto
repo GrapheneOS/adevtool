@@ -1,5 +1,5 @@
 canonical_name: "kpn_nl"
-version: 77000000645
+version: 79000000646
 apns {
   apn {
     name: "IMS"
@@ -79,6 +79,13 @@ configs {
     text_array {
       item: "338|another device sent all devices busy response|1017"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -269,5 +276,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035340
+  seconds: 1779293134
 }

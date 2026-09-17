@@ -1,5 +1,5 @@
 canonical_name: "b1_ch"
-version: 77000000004
+version: 79000000003
 apns {
   apn {
     name: "MUCHO"
@@ -31,5 +31,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1775495243
+  seconds: 1775051999
 }

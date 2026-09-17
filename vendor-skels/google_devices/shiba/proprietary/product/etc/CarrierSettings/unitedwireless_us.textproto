@@ -1,5 +1,5 @@
 canonical_name: "unitedwireless_us"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "United Wireless Internet"
@@ -85,7 +85,7 @@ configs {
   config {
     key: "dial_string_replace_string_array"
     text_array {
-      item: "*86:+1MDN"
+      item: "*86:+MDN"
     }
   }
   config {
@@ -110,5 +110,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1741179717
+  seconds: 1779293164
 }

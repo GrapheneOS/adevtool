@@ -1,5 +1,5 @@
 canonical_name: "movistar_pe"
-version: 77000000001
+version: 79000000001
 apns {
   apn {
     name: "Movistar INTERNET"
@@ -54,5 +54,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1774443019
+  seconds: 1774445237
 }

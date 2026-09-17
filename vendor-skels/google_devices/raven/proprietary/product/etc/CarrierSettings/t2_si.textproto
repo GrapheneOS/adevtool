@@ -1,5 +1,5 @@
 canonical_name: "t2_si"
-version: 77000000002
+version: 79000000004
 apns {
   apn {
     name: "T2"
@@ -19,6 +19,7 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
+    lingering_network_type_bitmask: "1|2|3|8|9|10|13|14|15|18|20"
   }
 }
 configs {
@@ -37,6 +38,10 @@ configs {
     }
   }
   config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 5
@@ -49,5 +54,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1761862486
+  seconds: 1779887872
 }

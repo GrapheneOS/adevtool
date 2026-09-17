@@ -1,5 +1,5 @@
 canonical_name: "telia_fi"
-version: 77000000005
+version: 79000000007
 apns {
   apn {
     name: "Telia Internet"
@@ -103,6 +103,7 @@ configs {
     int_array {
       item: 2
       item: 1
+      item: 3
     }
   }
   config {
@@ -110,6 +111,14 @@ configs {
     int_array {
       item: 2
       item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -264,5 +273,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841173
+  seconds: 1780502846
 }

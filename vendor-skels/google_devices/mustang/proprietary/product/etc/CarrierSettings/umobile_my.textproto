@@ -1,5 +1,5 @@
 canonical_name: "umobile_my"
-version: 77000000007
+version: 79000000007
 apns {
   apn {
     name: "U Mobile Internet"

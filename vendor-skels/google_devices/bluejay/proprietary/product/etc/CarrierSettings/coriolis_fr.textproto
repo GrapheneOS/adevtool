@@ -1,5 +1,5 @@
 canonical_name: "coriolis_fr"
-version: 77000000012
+version: 79000000013
 apns {
   apn {
     name: "Coriolis"
@@ -34,10 +34,6 @@ configs {
   config {
     key: "editable_wfc_mode_bool"
     bool_value: false
-  }
-  config {
-    key: "hide_enhanced_4g_lte_bool"
-    bool_value: true
   }
   config {
     key: "ims.ipsec_encryption_algorithms_int_array"
@@ -209,5 +205,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1708635164
+  seconds: 1780502735
 }

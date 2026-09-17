@@ -1,5 +1,5 @@
 canonical_name: "vodafone_gr"
-version: 77000000015
+version: 79000000016
 apns {
   apn {
     name: "Vodafone GR"
@@ -75,8 +75,19 @@ configs {
     text_value: "121"
   }
   config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
     key: "ignore_rtt_mode_setting_bool"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
@@ -191,10 +202,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1770819080
+  seconds: 1779293145
 }
