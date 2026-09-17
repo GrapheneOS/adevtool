@@ -16,6 +16,7 @@ import {
   fetchUpdateConfig,
   getCarrierSettingsUpdatesDir,
   getVersionsMap,
+  patchCarrierSettings,
 } from '../blobs/carrier'
 import { copyBlobs } from '../blobs/copy'
 import { BlobEntry } from '../blobs/entry'
@@ -301,6 +302,10 @@ export default class GenerateFull extends Command {
               await fs.rm(destFile, { force: true })
               await fs.copyFile(file, destFile)
             }
+          }
+
+          if (flags.verbose && (await patchCarrierSettings(dstCsDir))) {
+            log('Patched carrier settings')
           }
         }
 

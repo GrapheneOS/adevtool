@@ -22,6 +22,11 @@ import { log } from '../util/log'
 import { spawnAsync2, SpawnCmd } from '../util/process'
 
 const PROTO_PATH = `${OS_CHECKOUT_DIR}/packages/apps/CarrierConfig2/src/com/google/carrier`
+const CARRIER_SETTINGS_PATCHES: Record<string, Record<string, string>> = {
+  lguplus_kr: {
+    'ims.ims_user_agent_string': 'TTA-VoLTE/3.0 #MODEL#/#BUILD# Device-Type/Android_Phone OMD',
+  },
+}
 
 export async function fetchUpdateConfig(
   device: string,
@@ -247,4 +252,33 @@ export async function getVersionsMap(dir: string): Promise<Map<string, number>> 
 
 export function getCarrierSettingsUpdatesDir(config: DeviceConfig) {
   return path.join(CARRIER_SETTINGS_DIR, config.device.vendor, config.device.name)
+}
+
+export async function patchCarrierSettings(dir: string) {
+  let patched = false
+  for (let [carrierName, patches] of Object.entries(CARRIER_SETTINGS_PATCHES)) {
+    let file = path.join(dir, `${carrierName}.pb`)
+    if (!(await exists(file))) {
+      continue
+    }
+
+    let settings = CarrierSettings.decode(await fs.readFile(file))
+    let configs = settings.configs ?? { config: [] }
+    let changed = false
+    for (let [key, textValue] of Object.entries(patches)) {
+      let matching = configs.config.filter(config => config.key === key)
+      if (matching.length === 1 && matching[0].textValue === textValue) {
+        continue
+      }
+      configs.config = configs.config.filter(config => config.key !== key)
+      configs.config.push({ key, textValue })
+      changed = true
+    }
+    if (changed) {
+      settings.configs = configs
+      await fs.writeFile(file, CarrierSettings.encode(settings).finish())
+      patched = true
+    }
+  }
+  return patched
 }
