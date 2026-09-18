@@ -20,6 +20,10 @@ backport_dirs:
     - firmware/carrierconfig
     - firmware/uecapconfig
 
+backport_files:
+  vendor:
+    - bin/wfc-pkt-router
+
 device:
   vendor: google_devices
   has_cellular: true
