@@ -3229,7 +3229,7 @@ proprietary/vendor/bin/trusty_metricsd: 4b5e5deaef225d2382aad1c97729a2bd5780c964
 proprietary/vendor/bin/twoshay: 2c0088bd8ee71adefa6eb0424e5239f002947a53c88545661170de22ba24b255
 proprietary/vendor/bin/usb_accessory_utils: 2143f518bf5f2461e370dd8e0d5cc3ecac7d4332c1ea411e9d308926f9aaa04b
 proprietary/vendor/bin/usf_stats: fac5c42adc003e32b998f31fa8c6bede3062e30c707d9926c7442d72d68918a7
-proprietary/vendor/bin/wfc-pkt-router: 14ef49b2ee49212a96a204c81b024031e28613bce72753447bbe34d1fbadd67c
+proprietary/vendor/bin/wfc-pkt-router: 1acee19fd5b3b1edc6bc4dff7a37f951e9b75f28fe86db43f1db75e26ae5d302
 proprietary/vendor/etc: dir
 proprietary/vendor/etc/Khronos: dir
 proprietary/vendor/etc/Khronos/OpenCL: dir

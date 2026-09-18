@@ -3426,7 +3426,7 @@ proprietary/vendor/bin/thermal_symlinks: 347ac270501e96cdcf5c6669d3f642f068e7fb4
 proprietary/vendor/bin/trusty_metricsd: 4c2594e9ceb205464c10c8067f49a430475c8f52342d15880fc1b52cc51f51e8
 proprietary/vendor/bin/twoshay: 408266b0bbe921db38ea0c22e8ffbac9314c14edc4d55368796f4bc2c1d4aecb
 proprietary/vendor/bin/usf_stats: 4209c3565f136545f0918ce2e50aa85d1bc5e7e5db706a0ec55f3d500f983d4b
-proprietary/vendor/bin/wfc-pkt-router: 14ef49b2ee49212a96a204c81b024031e28613bce72753447bbe34d1fbadd67c
+proprietary/vendor/bin/wfc-pkt-router: 1acee19fd5b3b1edc6bc4dff7a37f951e9b75f28fe86db43f1db75e26ae5d302
 proprietary/vendor/etc: dir
 proprietary/vendor/etc/Khronos: dir
 proprietary/vendor/etc/Khronos/OpenCL: dir

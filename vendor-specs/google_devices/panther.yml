@@ -3665,7 +3665,7 @@ proprietary/vendor/bin/twoshay: f42063c145b1d710dff69e795f17025a15574086395f78aa
 proprietary/vendor/bin/ufs_firmware_update.sh: 519aa13c53ad4fbc7171f1b1f38a8ed0d09a6bf6bd3ed3093ff1d2f619764462
 proprietary/vendor/bin/umfw_stat_tool: 254b24fceb65d57068d9e964d9c1948e50147894e49d5f8b2b7bc45ee6c56c13
 proprietary/vendor/bin/usf_stats: b52f9ebd174645c43da6edd97622210cf4a467565c118e986e09df778c1086e5
-proprietary/vendor/bin/wfc-pkt-router: 8cbbff4cdbbb5a24ffdc2949c0ac3076f62624132ccfe8016fa9bc1bca9080b7
+proprietary/vendor/bin/wfc-pkt-router: 60a8c4225e30e14f882755f1e74847b1b7699bf25872a5e9985292a8a699009f
 proprietary/vendor/etc: dir
 proprietary/vendor/etc/Khronos: dir
 proprietary/vendor/etc/Khronos/OpenCL: dir
