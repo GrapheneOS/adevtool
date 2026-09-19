@@ -17,6 +17,7 @@ import {
 } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_settings'
 import { Request } from '../proto-ts/vendor/adevtool/assets/request'
 import { Response } from '../proto-ts/vendor/adevtool/assets/response'
+import { assertDefined } from '../util/data'
 import { exists, listFilesRecursive, TMP_PREFIX } from '../util/fs'
 import { log } from '../util/log'
 import { spawnAsync2, SpawnCmd } from '../util/process'
@@ -247,4 +248,11 @@ export async function getVersionsMap(dir: string): Promise<Map<string, number>> 
 
 export function getCarrierSettingsUpdatesDir(config: DeviceConfig) {
   return path.join(CARRIER_SETTINGS_DIR, config.device.vendor, config.device.name)
+}
+
+export function getCarrierSettingsBuildId(config: DeviceConfig) {
+  if (config.backport_dirs.product?.includes('etc/CarrierSettings')) {
+    return assertDefined(config.device.backport_build_id)
+  }
+  return config.device.build_id
 }
