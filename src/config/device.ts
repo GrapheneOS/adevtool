@@ -348,6 +348,19 @@ export async function loadDeviceConfigs(strings: string[], buildIdOverride?: str
     if (buildIdOverride !== undefined) {
       config.device.build_id = buildIdOverride
     }
+    const backportsCarrierSettings = config.backport_dirs.product?.includes('etc/CarrierSettings')
+    if (config.device.backport_radio_firmware) {
+      assert(
+        backportsCarrierSettings,
+        `${key}: backport_radio_firmware requires product/etc/CarrierSettings in backport_dirs.product`,
+      )
+    }
+    if (backportsCarrierSettings) {
+      assert(
+        config.device.backport_build_id !== undefined,
+        `${key}: backport_dirs.product includes etc/CarrierSettings but device.backport_build_id is missing`,
+      )
+    }
     map.set(key, config)
   }
 
