@@ -1,6 +1,11 @@
 import { Command, Flags } from '@oclif/core'
 
-import { downloadAllConfigs, fetchUpdateConfig, getCarrierSettingsUpdatesDir } from '../blobs/carrier'
+import {
+  downloadAllConfigs,
+  fetchUpdateConfig,
+  getCarrierSettingsBuildId,
+  getCarrierSettingsUpdatesDir,
+} from '../blobs/carrier'
 import { BUILD_VERSION_SDK_PROP, loadPartitionProps } from '../blobs/props'
 import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, loadDeviceConfigs2, makeDeviceBuildId } from '../config/device'
 import { forEachDevice } from '../frontend/devices'
@@ -34,7 +39,7 @@ export default class UpdateCarrierSettings extends Command {
       false,
       async config => {
         if (config.device.has_cellular) {
-          const buildId = config.device.build_id
+          const buildId = flags.buildId ?? getCarrierSettingsBuildId(config)
           const outDir = flags.out ?? getCarrierSettingsUpdatesDir(config)
           let factoryImages = await prepareFactoryImages(buildIndex, [config], [buildId])
           let factoryImageDir = mapGet(
@@ -52,7 +57,7 @@ export default class UpdateCarrierSettings extends Command {
           this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)
         }
       },
-      config => `${config.device.name} ${config.device.build_id}`,
+      config => `${config.device.name} ${flags.buildId ?? getCarrierSettingsBuildId(config)}`,
     )
   }
 }

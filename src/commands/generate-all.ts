@@ -14,6 +14,7 @@ import {
   decodeCarrierConfigs,
   downloadAllConfigs,
   fetchUpdateConfig,
+  getCarrierSettingsBuildId,
   getCarrierSettingsUpdatesDir,
   getVersionsMap,
 } from '../blobs/carrier'
@@ -22,6 +23,7 @@ import { BlobEntry } from '../blobs/entry'
 import { PseudoPath } from '../blobs/file-list'
 import { copyKernel } from '../blobs/kernel'
 import { processOverlays } from '../blobs/overlays2'
+import { BUILD_VERSION_SDK_PROP, loadPartitionProps } from '../blobs/props'
 import { BuildSystemPackages } from '../build/make'
 import {
   DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
@@ -69,11 +71,7 @@ import {
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive } from '../util/fs'
 import { log } from '../util/log'
-import { PathResolver } from '../util/partitions'
-
-interface DeviceInfo {
-  sdkVersion: string
-}
+import { Partition, PathResolver } from '../util/partitions'
 
 async function doDevice(
   dirs: VendorDirectories,
@@ -165,8 +163,6 @@ async function doDevice(
   )
 
   await Promise.all([writeEnvsetupCommands(config, dirs), writeReadme(config, dirs, propResults), kernelCopy])
-
-  return { sdkVersion } as DeviceInfo
 }
 
 export default class GenerateFull extends Command {
@@ -264,15 +260,18 @@ export default class GenerateFull extends Command {
         // Prepare output directories
         let vendorDirs = await createVendorDirs(config.device.vendor, config.device.name)
 
-        let deviceInfo = await doDevice(vendorDirs, config, pathResolver, flags.customSrc, flags.verbose)
+        await doDevice(vendorDirs, config, pathResolver, flags.customSrc, flags.verbose)
 
         if (!flags.doNotReplaceCarrierSettings) {
           if (flags.updateSpec && config.device.has_cellular && !flags.doNotDownloadCarrierSettings) {
             log(chalk.bold(`Downloading carrier settings updates`))
+            const csBuildId = getCarrierSettingsBuildId(config)
+            const csImages = mapGet(images, getDeviceBuildId(config, csBuildId))
+            const csProps = await loadPartitionProps(new PathResolver(csImages.unpackedFactoryImageDir))
             const csUpdateConfig = await fetchUpdateConfig(
               config.device.name,
-              config.device.build_id,
-              deviceInfo.sdkVersion,
+              csBuildId,
+              mapGet(mapGet(csProps, Partition.System), BUILD_VERSION_SDK_PROP),
               false,
             )
             await downloadAllConfigs(csUpdateConfig, getCarrierSettingsUpdatesDir(config), false)
