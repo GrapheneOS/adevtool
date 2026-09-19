@@ -1,5 +1,5 @@
 canonical_name: "telstra_au"
-version: 77000000005
+version: 79000000009
 apns {
   apn {
     name: "Telstra Broadband"
@@ -91,6 +91,7 @@ configs {
         int_array {
           item: 2
           item: 3
+          item: 6
         }
       }
     }
@@ -187,6 +188,22 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
     key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
     int_array {
       item: 3
@@ -207,6 +224,14 @@ configs {
       item: 3
       item: 5
     }
+  }
+  config {
+    key: "imsemergency.prefer_ims_emergency_when_voice_calls_on_cs_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://telentprod.mobile.telstra.com/gsma/"
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -403,6 +428,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_entitlement_status_refresh_days_int"
+    int_value: 1
+  }
+  config {
+    key: "satellite_entitlement_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "satellite_ignore_data_roaming_setting_bool"
     bool_value: true
   }
@@ -420,5 +453,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617086
+  seconds: 1780502846
 }

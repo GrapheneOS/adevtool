@@ -1,5 +1,5 @@
 canonical_name: "telemach_si"
-version: 77000000009
+version: 79000000009
 apns {
   apn {
     name: "Internet"
@@ -136,5 +136,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841080
+  seconds: 1773839987
 }

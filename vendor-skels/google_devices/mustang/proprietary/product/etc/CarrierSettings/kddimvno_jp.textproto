@@ -1,5 +1,5 @@
 canonical_name: "kddimvno_jp"
-version: 77000000006
+version: 79000000007
 apns {
   apn {
     name: "IMS"
@@ -340,6 +340,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "lte_endc_using_user_data_for_rrc_detection_bool"
+    bool_value: false
+  }
+  config {
     key: "non_roaming_operator_string_array"
     text_array {
       item: "44091"
@@ -355,6 +359,14 @@ configs {
   config {
     key: "nr_advanced_threshold_bandwidth_khz_int"
     int_value: 100000
+  }
+  config {
+    key: "nr_timers_reset_if_nr_advanced_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "nr_timers_reset_on_endc_to_sa_transit_bool"
+    bool_value: true
   }
   config {
     key: "read_only_apn_types_string_array"
@@ -375,5 +387,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770215858
+  seconds: 1785465836
 }

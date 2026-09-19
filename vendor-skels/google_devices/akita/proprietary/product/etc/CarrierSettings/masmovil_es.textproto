@@ -1,10 +1,12 @@
 canonical_name: "masmovil_es"
-version: 77000000009
+version: 79000000010
 apns {
   apn {
     name: "Internet"
     value: "internet"
     type: DEFAULT
+    type: IA
+    type: SUPL
   }
   apn {
     name: "IMS"
@@ -198,5 +200,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035396
+  seconds: 1779293171
 }

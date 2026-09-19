@@ -1,5 +1,5 @@
 canonical_name: "swisscom_ch"
-version: 77000000019
+version: 79000000020
 apns {
   apn {
     name: "Swisscom Services"
@@ -123,6 +123,13 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsi_key_availability_int"
     int_value: 2
   }
@@ -239,6 +246,10 @@ configs {
   config {
     key: "imsvoice.ringing_timer_millis_int"
     int_value: 180000
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
@@ -482,5 +493,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765368083
+  seconds: 1779293151
 }

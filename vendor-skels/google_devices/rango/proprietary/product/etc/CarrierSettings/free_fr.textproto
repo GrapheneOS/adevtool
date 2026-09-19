@@ -1,5 +1,5 @@
 canonical_name: "free_fr"
-version: 77000000009
+version: 79000000010
 apns {
   apn {
     name: "Free"
@@ -23,6 +23,14 @@ apns {
     protocol: IPV6
     roaming_protocol: IPV6
     mtu: 1280
+    user_visible: false
+  }
+  apn {
+    name: "HOS"
+    value: "hos"
+    type: XCAP
+    protocol: IPV6
+    roaming_protocol: IPV6
     user_visible: false
   }
 }
@@ -56,6 +64,10 @@ configs {
       item: 1
       item: 2
     }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
   }
   config {
     key: "carrier_ussd_method_int"
@@ -98,6 +110,22 @@ configs {
     int_value: 1280
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
     key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
     int_array {
       item: 6
@@ -124,8 +152,23 @@ configs {
     bool_value: false
   }
   config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 1
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 1
+  }
+  config {
+    key: "imsss.ut_requires_ims_registration_bool"
+    bool_value: true
+  }
+  config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
+      item: 3
+      item: 6
+      item: 5
     }
   }
   config {
@@ -256,7 +299,11 @@ configs {
     key: "wfc_spn_format_idx_int"
     int_value: 7
   }
+  config {
+    key: "xcap_apn_name_string"
+    text_value: "hos"
+  }
 }
 last_updated {
-  seconds: 1774974076
+  seconds: 1779293191
 }

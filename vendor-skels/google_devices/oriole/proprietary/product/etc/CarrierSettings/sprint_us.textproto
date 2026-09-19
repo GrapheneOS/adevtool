@@ -1,5 +1,5 @@
 canonical_name: "sprint_us"
-version: 77000000074
+version: 79000000074
 apns {
   apn {
     name: "Sprint"

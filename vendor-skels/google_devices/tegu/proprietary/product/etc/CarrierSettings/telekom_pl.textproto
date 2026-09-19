@@ -1,5 +1,5 @@
 canonical_name: "telekom_pl"
-version: 77000000016
+version: 79000000018
 apns {
   apn {
     name: "Internet"
@@ -94,6 +94,29 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsemergency.emergency_registration_timer_millis_int"
     int_value: 5000
   }
@@ -178,6 +201,13 @@ configs {
           item: 126
         }
       }
+    }
+  }
+  config {
+    key: "imsvoice.audio_inactivity_call_end_reasons_int_array"
+    int_array {
+      item: 2
+      item: 4
     }
   }
   config {
@@ -313,5 +343,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765981861
+  seconds: 1779293184
 }

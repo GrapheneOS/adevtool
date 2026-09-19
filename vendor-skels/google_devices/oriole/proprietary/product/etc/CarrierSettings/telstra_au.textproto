@@ -1,5 +1,5 @@
 canonical_name: "telstra_au"
-version: 77000000572
+version: 79000000572
 apns {
   apn {
     name: "Telstra Broadband"

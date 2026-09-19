@@ -1,5 +1,5 @@
 canonical_name: "esimgo_gb"
-version: 77000000008
+version: 79000000010
 apns {
   apn {
     name: "eSIM Go Data"
@@ -43,13 +43,6 @@ configs {
     int_value: 1
   }
   config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-      item: 2
-    }
-  }
-  config {
     key: "carrier_ussd_method_int"
     int_value: 2
   }
@@ -87,6 +80,13 @@ configs {
     text_array {
       item: "338|busy everywhere|1017"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -304,5 +304,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1771422474
+  seconds: 1779887931
 }

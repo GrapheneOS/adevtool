@@ -1,5 +1,5 @@
 canonical_name: "fet_tw"
-version: 77000000015
+version: 79000000016
 apns {
   apn {
     name: "\351\201\240\345\202\263\351\233\273\344\277\241(Far EasTone) (Internet)"
@@ -118,6 +118,13 @@ configs {
   config {
     key: "ims.sip_timer_j_millis_int"
     int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -302,5 +309,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617043
+  seconds: 1779293171
 }

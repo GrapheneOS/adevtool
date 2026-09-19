@@ -1,5 +1,5 @@
 canonical_name: "povo_jp"
-version: 77000000022
+version: 79000000023
 apns {
   apn {
     name: "povo"
@@ -148,6 +148,10 @@ configs {
   }
   config {
     key: "format_incoming_number_to_national_for_jp_bool"
+    bool_value: true
+  }
+  config {
+    key: "gps.enable_active_sim_emergency_supl"
     bool_value: true
   }
   config {
@@ -473,5 +477,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236678
+  seconds: 1781084749
 }

@@ -1,5 +1,5 @@
 canonical_name: "softbank_jp"
-version: 77000000010
+version: 79000000010
 apns {
   apn {
     name: "IMS"
@@ -511,5 +511,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1776868019
+  seconds: 1776866401
 }

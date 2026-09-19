@@ -1,5 +1,5 @@
 canonical_name: "h3_at"
-version: 77000000022
+version: 79000000022
 apns {
   apn {
     name: "Planet3"

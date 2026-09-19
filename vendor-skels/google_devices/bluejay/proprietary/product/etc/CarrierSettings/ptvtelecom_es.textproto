@@ -1,5 +1,5 @@
 canonical_name: "ptvtelecom_es"
-version: 77000000001
+version: 79000000003
 apns {
   apn {
     name: "PTV Telecom"
@@ -13,7 +13,15 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "XCAP"
+    value: "xcap"
+    type: XCAP
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -33,7 +41,15 @@ configs {
       item: "900202010"
     }
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+  config {
+    key: "xcap_apn_name_string"
+    text_value: "xcap"
+  }
 }
 last_updated {
-  seconds: 1755076320
+  seconds: 1779887885
 }

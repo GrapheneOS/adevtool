@@ -1,5 +1,5 @@
 canonical_name: "giffgaff_gb"
-version: 77000000007
+version: 79000000008
 apns {
   apn {
     name: "giffgaff"
@@ -53,6 +53,13 @@ configs {
     bool_value: false
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -104,5 +111,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1774646545
+  seconds: 1779293145
 }

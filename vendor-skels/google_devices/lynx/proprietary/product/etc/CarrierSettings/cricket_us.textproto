@@ -1,5 +1,5 @@
 canonical_name: "cricket_us"
-version: 77000000013
+version: 79000000014
 apns {
   apn {
     name: "internet"
@@ -193,6 +193,13 @@ configs {
       item: 2
       item: 5
       item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -671,5 +678,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185479
+  seconds: 1779293158
 }

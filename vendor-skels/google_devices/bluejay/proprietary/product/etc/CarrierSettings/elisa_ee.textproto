@@ -1,5 +1,5 @@
 canonical_name: "elisa_ee"
-version: 77000000013
+version: 79000000014
 apns {
   apn {
     name: "Elisa Internet"
@@ -64,6 +64,13 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsss.ut_as_server_fqdn_string"
     text_value: "xcap.ims.mnc002.mcc248.pub.3gppnetwork.org"
   }
@@ -124,5 +131,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1728453969
+  seconds: 1779293139
 }

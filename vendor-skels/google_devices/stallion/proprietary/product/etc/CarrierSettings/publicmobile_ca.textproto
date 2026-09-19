@@ -1,5 +1,5 @@
 canonical_name: "publicmobile_ca"
-version: 77000000007
+version: 79000000009
 apns {
   apn {
     name: "Tethered Mobile Internet"
@@ -164,6 +164,29 @@ configs {
   config {
     key: "ims_conference_size_limit_int"
     int_value: 2
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsemergency.emergency_registration_timer_millis_int"
@@ -358,15 +381,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "iwlan_handover_policy_string_array"
-    text_array {
-      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
-      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN|NGRAN, type=disallowed, capabilities=IMS"
-      item: "source=GERAN|UTRAN|NGRAN, target=IWLAN, type=disallowed, capabilities=IMS"
-      item: "source=EUTRAN|IWLAN, target=EUTRAN|IWLAN, type=allowed, capabilities=IMS"
-    }
-  }
-  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -403,8 +417,15 @@ configs {
   config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
-      item: -106
-      item: -116
+      item: -105
+      item: -115
+    }
+  }
+  config {
+    key: "qns.idle_ngran_ssrsrp_int_array"
+    int_array {
+      item: -105
+      item: -112
     }
   }
   config {
@@ -433,8 +454,15 @@ configs {
   config {
     key: "qns.video_eutran_rsrp_int_array"
     int_array {
-      item: -106
-      item: -116
+      item: -105
+      item: -115
+    }
+  }
+  config {
+    key: "qns.video_ngran_ssrsrp_int_array"
+    int_array {
+      item: -105
+      item: -112
     }
   }
   config {
@@ -447,8 +475,15 @@ configs {
   config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
-      item: -106
-      item: -116
+      item: -105
+      item: -115
+    }
+  }
+  config {
+    key: "qns.voice_ngran_ssrsrp_int_array"
+    int_array {
+      item: -105
+      item: -112
     }
   }
   config {
@@ -497,5 +532,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772636238
+  seconds: 1779293198
 }

@@ -1,9 +1,9 @@
 canonical_name: "rogers_ca"
-version: 77000000020
+version: 79000000024
 apns {
   apn {
     name: "Rogers Tethering"
-    value: "ltedata.apn"
+    value: "data.apn"
     type: DUN
     protocol: IPV6
     roaming_protocol: IPV4V6
@@ -13,14 +13,14 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV6
-    roaming_protocol: IPV4V6
+    roaming_protocol: IPV6
     user_visible: false
   }
   apn {
     name: "Rogers Internet"
-    value: "ltemobile.apn"
+    value: "mobile.apn"
     type: DEFAULT
     type: SUPL
     type: HIPRI
@@ -94,12 +94,23 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
+  }
+  config {
     key: "carrier_roaming_satellite_default_services_int_array"
     int_array {
       item: 2
       item: 3
       item: 6
     }
+  }
+  config {
+    key: "carrier_roaming_satellite_emergency_messaging_redirection_destination_string"
+    text_value: "911"
   }
   config {
     key: "carrier_supported_satellite_services_per_provider_bundle"
@@ -120,6 +131,46 @@ configs {
       }
       config {
         key: "310830"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "44025"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "44026"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "44055"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "50511"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "53013"
         int_array {
           item: 2
           item: 3
@@ -194,6 +245,29 @@ configs {
       item: 2
       item: 5
       item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -364,10 +438,10 @@ configs {
   config {
     key: "iwlan_handover_policy_string_array"
     text_array {
-      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|CBS"
-      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|XCAP"
-      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|XCAP"
-      item: "source=EUTRAN|IWLAN, target=EUTRAN|IWLAN, type=allowed, capabilities=IMS|XCAP"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS|XCAP"
     }
   }
   config {
@@ -507,6 +581,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.google.android.wfcactivation/.WfcActivationCanadaActivity"
   }
@@ -526,5 +604,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035406
+  seconds: 1786733279
 }

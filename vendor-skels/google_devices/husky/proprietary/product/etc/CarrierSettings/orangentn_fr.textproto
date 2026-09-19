@@ -1,5 +1,5 @@
 canonical_name: "orangentn_fr"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -170,6 +170,10 @@ configs {
       item: 3
       item: 5
     }
+  }
+  config {
+    key: "imsserviceentitlement.deactivate_ims_on_403_bool"
+    bool_value: true
   }
   config {
     key: "imsserviceentitlement.default_service_entitlement_status_bool"
@@ -497,5 +501,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770215825
+  seconds: 1778074856
 }

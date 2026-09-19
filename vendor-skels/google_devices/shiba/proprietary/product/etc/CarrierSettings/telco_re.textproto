@@ -1,5 +1,5 @@
 canonical_name: "telco_re"
-version: 77000000003
+version: 79000000003
 apns {
   apn {
     name: "Telco OI Re"

@@ -1,5 +1,5 @@
 canonical_name: "globe_ph"
-version: 77000000009
+version: 79000000010
 apns {
   apn {
     name: "myGlobe Internet"
@@ -91,6 +91,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "mmtel@conf-factory.ims.mnc002.mcc515.3gppnetwork.org"
+  }
+  config {
     key: "iwlan.child_session_aes_cbc_key_size_int_array"
     int_array {
       item: 128
@@ -139,5 +143,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617002
+  seconds: 1775620249
 }

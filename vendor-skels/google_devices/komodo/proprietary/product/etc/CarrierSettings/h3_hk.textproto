@@ -1,5 +1,5 @@
 canonical_name: "h3_hk"
-version: 77000000004
+version: 79000000004
 apns {
   apn {
     name: "3"
@@ -51,5 +51,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236731
+  seconds: 1772818443
 }

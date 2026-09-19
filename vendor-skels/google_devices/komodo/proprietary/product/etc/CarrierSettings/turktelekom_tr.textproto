@@ -1,5 +1,5 @@
 canonical_name: "turktelekom_tr"
-version: 77000000004
+version: 79000000006
 apns {
   apn {
     name: "AVEA INTERNET"
@@ -39,6 +39,20 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
     int_array {
       item: 3
@@ -47,7 +61,7 @@ configs {
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
-      item: 14
+      item: 2
     }
   }
   config {
@@ -68,5 +82,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1721185512
+  seconds: 1779293178
 }

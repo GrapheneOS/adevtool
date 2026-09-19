@@ -1,5 +1,5 @@
 canonical_name: "lyca_us"
-version: 77000000009
+version: 79000000012
 apns {
   apn {
     name: "Lyca"
@@ -353,6 +353,71 @@ configs {
     }
   }
   config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "115"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "113"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 115
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 114
+          item: 113
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 101
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 127
+        }
+      }
+    }
+  }
+  config {
     key: "imsvoice.audio_inactivity_call_end_reasons_int_array"
     int_array {
       item: 0
@@ -428,6 +493,10 @@ configs {
   config {
     key: "imsvt.video_rtp_dscp_int"
     int_value: 34
+  }
+  config {
+    key: "iwlan.derive_nai_from_imsi_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
@@ -669,6 +738,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_carrier_website_contain_supported_apps_bool"
+    bool_value: true
+  }
+  config {
     key: "show_data_connected_roaming_notification"
     bool_value: true
   }
@@ -721,5 +794,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1777512307
+  seconds: 1783916683
 }

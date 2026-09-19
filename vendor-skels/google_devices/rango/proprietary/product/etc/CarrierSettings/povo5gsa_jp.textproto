@@ -1,5 +1,5 @@
 canonical_name: "povo5gsa_jp"
-version: 77000000009
+version: 79000000011
 apns {
   apn {
     name: "povo"
@@ -138,6 +138,18 @@ configs {
     }
   }
   config {
+    key: "carrier_supported_satellite_services_per_provider_bundle"
+    bundle {
+      config {
+        key: "44055"
+        int_array {
+          item: 2
+          item: 3
+        }
+      }
+    }
+  }
+  config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
   }
@@ -158,11 +170,23 @@ configs {
     bool_value: true
   }
   config {
+    key: "emergency_call_to_satellite_t911_handover_timeout_millis_int"
+    int_value: 3600000
+  }
+  config {
+    key: "emergency_messaging_supported_bool"
+    bool_value: false
+  }
+  config {
     key: "enabledMMS"
     bool_value: false
   }
   config {
     key: "format_incoming_number_to_national_for_jp_bool"
+    bool_value: true
+  }
+  config {
+    key: "gps.enable_active_sim_emergency_supl"
     bool_value: true
   }
   config {
@@ -281,6 +305,10 @@ configs {
   config {
     key: "imsi_key_download_url_string"
     text_value: ""
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://ent-aap-device.kddi.com/DEGDROIDInterfaceTS43"
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -491,6 +519,14 @@ configs {
     int_value: 1
   }
   config {
+    key: "satellite_attach_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "satellite_entitlement_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "satellite_ignore_data_roaming_setting_bool"
     bool_value: true
   }
@@ -521,5 +557,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236747
+  seconds: 1781084833
 }

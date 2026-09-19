@@ -1,0 +1,47 @@
+canonical_name: "agms_us"
+version: 79000000001
+apns {
+  apn {
+    name: "AGMS Global"
+    value: "agms.nl.gmm"
+    type: DEFAULT
+    mtu: 1410
+  }
+}
+configs {
+  config {
+    key: "csp_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "inflate_signal_strength_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 10
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1775051960
+}

@@ -1,5 +1,5 @@
 canonical_name: "yettel_bg"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Yettel Internet"
@@ -35,6 +35,10 @@ configs {
   }
   config {
     key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
   config {
@@ -115,7 +119,19 @@ configs {
     key: "prefer_3g_visibility_bool"
     bool_value: false
   }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
 }
 last_updated {
-  seconds: 1763550047
+  seconds: 1779293191
 }

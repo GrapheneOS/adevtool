@@ -1,5 +1,5 @@
 canonical_name: "izziatt_mx"
-version: 77000000012
+version: 79000000013
 apns {
   apn {
     name: "INTERNET"
@@ -14,6 +14,10 @@ apns {
 configs {
   config {
     key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
     bool_value: true
   }
   config {
@@ -226,5 +230,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819080
+  seconds: 1777477716
 }

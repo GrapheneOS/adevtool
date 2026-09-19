@@ -1,5 +1,5 @@
 canonical_name: "vivo_br"
-version: 77000000002
+version: 79000000003
 apns {
   apn {
     name: "Vivo MMS"
@@ -57,6 +57,12 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
     key: "imsss.ut_as_server_port_int"
     int_value: 8090
   }
@@ -86,5 +92,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912483
+  seconds: 1780502758
 }

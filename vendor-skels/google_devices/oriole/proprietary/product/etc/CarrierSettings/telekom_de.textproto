@@ -1,5 +1,5 @@
 canonical_name: "telekom_de"
-version: 77000000084
+version: 79000000085
 apns {
   apn {
     name: "Telekom IMS"
@@ -151,6 +151,13 @@ configs {
       item: "361||338"
       item: "361|declined|338"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -396,5 +403,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1775048472
+  seconds: 1779293134
 }

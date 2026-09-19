@@ -12,6 +12,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "amarisoft_satellite"
+  carrier_id {
+    mcc_mnc: "00101"
+    gid1: "52FF"
+  }
+}
+entry {
   canonical_name: "test001_zz"
   carrier_id {
     mcc_mnc: "00101"
@@ -81,6 +88,13 @@ entry {
   canonical_name: "enreach_nl"
   carrier_id {
     mcc_mnc: "20403"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "20404"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -177,6 +191,13 @@ entry {
   canonical_name: "tcl_nl"
   carrier_id {
     mcc_mnc: "20407"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "20408"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -297,6 +318,13 @@ entry {
   carrier_id {
     mcc_mnc: "20433"
     gid1: "31472D47474C454254"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "20433"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -594,6 +622,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "20809"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
   canonical_name: "truphone_zz"
   carrier_id {
     mcc_mnc: "20809"
@@ -722,6 +757,13 @@ entry {
   canonical_name: "sfr_fr"
   carrier_id {
     mcc_mnc: "20810"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "20812"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -1312,6 +1354,13 @@ entry {
   carrier_id {
     mcc_mnc: "21425"
     spn: "Lycamobile"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "21427"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -2046,6 +2095,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "22876"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
   canonical_name: "tmobile_cz"
   carrier_id {
     mcc_mnc: "23001"
@@ -2254,6 +2310,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "23410"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
   canonical_name: "truphone_zz"
   carrier_id {
     mcc_mnc: "23410"
@@ -2357,6 +2420,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "aomobile_gb"
+  carrier_id {
+    mcc_mnc: "23415"
+    gid1: "34"
+  }
+}
+entry {
   canonical_name: "23415GID1=70"
   carrier_id {
     mcc_mnc: "23415"
@@ -2396,6 +2466,13 @@ entry {
   carrier_id {
     mcc_mnc: "23415"
     spn: "SAINSBURY\'S"
+  }
+}
+entry {
+  canonical_name: "aomobile_gb"
+  carrier_id {
+    mcc_mnc: "23415"
+    spn: "AO Mobile"
   }
 }
 entry {
@@ -2471,6 +2548,13 @@ entry {
   carrier_id {
     mcc_mnc: "23425"
     gid1: "31472D47474C454254"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "23425"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -3146,6 +3230,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "naf2_no"
+  carrier_id {
+    mcc_mnc: "24201"
+    gid1: "30"
+  }
+}
+entry {
   canonical_name: "24201IMSI=24201700XXXXXXX"
   carrier_id {
     mcc_mnc: "24201"
@@ -3540,6 +3631,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "26033"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
   canonical_name: "truphone_zz"
   carrier_id {
     mcc_mnc: "26033"
@@ -3692,6 +3790,13 @@ entry {
   canonical_name: "mtel_de"
   carrier_id {
     mcc_mnc: "26225"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "26242"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -3929,6 +4034,20 @@ entry {
   carrier_id {
     mcc_mnc: "27225"
     spn: "Sky IE"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "27227"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
+  canonical_name: "truphone_zz"
+  carrier_id {
+    mcc_mnc: "27227"
+    gid1: "547275554B3030656E"
   }
 }
 entry {
@@ -4460,27 +4579,6 @@ entry {
   carrier_id {
     mcc_mnc: "302480"
     imsi: "302480017"
-  }
-}
-entry {
-  canonical_name: "shaw_ca"
-  carrier_id {
-    mcc_mnc: "302490"
-    gid1: "53"
-  }
-}
-entry {
-  canonical_name: "shaw_ca"
-  carrier_id {
-    mcc_mnc: "302490"
-    imsi: "302490400"
-  }
-}
-entry {
-  canonical_name: "shaw_ca"
-  carrier_id {
-    mcc_mnc: "302490"
-    imsi: "302490500"
   }
 }
 entry {
@@ -6155,7 +6253,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "310410GID1=60FF"
+  canonical_name: "defensemobile_us"
   carrier_id {
     mcc_mnc: "310280"
     gid1: "60FF"
@@ -6270,6 +6368,13 @@ entry {
   canonical_name: "att_us"
   carrier_id {
     mcc_mnc: "310280"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "310300"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -6503,7 +6608,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "310410GID1=60FF"
+  canonical_name: "defensemobile_us"
   carrier_id {
     mcc_mnc: "310410"
     gid1: "60FF"
@@ -6737,6 +6842,20 @@ entry {
   }
 }
 entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310590"
+    gid1: "BA01770000000000"
+  }
+}
+entry {
+  canonical_name: "visiblev_us"
+  carrier_id {
+    mcc_mnc: "310590"
+    gid1: "BAE2000000000000"
+  }
+}
+entry {
   canonical_name: "verizon_us"
   carrier_id {
     mcc_mnc: "310590"
@@ -6764,10 +6883,24 @@ entry {
   }
 }
 entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310591"
+    gid1: "BA01770000000000"
+  }
+}
+entry {
   canonical_name: "tracfoneverizon_us"
   carrier_id {
     mcc_mnc: "310592"
     gid1: "BA01270000000000"
+  }
+}
+entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310592"
+    gid1: "BA01770000000000"
   }
 }
 entry {
@@ -6778,10 +6911,24 @@ entry {
   }
 }
 entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310593"
+    gid1: "BA01770000000000"
+  }
+}
+entry {
   canonical_name: "tracfoneverizon_us"
   carrier_id {
     mcc_mnc: "310594"
     gid1: "BA01270000000000"
+  }
+}
+entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310594"
+    gid1: "BA01770000000000"
   }
 }
 entry {
@@ -6792,10 +6939,24 @@ entry {
   }
 }
 entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310595"
+    gid1: "BA01770000000000"
+  }
+}
+entry {
   canonical_name: "tracfoneverizon_us"
   carrier_id {
     mcc_mnc: "310596"
     gid1: "BA01270000000000"
+  }
+}
+entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310596"
+    gid1: "BA01770000000000"
   }
 }
 entry {
@@ -6806,10 +6967,24 @@ entry {
   }
 }
 entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310597"
+    gid1: "BA01770000000000"
+  }
+}
+entry {
   canonical_name: "tracfoneverizon_us"
   carrier_id {
     mcc_mnc: "310598"
     gid1: "BA01270000000000"
+  }
+}
+entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310598"
+    gid1: "BA01770000000000"
   }
 }
 entry {
@@ -6827,10 +7002,38 @@ entry {
   }
 }
 entry {
+  canonical_name: "spectrum_us"
+  carrier_id {
+    mcc_mnc: "310599"
+    gid1: "BA01490000000000"
+  }
+}
+entry {
+  canonical_name: "cox_us"
+  carrier_id {
+    mcc_mnc: "310599"
+    gid1: "BA01570000000000"
+  }
+}
+entry {
   canonical_name: "xfinity2_us"
   carrier_id {
     mcc_mnc: "310599"
     gid1: "BA01640000000000"
+  }
+}
+entry {
+  canonical_name: "mediacom_us"
+  carrier_id {
+    mcc_mnc: "310599"
+    gid1: "BA01700000000000"
+  }
+}
+entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "310599"
+    gid1: "BA01770000000000"
   }
 }
 entry {
@@ -6956,7 +7159,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "310890"
+  canonical_name: "verizon_us"
   carrier_id {
     mcc_mnc: "310890"
   }
@@ -7731,6 +7934,20 @@ entry {
   carrier_id {
     mcc_mnc: "311480"
     gid1: "BA01700000000000"
+  }
+}
+entry {
+  canonical_name: "verizon_generic_mvno_us"
+  carrier_id {
+    mcc_mnc: "311480"
+    gid1: "BA01750000000000"
+  }
+}
+entry {
+  canonical_name: "fi_extended_us"
+  carrier_id {
+    mcc_mnc: "311480"
+    gid1: "BA01770000000000"
   }
 }
 entry {
@@ -11171,13 +11388,13 @@ entry {
   }
 }
 entry {
-  canonical_name: "41003"
+  canonical_name: "ufone_pk"
   carrier_id {
     mcc_mnc: "41003"
   }
 }
 entry {
-  canonical_name: "41004"
+  canonical_name: "zong_pk"
   carrier_id {
     mcc_mnc: "41004"
   }
@@ -11642,20 +11859,6 @@ entry {
   canonical_name: "ondo_mn"
   carrier_id {
     mcc_mnc: "42833"
-    imsi: "4283399"
-  }
-}
-entry {
-  canonical_name: "ondo_mn"
-  carrier_id {
-    mcc_mnc: "42833"
-    spn: "ONDO"
-  }
-}
-entry {
-  canonical_name: "ondo_mn"
-  carrier_id {
-    mcc_mnc: "42833"
   }
 }
 entry {
@@ -11677,7 +11880,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "42899"
+  canonical_name: "mobicom_mn"
   carrier_id {
     mcc_mnc: "42899"
   }
@@ -12073,6 +12276,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "45400"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
   canonical_name: "truphone_zz"
   carrier_id {
     mcc_mnc: "45400"
@@ -12121,6 +12331,13 @@ entry {
   canonical_name: "smartone_hk"
   carrier_id {
     mcc_mnc: "45406"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "45408"
+    gid1: "314747454E45524943"
   }
 }
 entry {
@@ -12605,6 +12822,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "50538"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
   canonical_name: "truphone_zz"
   carrier_id {
     mcc_mnc: "50538"
@@ -13056,7 +13280,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "54720"
+  canonical_name: "onati_pf"
   carrier_id {
     mcc_mnc: "54720"
   }
@@ -14698,6 +14922,20 @@ entry {
   canonical_name: "72454"
   carrier_id {
     mcc_mnc: "72454"
+  }
+}
+entry {
+  canonical_name: "truphonemvno_zz"
+  carrier_id {
+    mcc_mnc: "72455"
+    gid1: "314747454E45524943"
+  }
+}
+entry {
+  canonical_name: "truphone_zz"
+  carrier_id {
+    mcc_mnc: "72455"
+    gid1: "547275554B3030656E"
   }
 }
 entry {
@@ -21715,7 +21953,7 @@ entry {
     mcc_mnc: "999999"
   }
 }
-version: 77000000581
+version: 79000000590
 4 {
-  1: 1775495200
+  1: 1785465780
 }

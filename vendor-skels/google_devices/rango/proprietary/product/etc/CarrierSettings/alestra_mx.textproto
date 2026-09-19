@@ -1,5 +1,5 @@
 canonical_name: "alestra_mx"
-version: 77000000007
+version: 79000000009
 apns {
   apn {
     name: "INTERNET"
@@ -25,6 +25,10 @@ apns {
 configs {
   config {
     key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
     bool_value: true
   }
   config {
@@ -62,6 +66,20 @@ configs {
   config {
     key: "gsm_cdma_calls_can_be_hd_audio"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -245,5 +263,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863668
+  seconds: 1779293191
 }

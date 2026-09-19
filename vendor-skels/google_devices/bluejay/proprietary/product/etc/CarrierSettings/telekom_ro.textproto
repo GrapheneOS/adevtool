@@ -1,5 +1,5 @@
 canonical_name: "telekom_ro"
-version: 77000000015
+version: 79000000016
 apns {
   apn {
     name: "Internet"
@@ -69,6 +69,13 @@ configs {
   config {
     key: "ims.keep_pdn_up_in_no_vops_bool"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsemergency.emergency_registration_timer_millis_int"
@@ -230,5 +237,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276438
+  seconds: 1779293139
 }

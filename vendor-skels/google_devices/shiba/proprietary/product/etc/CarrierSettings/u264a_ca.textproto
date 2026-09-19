@@ -1,5 +1,5 @@
 canonical_name: "u264a_ca"
-version: 77000000015
+version: 79000000016
 apns {
   apn {
     name: "U+264A CA"
@@ -230,6 +230,13 @@ configs {
     }
   }
   config {
+    key: "qns.idle_ngran_ssrsrp_int_array"
+    int_array {
+      item: -105
+      item: -112
+    }
+  }
+  config {
     key: "qns.idle_utran_ecno_int_array"
     int_array {
       item: -10
@@ -267,10 +274,24 @@ configs {
     }
   }
   config {
+    key: "qns.video_ngran_ssrsrp_int_array"
+    int_array {
+      item: -105
+      item: -112
+    }
+  }
+  config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
       item: -109
       item: -114
+    }
+  }
+  config {
+    key: "qns.voice_ngran_ssrsrp_int_array"
+    int_array {
+      item: -105
+      item: -112
     }
   }
   config {
@@ -310,5 +331,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772636206
+  seconds: 1775051968
 }

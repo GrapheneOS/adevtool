@@ -1,5 +1,5 @@
 canonical_name: "rogerswpn_ca"
-version: 77000000012
+version: 79000000013
 apns {
   apn {
     name: "Rogers Internet WPN"
@@ -78,6 +78,13 @@ configs {
   config {
     key: "ims.sip_timer_j_millis_int"
     int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsemergency.emergency_registration_timer_millis_int"
@@ -358,5 +365,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035396
+  seconds: 1779293171
 }

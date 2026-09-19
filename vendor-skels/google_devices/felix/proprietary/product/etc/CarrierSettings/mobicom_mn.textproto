@@ -1,0 +1,24 @@
+canonical_name: "mobicom_mn"
+version: 79000000001
+apns {
+  apn {
+    name: "MobiCom"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1778677924
+}

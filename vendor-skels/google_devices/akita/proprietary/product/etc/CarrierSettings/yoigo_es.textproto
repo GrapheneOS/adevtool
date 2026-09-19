@@ -1,10 +1,11 @@
 canonical_name: "yoigo_es"
-version: 77000000013
+version: 79000000014
 apns {
   apn {
     name: "Internet"
     value: "internet"
     type: DEFAULT
+    type: IA
     type: SUPL
   }
   apn {
@@ -199,5 +200,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035396
+  seconds: 1779293171
 }

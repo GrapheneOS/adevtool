@@ -1,5 +1,5 @@
 canonical_name: "asda_gb"
-version: 77000000012
+version: 79000000013
 apns {
   apn {
     name: "ASDA Mobile"
@@ -80,6 +80,13 @@ configs {
   config {
     key: "ims.registration_event_package_supported_bool"
     bool_value: false
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -169,5 +176,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1762783723
+  seconds: 1779293164
 }

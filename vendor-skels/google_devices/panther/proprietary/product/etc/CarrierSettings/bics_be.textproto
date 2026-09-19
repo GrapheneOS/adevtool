@@ -1,5 +1,5 @@
 canonical_name: "bics_be"
-version: 77000000001
+version: 79000000001
 apns {
   apn {
     name: "BICS Internet"

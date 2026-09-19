@@ -1,5 +1,5 @@
 canonical_name: "kddi5gsa_jp"
-version: 77000000007
+version: 79000000010
 apns {
   apn {
     name: "5G NET"
@@ -198,28 +198,7 @@ configs {
     key: "carrier_supported_satellite_services_per_provider_bundle"
     bundle {
       config {
-        key: "302723"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
         key: "44055"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
-        key: "50511"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
-        key: "53013"
         int_array {
           item: 2
           item: 3
@@ -385,6 +364,10 @@ configs {
     text_value: "https://wificert.kddi.com/android"
   }
   config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://ent-aap-device.kddi.com/DEGDROIDInterfaceTS43"
+  }
+  config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
     bool_value: false
   }
@@ -543,7 +526,7 @@ configs {
   }
   config {
     key: "lte_endc_using_user_data_for_rrc_detection_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "min_udp_port_4500_nat_timeout_sec_int"
@@ -568,6 +551,14 @@ configs {
   }
   config {
     key: "nr_timers_reset_if_non_endc_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "nr_timers_reset_if_nr_advanced_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "nr_timers_reset_on_endc_to_sa_transit_bool"
     bool_value: true
   }
   config {
@@ -597,8 +588,8 @@ configs {
     bool_value: true
   }
   config {
-    key: "satellite_data_support_mode_int"
-    int_value: 1
+    key: "satellite_entitlement_supported_bool"
+    bool_value: true
   }
   config {
     key: "satellite_ignore_data_roaming_setting_bool"
@@ -636,5 +627,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617086
+  seconds: 1785465842
 }

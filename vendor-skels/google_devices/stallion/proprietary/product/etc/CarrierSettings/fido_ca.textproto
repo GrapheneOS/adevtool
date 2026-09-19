@@ -1,5 +1,5 @@
 canonical_name: "fido_ca"
-version: 77000000003
+version: 79000000004
 apns {
   apn {
     name: "Fido Internet"
@@ -142,6 +142,29 @@ configs {
       item: 2
       item: 5
       item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -450,5 +473,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035432
+  seconds: 1779293198
 }

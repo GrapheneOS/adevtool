@@ -1,5 +1,5 @@
 canonical_name: "uqmobile5gsa_jp"
-version: 77000000011
+version: 79000000012
 apns {
   apn {
     name: "UQ mobile"
@@ -171,6 +171,10 @@ configs {
   }
   config {
     key: "format_incoming_number_to_national_for_jp_bool"
+    bool_value: true
+  }
+  config {
+    key: "gps.enable_active_sim_emergency_supl"
     bool_value: true
   }
   config {
@@ -517,5 +521,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236739
+  seconds: 1781084823
 }

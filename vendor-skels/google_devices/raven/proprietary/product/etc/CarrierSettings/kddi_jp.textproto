@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 77000000086
+version: 79000000086
 apns {
   apn {
     name: "5G NET"
