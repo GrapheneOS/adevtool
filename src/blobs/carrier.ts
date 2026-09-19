@@ -117,7 +117,7 @@ export async function downloadAllConfigs(config: Map<string, string>, outDir: st
       url = baseUrl.replace(/%2\$s/i, entry).replace(/%3\$d/i, version)
     }
     if (debug) log(url)
-    assert(url.includes('pixel'), `invalid url: ${url}`)
+    assert(new URL(url).origin === 'https://ssl.gstatic.com', `invalid url: ${url}`)
 
     let tmpOutFile = path.join(outDir, `${entry}.pb.tmp`)
     let outFile = path.join(outDir, `${entry}.pb`)
