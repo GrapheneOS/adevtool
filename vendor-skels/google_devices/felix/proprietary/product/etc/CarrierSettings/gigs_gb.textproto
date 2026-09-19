@@ -1,5 +1,5 @@
 canonical_name: "gigs_gb"
-version: 77000000007
+version: 79000000009
 apns {
   apn {
     name: "Gigs Data"
@@ -36,13 +36,6 @@ configs {
   config {
     key: "carrier_default_wfc_ims_roaming_mode_int"
     int_value: 1
-  }
-  config {
-    key: "carrier_nr_availabilities_int_array"
-    int_array {
-      item: 1
-      item: 2
-    }
   }
   config {
     key: "carrier_ussd_method_int"
@@ -86,6 +79,13 @@ configs {
     text_array {
       item: "338|busy everywhere|1017"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -303,5 +303,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1771422466
+  seconds: 1779887917
 }

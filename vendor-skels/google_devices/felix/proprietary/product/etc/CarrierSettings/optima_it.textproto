@@ -1,5 +1,5 @@
 canonical_name: "optima_it"
-version: 77000000002
+version: 79000000003
 apns {
   apn {
     name: "Optima"
@@ -90,6 +90,13 @@ configs {
   config {
     key: "ims.registration_retry_max_timer_millis_int"
     int_value: 300000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
@@ -314,5 +321,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765981786
+  seconds: 1779293151
 }

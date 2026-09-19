@@ -1,5 +1,5 @@
 canonical_name: "orangentn_fr"
-version: 77000000005
+version: 79000000007
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -188,6 +188,22 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
     key: "imsemergency.emergency_over_ims_roaming_supported_3gpp_network_types_int_array"
     int_array {
       item: 6
@@ -216,6 +232,10 @@ configs {
   config {
     key: "imsemergency.emergency_scan_timer_sec_int"
     int_value: 5
+  }
+  config {
+    key: "imsserviceentitlement.deactivate_ims_on_403_bool"
+    bool_value: true
   }
   config {
     key: "imsserviceentitlement.default_service_entitlement_status_bool"
@@ -583,5 +603,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770215858
+  seconds: 1779293191
 }

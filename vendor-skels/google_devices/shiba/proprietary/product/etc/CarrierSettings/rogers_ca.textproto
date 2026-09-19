@@ -1,5 +1,5 @@
 canonical_name: "rogers_ca"
-version: 77000000015
+version: 79000000016
 apns {
   apn {
     name: "Rogers Tethering"
@@ -155,6 +155,13 @@ configs {
       item: 2
       item: 5
       item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -455,5 +462,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035386
+  seconds: 1779293164
 }

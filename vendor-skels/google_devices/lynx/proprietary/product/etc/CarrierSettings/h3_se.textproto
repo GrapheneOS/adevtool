@@ -1,5 +1,5 @@
 canonical_name: "h3_se"
-version: 77000000015
+version: 79000000016
 apns {
   apn {
     name: "3"
@@ -126,6 +126,13 @@ configs {
   config {
     key: "ims.ipv6_sip_mtu_size_cellular_int"
     int_value: 1300
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -275,5 +282,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1736946272
+  seconds: 1779293158
 }

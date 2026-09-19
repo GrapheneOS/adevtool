@@ -1,5 +1,5 @@
 canonical_name: "vodafone_it"
-version: 77000000018
+version: 79000000019
 apns {
   apn {
     name: "Tethering Internet"
@@ -111,6 +111,13 @@ configs {
   config {
     key: "ims.registration_retry_max_timer_millis_int"
     int_value: 300000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
@@ -335,5 +342,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765981758
+  seconds: 1779293139
 }

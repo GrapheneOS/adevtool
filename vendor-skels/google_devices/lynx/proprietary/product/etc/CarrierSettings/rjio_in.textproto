@@ -1,5 +1,5 @@
 canonical_name: "rjio_in"
-version: 77000000017
+version: 79000000018
 apns {
   apn {
     name: "Jio 4G"
@@ -170,7 +170,6 @@ configs {
     int_array {
       item: 6
       item: 3
-      item: 5
       item: 1
       item: 2
     }
@@ -306,6 +305,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
     key: "roaming_operator_string_array"
     text_array {
       item: "404"
@@ -325,5 +328,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1762942351
+  seconds: 1776866391
 }

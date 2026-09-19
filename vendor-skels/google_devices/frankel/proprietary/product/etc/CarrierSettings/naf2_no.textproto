@@ -1,0 +1,30 @@
+canonical_name: "naf2_no"
+version: 79000000001
+apns {
+  apn {
+    name: "mdafma"
+    value: "mdafma"
+    type: DEFAULT
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "cellular_usage_setting_int"
+    int_value: 2
+  }
+  config {
+    key: "hide_preferred_network_type_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1778678001
+}

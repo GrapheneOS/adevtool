@@ -1,5 +1,5 @@
 canonical_name: "1global_bootstrap"
-version: 77000000002
+version: 79000000002
 apns {
   apn {
     name: "1Global Bootstrap"
@@ -32,5 +32,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841135
+  seconds: 1773840033
 }

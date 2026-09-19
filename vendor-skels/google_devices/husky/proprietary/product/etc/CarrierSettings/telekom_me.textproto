@@ -1,5 +1,5 @@
 canonical_name: "telekom_me"
-version: 77000000007
+version: 79000000007
 apns {
   apn {
     name: "T-Mobile ME Internet"

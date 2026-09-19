@@ -1,5 +1,5 @@
 canonical_name: "telia_lt"
-version: 77000000024
+version: 79000000025
 apns {
   apn {
     name: "Telia MMS"
@@ -88,6 +88,13 @@ configs {
     text_array {
       item: "338|busy everywhere|1017"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -232,5 +239,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841095
+  seconds: 1779293158
 }

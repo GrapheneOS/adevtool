@@ -1,5 +1,5 @@
 canonical_name: "tdc_dk"
-version: 77000000019
+version: 79000000021
 apns {
   apn {
     name: "TDC MMS"
@@ -93,6 +93,13 @@ configs {
   config {
     key: "ims.sip_timer_j_millis_int"
     int_value: 32000
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -192,10 +199,6 @@ configs {
     }
   }
   config {
-    key: "imsvoice.minimum_session_expires_timer_sec_int"
-    int_value: 1800
-  }
-  config {
     key: "is_ims_conference_size_enforced_bool"
     bool_value: true
   }
@@ -256,5 +259,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1764766930
+  seconds: 1779293145
 }

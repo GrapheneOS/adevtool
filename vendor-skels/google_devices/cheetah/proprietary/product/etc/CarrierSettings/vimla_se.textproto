@@ -1,5 +1,5 @@
 canonical_name: "vimla_se"
-version: 77000000022
+version: 79000000023
 apns {
   apn {
     name: "MMS"
@@ -219,6 +219,10 @@ configs {
     text_value: "epdg.epc.mnc008.mcc240.pub.3gppnetwork.org"
   }
   config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.ike_rekey_hard_timer_in_sec"
     int_value: 43200
   }
@@ -272,5 +276,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1763549951
+  seconds: 1778677913
 }

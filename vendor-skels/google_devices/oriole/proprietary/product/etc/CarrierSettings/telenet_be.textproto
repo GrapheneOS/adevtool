@@ -1,5 +1,5 @@
 canonical_name: "telenet_be"
-version: 77000000010
+version: 79000000013
 apns {
   apn {
     name: "Telenet Internet"
@@ -43,6 +43,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_ussd_method_int"
+    int_value: 3
+  }
+  config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
@@ -53,6 +57,13 @@ configs {
   config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.ut_iptype_home_int"
@@ -106,6 +117,10 @@ configs {
     }
   }
   config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -131,5 +146,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819051
+  seconds: 1779293134
 }

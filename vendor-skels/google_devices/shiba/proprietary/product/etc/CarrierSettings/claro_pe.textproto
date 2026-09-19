@@ -1,5 +1,5 @@
 canonical_name: "claro_pe"
-version: 77000000001
+version: 79000000001
 apns {
   apn {
     name: "CLARO DATOS"
@@ -38,5 +38,5 @@ apns {
 configs {
 }
 last_updated {
-  seconds: 1774443056
+  seconds: 1774445287
 }

@@ -1,5 +1,5 @@
 canonical_name: "congstar_de"
-version: 77000000031
+version: 79000000032
 apns {
   apn {
     name: "Internet"
@@ -163,6 +163,13 @@ configs {
       item: "361||338"
       item: "361|declined|338"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -419,5 +426,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1775048483
+  seconds: 1779293145
 }

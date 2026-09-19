@@ -1,5 +1,5 @@
 canonical_name: "lowi_es"
-version: 77000000001
+version: 79000000002
 apns {
   apn {
     name: "Lowi.es"
@@ -24,7 +24,7 @@ apns {
     name: "ims"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -37,6 +37,10 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
   config {
@@ -184,7 +188,11 @@ configs {
       item: "900202010"
     }
   }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
 }
 last_updated {
-  seconds: 1745372883
+  seconds: 1780502846
 }

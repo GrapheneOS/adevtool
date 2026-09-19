@@ -1,5 +1,5 @@
 canonical_name: "truemove_th"
-version: 77000000009
+version: 79000000009
 apns {
   apn {
     name: "TRUE-H INTERNET"
@@ -121,5 +121,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841049
+  seconds: 1773839970
 }

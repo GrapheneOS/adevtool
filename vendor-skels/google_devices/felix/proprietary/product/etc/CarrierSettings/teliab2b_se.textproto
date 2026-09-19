@@ -1,5 +1,5 @@
 canonical_name: "teliab2b_se"
-version: 77000000002
+version: 79000000004
 apns {
   apn {
     name: "Telia MMS"
@@ -102,6 +102,13 @@ configs {
     text_array {
       item: "338|busy everywhere|1017"
       item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -264,6 +271,16 @@ configs {
     }
   }
   config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
+  }
+  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -309,5 +326,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841080
+  seconds: 1779293151
 }

@@ -990,6 +990,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/a1_rs.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1_rs.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/a1_si.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1_si.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/a1mpn_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/a1mpn_at.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/agms_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/agms_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ahamo_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ahamo_jp.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/airbus_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_de.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/airbus_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_fr.pb \
@@ -997,14 +998,17 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/airtel_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_lk.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ais_th.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ais_th.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/alcom_fi.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alcom_fi.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/aldimobile_au.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/aldimobile_au.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/alestra_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alestra_mx.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/aliv_bs.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/aliv_bs.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/alkafeel_iq.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alkafeel_iq.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/altice_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/altice_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/alticeroaming_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alticeroaming_us.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/amarisoft_satellite.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/amarisoft_satellite.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/andorratelecom_ad.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/andorratelecom_ad.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/annatel_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/annatel_il.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/antel_uy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/antel_uy.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/aomobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/aomobile_gb.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/appalachian_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/appalachian_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/apt_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/apt_tw.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/apua_ag.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/apua_ag.pb \
@@ -1096,6 +1100,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ctm_mo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ctm_mo.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/cytamobile_cy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cytamobile_cy.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/default.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/default.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/defensemobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/defensemobile_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/dialog_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/dialog_lk.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/digi_hu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_hu.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/digi_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_it.pb \
@@ -1141,6 +1146,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/fastweb_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fastweb_it.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/fet_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fet_tw.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/fi_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fi_at.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/fi_extended_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fi_extended_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/fi_tmo_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fi_tmo_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/fido_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fido_ca.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/finetwork_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/finetwork_es.pb \
@@ -1162,6 +1168,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/giffgaff_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/giffgaff_gb.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/giga_sg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/giga_sg.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/gigs_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gigs_gb.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/gigsky_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gigsky_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/globe_ph.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/globe_ph.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/gomobile_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gomobile_mt.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/google5glab_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/google5glab_us.pb \
@@ -1251,6 +1258,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mettel_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mettel_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/miatel_ru.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/miatel_ru.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mobi_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobi_us.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mobicom_mn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobicom_mn.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mobifone_vn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobifone_vn.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mobily_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mobily_sa.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/moldcell_md.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/moldcell_md.pb \
@@ -1274,6 +1282,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mucho_ch.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mucho_ch.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/mvnoconnect_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mvnoconnect_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/naf_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/naf_no.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/naf2_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/naf2_no.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/natcom_ht.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/natcom_ht.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ncell_np.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ncell_np.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/nema_fo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nema_fo.pb \
@@ -1299,6 +1308,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/o2prepaid_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2prepaid_de.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/o2prepaid_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/o2prepaid_gb.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/omantel_om.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/omantel_om.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/onati_pf.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/onati_pf.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ondo_mn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ondo_mn.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/one_al.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one_al.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/one_me.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/one_me.pb \
@@ -1379,7 +1389,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/selam_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/selam_tr.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/setar_aw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/setar_aw.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/sfr_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sfr_fr.pb \
-    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/shaw_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/shaw_ca.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/simba_sg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/simba_sg.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/siminn_is.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/siminn_is.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/simple_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/simple_us.pb \
@@ -1507,6 +1516,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/truemove_th.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/truemove_th.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/truphone_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/truphone_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/truphone_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/truphone_zz.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/truphonemvno_zz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/truphonemvno_zz.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/tstar_tw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tstar_tw.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/turkcell_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/turkcell_tr.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/turktelekom_tr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/turktelekom_tr.pb \
@@ -1518,6 +1528,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/u264ao_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264ao_at.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/u264ap_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/u264ap_at.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ubixatt_mx.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ubixatt_mx.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ufone_pk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ufone_pk.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ultra_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ultra_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/umobile_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/umobile_my.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/unifi_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/unifi_my.pb \
@@ -1528,6 +1539,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/uqmobile5gsa_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uqmobile5gsa_jp.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/uscc_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/uscc_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/utc_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/utc_us.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/verizon_generic_mvno_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizon_generic_mvno_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/verizon_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizon_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/verizononsitelte_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verizononsitelte_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/verymobile_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/verymobile_it.pb \
@@ -1595,6 +1607,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/zain_kw.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zain_kw.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/zain_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zain_sa.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/zeop_re.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zeop_re.pb \
+    vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/zong_pk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zong_pk.pb \
     vendor/google_devices/stallion/proprietary/product/etc/CarrierSettings/ztar_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ztar_us.pb \
     vendor/google_devices/stallion/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/google_devices/stallion/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \

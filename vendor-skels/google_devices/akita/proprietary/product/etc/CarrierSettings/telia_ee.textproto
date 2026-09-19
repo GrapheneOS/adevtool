@@ -1,5 +1,5 @@
 canonical_name: "telia_ee"
-version: 77000000023
+version: 79000000024
 apns {
   apn {
     name: "Telia Internet"
@@ -94,6 +94,13 @@ configs {
   config {
     key: "ims.ipv6_sip_mtu_size_cellular_int"
     int_value: 1300
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.ut_server_based_services_int_array"
@@ -268,5 +275,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841122
+  seconds: 1779293171
 }

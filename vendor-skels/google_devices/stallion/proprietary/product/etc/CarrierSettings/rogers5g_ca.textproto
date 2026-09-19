@@ -1,5 +1,5 @@
 canonical_name: "rogers5g_ca"
-version: 77000000008
+version: 79000000011
 apns {
   apn {
     name: "Rogers Tethering"
@@ -109,6 +109,10 @@ configs {
     }
   }
   config {
+    key: "carrier_roaming_satellite_emergency_messaging_redirection_destination_string"
+    text_value: "911"
+  }
+  config {
     key: "carrier_supported_satellite_services_per_provider_bundle"
     bundle {
       config {
@@ -127,6 +131,46 @@ configs {
       }
       config {
         key: "310830"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "44025"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "44026"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "44055"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "50511"
+        int_array {
+          item: 2
+          item: 3
+          item: 6
+        }
+      }
+      config {
+        key: "53013"
         int_array {
           item: 2
           item: 3
@@ -201,6 +245,29 @@ configs {
       item: 2
       item: 5
       item: 6
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -537,5 +604,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772035432
+  seconds: 1786733312
 }

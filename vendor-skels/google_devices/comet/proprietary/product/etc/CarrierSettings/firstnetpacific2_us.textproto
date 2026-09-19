@@ -1,5 +1,5 @@
 canonical_name: "firstnetpacific2_us"
-version: 77000000010
+version: 79000000010
 apns {
   apn {
     name: "ATT FirstNet-Phone"

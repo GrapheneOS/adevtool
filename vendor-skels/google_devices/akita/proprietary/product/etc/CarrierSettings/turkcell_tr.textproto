@@ -1,5 +1,5 @@
 canonical_name: "turkcell_tr"
-version: 77000000002
+version: 79000000003
 apns {
   apn {
     name: "TURKCELL INTERNET"
@@ -44,12 +44,6 @@ configs {
     }
   }
   config {
-    key: "iwlan.diffie_hellman_groups_int_array"
-    int_array {
-      item: 14
-    }
-  }
-  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -67,5 +61,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1715771965
+  seconds: 1776243211
 }

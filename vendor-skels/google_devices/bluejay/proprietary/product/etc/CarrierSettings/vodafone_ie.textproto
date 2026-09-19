@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ie"
-version: 77000000024
+version: 79000000025
 apns {
   apn {
     name: "Internet"
@@ -137,6 +137,13 @@ configs {
     int_value: 4000
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
     int_array {
     }
@@ -248,5 +255,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765981758
+  seconds: 1779293139
 }

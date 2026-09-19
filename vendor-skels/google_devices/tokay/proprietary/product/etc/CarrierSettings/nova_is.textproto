@@ -1,5 +1,5 @@
 canonical_name: "nova_is"
-version: 77000000009
+version: 79000000010
 apns {
   apn {
     name: "MMS Nova"
@@ -48,6 +48,20 @@ configs {
   config {
     key: "hide_enhanced_4g_lte_bool"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
   }
   config {
     key: "imsemergency.emergency_over_ims_supported_rats_int_array"
@@ -110,5 +124,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724912524
+  seconds: 1779293178
 }

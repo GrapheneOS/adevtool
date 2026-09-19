@@ -1,5 +1,5 @@
 canonical_name: "netplus_ch"
-version: 77000000002
+version: 79000000002
 apns {
   apn {
     name: "npls Internet"
@@ -53,5 +53,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841049
+  seconds: 1775051934
 }

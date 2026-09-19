@@ -1,5 +1,5 @@
 canonical_name: "telenor_se"
-version: 77000000012
+version: 79000000014
 apns {
   apn {
     name: "Telenor MMS"
@@ -84,6 +84,29 @@ configs {
   config {
     key: "ims.sip_timer_t4_millis_int"
     int_value: 5000
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -193,6 +216,10 @@ configs {
     text_value: "epdg.epc.mnc008.mcc240.pub.3gppnetwork.org"
   }
   config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.ike_rekey_hard_timer_in_sec"
     int_value: 43200
   }
@@ -246,5 +273,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187386
+  seconds: 1779293178
 }

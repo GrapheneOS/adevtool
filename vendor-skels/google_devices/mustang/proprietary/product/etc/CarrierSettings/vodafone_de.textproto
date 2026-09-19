@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 77000000010
+version: 79000000012
 apns {
   apn {
     name: "Vodafone DE"
@@ -91,10 +91,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "emergency_notification_delay_int"
-    int_value: 30000
-  }
-  config {
     key: "enabledMMS"
     bool_value: false
   }
@@ -143,10 +139,25 @@ configs {
     int_value: 1280
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
     key: "imsemergency.emergency_domain_preference_roaming_int_array"
     int_array {
       item: 2
       item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -357,5 +368,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1765981876
+  seconds: 1779293191
 }

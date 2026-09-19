@@ -1,5 +1,5 @@
 canonical_name: "sfr_fr"
-version: 77000000015
+version: 79000000017
 apns {
   apn {
     name: "SFR webphone"
@@ -101,12 +101,23 @@ configs {
     }
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsserviceentitlement.entitlement_server_url_string"
     text_value: "https://aes.mnc010.mcc208.pub.3gppnetwork.org"
   }
   config {
     key: "imsserviceentitlement.fcm_sender_id_string"
     text_value: "96170559701"
+  }
+  config {
+    key: "imsserviceentitlement.ignore_ecs_errors_bool"
+    bool_value: true
   }
   config {
     key: "imsserviceentitlement.ims_provisioning_bool"
@@ -276,5 +287,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187381
+  seconds: 1779293171
 }

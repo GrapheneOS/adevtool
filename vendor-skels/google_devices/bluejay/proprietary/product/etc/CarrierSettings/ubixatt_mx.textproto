@@ -1,5 +1,5 @@
 canonical_name: "ubixatt_mx"
-version: 77000000016
+version: 79000000017
 apns {
   apn {
     name: "INTERNET_5G"
@@ -30,6 +30,10 @@ apns {
 configs {
   config {
     key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
     bool_value: true
   }
   config {
@@ -246,5 +250,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1753863600
+  seconds: 1777477707
 }

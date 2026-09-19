@@ -1,25 +1,24 @@
 canonical_name: "jazztel_es"
-version: 77000000002
+version: 79000000004
 apns {
   apn {
-    name: "jazzinternet"
+    name: "JAZZTEL Internet"
     value: "jazzinternet"
     type: DEFAULT
     type: SUPL
+    type: DUN
+    type: IA
+    user_editable: false
   }
   apn {
-    name: "MMS"
+    name: "JAZZTEL MMS"
     value: "jazzmms"
     type: MMS
     authtype: 1
     mmsc: "http://jazztelmms.com/servlets/mms"
     mmsc_proxy: "37.132.0.10"
     mmsc_proxy_port: "8080"
-  }
-  apn {
-    name: "jazzinternet"
-    value: ""
-    type: IA
+    user_editable: false
   }
   apn {
     name: "IMS"
@@ -57,6 +56,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
     key: "ignore_rtt_mode_setting_bool"
     bool_value: true
   }
@@ -88,6 +91,12 @@ configs {
     int_array {
       item: 2
       item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
     }
   }
   config {
@@ -281,5 +290,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276541
+  seconds: 1779293198
 }

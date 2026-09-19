@@ -1,5 +1,5 @@
 canonical_name: "vodafonelab_de"
-version: 77000000005
+version: 79000000007
 apns {
   apn {
     name: "VF DE Web Lab 32"
@@ -78,10 +78,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "emergency_notification_delay_int"
-    int_value: 30000
-  }
-  config {
     key: "enabledMMS"
     bool_value: false
   }
@@ -121,6 +117,13 @@ configs {
   config {
     key: "ims.ipv6_sip_mtu_size_cellular_int"
     int_value: 1280
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -319,5 +322,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841122
+  seconds: 1779887960
 }

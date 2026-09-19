@@ -1,5 +1,5 @@
 canonical_name: "rakuten_jp"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Internet"
@@ -264,7 +264,7 @@ configs {
   }
   config {
     key: "lte_endc_using_user_data_for_rrc_detection_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "maxImageHeight"
@@ -300,6 +300,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "nr_timers_reset_if_nr_advanced_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "nr_timers_reset_on_endc_to_sa_transit_bool"
+    bool_value: true
+  }
+  config {
     key: "preferred_ike_protocol_int"
     int_value: 40
   }
@@ -319,5 +327,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1774646604
+  seconds: 1785465842
 }

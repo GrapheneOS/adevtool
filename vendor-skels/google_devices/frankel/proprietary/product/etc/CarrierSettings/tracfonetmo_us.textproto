@@ -1,5 +1,5 @@
 canonical_name: "tracfonetmo_us"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Tracfone"
@@ -130,6 +130,22 @@ configs {
   config {
     key: "ims.request_uri_type_int"
     int_value: 1
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
   }
   config {
     key: "imsemergency.emergency_lte_preferred_after_nr_failed_bool"
@@ -396,5 +412,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1768403337
+  seconds: 1779293191
 }

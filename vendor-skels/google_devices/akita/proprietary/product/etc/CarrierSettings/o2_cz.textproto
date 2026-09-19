@@ -1,5 +1,5 @@
 canonical_name: "o2_cz"
-version: 77000000019
+version: 79000000020
 apns {
   apn {
     name: "O2 internet"
@@ -88,6 +88,13 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsss.ut_as_server_fqdn_string"
     text_value: "xcap.ims.mnc002.mcc230.pub.3gppnetwork.org"
   }
@@ -161,6 +168,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
     key: "qns.sos_transport_type_int"
     int_value: 2
   }
@@ -186,5 +197,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819129
+  seconds: 1779293171
 }

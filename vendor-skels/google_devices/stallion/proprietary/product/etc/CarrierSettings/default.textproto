@@ -1,5 +1,5 @@
 canonical_name: "default"
-version: 77000000007
+version: 79000000007
 configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"

@@ -1,5 +1,5 @@
 canonical_name: "giga_sg"
-version: 77000000014
+version: 79000000014
 apns {
   apn {
     name: "giga"
@@ -183,5 +183,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236678
+  seconds: 1773236675
 }

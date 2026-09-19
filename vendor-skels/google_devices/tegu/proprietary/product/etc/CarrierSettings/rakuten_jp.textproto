@@ -1,5 +1,5 @@
 canonical_name: "rakuten_jp"
-version: 77000000007
+version: 79000000007
 apns {
   apn {
     name: "Internet"
@@ -303,5 +303,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1774646590
+  seconds: 1775051999
 }

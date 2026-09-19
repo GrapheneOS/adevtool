@@ -1,5 +1,5 @@
 canonical_name: "mtn_zm"
-version: 77000000002
+version: 79000000002
 apns {
   apn {
     name: "MTN"

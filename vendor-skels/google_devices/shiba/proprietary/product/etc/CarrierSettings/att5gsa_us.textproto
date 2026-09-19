@@ -1,5 +1,5 @@
 canonical_name: "att5gsa_us"
-version: 77000000026
+version: 79000000027
 apns {
   apn {
     name: "ATT Nrphone"
@@ -259,6 +259,13 @@ configs {
       item: "352|emergency calls over wifi not allowed in this location|1622"
       item: "510|Call completed elsewhere|1014"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -837,5 +844,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770215825
+  seconds: 1779293164
 }

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_ro"
-version: 77000000019
+version: 79000000021
 apns {
   apn {
     name: "Internet"
@@ -76,14 +76,33 @@ configs {
     bool_value: true
   }
   config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
     key: "ignore_rtt_mode_setting_bool"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
   }
   config {
     key: "imsemergency.emergency_domain_preference_roaming_int_array"
     int_array {
       item: 2
       item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
     }
   }
   config {
@@ -220,5 +239,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187386
+  seconds: 1780502807
 }

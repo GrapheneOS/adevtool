@@ -1,5 +1,5 @@
 canonical_name: "att4g_mx"
-version: 77000000011
+version: 79000000012
 apns {
   apn {
     name: "Internet"
@@ -30,6 +30,10 @@ apns {
 configs {
   config {
     key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
     bool_value: true
   }
   config {
@@ -247,5 +251,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276438
+  seconds: 1777477707
 }

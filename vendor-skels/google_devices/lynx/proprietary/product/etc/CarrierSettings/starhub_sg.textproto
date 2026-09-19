@@ -1,5 +1,5 @@
 canonical_name: "starhub_sg"
-version: 77000000014
+version: 79000000014
 apns {
   apn {
     name: "SH Data Postpaid"
@@ -254,5 +254,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236705
+  seconds: 1773236697
 }

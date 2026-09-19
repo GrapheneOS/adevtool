@@ -1,5 +1,5 @@
 canonical_name: "plus_pl"
-version: 77000000013
+version: 79000000014
 apns {
   apn {
     name: "Plus Internet"
@@ -26,10 +26,6 @@ apns {
   }
 }
 configs {
-  config {
-    key: "allow_hold_in_rtt_call_bool"
-    bool_value: false
-  }
   config {
     key: "carrier_certificate_string_array"
     text_array {
@@ -200,5 +196,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819051
+  seconds: 1776866371
 }

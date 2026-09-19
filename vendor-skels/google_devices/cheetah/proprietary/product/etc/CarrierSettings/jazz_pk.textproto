@@ -1,5 +1,5 @@
 canonical_name: "jazz_pk"
-version: 77000000004
+version: 79000000005
 apns {
   apn {
     name: "Mobilink WAP GPRS"
@@ -23,13 +23,17 @@ apns {
     name: "IMS"
     value: "ims"
     type: IMS
-    bearer_bitmask: "14|20"
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
   }
 }
 configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
@@ -40,5 +44,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819080
+  seconds: 1779887900
 }

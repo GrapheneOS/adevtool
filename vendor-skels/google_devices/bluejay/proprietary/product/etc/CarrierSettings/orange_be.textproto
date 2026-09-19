@@ -1,5 +1,5 @@
 canonical_name: "orange_be"
-version: 77000000015
+version: 79000000017
 apns {
   apn {
     name: "Orange MMS"
@@ -59,6 +59,13 @@ configs {
   config {
     key: "ims.request_uri_type_int"
     int_value: 1
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -200,6 +207,10 @@ configs {
     int_value: 60000
   }
   config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -282,5 +293,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1757476321
+  seconds: 1779293139
 }

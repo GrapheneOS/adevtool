@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 77000000504
+version: 79000000506
 apns {
   apn {
     name: "Telia Internet"
@@ -106,7 +106,18 @@ configs {
     int_value: 1300
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
     bool_value: false
   }
   config {
@@ -263,5 +274,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773841033
+  seconds: 1779293134
 }

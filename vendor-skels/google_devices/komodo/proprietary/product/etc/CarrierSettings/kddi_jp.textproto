@@ -1,5 +1,5 @@
 canonical_name: "kddi_jp"
-version: 77000000021
+version: 79000000023
 apns {
   apn {
     name: "5G NET"
@@ -183,35 +183,7 @@ configs {
     key: "carrier_supported_satellite_services_per_provider_bundle"
     bundle {
       config {
-        key: "302723"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
-        key: "310830"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
         key: "44055"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
-        key: "50511"
-        int_array {
-          item: 2
-          item: 3
-        }
-      }
-      config {
-        key: "53013"
         int_array {
           item: 2
           item: 3
@@ -375,6 +347,10 @@ configs {
   config {
     key: "imsi_key_download_url_string"
     text_value: "https://wificert.kddi.com/android"
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://ent-aap-device.kddi.com/DEGDROIDInterfaceTS43"
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -581,8 +557,8 @@ configs {
     bool_value: true
   }
   config {
-    key: "satellite_data_support_mode_int"
-    int_value: 1
+    key: "satellite_entitlement_supported_bool"
+    bool_value: true
   }
   config {
     key: "satellite_ignore_data_roaming_setting_bool"
@@ -620,5 +596,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1769617053
+  seconds: 1776243218
 }

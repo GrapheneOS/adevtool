@@ -1,5 +1,5 @@
 canonical_name: "iliad_it"
-version: 77000000016
+version: 79000000017
 apns {
   apn {
     name: "iliad"
@@ -49,6 +49,13 @@ configs {
   config {
     key: "ignore_rtt_mode_setting_bool"
     bool_value: true
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imssms.sms_over_ims_supported_rats_int_array"
@@ -131,5 +138,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187381
+  seconds: 1779293171
 }
