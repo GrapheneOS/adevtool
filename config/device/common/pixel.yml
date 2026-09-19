@@ -16,6 +16,8 @@ includes:
   - vintf-inclusion.yml
 
 backport_dirs:
+  product:
+    - etc/CarrierSettings
   vendor:
     - firmware/carrierconfig
     - firmware/uecapconfig
