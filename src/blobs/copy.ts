@@ -2,11 +2,11 @@ import { promises as fs } from 'fs'
 
 import assert from 'assert'
 import path from 'path'
+import type { PixelModemCarrierInfoOverride } from '../config/device'
 import { getHostBinPath } from '../config/paths'
 import { readFile } from '../util/fs'
 import { Partition, PathResolver } from '../util/partitions'
 import { spawnAsync, spawnAsyncNoOut } from '../util/process'
-import { CARRIER_DB_OVERRIDES } from './carrier-db-overrides'
 import { BlobEntry } from './entry'
 
 export async function copyBlobs(
@@ -15,6 +15,7 @@ export async function copyBlobs(
   destDirLocalNamespace: string,
   destDirRootNamespace: string,
   device: string,
+  pixelModemCarrierInfoOverrides: PixelModemCarrierInfoOverride[],
 ) {
   let promises = Array.from(entries).map(async entry => {
     let srcPath = entry.partPath.resolve(pathResolver)
@@ -65,25 +66,34 @@ export async function copyBlobs(
     }
 
     if (entry.partPath.partition === Partition.Vendor && entry.partPath.relPath === 'firmware/carrierconfig/cfg.db') {
-      await patchModemCarrierConfig(outPath)
+      await patchPixelModemCarrierInfo(outPath, device, pixelModemCarrierInfoOverrides)
     }
   })
   await Promise.all(promises)
 }
 
-async function patchModemCarrierConfig(dbPath: string) {
+// Only supports the Pixel modem cfg.db schema, not arbitrary vendor carrier databases.
+// Extending this to update existing rows needs extra care: MCC/MNC is not unique, and multiple
+// rows can have different SIM matching rules whose wildcard fields must not be overwritten blindly.
+async function patchPixelModemCarrierInfo(
+  dbPath: string,
+  device: string,
+  overrides: PixelModemCarrierInfoOverride[],
+) {
   let origMode = (await fs.stat(dbPath)).mode
   await fs.chmod(dbPath, 0o600)
   let sqlite3 = await getHostBinPath('sqlite3')
-  for (let override of CARRIER_DB_OVERRIDES) {
+  for (let override of overrides) {
     let numRows = await spawnAsync(sqlite3, [
       dbPath,
       `SELECT COUNT(*) FROM carrier_info WHERE mccmnc = '${override.mccmnc}';`,
     ])
     if (numRows !== '0\n') {
       throw new Error(
-        `cfg.db already contains mccmnc ${override.mccmnc} (${override.name}) - ` +
-          `the carrier_info override is no longer needed and should be removed; sqlite query output: ${numRows}`,
+        `${device}: cfg.db already contains mccmnc ${override.mccmnc} (${override.name}) - ` +
+          `the Pixel carrier_info override is no longer needed for this device and should be removed; ` +
+          `check other devices before removing their overrides, since upstream may not update their cfg.db; ` +
+          `sqlite query output: ${numRows}`,
       )
     }
     await spawnAsyncNoOut(sqlite3, [

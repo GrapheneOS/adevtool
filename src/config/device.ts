@@ -27,6 +27,20 @@ export interface DisplaySize {
   height: number
 }
 
+// A carrier_info row in the Pixel modem's vendor/firmware/carrierconfig/cfg.db.
+// These fields use the Pixel-specific database schema, not Android CarrierConfig.
+export interface PixelModemCarrierInfoOverride {
+  // Diagnostic label only, not a database column.
+  name: string
+  // Existing carrier ID in the Pixel modem database, not an Android carrier ID.
+  carrier_id: number
+  mccmnc: string
+  imsi_prefix_xpattern: string
+  spn: string
+  gid1: string
+  gid2: string
+}
+
 export interface DeviceConfig {
   // Required
   device: {
@@ -108,6 +122,9 @@ export interface DeviceConfig {
 
   backport_dirs: { [part: string]: string[] }
   backport_files: { [part: string]: string[] }
+
+  // Pixel-specific modem carrier_info additions; fails if the MCC/MNC already exists upstream.
+  pixel_modem_carrier_info_overrides: PixelModemCarrierInfoOverride[]
 
   // Additional AOSP packages to include in PRODUCT_PACKAGES.
   extra_packages: string[]
@@ -262,6 +279,8 @@ const DEFAULT_CONFIG_BASE = {
 
   backport_dirs: {},
   backport_files: {},
+
+  pixel_modem_carrier_info_overrides: [],
 
   extra_packages: [],
 

@@ -130,6 +130,7 @@ async function doDevice(
     dirs.proprietary,
     path.join(dirs.out, PROPRIETARY_DIR_IN_ROOT_SOONG_NAMESPACE),
     config.device.name,
+    config.pixel_modem_carrier_info_overrides,
   )
 
   if (verbose) log('Extracting vintf manifests')
