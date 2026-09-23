@@ -489,11 +489,9 @@ export async function generateBuildFiles(
         resolvedName += `__${conflictNum}`
       }
 
-      if (config.device.backport_build_id !== undefined) {
-        if (resolvedName === 'libc++' || resolvedName === 'libaconfig_storage_read_api_cc') {
-          copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
-          continue
-        }
+      if (entry.partPath.relPath.endsWith('.so') && entry.partPath.partition === Partition.Vendor) {
+        copyFiles.push(blobToFileCopy(entry, dirs.proprietary))
+        continue
       }
 
       let module = blobToSoongModule(
