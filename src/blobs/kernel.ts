@@ -62,9 +62,9 @@ export async function copyKernelInner(pathResolver: PathResolver, dstDir: string
   }
 
   for (let part of [
+    ...(vendorBootParitition === Partition.VendorKernelBoot ? [Partition.SystemDlkm] : []),
     Partition.VendorDlkm,
     vendorBootParitition,
-    ...(vendorBootParitition === Partition.VendorKernelBoot ? [Partition.SystemDlkm] : []),
   ]) {
     let relPath
     switch (part) {
