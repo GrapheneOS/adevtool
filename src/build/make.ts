@@ -513,6 +513,11 @@ export async function genBoardMakefile(
     '# needed for overriding AOSP-available files with extracted prebuilts\n' + 'BUILD_BROKEN_DUP_RULES := true',
   )
 
+  blocks.push(
+    '# needed for partially backporting multi-partition libraries\n' +
+      'BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true',
+  )
+
   await fs.writeFile(path.join(dirs.out, 'BoardConfig.mk'), finishBlocks(blocks))
 }
 
