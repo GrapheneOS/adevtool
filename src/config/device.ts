@@ -124,6 +124,7 @@ export interface DeviceConfig {
   backport_files: { [part: string]: string[] }
 
   // Pixel-specific modem carrier_info additions; fails if the MCC/MNC already exists upstream.
+  // A child config replaces an inherited entry with the same MCC/MNC, keeping other parent entries.
   pixel_modem_carrier_info_overrides: PixelModemCarrierInfoOverride[]
 
   // Additional AOSP packages to include in PRODUCT_PACKAGES.

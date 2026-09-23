@@ -7,8 +7,14 @@ import { readFile } from '../util/fs'
 import { parseFilters, SerializedFilters } from './filters'
 
 function mergeConfigs(base: unknown, overlay: unknown) {
-  return _.mergeWith(base, overlay, (a, b) => {
+  return _.mergeWith(base, overlay, (a, b, key) => {
     if (_.isArray(a)) {
+      if (key === 'pixel_modem_carrier_info_overrides' && _.isArray(b)) {
+        // A child replaces the entire inherited entry for the same MCC/MNC, not individual fields.
+        // Keep unrelated parent entries; an empty child list does not clear inherited overrides.
+        let childMccMncs = new Set(b.map(override => override.mccmnc))
+        return a.filter(override => !childMccMncs.has(override.mccmnc)).concat(b)
+      }
       return a.concat(b)
     }
   })
