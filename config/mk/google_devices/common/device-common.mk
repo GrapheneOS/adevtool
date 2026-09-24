@@ -65,3 +65,5 @@ ifeq ($(filter lynx tangorpro,$(TARGET_PRODUCT)),)
 endif
 
 PRODUCT_PACKAGES += restrict-pixel-health-association
+
+PRODUCT_PRODUCT_PROPERTIES += persist.vendor.intelligence=off
