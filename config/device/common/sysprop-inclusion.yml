@@ -331,7 +331,6 @@ sysprop_inclusions:
   - persist.vendor.gps.power_watchdog.mode = 1
   - persist.vendor.ims.
   - persist.vendor.ims_tiss.
-  - persist.vendor.intelligence
   - persist.vendor.modem.
   - persist.vendor.modem.extensive_logging_enabled = false
   - persist.vendor.nfc.

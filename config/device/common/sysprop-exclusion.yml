@@ -16,6 +16,7 @@ sysprop_exclusions:
   - persist.arm64.memtag.system_server = off
   - persist.sys.sf.native_mode = 2 # default display color mode
   - persist.vendor.factoryota.
+  - persist.vendor.intelligence = on
   - persist.vendor.nfc.factoryota.
   - persist.vendor.pixellogger.
   - persist.vendor.tcpdump.log.alwayson
