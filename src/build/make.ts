@@ -18,9 +18,9 @@ import { VintfPaths } from '../processor/vintf'
 import { LinkerConfig } from '../proto-ts/build/soong/linkerconfig/proto/linker_config'
 import { assertDefined, mapGet, updateMultiMap } from '../util/data'
 import { EntryFilterCmd, filterEntries } from '../util/exact-filter'
-import { isFile, readFile } from '../util/fs'
+import { isFile, maybeStat, readFile } from '../util/fs'
 import { MAKEFILE_HEADER } from '../util/headers'
-import { Partition, PathResolver } from '../util/partitions'
+import { EXT_SYS_PARTITIONS, Partition, PathResolver } from '../util/partitions'
 
 const CONT_SEPARATOR = ' \\\n    '
 
@@ -247,6 +247,44 @@ PRODUCT_MANUFACTURER := ${mapGet(productProps, 'ro.product.product.manufacturer'
   }
 
   addBlock(blocks, propConfigs)
+
+  let emptyFsConfigFiles = ['etc/fs_config_dirs', 'etc/fs_config_files']
+
+  let fsConfigLines = []
+
+  for (let partition of EXT_SYS_PARTITIONS) {
+    for (let configFile of emptyFsConfigFiles) {
+      let configPath = pathResolver.resolve(partition, configFile)
+      let stat = await maybeStat(configPath)
+      if (stat !== null) {
+        // fs_config_dirs and fs_config_files are unused on Pixels as of 17 QPR1
+        assert(stat.size == 0, configPath)
+      }
+    }
+    let groupStr = await readFile(pathResolver.resolve(partition, 'etc/group'))
+    for (let group of groupStr.split('\n')) {
+      if (group.length === 0) {
+        continue
+      }
+      let parts = group.split(':')
+      assert(parts.length === 4, group)
+      let name = parts[0]
+      assert(name.startsWith(partition + '_'), group)
+      assert(parts[1].length === 0, group)
+      let uid = parseInt(parts[2])
+      assert(uid > 0, group)
+      assert(parts[3].length === 0, group)
+      fsConfigLines.push(`[AID_${name.toUpperCase()}]`)
+      fsConfigLines.push(`value: ${uid}`)
+    }
+  }
+
+  if (fsConfigLines.length > 0) {
+    fsConfigLines.push('')
+    let fsConfigPath = path.join(dirs.out, 'config.fs')
+    await fs.writeFile(fsConfigPath, fsConfigLines.join('\n'))
+    blocks.push(`TARGET_FS_CONFIG_GEN += ${fsConfigPath}`)
+  }
 
   let vendorProps = mapGet(propResults.stockProps, Partition.Vendor)
   const recoveryMinUiPrefix = 'ro.minui.'
