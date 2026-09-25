@@ -12,10 +12,10 @@
     <string name="comfort_filters_all_modes_off_summary">Desaktibatuta</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">Erosotasun moduko ikuspegia, Gaueko argia aktibatuta</string>
     <string name="comfort_filters_comfort_view_on_summary">Erosotasun moduko ikuspegia aktibatuta</string>
-    <string name="comfort_filters_entry_title">Erosotasun moduko iragazkiak</string>
+    <string name="comfort_filters_entry_title">Erosotasun-iragazkiak</string>
     <string name="comfort_filters_night_light_on_summary">Gaueko argia aktibatuta</string>
     <string name="comfort_filters_settings_page_main_summary">Murriztu neke bisuala iragazkiekin. Erosotasun moduko ikuspegiak pantailaren koloreak leuntzen eta pastel-estiloko egiten ditu, eta Gaueko argia eginbideak argi urdin indartsua mugatzen du gauean.</string>
-    <string name="comfort_filters_settings_page_main_title">Erosotasun moduko iragazkiak</string>
+    <string name="comfort_filters_settings_page_main_title">Erosotasun-iragazkiak</string>
     <string name="comfort_view_ambient_adaptive_switch_summary">Ingurunearen arabera doitzen da</string>
     <string name="comfort_view_ambient_adaptive_switch_title">Dinamikoa</string>
     <string name="comfort_view_intensity_title">Intentsitatea</string>

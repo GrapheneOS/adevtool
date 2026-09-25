@@ -5,7 +5,7 @@
 <manifest version="9.0" type="device">
     <hal format="aidl">
         <name>vendor.google.wireless_charger</name>
-        <version>7</version>
+        <version>8</version>
         <fqname>IWirelessCharger/default</fqname>
     </hal>
 </manifest>

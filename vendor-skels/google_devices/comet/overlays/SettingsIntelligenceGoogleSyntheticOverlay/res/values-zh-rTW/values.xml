@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">充電, 限制, 充電最佳化, 充電限制</string>
     <string name="charging_optimization_entry_summary_charge_limit">充電上限 %1$s</string>
-    <string name="charging_optimization_footer_message_charging_limit">這有助於延長電池壽命。但手機偶爾會充飽電，確保電池容量資訊準確。</string>
+    <string name="charging_optimization_footer_message_charging_limit">此設定有助於延長電池壽命。但手機偶爾會充飽電，確保電池容量資訊準確。</string>
     <string name="charging_optimization_summary_off">關閉</string>
     <string name="charging_optimization_title">充電最佳化</string>
 </resources>

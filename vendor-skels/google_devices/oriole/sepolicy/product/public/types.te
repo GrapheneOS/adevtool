@@ -6,6 +6,7 @@ type vendor_pcs_app, domain, appdomain, netdomain, bluetoothdomain, coredomain;
 type better_bug_app, domain, appdomain, netdomain, coredomain;
 type pixelsupport_app, domain, appdomain, netdomain, bluetoothdomain, coredomain;
 type omadm_app, domain, appdomain, netdomain, coredomain;
+type camera_lyricmaintenancetaskprovider_service, protected_service, service_manager_type, hal_service_type;
 type vendor_pbcs_app_userfaultfd;
 type vendor_pbcs_app_block_io_uring;
 type vendor_pbcs_app_wrapfd;

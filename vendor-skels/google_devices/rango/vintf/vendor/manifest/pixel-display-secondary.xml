@@ -5,7 +5,7 @@
 <manifest version="9.0" type="device">
     <hal format="aidl">
         <name>com.google.hardware.pixel.display</name>
-        <version>21</version>
+        <version>23</version>
         <fqname>IDisplay/secondary</fqname>
     </hal>
 </manifest>

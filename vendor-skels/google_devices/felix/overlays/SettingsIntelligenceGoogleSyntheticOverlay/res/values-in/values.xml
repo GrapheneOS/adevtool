@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">pengisian daya, batas, pengoptimalan pengisian daya, batas pengisian daya</string>
     <string name="charging_optimization_entry_summary_charge_limit">Batasi hingga %1$s</string>
-    <string name="charging_optimization_footer_message_charging_limit">Tindakan ini membantu memperpanjang masa pakai baterai. Ponsel Anda sesekali perlu diisi dayanya hingga penuh untuk memastikan kapasitas baterai yang akurat.</string>
+    <string name="charging_optimization_footer_message_charging_limit">Pengoptimalan ini membantu memperpanjang masa pakai baterai. Ponsel Anda sesekali perlu diisi daya hingga penuh agar kapasitas baterai tetap akurat.</string>
     <string name="charging_optimization_summary_off">Nonaktif</string>
     <string name="charging_optimization_title">Pengoptimalan pengisian daya</string>
 </resources>

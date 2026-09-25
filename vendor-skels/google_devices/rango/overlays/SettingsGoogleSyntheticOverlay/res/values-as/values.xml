@@ -4,7 +4,7 @@
     <string name="charging_optimization_charge_label">%1$s - %2$sলৈকে চাৰ্জিং সম্পূৰ্ণ হ’ব</string>
     <string name="charging_optimization_reach_limit_charge_label">%1$s • চাৰ্জিং সম্পূৰ্ণ হৈছে</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">চাৰ্জিং সম্পূৰ্ণ হৈছে</string>
-    <string name="charging_optimization_remaining_time_label">%1$sলৈকে চাৰ্জিং সম্পূৰ্ণ হ’ব</string>
+    <string name="charging_optimization_remaining_time_label">%1$sৰ ভিতৰত চাৰ্জিং সম্পূৰ্ণ হ’ব</string>
     <string name="comfort_filters_all_modes_off_summary">অফ আছে</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">কম্ফ’ৰ্ট ভিউ, নাইট লাইট অন আছে</string>
     <string name="comfort_filters_comfort_view_on_summary">কম্ফ’ৰ্ট ভিউ অন আছে</string>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <install-in-user-type package="com.google.android.apps.camera.services">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+    <install-in user-type="android.os.usertype.profile.MANAGED"/>
+    <install-in user-type="android.os.usertype.profile.PRIVATE"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.pixel.camera.services">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+    <install-in user-type="android.os.usertype.profile.MANAGED"/>
+    <install-in user-type="android.os.usertype.profile.PRIVATE"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.samsung.slsi.telephony.oem.oemrilhookservice">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.samsung.slsi.telephony.oemril">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.shannon.imsservice">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.shannon.rcsservice">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.android.iwlan">
+    <install-in user-type="SYSTEM"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.android.euicc">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+    <install-in user-type="PROFILE"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.euiccpixel.permissions">
+    <install-in user-type="SYSTEM"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.android.providers.contacts">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+    <install-in user-type="android.os.usertype.profile.MANAGED"/>
+    <install-in user-type="android.os.usertype.profile.CLONE"/>
+    <install-in user-type="android.os.usertype.profile.PRIVATE"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.android.pixelnfc">
+    <install-in user-type="FULL"/>
+    <install-in user-type="PROFILE"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.android.angle">
+    <install-in user-type="FULL"/>
+    <install-in user-type="PROFILE"/>
+  </install-in-user-type>
+</config>

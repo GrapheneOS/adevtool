@@ -1,6 +1,7 @@
 /system_ext/bin/gs_watchdogd u:object_r:gs_watchdogd_exec:s0
 /dev/watchdog[0-9] u:object_r:watchdog_device:s0
 /system_ext/bin/backup_ota_log\.sh u:object_r:backup_ota_log_exec:s0
+/system/bin/gpu_counter_producer u:object_r:gpu_counter_producer_exec:s0
 /system_ext/bin/hw/vendor\.google\.whitechapel\.audio\.hal\.parserservice u:object_r:hal_audio_parameter_parser_exec:s0
 /system_ext/bin/hw/vendor\.google\.edgetpu_app_service@1\.0-service u:object_r:edgetpu_app_server_exec:s0
 /metadata/repair-mode/config(/.*)? u:object_r:repair_mode_metadata_config_file:s0

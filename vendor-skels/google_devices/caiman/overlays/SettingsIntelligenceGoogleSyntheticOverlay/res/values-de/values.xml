@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">Laden, Aufladen, Limit, Begrenzung, Ladeoptimierung, Optimierung, Ladelimit, Ladebegrenzung, Begrenzung beim Aufladen</string>
     <string name="charging_optimization_entry_summary_charge_limit">Auf %1$s begrenzen</string>
-    <string name="charging_optimization_footer_message_charging_limit">Durch diese Funktion wird die Lebensdauer des Akkus verlängert. Dein Smartphone wird hin und wieder auf 100 %% geladen, um eine genaue Angabe zur aktuellen Akkukapazität zu erhalten.</string>
+    <string name="charging_optimization_footer_message_charging_limit">Durch diese Funktion wird die Lebensdauer des Akkus verlängert. Dein Gerät wird hin und wieder vollständig geladen, um eine genaue Angabe zur aktuellen Akkukapazität zu erhalten.</string>
     <string name="charging_optimization_summary_off">Aus</string>
     <string name="charging_optimization_title">Optimiertes Laden</string>
 </resources>

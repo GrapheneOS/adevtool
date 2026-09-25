@@ -4,6 +4,7 @@ aocx.IAocx/default u:object_r:aocx:s0
 com.google.pixel.camera.connectivity.hal.provider.ICameraProvider/default u:object_r:hal_pixel_remote_camera_service:s0
 com.google.android.imageprocessing.hal.IImageProcessingHal/default u:object_r:vendor_image_processing_hal_service:s0
 vendor.google.camera_ext.ICameraInterferenceAvoidance/default u:object_r:vendor_camera_interference_avoidance_service:s0
+com.google.android.lyric.intelligentcamerahal.IIntelligentCameraHal/default u:object_r:vendor_intelligent_camera_hal_service:s0
 vendor.goodix.hardware.biometrics.fingerprint.IGoodixFingerprintDaemon/default u:object_r:hal_fingerprint_service:s0
 mapper/pixel u:object_r:hal_graphics_mapper_service:s0
 android.hardware.drm.IDrmFactory/widevine u:object_r:hal_drm_service:s0
@@ -51,7 +52,6 @@ vendor.google.bluetooth_ext.IBluetoothExt/default u:object_r:hal_bluetooth_coexi
 vendor.google.bluetooth_ext.IBluetoothFinder/default u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothCco/default u:object_r:hal_bluetooth_coexistence_service:s0
 power.stats-vendor u:object_r:hal_power_stats_vendor_service:s0
-vendor.google.aam.IAam/default u:object_r:hal_aam_service:s0
 android.hardware.vibrator.IVibrator/dual u:object_r:hal_vibrator_service:s0
 vendor.google.google_battery.IGoogleBattery/default u:object_r:hal_googlebattery_service:s0
 vendor.qti.hardware.fingerprint.IQfpExtendedFingerprint/default u:object_r:hal_fingerprint_service:s0

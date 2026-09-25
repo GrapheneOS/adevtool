@@ -3,8 +3,8 @@
 
 include vendor/google_devices/akita/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),CP2A.260805.005)
-  $(error BUILD_ID: expected CP2A.260805.005, got $(BUILD_ID))
+ifneq ($(BUILD_ID),CP3A.260905.009)
+  $(error BUILD_ID: expected CP3A.260905.009, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/akita/device.mk)
@@ -37,6 +37,10 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 TARGET_RECOVERY_FSTAB := vendor/google_devices/akita/proprietary/recovery/system/etc/recovery.fstab
 TARGET_RECOVERY_WIPE := vendor/google_devices/akita/proprietary/recovery/system/etc/recovery.wipe
 
+# system vintf_fragments
+PRODUCT_PACKAGES += \
+    adevtool_vintf_fragment_system_omapi.xml
+
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/google_devices/akita/vintf/system_ext/aocx_framework_compatibility_matrix_system_ext \
     vendor/google_devices/akita/vintf/system_ext/camera_interference_avoidance_framework_compatibility_matrix_system_ext \
@@ -61,6 +65,7 @@ PRODUCT_PACKAGES += \
     adevtool_vintf_fragment_vendor_android.hardware.audio.service-aidl.aoc.xml \
     adevtool_vintf_fragment_vendor_android.hardware.authsecret-service.citadel.xml \
     adevtool_vintf_fragment_vendor_android.hardware.contexthub-service.generic.xml \
+    adevtool_vintf_fragment_vendor_android.hardware.drm-service.clearkey.xml \
     adevtool_vintf_fragment_vendor_android.hardware.dumpstate.3-service.xml \
     adevtool_vintf_fragment_vendor_android.hardware.gnss@default.xml \
     adevtool_vintf_fragment_vendor_android.hardware.health-service.zuma.xml \
@@ -68,8 +73,11 @@ PRODUCT_PACKAGES += \
     adevtool_vintf_fragment_vendor_android.hardware.oemlock-service.citadel.xml \
     adevtool_vintf_fragment_vendor_android.hardware.power-service.pixel.xml \
     adevtool_vintf_fragment_vendor_android.hardware.power.stats-service.pixel.xml \
+    adevtool_vintf_fragment_vendor_android.hardware.secure_element_gto.xml \
     adevtool_vintf_fragment_vendor_android.hardware.security.keymint-service-v3.citadel.xml \
+    adevtool_vintf_fragment_vendor_android.hardware.security.secretkeeper.trusty.xml \
     adevtool_vintf_fragment_vendor_android.hardware.security.sharesecret-service.citadel.xml \
+    adevtool_vintf_fragment_vendor_android.hardware.sensors-multihal.xml \
     adevtool_vintf_fragment_vendor_android.hardware.thermal-service.pixel.xml \
     adevtool_vintf_fragment_vendor_android.hardware.usb-service.xml \
     adevtool_vintf_fragment_vendor_android.hardware.usb.gadget-service.xml \
@@ -77,9 +85,11 @@ PRODUCT_PACKAGES += \
     adevtool_vintf_fragment_vendor_android.hardware.weaver-service.citadel.xml \
     adevtool_vintf_fragment_vendor_android.hardware.wifi.hostapd.xml \
     adevtool_vintf_fragment_vendor_android.hardware.wifi.supplicant.xml \
+    adevtool_vintf_fragment_vendor_bluetooth_audio.xml \
     adevtool_vintf_fragment_vendor_dmd.xml \
     adevtool_vintf_fragment_vendor_fingerprint-goodix.xml \
     adevtool_vintf_fragment_vendor_flood_control.xml \
+    adevtool_vintf_fragment_vendor_health-storage-default.xml \
     adevtool_vintf_fragment_vendor_hwc3-default.xml \
     adevtool_vintf_fragment_vendor_liboemservice_proxy.xml \
     adevtool_vintf_fragment_vendor_manifest.xml \
@@ -88,10 +98,10 @@ PRODUCT_PACKAGES += \
     adevtool_vintf_fragment_vendor_manifest_input.processor-service.xml \
     adevtool_vintf_fragment_vendor_manifest_radioext.xml \
     adevtool_vintf_fragment_vendor_memtrack.xml \
+    adevtool_vintf_fragment_vendor_nfc-service-default.xml \
     adevtool_vintf_fragment_vendor_pixel-display-default.xml \
     adevtool_vintf_fragment_vendor_pixel-gnss-default.xml \
     adevtool_vintf_fragment_vendor_shared_modem_platform.xml \
-    adevtool_vintf_fragment_vendor_vendor.google.aam.xml \
     adevtool_vintf_fragment_vendor_vendor.google.battery_mitigation-default.xml \
     adevtool_vintf_fragment_vendor_vendor.google.edgetpu_vendor_service@1.0-service.xml \
     adevtool_vintf_fragment_vendor_vendor.google.google_battery-default.xml \
@@ -138,364 +148,35 @@ PRODUCT_PACKAGES += \
     Rubik-MediumItalic.ttf \
     Rubik-Regular.ttf \
     SafetyRegulatoryInfo \
+    VirtualDeviceManager \
+    VirtualDeviceManager__nosdcard__auto_generated_characteristics_rro \
     ZillaSlab-Medium.ttf \
     ZillaSlab-MediumItalic.ttf \
     ZillaSlab-SemiBold.ttf \
     ZillaSlab-SemiBoldItalic.ttf \
-    aidl_audio_set_configurations_bfbs \
-    aidl_audio_set_scenarios_bfbs \
-    aidl_default_audio_set_configurations_json \
-    aidl_default_audio_set_scenarios_json \
-    android.frameworks.sensorservice-V1-ndk.vendor \
-    android.frameworks.sensorservice@1.0.vendor \
-    android.frameworks.stats-V1-cpp.vendor \
-    android.frameworks.stats-V1-ndk.vendor \
-    android.frameworks.stats-V2-ndk.vendor \
-    android.hardware.audio.common-V5-ndk.vendor \
-    android.hardware.audio.common@5.0.vendor \
-    android.hardware.audio.core-V4-ndk.vendor \
-    android.hardware.audio.core.sounddose-V4-ndk.vendor \
-    android.hardware.audio.effect-V4-ndk.vendor \
-    android.hardware.audio.low_latency.prebuilt.xml \
-    android.hardware.audio.pro.prebuilt.xml \
-    android.hardware.authsecret-V1-ndk.vendor \
-    android.hardware.biometrics.common-V3-ndk.vendor \
-    android.hardware.biometrics.fingerprint-V3-ndk.vendor \
-    android.hardware.bluetooth-V1-ndk.vendor \
-    android.hardware.bluetooth.audio-V6-ndk.vendor \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth.audio@2.0.vendor \
-    android.hardware.bluetooth.audio@2.1.vendor \
-    android.hardware.bluetooth.finder-V1-ndk.vendor \
-    android.hardware.bluetooth.lmp_event-V1-ndk.vendor \
-    android.hardware.bluetooth.prebuilt.xml \
-    android.hardware.bluetooth.ranging-V2-ndk.vendor \
-    android.hardware.bluetooth.socket-V2-ndk.vendor \
-    android.hardware.bluetooth_le.prebuilt.xml \
-    android.hardware.boot-V1-ndk.vendor \
-    android.hardware.boot@1.0.vendor \
-    android.hardware.boot@1.1.vendor \
-    android.hardware.camera.concurrent.prebuilt.xml \
-    android.hardware.camera.flash-autofocus.prebuilt.xml \
-    android.hardware.camera.front.prebuilt.xml \
-    android.hardware.camera.full.prebuilt.xml \
-    android.hardware.camera.raw.prebuilt.xml \
-    android.hardware.common-V2-ndk.vendor \
-    android.hardware.common.fmq-V1-ndk.vendor \
-    android.hardware.context_hub.prebuilt.xml \
-    android.hardware.contexthub-V5-ndk.vendor \
-    android.hardware.device_unique_attestation.prebuilt.xml \
-    android.hardware.drm-V1-ndk.vendor \
-    android.hardware.drm-V2-ndk.vendor \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm-service.clearkey.xml_vintf \
-    android.hardware.drm.common-V1-ndk.vendor \
-    android.hardware.dumpstate-V1-ndk.vendor \
-    android.hardware.fastboot-V1-ndk.recovery \
-    android.hardware.fastboot@1.0.recovery \
-    android.hardware.fastboot@1.1.recovery \
-    android.hardware.fingerprint.prebuilt.xml \
-    android.hardware.gnss-V3-ndk.vendor \
-    android.hardware.gnss.measurement_corrections@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.0.vendor \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.graphics.allocator-V2-ndk.vendor \
-    android.hardware.graphics.allocator@2.0.vendor \
-    android.hardware.graphics.allocator@3.0.vendor \
-    android.hardware.graphics.allocator@4.0.vendor \
-    android.hardware.graphics.bufferqueue@1.0.vendor \
-    android.hardware.graphics.bufferqueue@2.0.vendor \
-    android.hardware.graphics.common-V7-ndk.vendor \
-    android.hardware.graphics.common@1.0.vendor \
-    android.hardware.graphics.common@1.1.vendor \
-    android.hardware.graphics.common@1.2.vendor \
-    android.hardware.graphics.composer3-V5-ndk.vendor \
-    android.hardware.graphics.composer@2.1-resources.vendor \
-    android.hardware.graphics.composer@2.1.vendor \
-    android.hardware.graphics.composer@2.2-resources.vendor \
-    android.hardware.graphics.composer@2.2.vendor \
-    android.hardware.graphics.composer@2.3.vendor \
-    android.hardware.graphics.composer@2.4.vendor \
-    android.hardware.graphics.mapper@2.0.vendor \
-    android.hardware.graphics.mapper@2.1.vendor \
-    android.hardware.graphics.mapper@3.0.vendor \
-    android.hardware.graphics.mapper@4.0.vendor \
-    android.hardware.health-V1-ndk.vendor \
-    android.hardware.health-V4-ndk.vendor \
-    android.hardware.health-V5-ndk.vendor \
-    android.hardware.health.storage-V1-ndk.vendor \
-    android.hardware.health.storage-service.default \
-    android.hardware.input.common-V1-ndk.vendor \
-    android.hardware.input.processor-V1-ndk.vendor \
-    android.hardware.keymaster-V4-ndk.vendor \
-    android.hardware.location.gps.prebuilt.xml \
-    android.hardware.media.bufferpool2-V2-ndk.vendor \
-    android.hardware.media.bufferpool@2.0.vendor \
-    android.hardware.media.c2-V2-ndk.vendor \
-    android.hardware.media.c2@1.0.vendor \
-    android.hardware.media.c2@1.1.vendor \
-    android.hardware.media.c2@1.2.vendor \
-    android.hardware.media.omx@1.0.vendor \
-    android.hardware.media@1.0.vendor \
-    android.hardware.memtrack-V1-ndk.vendor \
-    android.hardware.neuralnetworks-V4-ndk.vendor \
-    android.hardware.neuralnetworks@1.0.vendor \
-    android.hardware.neuralnetworks@1.1.vendor \
-    android.hardware.neuralnetworks@1.2.vendor \
-    android.hardware.neuralnetworks@1.3.vendor \
-    android.hardware.nfc-V1-ndk.vendor \
-    android.hardware.nfc-service.st \
-    android.hardware.nfc.ese.prebuilt.xml \
-    android.hardware.nfc.hce.prebuilt.xml \
-    android.hardware.nfc.hcef.prebuilt.xml \
-    android.hardware.nfc.prebuilt.xml \
-    android.hardware.oemlock-V1-ndk.vendor \
-    android.hardware.opengles.aep.prebuilt.xml \
-    android.hardware.power-V1-ndk.vendor \
-    android.hardware.power-V2-ndk.vendor \
-    android.hardware.power-V7-ndk.vendor \
-    android.hardware.power.stats-V2-ndk.vendor \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2.vendor \
-    android.hardware.radio-V3-ndk.vendor \
-    android.hardware.radio.config-V3-ndk.vendor \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.data-V3-ndk.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.messaging-V3-ndk.vendor \
-    android.hardware.radio.modem-V3-ndk.vendor \
-    android.hardware.radio.network-V3-ndk.vendor \
-    android.hardware.radio.sap-V1-ndk.vendor \
-    android.hardware.radio.sim-V3-ndk.vendor \
-    android.hardware.radio.voice-V3-ndk.vendor \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio@1.6.vendor \
-    android.hardware.se.omapi.ese.prebuilt.xml \
-    android.hardware.se.omapi.uicc.prebuilt.xml \
-    android.hardware.secure_element-V1-ndk.vendor \
-    android.hardware.secure_element-service.thales \
-    android.hardware.secure_element.thales.libse \
-    android.hardware.secure_element_gto.xml \
-    android.hardware.security.keymint-V1-ndk.vendor \
-    android.hardware.security.keymint-V3-ndk.vendor \
-    android.hardware.security.rkp-V3-ndk.vendor \
-    android.hardware.security.secretkeeper.trusty \
-    android.hardware.security.sharedsecret-V1-ndk.vendor \
-    android.hardware.security.timestamp-V1-ndk.vendor \
-    android.hardware.sensor.accelerometer.prebuilt.xml \
-    android.hardware.sensor.barometer.prebuilt.xml \
-    android.hardware.sensor.compass.prebuilt.xml \
-    android.hardware.sensor.dynamic.head_tracker.prebuilt.xml \
-    android.hardware.sensor.gyroscope.prebuilt.xml \
-    android.hardware.sensor.hifi_sensors.prebuilt.xml \
-    android.hardware.sensor.light.prebuilt.xml \
-    android.hardware.sensor.proximity.prebuilt.xml \
-    android.hardware.sensor.stepcounter.prebuilt.xml \
-    android.hardware.sensor.stepdetector.prebuilt.xml \
-    android.hardware.sensors-V3-ndk.vendor \
-    android.hardware.sensors-multihal.xml \
-    android.hardware.sensors-service.multihal \
-    android.hardware.sensors@1.0.vendor \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.0.vendor \
-    android.hardware.sensors@2.1.vendor \
-    android.hardware.soundtrigger3-V4-ndk.vendor \
-    android.hardware.telephony.carrierlock.prebuilt.xml \
-    android.hardware.telephony.gsm.prebuilt.xml \
-    android.hardware.telephony.ims.prebuilt.xml \
-    android.hardware.telephony.ims.singlereg.prebuilt.xml \
-    android.hardware.thermal-V1-ndk.vendor \
-    android.hardware.thermal-V2-ndk.vendor \
-    android.hardware.thermal-V3-ndk.vendor \
-    android.hardware.thermal@1.0.vendor \
-    android.hardware.thermal@2.0.vendor \
-    android.hardware.touchscreen.multitouch.jazzhand.prebuilt.xml \
-    android.hardware.usb-V4-ndk.vendor \
-    android.hardware.usb.accessory.prebuilt.xml \
-    android.hardware.usb.flags-aconfig-cc-lib.vendor \
-    android.hardware.usb.gadget-V1-ndk.vendor \
-    android.hardware.usb.gadget-V2-ndk.vendor \
-    android.hardware.usb.gadget@1.0.vendor \
-    android.hardware.usb.host.prebuilt.xml \
-    android.hardware.vibrator-V3-ndk.vendor \
-    android.hardware.weaver-V3-ndk.vendor \
-    android.hardware.wifi.aware.prebuilt.xml \
-    android.hardware.wifi.common-V2-ndk.vendor \
-    android.hardware.wifi.direct.prebuilt.xml \
-    android.hardware.wifi.hostapd-V3-ndk.vendor \
-    android.hardware.wifi.passpoint.prebuilt.xml \
-    android.hardware.wifi.prebuilt.xml \
-    android.hardware.wifi.rtt.prebuilt.xml \
-    android.hardware.wifi.supplicant-V5-ndk.vendor \
-    android.hidl.memory.token@1.0.vendor \
-    android.hidl.safe_union@1.0.vendor \
-    android.hidl.token@1.0-utils.vendor \
-    android.hidl.token@1.0.vendor \
-    android.media.audio.common.types-V5-ndk.vendor \
-    android.media.audio.eraser.types-V2-ndk.vendor \
-    android.media.soundtrigger.types-V4-ndk.vendor \
-    android.software.angle.xml \
-    android.software.device_id_attestation.prebuilt.xml \
-    android.software.ipsec_tunnel_migration.prebuilt.xml \
-    android.software.ipsec_tunnels.prebuilt.xml \
-    android.software.midi.prebuilt.xml \
-    android.software.verified_boot.prebuilt.xml \
-    android.system.keystore2-V1-ndk.vendor \
-    android.trusty.stats.nw.setter-cpp.vendor \
-    checkpoint_gc \
-    chre_atoms_log \
-    chremetrics-cpp \
+    android.frameworks.stats-V3-ndk.vendor \
+    com.android.extensions.computercontrol \
     com.android.hardware.biometrics.face.virtual \
-    com.nxp.mifare.prebuilt.xml \
+    computercontrol.extension.xml \
     fastbootd \
     fsck.f2fs.vendor \
-    handheld_core_hardware.prebuilt.xml \
-    hfp_codec_capabilities_xml \
     ld-android.vendor_ramdisk \
-    libaconfig_storage_file.vendor \
-    libaconfig_storage_protos.vendor \
-    libaconfig_storage_read_api.vendor \
-    libaho_corasick.vendor \
-    libalsautilsv2.vendor \
-    libandroid_log_sys.vendor \
-    libandroid_logger.vendor \
-    libanstyle.vendor \
-    libanyhow.vendor \
-    libasyncio.recovery \
-    libaudio_aidl_conversion_common_ndk.vendor \
-    libaudioaidlcommon.vendor \
-    libaudioaidlranges.vendor \
-    libaudioroutev2.vendor \
-    libaudioserviceexampleimpl \
-    libavservices_minijail.vendor \
     libbase.vendor_ramdisk \
-    libbinder_trusty \
-    libbionic_bindgen.vendor \
-    libbitflags.vendor \
-    libbluetooth_audio_session_aidl.vendor \
-    libbundleaidl \
-    libbytes.vendor \
     libc++.vendor_ramdisk \
     libc.vendor_ramdisk \
-    libcap.vendor \
-    libcfg_if.vendor \
-    libclang_rt.ubsan_standalone.vendor \
-    libclap.vendor \
-    libclap_builder.vendor \
-    libclap_lex.vendor \
-    libcodec2.vendor \
-    libcodec2_aidl_V2.vendor \
-    libcodec2_hal_common.vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_hidl_plugin \
-    libcodec2_vndk.vendor \
-    libcppbor.vendor \
-    libcppcose_rkp.vendor \
-    libcurl.vendor \
-    libcutils_bindgen.vendor \
-    libcxx.vendor \
     libdl.vendor_ramdisk \
-    libdownmixaidl \
-    libdrm.vendor \
-    libdumpstateutil.vendor \
-    libdynamicsprocessingaidl \
-    libeffectconfig \
-    libenv_filter.vendor \
-    libenv_logger.vendor \
-    libevent.vendor \
-    libexpat.vendor \
     libext2_blkid.vendor_ramdisk \
     libext2_com_err.vendor_ramdisk \
     libext2_e2p.vendor_ramdisk \
     libext2_quota.vendor_ramdisk \
-    libext2_uuid.vendor \
     libext2_uuid.vendor_ramdisk \
     libext2fs.vendor_ramdisk \
-    libflatbuffers-cpp.vendor \
-    libfmq.vendor \
-    libfoldhash.vendor \
-    libgralloctypes.vendor \
-    libgui.vendor \
-    libhapticgeneratoraidl \
-    libhidlmemory.vendor \
-    libhidltransport.vendor \
-    libhidparser \
-    libhwbinder.vendor \
-    libion.vendor \
-    libjsoncpp.vendor \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor \
-    libkeymint_support_V3.vendor \
-    libkeystore-engine-wifi-hidl \
-    liblazy_static.vendor \
-    liblibc.vendor \
-    liblog.vendor_ramdisk \
-    liblog_rust.vendor \
-    liblogger.vendor \
-    libloudnessenhanceraidl \
-    libm.vendor_ramdisk \
-    libmedia_omx.vendor \
-    libmediautils_vendor.vendor \
-    libmemchr.vendor \
-    libmemmap2.vendor \
-    libmemoffset.vendor \
-    libmemunreachable.vendor \
-    libminijail.vendor \
-    libnbaio_mono \
-    libnetutils.vendor \
-    libnix.vendor \
-    libnl.vendor \
-    libonce_cell.vendor \
-    libpng.vendor \
-    libpower.vendor \
-    libprocessgroup.vendor \
-    libprotobuf.vendor \
-    libprotobuf_support.vendor \
-    libregex.vendor \
-    libregex_automata.vendor \
-    libregex_syntax.vendor \
-    libreverbaidl \
-    librustutils.vendor \
-    libsensorndkbridge \
-    libserde.vendor \
-    libserde_core.vendor \
-    libsfplugin_ccodec_utils.vendor \
-    libsparse.vendor \
-    libsparse.vendor_ramdisk \
-    libsqlite.vendor \
     libssl.vendor \
-    libstagefright_aidl_bufferpool2.vendor \
-    libstagefright_bufferpool@2.0.1.vendor \
-    libstagefright_omx_utils.vendor \
-    libstagefright_xmlparser.vendor \
-    libstd.vendor \
-    libstrsim.vendor \
-    libsystem_properties_bindgen_sys.vendor \
-    libthiserror.vendor \
-    libtinyalsa.vendor \
-    libtinyalsav2.vendor \
-    libtinycompress \
     libtrusty.recovery \
-    libui.vendor \
-    libvisualizeraidl \
-    libxml2.vendor \
     libz.vendor_ramdisk \
-    libziparchive.vendor \
     linker.vendor_ramdisk \
     logcatd \
     logpersist.start \
-    nfc-service-default.xml \
-    nfc_nci.st21nfc.default \
     odm_file_contexts.recovery \
     odm_property_contexts.recovery \
     plat_file_contexts.recovery \
@@ -506,7 +187,6 @@ PRODUCT_PACKAGES += \
     product_property_contexts.recovery \
     product_service_contexts.recovery \
     resize2fs.vendor_ramdisk \
-    sensors.dynamic_sensor_hal \
     sepolicy.recovery \
     sysconfig_com.google.android.iwlan.xml \
     system_ext_file_contexts.recovery \
@@ -600,16 +280,9 @@ PRODUCT_PACKAGES += \
     PixelImsMediaService \
     PixelNfc \
     PixelQualifiedNetworksService \
-    PixelVibratorFlagsL26 \
     ShannonIms \
     ShannonRcs \
-    aconfig_gpu_flags_c_lib \
-    aconfig_gsc_flags_c_lib \
-    activity \
-    aidb_recorder \
-    ambient_volume \
     android.hardware.audio.service-aidl.aoc \
-    android.hardware.authsecret-impl.nos \
     android.hardware.authsecret-service.citadel \
     android.hardware.biometrics.fingerprint-service.goodix \
     android.hardware.bluetooth-service.bcmbtlinux \
@@ -618,86 +291,61 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.default_recovery-pixel__2 \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
+    android.hardware.drm-service.clearkey \
     android.hardware.dumpstate.3-service \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.fastboot@1.1-impl.pixel \
     android.hardware.gnss-service \
     android.hardware.gnss-service.pixel \
     android.hardware.graphics.allocator-V2-service \
-    android.hardware.graphics.allocator-aidl-impl \
     android.hardware.gxp.logging@service-gxp-logging \
     android.hardware.health-service.zuma \
     android.hardware.health-service.zuma_recovery \
+    android.hardware.health.storage-service.default \
     android.hardware.input.processor-service \
     android.hardware.memtrack-service.pixel \
     android.hardware.neuralnetworks@service-darwinn-aidl \
-    android.hardware.oemlock-impl.nos \
+    android.hardware.nfc-service.st \
     android.hardware.oemlock-service.citadel \
     android.hardware.power-service.pixel-libperfmgr \
-    android.hardware.power.stats-impl.gs-common \
-    android.hardware.power.stats-impl.pixel \
-    android.hardware.power.stats-impl.zuma \
     android.hardware.power.stats-service.pixel \
+    android.hardware.secure_element-service.thales \
     android.hardware.secure_element-service.uicc \
-    android.hardware.security.keymint-impl.nos \
     android.hardware.security.keymint-service.citadel \
+    android.hardware.security.secretkeeper.trusty \
+    android.hardware.sensors-service.multihal \
     android.hardware.thermal-service.pixel \
     android.hardware.usb-service \
     android.hardware.usb.gadget-service \
-    android.hardware.vibrator-impl.cs40l26 \
     android.hardware.vibrator-service.cs40l26 \
-    android.hardware.weaver-bridge.nos \
-    android.hardware.weaver-impl.nos \
     android.hardware.weaver-service.citadel \
-    android.hardware.weaver2-impl.nos \
-    aoc_aconfig_flags_c_lib \
     aocd \
-    aocx-V3-ndk \
     aocxd \
-    ar_bridge \
-    arm.graphics-V1-ndk \
     backup_ota_log.sh \
     battery_mitigation \
-    biometricsuez \
     bipchmgr \
     block_queue_depth \
-    blue \
-    capo \
     cbd \
-    cc \
+    checkpoint_gc \
     citadel_updater \
     citadeld \
-    columbus \
-    columbus_lite \
     com.google.android.camera.experimental2023 \
     com.google.android.camera.extensions \
     com.google.android.camerax.extensions \
     com.google.android.widevine-15027108-cp2a \
-    com.google.edgetpu.tachyon-ndk \
     com.google.edgetpu.tachyon-service \
-    com.google.edgetpu_app_service-V6-ndk \
     com.google.edgetpu_app_service-V6-ndk.system_ext \
-    com.google.edgetpu_vendor_service-V2-ndk \
     com.google.edgetpu_vendor_service-V2-ndk.system_ext \
-    com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk \
-    com.google.hardware.pixel.display-V15-ndk \
-    com.google.hardware.pixel.display-V21-ndk \
-    com.google.hardware.pixel.display-V4-ndk \
-    com.google.input-V2-ndk \
-    com.google.input-V8-ndk \
     com.google.pixel.camera.connectivity \
     com.google.pixel.camera.hal \
     com.google.pixel.camera.services.cameraidremapper \
     com.google.pixel.camera.services.lyricconfigprovider \
     com.google.pixel.euicc.update \
-    com.google.pixel.modem.logmasklibrary-V1-ndk \
     com.google.pixel.wifi.ext \
     copy_efs_files_to_data \
-    dck_gating \
     devcoredump_action \
     disable_contaminant_detection.sh \
     dmd \
-    drop \
     dump_aoc \
     dump_devfreq \
     dump_display_logbuffer \
@@ -718,176 +366,35 @@ PRODUCT_PACKAGES += \
     dump_trusty.sh \
     dump_umfw_stat \
     dump_wlan.sh \
-    fake_gxp_telemetry_reader \
-    fake_libtachyon_core \
     flood.control.hal \
-    fp_utils \
-    gesture \
     gnssd \
     google-ril \
     google.hardware.media.c2@2.0-service \
     gpuflag \
     gs_watchdogd \
-    gxp_metrics_logger \
-    gxp_telemetry_reader \
-    hardware.google.bluetooth.bt_channel_avoidance@1.0 \
-    hardware.google.ril_ext-V1-ndk \
-    health \
     hostapd \
-    imu_cal \
     init.camera.set-interrupts-ownership \
     init.radio.sh \
     init_citadel \
     insmod.sh \
-    instant_sense \
-    ip_health \
-    lassen_dmd_constants \
-    libAlgFx_HiFi3z \
-    libExynosC2ComponentStore \
-    libExynosC2H263Dec \
-    libExynosC2H263Enc \
-    libExynosC2H264Dec \
-    libExynosC2H264Enc \
-    libExynosC2HevcDec \
-    libExynosC2HevcEnc \
-    libExynosC2Mpeg4Dec \
-    libExynosC2Mpeg4Enc \
-    libExynosC2Vp8Dec \
-    libExynosC2Vp8Enc \
-    libExynosC2Vp9Dec \
-    libExynosC2Vp9Enc \
-    libExynosHWCService \
-    libGLES_mali \
-    libOpenCL \
-    libOpenCL-pixel \
-    lib_aion_buffer \
-    lib_jpg_encoder \
-    lib_reader \
-    lib_vendor_gsc_atoms \
-    libacryl \
-    libacryl_hdr_plugin \
-    libalertv3 \
-    libaoc \
-    libbw_av1dec \
-    libbw_av1enc \
-    libc2filterplugin \
-    libcustomgnss \
-    libdarwinn_hal \
-    libdeeptouch \
-    libdisplay_tflite \
-    libdisplaycolor \
-    libdisppower-pixel \
     libdmengine \
     libdmjavaplugin \
-    libdrmresource \
-    libdump \
-    libedgetpu_client.google \
-    libedgetpu_litert \
-    libedgetpu_tachyon.google \
-    libedgetpu_tflite_compiler \
-    libedgetpu_util \
-    libexynosdisplay \
-    libexynosutils \
-    libexynosv4l2 \
-    libfvsam_prm_parser \
-    libgc2_bw_av1_dec \
-    libgc2_bw_av1_enc \
-    libgc2_bw_base \
-    libgc2_bw_cwl \
-    libgc2_bw_log \
-    libgc2_bw_store \
-    libgc2_bw_utils \
-    libgc2_hal_flags \
-    libgf_hal \
-    libgooglerilaudio \
-    libgooglerilmemmonitor \
-    libgpudataproducer \
-    libgpuflag_aconfig_rust.dylib \
-    libgril_oem-google \
-    libgxp \
-    libhwjpeg \
-    libion_google \
-    libjson \
-    libmahalcontroller \
-    libmedia_ecoservice \
     libmediaadaptor \
-    libmemtrack-pixel \
-    libmetrics_logger \
-    libmodem_ml_svc_proto \
-    libmodem_svc_proto_legacy_soong \
     libmosey_daemon_ffi \
-    libnos \
-    libnos_citadeld_proxy \
-    libnos_client_citadel \
-    libnos_datagram \
-    libnos_datagram_citadel \
-    libnos_feature \
-    libnos_transport \
-    libnosprotos \
-    liboemcrypto \
-    liboemservice \
     liboemservice_proxy_default \
-    libperfmgr \
-    libpixelatoms_defs \
     libpixeldisplaymanager_jni \
-    libpixelhealth \
     libpixelimsmedia \
-    libpixelstats \
-    libpixelstatsflags \
     libpowerstatshaldataprovider \
+    libprotobuf-cpp-lite-6.33.5-absl20260526 \
     librecovery_ui_ext \
-    libril-aidl \
-    libril_gfeature \
-    libril_sitril \
-    librtxproto_aidl-default \
-    libsensorsuez \
-    libsit_oem \
-    libsit_oem_proto \
-    libsitril \
-    libsitril-audio \
-    libsitril-client \
-    libsitril-gps \
-    libsitril-ims \
-    libspeechenhancer \
-    libstpreprocess21 \
-    libstreset23 \
-    libsueznanoappclients \
-    libtachyon_core \
-    libtachyon_dsp_core \
-    libtouchflow \
-    libusf \
-    libutils-default \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
-    libvendorgraphicbuffer \
-    libwlcproto_aidl-default \
-    libwpa_client \
-    location \
-    mapper.pixel \
     misc_writer \
-    modem_android_property_manager \
-    modem_android_property_manager_impl \
-    modem_clock_manager \
-    modem_clock_manager_impl \
-    modem_log_constants \
-    modem_log_dumper \
     modem_logging_control \
-    modem_ml_pw_rpc_gen \
     modem_ml_svc_sit \
-    modemml-tflite-service-aidl-V1-ndk \
     mosey_server \
-    motiondetector \
-    nos_app_avb \
-    nos_app_keymaster \
-    nos_app_weaver \
     oemrilhook \
     pcie_power_control \
     pixel-experiments-recovery.sh \
-    pixel-power-ext-V1-ndk \
-    pixel-power-ext-V2-ndk \
-    pixel_stateresidency_provider_aidl_interface-ndk \
-    pixelatoms-cpp \
     pixelstats-vendor \
-    pixelstats_flags_c_lib \
     predump_gti0.sh \
     predump_touch.sh \
     rebalance_interrupts-vendor \
@@ -895,15 +402,9 @@ PRODUCT_PACKAGES += \
     ril-extension \
     rild_exynos \
     samsung.hardware.media.c2@1.2-service \
-    sd \
     sendhint \
-    sensorcollector \
-    sensors.usf \
     shared_modem_platform \
     storage_init.sh \
-    structural_health \
-    system_signal_hub \
-    thermal-budget-interface-ndk \
     thermal_symlinks \
     touch_gti_ical \
     trusty_metricsd \
@@ -912,53 +413,19 @@ PRODUCT_PACKAGES += \
     usb_accessory_utils \
     usboffmode \
     usf_stats \
-    uv_exposure \
-    vendor.google.aam-V3-ndk \
-    vendor.google.aam-service \
-    vendor.google.battery_mitigation-V1-ndk \
-    vendor.google.battery_mitigation.service_static \
-    vendor.google.bluetooth_ext-V1-ndk \
-    vendor.google.bluetooth_ext-V4-ndk \
     vendor.google.edgetpu_app_service@1.0-service \
     vendor.google.edgetpu_vendor_service@1.0-service \
-    vendor.google.gnss_ext-V1-ndk \
-    vendor.google.google_battery-V5-ndk \
     vendor.google.google_battery-service \
-    vendor.google.plat_security-V1-ndk \
     vendor.google.plat_security-service \
-    vendor.google.radio_ext-V1-ndk \
     vendor.google.radio_ext-service \
     vendor.google.radioext@1.0-service \
-    vendor.google.whitechapel.audio.audioext@4.0 \
     vendor.google.whitechapel.audio.audioext@4.0.system_ext \
-    vendor.google.whitechapel.audio.extension-V5-ndk \
-    vendor.google.whitechapel.audio.extension-V8-ndk \
     vendor.google.whitechapel.audio.extension-V8-ndk.system_ext \
     vendor.google.whitechapel.audio.hal.parserservice \
-    vendor.google.whitechapel.audio.hal.utils \
-    vendor.google.whitechapel.audio.hal.utils.adaptedinfo \
-    vendor.google.whitechapel.audio.hal.utils.adaptedinfo.repeated_thread \
-    vendor.google.whitechapel.audio.hal.utils.aoc \
-    vendor.google.whitechapel.audio.hal.utils.bluenote \
-    vendor.google.whitechapel.audio.hal.utils.pipe \
-    vendor.google.whitechapel.audio_flags \
-    vendor.google.wireless_charger-V7-ndk \
     vendor.google.wireless_charger-default \
-    vendor.google.wireless_charger.service-V2-ndk \
     vendor.google.wireless_charger.service-default \
-    vendor.radio.base \
-    vendor.radio.protocol.sit.base \
-    vendor.radio.protocol.sit.json \
-    vendor.radio.protocol.sit.stream \
-    vendor.samsung_slsi.telephony.hardware.oemservice@1.0 \
     vendor.samsung_slsi.telephony.hardware.oemservice@1.0.system_ext \
-    vendor.samsung_slsi.telephony.hardware.radioExternal@1.0 \
     vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.system_ext \
-    vendor.samsung_slsi.telephony.hardware.radioExternal@1.1 \
-    vendor_chre_atoms_log \
-    vendor_chre_metrics-cpp \
-    vice \
-    vulkan.mali \
     wfc-pkt-router \
     wpa_supplicant
 
@@ -1620,10 +1087,18 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1-m40.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1-m40.img \
     vendor/google_devices/akita/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1-m41.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1-m41.img \
     vendor/google_devices/akita/proprietary/system_ext/priv-app/EuiccSupportPixel-P23/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel-P23/esim-full-v1.img \
+    vendor/google_devices/akita/proprietary/system/usr/keylayout/Vendor_057e_Product_2006.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_057e_Product_2006.kl \
+    vendor/google_devices/akita/proprietary/system/usr/keylayout/Vendor_057e_Product_2007.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_057e_Product_2007.kl \
+    vendor/google_devices/akita/proprietary/system/usr/keylayout/Vendor_0f0d_Product_01b3.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_0f0d_Product_01b3.kl \
+    vendor/google_devices/akita/proprietary/system/usr/keylayout/Vendor_0f0d_Product_01b4.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_0f0d_Product_01b4.kl \
+    vendor/google_devices/akita/proprietary/system/usr/keylayout/Vendor_2dc8_Product_6006.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_2dc8_Product_6006.kl \
     vendor/google_devices/akita/proprietary/vendor_ramdisk/system/etc/fstab.zuma:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.zuma \
-    vendor/google_devices/akita/proprietary/vendor_ramdisk/system/etc/fstab.zuma-fips:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.zuma-fips \
+    vendor/google_devices/akita/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs \
     vendor/google_devices/akita/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json \
+    vendor/google_devices/akita/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs \
     vendor/google_devices/akita/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json \
+    vendor/google_devices/akita/proprietary/vendor/etc/aidl/le_audio/aidl_default_audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_default_audio_set_configurations.json \
+    vendor/google_devices/akita/proprietary/vendor/etc/aidl/le_audio/aidl_default_audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_default_audio_set_scenarios.json \
     vendor/google_devices/akita/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
     vendor/google_devices/akita/proprietary/vendor/etc/aoc/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
     vendor/google_devices/akita/proprietary/vendor/etc/aoc/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
@@ -1651,30 +1126,54 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/bluetooth/firmware_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/firmware_config.json \
     vendor/google_devices/akita/proprietary/vendor/etc/bluetooth/hal_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/hal_config.json \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/activity.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/aidb_recorder.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/aidb_recorder.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/aidb_recorder.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/aidb_recorder.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/ambient_volume.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ambient_volume.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/ambient_volume.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ambient_volume.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/ar_bridge.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ar_bridge.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/ar_bridge.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ar_bridge.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/blue.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/blue.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/blue.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/blue.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/capo.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/capo.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/capo.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/capo.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/cc.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/cc.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/cc.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/cc.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/columbus_lite.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/columbus_lite.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/columbus_lite.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/columbus_lite.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/columbus.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/columbus.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/columbus.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/columbus.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/dck_gating.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/dck_gating.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/dck_gating.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/dck_gating.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/drop.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/drop.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/drop.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/drop.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/gesture.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/gesture.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/gesture.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/gesture.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/health.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/health.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/health.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/health.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/imu_cal.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/imu_cal.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/imu_cal.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/imu_cal.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/instant_sense.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/instant_sense.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/instant_sense.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/instant_sense.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/ip_health.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ip_health.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/ip_health.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ip_health.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/libchre_log_database.bin:$(TARGET_COPY_OUT_VENDOR)/etc/chre/libchre_log_database.bin \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/location.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/location.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/location.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/location.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/motiondetector.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/motiondetector.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/motiondetector.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/motiondetector.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/sd.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/sd.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/sd.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/sd.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/sensorcollector.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/sensorcollector.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/sensorcollector.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/sensorcollector.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/structural_health.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/structural_health.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/structural_health.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/structural_health.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/system_signal_hub.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/system_signal_hub.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/system_signal_hub.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/system_signal_hub.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/uv_exposure.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/uv_exposure.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.so \
     vendor/google_devices/akita/proprietary/vendor/etc/chre/vice.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/vice.napp_header \
+    vendor/google_devices/akita/proprietary/vendor/etc/chre/vice.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/vice.so \
     vendor/google_devices/akita/proprietary/vendor/etc/database/ecc_version:$(TARGET_COPY_OUT_VENDOR)/etc/database/ecc_version \
     vendor/google_devices/akita/proprietary/vendor/etc/display_colordata_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal0.pb \
     vendor/google_devices/akita/proprietary/vendor/etc/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
@@ -1697,9 +1196,10 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/fstab.zram.60p:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zram.60p \
     vendor/google_devices/akita/proprietary/vendor/etc/fstab.zram.6g:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zram.6g \
     vendor/google_devices/akita/proprietary/vendor/etc/fstab.zuma:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zuma \
-    vendor/google_devices/akita/proprietary/vendor/etc/fstab.zuma-fips:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zuma-fips \
+    vendor/google_devices/akita/proprietary/vendor/etc/gnss/bypass.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/bypass.bin \
     vendor/google_devices/akita/proprietary/vendor/etc/gnss/ca.pem:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/ca.pem \
     vendor/google_devices/akita/proprietary/vendor/etc/gnss/gps.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cfg \
+    vendor/google_devices/akita/proprietary/vendor/etc/gnss/hash.bin:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/hash.bin \
     vendor/google_devices/akita/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.audio.service-aidl.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service-aidl.aoc.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
@@ -1707,6 +1207,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.boot-service.default-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.boot-service.default-pixel.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.drm-service.clearkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.clearkey.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.dumpstate.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate.3-service.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
@@ -1717,8 +1218,11 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.power-service.pixel-libperfmgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power-service.pixel-libperfmgr.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.secure_element_gto.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element_gto.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.secure_element-service.uicc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element-service.uicc.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.security.secretkeeper.trusty.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.secretkeeper.trusty.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.sensors-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors-service-multihal.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.thermal-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal-service.pixel.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.usb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-service.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/android.hardware.usb.gadget-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-service.rc \
@@ -1739,6 +1243,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/fingerprint-goodix.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-goodix.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/google.hardware.media.c2@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@2.0-service.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/gpuflag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gpuflag.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/health-storage-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/health-storage-default.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/hw/init.akita.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.akita.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/hw/init.zuma.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zuma.rc \
@@ -1765,6 +1270,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/init.touch.gti0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.gti0.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/init.touch.ical0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.ical0.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/init.touch.permissions.gti0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.permissions.gti0.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/init.touch.predump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.predump.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/init.usboffmode.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usboffmode.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
@@ -1774,14 +1280,19 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/nfc-service-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nfc-service-default.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pcie_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pcie_power.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-bgtasks-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-bgtasks-experiment.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-dmabuf-deferred-free-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-dmabuf-deferred-free-experiment.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-experiments-recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-experiments-recovery.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-gnss-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-gnss-default.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-min-gcma-dmabuf-kb-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-min-gcma-dmabuf-kb-experiment.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-mm-gki.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-mm-gki.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-pbmprofile-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-pbmprofile-experiment.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-sched-proxy-exec-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-sched-proxy-exec-experiment.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-thermal-symlinks.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-thermal-symlinks.rc \
-    vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-zram-comp-algorithm-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-zram-comp-algorithm-experiment.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/pixel-zygote-boost-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-zygote-boost-experiment.rc \
+    vendor/google_devices/akita/proprietary/vendor/etc/init/pixelmd-experiment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelmd-experiment.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pixelstats-vendor.zuma.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.zuma.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/pktrouter.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pktrouter.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/rebalance_interrupts-vendor.gs101.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rebalance_interrupts-vendor.gs101.rc \
@@ -1791,7 +1302,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/init/storage.init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/storage.init.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/trusty_metricsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusty_metricsd.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/twoshay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/twoshay.rc \
-    vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.aam.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.aam.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.battery_mitigation-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.battery_mitigation-default.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.edgetpu_vendor_service@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.edgetpu_vendor_service@1.0-service.rc \
     vendor/google_devices/akita/proprietary/vendor/etc/init/vendor.google.google_battery-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.google_battery-default.rc \
@@ -3379,6 +2889,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/KIOXIATHGJFJT1E45BATPC0100.img:$(TARGET_COPY_OUT_VENDOR)/firmware/KIOXIATHGJFJT1E45BATPC0100.img \
     vendor/google_devices/akita/proprietary/vendor/firmware/KIOXIATHGJFJT2T85BAT0C0100.img:$(TARGET_COPY_OUT_VENDOR)/firmware/KIOXIATHGJFJT2T85BAT0C0100.img \
     vendor/google_devices/akita/proprietary/vendor/firmware/mali_csffw-legacy-r56p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-legacy-r56p0.bin \
+    vendor/google_devices/akita/proprietary/vendor/firmware/mali_csffw-r49p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r49p0.bin \
     vendor/google_devices/akita/proprietary/vendor/firmware/mali_csffw-r54p1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p1.bin \
     vendor/google_devices/akita/proprietary/vendor/firmware/mali_csffw-r54p2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p2.bin \
     vendor/google_devices/akita/proprietary/vendor/firmware/mali_csffw-r54p3.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p3.bin \
@@ -3481,6 +2992,458 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/firmware/uecapconfig/VZW.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/VZW.binarypb \
     vendor/google_devices/akita/proprietary/vendor/firmware/uecapconfig/WILDCARD.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WILDCARD.binarypb \
     vendor/google_devices/akita/proprietary/vendor/firmware/uecapconfig/WINDTRE.binarypb:$(TARGET_COPY_OUT_VENDOR)/firmware/uecapconfig/WINDTRE.binarypb \
+    vendor/google_devices/akita/proprietary/vendor/lib64/aconfig_gpu_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aconfig_gpu_flags_c_lib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/aconfig_gsc_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aconfig_gsc_flags_c_lib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.frameworks.sensorservice-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.frameworks.stats-V1-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.stats-V1-cpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.frameworks.stats-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.stats-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.frameworks.stats-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.stats-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.audio.common-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.audio.common@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@5.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.audio.core-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.core-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.audio.core.sounddose-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.core.sounddose-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.audio.effect-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.authsecret-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.authsecret-impl.nos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.authsecret-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.authsecret-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.biometrics.common-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.common-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.biometrics.fingerprint-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.fingerprint-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.audio-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio-impl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.audio-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio-V6-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio@2.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.finder-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.finder-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.lmp_event-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.lmp_event-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.ranging-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.ranging-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.bluetooth.socket-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.socket-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.boot-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.boot-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.boot@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.boot@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.boot@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.boot@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.common-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.common.fmq-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common.fmq-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.contexthub-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.contexthub-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.drm-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.drm-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.drm.common-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm.common-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.dumpstate-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.dumpstate-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.measurement_corrections@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss.visibility_control@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss.visibility_control@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.gnss@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss@2.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.allocator-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.allocator@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.allocator@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator@3.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.allocator@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator@4.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.bufferqueue@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.bufferqueue@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.bufferqueue@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.bufferqueue@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.common-V7-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common-V7-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.common@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.common@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.common@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@1.2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer@2.1-resources.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.1-resources.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer@2.2-resources.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.2-resources.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.3.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.4.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.composer3-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer3-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.mapper@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.mapper@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@2.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.mapper@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@3.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.graphics.mapper@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@4.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.health-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.health-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.health-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.health.storage-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health.storage-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.input.common-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.input.common-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.input.processor-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.input.processor-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.keymaster-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.media.bufferpool@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.bufferpool@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.media.bufferpool2-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.bufferpool2-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.media.c2-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.c2-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.media.omx@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.omx@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.media@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.memtrack-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.memtrack-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.neuralnetworks-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.neuralnetworks@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.neuralnetworks@1.3.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.nfc-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.nfc-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.oemlock-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.oemlock-impl.nos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.oemlock-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.oemlock-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power-V7-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power-V7-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power.stats-impl.gs-common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power.stats-impl.gs-common.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power.stats-impl.pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power.stats-impl.pixel.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power.stats-impl.zuma.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power.stats-impl.zuma.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power.stats-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power.stats-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.power@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.config-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.config@1.2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.data-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.data-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.deprecated@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.messaging-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.messaging-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.modem-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.modem-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.network-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.network-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.sap-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.sap-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.sim-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.sim-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio.voice-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio.voice-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.3.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.4.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.5.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.radio@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.6.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.secure_element-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.secure_element.thales.libse.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element.thales.libse.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.security.keymint-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-impl.nos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.security.keymint-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.security.keymint-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.security.rkp-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.rkp-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.sharedsecret-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.security.timestamp-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.timestamp-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.sensors-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.0-ScopedWakelock.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.sensors@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.sensors@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.soundtrigger3-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger3-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.thermal-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.thermal-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.thermal-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.thermal@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@2.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.usb-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.usb.flags-aconfig-cc-lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.flags-aconfig-cc-lib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.usb.gadget-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.usb.gadget-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.usb.gadget@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.vibrator-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.vibrator-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.weaver-bridge.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-bridge.nos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.weaver-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-impl.nos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.weaver-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.weaver2-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver2-impl.nos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.wifi.common-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.common-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.wifi.hostapd-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hardware.wifi.supplicant-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hidl.memory.token@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.memory.token@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hidl.safe_union@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.safe_union@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hidl.token@1.0-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.token@1.0-utils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.hidl.token@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.token@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.media.audio.common.types-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.media.audio.common.types-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.media.audio.eraser.types-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.media.audio.eraser.types-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.media.soundtrigger.types-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.media.soundtrigger.types-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.system.keystore2-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.system.keystore2-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/android.trusty.stats.nw.setter-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.trusty.stats.nw.setter-cpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/aoc_aconfig_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aoc_aconfig_flags_c_lib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/aocx-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aocx-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/arm.graphics-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/arm.graphics-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/biometricsuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/biometricsuez.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/chre_atoms_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/chre_atoms_log.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/chremetrics-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/chremetrics-cpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.edgetpu_app_service-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu_app_service-V6-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu_vendor_service-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.edgetpu.tachyon-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu.tachyon-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.hardware.pixel.display-V15-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V15-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.hardware.pixel.display-V23-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V23-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.hardware.pixel.display-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.input-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.input-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V8-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.pixel.modem.logmasklibrary-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/fake_gxp_telemetry_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fake_gxp_telemetry_reader.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/fake_libtachyon_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fake_libtachyon_core.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/fp_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fp_utils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/gxp_metrics_logger.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gxp_metrics_logger.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/gxp_telemetry_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gxp_telemetry_reader.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hardware.google.bluetooth.bt_channel_avoidance@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hardware.google.bluetooth.bt_channel_avoidance@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hardware.google.ril_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hardware.google.ril_ext-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hw/android.hardware.graphics.allocator-aidl-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator-aidl-impl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hw/android.hardware.vibrator-impl.cs40l26.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.vibrator-impl.cs40l26.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hw/mapper.pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/mapper.pixel.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hw/sensors.dynamic_sensor_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.dynamic_sensor_hal.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/hw/vulkan.mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.mali.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/lassen_dmd_constants.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lassen_dmd_constants.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/lib_aion_buffer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_aion_buffer.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/lib_jpg_encoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_jpg_encoder.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/lib_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_reader.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/lib_vendor_gsc_atoms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_vendor_gsc_atoms.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaconfig_storage_file.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaconfig_storage_file.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaconfig_storage_protos.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaconfig_storage_protos.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaconfig_storage_read_api.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaconfig_storage_read_api.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libacryl_hdr_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacryl_hdr_plugin.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libacryl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacryl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libalertv3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalertv3.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libAlgFx_HiFi3z.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlgFx_HiFi3z.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libalsautilsv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalsautilsv2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libandroid_log_sys.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libandroid_log_sys.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libandroid_logger.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libandroid_logger.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libanstyle.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanstyle.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libanyhow.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanyhow.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaoc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaudio_aidl_conversion_common_ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudio_aidl_conversion_common_ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaudioaidlcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioaidlcommon.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaudioaidlranges.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioaidlranges.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaudioroutev2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioroutev2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libaudioserviceexampleimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioserviceexampleimpl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libavservices_minijail.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavservices_minijail.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbinder_trusty.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinder_trusty.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbionic_bindgen.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbionic_bindgen.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbitflags.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitflags.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbluetooth_audio_session_aidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_aidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbw_av1dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbw_av1dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbw_av1enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbw_av1enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libbytes.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbytes.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libc2filterplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2filterplugin.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcap.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcfg_if.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcfg_if.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libclang_rt.ubsan_standalone-aarch64-android.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libclang_rt.ubsan_standalone-aarch64-android.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libclap_builder.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libclap_builder.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libclap_lex.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libclap_lex.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libclap.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libclap.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcodec2_aidl_V2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_aidl_V2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcodec2_hal_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hal_common.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcodec2_hidl_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl_plugin.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcodec2_vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcodec2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcommand_fds.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcommand_fds.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcppbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcppbor.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcppcose_rkp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcppcose_rkp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcurl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcurl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcustomgnss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcustomgnss.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcutils_bindgen.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcutils_bindgen.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libcxx.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcxx.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdarwinn_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdarwinn_hal.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdeeptouch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdeeptouch.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdisplay_tflite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplay_tflite.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdisplaycolor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplaycolor.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdrmresource.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmresource.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdump.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdump.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libdumpstateutil.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdumpstateutil.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libedgetpu_client.google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_client.google.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libedgetpu_litert.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_litert.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libedgetpu_tachyon.google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_tachyon.google.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libedgetpu_tflite_compiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_tflite_compiler.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libedgetpu_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_util.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libeffectconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffectconfig.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libenv_filter.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libenv_filter.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libenv_logger.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libenv_logger.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libevent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libevent.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libexpat.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexpat.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2ComponentStore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2ComponentStore.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2H263Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H263Dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2H263Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H263Enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2H264Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H264Dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2H264Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H264Enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2HevcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2HevcDec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2HevcEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2HevcEnc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2Mpeg4Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Mpeg4Dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2Mpeg4Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Mpeg4Enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2Vp8Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp8Dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2Vp8Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp8Enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2Vp9Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp9Dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosC2Vp9Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp9Enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosdisplay.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libExynosHWCService.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosHWCService.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libexynosutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosutils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libexynosv4l2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosv4l2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libflatbuffers-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libflatbuffers-cpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libfmq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfmq.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libfoldhash.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfoldhash.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libfvsam_prm_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfvsam_prm_parser.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_av1_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_av1_dec.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_av1_enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_av1_enc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_base.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_cwl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_cwl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_log.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_store.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_store.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_bw_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_bw_utils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgc2_hal_flags.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_hal_flags.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgf_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_hal.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgooglerilaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgooglerilaudio.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgooglerilmemmonitor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgooglerilmemmonitor.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgpuflag_aconfig_rust.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpuflag_aconfig_rust.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgralloctypes.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgril_oem-google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgril_oem-google.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgui.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libgxp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgxp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libhidlmemory.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlmemory.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidltransport.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libhidparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidparser.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwbinder.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libhwjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwjpeg.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libion_google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_google.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libjson.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjson.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libjsoncpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjsoncpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libkeymaster_messages.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster_messages.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libkeymaster_portable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster_portable.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libkeymint_support_V3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymint_support_V3.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libkeystore-engine-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-engine-wifi-hidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liblazy_static.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblazy_static.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liblibc.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblibc.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liblog_rust.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblog_rust.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liblogger.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblogger.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liblzma.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblzma.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmahalcontroller.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmahalcontroller.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmedia_ecoservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmedia_ecoservice.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmedia_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmedia_omx.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmediautils_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmediautils_vendor.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmemmap2.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemmap2.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmemoffset.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemoffset.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmemtrack-pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemtrack-pixel.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmemunreachable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemunreachable.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmetrics_logger.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmetrics_logger.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libminijail.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libminijail.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmodem_ml_svc_proto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmodem_ml_svc_proto.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libmodem_svc_proto_legacy_soong.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmodem_svc_proto_legacy_soong.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnbaio_mono.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnbaio_mono.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnetutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetutils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnix.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnix.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos_citadeld_proxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_citadeld_proxy.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos_client_citadel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_client_citadel.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos_datagram_citadel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_datagram_citadel.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos_datagram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_datagram.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos_feature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_feature.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos_transport.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_transport.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libnosprotos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnosprotos.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemcrypto.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/liboemservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemservice.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libonce_cell.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libonce_cell.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libOpenCL-pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL-pixel.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libperfmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfmgr.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libpixelatoms_defs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpixelatoms_defs.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libpixelhealth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpixelhealth.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libpixelstats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpixelstats.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libpixelstatsflags.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpixelstatsflags.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libpng.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpng.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libpower.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpower.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libprocessgroup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprocessgroup.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libprotobuf_support.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf_support.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libprotobuf-cpp-full-6.33.5-absl20260526.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-6.33.5-absl20260526.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libprotobuf.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libril_gfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril_gfeature.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libril_sitril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril_sitril.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libril-aidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-aidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/librtxproto_aidl-default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librtxproto_aidl-default.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/librustutils.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librustutils.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsensorsuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorsuez.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libserde_core.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libserde_core.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libserde.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libserde.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsfplugin_ccodec_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsfplugin_ccodec_utils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsighandler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsighandler.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsit_oem_proto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsit_oem_proto.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsit_oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsit_oem.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsitril-audio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsitril-audio.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsitril-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsitril-client.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsitril-gps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsitril-gps.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsitril-ims.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsitril-ims.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsitril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsitril.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libspeechenhancer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeechenhancer.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsqlite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsqlite.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstagefright_aidl_bufferpool2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_aidl_bufferpool2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_bufferpool@2.0.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstagefright_omx_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_omx_utils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstagefright_xmlparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_xmlparser.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstd.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstd.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstpreprocess21.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstpreprocess21.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstreset23.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstreset23.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libstrsim.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstrsim.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsueznanoappclients.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsueznanoappclients.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libsystem_properties_bindgen_sys.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_properties_bindgen_sys.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libtachyon_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtachyon_core.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libtachyon_dsp_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtachyon_dsp_core.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libthiserror.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthiserror.dylib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libtinyalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyalsa.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libtinyalsav2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyalsav2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libtouchflow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtouchflow.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libui.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libusf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libusf.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libutils-default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-default.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libvendorgraphicbuffer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendorgraphicbuffer.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libwlcproto_aidl-default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwlcproto_aidl-default.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libxml2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml2.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/libziparchive.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libziparchive.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_android_property_manager_impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_android_property_manager_impl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_android_property_manager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_android_property_manager.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_clock_manager_impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_clock_manager_impl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_clock_manager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_clock_manager.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_log_constants.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_log_constants.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_log_dumper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_log_dumper.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modem_ml_pw_rpc_gen.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modem_ml_pw_rpc_gen.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/modemml-tflite-service-aidl-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/modemml-tflite-service-aidl-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/nfc_nci.st21nfc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci.st21nfc.default.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/nos_app_avb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nos_app_avb.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/nos_app_keymaster.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nos_app_keymaster.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/nos_app_weaver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nos_app_weaver.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/pixel_stateresidency_provider_aidl_interface-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pixel_stateresidency_provider_aidl_interface-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/pixel-power-ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pixel-power-ext-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/pixel-power-ext-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pixel-power-ext-V2-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pixelatoms-cpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/pixelstats_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pixelstats_flags_c_lib.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/PixelVibratorFlagsL26.so:$(TARGET_COPY_OUT_VENDOR)/lib64/PixelVibratorFlagsL26.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/sensors.usf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.usf.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libbundleaidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libbundleaidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libdownmixaidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdownmixaidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libdynamicsprocessingaidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdynamicsprocessingaidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libhapticgeneratoraidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libhapticgeneratoraidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libloudnessenhanceraidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libloudnessenhanceraidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libreverbaidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libreverbaidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/soundfx/libvisualizeraidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvisualizeraidl.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/thermal-budget-interface-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/thermal-budget-interface-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor_chre_atoms_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_atoms_log.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor_chre_metrics-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_metrics-cpp.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.battery_mitigation-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.battery_mitigation-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.battery_mitigation.service_static.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.battery_mitigation.service_static.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.bluetooth_ext-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.bluetooth_ext-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.bluetooth_ext-V4-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.gnss_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.gnss_ext-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.google_battery-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.plat_security-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.plat_security-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.radio_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radio_ext-V1-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio_flags.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio_flags.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.audioext@4.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.extension-V8-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.hal.utils.adaptedinfo.repeated_thread.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.hal.utils.adaptedinfo.repeated_thread.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.hal.utils.adaptedinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.hal.utils.adaptedinfo.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.hal.utils.aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.hal.utils.aoc.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.hal.utils.bluenote.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.hal.utils.bluenote.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.hal.utils.pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.hal.utils.pipe.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.whitechapel.audio.hal.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.hal.utils.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.wireless_charger-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wireless_charger-V8-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.google.wireless_charger.service-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wireless_charger.service-V3-ndk.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.radio.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.base.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.radio.protocol.sit.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.protocol.sit.base.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.radio.protocol.sit.json.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.protocol.sit.json.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.radio.protocol.sit.stream.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.protocol.sit.stream.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so \
+    vendor/google_devices/akita/proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so \
+    vendor/google_devices/akita/proprietary/vendor/etc/aidl/hfp/hfp_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_codec_capabilities.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -3521,6 +3484,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_374.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_374.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_404.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_404.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_405.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_405.xml \
+    vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_410.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_410.xml \
+    vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_413.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_413.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_425.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_425.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_440.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_440.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_441.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_441.xml \
@@ -3528,6 +3493,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_452.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_452.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_460.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_460.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_466.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_466.xml \
+    vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_470.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_470.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_505.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_505.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_520.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_520.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/database/DbEcc_525.xml:$(TARGET_COPY_OUT_VENDOR)/etc/database/DbEcc_525.xml \
@@ -3569,4 +3535,5 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/radio/log_masks/default/default_modem_log_mask.xml:$(TARGET_COPY_OUT_VENDOR)/etc/radio/log_masks/default/default_modem_log_mask.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/radio/log_masks/empty/empty_modem_log_mask.xml:$(TARGET_COPY_OUT_VENDOR)/etc/radio/log_masks/empty/empty_modem_log_mask.xml \
+    vendor/google_devices/akita/proprietary/vendor/etc/security/supplemental_security_patches.xml:$(TARGET_COPY_OUT_VENDOR)/etc/security/supplemental_security_patches.xml \
     vendor/google_devices/akita/proprietary/vendor/etc/wifi/coex_table.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/coex_table.xml

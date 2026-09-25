@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="supervised_user_creation_label">Ajouter un enfant</string>
+    <string name="supervised_user_creation_label">Ajouter enfant</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="config_show_satellite_connectivity_toggle">false</bool>
     <string name="config_regulatory_info_overlay_package_name" translatable="false">com.android.settings.rango</string>
     <string name="doze_always_on_wallpaper_description">Lock screen wallpaper is visible on inner display when phone is unfolded</string>
     <string name="doze_always_on_wallpaper_title">Show wallpaper on inner display</string>

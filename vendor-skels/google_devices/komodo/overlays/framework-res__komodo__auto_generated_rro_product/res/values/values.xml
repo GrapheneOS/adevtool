@@ -11,19 +11,6 @@
         <item>"0.000207598323269139"</item>
         <item>"-0.349361641294833436"</item>
     </array>
-    <array name="config_notificationVibrationPatternToMetricIdMapping">
-        <item>Classic_notification.xml,201</item>
-        <item>Taps.xml,202</item>
-        <item>Blip.xml,203</item>
-        <item>Rumble.xml,204</item>
-        <item>Waves.xml,205</item>
-        <item>Soft_rise.xml,206</item>
-        <item>Tremor.xml,207</item>
-        <item>Fireworks.xml,208</item>
-        <item>Rattlesnake.xml,209</item>
-        <item>Whir.xml,210</item>
-        <item>Rapid_fire.xml,211</item>
-    </array>
     <array name="config_ringtoneVibrationPatternToMetricIdMapping">
         <item>Classic_ringtone.xml,101</item>
         <item>Bumps.xml,102</item>
@@ -365,7 +352,9 @@
         <item>0</item>
     </array>
     <bool name="config_biometricFrrNotificationEnabled">true</bool>
+    <bool name="config_displayBrightnessAsyncSensorReadingEnabled">true</bool>
     <bool name="config_fingerprintSupportsGestures">false</bool>
+    <bool name="config_keyboardVibrationSettingsIntensitySupported">true</bool>
     <bool name="config_keyboardVibrationSettingsSupported">true</bool>
     <bool name="config_refreshRateSynchronizationEnabled">true</bool>
     <bool name="config_ringtoneVibrationSettingsSupported">true</bool>

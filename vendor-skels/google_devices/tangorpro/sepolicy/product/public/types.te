@@ -20,6 +20,7 @@ type mediashell_app_userfaultfd;
 type mediashell_app_block_io_uring;
 type mediashell_app_wrapfd;
 type odm_cast_prop, property_type, system_property_type, system_internal_property_type;
+type camera_lyricmaintenancetaskprovider_service, protected_service, service_manager_type, hal_service_type;
 type vendor_pbcs_app_userfaultfd;
 type vendor_pbcs_app_block_io_uring;
 type vendor_pbcs_app_wrapfd;

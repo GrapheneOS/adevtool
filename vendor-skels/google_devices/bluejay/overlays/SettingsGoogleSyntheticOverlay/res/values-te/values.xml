@@ -8,7 +8,7 @@
     <string name="charging_optimization_charge_label">%1$s - %2$s సమయానికి ఛార్జింగ్ పూర్తయింది</string>
     <string name="charging_optimization_reach_limit_charge_label">%1$s - సమయానికి ఛార్జింగ్ పూర్తయింది</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">సమయానికి ఛార్జింగ్ పూర్తయింది</string>
-    <string name="charging_optimization_remaining_time_label">%1$s‌కి ఛార్జింగ్ పూర్తి అవుతుంది</string>
+    <string name="charging_optimization_remaining_time_label">%1$s‌‌కు ఛార్జింగ్ పూర్తి అవుతుంది</string>
     <string name="comfort_filters_all_modes_off_summary">ఆఫ్‌లో ఉంది</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">సౌకర్యవంతమైన వీక్షణ, రాత్రి కాంతి ఆన్‌లో ఉన్నాయి</string>
     <string name="comfort_filters_comfort_view_on_summary">సౌకర్యవంతమైన వీక్షణ ఆన్‌లో ఉంది</string>

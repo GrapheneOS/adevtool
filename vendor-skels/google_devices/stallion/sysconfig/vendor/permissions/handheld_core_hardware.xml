@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<permissions>
+  <feature name="android.software.cts"/>
+  <feature name="android.hardware.audio.output"/>
+  <feature name="android.hardware.camera"/>
+  <feature name="android.hardware.location"/>
+  <feature name="android.hardware.location.network"/>
+  <feature name="android.hardware.sensor.compass"/>
+  <feature name="android.hardware.sensor.accelerometer"/>
+  <feature name="android.hardware.bluetooth"/>
+  <feature name="android.hardware.touchscreen"/>
+  <feature name="android.hardware.microphone"/>
+  <feature name="android.hardware.screen.portrait"/>
+  <feature name="android.hardware.screen.landscape"/>
+  <feature name="android.hardware.security.model.compatible"/>
+  <feature name="android.software.app_widgets"/>
+  <feature name="android.software.telecom"/>
+  <feature name="android.software.voice_recognizers" notLowRam="true"/>
+  <feature name="android.software.backup"/>
+  <feature name="android.software.home_screen"/>
+  <feature name="android.software.input_methods"/>
+  <feature name="android.software.picture_in_picture" notLowRam="true"/>
+  <feature name="android.software.activities_on_secondary_displays" notLowRam="true"/>
+  <feature name="android.software.print"/>
+  <feature name="android.software.companion_device_setup"/>
+  <feature name="android.software.autofill"/>
+  <feature name="android.software.cant_save_state"/>
+  <feature name="android.software.secure_lock_screen"/>
+  <feature name="android.software.device_admin"/>
+  <feature name="android.software.managed_users" notLowRam="true"/>
+  <feature name="android.software.controls"/>
+</permissions>

@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">충전, 한도, 충전 최적화, 충전 한도</string>
     <string name="charging_optimization_entry_summary_charge_limit">%1$s로 제한</string>
-    <string name="charging_optimization_footer_message_charging_limit">이렇게 하면 배터리 수명을 늘릴 수 있습니다. 배터리 용량을 정확히 확인하기 위해 가끔씩 휴대전화를 완충해야 합니다.</string>
+    <string name="charging_optimization_footer_message_charging_limit">이렇게 하면 배터리 수명을 늘릴 수 있습니다. 배터리 용량을 정확히 측정하기 위해 가끔씩 휴대전화가 완충됩니다.</string>
     <string name="charging_optimization_summary_off">사용 안 함</string>
     <string name="charging_optimization_title">충전 최적화</string>
 </resources>

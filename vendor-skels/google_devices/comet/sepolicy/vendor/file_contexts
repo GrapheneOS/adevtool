@@ -10,6 +10,7 @@
 /dev/ttyGS[0-3] u:object_r:serial_device:s0
 /vendor/lib(64)?/libgxp\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/gxp_metrics_logger\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
 /dev/ufs-bsg. u:object_r:ufs_bsg_device:s0
 /dev/oem_ipc[0-7] u:object_r:radio_device:s0
 /dev/thermal(/.*)? u:object_r:thermal_link_device:s0
@@ -30,6 +31,7 @@
 /mnt/vendor/efs(/.*)? u:object_r:modem_efs_file:s0
 /data/vendor/mm(/.*)? u:object_r:mm_logd_vendor_data_file:s0
 /data/vendor/ss(/.*)? u:object_r:tee_data_file:s0
+/data/vendor/gxp(/.*)? u:object_r:gxp_vendor_data_file:s0
 /data/vendor/gps(/.*)? u:object_r:vendor_gps_file:s0
 /data/vendor/log(/.*)? u:object_r:vendor_log_file:s0
 /persist/haptics(/.*)? u:object_r:persist_haptics_file:s0
@@ -53,8 +55,8 @@
 /data/vendor/ssrdump(/.*)? u:object_r:sscoredump_vendor_data_crashinfo_file:s0
 /dev/acd-aocx_inject[0-9]* u:object_r:aoc_device:s0
 /dev/acd-aocx_tapout[0-9]* u:object_r:aoc_device:s0
-/data/vendor/storage(/.*)? u:object_r:dump_storage_data_file:s0
 /data/vendor/log/hwc(/.*)? u:object_r:vendor_hwc_log_file:s0
+/data/vendor/storage(/.*)? u:object_r:dump_storage_data_file:s0
 /data/vendor/sensors(/.*)? u:object_r:sensor_data_file:s0
 /data/vendor/edgetpu(/.*)? u:object_r:edgetpu_vendor_service_data_file:s0
 /dev/gti_status_event.0 u:object_r:gti_ext_status_device:s0
@@ -295,8 +297,8 @@
 /dev/logbuffer_maxfg_base u:object_r:logbuffer_device:s0
 /dev/logbuffer_max77779fg u:object_r:logbuffer_device:s0
 /dev/dma_heap/gcma_camera u:object_r:gcma_camera_heap_device:s0
-/vendor/bin/sg_read_buffer u:object_r:sg_util_exec:s0
 /vendor/bin/dump/dump_perf u:object_r:dump_perf_exec:s0
+/vendor/bin/sg_read_buffer u:object_r:sg_util_exec:s0
 /vendor/bin/wfc-pkt-router u:object_r:pktrouter_exec:s0
 /vendor/bin/toolbox_vendor u:object_r:vendor_toolbox_exec:s0
 /vendor/bin/wifi_perf_diag u:object_r:wifi_perf_diag_exec:s0
@@ -310,9 +312,9 @@
 /dev/dma_heap/faimg-secure u:object_r:faceauth_heap_device:s0
 /vendor/bin/dump/dump_modem u:object_r:dump_modem_exec:s0
 /dev/acd-audio_input_tuning u:object_r:aoc_device:s0
-/vendor/bin/storage_init\.sh u:object_r:storage_init_exec:s0
 /vendor/bin/dump/dump_bcmbt u:object_r:dump_bcmbt_exec:s0
 /vendor/bin/dump/dump_radio u:object_r:dump_radio_exec:s0
+/vendor/bin/storage_init\.sh u:object_r:storage_init_exec:s0
 /vendor/bin/hw/init_citadel u:object_r:init_citadel_exec:s0
 /vendor/bin/dump/dump_power u:object_r:dump_power_exec:s0
 /vendor/bin/trusty_metricsd u:object_r:trusty_metricsd_exec:s0
@@ -342,11 +344,11 @@
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_pcie\.sh u:object_r:dump_pcie_exec:s0
-/vendor/bin/dump/dump_storage u:object_r:dump_storage_exec:s0
+/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_devfreq u:object_r:dump_devfreq_exec:s0
+/vendor/bin/dump/dump_storage u:object_r:dump_storage_exec:s0
 /vendor/bin/dump/dump_sensors u:object_r:dump_sensors_exec:s0
 /vendor/bin/flood\.control\.hal u:object_r:flood_control_exec:s0
-/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_dwc3\.sh u:object_r:dump_dwc3_exec:s0
 /dev/logbuffer_pogo_transport u:object_r:logbuffer_device:s0
 /dev/dma_heap/farawimg-secure u:object_r:faceauth_heap_device:s0
@@ -361,6 +363,7 @@
 /dev/lwis-eeprom-smaug-imentet u:object_r:lwis_device:s0
 /dev/lwis-sensor-dokkaebi-tele u:object_r:lwis_device:s0
 /vendor/bin/dump/dump_trusty\.sh u:object_r:dump_trusty_exec:s0
+/vendor/bin/usb_accessory_utils u:object_r:vendor_usb_aoa_helper_exec:s0
 /vendor/lib64/hw/vulkan\.mali\.so u:object_r:same_process_hal_file:s0
 /vendor/bin/init_thermal_config u:object_r:init_thermal_config_exec:s0
 /dev/acd-chre_bt_offload_data_tx u:object_r:aoc_device:s0
@@ -394,9 +397,8 @@
 /vendor/bin/copy_efs_files_to_data u:object_r:copy_efs_files_to_data_exec:s0
 /vendor/lib64/libedgetpu_litert\.so u:object_r:same_process_hal_file:s0
 /dev/dma_heap/gcma_camera-uncached u:object_r:gcma_camera_heap_device:s0
-/vendor/bin/storage_intelligence\.sh u:object_r:storage_intelligence_exec:s0
 /vendor/bin/dump/dump_pixel_metrics u:object_r:dump_pixel_metrics_exec:s0
-/vendor/lib64/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
+/vendor/bin/storage_intelligence\.sh u:object_r:storage_intelligence_exec:s0
 /vendor/lib64/libGralloc4Wrapper\.so u:object_r:same_process_hal_file:s0
 /dev/lwis-eeprom-smaug-svarog-outer u:object_r:lwis_device:s0
 /vendor/bin/dump/dump_exynos_display u:object_r:dump_exynos_display_exec:s0

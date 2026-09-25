@@ -11,6 +11,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.drm-service.clearkey.xml",
+    src: "android.hardware.drm-service.clearkey.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_android.hardware.dumpstate.3-service.xml",
     src: "android.hardware.dumpstate.3-service.xml",
     soc_specific: true,
@@ -59,8 +65,20 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.security.secretkeeper.trusty.xml",
+    src: "android.hardware.security.secretkeeper.trusty.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_android.hardware.security.sharesecret-service.citadel.xml",
     src: "android.hardware.security.sharesecret-service.citadel.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.sensors-multihal.xml",
+    src: "android.hardware.sensors-multihal.xml",
     soc_specific: true,
 }
 
@@ -106,6 +124,12 @@ vintf_fragment {
     soc_specific: true,
 }
 
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_bluetooth_audio.xml",
+    src: "bluetooth_audio.xml",
+    soc_specific: true,
+}
+
 vintf_fragment { name: "adevtool_vintf_fragment_vendor_dmd.xml", src: "dmd.xml", soc_specific: true }
 
 vintf_fragment {
@@ -117,6 +141,12 @@ vintf_fragment {
 vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_flood_control.xml",
     src: "flood_control.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_health-storage-default.xml",
+    src: "health-storage-default.xml",
     soc_specific: true,
 }
 
@@ -163,6 +193,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_nfc-service-default.xml",
+    src: "nfc-service-default.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_pixel-display-default.xml",
     src: "pixel-display-default.xml",
     soc_specific: true,
@@ -195,6 +231,12 @@ vintf_fragment {
 vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_vendor.google.google_battery-default.xml",
     src: "vendor.google.google_battery-default.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_vendor.google.plat_security-service.xml",
+    src: "vendor.google.plat_security-service.xml",
     soc_specific: true,
 }
 

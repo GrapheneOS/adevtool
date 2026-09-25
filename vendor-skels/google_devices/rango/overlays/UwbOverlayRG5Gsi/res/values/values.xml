@@ -2,6 +2,7 @@
 <resources>
     <bool name="android_specific_timesync_supported">true</bool>
     <bool name="background_ranging_enabled">true</bool>
+    <bool name="ccc_absolute_uwb_initiation_time_enabled">true</bool>
     <bool name="enable_filters">true</bool>
     <bool name="enable_primer_aoa">true</bool>
     <bool name="enable_random_hopmodekey">true</bool>

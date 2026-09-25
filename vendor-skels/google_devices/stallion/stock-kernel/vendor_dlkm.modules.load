@@ -56,3 +56,4 @@ goog_touch_interface.ko
 focal_touch.ko
 bcmdhd4383.ko
 wlan_ptracker.ko
+wonder.ko

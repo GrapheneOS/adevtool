@@ -1,4 +1,10 @@
 vintf_fragment {
+    name: "adevtool_vintf_fragment_system_ext_android.hidl.allocator@1.0-service.xml",
+    src: "android.hidl.allocator@1.0-service.xml",
+    system_ext_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_system_ext_com.google.pixel.camera.services@1.0-service-google.xml",
     src: "com.google.pixel.camera.services@1.0-service-google.xml",
     system_ext_specific: true,

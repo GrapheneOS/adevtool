@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <install-in-user-type package="com.android.pixeldisplayservice">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+    <install-in user-type="android.os.usertype.profile.MANAGED"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.android.telephony.imsmedia">
+    <install-in user-type="SYSTEM"/>
+    <install-in user-type="FULL"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.android.rilextension">
+    <install-in user-type="SYSTEM"/>
+  </install-in-user-type>
+  <install-in-user-type package="com.google.android.iwlan">
+    <install-in user-type="SYSTEM"/>
+  </install-in-user-type>
+</config>

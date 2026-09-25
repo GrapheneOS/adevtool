@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">ಚಾರ್ಜಿಂಗ್, ಮಿತಿ, ಚಾರ್ಜಿಂಗ್ ಆಪ್ಟಿಮೈಸೇಷನ್‌, ಚಾರ್ಜ್ ಮಿತಿ</string>
     <string name="charging_optimization_entry_summary_charge_limit">%1$s ಗೆ ಮಿತಿಗೊಳಿಸಿ</string>
-    <string name="charging_optimization_footer_message_charging_limit">ಇದು ಬ್ಯಾಟರಿ ಬಾಳಿಕೆಯನ್ನು ವಿಸ್ತರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ನಿಖರವಾದ ಬ್ಯಾಟರಿ ಸಾಮರ್ಥ್ಯವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸಾಂದರ್ಭಿಕವಾಗಿ ಸಂಪೂರ್ಣವಾಗಿ ಚಾರ್ಜ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ.</string>
+    <string name="charging_optimization_footer_message_charging_limit">ಇದು ಬ್ಯಾಟರಿ ಬಾಳಿಕೆಯನ್ನು ವಿಸ್ತರಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ನಿಖರ ಬ್ಯಾಟರಿ ಸಾಮರ್ಥ್ಯವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಸಾಂದರ್ಭಿಕವಾಗಿ ಸಂಪೂರ್ಣವಾಗಿ ಚಾರ್ಜ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ.</string>
     <string name="charging_optimization_summary_off">ಆಫ್ ಆಗಿದೆ</string>
     <string name="charging_optimization_title">ಚಾರ್ಜಿಂಗ್ ಆಪ್ಟಿಮೈಸೇಷನ್‌</string>
 </resources>

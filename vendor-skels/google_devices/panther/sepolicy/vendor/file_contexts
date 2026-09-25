@@ -15,8 +15,8 @@
 /vendor/lib(64)?/lib_aion_buffer\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/gralloc\.gs201\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/gxp_metrics_logger\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libGralloc4Wrapper\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libGralloc4Wrapper\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/arm\.graphics-V1-ndk\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor-pixelatoms-cpp\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/pixel-power-ext-V1-ndk\.so u:object_r:same_process_hal_file:s0
@@ -44,6 +44,7 @@
 /data/vendor/ss(/.*)? u:object_r:tee_data_file:s0
 /mnt/vendor/efs(/.*)? u:object_r:modem_efs_file:s0
 /data/vendor/mm(/.*)? u:object_r:mm_logd_vendor_data_file:s0
+/data/vendor/gxp(/.*)? u:object_r:gxp_vendor_data_file:s0
 /data/vendor/gps(/.*)? u:object_r:vendor_gps_file:s0
 /vendor/firmware(/.*)? u:object_r:vendor_fw_file:s0
 /data/vendor/log(/.*)? u:object_r:vendor_log_file:s0
@@ -243,7 +244,6 @@
 /dev/acd-audio_bulk_rx u:object_r:aoc_device:s0
 /dev/acd-sound_trigger u:object_r:aoc_device:s0
 /dev/acd-mel_processor u:object_r:aoc_device:s0
-/vendor/bin/rlsservice u:object_r:rlsservice_exec:s0
 /dev/logbuffer_pca9468 u:object_r:logbuffer_device:s0
 /dev/lwis-flash-lm3644 u:object_r:lwis_device:s0
 /dev/lwis-ois-gargoyle u:object_r:lwis_device:s0
@@ -319,10 +319,10 @@
 /vendor/bin/dump/dump_devfreq u:object_r:dump_devfreq_exec:s0
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
+/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_storage u:object_r:dump_storage_exec:s0
 /vendor/bin/dump/dump_sensors u:object_r:dump_sensors_exec:s0
 /vendor/bin/flood\.control\.hal u:object_r:flood_control_exec:s0
-/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_dwc3\.sh u:object_r:dump_dwc3_exec:s0
 /vendor/bin/init\.uwb\.calib\.sh u:object_r:vendor_uwb_init_exec:s0
 /dev/dma_heap/farawimg-secure u:object_r:faceauth_heap_device:s0
@@ -377,6 +377,7 @@
 /dev/block/platform/14700000\.ufs/by-name/mfg_data u:object_r:mfg_data_block_device:s0
 /dev/block/platform/14700000\.ufs/by-name/userdata u:object_r:userdata_block_device:s0
 /vendor/bin/hw/android\.hardware\.usb\.gadget-service u:object_r:hal_usb_gadget_impl_exec:s0
+/vendor/bin/hw/vendor\.google\.plat_security-service u:object_r:hal_plat_security_exec:s0
 /vendor/bin/hw/android\.hardware\.atrace@1\.0-service.pixel u:object_r:hal_atrace_default_exec:s0
 /vendor/bin/hw/android\.hardware\.dumpstate\.3-service u:object_r:hal_dumpstate_default_exec:s0
 /vendor/bin/hw/google\.hardware\.media\.c2@1\.0-service u:object_r:mediacodec_google_exec:s0

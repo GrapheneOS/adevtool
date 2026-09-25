@@ -1,2 +1,2 @@
-export BUILD_ID_tegu="CP2A.260805.005"
+export BUILD_ID_tegu="CP3A.260905.009"
 unset PLATFORM_SECURITY_PATCH_tegu

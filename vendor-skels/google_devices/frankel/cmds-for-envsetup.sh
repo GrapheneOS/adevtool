@@ -1,2 +1,2 @@
-export BUILD_ID_frankel="CP2A.260805.005"
+export BUILD_ID_frankel="CP3A.260905.009"
 unset PLATFORM_SECURITY_PATCH_frankel

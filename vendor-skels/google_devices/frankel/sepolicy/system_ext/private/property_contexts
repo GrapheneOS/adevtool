@@ -1,3 +1,5 @@
+dev.mnt.rootdisk.root u:object_r:rootdisk_prop:s0 exact string
+dev.mnt.dev.userdata u:object_r:userdisk_prop:s0 exact string
 persist.vendor.radio.bootwithlpm u:object_r:sota_prop:s0
 persist.sys.ssr.last_detection_time u:object_r:system_ssrdump_prop:s0 exact uint
 persist.rilext. u:object_r:system_ril_ext_prop:s0

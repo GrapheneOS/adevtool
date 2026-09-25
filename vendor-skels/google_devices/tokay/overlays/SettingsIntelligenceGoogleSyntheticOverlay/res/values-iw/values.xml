@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">טעינה, מגבלה, הגבלה, אופטימיזציה של טעינה, מגבלת הטעינה</string>
     <string name="charging_optimization_entry_summary_charge_limit">הגבלה ל-%1$s</string>
-    <string name="charging_optimization_footer_message_charging_limit">האפשרות הזו מאריכה את משך חיי הסוללה. כדי לכייל את התכונה, לפעמים סוללת הטלפון תיטען במלואה.</string>
+    <string name="charging_optimization_footer_message_charging_limit">האפשרות הזו מאריכה את חיי הסוללה. כדי לכייל את התכונה, לפעמים סוללת הטלפון תיטען במלואה.</string>
     <string name="charging_optimization_summary_off">מושבתת</string>
     <string name="charging_optimization_title">אופטימיזציה של הטעינה</string>
 </resources>

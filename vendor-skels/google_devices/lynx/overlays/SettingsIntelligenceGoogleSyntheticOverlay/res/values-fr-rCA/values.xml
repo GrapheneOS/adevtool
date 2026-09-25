@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">recharge, limite, optimisation de recharge, limite de recharge</string>
     <string name="charging_optimization_entry_summary_charge_limit">Limiter à %1$s</string>
-    <string name="charging_optimization_footer_message_charging_limit">Cette fonctionnalité aide à prolonger la durée de vie de la pile. Votre téléphone devra parfois se recharger complètement pour garantir une capacité de la pile précise.</string>
+    <string name="charging_optimization_footer_message_charging_limit">Cette fonctionnalité aide à prolonger la durée de vie de la pile. Votre téléphone devra parfois se recharger complètement pour garantir une estimation précise de la capacité de la pile.</string>
     <string name="charging_optimization_summary_off">Désactivée</string>
     <string name="charging_optimization_title">Optimisation de la recharge</string>
 </resources>

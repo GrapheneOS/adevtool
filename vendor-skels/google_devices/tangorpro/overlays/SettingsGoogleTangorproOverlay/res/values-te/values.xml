@@ -2,7 +2,7 @@
 <resources>
     <string name="charging_sounds_title">ఛార్జింగ్ సౌండ్‌లు</string>
     <string name="edge_to_edge_navigation_summary">మొదటి స్క్రీన్‌కు వెళ్లడానికి, స్క్రీన్ దిగువ భాగం నుండి వేగంగా పైకి స్వయిప్ చేయండి. టాస్క్‌బార్‌ను యాక్సెస్ చేయడానికి, స్క్రీన్ దిగువ భాగం నుండి నెమ్మదిగా పైకి స్వయిప్ చేయండి. యాప్‌ల మధ్యన మారడానికి, స్క్రీన్ దిగువ భాగం నుండి పైకి స్వయిప్ చేసి, పట్టుకొని, ఆ తర్వాత వదిలేయండి. వెనుకకు వెళ్లడానికి, ఎడమ లేదా కుడి వైపు అంచు నుండి స్వయిప్ చేయండి.</string>
-    <string name="fast_pair_device_not_found_other_device_description">ఈ పరికరాన్ని మీ Pixel Tabletకు దగ్గరగా ఉంచి, ఆపై ట్రై చేయండి.</string>
+    <string name="fast_pair_device_not_found_other_device_description">ఈ డివైజ్‌ను మీ Pixel Tabletకు దగ్గరగా ఉంచి, ఆపై ట్రై చేయండి.</string>
     <string name="fast_pair_device_not_found_tws_headphone_description">ఇయర్‌బడ్స్ కేస్ తెరిచి, దాన్ని మీ Pixel Tabletకు దగ్గరగా ఉంచి, ఆపై మళ్లీ ట్రై చేయండి.</string>
     <string name="sound_dashboard_summary">వాల్యూమ్</string>
     <string name="sound_settings">సౌండ్</string>

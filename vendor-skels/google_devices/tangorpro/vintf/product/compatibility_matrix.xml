@@ -5,10 +5,18 @@
         device/google/gs-common/audio/hidl/device_framework_matrix_product.xml
         device/google/gs201/device_framework_matrix_product.xml
         device/google/gs-common/touch/twoshay/aidl/compatibility_matrix_gs101.xml
+        device/google/gs201/plat_security/device_framework_matrix_product.xml
         device/google/tangorpro/bluetooth/device_framework_matrix_product.xml
         vendor/google_devices/gs-common/proprietary/Floodcontrol/hal/device_framework_matrix_product.xml
 -->
 <compatibility-matrix version="9.0" type="framework" level="7">
+    <hal format="aidl">
+        <name>android.hardware.security.timestamp</name>
+        <interface>
+            <name>ITimeStamper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>android.vendor.samsung_slsi.telephony.hardware.radio</name>
         <version>1.1</version>
@@ -87,7 +95,7 @@
     </hal>
     <hal format="aidl">
         <name>com.google.hardware.pixel.display</name>
-        <version>21</version>
+        <version>23</version>
         <interface>
             <name>IDisplay</name>
             <instance>default</instance>
@@ -195,6 +203,17 @@
         <version>4-5</version>
         <interface>
             <name>IGoogleBattery</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.google.plat_security</name>
+        <interface>
+            <name>ISecureTimestamp</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ITrustyDecrypt</name>
             <instance>default</instance>
         </interface>
     </hal>

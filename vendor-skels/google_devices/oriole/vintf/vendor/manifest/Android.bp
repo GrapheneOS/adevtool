@@ -11,6 +11,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.drm-service.clearkey.xml",
+    src: "android.hardware.drm-service.clearkey.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_android.hardware.dumpstate-service.xml",
     src: "android.hardware.dumpstate-service.xml",
     soc_specific: true,
@@ -65,6 +71,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.sensors-multihal.xml",
+    src: "android.hardware.sensors-multihal.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_android.hardware.thermal-service.pixel.xml",
     src: "android.hardware.thermal-service.pixel.xml",
     soc_specific: true,
@@ -106,6 +118,12 @@ vintf_fragment {
     soc_specific: true,
 }
 
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_bluetooth_audio.xml",
+    src: "bluetooth_audio.xml",
+    soc_specific: true,
+}
+
 vintf_fragment { name: "adevtool_vintf_fragment_vendor_dmd.xml", src: "dmd.xml", soc_specific: true }
 
 vintf_fragment {
@@ -117,6 +135,12 @@ vintf_fragment {
 vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_flood_control.xml",
     src: "flood_control.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_health-storage-default.xml",
+    src: "health-storage-default.xml",
     soc_specific: true,
 }
 
@@ -153,6 +177,12 @@ vintf_fragment {
 vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_memtrack.xml",
     src: "memtrack.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_nfc-service-default.xml",
+    src: "nfc-service-default.xml",
     soc_specific: true,
 }
 

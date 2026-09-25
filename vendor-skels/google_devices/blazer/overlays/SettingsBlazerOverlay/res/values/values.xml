@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="config_show_satellite_connectivity_toggle">false</bool>
     <string name="config_regulatory_info_overlay_package_name" translatable="false">com.android.settings.blazer</string>
 </resources>
