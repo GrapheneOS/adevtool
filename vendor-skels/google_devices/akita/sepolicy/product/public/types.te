@@ -12,6 +12,7 @@ typeattribute google_camera_app netdomain;
 typeattribute google_camera_app coredomain;
 typeattribute google_camera_app halclientdomain;
 typeattribute google_camera_app hal_power_client;
+type camera_lyricmaintenancetaskprovider_service, protected_service, service_manager_type, hal_service_type;
 type vendor_pbcs_app_userfaultfd;
 type vendor_pbcs_app_block_io_uring;
 type vendor_pbcs_app_wrapfd;

@@ -6,6 +6,16 @@
     <array name="config_nfc_conflict_with_usb_audio_vendorid">
         <item>0x18d1</item>
     </array>
+    <array name="nits">
+        <item>1.0</item>
+        <item>1400.0</item>
+        <item>2000.0</item>
+    </array>
+    <array name="nits_to_brightness_curve">
+        <item>0.0</item>
+        <item>0.7</item>
+        <item>1.0</item>
+    </array>
     <bool name="config_adaptive_touch_sensitivity_enabled">true</bool>
     <bool name="config_hspa_data_distinguishable">true</bool>
     <bool name="config_minmode_enabled">true</bool>

@@ -1,6 +1,5 @@
 vendor.google.audiometricext::IAudioMetricExt u:object_r:hal_audiometricext_hwservice:s0
 vendor.google.wifi_ext::IWifiExt u:object_r:hal_wifi_ext_hwservice:s0
-com.google.face.debug::IDebugHost u:object_r:hal_face_debug_hwservice:s0
 vendor.samsung_slsi.telephony.hardware.oemservice::IOemService u:object_r:hal_vendor_oem_hwservice:s0
 vendor.samsung_slsi.telephony.hardware.radioExternal::IOemSlsiRadioExternal u:object_r:hal_exynos_rild_hwservice:s0
 vendor.google.radioext::IRadioExt u:object_r:hal_radioext_hwservice:s0

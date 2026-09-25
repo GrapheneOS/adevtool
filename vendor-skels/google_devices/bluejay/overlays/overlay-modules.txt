@@ -1,4 +1,5 @@
 AdaptiveHapticsBluejayOverlay
+BluejayFrameworkOverlay
 CellBroadcastReceiverOverlay
 EuiccSupportPixelOverlay
 GlanceableHubConfigOverlay

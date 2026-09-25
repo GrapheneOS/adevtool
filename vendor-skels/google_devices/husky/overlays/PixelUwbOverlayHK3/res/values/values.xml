@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="background_ranging_enabled">true</bool>
+    <bool name="config_isDlTdoaRangingIndexesUpdateSupported">false</bool>
     <bool name="enable_16_byte_hopmodekey">true</bool>
     <bool name="enable_filters">true</bool>
     <bool name="enable_primer_aoa">true</bool>

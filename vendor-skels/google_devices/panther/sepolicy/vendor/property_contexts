@@ -5,6 +5,7 @@ ro.boot.ramdump u:object_r:vendor_ramdump_prop:s0
 vendor.aoc.firmware.version u:object_r:vendor_aoc_prop:s0
 persist.vendor.aoc.status_request_timed_out u:object_r:vendor_timeout_aoc_prop:s0
 persist.vendor.radio.volte_mif_off u:object_r:vendor_volte_mif_off:s0
+vendor.devcoredump. u:object_r:vendor_devcoredump_prop:s0
 vendor.zram.nr_tags u:object_r:vendor_zram_nr_tags_prop:s0 exact int
 vendor.camera.debug. u:object_r:vendor_camera_debug_prop:s0
 persist.vendor.camera.pbcs.debug. u:object_r:vendor_camera_pbcs_debug_prop:s0
@@ -38,7 +39,6 @@ vendor.wifi.sniffer.start u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.perf_diag.start u:object_r:vendor_wifi_perf_diag_prop:s0
 vendor.nos.citadel.version u:object_r:vendor_nos_citadel_version:s0
 ro.vendor.flood. u:object_r:vendor_flood_prop:s0
-vendor.devcoredump. u:object_r:vendor_devcoredump_prop:s0
 persist.vendor.sys.dm. u:object_r:vendor_diag_prop:s0
 persist.vendor.sys.diag. u:object_r:vendor_diag_prop:s0
 vendor.sys.dmd. u:object_r:vendor_diag_prop:s0

@@ -289,12 +289,12 @@
         <item>1.0</item>
     </array>
     <array name="config_displayWhiteBalanceHighLightAmbientBrightnesses">
-        <item>130000.0</item>
-        <item>150000.0</item>
+        <item>15000.0</item>
+        <item>35000.0</item>
     </array>
     <array name="config_displayWhiteBalanceHighLightAmbientBrightnessesStrong">
-        <item>130000.0</item>
-        <item>150000.0</item>
+        <item>15000.0</item>
+        <item>35000.0</item>
     </array>
     <array name="config_displayWhiteBalanceIncreaseThresholds">
         <item>0.007874</item>
@@ -465,7 +465,7 @@
     <bool name="config_zramWriteback">true</bool>
     <bool name="euicc_optimize_apdu_sender">true</bool>
     <bool name="skip_restoring_network_selection">true</bool>
-    <dimen name="config_displayWhiteBalanceHighLightAmbientColorTemperature">6700.0</dimen>
+    <dimen name="config_displayWhiteBalanceHighLightAmbientColorTemperature">6543.0</dimen>
     <dimen name="config_displayWhiteBalanceLowLightAmbientColorTemperature">5250.0</dimen>
     <dimen name="config_displayWhiteBalanceLowLightAmbientColorTemperatureStrong">4000.0</dimen>
     <dimen name="config_hapticChannelMaxVibrationAmplitude">0.32</dimen>

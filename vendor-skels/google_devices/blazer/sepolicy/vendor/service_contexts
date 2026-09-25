@@ -3,6 +3,7 @@ vendor.google.wireless_charger.service.IWlcService/default u:object_r:hal_wlcser
 com.google.pixel.camera.connectivity.hal.provider.ICameraProvider/default u:object_r:hal_pixel_remote_camera_service:s0
 com.google.android.imageprocessing.hal.IImageProcessingHal/default u:object_r:vendor_image_processing_hal_service:s0
 vendor.google.camera_ext.ICameraInterferenceAvoidance/default u:object_r:vendor_camera_interference_avoidance_service:s0
+com.google.android.lyric.intelligentcamerahal.IIntelligentCameraHal/default u:object_r:vendor_intelligent_camera_hal_service:s0
 com.google.edgetpu.IEdgeTpuVendorService/default u:object_r:edgetpu_vendor_service:s0
 android.hardware.neuralnetworks.IDevice/google-edgetpu u:object_r:edgetpu_nnapi_service:s0
 com.google.edgetpu.dba.IDevice/default u:object_r:edgetpu_dba_service:s0

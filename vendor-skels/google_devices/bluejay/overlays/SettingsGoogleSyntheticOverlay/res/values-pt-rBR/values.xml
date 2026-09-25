@@ -8,11 +8,11 @@
     <string name="charging_optimization_charge_label">%1$s - Carga total às %2$s</string>
     <string name="charging_optimization_reach_limit_charge_label">%1$s (carregamento concluído)</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">Carregamento concluído</string>
-    <string name="charging_optimization_remaining_time_label">Carga total às %1$s</string>
+    <string name="charging_optimization_remaining_time_label">A carga estará completa às %1$s</string>
     <string name="comfort_filters_all_modes_off_summary">Desativados</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">Visualização de Conforto, modo noturno ativado</string>
     <string name="comfort_filters_comfort_view_on_summary">Visualização de Conforto ativada</string>
-    <string name="comfort_filters_entry_title">Filtros de Conforto</string>
+    <string name="comfort_filters_entry_title">Filtros de conforto</string>
     <string name="comfort_filters_night_light_on_summary">Modo noturno ativado</string>
     <string name="comfort_filters_settings_page_main_summary">Reduza o cansaço dos olhos com filtros. A Visualização de Conforto deixa a tela mais suave e com tons pastéis, e o modo noturno limita a luz azul forte à noite.</string>
     <string name="comfort_filters_settings_page_main_title">Filtros de Conforto</string>

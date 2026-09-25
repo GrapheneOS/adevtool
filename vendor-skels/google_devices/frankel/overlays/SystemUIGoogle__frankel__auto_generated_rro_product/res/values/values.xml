@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="nits">
+        <item>1</item>
+        <item>1400</item>
+        <item>2000</item>
+    </array>
+    <array name="nits_to_brightness_curve">
+        <item>0</item>
+        <item>0.7</item>
+        <item>1</item>
+    </array>
     <bool name="config_adaptive_touch_sensitivity_enabled">true</bool>
     <bool name="config_hspa_data_distinguishable">true</bool>
     <bool name="config_minmode_enabled">true</bool>

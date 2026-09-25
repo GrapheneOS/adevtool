@@ -8,7 +8,7 @@
     <string name="screensaver_settings_summary_dock_and_charging">जब डॉक पर रखा हो और चार्ज हो रहा हो</string>
     <string name="screensaver_settings_summary_off">डिवाइस का कुछ समय तक इस्तेमाल न किए जाने पर, पसंदीदा फ़ोटो, आर्टवर्क, घड़ियां वगैरह दिखाएं</string>
     <string name="screensaver_settings_summary_postured_and_charging">जब सीधे रखा हो और चार्ज हो रहा हो</string>
-    <string name="screensaver_settings_summary_sleep">डिवाइस जब चार्ज हो रहा हो</string>
+    <string name="screensaver_settings_summary_sleep">जब डिवाइस चार्ज हो रहा हो</string>
     <string name="when_to_show_hubmode_charging">चार्ज करते समय</string>
     <string name="when_to_show_hubmode_docked">जब टैबलेट डॉक से जुड़ा हुआ हो और चार्ज हो रहा हो</string>
     <string name="when_to_show_hubmode_never">कभी नहीं</string>

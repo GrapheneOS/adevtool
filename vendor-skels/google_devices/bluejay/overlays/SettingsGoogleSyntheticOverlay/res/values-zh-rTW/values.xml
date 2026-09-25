@@ -8,7 +8,7 @@
     <string name="charging_optimization_charge_label">%1$s - %2$s 前充電完成</string>
     <string name="charging_optimization_reach_limit_charge_label">已充電 %1$s</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">充電完成</string>
-    <string name="charging_optimization_remaining_time_label">%1$s 前充電完成</string>
+    <string name="charging_optimization_remaining_time_label">將於%1$s前充電完成</string>
     <string name="comfort_filters_all_modes_off_summary">已關閉</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">舒適模式、夜燈功能已開啟</string>
     <string name="comfort_filters_comfort_view_on_summary">舒適模式已開啟</string>

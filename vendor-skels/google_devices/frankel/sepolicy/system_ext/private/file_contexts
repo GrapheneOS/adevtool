@@ -4,6 +4,7 @@
 /system_ext/bin/sconed u:object_r:sconed_exec:s0
 /system_ext/bin/backup_ota_log\.sh u:object_r:backup_ota_log_exec:s0
 /system_ext/bin/hw/vendor\.google\.whitechapel\.audio\.hal\.parserservice u:object_r:hal_audio_parameter_parser_exec:s0
+/system/bin/gpu_counter_producer u:object_r:gpu_counter_producer_exec:s0
 /system_ext/bin/mosey_server u:object_r:mosey_server_exec:s0
 /metadata/repair-mode/config(/.*)? u:object_r:repair_mode_metadata_config_file:s0
 /system_ext/bin/bluetooth_gci u:object_r:bluetooth_gci_exec:s0

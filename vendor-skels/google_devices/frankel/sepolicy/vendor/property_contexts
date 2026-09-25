@@ -10,6 +10,7 @@ vendor.edgetpu.runtime. u:object_r:vendor_edgetpu_runtime_prop:s0
 vendor.edgetpu.tflite_delegate. u:object_r:vendor_tflite_delegate_prop:s0
 vendor.google.silicon. u:object_r:vendor_hetero_runtime_prop:s0
 persist.vendor.verbose_logging_enabled u:object_r:vendor_logger_prop:s0
+vendor.devcoredump. u:object_r:vendor_devcoredump_prop:s0
 persist.vendor.se. u:object_r:vendor_secure_element_prop:s0
 persist.vendor.nfc. u:object_r:vendor_nfc_prop:s0
 persist.vendor.nfc.antenna. u:object_r:vendor_nfc_antenna_prop:s0
@@ -17,7 +18,6 @@ ro.vendor.persist.status u:object_r:vendor_persist_prop:s0 exact string
 vendor.aoc.firmware.version u:object_r:vendor_aoc_prop:s0
 persist.vendor.aoc.status_request_timed_out u:object_r:vendor_timeout_aoc_prop:s0
 persist.vendor.radio.volte_mif_off u:object_r:vendor_volte_mif_off:s0
-vendor.devcoredump. u:object_r:vendor_devcoredump_prop:s0
 vendor.zram.nr_tags u:object_r:vendor_zram_nr_tags_prop:s0 exact int
 ro.boot.ramdump u:object_r:vendor_ramdump_prop:s0
 persist.vendor.intelligence u:object_r:vendor_intelligence_prop:s0
@@ -52,6 +52,7 @@ vendor.nos.citadel.version u:object_r:vendor_nos_citadel_version:s0
 ro.vendor.flood. u:object_r:vendor_flood_prop:s0
 vendor.perf.allow_experiments u:object_r:vendor_perf_allow_experiments_prop:s0
 vendor.thermal.allow_experiments u:object_r:vendor_thermal_allow_experiments_prop:s0
+vendor.pixel.system.phenotype.Perf__pixelmd_config u:object_r:vendor_pixelmd_config_experiment_prop:s0
 persist.vendor.sys.ssr. u:object_r:vendor_ssrdump_prop:s0
 vendor.wlan.driver.version u:object_r:vendor_wifi_version:s0
 vendor.wlan.firmware.version u:object_r:vendor_wifi_version:s0

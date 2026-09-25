@@ -8,7 +8,7 @@
     <string name="charging_optimization_charge_label">‫%1$s – טעינה מלאה עד %2$s</string>
     <string name="charging_optimization_reach_limit_charge_label">‫%1$s – הטעינה הסתיימה</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">הטעינה הסתיימה</string>
-    <string name="charging_optimization_remaining_time_label">טעינה מלאה עד %1$s</string>
+    <string name="charging_optimization_remaining_time_label">הטעינה תסתיים עד %1$s</string>
     <string name="comfort_filters_all_modes_off_summary">מושבתים</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">הפחתת האור הכחול ותאורת הלילה מופעלות</string>
     <string name="comfort_filters_comfort_view_on_summary">הפחתת האור הכחול מופעלת</string>

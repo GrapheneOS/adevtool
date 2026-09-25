@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">carga, límite, optimización de carga, límite de carga</string>
     <string name="charging_optimization_entry_summary_charge_limit">Limitar al %1$s</string>
-    <string name="charging_optimization_footer_message_charging_limit">Esto ayuda a extender la vida útil de la batería. En ocasiones, el teléfono deberá cargarse por completo para garantizar la precisión en la estimación de la capacidad de la batería.</string>
+    <string name="charging_optimization_footer_message_charging_limit">Esto ayuda a extender la vida útil de la batería. En ocasiones, el teléfono deberá cargarse por completo para garantizar que la estimación de la capacidad de la batería sea precisa.</string>
     <string name="charging_optimization_summary_off">Desactivada</string>
     <string name="charging_optimization_title">Optimización de carga</string>
 </resources>

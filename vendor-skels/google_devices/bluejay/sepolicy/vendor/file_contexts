@@ -8,7 +8,6 @@
 /(vendor|system/vendor)/lib(64)?/libion_exynos\.so u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib(64)?/libOpenCL-pixel\.so u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib(64)?/hw/mapper\.pixel\.so u:object_r:same_process_hal_file:s0
-/(vendor|system/vendor)/lib(64)?/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.st u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service32 u:object_r:hal_usb_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb-service\.gs101 u:object_r:hal_usb_impl_exec:s0
@@ -38,6 +37,7 @@
 /vendor/lib(64)?/hw/vulkan\.mali\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/lib_aion_buffer\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/gralloc\.gs101\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libGralloc4Wrapper\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/arm\.graphics-V1-ndk\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/pixel-power-ext-V1-ndk\.so u:object_r:same_process_hal_file:s0
@@ -291,7 +291,6 @@
 /dev/acd-sound_trigger u:object_r:aoc_device:s0
 /dev/acd-mel_processor u:object_r:aoc_device:s0
 /dev/logbuffer_pca9468 u:object_r:logbuffer_device:s0
-/vendor/bin/rlsservice u:object_r:rlsservice_exec:s0
 /dev/lwis-act-lc898129 u:object_r:lwis_device:s0
 /dev/lwis-flash-lm3644 u:object_r:lwis_device:s0
 /dev/lwis-ois-lc898128 u:object_r:lwis_device:s0
@@ -370,10 +369,10 @@
 /vendor/bin/dump/dump_devfreq u:object_r:dump_devfreq_exec:s0
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
+/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_storage u:object_r:dump_storage_exec:s0
 /vendor/bin/dump/dump_sensors u:object_r:dump_sensors_exec:s0
 /vendor/bin/flood\.control\.hal u:object_r:flood_control_exec:s0
-/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /dev/logbuffer_pogo_transport u:object_r:logbuffer_device:s0
 /dev/lwis-eeprom-m24c64s-rear u:object_r:lwis_device:s0
 /dev/lwis-sensor-imx355-inner u:object_r:lwis_device:s0

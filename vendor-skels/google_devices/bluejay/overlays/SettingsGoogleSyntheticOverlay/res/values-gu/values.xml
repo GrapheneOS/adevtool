@@ -8,7 +8,7 @@
     <string name="charging_optimization_charge_label">%1$s - %2$s સુધીમાં ચાર્જિંગ થઈ જશે</string>
     <string name="charging_optimization_reach_limit_charge_label">%1$s - ચાર્જિંગ થઈ ગયું</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">પૂરું ચાર્જિંગ થઈ ગયું</string>
-    <string name="charging_optimization_remaining_time_label">%1$s સુધીમાં પૂરું ચાર્જિંગ થઈ જશે</string>
+    <string name="charging_optimization_remaining_time_label">%1$s સુધીમાં ફુલ ચાર્જિંગ થઈ જશે</string>
     <string name="comfort_filters_all_modes_off_summary">બંધ</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">કમ્ફર્ટ વ્યૂ, રાત્રિ પ્રકાશની સુવિધા ચાલુ છે</string>
     <string name="comfort_filters_comfort_view_on_summary">કમ્ફર્ટ વ્યૂની સુવિધા ચાલુ છે</string>

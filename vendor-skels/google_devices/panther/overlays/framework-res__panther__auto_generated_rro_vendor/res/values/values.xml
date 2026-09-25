@@ -248,6 +248,7 @@
     <bool name="config_telephony5gStandalone">true</bool>
     <bool name="config_ui_enableFadingMarquee">false</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
+    <bool name="config_update_operator_name_after_carrier_config_loaded">true</bool>
     <bool name="config_useDevInputEventForAudioJack">true</bool>
     <bool name="config_variableRefreshRateTypingSupported">false</bool>
     <bool name="config_wifi_dual_band_support">true</bool>

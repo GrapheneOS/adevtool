@@ -1,0 +1,1 @@
+vintf_fragment { name: "adevtool_vintf_fragment_system_omapi.xml", src: "omapi.xml" }

@@ -3,9 +3,9 @@
     <string name="fingerprint_acquired_imager_dirty_udfps">ଆପଣଙ୍କ ସ୍କ୍ରିନର ସେନ୍ସର ପାଖରେ ସଫା କରନ୍ତୁ</string>
     <string name="fingerprint_udfps_pre_enroll_runner_dialog_message">ଯେ କୌଣସି ଷ୍ଟ୍ରିକ, ସ୍ମଜ କିମ୍ବା ଦାଗ କାଢ଼ି ଦେବା ପାଇଁ ଆପଣଙ୍କ ସ୍କ୍ରିନକୁ ପୋଛି ଦିଅନ୍ତୁ। ଏହା ସ୍ପଷ୍ଟ ଟିପଚିହ୍ନ ଇମେଜ କେପଚର କରିବାରେ ସାହାଯ୍ୟ କରେ।</string>
     <string name="fingerprint_udfps_pre_enroll_runner_dialog_title">ଜାରି ରଖିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ସ୍କ୍ରିନକୁ ସଫା କରନ୍ତୁ</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_6">"ଯଦି ଆପଣଙ୍କ ପାଖରେ ଏକ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟର ଅଛି, ତେବେ ସର୍ବୋତ୍ତମ ପରଫରମାନ୍ସ ପାଇଁ ଆପଣଙ୍କର ଟିପଚିହ୍ନ ସେଟ ଅପ କରିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟରକୁ ଲାଗୁ କରନ୍ତୁ।
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_6">"ଯଦି ଆପଣଙ୍କ ପାଖରେ ଏକ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟର ଅଛି, ତେବେ ସର୍ବୋତ୍ତମ ପରଫରମାନ୍ସ ପାଇଁ ଆପଣଙ୍କର ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ସେଟ ଅପ କରିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟରକୁ ଲାଗୁ କରନ୍ତୁ।
 
-ସର୍ବୋତ୍ତମ ଫଳାଫଳ ପାଇଁ Made for Google ସାର୍ଟିଫାଏ କରାଯାଇଥିବା ଏକ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟରକୁ ବ୍ୟବହାର କରନ୍ତୁ। ଅନ୍ୟ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟରଗୁଡ଼ିକ ସହିତ ଆପଣଙ୍କ ଟିପଚିହ୍ନ କାମ କରିନପାରେ।"</string>
+ସର୍ବୋତ୍ତମ ଫଳାଫଳ ପାଇଁ Made for Google ସାର୍ଟିଫାଏ କରାଯାଇଥିବା ଏକ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟରକୁ ବ୍ୟବହାର କରନ୍ତୁ। ଅନ୍ୟ ସ୍କ୍ରିନ ପ୍ରୋଟେକ୍ଟର ସହିତ ଆପଣଙ୍କ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ କାମ କରିନପାରେ।"</string>
     <string name="security_settings_udfps_enroll_fingertip_title">ଆପଣଙ୍କ ଆଙ୍ଗୁଠିକୁ ଟିଲ୍ଟ କରି ଟିପରେ ସ୍ପର୍ଶ କରନ୍ତୁ</string>
     <string name="security_settings_udfps_enroll_left_edge_title">ଆଙ୍ଗୁଠିକୁ ବୁଲାଇ ବାମ ଧାରରେ ସ୍ପର୍ଶ କରନ୍ତୁ</string>
     <string name="security_settings_udfps_enroll_right_edge_title">ପୁଣି ବୁଲାଇ ଡାହାଣ ଧାରରେ ସ୍ପର୍ଶ କରନ୍ତୁ</string>

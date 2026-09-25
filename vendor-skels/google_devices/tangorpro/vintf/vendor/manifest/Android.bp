@@ -11,6 +11,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.drm-service.clearkey.xml",
+    src: "android.hardware.drm-service.clearkey.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_android.hardware.dumpstate.3-service.xml",
     src: "android.hardware.dumpstate.3-service.xml",
     soc_specific: true,
@@ -59,8 +65,20 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.security.secretkeeper.trusty.xml",
+    src: "android.hardware.security.secretkeeper.trusty.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_android.hardware.security.sharesecret-service.citadel.xml",
     src: "android.hardware.security.sharesecret-service.citadel.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_android.hardware.sensors-multihal.xml",
+    src: "android.hardware.sensors-multihal.xml",
     soc_specific: true,
 }
 
@@ -101,6 +119,12 @@ vintf_fragment {
 }
 
 vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_bluetooth_audio.xml",
+    src: "bluetooth_audio.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_fingerprint-fpc42.xml",
     src: "fingerprint-fpc42.xml",
     soc_specific: true,
@@ -109,6 +133,12 @@ vintf_fragment {
 vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_flood_control.xml",
     src: "flood_control.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_health-storage-default.xml",
+    src: "health-storage-default.xml",
     soc_specific: true,
 }
 
@@ -193,5 +223,11 @@ vintf_fragment {
 vintf_fragment {
     name: "adevtool_vintf_fragment_vendor_vendor.google.google_battery-default.xml",
     src: "vendor.google.google_battery-default.xml",
+    soc_specific: true,
+}
+
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_vendor.google.plat_security-service.xml",
+    src: "vendor.google.plat_security-service.xml",
     soc_specific: true,
 }

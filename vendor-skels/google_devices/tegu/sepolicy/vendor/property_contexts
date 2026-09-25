@@ -8,7 +8,6 @@ persist.vendor.radio.volte_mif_off u:object_r:vendor_volte_mif_off:s0
 ro.vendor.trusty.storage.fs_ready_rw u:object_r:vendor_trusty_storage_prop:s0
 ro.vendor.trusty.storage.fs_ready u:object_r:vendor_trusty_storage_prop:s0
 vendor.devcoredump. u:object_r:vendor_devcoredump_prop:s0
-persist.vendor.intelligence u:object_r:vendor_intelligence_prop:s0
 vendor.zram.nr_tags u:object_r:vendor_zram_nr_tags_prop:s0 exact int
 vendor.gxp. u:object_r:vendor_gxp_prop:s0
 vendor.camera.debug. u:object_r:vendor_camera_debug_prop:s0
@@ -16,6 +15,7 @@ persist.vendor.camera.pbcs.debug. u:object_r:vendor_camera_pbcs_debug_prop:s0
 vendor.camera.pbcs.debug. u:object_r:vendor_camera_pbcs_debug_prop:s0
 persist.vendor.verbose_logging_enabled u:object_r:vendor_logger_prop:s0
 persist.vendor.fingerprint. u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.intelligence u:object_r:vendor_intelligence_prop:s0
 vendor.common.modules.ready u:object_r:vendor_device_prop:s0
 vendor.device.modules.ready u:object_r:vendor_device_prop:s0
 vendor.all.modules.ready u:object_r:vendor_device_prop:s0
@@ -41,6 +41,7 @@ vendor.nos.citadel.version u:object_r:vendor_nos_citadel_version:s0
 ro.vendor.flood. u:object_r:vendor_flood_prop:s0
 vendor.perf.allow_experiments u:object_r:vendor_perf_allow_experiments_prop:s0
 vendor.thermal.allow_experiments u:object_r:vendor_thermal_allow_experiments_prop:s0
+vendor.pixel.system.phenotype.Perf__pixelmd_config u:object_r:vendor_pixelmd_config_experiment_prop:s0
 vendor.cbd. u:object_r:vendor_cbd_prop:s0
 persist.vendor.cbd. u:object_r:vendor_cbd_prop:s0
 persist.vendor.ims. u:object_r:vendor_imssvc_prop:s0
@@ -81,6 +82,7 @@ ro.vendor.vibrator.hal. u:object_r:vendor_vibrator_prop:s0
 persist.vendor.vibrator.hal. u:object_r:vendor_vibrator_prop:s0
 persist.vendor.usb. u:object_r:vendor_usb_config_prop:s0
 vendor.usb. u:object_r:vendor_usb_config_prop:s0
+ro.vendor.usb.userspace.aoa.enabled u:object_r:vendor_usb_aoa_prop:s0 exact bool
 persist.vendor.se. u:object_r:vendor_secure_element_prop:s0
 persist.vendor.nfc. u:object_r:vendor_nfc_prop:s0
 persist.vendor.nfc.antenna. u:object_r:vendor_nfc_antenna_prop:s0
@@ -98,6 +100,11 @@ ro.vendor.primarydisplay.vrr.expected_present.timeout_ns u:object_r:vendor_displ
 ro.vendor.primarydisplay.powerstats.entity_name u:object_r:vendor_display_prop:s0 exact string
 ro.vendor.secondarydisplay.blocking_zone.min_refresh_rate_by_nits u:object_r:vendor_display_prop:s0 exact string
 ro.vendor.persist.status u:object_r:vendor_persist_prop:s0 exact string
+ro.vendor.display.screen_context_telemetry.grid_rows u:object_r:vendor_display_prop:s0 exact uint
+ro.vendor.display.screen_context_telemetry.grid_cols u:object_r:vendor_display_prop:s0 exact uint
+ro.vendor.display.screen_context_telemetry.interval_ms u:object_r:vendor_display_prop:s0 exact uint
+ro.vendor.display.enable_screen_context_telemetry.global u:object_r:vendor_display_prop:s0 exact bool
+ro.vendor.display.enable_screen_context_telemetry.local u:object_r:vendor_display_prop:s0 exact bool
 ro.vendor.hwc.drm.device u:object_r:vendor_display_prop:s0
 persist.vendor.display. u:object_r:vendor_display_prop:s0
 ro.vendor.uwb.calibration. u:object_r:vendor_uwb_calibration_prop:s0 exact string

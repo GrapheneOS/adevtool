@@ -2,7 +2,7 @@
 <resources>
     <string name="charge_limit_indexing_keywords">ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ, ਸੀਮਾ, ਚਾਰਜਿੰਗ ਔਪਟੀਮਾਈਜ਼ੇਸ਼ਨ, ਚਾਰਜ ਕਰਨ ਦੀ ਤੈਅ ਸੀਮਾ</string>
     <string name="charging_optimization_entry_summary_charge_limit">ਇਸ ਸੁਵਿਧਾ ਨਾਲ ਬੈਟਰੀ %1$s ਤੱਕ ਚਾਰਜ ਹੋਵੇਗੀ</string>
-    <string name="charging_optimization_footer_message_charging_limit">ਇਸ ਨਾਲ ਬੈਟਰੀ ਦੀ ਮਿਆਦ ਵਧਾਉਣ ਵਿੱਚ ਮਦਦ ਮਿਲਦੀ ਹੈ। ਸਟੀਕ ਬੈਟਰੀ ਸਮਰੱਥਾ ਨੂੰ ਪੱਕਾ ਕਰਨ ਲਈ, ਤੁਹਾਡੇ ਫ਼ੋਨ ਨੂੰ ਕਦੇ-ਕਦਾਈਂ ਪੂਰੀ ਤਰ੍ਹਾਂ ਚਾਰਜ ਕਰਨ ਦੀ ਲੋੜ ਪਵੇਗੀ।</string>
+    <string name="charging_optimization_footer_message_charging_limit">ਇਸ ਨਾਲ ਬੈਟਰੀ ਦੀ ਮਿਆਦ ਵਧਾਉਣ ਵਿੱਚ ਮਦਦ ਮਿਲਦੀ ਹੈ। ਸਟੀਕ ਬੈਟਰੀ ਸਮਰੱਥਾ ਨੂੰ ਪੱਕਾ ਕਰਨ ਲਈ, ਤੁਹਾਡੇ ਫ਼ੋਨ ਨੂੰ ਕਦੇ-ਕਦਾਈਂ ਪੂਰਾ ਚਾਰਜ ਕਰਨ ਦੀ ਲੋੜ ਪਵੇਗੀ।</string>
     <string name="charging_optimization_summary_off">ਬੰਦ ਹੈ</string>
     <string name="charging_optimization_title">ਚਾਰਜਿੰਗ ਔਪਟੀਮਾਈਜ਼ੇਸ਼ਨ</string>
 </resources>

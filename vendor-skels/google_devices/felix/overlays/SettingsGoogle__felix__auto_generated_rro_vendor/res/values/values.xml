@@ -9,9 +9,5 @@
     <dimen name="face_enroll_icon_large_width">200.0dp</dimen>
     <dimen name="illustration_accessibility_margin_top">-24.0dp</dimen>
     <dimen name="illustration_lottie_height">330.0dp</dimen>
-    <dimen name="limited_vision_button_frame_margin_top">-36.0dp</dimen>
-    <dimen name="limited_vision_button_margin_bottom">12.0dp</dimen>
-    <dimen name="limited_vision_button_margin_top">12.0dp</dimen>
-    <dimen name="limited_vision_button_toggle_margin_top">-28.0dp</dimen>
     <dimen name="lottie_animation_view_margin_top">-64.0dp</dimen>
 </resources>

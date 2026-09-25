@@ -140,10 +140,10 @@
     </array>
     <item name="modem.controller.voltage">3700</item>
     <array name="gps.signalqualitybased">
-        <value>28</value>
-        <value>5</value>
+        <value>46.4</value>
+        <value>44.56</value>
     </array>
-    <item name="gps.voltage">3700</item>
+    <item name="gps.voltage">3800</item>
     <item name="wifi.controller.idle">79</item>
     <item name="wifi.controller.rx">118</item>
     <item name="wifi.controller.tx">331</item>

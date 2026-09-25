@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_supportDreamWirelessChargingRestriction">false</bool>
+    <bool name="config_update_operator_name_after_carrier_config_loaded">true</bool>
+</resources>

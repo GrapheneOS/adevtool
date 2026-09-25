@@ -2,6 +2,7 @@ aocx.IAocx/default u:object_r:aocx:s0
 com.google.pixel.camera.connectivity.hal.provider.ICameraProvider/default u:object_r:hal_pixel_remote_camera_service:s0
 com.google.android.imageprocessing.hal.IImageProcessingHal/default u:object_r:vendor_image_processing_hal_service:s0
 vendor.google.camera_ext.ICameraInterferenceAvoidance/default u:object_r:vendor_camera_interference_avoidance_service:s0
+com.google.android.lyric.intelligentcamerahal.IIntelligentCameraHal/default u:object_r:vendor_intelligent_camera_hal_service:s0
 vendor.goodix.hardware.biometrics.fingerprint.IGoodixFingerprintDaemon/default u:object_r:hal_fingerprint_service:s0
 mapper/pixel u:object_r:hal_graphics_mapper_service:s0
 vendor.google.battery_mitigation.IBatteryMitigation/default u:object_r:hal_battery_mitigation_service:s0
@@ -24,12 +25,12 @@ android.hardware.security.keymint.IKeyMintDevice/strongbox u:object_r:hal_keymin
 android.hardware.security.sharedsecret.ISharedSecret/strongbox u:object_r:hal_sharedsecret_service:s0
 android.hardware.security.keymint.IRemotelyProvisionedComponent/strongbox u:object_r:hal_remotelyprovisionedcomponent_service:s0
 com.google.flood.IFloodService/default u:object_r:flood_control_service:s0
+vendor.google.radio_ext.IRadioExt/default u:object_r:hal_radio_ext_service:s0
 com.google.hardware.pixel.display.IDisplay/default u:object_r:hal_pixel_display_service:s0
 hardware.qorvo.uwb.IUwbVendor/default u:object_r:hal_uwb_vendor_service:s0
 android.hardware.drm.IDrmFactory/widevine u:object_r:hal_drm_service:s0
 vendor.google.whitechapel.audio.extension.IAudioExtension/default u:object_r:hal_audio_ext_service:s0
 vendor.google.wireless_charger.IWirelessCharger/default u:object_r:hal_wireless_charger_service:s0
-rlsservice u:object_r:rls_service:s0
 vendor.google.bluetooth_ext.IBTChannelAvoidance/default u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothSar/default u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothCcc/default u:object_r:hal_bluetooth_coexistence_service:s0

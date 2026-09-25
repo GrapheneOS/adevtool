@@ -1,3 +1,4 @@
 com.google.pixel.camera.services.binder.IServiceBinder/default u:object_r:camera_binder_service:s0
 com.google.pixel.camera.services.cameraidremapper.ICameraIdRemapper/default u:object_r:camera_cameraidremapper_service:s0
 com.google.pixel.camera.services.lyricconfigprovider.ILyricConfigProvider/default u:object_r:camera_lyricconfigprovider_service:s0
+com.google.pixel.camera.services.lyricmaintenancetaskprovider.ILyricMaintenanceTaskProvider/default u:object_r:camera_lyricmaintenancetaskprovider_service:s0

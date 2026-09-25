@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="battery_missing_link_message">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</string>
-    <string name="charging_optimization_charge_label">%1$s - ಚಾರ್ಜಿಂಗ್ %2$s ಸಮಯಕ್ಕೆ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
+    <string name="charging_optimization_charge_label">%1$s - %2$s ಒಳಗೆ ಬ್ಯಾಟರಿ ಚಾರ್ಜ್ ಆಗುತ್ತದೆ</string>
     <string name="charging_optimization_reach_limit_charge_label">%1$s - ಚಾರ್ಜಿಂಗ್ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
     <string name="charging_optimization_reach_limit_remaining_time_label">ಚಾರ್ಜಿಂಗ್ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
-    <string name="charging_optimization_remaining_time_label">%1$s ಸಮಯಕ್ಕೆ ಚಾರ್ಜಿಂಗ್ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
+    <string name="charging_optimization_remaining_time_label">%1$s ಒಳಗೆ ಬ್ಯಾಟರಿ ಚಾರ್ಜ್ ಆಗುತ್ತದೆ</string>
     <string name="comfort_filters_all_modes_off_summary">ಆಫ್</string>
     <string name="comfort_filters_comfort_view_on_night_light_on_summary">ಆರಾಮದಾಯಕ ವೀಕ್ಷಣೆ, ನೈಟ್ ಲೈಟ್ ಆನ್ ಆಗಿದೆ</string>
     <string name="comfort_filters_comfort_view_on_summary">ಆರಾಮದಾಯಕ ವೀಕ್ಷಣೆ ಆನ್ ಆಗಿದೆ</string>

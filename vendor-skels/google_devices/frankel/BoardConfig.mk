@@ -41,6 +41,7 @@ BOARD_KERNEL_CMDLINE += \
     max77779_pmic.load_sequential=1 \
     max77779_pmic_spmi.load_sequential=1 \
     max77779_pmic_pinctrl.load_sequential=1 \
+    samsung_dma_heap.gcma_skip_heaps=gcma_camera_internal \
     cma_sysfs.experimental=Y \
     cgroup.memory=nokmem \
     rcupdate.rcu_expedited=1 \
@@ -54,7 +55,7 @@ BOARD_KERNEL_CMDLINE += \
     arm_smmu_v3_kvm.smc_s2=true \
     at24.write_timeout=100 \
     log_buf_len=1024K \
-    android_arch_task_struct_size=512 \
+    android_arch_task_struct_size=784 \
     bootconfig
 
 BOARD_INIT_BOOT_HEADER_VERSION := 4
@@ -114,3 +115,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # needed for overriding AOSP-available files with extracted prebuilts
 BUILD_BROKEN_DUP_RULES := true
+
+# needed for partially backporting multi-partition libraries
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

@@ -27,7 +27,6 @@
     <dimen name="dream_preference_card_fixed_space_around">10.0dp</dimen>
     <dimen name="dream_preference_card_padding">20.0dp</dimen>
     <dimen name="dream_preference_card_space_compensation">-10.0dp</dimen>
-    <integer name="config_whenToStartHubModeDefault">2</integer>
     <string name="communal_settings_title">Hub Mode</string>
     <string name="dream_no_screen_saver_caption">No screen saver</string>
     <string name="dream_no_screen_saver_description">To save energy, your screen will turn off after inactivity</string>

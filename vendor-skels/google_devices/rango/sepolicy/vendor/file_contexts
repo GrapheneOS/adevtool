@@ -9,6 +9,7 @@
 /dev/ttyGS[0-3] u:object_r:serial_device:s0
 /vendor/lib(64)?/libgxp\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/gxp_metrics_logger\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
 /dev/ufs-bsg. u:object_r:ufs_bsg_device:s0
 /dev/oem_ipc[0-7] u:object_r:radio_device:s0
 /dev/thermal(/.*)? u:object_r:thermal_link_device:s0
@@ -31,6 +32,7 @@
 /mnt/vendor/efs(/.*)? u:object_r:modem_efs_file:s0
 /data/vendor/mm(/.*)? u:object_r:mm_logd_vendor_data_file:s0
 /data/vendor/nfc(/.*)? u:object_r:vendor_nfc_vendor_data_file:s0
+/data/vendor/gxp(/.*)? u:object_r:gxp_vendor_data_file:s0
 /data/vendor/gps(/.*)? u:object_r:vendor_gps_file:s0
 /vendor/firmware(/.*)? u:object_r:vendor_fw_file:s0
 /data/vendor/log(/.*)? u:object_r:vendor_log_file:s0
@@ -335,6 +337,7 @@
 /dev/dma_heap/vstream-secure u:object_r:dmabuf_system_secure_heap_device:s0
 /vendor/bin/thermal_controld u:object_r:pixel-thermal-control-sh_exec:s0
 /vendor/bin/thermal_symlinks u:object_r:init-thermal-symlinks-sh_exec:s0
+/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_mailbox u:object_r:dump_mailbox_exec:s0
@@ -344,7 +347,6 @@
 /vendor/bin/dump/dump_storage u:object_r:dump_storage_exec:s0
 /vendor/bin/dump/dump_sensors u:object_r:dump_sensors_exec:s0
 /vendor/bin/flood\.control\.hal u:object_r:flood_control_exec:s0
-/vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_dwc3\.sh u:object_r:dump_dwc3_exec:s0
 /dev/logbuffer_pogo_transport u:object_r:logbuffer_device:s0
 /dev/dma_heap/farawimg-secure u:object_r:faceauth_heap_device:s0
@@ -383,13 +385,13 @@
 /vendor/lib64/libmetrics_logger\.so u:object_r:same_process_hal_file:s0
 /vendor/bin/copy_efs_files_to_data u:object_r:copy_efs_files_to_data_exec:s0
 /vendor/bin/ufs_firmware_update\.sh u:object_r:ufs_firmware_update_exec:s0
+/dev/dma_heap/gcma_camera_internal u:object_r:dmabuf_system_heap_device:s0
 /vendor/lib64/libedgetpu_litert\.so u:object_r:same_process_hal_file:s0
 /vendor/bin/dump/dump_pixel_display u:object_r:dump_pixel_display_exec:s0
 /vendor/bin/dump/dump_pixel_metrics u:object_r:dump_pixel_metrics_exec:s0
 /vendor/bin/dump/dump_bootlogs_bldr u:object_r:dump_bootlogs_bldr_exec:s0
 /vendor/bin/pixel_irq_load_balancer u:object_r:pixel_irq_load_balancer_exec:s0
 /vendor/bin/storage_intelligence\.sh u:object_r:storage_intelligence_exec:s0
-/vendor/lib64/libgpudataproducer\.so u:object_r:same_process_hal_file:s0
 /dev/logbuffer_ggauge_health_monitor u:object_r:logbuffer_device:s0
 /vendor/bin/rango_init_thermal_config u:object_r:init_thermal_config_exec:s0
 /vendor/bin/trusty-coverage-controller u:object_r:trusty_coverage_controller_exec:s0
@@ -407,6 +409,7 @@
 /vendor/bin/dump/dump_pixel_second_display u:object_r:dump_pixel_second_display_exec:s0
 /vendor/lib64/libPixelGrallocProperties\.so u:object_r:same_process_hal_file:s0
 /vendor/bin/hw/android\.hardware\.usb-service u:object_r:hal_usb_impl_exec:s0
+/dev/dma_heap/gcma_camera_internal-uncached u:object_r:dmabuf_system_heap_device:s0
 /vendor/lib64/libcustomer_gralloc_ddk_api\.so u:object_r:same_process_hal_file:s0
 /vendor/lib64/aconfig_gpu_img_flags_c_lib\.so u:object_r:same_process_hal_file:s0
 /dev/block/platform/3c400000\.ufs/by-name/efs u:object_r:efs_block_device:s0
