@@ -193,9 +193,6 @@ function patchGnssCert(orig: string) {
 
 function patchFstab(orig: string) {
   let replacements = new Map<string, string>([
-    // use wrapped key encryption in FIPS mode
-    ['fileencryption=aes-256-xts,', 'fileencryption=::inlinecrypt_optimized+wrappedkey_v0,'],
-    ['metadata_encryption=aes-256-xts,', 'metadata_encryption=:wrappedkey_v0,'],
     // enable regular AVB for dlkm images
     ['avb_keys=no_such_key,', ''],
   ])

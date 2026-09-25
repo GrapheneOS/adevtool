@@ -27,7 +27,6 @@ filters:
       - system/lib/libprotobuf-cpp-full-6.33.5-absl20260526.so
       - system/lib/libprotobuf-cpp-lite-6.33.5-absl20260526.so
       - system/lib/libwrapfd.so
-      - vendor/etc/fstab.gs101-fips
   file_inclusions:
     match:
       - vendor/lib/aconfig_gpu_flags_c_lib.so

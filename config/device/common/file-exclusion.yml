@@ -312,7 +312,12 @@ filters:
       - vendor/bin/sscoredump
       - vendor/boot_otas/boot_ota_16k.zip
       - vendor/boot_otas/boot_ota_4k.zip
-      - vendor/etc/fstab.malibu-fips # TODO exclude on rest of devices
+      - vendor/etc/fstab.gs101-fips
+      - vendor/etc/fstab.gs201-fips
+      - vendor/etc/fstab.laguna-fips
+      - vendor/etc/fstab.malibu-fips
+      - vendor/etc/fstab.zuma-fips
+      - vendor/etc/fstab.zumapro-fips
       - vendor/etc/init/init.sscoredump.rc
       - vendor/etc/init/mte_launcher.rc # MTE is always enabled on GrapheneOS
       - vendor/lib64/libaconfig_mte_launcher_flags_rust.dylib.so # MTE is always enabled on GrapheneOS
@@ -321,4 +326,9 @@ filters:
       - vendor_ramdisk/avb/q-developer-gsi.avbpubkey
       - vendor_ramdisk/avb/r-developer-gsi.avbpubkey
       - vendor_ramdisk/avb/s-developer-gsi.avbpubkey
+      - vendor_ramdisk/system/etc/fstab.gs101-fips
+      - vendor_ramdisk/system/etc/fstab.gs201-fips
+      - vendor_ramdisk/system/etc/fstab.laguna-fips
       - vendor_ramdisk/system/etc/fstab.malibu-fips
+      - vendor_ramdisk/system/etc/fstab.zuma-fips
+      - vendor_ramdisk/system/etc/fstab.zumapro-fips
