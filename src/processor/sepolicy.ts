@@ -8,7 +8,7 @@ import { getHostBinPath } from '../config/paths'
 import { SystemState } from '../config/system-state'
 import { assertDefined, assertNonNull, updateMultiMapObj } from '../util/data'
 import { EntryFilterSpec, filterEntries, FilterResult } from '../util/exact-filter'
-import { mkdirAndWriteFile, readFile } from '../util/fs'
+import { maybeStat, mkdirAndWriteFile, readFile } from '../util/fs'
 import { log } from '../util/log'
 import { parseLines } from '../util/parse'
 import { EXT_SYS_PARTITIONS, Partition, PathResolver, REGULAR_SYS_PARTITIONS } from '../util/partitions'
@@ -303,6 +303,7 @@ export async function processSepolicy(
       let recoveryBody = disassembled.recovery.filter(e => !customRecovery.has(e)).join('\n')
       let recovery = 'recovery_only(`\n' + recoveryBody + "\n')"
       await mkdirAndWriteFile(sepolicyDirPath, 'recovery_sepolicy_ext.te', recovery)
+      writtenAny = true
     })()
 
     let macPermsJob = (async () => {
@@ -330,7 +331,22 @@ export async function processSepolicy(
       }
     })()
 
-    await Promise.all(contextsJobs.concat(...[macPermsJob, typesJob, sepolicyExtJob]))
+    let bugMapJob = (async () => {
+      let names = ['bug_map', 'selinux_denial_metadata']
+      for (let name of names) {
+        let filePath = path.join(selinuxDir, name)
+        let stat = await maybeStat(filePath)
+        if (stat !== null && stat.size > 0) {
+          assert(stat.isFile(), filePath)
+          await fs.mkdir(sepolicyDirPath, { recursive: true })
+          await fs.copyFile(filePath, path.join(sepolicyDirPath, 'bug_map'))
+          writtenAny = true
+          break
+        }
+      }
+    })()
+
+    await Promise.all(contextsJobs.concat(...[macPermsJob, typesJob, sepolicyExtJob, bugMapJob]))
 
     if (writtenAny) {
       sepolicyDirs.dirs[part] = sepolicyDirPath
