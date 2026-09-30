@@ -69,7 +69,7 @@ function updateStatusLines() {
   }
 }
 
-let pendingWrites: unknown[] = []
+let pendingWrites: (string | Buffer | Uint8Array)[] = []
 let currentStatus: string | null = null
 
 let isClearPending = false
@@ -149,7 +149,7 @@ function write(str: string | Buffer | Uint8Array, callback?: () => void) {
   }
 }
 
-export function log(str: string | Buffer | DataView) {
+export function log(str: string | Buffer | Uint8Array) {
   if (currentStatus !== null) {
     clearStatusLines()
     write(str)

@@ -81,7 +81,7 @@ interface FilterEntries2Result<T> {
   hasTransforms: boolean
 }
 
-export function filterEntries2<T>(cmd: EntryFilter2Cmd<T>) {
+export function filterEntries2<T extends Record<string, unknown>>(cmd: EntryFilter2Cmd<T>) {
   let unknownEntries: string[] = []
   let filtered: [string, T][] = []
   let hasTransforms = false
