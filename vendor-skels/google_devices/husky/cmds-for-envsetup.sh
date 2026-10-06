@@ -1,2 +1,2 @@
-export BUILD_ID_husky="CP3A.260905.009"
+export BUILD_ID_husky="CP3A.261005.005"
 unset PLATFORM_SECURITY_PATCH_husky

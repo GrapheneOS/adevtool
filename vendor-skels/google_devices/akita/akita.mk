@@ -3,8 +3,8 @@
 
 include vendor/google_devices/akita/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),CP3A.260905.009)
-  $(error BUILD_ID: expected CP3A.260905.009, got $(BUILD_ID))
+ifneq ($(BUILD_ID),CP3A.261005.005)
+  $(error BUILD_ID: expected CP3A.261005.005, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/akita/device.mk)
@@ -631,6 +631,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/gomobile_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gomobile_mt.pb \
     vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/google5glab_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/google5glab_us.pb \
     vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/grameenphone_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/grameenphone_bd.pb \
+    vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/GsCommonCarrierSettingsExtraAssets:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/GsCommonCarrierSettingsExtraAssets \
     vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/gta_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gta_us.pb \
     vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google_devices/akita/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
