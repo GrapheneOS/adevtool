@@ -3,6 +3,7 @@ includes:
 
 device:
   platform: gs101
+  build_id: CP3A.261005.002.A1
 
 # Cape is still missing from gen6 CP3A.260905.009 cfg.db, even though other devices have it.
 # Upstream cfg.db for non-6th-gen devices in CP3A.260905.009 uses carrier ID 20046 with parent

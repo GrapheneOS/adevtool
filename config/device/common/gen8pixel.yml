@@ -3,3 +3,4 @@ includes:
 
 device:
   platform: zuma
+  build_id: CP3A.261005.005

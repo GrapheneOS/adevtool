@@ -20,7 +20,6 @@ device:
   has_cellular: true
   # Pixel phone model IDs are listed in the Network sections of:
   # https://support.google.com/pixelphone/answer/7158570?hl=en
-  build_id: CP3A.260905.009
   gservices_flags_inclusions:
     prefix:
       - euicc.
