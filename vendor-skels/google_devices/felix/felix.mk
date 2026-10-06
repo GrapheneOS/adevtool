@@ -3,8 +3,8 @@
 
 include vendor/google_devices/felix/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),CP3A.260905.009)
-  $(error BUILD_ID: expected CP3A.260905.009, got $(BUILD_ID))
+ifneq ($(BUILD_ID),CP3A.261005.002.A1)
+  $(error BUILD_ID: expected CP3A.261005.002.A1, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/felix/device.mk)

@@ -1,5 +1,5 @@
 canonical_name: "fi_at"
-version: 79000000010
+version: 79000000012
 apns {
 }
 configs {
@@ -638,5 +638,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293191
+  seconds: 1786733301
 }
