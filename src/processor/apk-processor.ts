@@ -158,19 +158,6 @@ export async function processApks(
         }
         break
       }
-      case 'com.google.android.adservices.api': {
-        for (let perm of getAdservicesSharedPerms()) {
-          assert(perms.has(perm), perm)
-        }
-        break
-      }
-      case 'com.google.android.ext.services': {
-        for (let perm of getAdservicesSharedPerms()) {
-          assert(perms.has(perm), perm)
-          perms.delete(perm)
-        }
-        break
-      }
     }
     for (let perm of perms) {
       objSet(apc.permissions, perm, pkgName)
@@ -325,17 +312,6 @@ function getGsfGmsCoreSharedPerms() {
     'com.google.android.providers.settings.permission.WRITE_GSETTINGS',
     'com.google.android.gtalkservice.permission.GTALK_SERVICE',
     'com.android.vending.INTENT_VENDING_ONLY',
-  ]
-}
-
-function getAdservicesSharedPerms() {
-  return [
-    'android.permission.ACCESS_ADSERVICES_AD_ID',
-    'android.permission.ACCESS_ADSERVICES_AD_SELECTION',
-    'android.permission.ACCESS_ADSERVICES_ATTRIBUTION',
-    'android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE',
-    'android.permission.ACCESS_ADSERVICES_PROTECTED_SIGNALS',
-    'android.permission.ACCESS_ADSERVICES_TOPICS',
   ]
 }
 
