@@ -3,3 +3,4 @@ includes:
 
 device:
   platform: laguna
+  build_id: CP3A.261005.005
