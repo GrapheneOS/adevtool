@@ -3,6 +3,19 @@ AB_OTA_POSTINSTALL_CONFIG += \
 	POSTINSTALL_PATH_system=system/bin/otapreopt_script \
 	POSTINSTALL_OPTIONAL_system=true
 
+# Select the boot animation canvas for this device's screen.
+ifneq (,$(filter akita bluejay comet cubs felix frankel lynx oriole panther rango shiba stallion tegu tokay yogi,$(TARGET_PRODUCT)))
+$(call soong_config_set,bootanimation_zip,canvas_size,1080)
+else ifneq (,$(filter blazer caiman grizzly,$(TARGET_PRODUCT)))
+$(call soong_config_set,bootanimation_zip,canvas_size,1280)
+else ifneq (,$(filter husky kodiak komodo mustang,$(TARGET_PRODUCT)))
+$(call soong_config_set,bootanimation_zip,canvas_size,1344)
+else ifneq (,$(filter cheetah raven,$(TARGET_PRODUCT)))
+$(call soong_config_set,bootanimation_zip,canvas_size,1440)
+else ifneq (,$(filter tangorpro,$(TARGET_PRODUCT)))
+$(call soong_config_set,bootanimation_zip,canvas_size,1600)
+endif
+
 # Set Vendor SPL to match platform
 VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
