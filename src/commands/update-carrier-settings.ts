@@ -1,4 +1,5 @@
 import { Command, Flags } from '@oclif/core'
+import util from 'util'
 
 import {
   downloadAllConfigs,
@@ -51,7 +52,7 @@ export default class UpdateCarrierSettings extends Command {
           )
           let sdkVersion = mapGet(mapGet(stockProps, Partition.System), BUILD_VERSION_SDK_PROP)
           const updateConfig = await fetchUpdateConfig(config.device.name, buildId, sdkVersion, flags.debug)
-          if (flags.debug) log(updateConfig)
+          if (flags.debug) log(util.inspect(updateConfig, false, Infinity))
           await downloadAllConfigs(updateConfig, outDir, flags.debug)
         } else {
           this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)
