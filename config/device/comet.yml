@@ -1,6 +1,7 @@
 device:
   name: comet
   stable_display_size: { width: 2076, height: 2152 }
+  outer_display_size: { width: 1080, height: 2424 }
   odm_skus:
     - GC15S # 5G mmWave + Sub 6GHz JP
     - GGH2X # 5G mmWave + Sub 6GHz

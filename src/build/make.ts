@@ -213,6 +213,12 @@ PRODUCT_MODEL := ${mapGet(productProps, 'ro.product.product.model')}
 PRODUCT_BRAND := ${mapGet(productProps, 'ro.product.product.brand')}
 PRODUCT_MANUFACTURER := ${mapGet(productProps, 'ro.product.product.manufacturer')}`)
 
+  const displaySize = config.device.outer_display_size ?? config.device.stable_display_size
+  if (displaySize !== undefined) {
+    const canvasSize = Math.min(displaySize.width, displaySize.height)
+    blocks.push(`$(call soong_config_set,bootanimation_zip,canvas_size,${canvasSize})`)
+  }
+
   let propConfigs: string[] = []
 
   let attestationProps = ['brand', 'device', 'manufacturer', 'model', 'name']

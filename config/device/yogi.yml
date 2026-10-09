@@ -1,6 +1,7 @@
 device:
   name: yogi
   stable_display_size: { width: 2076, height: 2152 }
+  outer_display_size: { width: 1080, height: 2342 }
   odm_skus:
     - GZDQ6 # Global: 5G mmWave
 includes:

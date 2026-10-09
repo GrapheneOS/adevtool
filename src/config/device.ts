@@ -67,6 +67,8 @@ export interface DeviceConfig {
     // the unfolded/stable display size here; folded checkin captures can differ because
     // Resources.Configuration reports the current folded display.
     stable_display_size?: DisplaySize
+    // Size boot animations for the outer display on foldables.
+    outer_display_size?: DisplaySize
     gservices_flags_inclusions: Filters
     gservices_flags_exclusions: Filters
   }

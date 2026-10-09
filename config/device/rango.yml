@@ -1,6 +1,7 @@
 device:
   name: rango
   stable_display_size: { width: 2076, height: 2152 }
+  outer_display_size: { width: 1080, height: 2364 }
   odm_skus:
     - GU0NP # Global except JP: 5G mmWave + Sub 6GHz
     - GM66V # JP: 5G mmWave + Sub 6GHz

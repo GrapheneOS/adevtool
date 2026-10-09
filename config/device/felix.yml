@@ -1,6 +1,7 @@
 device:
   name: felix
   stable_display_size: { width: 1080, height: 2092 }
+  outer_display_size: { width: 1080, height: 2092 }
   odm_skus:
     - G9FPL # 5G mmWave + Sub 6GHz
     # JP SKU is G0B96 (digit zero), not GOB96 (letter O) as printed on
