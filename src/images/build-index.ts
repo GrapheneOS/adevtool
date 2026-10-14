@@ -2,7 +2,7 @@ import assert from 'assert'
 import { JSDOM } from 'jsdom'
 import fetch from 'node-fetch'
 import path from 'path'
-import { Document, YAMLMap } from 'yaml'
+import { Document as YAMLDocument, YAMLMap } from 'yaml'
 
 import { loadAndMergeConfig } from '../config/config-loader'
 import { DeviceBuildId, DeviceConfig, makeDeviceBuildId } from '../config/device'
@@ -108,7 +108,7 @@ async function fetchBuildIndexInner(
     }
   }
 
-  return new Document().createNode(buildIndex) as YAMLMap
+  return new YAMLDocument().createNode(buildIndex) as YAMLMap
 }
 
 function parseFactoryOrOtaPage(buildIndex: BuildIndex, pageType: string, dom: JSDOM, devices: Set<string>) {

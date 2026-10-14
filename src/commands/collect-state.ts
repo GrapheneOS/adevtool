@@ -320,7 +320,7 @@ async function runStateCollectionBuild(
       break
     } catch (e) {
       logElapsedTime(buildStart, `${device} phase ${phase} state collection build failed in`)
-      let stderr = e.message as string
+      let stderr = (e as Error).message as string
       if (stderr !== undefined) {
         log(`\n${statusPrefix}stderr:\n` + stderr)
       }
