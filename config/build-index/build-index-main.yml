@@ -140,7 +140,7 @@ rango BP4A.251205.006.C1:
   ota: d7892b31d30bdb6ab7256a69058859872864ecc7a76e9a41ecfd9239a8dbf2aa rango-ota-bp4a.251205.006.c1-d7892b31.zip
 rango BP4A.251205.006.A4:
   desc: Dec 2025, EMEA
-  factory: 4abc79ef741e2dd097cd62d7ba70f1e5f0b4b2cdf59d62437352a3b563246f34 rango-bp4a.251205.006.a4-factory-4abc79ef.zip
+  factory: ff9743952d4cee3146d5ab11b3c7ee69e3838a092fb2322c77c6ce321d78dc20 rango-bp4a.251205.006.a4-factory-ff974395.zip
   ota: 802913cb108f672e70b6d12cc8fea1ddd70b7e7a8a767b3cc22e2764c2ecdfc0 rango-ota-bp4a.251205.006.a4-802913cb.zip
 rango BP4A.251205.006.C2:
   desc: Dec 2025, Japan
@@ -288,7 +288,7 @@ mustang BP4A.251205.006.C1:
   ota: 94d42a392742c28c9fafb64db12183b3dd8b4ec4b1e054fd9de61eab83fc47e4 mustang-ota-bp4a.251205.006.c1-94d42a39.zip
 mustang BP4A.251205.006.A4:
   desc: Dec 2025, EMEA
-  factory: f8b8972b45621ffacb338a4191cb7f7143ee7cb614f977d3e7691d852e9e5331 mustang-bp4a.251205.006.a4-factory-f8b8972b.zip
+  factory: 12f2c877b3c9fd9297ac7c3b2643f87596d52633daf7af7631c2f862c75f49b0 mustang-bp4a.251205.006.a4-factory-12f2c877.zip
   ota: 1a9eb38c09192aab645dfc215cfb89012d59d904333cdab369438f1bec2aa247 mustang-ota-bp4a.251205.006.a4-1a9eb38c.zip
 mustang BP4A.251205.006.C2:
   desc: Dec 2025, Japan
@@ -791,7 +791,7 @@ tegu BP4A.251205.006.B3:
   ota: 05a33175c5eb832e7d725f0fe12f1ad27dabcd7b8d67f8ddaafacb9d9fda7554 tegu-ota-bp4a.251205.006.b3-05a33175.zip
 tegu BP4A.251205.006.C2:
   desc: Dec 2025, Japan
-  factory: 539ebddbb5280407ec1fe3c18d027f53ad8d3162c3d57c3fabe3739a80533a9c tegu-bp4a.251205.006.c2-factory-539ebddb.zip
+  factory: 443cf0833a39f2dd580477fbfa5b8697209d40b3d8b66091a84ad803150561af tegu-bp4a.251205.006.c2-factory-443cf083.zip
   ota: ff800ae1a950445eea1251174ce9c2c2e886cdd4efd9daca316fc992dd753ca4 tegu-ota-bp4a.251205.006.c2-ff800ae1.zip
 tegu BP4A.251205.006.E1:
   desc: Dec 2025
