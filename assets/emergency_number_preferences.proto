@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package safetyhub;
+
+message EmergencyNumberPreferences {
+  repeated EmergencyNumberPreference entries = 1;
+}
+
+message EmergencyNumberPreference {
+  optional string country_iso = 1;
+  optional string number = 2;
+
+  // Individual android.telephony.emergency.EmergencyNumber constants, as in
+  // EmergencyNumber#getEmergencyServiceCategories(), not a combined bitmask:
+  // UNSPECIFIED = 0, POLICE = 1, AMBULANCE = 2, FIRE_BRIGADE = 4,
+  // MARINE_GUARD = 8, MOUNTAIN_RESCUE = 16, MIEC = 32, AIEC = 64.
+  // Each constant has the EMERGENCY_SERVICE_CATEGORY_ prefix.
+  repeated int32 categories = 3 [packed = true];
+
+  bool assisted_calling_supported = 4;
+  Visibility visibility = 5;
+}
+
+enum Visibility {
+  VISIBILITY_UNSPECIFIED = 0;
+  VISIBILITY_PREFERRED = 1;
+}

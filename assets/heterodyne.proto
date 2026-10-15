@@ -1,0 +1,223 @@
+// Heterodyne requests, app registration metadata and typed flag responses.
+
+syntax = "proto2";
+
+package heterodyne;
+
+message GetExperimentsAndConfigsRequest {
+  optional ClientProperties client_properties = 1;
+  repeated AppRegistration app = 2;
+  optional bytes device_cookie = 3;
+  optional FetchReason fetch_reason = 4;
+  optional int32 client_type = 5;
+  optional string triggering_package = 7;
+  map<string, AccountState> account_state = 11;
+}
+
+message GetExperimentsAndConfigsResponse {
+  repeated ConfigPackageResult package_result = 1;
+  optional bytes request_config_tag = 2;
+  optional string pseudonymous_cookie = 3;
+  optional int64 server_configuration_version = 4;
+  optional int64 server_build_version = 5;
+  repeated int32 invalid_auth_token_index = 6;
+}
+
+message ConfigPackageResult {
+  optional ConfigPackageRef package_ref = 1;
+  repeated FlagSet flag_set = 2;
+  optional bytes partition_header = 3;
+  optional string serving_token = 4;
+  repeated NamedFlagSet named_flag_set = 6;
+  optional bytes commit_ack = 7;
+  repeated ExternalExperiment external_experiment = 8;
+  optional int64 generated_at_ms = 11;
+}
+
+message ConfigPackageRef {
+  optional string name = 1;
+  optional int64 version = 2;
+  optional PackageIdentity identity = 3;
+  optional sfixed64 baseline_cl = 4;
+  optional string variant = 5;
+}
+
+message PackageIdentity {
+  optional int32 value = 1;
+}
+
+message FlagSet {
+  optional PartitionHeader partition = 1;
+  repeated Flag flag = 2;
+  optional int32 flag_set_type = 3;
+}
+
+message PartitionHeader {
+  optional int64 experiment_id = 1;
+  optional bytes partition_tag = 2;
+}
+
+message Flag {
+  optional string name = 1;
+  optional int64 long_value = 2;
+  optional bool bool_value = 3;
+  optional double double_value = 4;
+  optional string string_value = 5;
+  optional BytesValue bytes_value = 6;
+  optional FlagType type = 9;
+  optional bool is_override = 10;
+}
+
+message BytesValue {
+  optional bytes value = 1;
+}
+
+enum FlagType {
+  FLAG_TYPE_UNKNOWN = 0;
+  LONG   = 1;
+  BOOL   = 2;
+  DOUBLE = 3;
+  STRING = 4;
+  BYTES  = 5;
+}
+
+message NamedFlagSet {
+  optional ConfigPackageRef package_ref = 1;
+  optional bytes payload = 2;
+  optional int32 kind = 3;
+}
+
+message ExternalExperiment {
+  optional string source = 1;
+  optional bytes token = 3;
+}
+
+message AppRegistration {
+  optional ConfigPackageRef config_package = 1;
+  optional bytes params = 2;
+  repeated ExperimentState experiment = 3;
+  optional bytes app_properties = 4;
+  optional bytes heterodyne_info = 6;
+  optional bytes extra = 8;
+  optional int64 last_fetch_ms = 9;
+}
+
+message ExperimentState {
+  optional int64 experiment_id = 1;
+  optional bytes token = 2;
+}
+
+message ClientProperties {
+  optional int64 user_id = 2;
+  optional ClientInfo client_info = 4;
+  optional string pseudonymous_cookie = 5;
+  optional bytes dogfood_token = 6;
+  optional bool is_maybe_googler_gmscore = 7;
+  optional EmptyContainer signed_identity_token_for_debug = 8;
+}
+
+message EmptyContainer {
+}
+
+message ClientInfo {
+  enum ClientType {
+    UNKNOWN = 0;
+    JS = 1;
+    DESKTOP = 2;
+    IOS = 3;
+    ANDROID = 4;
+    PLAY_CE = 5;
+    PYTHON = 6;
+    VR = 7;
+    PANCETTA = 8;
+    DRIVE_FS = 9;
+    IOS_V2 = 10;
+    YETI = 11;
+    MAC = 12;
+    GOOGLE_HOME = 13;
+    BIRDSONG = 14;
+    IOS_FIREBASE = 15;
+    GO = 16;
+    FUCHSIA = 17;
+    SPARKLIGHT = 18;
+    CPLUSPLUS = 19;
+    KAIOS = 20;
+    MUSK = 21;
+    COMPUTE_IMAGE_TOOLS = 22;
+    ANDROID_FIREBASE = 23;
+    LOONIX = 24;
+    C9 = 25;
+    BATTLESTAR = 26;
+    PORTABLE_PHENOTYPE_LIBRARY = 27;
+    WINDOWS = 28;
+    CLOUD_WORKSTATIONS_CONNECTOR = 29;
+    FITBIT_DARKHORSE = 30;
+    FITBIT_PYTHON = 31;
+    NEARBY = 32;
+    CHROMEOS_BUILD_PYTHON = 33;
+    DOVETAIL_LOGWRITER = 34;
+    NEARBY_CPP = 35;
+    CELLO = 36;
+    NESTCAM_PHOTON = 37;
+    DESKTOP_SERVICES = 38;
+    CHROME_ENTERPRISE_COMPANION = 39;
+    APPSHEET_CLIENT = 40;
+    STARGATE = 41;
+    WGA = 42;
+    VERTEX_DEV_EXPRESS = 43;
+    JETSKI = 44;
+    XPK = 45;
+  }
+
+  optional ClientType client_type = 1;
+  optional AndroidClientInfo android_client_info = 2;
+  optional int64 heterodyne_config_version = 12;
+}
+
+message AndroidClientInfo {
+  optional string model = 4; // Build.MODEL
+  optional int64 android_id = 1;
+  optional int32 sdk_version = 3;
+  optional string product = 5;
+  optional string os_build = 6;
+  optional string hardware = 8;
+  optional string device = 9;
+  optional string locale = 11; // GmsCore uses Locale#getLanguage().
+  optional string country = 12;
+  optional string manufacturer = 13;
+  optional string brand = 14;
+  optional string board = 15;
+  optional string radio_version = 16;
+  optional string fingerprint = 17;
+}
+
+message AccountState {
+  optional bytes sync_cookie = 1;
+}
+
+enum FetchReason {
+  UNSPECIFIED                = 0;
+  PERIODIC                   = 1;
+  ADAPTIVE                   = 2;
+  GCM_PUSH                   = 3;
+  APPLICATION_PUSH           = 4;
+  NEW_USER                   = 5;
+  NEW_APPLICATION            = 6;
+  NEW_REGISTER_VERSION       = 7;
+  NEW_REGISTER_OTHER         = 8;
+  MOBDOG                     = 9;
+  RETRY_AFTER                = 10;
+  APPLICATION_PUSH_RETRY     = 11;
+  NEW_USER_SYNC              = 12;
+  NEW_APPLICATION_SYNC       = 13;
+  NEW_REGISTER_VERSION_SYNC  = 14;
+  NEW_REGISTER_OTHER_SYNC    = 15;
+  NEW_APP_PROPERTIES         = 16;
+  GMSCORE_SAFEBOOT           = 17;
+  CHECK_IN                   = 18;
+  FORCE_SYNC                 = 19;
+  FLAG_CORRUPTION            = 20;
+  FLAG_OVERRIDE              = 21;
+  MOBILE_UTILITIES           = 22;
+  GMSCORE_APP_DOCTOR_SOS     = 23;
+}
