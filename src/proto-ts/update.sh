@@ -35,4 +35,8 @@ protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto
 protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto \
     --ts_proto_opt=forceLong=string,noDefaultsForOptionals=true \
     --ts_proto_out vendor/adevtool/src/proto-ts \
-    vendor/adevtool/assets/checkin.proto
+    vendor/adevtool/assets/checkin.proto \
+    vendor/adevtool/assets/heterodyne.proto
+
+protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto_out vendor/adevtool/src/proto-ts \
+    vendor/adevtool/assets/emergency_number_preferences.proto
