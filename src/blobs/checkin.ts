@@ -38,15 +38,10 @@ import {
   BOOT_HARDWARE_PROP,
   BOOTLOADER_VERSION_PROP,
   BUILD_DATE_UTC_PROP,
-  BUILD_FINGERPRINT_PROP,
-  BUILD_ID_PROP,
-  BUILD_PROP_PARTITION_PRECEDENCE,
-  BUILD_TAGS_PROP,
-  BUILD_TYPE_PROP,
-  BUILD_VERSION_INCREMENTAL_PROP,
-  BUILD_VERSION_RELEASE_OR_CODENAME_PROP,
   BUILD_VERSION_SDK_PROP,
   BUILD_VERSION_SECURITY_PATCH_PROP,
+  deriveBuildFingerprint,
+  getProp,
   HARDWARE_PROP,
   INCREMENTAL_ENABLE_PROP,
   loadPartitionProps,
@@ -57,8 +52,8 @@ import {
   PRODUCT_CPU_ABILIST_PROP,
   PRODUCT_FIRST_API_LEVEL_PROP,
   RO_CPU_ABILIST_SOURCE_ORDER,
-  RO_PRODUCT_PROPS_DEFAULT_SOURCE_ORDER,
   SCREEN_DENSITY_PROP,
+  synthRoProduct,
 } from './props'
 
 const CHECKIN_URL = 'https://android.clients.google.com/checkin'
@@ -97,16 +92,6 @@ const RUNTIME_MOUNT_PARTITIONS: Record<string, Partition> = {
   odm: Partition.Odm,
   product: Partition.Product,
   system_ext: Partition.SystemExt,
-}
-
-function getProp(props: PartitionProps, key: string): string | undefined {
-  for (let partition of BUILD_PROP_PARTITION_PRECEDENCE) {
-    let v = props.get(partition)?.get(key)
-    if (v !== undefined && v !== '') {
-      return v
-    }
-  }
-  return undefined
 }
 
 function getRecoveryProp(props: PartitionProps, key: string): string | undefined {
@@ -214,39 +199,6 @@ function deriveCheckinDisplayConfiguration(stableDisplaySize: DisplaySize, densi
     smallestScreenWidthDp: Math.min(configurationWidthDp, configurationHeightDp),
     screenLayoutLegacy: screenLayoutSizeFromDp(configurationWidthDp, configurationHeightDp),
   }
-}
-
-function synthRoProduct(props: PartitionProps, name: string): string | undefined {
-  let direct = getProp(props, `ro.product.${name}`)
-  if (direct) {
-    return direct
-  }
-  for (let source of RO_PRODUCT_PROPS_DEFAULT_SOURCE_ORDER) {
-    let v = getProp(props, `ro.product.${source}.${name}`)
-    if (v) {
-      return v
-    }
-  }
-  return undefined
-}
-
-function deriveBuildFingerprint(props: PartitionProps): string | undefined {
-  let direct = getProp(props, BUILD_FINGERPRINT_PROP)
-  if (direct) {
-    return direct
-  }
-  let brand = synthRoProduct(props, 'brand')
-  let device = synthRoProduct(props, 'device')
-  let name = synthRoProduct(props, 'name')
-  let release = getProp(props, BUILD_VERSION_RELEASE_OR_CODENAME_PROP)
-  let id = getProp(props, BUILD_ID_PROP)
-  let incremental = getProp(props, BUILD_VERSION_INCREMENTAL_PROP)
-  let type = getProp(props, BUILD_TYPE_PROP)
-  let tags = getProp(props, BUILD_TAGS_PROP)
-  if (brand && device && name && release && id && incremental && type && tags) {
-    return `${brand}/${name}/${device}:${release}/${id}/${incremental}:${type}/${tags}`
-  }
-  return undefined
 }
 
 // Mirrors GmsCore with has_cellular as the Pixel-only static

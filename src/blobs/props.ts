@@ -14,6 +14,49 @@ import {
 
 export type PartitionProps = Map<string, Map<string, string>>
 
+export function getProp(props: PartitionProps, key: string): string | undefined {
+  for (let partition of BUILD_PROP_PARTITION_PRECEDENCE) {
+    let v = props.get(partition)?.get(key)
+    if (v !== undefined && v !== '') {
+      return v
+    }
+  }
+  return undefined
+}
+
+export function synthRoProduct(props: PartitionProps, name: string): string | undefined {
+  let direct = getProp(props, `ro.product.${name}`)
+  if (direct) {
+    return direct
+  }
+  for (let source of RO_PRODUCT_PROPS_DEFAULT_SOURCE_ORDER) {
+    let v = getProp(props, `ro.product.${source}.${name}`)
+    if (v) {
+      return v
+    }
+  }
+  return undefined
+}
+
+export function deriveBuildFingerprint(props: PartitionProps): string | undefined {
+  let direct = getProp(props, BUILD_FINGERPRINT_PROP)
+  if (direct) {
+    return direct
+  }
+  let brand = synthRoProduct(props, 'brand')
+  let device = synthRoProduct(props, 'device')
+  let name = synthRoProduct(props, 'name')
+  let release = getProp(props, BUILD_VERSION_RELEASE_OR_CODENAME_PROP)
+  let id = getProp(props, BUILD_ID_PROP)
+  let incremental = getProp(props, BUILD_VERSION_INCREMENTAL_PROP)
+  let type = getProp(props, BUILD_TYPE_PROP)
+  let tags = getProp(props, BUILD_TAGS_PROP)
+  if (brand && device && name && release && id && incremental && type && tags) {
+    return `${brand}/${name}/${device}:${release}/${id}/${incremental}:${type}/${tags}`
+  }
+  return undefined
+}
+
 export interface PropChanges {
   added: Map<string, string>
   modified: Map<string, Array<string>>
