@@ -7,8 +7,11 @@ import { loadBuildIndex } from '../images/build-index'
 import {
   AppRegistration,
   ClientInfo_ClientType,
+  ConfigPackageRef,
   FetchReason,
+  FlagType,
   GetExperimentsAndConfigsRequest,
+  GetExperimentsAndConfigsResponse,
 } from '../proto-ts/vendor/adevtool/assets/heterodyne'
 import { PathResolver } from '../util/partitions'
 import { spawnAsync2 } from '../util/process'
@@ -48,9 +51,13 @@ export async function phenotypeTextproto(
   })
 }
 
-export async function parsePhenotypeApp(textproto: Buffer): Promise<AppRegistration> {
+export async function parsePhenotypeApp(textproto: Buffer, configPackageName?: string): Promise<AppRegistration> {
   let binary = await phenotypeTextproto('encode', 'AppRegistration', textproto)
   let app = AppRegistration.decode(binary)
+  if (configPackageName !== undefined) {
+    app.configPackage ??= ConfigPackageRef.fromPartial({})
+    app.configPackage.name = configPackageName
+  }
   if (!app.configPackage?.name?.trim()) {
     throw new Error('AppRegistration textproto requires config_package.name')
   }
@@ -148,4 +155,21 @@ export async function fetchPhenotypeFlags(request: Buffer): Promise<Buffer> {
     throw new Error(`HTTP ${response.status} from Phenotype: ${response.statusText}\n${body.subarray(0, 512)}`)
   }
   return body
+}
+
+export function getPhenotypeBytesFlag(response: Buffer, packageName: string, flagName: string): Buffer {
+  let decoded = GetExperimentsAndConfigsResponse.decode(response)
+  let matches = decoded.packageResult
+    .filter(pkg => pkg.packageRef?.name === packageName)
+    .flatMap(pkg => pkg.flagSet)
+    .flatMap(set => set.flag)
+    .filter(flag => flag.name === flagName)
+  if (matches.length !== 1) {
+    throw new Error(`${packageName}: expected one value for flag ${flagName}, received ${matches.length}`)
+  }
+  let flag = matches[0]
+  if (flag.type !== FlagType.BYTES || flag.bytesValue?.value === undefined) {
+    throw new Error(`${packageName}: flag ${flagName} is not a bytes value`)
+  }
+  return Buffer.from(flag.bytesValue.value)
 }
