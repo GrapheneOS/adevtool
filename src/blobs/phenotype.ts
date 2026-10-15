@@ -9,6 +9,7 @@ import {
   ClientInfo_ClientType,
   ConfigPackageRef,
   FetchReason,
+  Flag,
   FlagType,
   GetExperimentsAndConfigsRequest,
   GetExperimentsAndConfigsResponse,
@@ -41,7 +42,7 @@ interface PhenotypeLocale {
 
 export async function phenotypeTextproto(
   mode: 'encode' | 'decode',
-  message: 'AppRegistration' | 'GetExperimentsAndConfigsRequest' | 'GetExperimentsAndConfigsResponse',
+  message: 'AppRegistration' | 'Flag' | 'GetExperimentsAndConfigsRequest' | 'GetExperimentsAndConfigsResponse',
   input: Buffer,
 ) {
   return spawnAsync2({
@@ -157,7 +158,7 @@ export async function fetchPhenotypeFlags(request: Buffer): Promise<Buffer> {
   return body
 }
 
-export function getPhenotypeBytesFlag(response: Buffer, packageName: string, flagName: string): Buffer {
+export function getPhenotypeFlag(response: Buffer, packageName: string, flagName: string): Flag {
   let decoded = GetExperimentsAndConfigsResponse.decode(response)
   let matches = decoded.packageResult
     .filter(pkg => pkg.packageRef?.name === packageName)
@@ -167,7 +168,11 @@ export function getPhenotypeBytesFlag(response: Buffer, packageName: string, fla
   if (matches.length !== 1) {
     throw new Error(`${packageName}: expected one value for flag ${flagName}, received ${matches.length}`)
   }
-  let flag = matches[0]
+  return matches[0]
+}
+
+export function getPhenotypeBytesFlag(response: Buffer, packageName: string, flagName: string): Buffer {
+  let flag = getPhenotypeFlag(response, packageName, flagName)
   if (flag.type !== FlagType.BYTES || flag.bytesValue?.value === undefined) {
     throw new Error(`${packageName}: flag ${flagName} is not a bytes value`)
   }
