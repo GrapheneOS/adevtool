@@ -8,7 +8,7 @@ import { AppRegistration } from '../proto-ts/vendor/adevtool/assets/heterodyne'
 import { useStderrForLogs } from '../util/log'
 
 export default class FetchEmergencyNumbers extends Command {
-  static description = 'Fetch the SafetyHub country preference table and save it under emergency-numbers.'
+  static description = 'Fetch the SafetyHub country preference table and generate the SettingsLib Java class.'
 
   static flags = {
     device: Flags.string({ char: 'd', required: true, description: 'one Device config path or name' }),
@@ -43,12 +43,25 @@ export default class FetchEmergencyNumbers extends Command {
       return
     }
     let numbers = await decodeEmergencyNumbers(await fetchPhenotypeFlags(request))
-    let output =
-      flags.output ?? path.join(ADEVTOOL_DIR, 'emergency-numbers', 'safetyhub-emergency-number-preferences.textproto')
+    let output = path.resolve(
+      flags.output ?? path.join(ADEVTOOL_DIR, 'emergency-numbers', 'safetyhub-emergency-number-preferences.textproto'),
+    )
+    let javaOutput = path.join(path.dirname(output), 'EmergencyNumberPreferences.java')
+    if (output === javaOutput || output === `${javaOutput}.tmp`) {
+      throw new Error('The textproto output path conflicts with the generated Java output')
+    }
     await fs.mkdir(path.dirname(output), { recursive: true })
-    let temporary = `${output}.tmp`
-    await fs.writeFile(temporary, numbers)
-    await fs.rename(temporary, output)
+    let files = [
+      [output, numbers.textproto],
+      [javaOutput, numbers.javaSource],
+    ] as const
+    for (let [file, contents] of files) {
+      await fs.writeFile(`${file}.tmp`, contents)
+    }
+    for (let [file] of files) {
+      await fs.rename(`${file}.tmp`, file)
+    }
     this.log(`Emergency number preferences written to ${output}`)
+    this.log(`SettingsLib preferences written to ${javaOutput}`)
   }
 }
