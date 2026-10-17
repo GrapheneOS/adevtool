@@ -117,6 +117,8 @@ async function maybePatch(entry: BlobEntry, srcPath: string, device: string) {
           return patchGpsXml(await readFile(srcPath))
         case 'etc/gnss/gps.cfg':
           return patchGpsCfg(await readFile(srcPath))
+        case 'etc/init/init.pixel-mm-gs.rc':
+          return patchPixelMmInit(await readFile(srcPath))
       }
       if (relPath.startsWith('etc/fstab')) {
         return patchFstab(await readFile(srcPath))
@@ -235,6 +237,26 @@ function patchGpsCfg(orig: string) {
       }
     })
   )
+}
+
+function patchPixelMmInit(orig: string) {
+  return orig
+    .split('\n')
+    .filter(line => {
+      let command = line.trim()
+      // 17 QPR2 Beta 7.1 (CP41.260831.019) removes these two lines to disable suppression for async
+      // and synchronous mmap read-ahead. Note that sync_readahead_adj_enable is not defined in 17 
+      // QPR1 kernel, but it's defined in 17 QPR2.
+      //
+      // In the upstream Pixel 17 QPR1 kernel, async_readahead_adj_enable controls both async and
+      // sync mmap read-ahead suppression. Removing async_readahead_adj_enable is sufficient for
+      // disabling async and sync suppression for the 17 QPR1 kernel.
+      return (
+        command !== 'write /sys/kernel/vendor_mm/filemap/async_readahead_adj_enable 1' &&
+        command !== 'write /sys/kernel/vendor_mm/filemap/sync_readahead_adj_enable 1'
+      )
+    })
+    .join('\n')
 }
 
 function replaceLines(multiLine: string, callbackFn: (value: string) => string) {

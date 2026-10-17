@@ -5251,7 +5251,7 @@ proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc: db7f011647b
 proprietary/vendor/etc/init/init.fingerprint.dump.rc: d81f929d83b4f8ef05947bc6f9042fc5fb9825ffb4936b792b2c311b8575c0c9
 proprietary/vendor/etc/init/init.flood.control.rc: 243557e5fc2a6d824a3349089e8349a7f721f3f98a35d0446f3c2f3f2f6a5679
 proprietary/vendor/etc/init/init.module.rc: 228d30d405d4f27e1f5030f2b026be198fea187d10c3029ca8b62ac813507e8d
-proprietary/vendor/etc/init/init.pixel-mm-gs.rc: eb7966bdc29592c28af5cfec9687d24ee165456753fbc35923af5f79101fb718
+proprietary/vendor/etc/init/init.pixel-mm-gs.rc: 82f7a9edb80506df475caa28c027525e4718dcf9b63f9541c31fd67bb9c1db8b
 proprietary/vendor/etc/init/init.pixel-perf.rc: e2b877c5fc4c0f204d7cc8c67f906aa11efc2dd1a947ba1bbd3b83403e75e7df
 proprietary/vendor/etc/init/init.pixel.rc: 6af9f629592cf835f854248139dba30ad2f6ed03f8cab1759f4b0389f08aa967
 proprietary/vendor/etc/init/init.storage.rc: ed068596e5b53285287683587148dfc6e2f9b78825ab2d4051d3557e52eba277
