@@ -3590,7 +3590,7 @@ proprietary/vendor/etc/init/init.gnss.rc: 3db054bc44a73023290f7640dea0ee829802e5
 proprietary/vendor/etc/init/init.liboemservice_proxy.rc: 6316497544638109eeaecb16dcda1b2cc8a6666ae8f5505c19ae4805da3dd8df
 proprietary/vendor/etc/init/init.modem_logging_control.rc: 8ea00b6611bf93646fec64b4abe60a4d9fbab21073cc15a28277e08e3feaabb4
 proprietary/vendor/etc/init/init.module.rc: 228d30d405d4f27e1f5030f2b026be198fea187d10c3029ca8b62ac813507e8d
-proprietary/vendor/etc/init/init.pixel-mm-gs.rc: eb7966bdc29592c28af5cfec9687d24ee165456753fbc35923af5f79101fb718
+proprietary/vendor/etc/init/init.pixel-mm-gs.rc: 82f7a9edb80506df475caa28c027525e4718dcf9b63f9541c31fd67bb9c1db8b
 proprietary/vendor/etc/init/init.pixel-perf.rc: e2b877c5fc4c0f204d7cc8c67f906aa11efc2dd1a947ba1bbd3b83403e75e7df
 proprietary/vendor/etc/init/init.pixel.rc: 6af9f629592cf835f854248139dba30ad2f6ed03f8cab1759f4b0389f08aa967
 proprietary/vendor/etc/init/init.power-gs.rc: 192f474d47a33853151e13bd0bbf93f09b7f303360d0d7a9637363d75b2ba78a
