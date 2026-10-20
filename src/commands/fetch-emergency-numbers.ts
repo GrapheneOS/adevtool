@@ -2,10 +2,13 @@ import { Command, Flags } from '@oclif/core'
 import { promises as fs } from 'fs'
 import path from 'path'
 import { decodeEmergencyNumbers, SAFETYHUB_CONFIG_PACKAGE } from '../blobs/emergency-numbers'
-import { fetchPhenotypeFlags, phenotypeTextproto, preparePhenotypeRequest } from '../blobs/phenotype'
+import { fetchPhenotypeFlags, parsePhenotypeApp, phenotypeTextproto, preparePhenotypeRequest } from '../blobs/phenotype'
+import { extractPhenotypeRegistration } from '../blobs/phenotype-apk'
 import { ADEVTOOL_DIR } from '../config/paths'
 import { AppRegistration } from '../proto-ts/vendor/adevtool/assets/heterodyne'
 import { useStderrForLogs } from '../util/log'
+
+const REGISTRATION_FILE = path.join(ADEVTOOL_DIR, 'emergency-numbers', 'safetyhub.textproto')
 
 export default class FetchEmergencyNumbers extends Command {
   static description = 'Fetch the SafetyHub country preference table and generate the SettingsLib Java class.'
@@ -15,6 +18,10 @@ export default class FetchEmergencyNumbers extends Command {
     buildId: Flags.string({ char: 'b', description: 'factory image build ID (default: current device build)' }),
     output: Flags.string({ char: 'o', description: 'override the table output path, or save the request preview' }),
     dryRun: Flags.boolean({ default: false, description: 'print the generated request without contacting Phenotype' }),
+    'update-registration': Flags.file({
+      exists: true,
+      description: 'update the saved registration from a SafetyHub base APK before fetching flags',
+    }),
   }
 
   async run() {
@@ -22,16 +29,18 @@ export default class FetchEmergencyNumbers extends Command {
     if (flags.dryRun) {
       useStderrForLogs()
     }
-    let app = AppRegistration.fromPartial({
-      configPackage: {
-        name: SAFETYHUB_CONFIG_PACKAGE,
-        version: '100918614',
-        identity: { value: -1 },
-        baselineCl: '991493647',
-        variant: 'com.google.android.apps.safetyhub',
-      },
-      heterodyneInfo: Buffer.from('12170a1508f3e1d2bbedc0e5c3d2012208343537353133353118012001', 'hex'),
-    })
+    let apkPath = flags['update-registration']
+    let app: AppRegistration
+    if (apkPath !== undefined) {
+      app = await extractPhenotypeRegistration(apkPath, SAFETYHUB_CONFIG_PACKAGE)
+      if (app.configPackage?.variant !== 'com.google.android.apps.safetyhub') {
+        throw new Error(
+          `${apkPath}: expected com.google.android.apps.safetyhub, received ${app.configPackage?.variant}`,
+        )
+      }
+    } else {
+      app = await parsePhenotypeApp(await fs.readFile(REGISTRATION_FILE), SAFETYHUB_CONFIG_PACKAGE)
+    }
     let { request } = await preparePhenotypeRequest(flags.device, flags.buildId, app)
     if (flags.dryRun) {
       let textproto = await phenotypeTextproto('decode', 'GetExperimentsAndConfigsRequest', request)
@@ -41,6 +50,17 @@ export default class FetchEmergencyNumbers extends Command {
         process.stdout.write(textproto)
       }
       return
+    }
+    if (apkPath !== undefined) {
+      let textproto = await phenotypeTextproto(
+        'decode',
+        'AppRegistration',
+        Buffer.from(AppRegistration.encode(app).finish()),
+      )
+      let comment = '# Update: adevtool fetch-emergency-numbers -d DEVICE --update-registration path/to/base.apk\n'
+      await fs.writeFile(`${REGISTRATION_FILE}.tmp`, comment + textproto.toString())
+      await fs.rename(`${REGISTRATION_FILE}.tmp`, REGISTRATION_FILE)
+      this.log(`SafetyHub registration written to ${REGISTRATION_FILE}`)
     }
     let numbers = await decodeEmergencyNumbers(await fetchPhenotypeFlags(request))
     let output = path.resolve(

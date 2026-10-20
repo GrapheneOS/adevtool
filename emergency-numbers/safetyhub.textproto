@@ -1,0 +1,11 @@
+# Update: adevtool fetch-emergency-numbers -d DEVICE --update-registration path/to/base.apk
+config_package {
+  name: "com.google.android.apps.safetyhub#com.google.android.apps.safetyhub"
+  version: 100918614
+  identity {
+    value: -1
+  }
+  baseline_cl: 991493647
+  variant: "com.google.android.apps.safetyhub"
+}
+heterodyne_info: "\022\027\n\025\010\363\341\322\273\355\300\345\303\322\001\"\01045751351\030\001 \001"
