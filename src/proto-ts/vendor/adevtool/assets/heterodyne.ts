@@ -239,11 +239,13 @@ export interface GetExperimentsAndConfigsRequest {
   clientType?: number | undefined;
   triggeringPackage?: string | undefined;
   accountState: { [key: string]: AccountState };
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface GetExperimentsAndConfigsRequest_AccountStateEntry {
   key?: string | undefined;
   value: AccountState | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface GetExperimentsAndConfigsResponse {
@@ -253,6 +255,7 @@ export interface GetExperimentsAndConfigsResponse {
   serverConfigurationVersion?: string | undefined;
   serverBuildVersion?: string | undefined;
   invalidAuthTokenIndex: number[];
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface ConfigPackageResult {
@@ -264,6 +267,7 @@ export interface ConfigPackageResult {
   commitAck?: Uint8Array | undefined;
   externalExperiment: ExternalExperiment[];
   generatedAtMs?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface ConfigPackageRef {
@@ -272,21 +276,25 @@ export interface ConfigPackageRef {
   identity?: PackageIdentity | undefined;
   baselineCl?: string | undefined;
   variant?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface PackageIdentity {
   value?: number | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface FlagSet {
   partition?: PartitionHeader | undefined;
   flag: Flag[];
   flagSetType?: number | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface PartitionHeader {
   experimentId?: string | undefined;
   partitionTag?: Uint8Array | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface Flag {
@@ -298,21 +306,25 @@ export interface Flag {
   bytesValue?: BytesValue | undefined;
   type?: FlagType | undefined;
   isOverride?: boolean | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface BytesValue {
   value?: Uint8Array | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface NamedFlagSet {
   packageRef?: ConfigPackageRef | undefined;
   payload?: Uint8Array | undefined;
   kind?: number | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface ExternalExperiment {
   source?: string | undefined;
   token?: Uint8Array | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface AppRegistration {
@@ -323,11 +335,35 @@ export interface AppRegistration {
   heterodyneInfo?: Uint8Array | undefined;
   extra?: Uint8Array | undefined;
   lastFetchMs?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
+}
+
+/**
+ * APK resource referenced by com.google.android.build.data.properties.
+ * Supplies registration metadata; it is not embedded in Heterodyne requests.
+ */
+export interface ApkBuildMetadata {
+  buildTimestamp?: string | undefined;
+  buildChangelist?: string | undefined;
+  buildBaselineChangelist?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
+}
+
+/**
+ * APK resource referenced by com.google.android.gms.phenotype.heterodyne_info.binarypb:<namespace>.
+ * GmsCore validates and removes field 1, then sends the serialized message bytes in
+ * AppRegistration.heterodyne_info. Its registration reader declares only field 1,
+ * so the remaining fields must be preserved as unknown fields.
+ */
+export interface HeterodyneInfo {
+  namespace?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface ExperimentState {
   experimentId?: string | undefined;
   token?: Uint8Array | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface ClientProperties {
@@ -337,15 +373,18 @@ export interface ClientProperties {
   dogfoodToken?: Uint8Array | undefined;
   isMaybeGooglerGmscore?: boolean | undefined;
   signedIdentityTokenForDebug?: EmptyContainer | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface EmptyContainer {
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface ClientInfo {
   clientType?: ClientInfo_ClientType | undefined;
   androidClientInfo?: AndroidClientInfo | undefined;
   heterodyneConfigVersion?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export enum ClientInfo_ClientType {
@@ -664,10 +703,12 @@ export interface AndroidClientInfo {
   board?: string | undefined;
   radioVersion?: string | undefined;
   fingerprint?: string | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 export interface AccountState {
   syncCookie?: Uint8Array | undefined;
+  _unknownFields?: { [key: number]: Uint8Array[] } | undefined;
 }
 
 function createBaseGetExperimentsAndConfigsRequest(): GetExperimentsAndConfigsRequest {
@@ -679,6 +720,7 @@ function createBaseGetExperimentsAndConfigsRequest(): GetExperimentsAndConfigsRe
     clientType: undefined,
     triggeringPackage: undefined,
     accountState: {},
+    _unknownFields: {},
   };
 }
 
@@ -706,6 +748,14 @@ export const GetExperimentsAndConfigsRequest: MessageFns<GetExperimentsAndConfig
       GetExperimentsAndConfigsRequest_AccountStateEntry.encode({ key: key as any, value }, writer.uint32(90).fork())
         .join();
     });
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
+    }
     return writer;
   },
 
@@ -779,7 +829,15 @@ export const GetExperimentsAndConfigsRequest: MessageFns<GetExperimentsAndConfig
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -893,7 +951,7 @@ export const GetExperimentsAndConfigsRequest: MessageFns<GetExperimentsAndConfig
 };
 
 function createBaseGetExperimentsAndConfigsRequest_AccountStateEntry(): GetExperimentsAndConfigsRequest_AccountStateEntry {
-  return { key: undefined, value: undefined };
+  return { key: undefined, value: undefined, _unknownFields: {} };
 }
 
 export const GetExperimentsAndConfigsRequest_AccountStateEntry: MessageFns<
@@ -908,6 +966,14 @@ export const GetExperimentsAndConfigsRequest_AccountStateEntry: MessageFns<
     }
     if (message.value !== undefined) {
       AccountState.encode(message.value, writer.uint32(18).fork()).join();
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -939,7 +1005,15 @@ export const GetExperimentsAndConfigsRequest_AccountStateEntry: MessageFns<
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -987,6 +1061,7 @@ function createBaseGetExperimentsAndConfigsResponse(): GetExperimentsAndConfigsR
     serverConfigurationVersion: undefined,
     serverBuildVersion: undefined,
     invalidAuthTokenIndex: [],
+    _unknownFields: {},
   };
 }
 
@@ -1009,6 +1084,14 @@ export const GetExperimentsAndConfigsResponse: MessageFns<GetExperimentsAndConfi
     }
     for (const v of message.invalidAuthTokenIndex) {
       writer.uint32(48).int32(v!);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1082,7 +1165,15 @@ export const GetExperimentsAndConfigsResponse: MessageFns<GetExperimentsAndConfi
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1174,6 +1265,7 @@ function createBaseConfigPackageResult(): ConfigPackageResult {
     commitAck: undefined,
     externalExperiment: [],
     generatedAtMs: undefined,
+    _unknownFields: {},
   };
 }
 
@@ -1202,6 +1294,14 @@ export const ConfigPackageResult: MessageFns<ConfigPackageResult> = {
     }
     if (message.generatedAtMs !== undefined) {
       writer.uint32(88).int64(message.generatedAtMs);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1281,7 +1381,15 @@ export const ConfigPackageResult: MessageFns<ConfigPackageResult> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1380,7 +1488,14 @@ export const ConfigPackageResult: MessageFns<ConfigPackageResult> = {
 };
 
 function createBaseConfigPackageRef(): ConfigPackageRef {
-  return { name: undefined, version: undefined, identity: undefined, baselineCl: undefined, variant: undefined };
+  return {
+    name: undefined,
+    version: undefined,
+    identity: undefined,
+    baselineCl: undefined,
+    variant: undefined,
+    _unknownFields: {},
+  };
 }
 
 export const ConfigPackageRef: MessageFns<ConfigPackageRef> = {
@@ -1399,6 +1514,14 @@ export const ConfigPackageRef: MessageFns<ConfigPackageRef> = {
     }
     if (message.variant !== undefined) {
       writer.uint32(42).string(message.variant);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1454,7 +1577,15 @@ export const ConfigPackageRef: MessageFns<ConfigPackageRef> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1510,13 +1641,21 @@ export const ConfigPackageRef: MessageFns<ConfigPackageRef> = {
 };
 
 function createBasePackageIdentity(): PackageIdentity {
-  return { value: undefined };
+  return { value: undefined, _unknownFields: {} };
 }
 
 export const PackageIdentity: MessageFns<PackageIdentity> = {
   encode(message: PackageIdentity, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
     if (message.value !== undefined) {
       writer.uint32(8).int32(message.value);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1540,7 +1679,15 @@ export const PackageIdentity: MessageFns<PackageIdentity> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1568,7 +1715,7 @@ export const PackageIdentity: MessageFns<PackageIdentity> = {
 };
 
 function createBaseFlagSet(): FlagSet {
-  return { partition: undefined, flag: [], flagSetType: undefined };
+  return { partition: undefined, flag: [], flagSetType: undefined, _unknownFields: {} };
 }
 
 export const FlagSet: MessageFns<FlagSet> = {
@@ -1581,6 +1728,14 @@ export const FlagSet: MessageFns<FlagSet> = {
     }
     if (message.flagSetType !== undefined) {
       writer.uint32(24).int32(message.flagSetType);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1620,7 +1775,15 @@ export const FlagSet: MessageFns<FlagSet> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1666,7 +1829,7 @@ export const FlagSet: MessageFns<FlagSet> = {
 };
 
 function createBasePartitionHeader(): PartitionHeader {
-  return { experimentId: undefined, partitionTag: undefined };
+  return { experimentId: undefined, partitionTag: undefined, _unknownFields: {} };
 }
 
 export const PartitionHeader: MessageFns<PartitionHeader> = {
@@ -1676,6 +1839,14 @@ export const PartitionHeader: MessageFns<PartitionHeader> = {
     }
     if (message.partitionTag !== undefined) {
       writer.uint32(18).bytes(message.partitionTag);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1707,7 +1878,15 @@ export const PartitionHeader: MessageFns<PartitionHeader> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1759,6 +1938,7 @@ function createBaseFlag(): Flag {
     bytesValue: undefined,
     type: undefined,
     isOverride: undefined,
+    _unknownFields: {},
   };
 }
 
@@ -1787,6 +1967,14 @@ export const Flag: MessageFns<Flag> = {
     }
     if (message.isOverride !== undefined) {
       writer.uint32(80).bool(message.isOverride);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1866,7 +2054,15 @@ export const Flag: MessageFns<Flag> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -1957,13 +2153,21 @@ export const Flag: MessageFns<Flag> = {
 };
 
 function createBaseBytesValue(): BytesValue {
-  return { value: undefined };
+  return { value: undefined, _unknownFields: {} };
 }
 
 export const BytesValue: MessageFns<BytesValue> = {
   encode(message: BytesValue, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
     if (message.value !== undefined) {
       writer.uint32(10).bytes(message.value);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -1987,7 +2191,15 @@ export const BytesValue: MessageFns<BytesValue> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2015,7 +2227,7 @@ export const BytesValue: MessageFns<BytesValue> = {
 };
 
 function createBaseNamedFlagSet(): NamedFlagSet {
-  return { packageRef: undefined, payload: undefined, kind: undefined };
+  return { packageRef: undefined, payload: undefined, kind: undefined, _unknownFields: {} };
 }
 
 export const NamedFlagSet: MessageFns<NamedFlagSet> = {
@@ -2028,6 +2240,14 @@ export const NamedFlagSet: MessageFns<NamedFlagSet> = {
     }
     if (message.kind !== undefined) {
       writer.uint32(24).int32(message.kind);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2067,7 +2287,15 @@ export const NamedFlagSet: MessageFns<NamedFlagSet> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2113,7 +2341,7 @@ export const NamedFlagSet: MessageFns<NamedFlagSet> = {
 };
 
 function createBaseExternalExperiment(): ExternalExperiment {
-  return { source: undefined, token: undefined };
+  return { source: undefined, token: undefined, _unknownFields: {} };
 }
 
 export const ExternalExperiment: MessageFns<ExternalExperiment> = {
@@ -2123,6 +2351,14 @@ export const ExternalExperiment: MessageFns<ExternalExperiment> = {
     }
     if (message.token !== undefined) {
       writer.uint32(26).bytes(message.token);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2154,7 +2390,15 @@ export const ExternalExperiment: MessageFns<ExternalExperiment> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2197,6 +2441,7 @@ function createBaseAppRegistration(): AppRegistration {
     heterodyneInfo: undefined,
     extra: undefined,
     lastFetchMs: undefined,
+    _unknownFields: {},
   };
 }
 
@@ -2222,6 +2467,14 @@ export const AppRegistration: MessageFns<AppRegistration> = {
     }
     if (message.lastFetchMs !== undefined) {
       writer.uint32(72).int64(message.lastFetchMs);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2293,7 +2546,15 @@ export const AppRegistration: MessageFns<AppRegistration> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2372,8 +2633,207 @@ export const AppRegistration: MessageFns<AppRegistration> = {
   },
 };
 
+function createBaseApkBuildMetadata(): ApkBuildMetadata {
+  return {
+    buildTimestamp: undefined,
+    buildChangelist: undefined,
+    buildBaselineChangelist: undefined,
+    _unknownFields: {},
+  };
+}
+
+export const ApkBuildMetadata: MessageFns<ApkBuildMetadata> = {
+  encode(message: ApkBuildMetadata, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.buildTimestamp !== undefined) {
+      writer.uint32(18).string(message.buildTimestamp);
+    }
+    if (message.buildChangelist !== undefined) {
+      writer.uint32(24).int64(message.buildChangelist);
+    }
+    if (message.buildBaselineChangelist !== undefined) {
+      writer.uint32(32).int64(message.buildBaselineChangelist);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): ApkBuildMetadata {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseApkBuildMetadata();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 2: {
+          if (tag !== 18) {
+            break;
+          }
+
+          message.buildTimestamp = reader.string();
+          continue;
+        }
+        case 3: {
+          if (tag !== 24) {
+            break;
+          }
+
+          message.buildChangelist = reader.int64().toString();
+          continue;
+        }
+        case 4: {
+          if (tag !== 32) {
+            break;
+          }
+
+          message.buildBaselineChangelist = reader.int64().toString();
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): ApkBuildMetadata {
+    return {
+      buildTimestamp: isSet(object.buildTimestamp)
+        ? globalThis.String(object.buildTimestamp)
+        : isSet(object.build_timestamp)
+        ? globalThis.String(object.build_timestamp)
+        : undefined,
+      buildChangelist: isSet(object.buildChangelist)
+        ? globalThis.String(object.buildChangelist)
+        : isSet(object.build_changelist)
+        ? globalThis.String(object.build_changelist)
+        : undefined,
+      buildBaselineChangelist: isSet(object.buildBaselineChangelist)
+        ? globalThis.String(object.buildBaselineChangelist)
+        : isSet(object.build_baseline_changelist)
+        ? globalThis.String(object.build_baseline_changelist)
+        : undefined,
+    };
+  },
+
+  toJSON(message: ApkBuildMetadata): unknown {
+    const obj: any = {};
+    if (message.buildTimestamp !== undefined) {
+      obj.buildTimestamp = message.buildTimestamp;
+    }
+    if (message.buildChangelist !== undefined) {
+      obj.buildChangelist = message.buildChangelist;
+    }
+    if (message.buildBaselineChangelist !== undefined) {
+      obj.buildBaselineChangelist = message.buildBaselineChangelist;
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<ApkBuildMetadata>, I>>(base?: I): ApkBuildMetadata {
+    return ApkBuildMetadata.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<ApkBuildMetadata>, I>>(object: I): ApkBuildMetadata {
+    const message = createBaseApkBuildMetadata();
+    message.buildTimestamp = object.buildTimestamp ?? undefined;
+    message.buildChangelist = object.buildChangelist ?? undefined;
+    message.buildBaselineChangelist = object.buildBaselineChangelist ?? undefined;
+    return message;
+  },
+};
+
+function createBaseHeterodyneInfo(): HeterodyneInfo {
+  return { namespace: undefined, _unknownFields: {} };
+}
+
+export const HeterodyneInfo: MessageFns<HeterodyneInfo> = {
+  encode(message: HeterodyneInfo, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.namespace !== undefined) {
+      writer.uint32(10).string(message.namespace);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): HeterodyneInfo {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    const end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseHeterodyneInfo();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 10) {
+            break;
+          }
+
+          message.namespace = reader.string();
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): HeterodyneInfo {
+    return { namespace: isSet(object.namespace) ? globalThis.String(object.namespace) : undefined };
+  },
+
+  toJSON(message: HeterodyneInfo): unknown {
+    const obj: any = {};
+    if (message.namespace !== undefined) {
+      obj.namespace = message.namespace;
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<HeterodyneInfo>, I>>(base?: I): HeterodyneInfo {
+    return HeterodyneInfo.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<HeterodyneInfo>, I>>(object: I): HeterodyneInfo {
+    const message = createBaseHeterodyneInfo();
+    message.namespace = object.namespace ?? undefined;
+    return message;
+  },
+};
+
 function createBaseExperimentState(): ExperimentState {
-  return { experimentId: undefined, token: undefined };
+  return { experimentId: undefined, token: undefined, _unknownFields: {} };
 }
 
 export const ExperimentState: MessageFns<ExperimentState> = {
@@ -2383,6 +2843,14 @@ export const ExperimentState: MessageFns<ExperimentState> = {
     }
     if (message.token !== undefined) {
       writer.uint32(18).bytes(message.token);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2414,7 +2882,15 @@ export const ExperimentState: MessageFns<ExperimentState> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2460,6 +2936,7 @@ function createBaseClientProperties(): ClientProperties {
     dogfoodToken: undefined,
     isMaybeGooglerGmscore: undefined,
     signedIdentityTokenForDebug: undefined,
+    _unknownFields: {},
   };
 }
 
@@ -2482,6 +2959,14 @@ export const ClientProperties: MessageFns<ClientProperties> = {
     }
     if (message.signedIdentityTokenForDebug !== undefined) {
       EmptyContainer.encode(message.signedIdentityTokenForDebug, writer.uint32(66).fork()).join();
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2545,7 +3030,15 @@ export const ClientProperties: MessageFns<ClientProperties> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2629,11 +3122,19 @@ export const ClientProperties: MessageFns<ClientProperties> = {
 };
 
 function createBaseEmptyContainer(): EmptyContainer {
-  return {};
+  return { _unknownFields: {} };
 }
 
 export const EmptyContainer: MessageFns<EmptyContainer> = {
-  encode(_: EmptyContainer, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+  encode(message: EmptyContainer, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
+    }
     return writer;
   },
 
@@ -2648,7 +3149,15 @@ export const EmptyContainer: MessageFns<EmptyContainer> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2672,7 +3181,12 @@ export const EmptyContainer: MessageFns<EmptyContainer> = {
 };
 
 function createBaseClientInfo(): ClientInfo {
-  return { clientType: undefined, androidClientInfo: undefined, heterodyneConfigVersion: undefined };
+  return {
+    clientType: undefined,
+    androidClientInfo: undefined,
+    heterodyneConfigVersion: undefined,
+    _unknownFields: {},
+  };
 }
 
 export const ClientInfo: MessageFns<ClientInfo> = {
@@ -2685,6 +3199,14 @@ export const ClientInfo: MessageFns<ClientInfo> = {
     }
     if (message.heterodyneConfigVersion !== undefined) {
       writer.uint32(96).int64(message.heterodyneConfigVersion);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2724,7 +3246,15 @@ export const ClientInfo: MessageFns<ClientInfo> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -2793,6 +3323,7 @@ function createBaseAndroidClientInfo(): AndroidClientInfo {
     board: undefined,
     radioVersion: undefined,
     fingerprint: undefined,
+    _unknownFields: {},
   };
 }
 
@@ -2839,6 +3370,14 @@ export const AndroidClientInfo: MessageFns<AndroidClientInfo> = {
     }
     if (message.fingerprint !== undefined) {
       writer.uint32(138).string(message.fingerprint);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -2966,7 +3505,15 @@ export const AndroidClientInfo: MessageFns<AndroidClientInfo> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
@@ -3077,13 +3624,21 @@ export const AndroidClientInfo: MessageFns<AndroidClientInfo> = {
 };
 
 function createBaseAccountState(): AccountState {
-  return { syncCookie: undefined };
+  return { syncCookie: undefined, _unknownFields: {} };
 }
 
 export const AccountState: MessageFns<AccountState> = {
   encode(message: AccountState, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
     if (message.syncCookie !== undefined) {
       writer.uint32(10).bytes(message.syncCookie);
+    }
+    if (message._unknownFields !== undefined) {
+      for (const [key, values] of globalThis.Object.entries(message._unknownFields)) {
+        const tag = parseInt(key, 10);
+        for (const value of values) {
+          writer.uint32(tag).raw(value);
+        }
+      }
     }
     return writer;
   },
@@ -3107,7 +3662,15 @@ export const AccountState: MessageFns<AccountState> = {
       if ((tag & 7) === 4 || tag === 0) {
         break;
       }
-      reader.skip(tag & 7);
+      const buf = reader.skip(tag & 7);
+
+      const list = message._unknownFields![tag];
+
+      if (list === undefined) {
+        message._unknownFields![tag] = [buf];
+      } else {
+        list.push(buf);
+      }
     }
     return message;
   },
