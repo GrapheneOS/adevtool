@@ -102,6 +102,22 @@ message AppRegistration {
   optional int64 last_fetch_ms = 9;
 }
 
+// APK resource referenced by com.google.android.build.data.properties.
+// Supplies registration metadata; it is not embedded in Heterodyne requests.
+message ApkBuildMetadata {
+  optional string build_timestamp = 2 [default = "<unknown>"];
+  optional int64 build_changelist = 3 [default = -1];
+  optional int64 build_baseline_changelist = 4 [default = -1];
+}
+
+// APK resource referenced by com.google.android.gms.phenotype.heterodyne_info.binarypb:<namespace>.
+// GmsCore validates and removes field 1, then sends the serialized message bytes in
+// AppRegistration.heterodyne_info. Its registration reader declares only field 1,
+// so the remaining fields must be preserved as unknown fields.
+message HeterodyneInfo {
+  optional string namespace = 1;
+}
+
 message ExperimentState {
   optional int64 experiment_id = 1;
   optional bytes token = 2;
