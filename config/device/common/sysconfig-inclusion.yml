@@ -71,6 +71,7 @@ sysconfig_inclusions:
   - <feature name="android.hardware.telephony.ims.singlereg"/>
   - <feature name="android.hardware.telephony.messaging"/>
   - <feature name="android.hardware.telephony.radio.access"/>
+  - <feature name="android.hardware.telephony.satellite"/>
   - <feature name="android.hardware.telephony.subscription"/>
   - <feature name="android.hardware.touchscreen"/>
   - <feature name="android.hardware.touchscreen.multitouch"/>
