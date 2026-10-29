@@ -36,3 +36,12 @@ protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto \
     --ts_proto_opt=forceLong=string,noDefaultsForOptionals=true \
     --ts_proto_out vendor/adevtool/src/proto-ts \
     vendor/adevtool/assets/checkin.proto
+
+# Preserve the HeterodyneInfo fields sent to the server after removing the namespace.
+protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto \
+    --ts_proto_opt=forceLong=string,noDefaultsForOptionals=true,unknownFields=true \
+    --ts_proto_out vendor/adevtool/src/proto-ts \
+    vendor/adevtool/assets/heterodyne.proto
+
+protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto_out vendor/adevtool/src/proto-ts \
+    vendor/adevtool/assets/emergency_number_preferences.proto

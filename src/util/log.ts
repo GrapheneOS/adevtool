@@ -5,6 +5,12 @@ import prettyMilliseconds from 'pretty-ms'
 
 let statusLineIdSrc = 0
 let statusLines = new Map<number, StatusLine>()
+let logsToStderr = false
+
+// Call before starting work when stdout is reserved for command output.
+export function useStderrForLogs() {
+  logsToStderr = true
+}
 
 export class StatusLine implements Disposable {
   readonly id = statusLineIdSrc++
@@ -104,6 +110,10 @@ function clearStatusLines() {
 }
 
 function writeStatus(status: string) {
+  if (logsToStderr) {
+    process.stderr.write(status + '\n')
+    return
+  }
   if (process.stdout.getWindowSize === undefined) {
     origStdoutWrite(status + '\n')
     return
@@ -150,6 +160,11 @@ function write(str: string | Buffer | Uint8Array, callback?: () => void) {
 }
 
 export function log(str: string | Buffer | DataView) {
+  if (logsToStderr) {
+    process.stderr.write(str instanceof DataView ? new Uint8Array(str.buffer, str.byteOffset, str.byteLength) : str)
+    process.stderr.write('\n')
+    return
+  }
   if (currentStatus !== null) {
     clearStatusLines()
     write(str)

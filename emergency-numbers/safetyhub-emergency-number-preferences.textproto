@@ -1,0 +1,243 @@
+entries {
+  country_iso: "AT"
+  number: "133"
+  categories: 1
+}
+entries {
+  country_iso: "AT"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "AU"
+  number: "000"
+  categories: 1
+  categories: 2
+  categories: 4
+  visibility: VISIBILITY_PREFERRED
+}
+entries {
+  country_iso: "BE"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "BG"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "BR"
+  number: "190"
+  categories: 1
+}
+entries {
+  country_iso: "BR"
+  number: "192"
+  categories: 2
+}
+entries {
+  country_iso: "BR"
+  number: "193"
+  categories: 4
+}
+entries {
+  country_iso: "CA"
+  number: "911"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "CH"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "CZ"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "DE"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "DK"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "ES"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "FI"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "FR"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "GB"
+  number: "999"
+  categories: 1
+  categories: 2
+  categories: 4
+  visibility: VISIBILITY_PREFERRED
+}
+entries {
+  country_iso: "IE"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "IN"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+  visibility: VISIBILITY_PREFERRED
+}
+entries {
+  country_iso: "IN"
+  number: "108"
+  categories: 2
+  assisted_calling_supported: true
+}
+entries {
+  country_iso: "IT"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "IQ"
+  number: "911"
+  visibility: VISIBILITY_PREFERRED
+}
+entries {
+  country_iso: "JP"
+  number: "110"
+  categories: 1
+}
+entries {
+  country_iso: "JP"
+  number: "119"
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "KR"
+  number: "112"
+  categories: 1
+}
+entries {
+  country_iso: "MX"
+  number: "911"
+}
+entries {
+  country_iso: "NL"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "NO"
+  number: "112"
+  categories: 1
+}
+entries {
+  country_iso: "PL"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "PT"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "SE"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+  visibility: VISIBILITY_PREFERRED
+}
+entries {
+  country_iso: "SK"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "SG"
+  number: "999"
+  categories: 1
+}
+entries {
+  country_iso: "SG"
+  number: "995"
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "TW"
+  number: "110"
+  categories: 1
+}
+entries {
+  country_iso: "TW"
+  number: "119"
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "US"
+  number: "911"
+  categories: 1
+  categories: 2
+  categories: 4
+}
+entries {
+  country_iso: "TR"
+  number: "112"
+  categories: 1
+  categories: 2
+  categories: 4
+}
