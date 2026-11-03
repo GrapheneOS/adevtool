@@ -139,7 +139,7 @@ export class ProcessBulletinPatches extends Command {
 
         for (let year of (await fs.readdir(bpbDir)).sort()) {
           let yearDir = path.join(bpbDir, year)
-          for (let yearMonth of (await fs.readdir(yearDir)).sort()) {
+          yearMonthLoop: for (let yearMonth of (await fs.readdir(yearDir)).sort()) {
             if (finalYearMonths.has(yearMonth)) {
               log('skipping finalized ' + yearMonth + ' from preview bulletin ' + unpackedSrc)
               continue
@@ -168,7 +168,8 @@ export class ProcessBulletinPatches extends Command {
               if (indices.length === 0) {
                 log(relVersionDirPath + ' does not include a patch-index file')
                 if (versions.length === 0) {
-                  throw new Error('all versions lack a patch-index file in versions dir ' + versionsDir)
+                  log('all versions lack a patch-index file in versions dir ' + versionsDir)
+                  continue yearMonthLoop
                 }
                 continue
               }
