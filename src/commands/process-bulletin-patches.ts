@@ -626,13 +626,16 @@ ${gpgOut}`
         .map(dir => dir.yearMonth)
         .toSorted()
         .map(s => getYearMonthFull(s))
-      assert(months.length >= 2)
-      let monthsList = months.slice(0, -1).join(', ') + ' and ' + months[months.length - 1]
-      let cveInfoHtml =
-        '                    ' +
-        `<p>All of the Android ${androidVersion} security patches from the current ${monthsList} ` +
-        `Android Security Bulletins are included in the security preview release. List of additional fixed CVEs:</p>` +
-        '\n\n                    <ul>\n'
+      let cveInfoHtml = ''
+      if (months.length >= 2) {
+        let monthsList = months.slice(0, -1).join(', ') + ' and ' + months[months.length - 1]
+        cveInfoHtml =
+          '                    ' +
+          `<p>All of the Android ${androidVersion} security patches from the current ${monthsList} ` +
+          `Android Security Bulletins are included in the security preview release. List of additional fixed CVEs:</p>` +
+          '\n\n'
+      }
+      cveInfoHtml += '                    <ul>\n'
       cveInfoHtml +=
         Array.from(cveInfoMap.entries())
           .map(([severity, cves]) => {
