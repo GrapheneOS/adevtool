@@ -5,13 +5,14 @@ import path from 'path'
 
 import assert from 'assert'
 import { createWriteStream, promises as fs } from 'fs'
-import { parseInt } from 'lodash'
+import { groupBy, parseInt } from 'lodash'
 import { SmartBuffer } from 'smart-buffer'
 import { promises as stream } from 'stream'
-import { DeviceConfig } from '../config/device'
+import { CarrierSettingsOverride, DeviceConfig } from '../config/device'
 import { CARRIER_SETTINGS_DIR, getHostBinPath, OS_CHECKOUT_DIR } from '../config/paths'
 import { CarrierList } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_list'
 import {
+  CarrierConfig_Config,
   CarrierSettings,
   MultiCarrierSettings,
 } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_settings'
@@ -255,4 +256,40 @@ export function getCarrierSettingsBuildId(config: DeviceConfig) {
     return assertDefined(config.device.backport_build_id)
   }
   return config.device.build_id
+}
+
+// Only inserts missing keys. Changing a value that upstream sets needs review of why upstream sets it.
+export async function applyCarrierSettingsOverrides(
+  csDir: string,
+  device: string,
+  overrides: CarrierSettingsOverride[],
+) {
+  for (let [carrier, carrierOverrides] of Object.entries(groupBy(overrides, o => o.carrier))) {
+    let pbFile = path.join(csDir, `${carrier}.pb`)
+    if (!(await exists(pbFile))) {
+      throw new Error(`${device}: carrier_settings_overrides: ${carrier}.pb is missing from ${csDir}`)
+    }
+    let settings = CarrierSettings.decode(await fs.readFile(pbFile))
+    let configs = settings.configs?.config ?? []
+    for (let override of carrierOverrides) {
+      let existing = configs.find(c => c.key === override.key)
+      if (existing !== undefined) {
+        throw new Error(
+          `${device}: ${carrier}.pb already contains ${override.key} - ` +
+            `the carrier_settings_overrides entry is no longer needed for this device and should be removed; ` +
+            `check other devices before removing it, since upstream may not update their carrier settings; ` +
+            `upstream value: ${JSON.stringify(CarrierConfig_Config.toJSON(existing))}`,
+        )
+      }
+      // Upstream configs are sorted by key
+      let idx = configs.findIndex(c => (c.key ?? '') > override.key)
+      configs.splice(idx === -1 ? configs.length : idx, 0, { key: override.key, textValue: override.text_value })
+    }
+    settings.configs = { config: configs }
+
+    let origMode = (await fs.stat(pbFile)).mode
+    await fs.chmod(pbFile, 0o644)
+    await fs.writeFile(pbFile, CarrierSettings.encode(settings).finish())
+    await fs.chmod(pbFile, origMode)
+  }
 }

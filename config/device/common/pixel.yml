@@ -31,6 +31,14 @@ device:
       # schedule recurring metrics upload jobs that eventually attempt those GMS APIs.
       - euiccpixel.experiment.Ota__support_metrics_upload
 
+# LG U+ needs the TTA VoLTE user agent for IMS registration, with OMD (out-of-market device) as the OMC
+# code, as used by Samsung for devices that aren't sold in South Korea. Upstream doesn't set one.
+# https://github.com/GrapheneOS/os-issue-tracker/issues/7066
+carrier_settings_overrides:
+  - carrier: lguplus_kr
+    key: ims.ims_user_agent_string
+    text_value: 'TTA-VoLTE/3.0 #MODEL#/#BUILD# Device-Type/Android_Phone OMD'
+
 filters:
   partitions:
     match:
