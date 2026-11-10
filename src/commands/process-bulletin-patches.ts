@@ -297,6 +297,8 @@ ${gpgOut}`
 
     // repo path -> patch paths
     let usedSkipEntries = new Map<string, string[]>()
+    // repo path -> patch contents -> patch file path
+    let seenOriginalPatches = new Map<string, Map<string, string>>()
 
     // collect patches and CVE info from all provided bulletin sources
     for (let bulletinDir of bulletinDirs) {
@@ -372,6 +374,11 @@ ${gpgOut}`
           }
           repoPatchesToSkip.set(patch.patchContents, patch.srcFilePath)
         }
+        let seenOriginalRepoPatches = seenOriginalPatches.get(repoPath)
+        if (seenOriginalRepoPatches === undefined) {
+          seenOriginalRepoPatches = new Map()
+          seenOriginalPatches.set(repoPath, seenOriginalRepoPatches)
+        }
         for (let sha of shas) {
           if (ignoreCommits.has(sha)) {
             unusedIgnoreCommits.delete(sha)
@@ -399,6 +406,16 @@ ${gpgOut}`
             )
             continue
           }
+          let prevPath = seenOriginalRepoPatches.get(patch)
+          if (prevPath === undefined) {
+            seenOriginalRepoPatches.set(patch, filePath)
+          } else {
+            log(
+              `skipping ${path.relative(bulletinDir.patchesDirPath, filePath)} since it's exactly the same as ${path.relative(bulletinDir.patchesDirPath, prevPath)}`,
+            )
+            continue
+          }
+
           let patchMessageStartMarker = '\n\n'
           let patchMessageStart = patch.indexOf(patchMessageStartMarker)
           assert(patchMessageStart > 0)
