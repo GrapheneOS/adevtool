@@ -596,6 +596,7 @@ filters:
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:integer/config_networkAvoidBadWifi|*
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:integer/config_networkWakeupPacketMark = 0x80000000
       - com.android.connectivity.resources/ServiceConnectivityResourcesConfig:integer/config_networkWakeupPacketMask = 0x80000000
+      - com.android.DeviceAsWebcam:raw/ignored_v4l2_nodes = 3caa6d91ff24f4a4bf4550af2da365994f2e8f06fc43a0e42d22d23cea309271
       - com.android.DeviceAsWebcam:raw/physical_camera_mapping|*
       - com.android.documentsui/DocumentsUICustomization:bool/config_button_all_caps = false
       - com.android.documentsui/DocumentsUICustomization:bool/handle_view_downloads_intent = false

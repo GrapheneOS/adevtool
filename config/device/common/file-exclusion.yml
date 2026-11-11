@@ -164,6 +164,7 @@ filters:
       - recovery/odm_dlkm/etc # symlink
       - recovery/prop.default
       - recovery/vendor_dlkm/etc # symlink
+      - system_ext/framework/com.google.android.moseylib.jar
       - system/apex/com.android.npumanager.capex
       - system/apex/com.google.android.adbd.apex
       - system/apex/com.google.android.adbd.capex
@@ -227,15 +228,30 @@ filters:
       - system/apex/com.google.android.wifi.apex
       - system/apex/com.google.android.wifi.capex
       - system/app/GoogleBluetoothLegacyMigration/GoogleBluetoothLegacyMigration.apk
+      - system/bin/cpustatsd
       - system/bin/omapi
+      - system/bin/profcollectctl
+      - system/bin/profcollectd
       - system/bin/tradeinmode
       - system/bin/zygote_cli
+      - system/etc/bpf/cpustats/cpustats.bpf
+      - system/etc/bpf/kernelstats/cmaAllocation.bpf
+      - system/etc/bpf/kernelstats/compaction.bpf
+      - system/etc/bpf/kernelstats/directReclaim.bpf
+      - system/etc/bpf/kernelstats/dmabufStats.bpf
+      - system/etc/bpf/kernelstats/kswapdLatency.bpf
       - system/etc/bpf/wakeupsources/wakeupsourcesIter.bpf
+      - system/etc/bpf/wattson/wattson.bpf
       - system/etc/compatconfig/SystemUI-compat-config.xml
       - system/etc/hal_uuid_map_config.xml
+      - system/etc/init/cpustats.rc
+      - system/etc/init/init.zapts.rc
       - system/etc/init/omapi.rc
+      - system/etc/init/profcollectd.rc
       - system/etc/init/tradeinmode.rc
       - system/etc/init/zygote_next64.rc
+      - system/etc/memory-limiter-config.xml
+      - system/etc/openxr/1/active_runtime.json
       - system/etc/security/cacerts/53a1b57a.0 # Chunghwa Telecom, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
       - system/etc/security/cacerts/60afe812.0 # NetLock, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
       - system/etc/security/cacerts/64316a39.0
@@ -243,23 +259,107 @@ filters:
       - system/etc/tracing_descriptors.gz
       - system/framework/oat/arm64/apex@com.android.wifi@javalib@service-wifi.jar@classes.art
       - system/framework/tradeinmode.jar
+      - system/lib/android.gui.arect-ndk.so
+      - system/lib/android.gui.size-ndk.so
+      - system/lib/android.hardware.audio.common-V6-ndk.so
+      - system/lib/android.hardware.audio.core-V5-ndk.so
+      - system/lib/android.hardware.audio.core.sounddose-V5-ndk.so
+      - system/lib/android.hardware.audio.effect-V5-ndk.so
+      - system/lib/android.hardware.audio.sounddose-V5-ndk.so
+      - system/lib/android.hardware.graphics.composer3-V6-ndk.so
+      - system/lib/android.hardware.tv.input-V4-ndk.so
+      - system/lib/android.media.audio.common.types-V6-cpp.so
+      - system/lib/android.media.audio.common.types-V6-ndk.so
+      - system/lib/android.media.audio.eraser.types-V3-ndk.so
+      - system/lib/graphicsenv_flags_c_lib.so
+      - system/lib/hwui_flags_cc_lib.so
+      - system/lib/libandroid_hardware_common_fmq_V1.dylib.so
+      - system/lib/libandroid_hardware_common_V2.dylib.so
+      - system/lib/libandroid_hardware_hid.dylib.so
+      - system/lib/libaudio_aidl_conversion_common_cpp_system.so
+      - system/lib/libaudio_aidl_conversion_common_ndk_cpp_system.so
+      - system/lib/libaudio_aidl_conversion_common_ndk_system.so
+      - system/lib/libaudio_aidl_conversion_core_ndk_system.so
+      - system/lib/libaudio_aidl_conversion_effect_ndk_system.so
+      - system/lib/libaudioparameterparser.so
+      - system/lib/libbinder_ndk_compat_bindgen.dylib.so
+      - system/lib/libbinder_ndk_sys.dylib.so
+      - system/lib/libbinder_rs_ndk_compat.dylib.so
+      - system/lib/libbinder_rs.dylib.so
+      - system/lib/libbytes.dylib.so
+      - system/lib/libcfg_if.dylib.so
+      - system/lib/libcombine.dylib.so
+      - system/lib/libdowncast_rs.dylib.so
+      - system/lib/libfmq_bindgen.dylib.so
+      - system/lib/libfmq_rust.dylib.so
+      - system/lib/libhid_jni.so
+      - system/lib/libjni_sys.dylib.so
+      - system/lib/libjni.dylib.so
+      - system/lib/liblibc.dylib.so
+      - system/lib/liblog_rust.dylib.so
+      - system/lib/libmemchr.dylib.so
+      - system/lib/libmemorybudgetmanager.so
+      - system/lib/libopenxr.so
+      - system/lib/libserde_core.dylib.so
+      - system/lib/libserde.dylib.so
+      - system/lib/libsimd_cesu8.dylib.so
+      - system/lib/libsimdutf8.dylib.so
+      - system/lib/libskia_fontations_rust_ffi.so
+      - system/lib/libskia_png_rust_ffi.so
+      - system/lib/libstatic_assertions.dylib.so
+      - system/lib/libstd.dylib.so
+      - system/lib/libthiserror.dylib.so
+      - system/lib/libzerocopy.dylib.so
+      - system/lib/media_metrics_aidl_interface-V1-ndk.so
+      - system/lib/mediametricsservice-aidl-V1-ndk.so
+      - system/lib64/android.gui.arect-ndk.so
+      - system/lib64/android.gui.size-ndk.so
+      - system/lib64/android.hardware.audio.sounddose-V5-ndk.so
+      - system/lib64/android.hardware.graphics.composer3-V6-ndk.so
+      - system/lib64/android.hardware.security.keymint-V6-ndk.so
+      - system/lib64/android.hardware.tv.input-V4-ndk.so
       - system/lib64/android.hardware.vibrator-V5-ndk.so
+      - system/lib64/android.media.audio.common.types-V6-cpp.so
       - system/lib64/android.server.display.flags-aconfig-cc.so
+      - system/lib64/android.system.keystore2-V7-ndk.so
+      - system/lib64/graphicsenv_flags_c_lib.so
+      - system/lib64/hwui_flags_cc_lib.so
       - system/lib64/libaconfig_flags.dylib.so
       - system/lib64/libaconfig_flags_rust.dylib.so
+      - system/lib64/libaconfig_protos.dylib.so
+      - system/lib64/libaconfig_rust_proto.dylib.so
+      - system/lib64/libandroid_gui_arect.dylib.so
+      - system/lib64/libandroid_gui_size.dylib.so
+      - system/lib64/libandroid_hardware_common_fmq_V1.dylib.so
       - system/lib64/libandroid_hardware_common_V2.dylib.so
+      - system/lib64/libandroid_hardware_hid.dylib.so
       - system/lib64/libandroid_hardware_secure_element_V1.dylib.so
       - system/lib64/libandroid_hardware_usb_aoa.dylib.so
       - system/lib64/libandroid_se_omapi_V2.dylib.so
       - system/lib64/libaoa_svc_rs.dylib.so
       - system/lib64/libarchivestager.so
+      - system/lib64/libaudio_aidl_conversion_common_cpp_system.so
+      - system/lib64/libaudio_aidl_conversion_common_ndk_cpp_system.so
+      - system/lib64/libaudio_aidl_conversion_common_ndk_system.so
+      - system/lib64/libaudio_aidl_conversion_core_ndk_system.so
+      - system/lib64/libaudio_aidl_conversion_effect_ndk_system.so
+      - system/lib64/libaudioparameterparser.so
       - system/lib64/libbssl_crypto.dylib.so
+      - system/lib64/libbyteorder.dylib.so
+      - system/lib64/libchacha20.dylib.so
+      - system/lib64/libchrono.dylib.so
+      - system/lib64/libcom_android_compos_key_cache.so
       - system/lib64/libcommand_fds.dylib.so
       - system/lib64/libconst_oid.dylib.so
+      - system/lib64/libcpustats_flags.dylib.so
+      - system/lib64/libcrc32fast.dylib.so
       - system/lib64/libder.dylib.so
       - system/lib64/libdowncast.dylib.so
       - system/lib64/libelfutils.so
       - system/lib64/libflagset.dylib.so
+      - system/lib64/libflate2.dylib.so
+      - system/lib64/libfmq_bindgen.dylib.so
+      - system/lib64/libfmq_rust.dylib.so
       - system/lib64/libfragile.dylib.so
       - system/lib64/libfutures_channel.dylib.so
       - system/lib64/libfutures_io.dylib.so
@@ -267,21 +367,37 @@ filters:
       - system/lib64/libfutures_task.dylib.so
       - system/lib64/libfutures_util.dylib.so
       - system/lib64/libgoogletest_rust.dylib.so
+      - system/lib64/libhid_jni.so
+      - system/lib64/libinputconstants.dylib.so
       - system/lib64/libjni_legacy.dylib.so
       - system/lib64/libjni_sys_legacy.dylib.so
       - system/lib64/liblibbz2_rs_sys.dylib.so
+      - system/lib64/liblibprofcollectd.dylib.so
+      - system/lib64/libmacaddr.dylib.so
+      - system/lib64/libmemorybudgetmanager.so
       - system/lib64/libmockall.dylib.so
+      - system/lib64/libnative_activity_thread_statslog.dylib.so
       - system/lib64/libnativewindow_bindgen.dylib.so
       - system/lib64/libnativewindow_rs.dylib.so
       - system/lib64/libnum_traits.dylib.so
       - system/lib64/libomapi.dylib.so
+      - system/lib64/libopenxr.so
       - system/lib64/libpackagemanager_aidl.dylib.so
+      - system/lib64/libplatformproperties_rust.dylib.so
       - system/lib64/libpredicates.dylib.so
       - system/lib64/libpredicates_core.dylib.so
       - system/lib64/libpredicates_tree.dylib.so
+      - system/lib64/libprofcollectd_aidl_interface.dylib.so
       - system/lib64/libprotobuf-cpp-full-6.33.5-absl20260526.so
       - system/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so
+      - system/lib64/librustc_hash.dylib.so
       - system/lib64/libserde_xml_rs.dylib.so
+      - system/lib64/libsimd_cesu8.dylib.so
+      - system/lib64/libsimdutf8.dylib.so
+      - system/lib64/libsimpleperf_profcollect.so
+      - system/lib64/libsimpleperf.so
+      - system/lib64/libskia_fontations_rust_ffi.so
+      - system/lib64/libskia_png_rust_ffi.so
       - system/lib64/libslab.dylib.so
       - system/lib64/libstrum.dylib.so
       - system/lib64/libtermcolor.dylib.so
@@ -289,7 +405,10 @@ filters:
       - system/lib64/libusb_flags_lib_rust.dylib.so
       - system/lib64/libwrapfd.so
       - system/lib64/libxml_rust.dylib.so
+      - system/lib64/libzip.dylib.so
+      - system/lib64/libzlib_rs.dylib.so
       - system/lib64/libzmij.dylib.so
+      - system/lib64/libzstd.so
       - system/lib64/libzygote_species_android_native.so
       - system/lib64/libzygote_statslog.dylib.so
       - system_ext/apex/com.android.hardware.biometrics.face.virtual.apex
@@ -307,6 +426,9 @@ filters:
       - system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk
       - system_ext/priv-app/SystemUITitan/SystemUITitan.apk
       - system_ext/priv-app/TurboAdapter/lib/arm64/libpowerstatshaldataprovider.so
+      - system/lib64/media_metrics_aidl_interface-V1-ndk.so
+      - system/lib64/mediametricsservice-aidl-V1-ndk.so
+      - system/lib64/storaged_aidl_interface-cpp.so
       - vendor/apex/com.google.android.hardware.biometrics.face.apex # Unused Face Unlock stuff
       - vendor/bin/hw/vendor.google.mte_launcher # MTE is always enabled on GrapheneOS
       - vendor/bin/sscoredump

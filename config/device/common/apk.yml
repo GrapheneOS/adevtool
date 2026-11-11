@@ -194,7 +194,7 @@ package_inclusions:
       - android.permission.MANAGE_USERS
 
   com.google.android.apps.camera.services:
-    max_known_version: 514018
+    max_known_version: 528760
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.ACCESS_WIFI_STATE
@@ -239,11 +239,12 @@ package_inclusions:
       - isolate_from_gmscore_and_finsky
 
   com.google.android.euicc:
-    max_known_version: 238486
+    max_known_version: 303506
     include_uses_permissions:
       - android.permission.ACCESS_NETWORK_STATE
       - android.permission.CAMERA
       - android.permission.FOREGROUND_SERVICE
+      - android.permission.FOREGROUND_SERVICE_DATA_SYNC
       - android.permission.INTERNET
       - android.permission.QUERY_ALL_PACKAGES
       - android.permission.RECEIVE_BOOT_COMPLETED
@@ -299,6 +300,8 @@ package_inclusions:
       - android.permission.ACTIVITY_RECOGNITION
       - android.permission.BLUETOOTH_CONNECT
       - android.permission.CHANGE_WIFI_STATE
+      - android.permission.FOREGROUND_SERVICE
+      - android.permission.FOREGROUND_SERVICE_SPECIAL_USE
       - android.permission.INTERACT_ACROSS_USERS
       - android.permission.LOCAL_MAC_ADDRESS
       - android.permission.MANAGE_USB
@@ -349,7 +352,7 @@ package_inclusions:
       - android.permission.UPDATE_DEVICE_STATS
 
   com.google.euiccpixel:
-    max_known_version: 20245
+    max_known_version: 20255
     include_uses_permissions:
       - com.google.android.c2dm.permission.RECEIVE
       - com.google.android.providers.gsf.permission.READ_GSERVICES
@@ -362,6 +365,7 @@ package_inclusions:
       - android.permission.RECEIVE_BOOT_COMPLETED
       - android.permission.REBOOT
       - android.permission.SECURE_ELEMENT_PRIVILEGED_OPERATION
+      - android.permission.START_ACTIVITIES_FROM_BACKGROUND
       - android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME
       - android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS
       - android.permission.WRITE_SECURE_SETTINGS
@@ -677,6 +681,7 @@ package_exclusions:
   - com.google.android.apps.pixel.launcherconnector
   - com.google.android.apps.pixel.nowplaying
   - com.google.android.apps.pixel.psi # PixelSense / Device Intelligence
+  - com.google.android.apps.pixel.sphyrnidae
   - com.google.android.apps.pixel.subzero
   - com.google.android.apps.pixel.tabby # PixelAudioServices, depends on GmsCore, talks to the vendor.google.whitechapel.audio.extension.ITabbyHandler. TODO: consider including it
   - com.google.android.apps.pulse
@@ -686,6 +691,7 @@ package_exclusions:
   - com.google.android.apps.stargate
   - com.google.android.apps.turbo # Device Health Services
   - com.google.android.apps.tycho # Google Fi
+  - com.google.android.apps.wallpaper.data
   - com.google.android.apps.yourwidget
   - com.google.android.appsearch
   - com.google.android.appsearch.apk
@@ -696,6 +702,8 @@ package_exclusions:
   - com.google.android.avatarpicker
   - com.google.android.backuptransport
   - com.google.android.bluetooth
+  # APK metadata is also scanned inside the excluded stock Bluetooth APEX.
+  - com.google.android.bluetooth.overlay
   - com.google.android.brownoutdetection
   - com.google.android.captiveportallogin
   - com.google.android.carrier

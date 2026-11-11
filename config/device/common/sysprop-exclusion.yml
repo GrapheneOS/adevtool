@@ -14,6 +14,8 @@ sysprop_exclusions:
   - persist.arm64.memtag.app.com.android.se = off
   - persist.arm64.memtag.app.com.google.android.bluetooth = off
   - persist.arm64.memtag.system_server = off
+  - persist.pcc.audit_mode.max_log_file_size_kb = 102400
+  - persist.pcc.audit_mode.max_log_files = 1
   - persist.sys.sf.native_mode = 2 # default display color mode
   - persist.vendor.factoryota.
   - persist.vendor.intelligence = on
@@ -49,6 +51,7 @@ sysprop_exclusions:
   - ro.boot.sota
   - ro.boot.sota.
   - ro.boot.vendor.overlay.theme = com.android.internal.systemui.navbar.gestural;com.google.android.systemui.gxoverlay
+  - ro.build.backported_fixes.alias_bitset.long_list
   - ro.build.date
   - ro.build.date.utc
   - ro.build.description
@@ -62,6 +65,7 @@ sysprop_exclusions:
   - ro.build.version.base_os
   - ro.build.version.emergency_base_os # TODO look into it further
   - ro.build.version.incremental
+  - ro.build.version.known_codenames
   - ro.build.version.sdk_full
   - ro.build.version.security_patch
   - ro.carriersetup.vzw_consent_page = true
@@ -125,6 +129,8 @@ sysprop_exclusions:
   - ro.setupwizard.esim_cid_ignore = 00000001
   - ro.storage_manager.enabled = false
   - ro.storage_manager.show_opt_in = false
+  - ro.surface_flinger.allow_external_formats_in_precompilation = true
+  - ro.surface_flinger.renderengine_graphite_vulkan = true
   - ro.system.build.date
   - ro.system.build.date.utc
   - ro.system.build.fingerprint
@@ -171,6 +177,7 @@ sysprop_exclusions:
   - ro.vendor_dlkm.build.uuid
   - ro.vendor_dlkm.build.version.incremental
   - ro.vendor_dlkm.build.version.sdk_full
+  - ro.vendor.primarydisplay.xrr.vrr.expected_present.headsup_ns = 30000000
   - ro.virtual_ab.ublk.enabled = true # intentionally disabled, see build/release repo
   - setupwizard.feature.baseline_setupwizard_enabled = true
   - setupwizard.feature.day_night_mode_enabled = true
