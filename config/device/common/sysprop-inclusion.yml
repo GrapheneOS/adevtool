@@ -181,12 +181,15 @@ sysprop_inclusions:
   - persist.bluetooth.leaudio.allow_list
   - persist.bluetooth.leaudio.allow_list_extend = LinkBuds Open
   - persist.bluetooth.leaudio.allow_list_extend = LinkBuds Open,YY3005,YY3006,SM-R640
+  - persist.bluetooth.leaudio.allow_list_extend = LinkBuds Open,YY3005,YY3006,SM-R640,890101-0100,895491-0100
+  - persist.bluetooth.leaudio.allow_list_extend = LinkBuds Open,YY3005,YY3006,SM-R640,R4,R5,890101-0100,895491-0100
   - persist.bluetooth.leaudio.notify.idle.during.call = true
   - persist.bluetooth.leaudio.toggle_visible = false
   - persist.bluetooth.leaudio.toggle_visible = true
   - persist.bluetooth.leaudio_offload.disabled = false
   - persist.bluetooth.leaudio_sw_offload = true
   - persist.bluetooth.opus.enabled = true
+  - persist.bluetooth.send_energy_info_parameter = true
   - persist.bluetooth.sw_offload = true
   - persist.bluetooth.thread_dispatcher.enabled = false
   - persist.bluetooth.vendor.btsnoop = false
@@ -747,6 +750,7 @@ sysprop_inclusions:
   - vendor.audio_hal.device.serialno
   - vendor.audio_hal.period_multiplier
   - vendor.battery.defender.
+  - vendor.battery.defender.adv_defend.enable = 1
   - vendor.battery.defender.dwell_v1p5.enable = 1
   - vendor.battery_mitigation.aidl.enable = true
   - vendor.brownout.br.feasible

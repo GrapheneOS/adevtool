@@ -3,4 +3,10 @@ includes:
 
 device:
   platform: laguna
-  build_id: CP3A.261005.005
+  build_id: CP4A.261105.040.A1
+
+sysprop_exclusions:
+  - ro.product.bootanim.file = bootanimation.zip
+
+sysprop_inclusions:
+  - ro.surface_flinger.prime_shader_cache.ultrahdr = true

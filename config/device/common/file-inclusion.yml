@@ -87,7 +87,15 @@ filters:
       - recovery/system/lib64/libprotobuf-cpp-lite-6.33.5-absl20260526.so
       - recovery/system/lib64/librecovery_ui_ext.so
       - recovery/system/lib64/libtrusty.so
+      - system_ext/etc/adaptivehaptics.protolog.pb
+      - system_ext/lib64/vendor.google.whitechapel.audio.extension-V10-ndk.so
       - system/etc/angle/feature_config_vk.binarypb
+      - system/lib64/android.hardware.audio.common-V6-ndk.so
+      - system/lib64/android.hardware.audio.core-V5-ndk.so
+      - system/lib64/android.hardware.audio.core.sounddose-V5-ndk.so
+      - system/lib64/android.hardware.audio.effect-V5-ndk.so
+      - system/lib64/android.media.audio.common.types-V6-ndk.so
+      - system/lib64/android.media.audio.eraser.types-V3-ndk.so
       - system/lib64/liblmkd_flags_c.so
       - system/lib64/libstatslog_gpustats.so
       - system/lib64/libstatslog_inputflinger.so
@@ -205,9 +213,11 @@ filters:
       - system_ext/priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so
       - system_ext/priv-app/PixelDisplayService/lib/arm64/libpixeldisplaymanager_jni.so
       - system_ext/priv-app/PixelModemService/PixelModemService.apk
+      - vendor_ramdisk/system/bin/modprobe
       - vendor/apex/com.google.android.hardware.biometrics.fingerprint.apex
       - vendor/apex/com.google.android.widevine-13130248.apex
       - vendor/apex/com.google.android.widevine-15027108-cp2a.apex
+      - vendor/apex/com.google.android.widevine-15719561.apex
       - vendor/apex/com.google.muzel.hardware.threadnetwork.apex
       - vendor/apex/com.google.pixel.audio.resource.apex
       - vendor/apex/com.google.pixel.camera.hal.apex
@@ -440,6 +450,7 @@ filters:
       - vendor/etc/a2dp_audio_policy_configuration_7_0.xml
       - vendor/etc/a2dp_in_audio_policy_configuration_7_0.xml
       - vendor/etc/aidl/hfp/hfp_codec_capabilities.xml
+      - vendor/etc/aidl/hfp/hfp_default_codec_capabilities.xml
       - vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs
       - vendor/etc/aidl/le_audio/aidl_audio_set_configurations.json
       - vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs
@@ -534,6 +545,7 @@ filters:
       - vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
       - vendor/etc/audio_policy_configuration_le_offload_disabled.xml
       - vendor/etc/audio_policy_volumes.xml
+      - vendor/etc/battery_mapping.ini
       - vendor/etc/bluetooth/bluetooth_channel_sounding_calibration.json
       - vendor/etc/bluetooth/bt_vendor.conf
       - vendor/etc/bluetooth/bt_vendor_overlay.conf
@@ -541,6 +553,9 @@ filters:
       - vendor/etc/bluetooth/hal_config.json
       - vendor/etc/bluetooth_audio_policy_configuration_7_0.xml
       - vendor/etc/bm_config.json
+      - vendor/etc/BZ5_ATL.ini
+      - vendor/etc/BZ5_DEFAULT.ini
+      - vendor/etc/BZ5_LWN.ini
       - vendor/etc/cert-chain.crt
       - vendor/etc/chre/activity.napp_header
       - vendor/etc/chre/activity.so
@@ -606,12 +621,14 @@ filters:
       - vendor/etc/chre/vice.so
       - vendor/etc/chre/wallaby.napp_header
       - vendor/etc/chre/wallaby.so
+      - vendor/etc/CM4_DEFAULT.ini
       - vendor/etc/compens_spk_l.conf
       - vendor/etc/compens_spk_l_1.conf
       - vendor/etc/compens_spk_l_2.conf
       - vendor/etc/compens_spk_r.conf
       - vendor/etc/compens_spk_r_1.conf
       - vendor/etc/compens_spk_r_2.conf
+      - vendor/etc/CT3_DEFAULT.ini
       - vendor/etc/database/ecc_version
       - vendor/etc/default_mic_compensation.bin
       - vendor/etc/default_volume_tables.xml
@@ -751,6 +768,9 @@ filters:
       - vendor/etc/earcheek_classifier.tflite
       - vendor/etc/ecc_list.xml
       - vendor/etc/edgetpu/custom_kernel.pbtxt
+      - vendor/etc/FL5_ATL.ini
+      - vendor/etc/FL5_DEFAULT.ini
+      - vendor/etc/FL5_LWN.ini
       - vendor/etc/fstab.efs
       - vendor/etc/fstab.efs.from_data
       - vendor/etc/fstab.gem5
@@ -929,6 +949,7 @@ filters:
       - vendor/etc/init/init.camera.set-interrupts-ownership.rc
       - vendor/etc/init/init.display_logbuffer.rc
       - vendor/etc/init/init.efs.rc
+      - vendor/etc/init/init.esim.rc
       - vendor/etc/init/init.fingerprint.dump.rc
       - vendor/etc/init/init.flood.control.rc
       - vendor/etc/init/init.gia.rc
@@ -1049,6 +1070,8 @@ filters:
       - vendor/etc/Khronos/OpenCL/vendors/ARM.icd
       - vendor/etc/Khronos/OpenCL/vendors/ARM32.icd
       - vendor/etc/Khronos/OpenCL/vendors/IMG.icd
+      - vendor/etc/KM4_ATL.ini
+      - vendor/etc/KM4_DEFAULT.ini
       - vendor/etc/le_audio_codec_capabilities.xml
       - vendor/etc/led_golden_calibration_LUT_black_CG.txt
       - vendor/etc/led_golden_calibration_LUT_white_CG.txt
@@ -1282,6 +1305,9 @@ filters:
       - vendor/etc/modem_ml_models.conf
       - vendor/etc/modem_ml_tflite_models.conf
       - vendor/etc/modem_stat.conf
+      - vendor/etc/MT5_ATL_WDG.ini
+      - vendor/etc/MT5_ATL.ini
+      - vendor/etc/MT5_DEFAULT.ini
       - vendor/etc/open_carrier_info.dat
       - vendor/etc/panel_ctrl_google-bzea_cal0.pb
       - vendor/etc/panel_ctrl_google-cgyda_cal0.pb
@@ -1319,6 +1345,9 @@ filters:
       - vendor/etc/res/images/charger/battery_scale.png
       - vendor/etc/res/images/charger/main_font.png
       - vendor/etc/res/values/charger/animation.txt
+      - vendor/etc/RG5_B_LWN.ini
+      - vendor/etc/RG5_DEFAULT.ini
+      - vendor/etc/RG5B_ATL.ini
       - vendor/etc/seccomp_policy/codec2.vendor.base.policy
       - vendor/etc/seccomp_policy/codec2.vendor.ext.policy
       - vendor/etc/security/supplemental_security_patches.xml
@@ -1329,6 +1358,7 @@ filters:
       - vendor/etc/spatializer/mode_2_ch
       - vendor/etc/spatializer/mode_6_ch
       - vendor/etc/spatializer/mode_xaural
+      - vendor/etc/ST6_DEFAULT.ini
       - vendor/etc/task_profiles.json
       - vendor/etc/tcm_test_cfg.ini
       - vendor/etc/tcm_test_cfg_b.ini
@@ -1337,6 +1367,9 @@ filters:
       - vendor/etc/tcm_test_cfg_gt4.ini
       - vendor/etc/telephony/satellite_access_config.json
       - vendor/etc/telephony/sats2.dat
+      - vendor/etc/TG4_ATL.ini
+      - vendor/etc/TG4_DEFAULT.ini
+      - vendor/etc/TG4_LWN.ini
       - vendor/etc/thermal_info_config.json
       - vendor/etc/thermal_info_config_aa_throttling.json
       - vendor/etc/thermal_info_config_ambient.json
@@ -1364,6 +1397,7 @@ filters:
       - vendor/etc/thread_power_limits_EU.csv
       - vendor/etc/thread_power_limits_JP.csv
       - vendor/etc/thread_power_limits_US.csv
+      - vendor/etc/TK4_DEFAULT.ini
       - vendor/etc/touchflow.pb
       - vendor/etc/touchflow_inner.pb
       - vendor/etc/touchflow_outer.pb
@@ -1662,6 +1696,9 @@ filters:
       - vendor/framework/com.google.android.camera.experimental2025.jar
       - vendor/framework/com.google.android.camera.experimental2026.jar
       - vendor/lib/com.google.hardware.pixel.display-V17-ndk.so
+      - vendor/lib/com.google.hardware.pixel.display-V24-ndk.so
+      - vendor/lib/usf_sensor_hal_flags_c_lib.so
+      - vendor/lib/vendor.google.whitechapel.audio.extension-V10-ndk.so
       - vendor/lib/vendor.google.whitechapel.audio.extension-V7-ndk.so
       - vendor/lib64/aconfig_gpu_flags_c_lib.so
       - vendor/lib64/aconfig_gpu_img_flags_c_lib.so
@@ -1713,6 +1750,7 @@ filters:
       - vendor/lib64/android.hardware.contexthub-V5-ndk.so
       - vendor/lib64/android.hardware.drm-V1-ndk.so
       - vendor/lib64/android.hardware.drm-V2-ndk.so
+      - vendor/lib64/android.hardware.drm-V3-ndk.so
       - vendor/lib64/android.hardware.drm.common-V1-ndk.so
       - vendor/lib64/android.hardware.dumpstate-V1-ndk.so
       - vendor/lib64/android.hardware.gnss-V3-ndk.so
@@ -1808,6 +1846,7 @@ filters:
       - vendor/lib64/android.hardware.security.keymint-impl.nos.so
       - vendor/lib64/android.hardware.security.keymint-V1-ndk.so
       - vendor/lib64/android.hardware.security.keymint-V3-ndk.so
+      - vendor/lib64/android.hardware.security.keymint-V6-ndk.so
       - vendor/lib64/android.hardware.security.rkp-V3-ndk.so
       - vendor/lib64/android.hardware.security.sharedsecret-V1-ndk.so
       - vendor/lib64/android.hardware.security.timestamp-V1-ndk.so
@@ -1844,7 +1883,9 @@ filters:
       - vendor/lib64/android.hardware.weaver2-impl.nos.so
       - vendor/lib64/android.hardware.wifi.common-V2-ndk.so
       - vendor/lib64/android.hardware.wifi.hostapd-V3-ndk.so
+      - vendor/lib64/android.hardware.wifi.hostapd-V4-ndk.so
       - vendor/lib64/android.hardware.wifi.supplicant-V5-ndk.so
+      - vendor/lib64/android.hardware.wifi.supplicant-V6-ndk.so
       - vendor/lib64/android.hidl.allocator@1.0.so
       - vendor/lib64/android.hidl.memory.token@1.0.so
       - vendor/lib64/android.hidl.memory@1.0.so
@@ -1895,6 +1936,7 @@ filters:
       - vendor/lib64/com.google.hardware.pixel.display-V21-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V22-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V23-ndk.so
+      - vendor/lib64/com.google.hardware.pixel.display-V24-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V4-ndk.so
       - vendor/lib64/com.google.hardware.pixel.display-V9-ndk.so
       - vendor/lib64/com.google.input-V2-ndk.so
@@ -1956,6 +1998,7 @@ filters:
       - vendor/lib64/hw/mapper.pixel.so
       - vendor/lib64/hw/mtk_lbs_service-impl.so
       - vendor/lib64/hw/sensors.dynamic_sensor_hal.so
+      - vendor/lib64/hw/sensors.eldi.so
       - vendor/lib64/hw/sound_trigger.primary.gs101.so
       - vendor/lib64/hw/sound_trigger.primary.gs201.so
       - vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so
@@ -2116,6 +2159,7 @@ filters:
       - vendor/lib64/libgps.utils.so
       - vendor/lib64/libgpudataproducer.so
       - vendor/lib64/libgpuflag_aconfig_rust.dylib.so
+      - vendor/lib64/libgpuflag_img_aconfig_rust.dylib.so
       - vendor/lib64/libgralloctypes.so
       - vendor/lib64/libgril_oem-google.so
       - vendor/lib64/libgui.so
@@ -2231,6 +2275,7 @@ filters:
       - vendor/lib64/libPVRScopeServices.so
       - vendor/lib64/libqfp-service.so
       - vendor/lib64/libqfpsuez.so
+      - vendor/lib64/libqfputils.so
       - vendor/lib64/libqfstrusty_intf.so
       - vendor/lib64/libqmi_cci.so
       - vendor/lib64/libqmi_common_so.so
@@ -2336,6 +2381,7 @@ filters:
       - vendor/lib64/soundfx/libspatialaudio.so
       - vendor/lib64/soundfx/libvisualizeraidl.so
       - vendor/lib64/thermal-budget-interface-ndk.so
+      - vendor/lib64/usf_sensor_hal_flags_c_lib.so
       - vendor/lib64/usf_v2_api.so
       - vendor/lib64/usf_v2_spectral_api.so
       - vendor/lib64/vendor-pixelatoms-cpp.so
@@ -2361,6 +2407,7 @@ filters:
       - vendor/lib64/vendor.google.plat_security-V1-ndk.so
       - vendor/lib64/vendor.google.radio_ext-V1-ndk.so
       - vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so
+      - vendor/lib64/vendor.google.whitechapel.audio.extension-V10-ndk.so
       - vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so
       - vendor/lib64/vendor.google.whitechapel.audio.extension-V6-ndk.so
       - vendor/lib64/vendor.google.whitechapel.audio.extension-V7-ndk.so
@@ -2378,6 +2425,7 @@ filters:
       - vendor/lib64/vendor.google.wireless_charger-V5-ndk.so
       - vendor/lib64/vendor.google.wireless_charger-V7-ndk.so
       - vendor/lib64/vendor.google.wireless_charger-V8-ndk.so
+      - vendor/lib64/vendor.google.wireless_charger-V9-ndk.so
       - vendor/lib64/vendor.google.wireless_charger.service-V2-ndk.so
       - vendor/lib64/vendor.google.wireless_charger.service-V3-ndk.so
       - vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so

@@ -101,6 +101,8 @@ sepolicy_inclusions:
         - persist.vendor.ss. u:object_r:vendor_mtk_ss_vendor_prop:s0
         - persist.vendor.thinmd. u:object_r:vendor_thinmd_prop:s0
         - persist.vendor.tool.ipaddress u:object_r:vendor_mtk_tool_ipaddr_prop:s0
+        - persist.vendor.touch.vrr_disabled u:object_r:vendor_twoshay_prop:s0 exact bool
+        - persist.vendor.uwb. u:object_r:vendor_uwb_prop:s0
         - ro.vendor.camera. u:object_r:vendor_camera_prop:s0
         - ro.vendor.display. u:object_r:vendor_display_prop:s0
         - ro.vendor.md_mims_support u:object_r:vendor_mtk_ims_prop:s0
@@ -286,6 +288,9 @@ sepolicy_inclusions:
         - /(vendor|system/vendor)/bin/hw/android\.hardware\.wifi-service-lazy u:object_r:hal_wifi_default_exec:s0
         - /(vendor|system/vendor)/bin/hw/android\.hardware\.wifi@1\.0-service u:object_r:hal_wifi_default_exec:s0
         - /(vendor|system/vendor)/bin/hw/android\.hardware\.wifi@1\.0-service-lazy u:object_r:hal_wifi_default_exec:s0
+        # These OEMCrypto executables might not exist yet.
+        - /(vendor|system/vendor)/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default u:object_r:hal_oemcrypto_widevine_exec:s0
+        - /(vendor|system/vendor)/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default-lazy u:object_r:hal_oemcrypto_widevine_exec:s0
         - /(vendor|system/vendor)/bin/hw/hostapd u:object_r:hal_wifi_hostapd_default_exec:s0
         - /(vendor|system/vendor)/bin/hw/qorvo\.uci-bridge u:object_r:qorvo-uci-daemon_exec:s0
         - /(vendor|system/vendor)/bin/hw/qorvo\.uci-daemon u:object_r:qorvo-uci-daemon_exec:s0
@@ -454,6 +459,9 @@ sepolicy_inclusions:
         - /dev/acd-com.google.usf.sc u:object_r:aoc_device:s0
         - /dev/acd-com.google.usf.sc.non_wake_up u:object_r:aoc_device:s0
         - /dev/acd-debug u:object_r:aoc_device:s0
+        - /dev/acd-gnss_passthrough_ctl u:object_r:aoc_device:s0
+        - /dev/acd-gnss_passthrough_data_rx u:object_r:aoc_device:s0
+        - /dev/acd-gnss_passthrough_data_tx u:object_r:aoc_device:s0
         - /dev/acd-hotword_notification u:object_r:aoc_device:s0
         - /dev/acd-hotword_pcm u:object_r:aoc_device:s0
         - /dev/acd-logging u:object_r:aoc_device:s0
@@ -1135,6 +1143,7 @@ sepolicy_inclusions:
         - /vendor/bin/hw/android\.hardware\.samsung\.uwb-service u:object_r:hal_uwb_vendor_default_exec:s0
         - /vendor/bin/hw/android\.hardware\.secure_element-service.uicc u:object_r:hal_secure_element_uicc_exec:s0
         - /vendor/bin/hw/android\.hardware\.secure_element-service\.thales u:object_r:hal_secure_element_st54spi_aidl_exec:s0
+        - /vendor/bin/hw/android\.hardware\.secure_element-service\.thales(\.spi)? u:object_r:hal_secure_element_st54spi_aidl_exec:s0
         - /vendor/bin/hw/android\.hardware\.secure_element@1\.2-service-gto u:object_r:hal_secure_element_st54spi_exec:s0
         - /vendor/bin/hw/android\.hardware\.secure_element@1\.2-service-gto-ese2 u:object_r:hal_secure_element_st33spi_exec:s0
         - /vendor/bin/hw/android\.hardware\.secure_element@1\.2-service-mediatek u:object_r:mtk_hal_secure_element_exec:s0
@@ -1159,6 +1168,9 @@ sepolicy_inclusions:
         - /vendor/bin/hw/block_queue_depth u:object_r:block_queue_depth_exec:s0
         - /vendor/bin/hw/citadel_updater u:object_r:citadel_updater:s0
         - /vendor/bin/hw/citadeld u:object_r:citadeld_exec:s0
+        # These OEMCrypto executables might not exist yet.
+        - /vendor/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default u:object_r:hal_oemcrypto_widevine_exec:s0
+        - /vendor/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default-lazy u:object_r:hal_oemcrypto_widevine_exec:s0
         - /vendor/bin/hw/com\.google\.edgetpu.dba-service u:object_r:edgetpu_dba_server_exec:s0
         - /vendor/bin/hw/com\.google\.edgetpu.tachyon-service u:object_r:edgetpu_tachyon_server_exec:s0
         - /vendor/bin/hw/cs40l26_vibrator_server u:object_r:hal_vibrator_default_exec:s0
@@ -1465,6 +1477,7 @@ sepolicy_inclusions:
         - vendor.mediatek.hardware.mtkradioex.sim.IMtkRadioExSim/slot2 u:object_r:hal_vendor_radio_external_service:s0
         - vendor.mediatek.hardware.mtkradioex.voice.IMtkRadioExVoice/slot1 u:object_r:hal_vendor_radio_external_service:s0
         - vendor.mediatek.hardware.mtkradioex.voice.IMtkRadioExVoice/slot2 u:object_r:hal_vendor_radio_external_service:s0
+        - android.hardware.drm.IDecryptFactory/default u:object_r:hal_drm_service:s0
         - android.hardware.drm.IDrmFactory/castkey u:object_r:hal_drm_service:s0
         - android.hardware.drm.IDrmFactory/widevine u:object_r:hal_drm_service:s0
         - android.hardware.gnss.IGnss/vendor u:object_r:hal_gnss_service:s0
@@ -1479,6 +1492,9 @@ sepolicy_inclusions:
         - arm.mali.platform.ICompression/default u:object_r:arm_mali_platform_service:s0
         - com.android.server.modemml.ITFLiteService/default u:object_r:modemml_tflite_service:s0
         - com.google.android.imageprocessing.hal.IImageProcessingHal/default u:object_r:vendor_image_processing_hal_service:s0
+        - com.google.android.vibrator.IPixelAudioHapticController/default u:object_r:hal_vibrator_service:s0
+        - com.google.android.widevine.oemcrypto.IOemCrypto/default u:object_r:hal_drm_service:s0
+        - com.google.android.widevine.oemcrypto.IOpkSerializer/default u:object_r:hal_drm_service:s0
         - com.google.edgetpu.dba.IDevice/default u:object_r:edgetpu_dba_service:s0
         - com.google.edgetpu.IEdgeTpuAppService/default u:object_r:edgetpu_app_service:s0
         - com.google.edgetpu.IEdgeTpuVendorService/default u:object_r:edgetpu_vendor_service:s0

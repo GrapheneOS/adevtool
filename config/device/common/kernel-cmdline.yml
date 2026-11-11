@@ -24,6 +24,7 @@ kernel_cmdline_inclusions:
   - earlycon=exynos4210,0x10A00000
   - exynos_drm.load_sequential=1
   - exynos_mfc.load_sequential=1
+  - f2fs.num_compress_pages=128
   - fips140.load_sequential=1
   - g2d.load_sequential=1
   - gs_governor_dsulat.async_probe=1
@@ -53,3 +54,4 @@ kernel_cmdline_inclusions:
   - vh_sched.load_sequential=1
   - vh_sched.load_sequential=1
   - vs_drm.async_probe=1
+  - workqueue.power_efficient=1
