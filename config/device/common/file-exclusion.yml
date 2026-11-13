@@ -255,7 +255,11 @@ filters:
       - system/etc/security/cacerts/53a1b57a.0 # Chunghwa Telecom, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
       - system/etc/security/cacerts/60afe812.0 # NetLock, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
       - system/etc/security/cacerts/64316a39.0
+      - system/etc/security/cacerts/869fbf79.0 # emSign ECC Root CA - C3
       - system/etc/security/cacerts/9d6523ce.0 # Chunghwa Telecom, https://security.googleblog.com/2025/05/sustaining-digital-certificate-security-chrome-root-store-changes.html
+      - system/etc/security/cacerts/b74d2bd5.0 # emSign ECC Root CA - G3
+      - system/etc/security/cacerts/dbff3a01.0 # emSign Root CA - C1
+      - system/etc/security/cacerts/f459871d.0 # emSign Root CA - G1
       - system/etc/tracing_descriptors.gz
       - system/framework/oat/arm64/apex@com.android.wifi@javalib@service-wifi.jar@classes.art
       - system/framework/tradeinmode.jar
