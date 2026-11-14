@@ -1,4 +1,5 @@
 kernel_cmdline_exclusions:
+  - binder.impl=rust
   - dyndbg="func alloc_contig_dump_pages +p"
   - init_on_alloc=0
   - init_on_free=1
