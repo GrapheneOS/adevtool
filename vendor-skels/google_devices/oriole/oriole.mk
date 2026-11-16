@@ -7,6 +7,10 @@ ifneq ($(BUILD_ID),CP3A.261005.002.A1)
   $(error BUILD_ID: expected CP3A.261005.002.A1, got $(BUILD_ID))
 endif
 
+ifneq ($(PLATFORM_SECURITY_PATCH),2026-11-01)
+  $(error PLATFORM_SECURITY_PATCH: expected 2026-11-01, got $(PLATFORM_SECURITY_PATCH))
+endif
+
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/oriole/device.mk)
 
 PRODUCT_SOONG_NAMESPACES += \

@@ -5,7 +5,7 @@ README.md: d8a30e8b8c088363b87cd60e900c5e951dff586fabdae4244ae98004f20c38b7
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: 543904974df60a03ab379b982863f529cde9bb2d07130c8aff523da6a4b1aa26
-cmds-for-envsetup.sh: 86569fbbb570095164e2e959296fb295f4b6020d3bcf81ae04691db411fa2a00
+cmds-for-envsetup.sh: b11d6b3bfa344b5edbc6f96b44b0a2dc93db3b31f2597d3a695b3202e7ff8c5b
 firmware: dir
 firmware/abl.img: 119f76955aae765b6ac000d13502661397ed71ffa430d938b2c1481de136b4be
 firmware/android-info.txt: 9ea2a4f6114c7df89a3c46fcebcee8f4b53e21d7e0a2d44adfa85ec5b569ca61
@@ -22,7 +22,7 @@ firmware/tzsw.img: 9e533484ea491a13c37d76a84a573a763dd007e307d0d9f3ccf11917966ac
 gservices-flags: dir
 gservices-flags/Android.bp: 94473cf2b0c7f85669a03be61380c939f4b7fb2049b0a64560b2d0b6b80c4610
 gservices-flags/flags.txt: 3f8ff3f302b84410b908971ae859130b0b299d4e2da963d6593135c736c070ae
-oriole.mk: 76a95fa6ba6f6b4d33083c4122836009cdcb6546df3d6cdc1bc794a732d95d39
+oriole.mk: 6fb10acb1a62dcedcde58579b5a3f472ea8b27bab403ab3fd620120c22bf18b9
 overlays: dir
 overlays/Android.bp: c9ffd08891ecb53ae8e9094354e795dd69f8739b43792c4ad4b3bc7c768affcf
 overlays/CellBroadcastReceiverOverlay: dir

@@ -1,5 +1,6 @@
 device:
   name: raven
+  platform_security_patch_level_override: 2026-11-01
   stable_display_size: { width: 1440, height: 3120 }
   odm_skus:
     - GLU0G # 5G Sub 6GHz
