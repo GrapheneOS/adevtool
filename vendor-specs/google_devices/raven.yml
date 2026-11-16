@@ -5,7 +5,7 @@ README.md: ad79d5f6cf61cb3020bb84e30b61675ce6f1bdcdaebd52ef6e97fec19901df15
 apk-parser-config: dir
 apk-parser-config/Android.bp: 6d6401321d50122166ac7cd71142453a4e2e217812b514b04b8e958d24532585
 apk-parser-config/apk-parser-config.pb: 716429ef2f18ab2883bddf6515b5da04c290c27b99443b08d3233d5f01693722
-cmds-for-envsetup.sh: 887e2a7e10de6a40acb5ec7d49e7da8a7cadd1ef750c689016d5643156634d44
+cmds-for-envsetup.sh: 509aecb2dfc3b79be01e08cfba371bb74ae145394be055ab8a7530b74313761a
 firmware: dir
 firmware/abl.img: 119f76955aae765b6ac000d13502661397ed71ffa430d938b2c1481de136b4be
 firmware/android-info.txt: 24f0e2d01f17e987f0cb2f87d65db4fb2021107e8d8561e7497a0e8ee0f84060
@@ -5571,7 +5571,7 @@ proprietary/vendor_ramdisk/lib/firmware/drv2624.bin: 6f2fc984f141b6fbbe740c69682
 proprietary/vendor_ramdisk/system: dir
 proprietary/vendor_ramdisk/system/etc: dir
 proprietary/vendor_ramdisk/system/etc/fstab.gs101: 492ee89dd2bc92c428740612f0219a5d5611207bfb736d1228b631a8310b2953
-raven.mk: 3b3c6af83525c9795d776ce363c759a41293b6ff479a19ae1c515ceb54b9b249
+raven.mk: db66f504af3bf39da71022684a997731ef7939b4d5438de9cd1d6922c44733eb
 sepolicy: dir
 sepolicy/product: dir
 sepolicy/product/private: dir

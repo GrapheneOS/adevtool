@@ -1,5 +1,6 @@
 device:
   name: oriole
+  platform_security_patch_level_override: 2026-11-01
   stable_display_size: { width: 1080, height: 2400 }
   odm_skus:
     - GB7N6 # 5G Sub 6GHz
