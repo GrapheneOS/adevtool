@@ -1,0 +1,1 @@
+runtime_resource_overlay { name: "DeviceAsWebcamHusky", product_specific: true, }

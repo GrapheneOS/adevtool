@@ -1,4 +1,4 @@
-version: 79000000052
+version: 82000000057
 setting {
   canonical_name: "20209"
   apns {
@@ -3074,33 +3074,6 @@ setting {
       mmsc: "http://mmc1/servlets/mms"
       mmsc_proxy: "10.1.11.19"
       mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "28010"
-  apns {
-    apn {
-      name: "MTN MMS"
-      value: "mms"
-      type: MMS
-      user: "mms"
-      password: "mms"
-      mmsc: "http://mms.mtn.com.cy/mmsc"
-      mmsc_proxy: "172.24.97.1"
-      mmsc_proxy_port: "3130"
-    }
-    apn {
-      name: "MTN Wap"
-      value: "wap"
-      type: DEFAULT
-      type: SUPL
-      proxy: "172.24.97.3"
-      port: "3130"
-      user: "wap"
-      password: "wap"
     }
   }
   configs {
@@ -8694,6 +8667,14 @@ setting {
     }
   }
   configs {
+    config {
+      key: "enableGroupMms"
+      bool_value: false
+    }
+    config {
+      key: "enabledMMS"
+      bool_value: false
+    }
   }
 }
 setting {
@@ -12160,180 +12141,6 @@ setting {
     }
   }
   configs {
-  }
-}
-setting {
-  canonical_name: "46001"
-  apns {
-    apn {
-      name: "\346\262\2033G\350\277\236\346\216\245\344\272\222\350\201\224\347\275\221 (China Unicom)"
-      value: "3gnet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "\346\262\2033G\346\211\213\346\234\272\344\270\212\347\275\221 (China Unicom)"
-      value: "3gwap"
-      type: DEFAULT
-      type: SUPL
-      proxy: "10.0.0.172"
-      port: "80"
-    }
-    apn {
-      name: "\350\201\224\351\200\2322GNET\344\270\212\347\275\221 (China Unicom)"
-      value: "uninet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "\350\201\224\351\200\232\345\275\251\344\277\241 (China Unicom)"
-      value: "3gwap"
-      type: MMS
-      mmsc: "http://mmsc.myuni.com.cn"
-      mmsc_proxy: "10.0.0.172"
-      mmsc_proxy_port: "80"
-    }
-    apn {
-      name: "\350\201\224\351\200\2322g\345\275\251\344\277\241 (China Unicom)"
-      value: "uniwap"
-      type: MMS
-      mmsc: "http://mmsc.myuni.com.cn"
-      mmsc_proxy: "10.0.0.172"
-      mmsc_proxy_port: "80"
-    }
-  }
-  configs {
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
-  canonical_name: "46003"
-  apns {
-    apn {
-      name: "CTNET"
-      value: "ctnet"
-      type: CBS
-      type: DEFAULT
-      type: HIPRI
-      type: FOTA
-      server: "*"
-      user: "ctnet@mycdma.cn"
-      password: "vnet.mobi"
-      authtype: 3
-    }
-    apn {
-      name: "CTWAP"
-      value: "ctwap"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      type: HIPRI
-      type: FOTA
-      type: CBS
-      server: "*"
-      user: "ctwap@mycdma.cn"
-      password: "vnet.mobi"
-      authtype: 3
-      mmsc: "http://mmsc.vnet.mobi"
-      mmsc_proxy: "10.0.0.200"
-      mmsc_proxy_port: "80"
-    }
-  }
-  configs {
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-    config {
-      key: "ascii_7_bit_support_for_long_message_bool"
-      bool_value: true
-    }
-    config {
-      key: "show_apn_setting_cdma_bool"
-      bool_value: false
-    }
-  }
-}
-setting {
-  canonical_name: "46005"
-  configs {
-    config {
-      key: "show_apn_setting_cdma_bool"
-      bool_value: false
-    }
-  }
-}
-setting {
-  canonical_name: "46009"
-  apns {
-    apn {
-      name: "China Unicom 3G"
-      value: "3gnet"
-      type: DEFAULT
-      type: SUPL
-    }
-    apn {
-      name: "China Unicom wap"
-      value: "3gwap"
-      type: DEFAULT
-      type: MMS
-      proxy: "10.0.0.172"
-      port: "80"
-      mmsc: "http://mmsc.myuni.com.cn"
-      mmsc_proxy: "10.0.0.172"
-      mmsc_proxy_port: "80"
-    }
-  }
-  configs {
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-  }
-}
-setting {
-  canonical_name: "46011"
-  apns {
-    apn {
-      name: "ctlte"
-      value: "ctlte"
-      type: CBS
-      type: DEFAULT
-      type: SUPL
-      type: HIPRI
-      type: FOTA
-      server: "*"
-      authtype: 0
-      protocol: IPV4V6
-    }
-    apn {
-      name: "CTWAP"
-      value: "ctwap"
-      type: MMS
-      server: "*"
-      authtype: 0
-      mmsc: "http://mmsc.vnet.mobi"
-      mmsc_proxy: "10.0.0.200"
-      mmsc_proxy_port: "80"
-      protocol: IPV4V6
-    }
-  }
-  configs {
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-    config {
-      key: "ascii_7_bit_support_for_long_message_bool"
-      bool_value: true
-    }
-    config {
-      key: "show_apn_setting_cdma_bool"
-      bool_value: false
-    }
   }
 }
 setting {
@@ -17726,61 +17533,6 @@ setting {
   }
 }
 setting {
-  canonical_name: "chinamobile_cn"
-  apns {
-    apn {
-      name: "\344\270\255\345\233\275\347\247\273\345\212\250 (China Mobile) GPRS"
-      value: "cmnet"
-      type: DEFAULT
-      type: SUPL
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "\344\270\255\345\233\275\347\247\273\345\212\250\345\275\251\344\277\241 (China Mobile)"
-      value: "cmwap"
-      type: MMS
-      proxy: "10.0.0.172"
-      port: "80"
-      mmsc: "http://mmsc.monternet.com"
-      mmsc_proxy: "10.0.0.172"
-      mmsc_proxy_port: "80"
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-    }
-    apn {
-      name: "\344\270\255\345\233\275\347\247\273\345\212\250 (China Mobile) IMS"
-      value: "ims"
-      type: IMS
-      protocol: IPV4V6
-      roaming_protocol: IPV4V6
-      user_visible: false
-    }
-  }
-  configs {
-    config {
-      key: "allow_add_call_during_video_call"
-      bool_value: false
-    }
-    config {
-      key: "allow_emergency_numbers_in_call_log_bool"
-      bool_value: true
-    }
-    config {
-      key: "allow_hold_video_call_bool"
-      bool_value: false
-    }
-    config {
-      key: "support_tdscdma_bool"
-      bool_value: false
-    }
-    config {
-      key: "support_video_conference_call_bool"
-      bool_value: false
-    }
-  }
-}
-setting {
   canonical_name: "circleslife_tw"
   apns {
     apn {
@@ -18028,10 +17780,6 @@ setting {
       bool_value: true
     }
     config {
-      key: "is_ims_conference_size_enforced_bool"
-      bool_value: true
-    }
-    config {
       key: "iwlan.dpd_timer_sec_int"
       int_value: 600
     }
@@ -18120,35 +17868,6 @@ setting {
       authtype: 1
       mmsc: "http://10.6.32.27/servlets/mms"
       mmsc_proxy: "10.6.32.2"
-      mmsc_proxy_port: "8080"
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "csl_hk"
-  apns {
-    apn {
-      name: "1O1O"
-      value: "mobile"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      authtype: 3
-      mmsc: "http://192.168.58.171:8002"
-      mmsc_proxy: "192.168.59.51"
-      mmsc_proxy_port: "8080"
-    }
-    apn {
-      name: "SUN Mobile"
-      value: "SUNMobile"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      authtype: 3
-      mmsc: "http://192.168.58.171:8002"
-      mmsc_proxy: "192.168.59.61"
       mmsc_proxy_port: "8080"
     }
   }
@@ -19451,6 +19170,10 @@ setting {
   }
   configs {
     config {
+      key: "allow_hold_in_rtt_call_bool"
+      bool_value: false
+    }
+    config {
       key: "allow_ussd_requests_via_telephony_manager_bool"
       bool_value: false
     }
@@ -19549,6 +19272,7 @@ setting {
           int_array {
             item: 0
             item: 1
+            item: 3
           }
         }
       }
@@ -19556,6 +19280,14 @@ setting {
     config {
       key: "ims.request_uri_type_int"
       int_value: 1
+    }
+    config {
+      key: "ims.sa_disable_policy_for_emergency_int"
+      int_value: 4
+    }
+    config {
+      key: "ims.sa_disable_policy_int"
+      int_value: 4
     }
     config {
       key: "ims_reasoninfo_mapping_string_array"
@@ -20282,23 +20014,6 @@ setting {
       value: "ims"
       type: IMS
       protocol: IPV4V6
-    }
-  }
-  configs {
-  }
-}
-setting {
-  canonical_name: "send_ee"
-  apns {
-    apn {
-      name: "Send"
-      value: "send.ee"
-      type: DEFAULT
-      type: MMS
-      type: SUPL
-      mmsc: "http://mms.emt.ee/servlets/mms"
-      mmsc_proxy: "217.71.32.82"
-      mmsc_proxy_port: "8080"
     }
   }
   configs {
@@ -21107,5 +20822,5 @@ setting {
   }
 }
 last_updated {
-  seconds: 1779888009
+  seconds: 1785927864
 }

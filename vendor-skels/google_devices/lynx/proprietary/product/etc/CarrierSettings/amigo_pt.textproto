@@ -1,0 +1,176 @@
+canonical_name: "amigo_pt"
+version: 82000000001
+apns {
+  apn {
+    name: "amigo"
+    value: "amigo"
+    type: DEFAULT
+    type: SUPL
+    type: XCAP
+    protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "1EE6A3F2CBCADB2060075A9147F5336B8B9D68E0979FD097A65CD7DD70852389:com.vodafone.mCare"
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "123"
+  }
+  config {
+    key: "feature_access_codes_string_array"
+    text_array {
+      item: "231"
+      item: "45"
+      item: "46"
+      item: "112"
+      item: "121"
+      item: "132"
+      item: "611"
+      item: "621"
+      item: "155"
+      item: "157"
+      item: "211"
+      item: "221"
+      item: "321"
+      item: "51"
+      item: "114"
+      item: "311"
+    }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.ipsec_authentication_algorithms_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ipsec_encryption_algorithms_int_array"
+    int_array {
+      item: 0
+      item: 2
+    }
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "338|busy everywhere|1017"
+      item: "510|Call completed elsewhere|1014"
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "prefer_2g_bool"
+    bool_value: true
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
+    key: "qns.support_wfc_recovery_bool"
+    bool_value: false
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_while_roaming_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 5
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+}
+last_updated {
+  seconds: 1786532634
+}

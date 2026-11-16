@@ -1,5 +1,5 @@
 canonical_name: "1and1_de"
-version: 79000000030
+version: 82000000031
 apns {
   apn {
     name: "1&1 Internet"
@@ -48,6 +48,10 @@ configs {
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.mnc023.mcc262.pub.3gppnetwork.org"
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
@@ -347,5 +351,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779887885
+  seconds: 1787137428
 }

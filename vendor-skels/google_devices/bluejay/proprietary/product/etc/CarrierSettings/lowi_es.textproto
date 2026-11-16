@@ -1,5 +1,5 @@
 canonical_name: "lowi_es"
-version: 79000000005
+version: 82000000005
 apns {
   apn {
     name: "Lowi.es"
@@ -160,5 +160,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502735
+  seconds: 1780331615
 }

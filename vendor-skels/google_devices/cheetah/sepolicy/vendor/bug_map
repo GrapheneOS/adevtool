@@ -22,6 +22,8 @@ hal_sensors_default sysfs file b/434596796
 hal_wifi_ext proc_net file b/483273256
 hardware_info_app default_prop file b/509739439
 init proc_net_mem_max file b/509738049
+init-display-sh system_bootstrap_lib_file dir b/540166768
+init-thermal-symlinks-sh thermal_link_device file b/535455648
 insmod-sh insmod-sh key b/433610447
 insmod-sh kernel key b/483512546
 kernel kernel capability b/433610226
@@ -30,6 +32,9 @@ mediaserver aac_drc_prop file b/483518233
 modem_svc_sit proc_pid_max file b/456694685
 rfsd vendor_cbd_prop file b/412237886
 servicemanager hal_light_default binder b/483520894
+shell perfetto process b/527673074
+shell perfetto_traces_data_file file b/531602546
+shell sscoredump_vendor_data_crashinfo_file dir b/529542017
 su logd_iouring anon_inode b/483522093
 su modem_img_file filesystem b/483522093
 su statsd_iouring anon_inode b/456694135

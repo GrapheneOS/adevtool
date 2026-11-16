@@ -1,5 +1,5 @@
 canonical_name: "xfinitymso_us"
-version: 79000000007
+version: 82000000008
 apns {
   apn {
     name: "Xfinity Mobile"
@@ -51,6 +51,7 @@ configs {
       item: "3557afac6c4a4951b6d669408dc35bf6dfb1b1536eeb465493f9d29ad166c91d:com.xfinity.mobile.spamfilter"
       item: "953f5a4c22e7fd16adc3f12eb038682aad377fef9a18b9d12c1abea78911c749:com.xfinity.mobile.spamfilter"
       item: "EA827BB79F9F4B30723A3988D1159624BA856EEAD7B330B819EE04AFE313A14D:com.pocketgeek.xfinity.android"
+      item: "EC538B41E6A8A5A2F0CEF0F4B4F026AB9D176F969A2DEC0830E10AED63869E9D:com.pocketgeek.xfinity.android"
     }
   }
   config {
@@ -186,5 +187,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1766559521
+  seconds: 1783493963
 }

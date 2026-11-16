@@ -1,5 +1,5 @@
 canonical_name: "izziatt_mx"
-version: 79000000013
+version: 82000000014
 apns {
   apn {
     name: "INTERNET"
@@ -9,6 +9,15 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_editable: false
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
   }
 }
 configs {
@@ -230,5 +239,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1777477707
+  seconds: 1784718179
 }

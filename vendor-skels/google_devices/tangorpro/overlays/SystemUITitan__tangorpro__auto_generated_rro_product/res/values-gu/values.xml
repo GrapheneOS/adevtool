@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="fingerprint_dialog_touch_sensor">ફિંગરપ્રિન્ટ સેન્સરને હળવેથી ટચ કરો</string>
+    <string name="fingerprint_dialog_touch_sensor">ફિંગરપ્રિન્ટના સેન્સરને હળવેથી ટચ કરો</string>
     <string name="settingslib_learn_more_text">ફિંગરપ્રિન્ટ અનલૉકની સુવિધા વિશે વધુ જાણો</string>
 </resources>

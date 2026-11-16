@@ -1,5 +1,5 @@
 canonical_name: "uscc_us"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "U.S. Cellular"
@@ -416,10 +416,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "maxImageHeight"
     int_value: 1944
   }
@@ -521,5 +517,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293191
+  seconds: 1781704718
 }

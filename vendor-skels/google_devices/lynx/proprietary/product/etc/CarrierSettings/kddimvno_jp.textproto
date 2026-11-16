@@ -1,5 +1,5 @@
 canonical_name: "kddimvno_jp"
-version: 79000000010
+version: 82000000011
 apns {
   apn {
     name: "IMS"
@@ -295,10 +295,6 @@ configs {
     }
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "non_roaming_operator_string_array"
     text_array {
       item: "44091"
@@ -326,5 +322,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770215816
+  seconds: 1781704700
 }

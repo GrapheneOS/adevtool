@@ -1,5 +1,5 @@
 canonical_name: "google5glab_us"
-version: 79000000002
+version: 82000000003
 apns {
   apn {
     name: "internet.alkaa"
@@ -90,10 +90,14 @@ configs {
     }
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1779293178
+  seconds: 1782902371
 }

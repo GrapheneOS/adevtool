@@ -154,6 +154,12 @@ vintf_fragment {
     soc_specific: true,
 }
 
+vintf_fragment {
+    name: "adevtool_vintf_fragment_vendor_com.google.edgetpu.tachyon-service.xml",
+    src: "com.google.edgetpu.tachyon-service.xml",
+    soc_specific: true,
+}
+
 vintf_fragment { name: "adevtool_vintf_fragment_vendor_dmd.xml", src: "dmd.xml", soc_specific: true }
 
 vintf_fragment {

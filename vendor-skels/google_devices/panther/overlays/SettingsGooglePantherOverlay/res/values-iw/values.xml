@@ -2,5 +2,5 @@
 <resources>
     <string name="biometrics_unlock_set_unlock_password">סיסמה • טביעת אצבע • זיהוי פנים</string>
     <string name="biometrics_unlock_set_unlock_pattern">קו פתיחת נעילה • טביעת אצבע • זיהוי פנים</string>
-    <string name="biometrics_unlock_set_unlock_pin">קוד אימות • טביעת אצבע • זיהוי פנים</string>
+    <string name="biometrics_unlock_set_unlock_pin">קוד סודי • טביעת אצבע • זיהוי פנים</string>
 </resources>

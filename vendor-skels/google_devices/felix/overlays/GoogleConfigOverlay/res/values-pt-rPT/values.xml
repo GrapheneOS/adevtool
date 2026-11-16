@@ -12,7 +12,7 @@
     <string name="biometric_dialog_default_subtitle">Utilize o seu rosto ou impressão digital para continuar</string>
     <string name="biometric_or_screen_lock_app_setting_name">Usar o rosto, a impressão digital ou o bloqueio de ecrã</string>
     <string name="biometric_or_screen_lock_dialog_default_subtitle">Usar o rosto, a impressão digital ou o bloqueio de ecrã para continuar</string>
-    <string name="face_recalibrate_notification_content">O Desbloqueio facial pode não funcionar enquanto não voltar a inscrever o seu rosto</string>
+    <string name="face_recalibrate_notification_content">O Desbloqueio facial pode não funcionar enquanto não voltar a inscrever a sua cara</string>
     <string name="face_recalibrate_notification_name">Desbloqueio facial</string>
     <string name="face_recalibrate_notification_title">Volte a inscrever o seu rosto</string>
 </resources>

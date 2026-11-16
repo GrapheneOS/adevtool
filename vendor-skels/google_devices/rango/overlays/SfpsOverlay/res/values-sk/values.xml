@@ -14,13 +14,13 @@
 
 Jemne naň klepnite, ale nestláčajte ho."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Klepnite na vypínač</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Nastavenie odomknutia odtlačkom prsta</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Nastavte odomknutie odtlačkom prsta</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Prst zodvihnite, potom priložte. Zakaždým ním trocha pohýbte.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Zdvihnite prst a znovu ho priložte na senzor</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Senzor odtlačkov prstov je na vypínači.</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">Namiesto toho sa dotknite senzora</string>
     <string name="security_settings_fingerprint_preference_title">Odomknutie odtlačkom prsta</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Odomknutie odtlačkom prsta vytvorí jedinečný model odtlačku vášho prsta, ktorým overíte svoju totožnosť. Počas nastavovania nasnímate svoj prst z rôznych pozícií, aby bolo možné tento model odtlačku prsta vytvoriť.</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Funkcia odomknutia odtlačkom prsta vytvorí jedinečný model odtlačku prsta na overovanie vašej totožnosti. Počas nastavovania sa budú snímať rôzne časti vášho prsta. Zo snímok bude vytvorený tento model odtlačku prsta.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Keď použijete odomknutie odtlačkom prsta, model odtlačku prsta sa aktualizuje pomocou príslušných obrázkov. Obrázky, pomocou ktorých bol vytvorený model vášho odtlačku prsta, sa za žiadnych okolností neukladajú. Model odtlačku prsta je bezpečne uložený v telefóne a nikdy ho neopustí. Všetko sa bezpečne spracúva v telefóne.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">V Nastaveniach môžete kedykoľvek model odtlačku prsta odstrániť alebo odomknutie odtlačkom prsta vypnúť. Modely odtlačkov prstov sú uložené v telefóne, dokým ich neodstránite.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">Odomknutie odtlačkom prsta vytvorí jedinečný model odtlačku prsta vášho dieťaťa, ktorým overí svoju totožnosť. Počas nastavovania nasnímajte jeho prst z rôznych pozícií, aby bolo možné tento model odtlačku prsta vytvoriť.</string>

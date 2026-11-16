@@ -1,5 +1,5 @@
 canonical_name: "starhub_sg"
-version: 79000000002
+version: 82000000003
 apns {
   apn {
     name: "SH Data Postpaid"
@@ -236,10 +236,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -277,5 +273,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236741
+  seconds: 1781704721
 }

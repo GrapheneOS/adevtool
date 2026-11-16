@@ -1,5 +1,5 @@
 canonical_name: "tmoericssonlab_us"
-version: 79000000008
+version: 82000000009
 apns {
   apn {
     name: "T-Mobile Tethering"
@@ -186,10 +186,22 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_supported_disaster_plmn_string_array"
+    text_array {
+      item: "310210"
+    }
+  }
+  config {
+    key: "satellite_supported_emergency_plmn_string_array"
+    text_array {
+      item: "312190"
+    }
+  }
+  config {
     key: "vonr_enabled_bool"
     bool_value: true
   }
 }
 last_updated {
-  seconds: 1783916720
+  seconds: 1789413105
 }

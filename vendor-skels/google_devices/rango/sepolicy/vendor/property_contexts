@@ -37,6 +37,7 @@ vendor.brownout.mitigation.ready u:object_r:vendor_mitigation_ready_prop:s0
 vendor.brownout_reason u:object_r:vendor_brownout_reason_prop:s0
 vendor.brownout.br.feasible u:object_r:vendor_brownout_br_feasible_prop:s0
 vendor.pktrouter u:object_r:vendor_ims_prop:s0
+persist.vendor.touch.vrr_disabled u:object_r:vendor_twoshay_prop:s0 exact bool
 persist.vendor.wifi.sniffer. u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.sniffer.start u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.perf_diag.start u:object_r:vendor_wifi_perf_diag_prop:s0
@@ -52,7 +53,6 @@ vendor.nos.citadel.version u:object_r:vendor_nos_citadel_version:s0
 ro.vendor.flood. u:object_r:vendor_flood_prop:s0
 vendor.perf.allow_experiments u:object_r:vendor_perf_allow_experiments_prop:s0
 vendor.thermal.allow_experiments u:object_r:vendor_thermal_allow_experiments_prop:s0
-vendor.pixel.system.phenotype.Perf__pixelmd_config u:object_r:vendor_pixelmd_config_experiment_prop:s0
 persist.vendor.sys.ssr. u:object_r:vendor_ssrdump_prop:s0
 vendor.wlan.driver.version u:object_r:vendor_wifi_version:s0
 vendor.wlan.firmware.version u:object_r:vendor_wifi_version:s0
@@ -104,9 +104,10 @@ vendor.usb. u:object_r:vendor_usb_config_prop:s0
 vendor.sys.usb.adb.disabled u:object_r:vendor_usb_config_prop:s0
 ro.vendor.usb.userspace.aoa.enabled u:object_r:vendor_usb_aoa_prop:s0 exact bool
 vendor.battery.defender. u:object_r:vendor_battery_defender_prop:s0
+persist.vendor.uwb. u:object_r:vendor_uwb_prop:s0
+vendor.gf. u:object_r:vendor_fingerprint_prop:s0
 vendor.thermal. u:object_r:vendor_thermal_prop:s0
 vendor.powerhal. u:object_r:vendor_power_prop:s0
 persist.vendor.wifi.logger.start u:object_r:vendor_wlan_logging_prop:s0
 ro.vendor.vibrator.hal. u:object_r:vendor_vibrator_prop:s0
 persist.vendor.vibrator.hal. u:object_r:vendor_vibrator_prop:s0
-vendor.gf. u:object_r:vendor_fingerprint_prop:s0

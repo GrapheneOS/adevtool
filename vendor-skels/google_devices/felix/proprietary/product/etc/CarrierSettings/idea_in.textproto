@@ -1,5 +1,5 @@
 canonical_name: "idea_in"
-version: 79000000026
+version: 82000000029
 apns {
   apn {
     name: "Vodafone Idea"
@@ -118,10 +118,6 @@ configs {
   }
   config {
     key: "imsvoice.prack_supported_for_18x_bool"
-    bool_value: true
-  }
-  config {
-    key: "is_ims_conference_size_enforced_bool"
     bool_value: true
   }
   config {
@@ -247,5 +243,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1763549965
+  seconds: 1789413082
 }

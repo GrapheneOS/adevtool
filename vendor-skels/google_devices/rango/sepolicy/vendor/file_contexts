@@ -145,6 +145,7 @@
 /dev/block/platform/3c400000\.ufs/by-name/vbmeta_system_[ab] u:object_r:custom_ab_block_device:s0
 /dev/block/platform/3c400000\.ufs/by-name/vbmeta_vendor_[ab] u:object_r:custom_ab_block_device:s0
 /dev/block/platform/3c400000\.ufs/by-name/vendor_kernel_boot_[ab] u:object_r:custom_ab_block_device:s0
+/vendor/bin/hw/android\.hardware\.secure_element-service\.thales(\.spi)? u:object_r:hal_secure_element_st54spi_aidl_exec:s0
 /dev/aoc u:object_r:aoc_device:s0
 /dev/vpu u:object_r:video_device:s0
 /dev/uci u:object_r:uci_device:s0
@@ -273,8 +274,8 @@
 /vendor/bin/wifi_sniffer u:object_r:wifi_sniffer_exec:s0
 /dev/logbuffer_dual_batt u:object_r:logbuffer_device:s0
 /dev/logbuffer_bms_vimon u:object_r:logbuffer_device:s0
-/vendor/bin/thermal_logd u:object_r:init-thermal-logging-sh_exec:s0
 /dev/touch_offload_outer u:object_r:touch_offload_device:s0
+/vendor/bin/thermal_logd u:object_r:init-thermal-logging-sh_exec:s0
 /vendor/bin/hw/usboffmode u:object_r:usboffmode_exec:s0
 /dev/acd-audio_dcdoff_ref u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_aoc u:object_r:dump_aoc_exec:s0
@@ -340,6 +341,7 @@
 /vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
+/dev/acd-gnss_passthrough_ctl u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_mailbox u:object_r:dump_mailbox_exec:s0
 /vendor/bin/dump/dump_pcie\.sh u:object_r:dump_pcie_exec:s0
 /vendor/bin/dump/dump_ramdump u:object_r:dump_ramdump_exec:s0
@@ -372,6 +374,8 @@
 /vendor/lib64/lib_aion_buffer\.so u:object_r:same_process_hal_file:s0
 /vendor/lib64/lib_jpg_encoder\.so u:object_r:same_process_hal_file:s0
 /vendor/lib64/hw/mapper\.pixel\.so u:object_r:same_process_hal_file:s0
+/dev/acd-gnss_passthrough_data_tx u:object_r:aoc_device:s0
+/dev/acd-gnss_passthrough_data_rx u:object_r:aoc_device:s0
 /vendor/bin/hw/battery_mitigation u:object_r:battery_mitigation_exec:s0
 /vendor/bin/modem_logging_control u:object_r:modem_logging_control_exec:s0
 /vendor/lib64/hw/vulkan\.pastel\.so u:object_r:same_process_hal_file:s0
@@ -410,6 +414,7 @@
 /vendor/lib64/libPixelGrallocProperties\.so u:object_r:same_process_hal_file:s0
 /vendor/bin/hw/android\.hardware\.usb-service u:object_r:hal_usb_impl_exec:s0
 /dev/dma_heap/gcma_camera_internal-uncached u:object_r:dmabuf_system_heap_device:s0
+/vendor/bin/hw/vendor\.google\.google_battery.ekf.service u:object_r:hal_googlebattery_ekf_exec:s0
 /vendor/lib64/libcustomer_gralloc_ddk_api\.so u:object_r:same_process_hal_file:s0
 /vendor/lib64/aconfig_gpu_img_flags_c_lib\.so u:object_r:same_process_hal_file:s0
 /dev/block/platform/3c400000\.ufs/by-name/efs u:object_r:efs_block_device:s0
@@ -474,7 +479,6 @@
 /vendor/bin/hw/android\.hardware\.identity@1\.0-service\.citadel u:object_r:hal_identity_citadel_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.secretkeeper\.trusty u:object_r:hal_secretkeeper_default_exec:s0
 /vendor/bin/hw/vendor\.google\.wireless_charger\.service-default u:object_r:hal_wlcservice_exec:s0
-/vendor/bin/hw/android\.hardware\.secure_element-service\.thales u:object_r:hal_secure_element_st54spi_aidl_exec:s0
 /vendor/bin/hw/vendor\.google\.wifi_ext@1\.0-service-vendor-lazy u:object_r:hal_wifi_ext_exec:s0
 /vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.trusty u:object_r:hal_gatekeeper_default_exec:s0
 /vendor/bin/hw/android\.hardware\.vibrator-service\.cs40l26-rust u:object_r:hal_vibrator_default_exec:s0
@@ -489,7 +493,9 @@
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.citadel u:object_r:hal_keymint_citadel_exec:s0
 /vendor/bin/hw/android\.hardware\.neuralnetworks@service-darwinn-aidl u:object_r:hal_neuralnetworks_darwinn_exec:s0
 /vendor/lib64/hw/android\.hardware\.graphics\.mapper@4\.0-impl-pixel\.so u:object_r:same_process_hal_file:s0
+/vendor/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default u:object_r:hal_oemcrypto_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.rust\.trusty u:object_r:hal_keymint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.goodix u:object_r:hal_fingerprint_capacitance_exec:s0
 /vendor/bin/hw/android\.hardware\.edgetpu\.logging@service-edgetpu-logging u:object_r:edgetpu_logging_exec:s0
+/vendor/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default-lazy u:object_r:hal_oemcrypto_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.goodix u:object_r:hal_fingerprint_default_exec:s0

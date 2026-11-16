@@ -4,7 +4,7 @@
     <string name="display_white_balance_title">పరిసరాలకు అనుకూలమైన కలర్ టోన్</string>
     <string name="emission_frequency_summary">ఎక్కువ కాంతిని చూడలేని వారు మెరుగ్గా చూసేందుకు వీలుగా ఉద్గారాల ఫ్రీక్వెన్సీని సర్దుబాటు చేస్తుంది. అన్‌ఫోల్డ్ చేసినప్పుడు ఇది లోపలి స్క్రీన్‌కు మాత్రమే వర్తిస్తుంది.</string>
     <string name="fingerprint_unlock_set_unlock_password">Pixel Imprint + పాస్‌వర్డ్</string>
-    <string name="fingerprint_unlock_set_unlock_pattern">Pixel Imprint + ఆకృతి</string>
+    <string name="fingerprint_unlock_set_unlock_pattern">Pixel Imprint + ప్యాటర్న్</string>
     <string name="fingerprint_unlock_set_unlock_pin">Pixel Imprint + పిన్</string>
     <string name="fingerprint_unlock_skip_fingerprint">Pixel Imprint లేకుండా కొనసాగించండి</string>
     <string name="fingerprint_unlock_title">Pixel Imprintతో, మీరు మీ వేలిముద్రను ఉపయోగించి మీ ఫోన్‌ను అన్‌లాక్ చేయగలరు. సెక్యూరిటీ దృష్ట్యా, ఈ ఆప్షన్‌కు బ్యాకప్ స్క్రీన్ లాక్ అవసరం.</string>

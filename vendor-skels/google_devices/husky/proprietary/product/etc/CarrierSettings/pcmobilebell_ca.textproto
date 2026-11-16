@@ -1,5 +1,5 @@
 canonical_name: "pcmobilebell_ca"
-version: 79000000011
+version: 82000000012
 apns {
   apn {
     name: "PC Mobile"
@@ -120,10 +120,6 @@ configs {
   config {
     key: "ims.registration_subscribe_expiry_timer_sec_int"
     int_value: 86400
-  }
-  config {
-    key: "ims.sip_over_ipsec_enabled_bool"
-    bool_value: false
   }
   config {
     key: "ims.sip_timer_f_millis_int"
@@ -357,5 +353,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1722472167
+  seconds: 1781096034
 }

@@ -1,5 +1,6 @@
 CellBroadcastReceiverOverlay
 ConnectivityResourcesOverlayCometOverride
+DeviceAsWebcamComet
 EuiccSupportPixelOverlay
 GRilServiceOverlay_CT3
 GlanceableHubConfigOverlay

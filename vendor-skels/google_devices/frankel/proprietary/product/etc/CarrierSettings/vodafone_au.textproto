@@ -1,5 +1,5 @@
 canonical_name: "vodafone_au"
-version: 79000000005
+version: 82000000006
 apns {
   apn {
     name: "Vodafone AU"
@@ -173,10 +173,6 @@ configs {
     int_value: 408
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 64900
   }
@@ -297,5 +293,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293191
+  seconds: 1781704718
 }

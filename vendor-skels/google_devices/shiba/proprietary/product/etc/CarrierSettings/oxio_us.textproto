@@ -1,5 +1,5 @@
 canonical_name: "oxio_us"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "Internet"
@@ -19,17 +19,21 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "MMS"
+    value: "mms"
+    type: MMS
+    mmsc: "http://us.mmsc.global:10021"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
 }
 configs {
   config {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
-  config {
-    key: "enabledMMS"
-    bool_value: false
-  }
 }
 last_updated {
-  seconds: 1770819117
+  seconds: 1790191993
 }

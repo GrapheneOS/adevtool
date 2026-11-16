@@ -1,5 +1,5 @@
 canonical_name: "tmobile_cz"
-version: 79000000029
+version: 82000000031
 apns {
   apn {
     name: "IMS"
@@ -72,6 +72,13 @@ configs {
   config {
     key: "hide_lte_plus_data_icon_bool"
     bool_value: false
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 2
+      item: 4
+    }
   }
   config {
     key: "ims.ims_user_agent_string"
@@ -165,10 +172,6 @@ configs {
   config {
     key: "imsvoice.mo_call_request_timeout_millis_int"
     int_value: 0
-  }
-  config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
   }
   config {
     key: "qns.condition_rove_in_idle_wifi_pref_home_string_array"
@@ -265,5 +268,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293139
+  seconds: 1784718179
 }

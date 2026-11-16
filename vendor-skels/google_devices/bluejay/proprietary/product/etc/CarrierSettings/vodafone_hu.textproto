@@ -1,5 +1,5 @@
 canonical_name: "vodafone_hu"
-version: 79000000010
+version: 82000000011
 apns {
   apn {
     name: "Internet"
@@ -56,6 +56,10 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -144,5 +148,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819066
+  seconds: 1785927816
 }

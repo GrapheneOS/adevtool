@@ -1,5 +1,5 @@
 canonical_name: "alestra_mx"
-version: 79000000008
+version: 82000000009
 apns {
   apn {
     name: "INTERNET"
@@ -9,16 +9,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_editable: false
-    always_on: true
-  }
-  apn {
-    name: "IMS"
-    value: "ims"
-    type: IMS
-    bearer_bitmask: "14|18|20"
-    protocol: IPV4V6
-    roaming_protocol: IPV4V6
-    user_visible: false
     always_on: true
   }
 }
@@ -249,5 +239,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1777477747
+  seconds: 1781704703
 }

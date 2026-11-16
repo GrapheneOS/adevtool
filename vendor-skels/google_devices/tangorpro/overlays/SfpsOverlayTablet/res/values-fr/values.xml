@@ -14,7 +14,7 @@
 
 Appuyez légèrement sur le bouton sans l'enfoncer."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Appuyer sur le bouton Marche/Arrêt</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Configurer le déverrouillage par empreinte</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Configurez le déverrouillage par empreinte</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Levez votre doigt, puis appuyez. Déplacez-le légèrement à chaque fois.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Levez le doigt et reposez-le</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">"Le lecteur d'empreinte digitale figure sur le bouton Marche/Arrêt."</string>

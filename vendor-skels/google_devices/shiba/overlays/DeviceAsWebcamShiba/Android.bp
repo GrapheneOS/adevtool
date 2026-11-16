@@ -1,0 +1,1 @@
+runtime_resource_overlay { name: "DeviceAsWebcamShiba", product_specific: true, }

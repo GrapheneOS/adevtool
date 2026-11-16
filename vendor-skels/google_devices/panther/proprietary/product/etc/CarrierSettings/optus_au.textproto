@@ -1,5 +1,5 @@
 canonical_name: "optus_au"
-version: 79000000019
+version: 82000000020
 apns {
   apn {
     name: "Optus Yes Internet"
@@ -168,10 +168,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -267,5 +263,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293145
+  seconds: 1781704693
 }

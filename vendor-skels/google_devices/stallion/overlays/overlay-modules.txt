@@ -1,6 +1,7 @@
 AdaptiveHapticsStallionOverlay
 AmbientCueOverlay
 CellBroadcastReceiverOverlay
+DeviceAsWebcamStallion
 EuiccSupportPixelOverlay
 GlanceableHubConfigOverlay
 GlanceableHubSettingsConfigOverlay

@@ -1,5 +1,5 @@
 canonical_name: "telstra_au"
-version: 79000000009
+version: 82000000010
 apns {
   apn {
     name: "Telstra Broadband"
@@ -289,10 +289,6 @@ configs {
     int_value: 408
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
       item: 14
@@ -453,5 +449,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502846
+  seconds: 1782317140
 }

@@ -1,5 +1,5 @@
 canonical_name: "mtel_at"
-version: 79000000003
+version: 82000000003
 apns {
   apn {
     name: "Internet"
@@ -134,5 +134,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502846
+  seconds: 1780331715
 }

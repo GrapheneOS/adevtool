@@ -6,6 +6,9 @@ com.google.android.lyric.intelligentcamerahal.IIntelligentCameraHal/default u:ob
 vendor.goodix.hardware.biometrics.fingerprint.IGoodixFingerprintDaemon/default u:object_r:hal_fingerprint_service:s0
 mapper/pixel u:object_r:hal_graphics_mapper_service:s0
 android.hardware.drm.IDrmFactory/widevine u:object_r:hal_drm_service:s0
+android.hardware.drm.IDecryptFactory/default u:object_r:hal_drm_service:s0
+com.google.android.widevine.oemcrypto.IOpkSerializer/default u:object_r:hal_drm_service:s0
+com.google.android.widevine.oemcrypto.IOemCrypto/default u:object_r:hal_drm_service:s0
 vendor.google.battery_mitigation.IBatteryMitigation/default u:object_r:hal_battery_mitigation_service:s0
 media.ecoservice u:object_r:eco_service:s0
 com.google.edgetpu.IEdgeTpuVendorService/default u:object_r:edgetpu_vendor_service:s0

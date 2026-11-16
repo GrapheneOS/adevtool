@@ -8,6 +8,9 @@ com.google.android.lyric.intelligentcamerahal.IIntelligentCameraHal/default u:ob
 vendor.goodix.hardware.biometrics.fingerprint.IGoodixFingerprintDaemon/default u:object_r:hal_fingerprint_service:s0
 mapper/pixel u:object_r:hal_graphics_mapper_service:s0
 android.hardware.drm.IDrmFactory/widevine u:object_r:hal_drm_service:s0
+android.hardware.drm.IDecryptFactory/default u:object_r:hal_drm_service:s0
+com.google.android.widevine.oemcrypto.IOpkSerializer/default u:object_r:hal_drm_service:s0
+com.google.android.widevine.oemcrypto.IOemCrypto/default u:object_r:hal_drm_service:s0
 vendor.google.battery_mitigation.IBatteryMitigation/default u:object_r:hal_battery_mitigation_service:s0
 media.ecoservice u:object_r:eco_service:s0
 vendor.google.whitechapel.audio.extension.IAudioExtension/default u:object_r:hal_audio_ext_service:s0
@@ -16,6 +19,9 @@ android.hardware.neuralnetworks.IDevice/google-edgetpu u:object_r:edgetpu_nnapi_
 com.google.edgetpu.dba.IDevice/default u:object_r:edgetpu_dba_service:s0
 com.google.edgetpu.tachyon.IComputeService/default u:object_r:edgetpu_tachyon_service:s0
 vendor.google.wifi_ext.IWifiExt/default u:object_r:hal_wifi_ext_service:s0
+hardware.google.ril_ext.IRilExt/slot1 u:object_r:hal_ril_ext_service:s0
+hardware.google.ril_ext.IRilExt/slot2 u:object_r:hal_ril_ext_service:s0
+hardware.google.ril_ext.IRilExt/slot3 u:object_r:hal_ril_ext_service:s0
 com.google.input.algos.gril.IGrilAntennaTuningService/default u:object_r:gril_antenna_tuning_service:s0
 com.google.input.algos.spd.IScreenProtectorDetectorService/default u:object_r:screen_protector_detector_service:s0
 com.google.input.ITouchContextService/default u:object_r:touch_context_service:s0
@@ -41,9 +47,6 @@ vendor.samsung_slsi.telephony.hardware.radioExternal.IOemSlsiRadioExternal/defau
 vendor.samsung_slsi.telephony.hardware.oemservice.IOemService/dm0 u:object_r:hal_vendor_modem_logging_service:s0
 vendor.samsung_slsi.telephony.hardware.oemservice.IOemService/dm1 u:object_r:hal_vendor_modem_logging_service:s0
 com.google.pixel.shared_modem_platform.ISharedModemPlatform/default u:object_r:hal_shared_modem_platform_service:s0
-hardware.google.ril_ext.IRilExt/slot1 u:object_r:hal_ril_ext_service:s0
-hardware.google.ril_ext.IRilExt/slot2 u:object_r:hal_ril_ext_service:s0
-hardware.google.ril_ext.IRilExt/slot3 u:object_r:hal_ril_ext_service:s0
 vendor.google.bluetooth_ext.IBTChannelAvoidance/default u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothSar/default u:object_r:hal_bluetooth_coexistence_service:s0
 vendor.google.bluetooth_ext.IBluetoothCcc/default u:object_r:hal_bluetooth_coexistence_service:s0
@@ -53,11 +56,12 @@ vendor.google.bluetooth_ext.IBluetoothFinder/default u:object_r:hal_bluetooth_co
 vendor.google.bluetooth_ext.IBluetoothCco/default u:object_r:hal_bluetooth_coexistence_service:s0
 power.stats-vendor u:object_r:hal_power_stats_vendor_service:s0
 vendor.google.aam.IAam/default u:object_r:hal_aam_service:s0
+google_battery.ekf u:object_r:hal_googlebattery_ekf_service:s0
 android.hardware.vibrator.IVibrator/dual u:object_r:hal_vibrator_service:s0
+com.google.android.vibrator.IPixelAudioHapticController/default u:object_r:hal_vibrator_service:s0
 android.hardware.media.c2.IComponentStore/default9 u:object_r:hal_codec2_service:s0
 vendor.google.google_battery.IGoogleBattery/default u:object_r:hal_googlebattery_service:s0
 vendor.qti.hardware.fingerprint.IQfpExtendedFingerprint/default u:object_r:hal_fingerprint_service:s0
-com.google.hardware.biometrics.fingerprint.debug.IFingerprintDebug/default u:object_r:hal_fingerprint_debug_service:s0
 com.google.hardware.pixel.display.IDisplay/default u:object_r:hal_pixel_display_service:s0
 vendor.google.wireless_charger.IWirelessCharger/default u:object_r:hal_wireless_charger_service:s0
 hardware.qorvo.uwb.IUwbVendor/default u:object_r:hal_uwb_vendor_service:s0

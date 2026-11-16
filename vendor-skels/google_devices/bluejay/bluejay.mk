@@ -3,8 +3,8 @@
 
 include vendor/google_devices/bluejay/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),CP3A.261005.002.A1)
-  $(error BUILD_ID: expected CP3A.261005.002.A1, got $(BUILD_ID))
+ifneq ($(BUILD_ID),CP4A.261105.040.A1)
+  $(error BUILD_ID: expected CP4A.261105.040.A1, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/bluejay/device.mk)
@@ -254,6 +254,10 @@ PRODUCT_PACKAGES += \
     ShannonIms \
     ShannonQualifiedNetworksService \
     ShannonRcs \
+    android.hardware.audio.common-V6-ndk \
+    android.hardware.audio.core-V5-ndk \
+    android.hardware.audio.core.sounddose-V5-ndk \
+    android.hardware.audio.effect-V5-ndk \
     android.hardware.audio.service \
     android.hardware.authsecret-service.citadel \
     android.hardware.biometrics.fingerprint-service.goodix \
@@ -289,6 +293,8 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.gs101 \
     android.hardware.vibrator-service.cs40l26 \
     android.hardware.weaver-service.citadel \
+    android.media.audio.common.types-V6-ndk \
+    android.media.audio.eraser.types-V3-ndk \
     aocd \
     aocxd \
     backup_ota_log.sh \
@@ -302,8 +308,7 @@ PRODUCT_PACKAGES += \
     com.google.android.camera.experimental2021 \
     com.google.android.camera.experimental2022_system \
     com.google.android.camera.extensions \
-    com.google.android.camerax.extensions \
-    com.google.android.widevine-15027108-cp2a \
+    com.google.android.widevine-15719561 \
     com.google.edgetpu.tachyon-service \
     com.google.edgetpu_app_service-V3-ndk.system_ext \
     com.google.edgetpu_vendor_service-V2-ndk.system_ext \
@@ -402,6 +407,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/agms_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/agms_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/ahamo_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ahamo_jp.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/airbus_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_de.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/airbus_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_es.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/airbus_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airbus_fr.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/airtel_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_in.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/airtel_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/airtel_lk.pb \
@@ -414,6 +420,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/altice_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/altice_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/alticeroaming_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/alticeroaming_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/amarisoft_satellite.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/amarisoft_satellite.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/amigo_pt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/amigo_pt.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/andorratelecom_ad.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/andorratelecom_ad.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/annatel_il.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/annatel_il.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/antel_uy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/antel_uy.pb \
@@ -487,6 +494,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/claro_pr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/claro_pr.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cloud9_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cloud9_gb.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cloudcore_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cloudcore_ca.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cmcc_cn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cmcc_cn.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cogeco_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cogeco_ca.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/com4_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/com4_no.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/comcastbusiness_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/comcastbusiness_us.pb \
@@ -503,14 +511,18 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cox_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cox_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cricket_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cricket_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cricket5g_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cricket5g_us.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/csl_hk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/csl_hk.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cspire_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cspire_nl.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cspire_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cspire_us.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/ct_cn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ct_cn.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/ct_mo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ct_mo.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/ctm_mo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ctm_mo.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cu_cn.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cu_cn.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/cytamobile_cy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/cytamobile_cy.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/default.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/default.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/defensemobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/defensemobile_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/dialog_lk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/dialog_lk.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/digi_be.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_be.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/digi_hu.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_hu.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/digi_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_it.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/digi_my.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/digi_my.pb \
@@ -540,6 +552,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/enreach_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/enreach_nl.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/entel_cl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/entel_cl.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/entel_pe.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/entel_pe.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/epic_cy.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/epic_cy.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/epic_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/epic_mt.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/eplus_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/eplus_de.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/erate_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/erate_no.pb \
@@ -560,6 +573,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/fido_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fido_ca.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/finetwork_es.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/finetwork_es.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/firstnet_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/firstnet_us.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/firstnet5gsa_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/firstnet5gsa_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/firstnetpacific_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/firstnetpacific_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/firstnetpacific2_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/firstnetpacific2_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/fizz_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fizz_ca.pb \
@@ -582,6 +596,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/gomobile_mt.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gomobile_mt.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/google5glab_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/google5glab_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/grameenphone_bd.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/grameenphone_bd.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/GsCommonCarrierSettingsExtraAssets:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/GsCommonCarrierSettingsExtraAssets \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/gta_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gta_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
@@ -632,6 +647,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/lebara_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_nl.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/lebara_sa.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lebara_sa.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/legos_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/legos_fr.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/lexvor_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lexvor_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/lguplus_kr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/lguplus_kr.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/liberty_pr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/liberty_pr.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/libertymobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/libertymobile_us.pb \
@@ -692,6 +708,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/mvnoconnect_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/mvnoconnect_us.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/naf_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/naf_no.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/naf2_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/naf2_no.pb \
+    vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/naf3_no.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/naf3_no.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/natcom_ht.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/natcom_ht.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/ncell_np.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/ncell_np.pb \
     vendor/google_devices/bluejay/proprietary/product/etc/CarrierSettings/nema_fo.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/nema_fo.pb \
@@ -1027,6 +1044,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/recovery/linkerconfig/ld.config.txt:$(TARGET_COPY_OUT_RECOVERY)/root/linkerconfig/ld.config.txt \
     vendor/google_devices/bluejay/proprietary/recovery/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc \
     vendor/google_devices/bluejay/proprietary/recovery/system/etc/init/android.hardware.health-service.gs101_recovery.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.health-service.gs101_recovery.rc \
+    vendor/google_devices/bluejay/proprietary/system_ext/etc/adaptivehaptics.protolog.pb:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/adaptivehaptics.protolog.pb \
     vendor/google_devices/bluejay/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google_devices/bluejay/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/bluejay/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
@@ -1045,6 +1063,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/system/usr/keylayout/Vendor_0f0d_Product_01b4.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_0f0d_Product_01b4.kl \
     vendor/google_devices/bluejay/proprietary/system/usr/keylayout/Vendor_2dc8_Product_6006.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_2dc8_Product_6006.kl \
     vendor/google_devices/bluejay/proprietary/vendor_ramdisk/lib/firmware/drv2624.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/lib/firmware/drv2624.bin \
+    vendor/google_devices/bluejay/proprietary/vendor_ramdisk/system/bin/modprobe:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/bin/modprobe \
     vendor/google_devices/bluejay/proprietary/vendor_ramdisk/system/etc/fstab.gs101:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs101 \
     vendor/google_devices/bluejay/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs \
     vendor/google_devices/bluejay/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs \
@@ -2263,7 +2282,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib/audio_waves_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_waves_aoc.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/com.google.edgetpu_app_service-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.google.edgetpu_app_service-V3-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/com.google.hardware.pixel.display-V15-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.google.hardware.pixel.display-V15-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib/com.google.hardware.pixel.display-V23-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.google.hardware.pixel.display-V23-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib/com.google.hardware.pixel.display-V24-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.google.hardware.pixel.display-V24-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/com.google.pixel.modem.logmasklibrary-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.google.pixel.modem.logmasklibrary-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio.effect@7.0-impl.so \
@@ -2398,11 +2417,12 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib/pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/pixelatoms-cpp.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/sensors.usf.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.usf.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/soundfx/liboffloadeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/liboffloadeffect.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib/usf_sensor_hal_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/usf_sensor_hal_flags_c_lib.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.google.battery_mitigation-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.battery_mitigation-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.google.battery_mitigation.service_static.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.battery_mitigation.service_static.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.google.whitechapel.audio.audioext@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.whitechapel.audio.audioext@4.0.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.google.whitechapel.audio.extension-V10-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.whitechapel.audio.extension-V10-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.google.whitechapel.audio.extension-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.whitechapel.audio.extension-V5-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.google.whitechapel.audio.extension-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.whitechapel.audio.extension-V8-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.radio.base.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.radio.base.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.radio.protocol.sit.base.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.radio.protocol.sit.base.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib/vendor.radio.protocol.sit.json.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.radio.protocol.sit.json.so \
@@ -2451,7 +2471,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.common.fmq-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common.fmq-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.contexthub-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.contexthub-V5-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.drm-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V1-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.drm-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V2-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.drm-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V3-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.drm.common-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm.common-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.dumpstate-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.dumpstate-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.gnss-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss-V3-ndk.so \
@@ -2522,6 +2542,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.security.keymint-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-impl.nos.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.security.keymint-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.security.keymint-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V3-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.security.keymint-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V6-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.sensors-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors-V2-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.sensors-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors-V3-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@1.0.so \
@@ -2540,15 +2561,14 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.usb-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb-V4-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.usb.flags-aconfig-cc-lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.flags-aconfig-cc-lib.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.usb.gadget-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget-V2-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.usb.gadget@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget@1.0.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.vibrator-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.vibrator-V3-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.weaver-bridge.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-bridge.nos.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.weaver-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-impl.nos.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.weaver-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-V3-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.weaver2-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver2-impl.nos.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.wifi.common-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.common-V2-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.wifi.hostapd-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd-V3-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.wifi.supplicant-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant-V5-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.wifi.hostapd-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd-V4-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hardware.wifi.supplicant-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant-V6-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hidl.allocator@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.allocator@1.0.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hidl.memory.token@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.memory.token@1.0.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/android.hidl.safe_union@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.safe_union@1.0.so \
@@ -2579,7 +2599,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.edgetpu.tachyon-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu.tachyon-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.hardware.pixel.display-V15-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V15-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.hardware.pixel.display-V23-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V23-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.hardware.pixel.display-V24-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V24-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.hardware.pixel.display-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V4-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.input-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V2-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/com.google.input-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V8-ndk.so \
@@ -2703,6 +2723,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libgooglerilmemmonitor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgooglerilmemmonitor.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libgpuflag_aconfig_rust.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpuflag_aconfig_rust.dylib.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/libgpuflag_img_aconfig_rust.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpuflag_img_aconfig_rust.dylib.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libgralloctypes.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libgril_oem-google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgril_oem-google.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libgui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgui.so \
@@ -2799,6 +2820,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libtouchflow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtouchflow.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libui.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libunwindstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libunwindstack.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/libusbhost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libusbhost.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libusf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libusf.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/libvendorgraphicbuffer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendorgraphicbuffer.so \
@@ -2824,6 +2846,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/sensors.usf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.usf.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/soundfx/liboffloadeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/liboffloadeffect.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/thermal-budget-interface-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/thermal-budget-interface-ndk.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/usf_sensor_hal_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/usf_sensor_hal_flags_c_lib.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor_chre_atoms_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_atoms_log.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor_chre_metrics-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_metrics-cpp.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.audiometricext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.audiometricext@1.0.so \
@@ -2833,8 +2856,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.bluetooth_ext-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.bluetooth_ext-V4-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.google_battery-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery-V5-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.audioext@4.0.so \
+    vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V10-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.extension-V10-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so \
-    vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.extension-V8-ndk.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.radio.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.base.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.radio.protocol.sit.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.protocol.sit.base.so \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.radio.protocol.sit.json.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.radio.protocol.sit.json.so \
@@ -2844,7 +2867,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.1.so \
     vendor/google_devices/bluejay/proprietary/vendor/etc/a2dp_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration_7_0.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
-    vendor/google_devices/bluejay/proprietary/vendor/etc/aidl/hfp/hfp_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_codec_capabilities.xml \
+    vendor/google_devices/bluejay/proprietary/vendor/etc/aidl/hfp/hfp_default_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_default_codec_capabilities.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
@@ -2934,7 +2957,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/bluejay/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    vendor/google_devices/bluejay/proprietary/vendor/etc/memory-limiter-config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/memory-limiter-config.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
     vendor/google_devices/bluejay/proprietary/vendor/etc/modem/Pixel_Default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default_metrics.xml \

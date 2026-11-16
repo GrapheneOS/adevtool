@@ -5,7 +5,7 @@
     <string name="display_white_balance_summary">"యాంబియంట్ లైట్‌ను బట్టి 'డిస్‌ప్లే కలర్ టోన్‌'ను వార్మర్ టోన్స్‌కు లేదా కూలర్ టోన్స్‌కు  మారుస్తుంది (వార్మర్: సూర్యాస్తమయం లాంటివి,  కూలర్: నీలం లాంటివి)"</string>
     <string name="display_white_balance_title">పరిసరాలకు అనుకూలమైన కలర్ టోన్</string>
     <string name="fingerprint_unlock_set_unlock_password">Pixel Imprint + పాస్‌వర్డ్</string>
-    <string name="fingerprint_unlock_set_unlock_pattern">Pixel Imprint + ఆకృతి</string>
+    <string name="fingerprint_unlock_set_unlock_pattern">Pixel Imprint + ప్యాటర్న్</string>
     <string name="fingerprint_unlock_set_unlock_pin">Pixel Imprint + పిన్</string>
     <string name="fingerprint_unlock_skip_fingerprint">Pixel Imprint లేకుండా కొనసాగించండి</string>
     <string name="fingerprint_unlock_title">Pixel Imprintతో, మీరు మీ వేలిముద్రను ఉపయోగించి మీ ఫోన్‌ను అన్‌లాక్ చేయగలరు. సెక్యూరిటీ దృష్ట్యా, ఈ ఆప్షన్‌కు బ్యాకప్ స్క్రీన్ లాక్ అవసరం.</string>

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_de"
-version: 79000000022
+version: 82000000028
 apns {
   apn {
     name: "Vodafone DE"
@@ -41,6 +41,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
   config {
     key: "bsf.bsf_server_port_int"
     int_value: 443
@@ -84,10 +88,6 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "5500"
-  }
-  config {
-    key: "editable_wfc_mode_bool"
-    bool_value: false
   }
   config {
     key: "enabledMMS"
@@ -265,6 +265,10 @@ configs {
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9002\"],\"RetryArray\": [\"1800\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
   }
   config {
+    key: "nr_advanced_sa_icon_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "qns.block_iwlan_in_international_roaming_without_wwan_bool"
     bool_value: true
   }
@@ -297,6 +301,14 @@ configs {
     int_value: 0
   }
   config {
+    key: "ratchet_nr_advanced_bandwidth_if_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "sa_to_nsa_grace_time_sec_int"
+    int_value: 10
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -318,5 +330,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293139
+  seconds: 1787137428
 }

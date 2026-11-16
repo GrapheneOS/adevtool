@@ -1,5 +1,5 @@
 canonical_name: "ahamo_jp"
-version: 79000000014
+version: 82000000014
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"
@@ -354,5 +354,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502807
+  seconds: 1784718227
 }

@@ -1,15 +1,11 @@
 canonical_name: "eplus_de"
-version: 79000000004
+version: 82000000009
 apns {
   apn {
     name: "o2 Internet"
     value: "internet"
     type: DEFAULT
-    type: MMS
     type: XCAP
-    mmsc: "http://10.81.0.7:8002"
-    mmsc_proxy: "82.113.100.5"
-    mmsc_proxy_port: "8080"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
   }
@@ -25,12 +21,24 @@ apns {
 }
 configs {
   config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
     key: "allow_hold_in_rtt_call_bool"
     bool_value: false
   }
   config {
     key: "call_barring_visibility_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
   }
   config {
     key: "carrier_default_wfc_ims_roaming_enabled_bool"
@@ -62,6 +70,10 @@ configs {
   config {
     key: "default_vm_number_string"
     text_value: "+491793000333"
+  }
+  config {
+    key: "enabledMMS"
+    bool_value: false
   }
   config {
     key: "hide_ims_apn_bool"
@@ -307,6 +319,14 @@ configs {
     }
   }
   config {
+    key: "nr_advanced_sa_icon_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "nr_advanced_threshold_bandwidth_khz_int"
+    int_value: 60000
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: true
   }
@@ -324,6 +344,10 @@ configs {
     int_value: 0
   }
   config {
+    key: "ratchet_nr_advanced_bandwidth_if_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -334,6 +358,10 @@ configs {
   config {
     key: "rtt_supported_while_roaming_bool"
     bool_value: true
+  }
+  config {
+    key: "sa_to_nsa_grace_time_sec_int"
+    int_value: 10
   }
   config {
     key: "use_only_dialed_sim_ecc_list_bool"
@@ -349,5 +377,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293198
+  seconds: 1787137492
 }

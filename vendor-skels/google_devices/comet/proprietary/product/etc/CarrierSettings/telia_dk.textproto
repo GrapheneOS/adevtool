@@ -1,5 +1,5 @@
 canonical_name: "telia_dk"
-version: 79000000013
+version: 82000000014
 apns {
   apn {
     name: "Internet"
@@ -169,10 +169,6 @@ configs {
     int_value: 180000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 86500
   }
@@ -233,5 +229,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293178
+  seconds: 1781704711
 }

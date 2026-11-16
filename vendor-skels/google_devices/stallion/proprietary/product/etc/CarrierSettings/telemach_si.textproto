@@ -1,5 +1,5 @@
 canonical_name: "telemach_si"
-version: 79000000003
+version: 82000000003
 apns {
   apn {
     name: "Internet"

@@ -1,5 +1,5 @@
 canonical_name: "tim_br"
-version: 79000000001
+version: 82000000002
 apns {
   apn {
     name: "TIM Connect"
@@ -90,7 +90,11 @@ configs {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
+  config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1745372883
+  seconds: 1782902393
 }

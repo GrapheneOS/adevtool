@@ -1,5 +1,5 @@
 canonical_name: "vimla_se"
-version: 79000000015
+version: 82000000017
 apns {
   apn {
     name: "MMS"
@@ -204,10 +204,6 @@ configs {
     }
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 43200
   }
@@ -281,6 +277,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "use_only_dialed_sim_ecc_list_bool"
     bool_value: true
   }
@@ -290,5 +290,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1778677983
+  seconds: 1782902371
 }

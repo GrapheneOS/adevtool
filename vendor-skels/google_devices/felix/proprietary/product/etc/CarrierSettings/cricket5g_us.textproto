@@ -1,5 +1,5 @@
 canonical_name: "cricket5g_us"
-version: 79000000014
+version: 82000000015
 apns {
   apn {
     name: "internet"
@@ -8,8 +8,8 @@ apns {
     type: MMS
     type: SUPL
     type: FOTA
-    mmsc: "http://mmsc.aiowireless.net"
-    mmsc_proxy: "proxy.aiowireless.net"
+    mmsc: "http://mmsc.mobile.att.net"
+    mmsc_proxy: "proxy.mobile.att.net"
     mmsc_proxy_port: "80"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
@@ -678,5 +678,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293151
+  seconds: 1784718196
 }

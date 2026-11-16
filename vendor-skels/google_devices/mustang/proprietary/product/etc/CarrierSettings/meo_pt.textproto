@@ -1,5 +1,5 @@
 canonical_name: "meo_pt"
-version: 79000000007
+version: 82000000007
 apns {
   apn {
     name: "tmn internet"

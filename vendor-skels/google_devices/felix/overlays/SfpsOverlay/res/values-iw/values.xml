@@ -14,13 +14,13 @@
 
  צריך לגעת קלות בכפתור וללא ללחוץ לחיצה ארוכה."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">צריך לגעת בכפתור ההפעלה</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">"הגדרת \"פתיחה בטביעת אצבע\""</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">הגדרת פתיחה בטביעת אצבע</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">הרמה, ונגיעה. יש להזיז מעט את האצבע בכל פעם.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">צריך להרים ולגעת בחיישן שוב</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">חיישן טביעת האצבע נמצא על כפתור ההפעלה.</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">יש לגעת בחיישן במקום זאת</string>
     <string name="security_settings_fingerprint_preference_title">פתיחה בטביעת אצבע</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">"התכונה \"פתיחה בטביעת אצבע\" יוצרת תבנית ייחודית של טביעת האצבע שלך כדי לאמת את הזהות שלך. תהליך היצירה של תבנית לטביעת האצבע כולל צילום תמונות של טביעת האצבע שלך מזוויות שונות."</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">"התכונה \"פתיחה בטביעת אצבע\" יוצרת תבנית ייחודית של טביעת האצבע שלך כדי לאמת את הזהות שלך. התהליך הזה כולל צילום של טביעת האצבע שלך מזוויות שונות."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">"כשמשתמשים בתכונה \"פתיחה בטביעת אצבע\" נעשה שימוש בתמונות כדי לעדכן את התבנית של טביעת האצבע. התמונות שמשמשות ליצירת התבנית של טביעת האצבע אף פעם לא נשמרות, אבל התבנית של טביעת האצבע נשמרת באופן מאובטח בטלפון שלך ואף פעם לא נשלחת או מועברת ממנו. כל פעולות העיבוד מתבצעות בטלפון באופן מאובטח."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">"בכל שלב אפשר למחוק את התבנית של טביעת האצבע או להשבית את \"פתיחה בטביעת האצבע\" בהגדרות. התבניות של טביעת האצבע נשמרות בטלפון עד שמוחקים אותן."</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">"הפיצ'ר 'ביטול הנעילה בטביעת אצבע' יוצר תבנית ייחודית של טביעת האצבע של הילד או הילדה כדי לאמת את זהותם. כדי ליצור את התבנית הזו לטביעת האצבע במהלך ההגדרה, יהיה עליהם לצלם תמונות של טביעת האצבע מזוויות שונות."</string>

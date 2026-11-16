@@ -1,5 +1,5 @@
 canonical_name: "lmt_lv"
-version: 79000000016
+version: 82000000017
 apns {
   apn {
     name: "LMT LV"
@@ -113,6 +113,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
       item: -102
@@ -136,5 +140,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293139
+  seconds: 1782902330
 }

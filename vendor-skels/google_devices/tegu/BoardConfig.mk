@@ -33,6 +33,8 @@ BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_CMDLINE += \
+    workqueue.power_efficient=1 \
+    f2fs.num_compress_pages=128 \
     earlycon=exynos4210,0x10870000 \
     console=ttySAC0,115200 \
     androidboot.console=ttySAC0 \

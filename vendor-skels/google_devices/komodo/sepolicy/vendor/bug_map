@@ -1,10 +1,11 @@
-ramdump vendor_hw_plat_prop file b/161103878
+crash_dump vendor_slog_file dir b/535915018
+sscoredump sysfs file b/542008326ramdump vendor_hw_plat_prop file b/161103878
 ramdump public_vendor_default_prop file b/161103878
 ramdump proc_bootconfig file b/181615626
 shell vendor_intelligence_prop file b/378120929
 dumpstate su process b/220019932
 cat_engine_service_app default_prop file b/509739567
-device_as_webcam hw_jpg_device chr_file b/448791535
+crash_dump keystore process b/545975216
 dump_aoc sysfs_aoc file b/456695559
 dump_exynos_display debugfs file b/502127304
 dump_exynos_second_display debugfs lnk_file b/482959512
@@ -17,8 +18,8 @@ hal_face_default default_prop file b/487489667
 hal_face_default metadata_file dir b/487489667
 hal_face_default sysfs file b/487489667
 hal_graphics_composer_default pixeldisplayservice_app binder b/481138825
-init debugfs_bootreceiver_tracing dir b/500185337
 init proc_net_mem_max file b/509738049
+init-thermal-symlinks-sh thermal_link_device file b/535460404
 insmod-sh kernel key b/478084165
 insmod-sh vendor_usb_debugfs dir b/500185958
 mediaprovider_app shell_data_file dir b/483515142
@@ -32,6 +33,8 @@ shell linkerconfig_file dir b/522480729
 shell metadata_file dir b/522480729
 shell mirror_data_file dir b/522480729
 shell mnt_vendor_file dir b/522480729
+shell perfetto process b/529548318
+shell perfetto_traces_data_file file b/531604854
 shell system_dlkm_file dir b/522480729
 shell vm_data_file dir b/522480729
 ssr_detector_app default_prop file b/438632033
@@ -44,6 +47,8 @@ system_server pixelstats_vendor binder b/519791984
 system_server proc_net_mem_max file b/505710438
 system_suspend sysfs file b/483522731
 system_suspend sysfs_batteryinfo file b/500186116
+traced_perf privapp_data_file dir b/527707110
+untrusted_app block_device dir b/546295407
 untrusted_app_32 default_prop file b/509739469
 untrusted_app_34 gpu_device chr_file b/509739004
 vendor_init debugfs_tracing_instances file b/500186447

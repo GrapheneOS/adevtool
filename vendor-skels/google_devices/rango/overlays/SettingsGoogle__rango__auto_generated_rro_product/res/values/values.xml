@@ -69,7 +69,6 @@
     <dimen name="immobile_dialog_height">246.0dp</dimen>
     <dimen name="immobile_dialog_width">406.0dp</dimen>
     <fraction name="display_density_max_scale">138.49792%</fraction>
-    <integer name="config_activity_embed_split_min_cur_dp">600</integer>
     <string name="display_white_balance_summary">Dynamically adapts the display to warmer or cooler tones based on ambient lighting</string>
     <string name="display_white_balance_title">Adaptive tone</string>
     <string name="emission_frequency_summary">Adjust emission frequency to improve viewing experience for sensitive eyes. This only applies to the inner screen when unfolded.</string>

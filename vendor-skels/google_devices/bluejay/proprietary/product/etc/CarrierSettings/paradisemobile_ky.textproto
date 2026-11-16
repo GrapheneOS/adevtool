@@ -1,5 +1,5 @@
 canonical_name: "paradisemobile_ky"
-version: 79000000002
+version: 82000000002
 apns {
   apn {
     name: "Paradise"

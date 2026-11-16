@@ -1,5 +1,5 @@
 canonical_name: "vodafone_nz"
-version: 79000000010
+version: 82000000013
 apns {
   apn {
     name: "VFNZ Gateway"
@@ -135,5 +135,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767187386
+  seconds: 1788769788
 }

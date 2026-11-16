@@ -1,5 +1,5 @@
 canonical_name: "proximus_be"
-version: 79000000007
+version: 82000000012
 apns {
   apn {
     name: "Proximus Internet"
@@ -45,6 +45,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
   config {
     key: "bsf.bsf_server_fqdn_string"
     text_value: "bsf.ims.mnc001.mcc206.pub.3gppnetwork.org"
@@ -171,10 +175,6 @@ configs {
     }
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_session_aes_cbc_key_size_int_array"
     int_array {
       item: 128
@@ -214,6 +214,10 @@ configs {
     }
   }
   config {
+    key: "nr_advanced_sa_icon_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: true
   }
@@ -244,6 +248,10 @@ configs {
     bool_value: true
   }
   config {
+    key: "sa_to_nsa_grace_time_sec_int"
+    int_value: 10
+  }
+  config {
     key: "vonr_enabled_bool"
     bool_value: true
   }
@@ -253,5 +261,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293191
+  seconds: 1787137484
 }

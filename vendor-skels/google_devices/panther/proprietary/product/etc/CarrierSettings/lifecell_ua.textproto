@@ -1,5 +1,5 @@
 canonical_name: "lifecell_ua"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "Lifecell Internet"
@@ -38,6 +38,13 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "read_only_apn_types_string_array"
     text_array {
     }
@@ -52,5 +59,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1745372827
+  seconds: 1787137435
 }

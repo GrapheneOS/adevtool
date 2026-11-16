@@ -1,5 +1,5 @@
 canonical_name: "solomobile_ca"
-version: 79000000001
+version: 82000000002
 apns {
   apn {
     name: "Solo Mobile"
@@ -64,7 +64,7 @@ configs {
   }
   config {
     key: "ims.sip_over_ipsec_enabled_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "ims.sip_timer_f_millis_int"
@@ -303,5 +303,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1724979979
+  seconds: 1783493983
 }

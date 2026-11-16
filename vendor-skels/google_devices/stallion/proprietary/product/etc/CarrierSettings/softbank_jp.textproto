@@ -1,5 +1,5 @@
 canonical_name: "softbank_jp"
-version: 79000000006
+version: 82000000008
 apns {
   apn {
     name: "IMS"
@@ -325,6 +325,10 @@ configs {
     int_value: 3
   }
   config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://goose.mb.softbank.jp/api/v1/serviceentitlement"
+  }
+  config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
     bool_value: false
   }
@@ -505,10 +509,6 @@ configs {
     }
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "local_disconnect_empty_ims_conference_bool"
     bool_value: true
   }
@@ -576,8 +576,12 @@ configs {
     bool_value: true
   }
   config {
-    key: "satellite_data_support_mode_int"
+    key: "satellite_entitlement_status_refresh_days_int"
     int_value: 1
+  }
+  config {
+    key: "satellite_entitlement_supported_bool"
+    bool_value: true
   }
   config {
     key: "satellite_ignore_data_roaming_setting_bool"
@@ -601,5 +605,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1785465842
+  seconds: 1785323492
 }

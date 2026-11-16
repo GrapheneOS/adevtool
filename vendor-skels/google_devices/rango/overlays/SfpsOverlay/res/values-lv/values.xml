@@ -14,7 +14,7 @@
 
 Viegli pieskarieties pogai, to nenospiežot."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Pieskarieties barošanas pogai</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Autorizācija ar pirksta nospiedumu</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Pirksta nospieduma iestatīšana</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Paceliet pirkstu un pēc tam atkal pieskarieties. Katru reizi nedaudz pakustiniet pirkstu.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Pieskarieties vairākas reizes</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Pirksta nospieduma sensors atrodas uz barošanas pogas.</string>
@@ -22,7 +22,7 @@ Viegli pieskarieties pogai, to nenospiežot."</string>
     <string name="security_settings_fingerprint_preference_title">Autorizācija ar pirksta nosp.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Iestatot autorizāciju ar pirksta nospiedumu, tiek izveidots unikāls jūsu pirksta nospieduma modelis jūsu identitātes apstiprināšanai. Lai iestatīšanas laikā izveidotu šo pirksta nospieduma modeli, jūs uzņemsiet pirksta nospieduma attēlus no dažādām pozīcijām.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Izmantojot autorizāciju ar pirksta nospiedumu, pirksta nospieduma modeļa atjaunināšanai tiek izmantoti attēli. Pirksta nospieduma modeļa izveidei izmantotie attēli nekad netiek saglabāti, savukārt pirksta nospieduma modelis tiek droši glabāts jūsu tālrunī un vienmēr atrodas tikai tālrunī. Apstrāde tiek veikta drošā veidā un tikai jūsu tālrunī.</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Iestatījumos varat jebkurā laikā dzēst pirksta nospieduma modeli vai izslēgt autorizāciju ar pirksta nospiedumu. Pirkstu nospiedumu modeļi tiek glabāti tālrunī, līdz jūs tos dzēšat.</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Jebkurā laikā iestatījumos varat dzēst pirksta nospieduma modeli vai izslēgt autorizāciju ar pirksta nospiedumu. Pirkstu nospiedumu modeļi tiek glabāti tālrunī, līdz jūs tos izdzēšat.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">Iestatot autorizāciju ar pirksta nospiedumu, tiek izveidots unikāls jūsu bērna pirksta nospieduma modelis viņa identitātes apstiprināšanai. Lai iestatīšanas laikā izveidotu šo pirksta nospieduma modeli, jūsu bērns uzņems pirksta nospieduma attēlus no dažādām pozīcijām.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">Izmantojot autorizāciju ar pirksta nospiedumu, pirksta nospieduma modeļa atjaunināšanai tiek izmantoti attēli. Jūsu bērna pirksta nospieduma modeļa izveidei izmantotie attēli nekad netiek saglabāti, savukārt pirksta nospieduma modelis tiek droši glabāts bērna tālrunī un vienmēr atrodas tikai tālrunī. Apstrāde tiek veikta drošā veidā un tikai bērna tālrunī.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">Iestatījumos jūs un jūsu bērns varat jebkurā laikā dzēst bērna pirksta nospieduma modeli vai izslēgt autorizāciju ar pirksta nospiedumu. Pirkstu nospiedumu modeļi tiek glabāti tālrunī, līdz tie tiek dzēsti.</string>

@@ -1,5 +1,5 @@
 canonical_name: "spectrum_us"
-version: 79000000031
+version: 82000000036
 apns {
   apn {
     name: "Spectrum"
@@ -802,10 +802,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_wifi_mac_addr_to_nai_bool"
     bool_value: true
   }
@@ -978,8 +974,8 @@ configs {
   config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
-      item: -100
-      item: -112
+      item: -95
+      item: -107
       item: -115
     }
   }
@@ -987,15 +983,15 @@ configs {
     key: "qns.idle_eutran_rsrq_int_array"
     int_array {
       item: -11
-      item: -15
-      item: -18
+      item: -14
+      item: -17
     }
   }
   config {
     key: "qns.idle_ngran_ssrsrp_int_array"
     int_array {
-      item: -100
-      item: -112
+      item: -95
+      item: -107
       item: -115
     }
   }
@@ -1003,30 +999,30 @@ configs {
     key: "qns.idle_ngran_ssrsrq_int_array"
     int_array {
       item: -11
-      item: -15
-      item: -18
+      item: -14
+      item: -17
     }
   }
   config {
     key: "qns.idle_wifi_rssi_int_array"
     int_array {
-      item: -65
-      item: -80
+      item: -70
+      item: -76
     }
   }
   config {
     key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
     int_array {
-      item: 120000
-      item: 0
+      item: 60000
+      item: 60000
       item: 0
     }
   }
   config {
     key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
     int_array {
-      item: 120000
-      item: 0
+      item: 60000
+      item: 60000
       item: 0
     }
   }
@@ -1036,6 +1032,10 @@ configs {
       item: 3
       item: 0
     }
+  }
+  config {
+    key: "qns.maximum_attempt_for_wfc_recovery_failure_on_wlan_int"
+    int_value: 5
   }
   config {
     key: "qns.non_ims_wlan_hysteresis_timer_ms_int_array"
@@ -1051,6 +1051,10 @@ configs {
   config {
     key: "qns.sos_transport_type_int"
     int_value: 2
+  }
+  config {
+    key: "qns.support_iwlan_barring_bool"
+    bool_value: false
   }
   config {
     key: "qns.support_service_barring_check_bool"
@@ -1086,8 +1090,8 @@ configs {
   config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
-      item: -100
-      item: -112
+      item: -95
+      item: -107
       item: -115
     }
   }
@@ -1095,15 +1099,15 @@ configs {
     key: "qns.voice_eutran_rsrq_int_array"
     int_array {
       item: -11
-      item: -15
-      item: -18
+      item: -14
+      item: -17
     }
   }
   config {
     key: "qns.voice_ngran_ssrsrp_int_array"
     int_array {
-      item: -100
-      item: -112
+      item: -95
+      item: -107
       item: -115
     }
   }
@@ -1111,15 +1115,15 @@ configs {
     key: "qns.voice_ngran_ssrsrq_int_array"
     int_array {
       item: -11
-      item: -15
-      item: -18
+      item: -14
+      item: -17
     }
   }
   config {
     key: "qns.voice_wifi_rssi_int_array"
     int_array {
-      item: -65
-      item: -80
+      item: -70
+      item: -76
     }
   }
   config {
@@ -1128,6 +1132,10 @@ configs {
       item: 45000
       item: 0
     }
+  }
+  config {
+    key: "qns.wlan_temporarily_block_for_recovery_timer_int"
+    int_value: 60000
   }
   config {
     key: "read_only_apn_fields_string_array"
@@ -1237,6 +1245,10 @@ configs {
     int_value: 6
   }
   config {
+    key: "vzw_wfc_silent_enablement_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.google.android.wfcactivation/.VzwEmergencyAddressActivity"
   }
@@ -1264,5 +1276,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779887931
+  seconds: 1787137449
 }

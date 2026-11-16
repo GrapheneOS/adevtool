@@ -1,5 +1,5 @@
 canonical_name: "test001_zz"
-version: 79000000008
+version: 82000000008
 apns {
   apn {
     name: "TEST_DEFAULT"

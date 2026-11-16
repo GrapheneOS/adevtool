@@ -1,5 +1,5 @@
 canonical_name: "comcastbusiness_us"
-version: 79000000009
+version: 82000000012
 apns {
   apn {
     name: "Comcast Business"
@@ -110,7 +110,12 @@ configs {
       item: "3557afac6c4a4951b6d669408dc35bf6dfb1b1536eeb465493f9d29ad166c91d:com.xfinity.mobile.spamfilter"
       item: "953f5a4c22e7fd16adc3f12eb038682aad377fef9a18b9d12c1abea78911c749:com.xfinity.mobile.spamfilter"
       item: "EA827BB79F9F4B30723A3988D1159624BA856EEAD7B330B819EE04AFE313A14D:com.pocketgeek.xfinity.android"
+      item: "EC538B41E6A8A5A2F0CEF0F4B4F026AB9D176F969A2DEC0830E10AED63869E9D:com.pocketgeek.xfinity.android"
     }
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: false
   }
   config {
     key: "carrier_default_wfc_ims_mode_int"
@@ -330,7 +335,7 @@ configs {
   }
   config {
     key: "imsserviceentitlement.skip_wfc_activation_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "imsss.network_initiated_ussd_over_ims_supported_bool"
@@ -514,7 +519,7 @@ configs {
   }
   config {
     key: "imsvoice.rtp_packet_loss_rate_threshold_int"
-    int_value: 30
+    int_value: 20
   }
   config {
     key: "imsvoice.voice_on_default_bearer_supported_bool"
@@ -780,16 +785,24 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_supported_disaster_plmn_string_array"
+    text_array {
+      item: "310210"
+    }
+  }
+  config {
+    key: "satellite_supported_emergency_plmn_string_array"
+    text_array {
+      item: "312190"
+    }
+  }
+  config {
     key: "show_avoid_bad_wifi_bool"
     bool_value: true
   }
   config {
     key: "show_data_connected_roaming_notification"
     bool_value: true
-  }
-  config {
-    key: "show_roaming_indicator_bool"
-    bool_value: false
   }
   config {
     key: "smsToMmsTextThreshold"
@@ -840,5 +853,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1783916699
+  seconds: 1789413089
 }

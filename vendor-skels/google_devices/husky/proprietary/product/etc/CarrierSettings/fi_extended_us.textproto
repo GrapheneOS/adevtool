@@ -1,6 +1,93 @@
 canonical_name: "fi_extended_us"
-version: 79000000001
+version: 82000000005
 apns {
+  apn {
+    name: "Google Fi - Extended"
+    value: "internet"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: DUN
+    type: FOTA
+    type: CBS
+    bearer_bitmask: "4|5|6|7|8|12"
+    authtype: 3
+    mmsc: "http://mms.vtext.com/servlets/mms"
+    protocol: IPV4V6
+    user_visible: false
+    user_editable: false
+  }
+  apn {
+    name: "Google Fi - Extended"
+    value: "VZWINTERNET"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    authtype: 0
+    protocol: IPV4V6
+    profile_id: 0
+    max_conns: 20
+    max_conns_time: 300
+    modem_cognitive: true
+    user_visible: false
+    user_editable: false
+  }
+  apn {
+    name: "Google Fi - Extended"
+    value: "VZWADMIN"
+    type: FOTA
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    authtype: 0
+    protocol: IPV4V6
+    profile_id: 3
+    max_conns: 20
+    max_conns_time: 300
+    modem_cognitive: true
+    user_visible: false
+    user_editable: false
+  }
+  apn {
+    name: "Google Fi - Extended"
+    value: "IMS"
+    type: IA
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    authtype: 0
+    protocol: IPV4V6
+    roaming_protocol: IPV6
+    profile_id: 2
+    max_conns: 20
+    max_conns_time: 300
+    modem_cognitive: true
+    user_visible: false
+    user_editable: false
+  }
+  apn {
+    name: "Google Fi - Extended"
+    value: "VZWAPP"
+    type: CBS
+    type: MMS
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|18|20"
+    authtype: 0
+    mmsc: "http://mms.vtext.com/servlets/mms"
+    protocol: IPV4V6
+    profile_id: 4
+    max_conns: 20
+    max_conns_time: 300
+    modem_cognitive: true
+    user_visible: false
+    user_editable: false
+  }
+  apn {
+    name: "Google Fi - Extended Emergency"
+    value: "VZWEMERGENCY"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    user_editable: false
+  }
 }
 configs {
   config {
@@ -18,10 +105,10 @@ configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
     int_array {
-      item: -125
+      item: -128
       item: -120
-      item: -114
       item: -109
+      item: -100
     }
   }
   config {
@@ -771,7 +858,6 @@ configs {
   config {
     key: "imsvoice.srvcc_type_int_array"
     int_array {
-      item: 2
     }
   }
   config {
@@ -807,20 +893,12 @@ configs {
     bool_value: true
   }
   config {
-    key: "inflate_signal_strength_bool"
-    bool_value: true
-  }
-  config {
     key: "international_roaming_dial_string_replace_string_array"
     text_array {
       item: "611:+19085594899"
       item: "*611:+19085594899"
       item: "*86:+1MDN"
     }
-  }
-  config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
   }
   config {
     key: "iwlan.add_wifi_mac_addr_to_nai_bool"
@@ -901,10 +979,10 @@ configs {
   config {
     key: "lte_rsrp_thresholds_int_array"
     int_array {
-      item: -115
-      item: -105
-      item: -95
-      item: -85
+      item: -128
+      item: -120
+      item: -109
+      item: -100
     }
   }
   config {
@@ -1086,6 +1164,10 @@ configs {
     }
   }
   config {
+    key: "qns.maximum_attempt_for_wfc_recovery_failure_on_wlan_int"
+    int_value: 5
+  }
+  config {
     key: "qns.non_ims_wlan_hysteresis_timer_ms_int_array"
     int_array {
       item: 120000
@@ -1099,6 +1181,10 @@ configs {
   config {
     key: "qns.sos_transport_type_int"
     int_value: 2
+  }
+  config {
+    key: "qns.support_iwlan_barring_bool"
+    bool_value: false
   }
   config {
     key: "qns.support_service_barring_check_bool"
@@ -1174,6 +1260,10 @@ configs {
       item: 45000
       item: 0
     }
+  }
+  config {
+    key: "qns.wlan_temporarily_block_for_recovery_timer_int"
+    int_value: 60000
   }
   config {
     key: "read_only_apn_fields_string_array"
@@ -1295,6 +1385,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "vzw_wfc_silent_enablement_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.google.android.wfcactivation/.VzwEmergencyAddressActivity"
   }
@@ -1319,5 +1413,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1781711856
+  seconds: 1787774951
 }

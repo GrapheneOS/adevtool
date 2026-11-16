@@ -343,6 +343,7 @@
 /vendor/bin/dump/dump_ramdump u:object_r:dump_ramdump_exec:s0
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
+/dev/acd-gnss_passthrough_ctl u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_pcie\.sh u:object_r:dump_pcie_exec:s0
 /vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_devfreq u:object_r:dump_devfreq_exec:s0
@@ -380,6 +381,8 @@
 /dev/logbuffer_max77779_fwupdate u:object_r:logbuffer_device:s0
 /dev/dma_heap/sensor_direct_heap u:object_r:sensor_direct_heap_device:s0
 /dev/dma_heap/framebuffer-secure u:object_r:framebuffer_secure_heap_device:s0
+/dev/acd-gnss_passthrough_data_tx u:object_r:aoc_device:s0
+/dev/acd-gnss_passthrough_data_rx u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_fingerprint u:object_r:dump_fingerprint_exec:s0
 /vendor/bin/hw/battery_mitigation u:object_r:battery_mitigation_exec:s0
 /vendor/bin/modem_logging_control u:object_r:modem_logging_control_exec:s0
@@ -418,6 +421,7 @@
 /vendor/lib64/libedgetpu_tachyon\.google\.so u:object_r:same_process_hal_file:s0
 /vendor/bin/dump/dump_exynos_second_display u:object_r:dump_exynos_second_display_exec:s0
 /vendor/bin/hw/android\.hardware\.usb-service u:object_r:hal_usb_impl_exec:s0
+/vendor/bin/hw/vendor\.google\.google_battery.ekf.service u:object_r:hal_googlebattery_ekf_exec:s0
 /dev/block/platform/13200000\.ufs/by-name/efs u:object_r:efs_block_device:s0
 /dev/block/platform/13200000\.ufs/by-name/frp u:object_r:frp_block_device:s0
 /dev/block/platform/13200000\.ufs/by-name/misc u:object_r:misc_block_device:s0
@@ -488,9 +492,11 @@
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.trusty u:object_r:hal_keymint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.citadel u:object_r:hal_keymint_citadel_exec:s0
 /vendor/bin/hw/android\.hardware\.neuralnetworks@service-darwinn-aidl u:object_r:hal_neuralnetworks_darwinn_exec:s0
+/vendor/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default u:object_r:hal_oemcrypto_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.security\.keymint-service\.rust\.trusty u:object_r:hal_keymint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.goodix u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:fingerprint_factory_service_exec:s0
 /vendor/bin/hw/android\.hardware\.edgetpu\.logging@service-edgetpu-logging u:object_r:edgetpu_logging_exec:s0
+/vendor/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default-lazy u:object_r:hal_oemcrypto_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.goodix u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.fpc42_fw49 u:object_r:hal_fingerprint_capacitance_exec:s0

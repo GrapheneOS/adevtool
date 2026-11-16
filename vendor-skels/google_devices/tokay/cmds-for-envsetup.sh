@@ -1,2 +1,2 @@
-export BUILD_ID_tokay="CP3A.261005.005"
+export BUILD_ID_tokay="CP4A.261105.040.A1"
 unset PLATFORM_SECURITY_PATCH_tokay

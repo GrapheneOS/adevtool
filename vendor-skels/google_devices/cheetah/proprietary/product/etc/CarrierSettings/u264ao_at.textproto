@@ -1,5 +1,5 @@
 canonical_name: "u264ao_at"
-version: 79000000015
+version: 82000000016
 apns {
   apn {
     name: "U+264A-AT Operational"
@@ -354,6 +354,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -363,5 +367,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1766559495
+  seconds: 1782902336
 }

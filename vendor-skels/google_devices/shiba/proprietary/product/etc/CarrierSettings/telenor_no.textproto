@@ -1,5 +1,5 @@
 canonical_name: "telenor_no"
-version: 79000000009
+version: 82000000010
 apns {
   apn {
     name: "Telenor Smart"
@@ -165,10 +165,6 @@ configs {
     int_value: 120000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 3600
   }
@@ -218,5 +214,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293164
+  seconds: 1781704703
 }

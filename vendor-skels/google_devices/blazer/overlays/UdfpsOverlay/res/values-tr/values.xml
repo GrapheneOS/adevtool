@@ -8,7 +8,7 @@
     <string name="security_settings_fingerprint_bad_calibration">Bir onarım hizmeti sağlayıcıyı veya g.co/pixel/fingerprintunlock adresini ziyaret edin.</string>
     <string name="security_settings_fingerprint_enroll_consent_introduction_title">"Parmak İzi Kilidi'ne izin verin"</string>
     <string name="security_settings_fingerprint_enroll_finish_message">"Telefonunuzun kilidini açmak veya uygulamalardaki kişinin siz olduğunu doğrulamak için Parmak İzi Kilidi'ni kullandıkça bu özellik daha da iyileşir"</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">"Parmak İzi Kilidi'ni ayarlama"</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Parmak İzi Kilidi kurulumu</string>
     <string name="security_settings_fingerprint_preference_title">Parmak İzi Kilidi</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Parmak İzi Kilidi, kimliğinizi doğrulamak için parmak izinizin benzersiz bir modelini oluşturur. Kurulum sırasında bu parmak izi modelini oluşturmak için parmak izinizin farklı pozisyonlardan resmi çekilir.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">"Parmak İzi Kilidi'ni kullandığınızda resimler, parmak izi modelinizi güncellemek için kullanılır. Parmak izi resimleriniz ve modeliniz, telefonunuzda güvenli bir şekilde saklanıp hiçbir zaman telefondan dışarı çıkmaz. Tüm işlemler, güvenli bir şekilde telefonunuzda gerçekleşir."</string>

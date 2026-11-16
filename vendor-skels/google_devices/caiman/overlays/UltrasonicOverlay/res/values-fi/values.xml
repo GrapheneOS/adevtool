@@ -5,7 +5,7 @@
     <string name="fingerprint_udfps_pre_enroll_runner_dialog_title">Puhdista näyttö ennen kuin jatkat</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_6">"Jos sinulla on näytönsuojus, saat parhaan tuloksen, kun laitat sen paikoilleen ennen sormenjäljen käyttöönottoa.
 
-Saat parhaan tuloksen, kun käytät Made For Google ‑sertifioitua näytönsuojusta. Sormenjälki ei ehkä toimi muiden näytönsuojusten kanssa."</string>
+Sormenjälki toimii parhaiten Made For Google ‑sertifioitujen näytönsuojusten kanssa. Muiden kanssa se ei välttämättä toimi."</string>
     <string name="security_settings_udfps_enroll_fingertip_title">Kallista sormea ja kosketa sormenpäällä</string>
     <string name="security_settings_udfps_enroll_left_edge_title">Käännä sormea ja kosketa sormen vasemmalla reunalla</string>
     <string name="security_settings_udfps_enroll_right_edge_title">Käännä sormea uudelleen ja kosketa sormen oikealla reunalla</string>

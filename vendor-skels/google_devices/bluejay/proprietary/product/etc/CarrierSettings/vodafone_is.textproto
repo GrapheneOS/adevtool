@@ -1,5 +1,5 @@
 canonical_name: "vodafone_is"
-version: 79000000005
+version: 82000000007
 apns {
   apn {
     name: "Vodafone Internet"
@@ -30,6 +30,14 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "emergency"
+    value: "EMERGENCY"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
   config {
@@ -43,6 +51,13 @@ configs {
   config {
     key: "ims.sip_over_ipsec_enabled_bool"
     bool_value: false
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
   }
   config {
     key: "imsss.ut_as_server_fqdn_string"
@@ -69,6 +84,10 @@ configs {
         }
       }
     }
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
@@ -107,10 +126,14 @@ configs {
     int_value: 1048576
   }
   config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1747202398
+  seconds: 1787137428
 }

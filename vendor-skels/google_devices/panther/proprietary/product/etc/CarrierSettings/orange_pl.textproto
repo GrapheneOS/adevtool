@@ -1,5 +1,5 @@
 canonical_name: "orange_pl"
-version: 79000000021
+version: 82000000022
 apns {
   apn {
     name: "Orange Internet"
@@ -32,6 +32,7 @@ apns {
     protocol: IPV6
     roaming_protocol: IPV6
     user_visible: false
+    lingering_network_type_bitmask: "1|2|3|8|9|10|13|14|15|18|20"
   }
   apn {
     name: "hos"
@@ -329,5 +330,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293145
+  seconds: 1783916895
 }

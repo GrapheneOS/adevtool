@@ -1,5 +1,5 @@
 canonical_name: "povo_jp"
-version: 79000000023
+version: 82000000024
 apns {
   apn {
     name: "povo"
@@ -400,10 +400,6 @@ configs {
     }
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "lte_endc_using_user_data_for_rrc_detection_bool"
     bool_value: true
   }
@@ -477,5 +473,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1781084749
+  seconds: 1785323441
 }

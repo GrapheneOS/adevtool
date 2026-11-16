@@ -1,5 +1,5 @@
 canonical_name: "masmovil_es"
-version: 79000000010
+version: 82000000011
 apns {
   apn {
     name: "Internet"
@@ -146,6 +146,7 @@ configs {
       item: "21401"
       item: "21402"
       item: "21403"
+      item: "21404"
       item: "21405"
       item: "21406"
       item: "21407"
@@ -200,5 +201,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293171
+  seconds: 1787137463
 }

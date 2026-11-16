@@ -1,5 +1,5 @@
 canonical_name: "default"
-version: 79000000028
+version: 82000000032
 configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
@@ -92,6 +92,10 @@ configs {
   config {
     key: "gps.supl_ver"
     text_value: "0x20002"
+  }
+  config {
+    key: "hide_automatic_sim_pin_management_bool"
+    bool_value: true
   }
   config {
     key: "ims.ims_user_agent_string"
@@ -283,6 +287,10 @@ configs {
     key: "imswfc.pidf_short_code_string_array"
     text_array {
     }
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.handover_to_wwan_release_delay_second_int"
@@ -523,5 +531,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1762942302
+  seconds: 1791510048
 }

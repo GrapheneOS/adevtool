@@ -3,8 +3,8 @@
 
 include vendor/google_devices/tangorpro/adevtool-version-check.mk
 
-ifneq ($(BUILD_ID),CP3A.261005.002.A1)
-  $(error BUILD_ID: expected CP3A.261005.002.A1, got $(BUILD_ID))
+ifneq ($(BUILD_ID),CP4A.261105.040.A1)
+  $(error BUILD_ID: expected CP4A.261105.040.A1, got $(BUILD_ID))
 endif
 
 $(call inherit-product, vendor/adevtool/config/mk/google_devices/device/tangorpro/device.mk)
@@ -161,8 +161,6 @@ PRODUCT_PACKAGES += \
     libtrusty.recovery \
     libz.vendor_ramdisk \
     linker.vendor_ramdisk \
-    logcatd \
-    logpersist.start \
     odm_file_contexts.recovery \
     odm_property_contexts.recovery \
     plat_file_contexts.recovery \
@@ -262,6 +260,10 @@ PRODUCT_PACKAGES += \
     PixelNfc \
     PixelQualifiedNetworksService \
     UwbVendorService \
+    android.hardware.audio.common-V6-ndk \
+    android.hardware.audio.core-V5-ndk \
+    android.hardware.audio.core.sounddose-V5-ndk \
+    android.hardware.audio.effect-V5-ndk \
     android.hardware.audio.service \
     android.hardware.authsecret-service.citadel \
     android.hardware.biometrics.fingerprint-service.fpc42 \
@@ -298,6 +300,8 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service \
     android.hardware.usb.gadget-service \
     android.hardware.weaver-service.citadel \
+    android.media.audio.common.types-V6-ndk \
+    android.media.audio.eraser.types-V3-ndk \
     aocd \
     aocxd \
     backup_ota_log.sh \
@@ -309,8 +313,7 @@ PRODUCT_PACKAGES += \
     citadeld \
     com.google.android.camera.experimental2022 \
     com.google.android.camera.extensions \
-    com.google.android.camerax.extensions \
-    com.google.android.widevine-15027108-cp2a \
+    com.google.android.widevine-15719561 \
     com.google.edgetpu.tachyon-service \
     com.google.edgetpu_app_service-V3-ndk.system_ext \
     com.google.edgetpu_vendor_service-V2-ndk.system_ext \
@@ -389,6 +392,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/recovery/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc \
     vendor/google_devices/tangorpro/proprietary/recovery/system/etc/init/android.hardware.fastboot-service.pixel_recovery.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.fastboot-service.pixel_recovery.rc \
     vendor/google_devices/tangorpro/proprietary/recovery/system/etc/init/android.hardware.health-service.gs201_recovery.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.health-service.gs201_recovery.rc \
+    vendor/google_devices/tangorpro/proprietary/system_ext/etc/adaptivehaptics.protolog.pb:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/adaptivehaptics.protolog.pb \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google_devices/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
@@ -412,6 +416,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/system/usr/keylayout/Vendor_0f0d_Product_01b3.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_0f0d_Product_01b3.kl \
     vendor/google_devices/tangorpro/proprietary/system/usr/keylayout/Vendor_0f0d_Product_01b4.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_0f0d_Product_01b4.kl \
     vendor/google_devices/tangorpro/proprietary/system/usr/keylayout/Vendor_2dc8_Product_6006.kl:$(PRODUCT_OUT)/usr/keylayout/Vendor_2dc8_Product_6006.kl \
+    vendor/google_devices/tangorpro/proprietary/vendor_ramdisk/system/bin/modprobe:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/bin/modprobe \
     vendor/google_devices/tangorpro/proprietary/vendor_ramdisk/system/etc/fstab.gs201:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/system/etc/fstab.gs201 \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.bfbs \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs \
@@ -760,7 +765,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.common.fmq-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common.fmq-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.contexthub-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.contexthub-V5-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.drm-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V1-ndk.so \
-    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.drm-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V2-ndk.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.drm-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm-V3-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.drm.common-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm.common-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.dumpstate-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.dumpstate-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.graphics.allocator-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator-V2-ndk.so \
@@ -815,6 +820,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.security.keymint-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-impl.nos.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.security.keymint-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.security.keymint-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V3-ndk.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.security.keymint-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V6-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.security.timestamp-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.timestamp-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.sensors-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors-V3-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@1.0.so \
@@ -838,8 +844,8 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.weaver-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-V3-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.weaver2-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver2-impl.nos.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.wifi.common-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.common-V2-ndk.so \
-    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.wifi.hostapd-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd-V3-ndk.so \
-    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.wifi.supplicant-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant-V5-ndk.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.wifi.hostapd-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.hostapd-V4-ndk.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hardware.wifi.supplicant-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi.supplicant-V6-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hidl.allocator@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.allocator@1.0.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hidl.safe_union@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.safe_union@1.0.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/android.hidl.token@1.0-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.token@1.0-utils.so \
@@ -874,7 +880,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.hardware.pixel.display-V15-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V15-ndk.so \
-    vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.hardware.pixel.display-V23-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V23-ndk.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.hardware.pixel.display-V24-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.pixel.display-V24-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.input-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V2-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/com.google.input-V8-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V8-ndk.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
@@ -999,6 +1005,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgc2_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_utils.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgpuflag_aconfig_rust.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpuflag_aconfig_rust.dylib.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgpuflag_img_aconfig_rust.dylib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpuflag_img_aconfig_rust.dylib.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgralloctypes.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgril_oem-google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgril_oem-google.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/libgui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgui.so \
@@ -1104,6 +1111,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/soundfx/liboffloadeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/liboffloadeffect.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libspatialaudio.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/thermal-budget-interface-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/thermal-budget-interface-ndk.so \
+    vendor/google_devices/tangorpro/proprietary/vendor/lib64/usf_sensor_hal_flags_c_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/usf_sensor_hal_flags_c_lib.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/vendor_chre_atoms_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_atoms_log.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/vendor_chre_metrics-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_metrics-cpp.so \
     vendor/google_devices/tangorpro/proprietary/vendor/lib64/vendor-pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor-pixelatoms-cpp.so \
@@ -1121,7 +1129,7 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/product/etc/appcompat/compat_framework_overrides.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/appcompat/compat_framework_overrides.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/a2dp_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration_7_0.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration_7_0.xml \
-    vendor/google_devices/tangorpro/proprietary/vendor/etc/aidl/hfp/hfp_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_codec_capabilities.xml \
+    vendor/google_devices/tangorpro/proprietary/vendor/etc/aidl/hfp/hfp_default_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/hfp/hfp_default_codec_capabilities.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
@@ -1140,7 +1148,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    vendor/google_devices/tangorpro/proprietary/vendor/etc/memory-limiter-config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/memory-limiter-config.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
     vendor/google_devices/tangorpro/proprietary/vendor/etc/modem/Pixel_Default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default_metrics.xml \

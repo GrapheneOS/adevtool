@@ -1,0 +1,1 @@
+runtime_resource_overlay { name: "DeviceAsWebcamAkita", product_specific: true, }

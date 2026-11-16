@@ -14,7 +14,7 @@
 
 Nežno se dotaknite gumba, ne da bi ga pritisnili."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Dotaknite se gumba za vklop.</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Nastavite odklepanje s prstnim odtisom</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Nastavitev odklepanja s prstnim odtisom</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Dvignite prst in se nato dotaknite. Prst vsakič nekoliko premaknite.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Dvignite in se spet dotaknite</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Tipalo prstnih odtisov je na gumbu za vklop.</string>

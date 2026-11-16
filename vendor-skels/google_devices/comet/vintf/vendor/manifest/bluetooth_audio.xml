@@ -1,6 +1,6 @@
 <!--
     Input:
-        hardware/interfaces/bluetooth/audio/aidl/default/bluetooth_audio.xml
+        hardware/interfaces/bluetooth/audio/aidl/default/v6/bluetooth_audio.xml
 -->
 <manifest version="9.0" type="device">
     <hal format="aidl">

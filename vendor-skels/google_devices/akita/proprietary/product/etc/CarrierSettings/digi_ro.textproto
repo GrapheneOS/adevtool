@@ -1,5 +1,5 @@
 canonical_name: "digi_ro"
-version: 79000000014
+version: 82000000014
 apns {
   apn {
     name: "Digi.Mobil"
@@ -119,5 +119,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502795
+  seconds: 1780331675
 }

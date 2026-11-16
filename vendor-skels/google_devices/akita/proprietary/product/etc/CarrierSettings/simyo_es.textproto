@@ -1,5 +1,5 @@
 canonical_name: "simyo_es"
-version: 79000000014
+version: 82000000015
 apns {
   apn {
     name: "internet simyo"
@@ -275,10 +275,6 @@ configs {
     int_value: 60000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -427,5 +423,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293171
+  seconds: 1781704707
 }

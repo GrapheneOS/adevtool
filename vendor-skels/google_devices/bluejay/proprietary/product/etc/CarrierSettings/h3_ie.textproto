@@ -1,5 +1,5 @@
 canonical_name: "h3_ie"
-version: 79000000028
+version: 82000000028
 apns {
   apn {
     name: "3"

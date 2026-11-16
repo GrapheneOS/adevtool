@@ -1,5 +1,5 @@
 canonical_name: "att_mx"
-version: 79000000028
+version: 82000000030
 apns {
   apn {
     name: "Internet 5G"
@@ -473,5 +473,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1777477716
+  seconds: 1785323446
 }

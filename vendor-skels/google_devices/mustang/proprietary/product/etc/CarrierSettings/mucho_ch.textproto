@@ -1,8 +1,8 @@
 canonical_name: "mucho_ch"
-version: 79000000002
+version: 82000000003
 apns {
   apn {
-    name: "Mucho"
+    name: "INTERNET"
     value: "internet"
     type: DEFAULT
     type: SUPL
@@ -29,5 +29,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756276532
+  seconds: 1784113534
 }

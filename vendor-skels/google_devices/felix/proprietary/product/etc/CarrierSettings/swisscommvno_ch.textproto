@@ -1,5 +1,5 @@
 canonical_name: "swisscommvno_ch"
-version: 79000000007
+version: 82000000009
 apns {
   apn {
     name: "Swisscom Services"
@@ -98,6 +98,10 @@ configs {
   config {
     key: "enabledMMS"
     bool_value: false
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
   }
   config {
     key: "ignore_rtt_mode_setting_bool"
@@ -248,10 +252,6 @@ configs {
     int_value: 180000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 14500
   }
@@ -286,6 +286,10 @@ configs {
   config {
     key: "iwlan.ike_remote_id_type_int"
     int_value: 11
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
   }
   config {
     key: "qns.condition_rove_in_idle_cell_pref_home_guarding_none_string_array"
@@ -487,5 +491,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293151
+  seconds: 1782317086
 }

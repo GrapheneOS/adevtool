@@ -23,6 +23,7 @@
         <item>en.haoplay.and.rm</item>
         <item>com.netease.g108na</item>
         <item>com.nianticlabs.pokemongo</item>
+        <item>com.pid.caravansandwitch</item>
     </array>
     <array name="config_nightDisplayColorTemperatureCoefficients">
         <item>"0.0"</item>

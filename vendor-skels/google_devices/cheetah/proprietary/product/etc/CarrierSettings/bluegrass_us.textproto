@@ -1,5 +1,5 @@
 canonical_name: "bluegrass_us"
-version: 79000000029
+version: 82000000032
 apns {
   apn {
     name: "Bluegrass"
@@ -1074,7 +1074,6 @@ configs {
   config {
     key: "imsvoice.srvcc_type_int_array"
     int_array {
-      item: 2
     }
   }
   config {
@@ -1111,10 +1110,6 @@ configs {
   }
   config {
     key: "inflate_signal_strength_bool"
-    bool_value: true
-  }
-  config {
-    key: "is_ims_conference_size_enforced_bool"
     bool_value: true
   }
   config {
@@ -1370,6 +1365,10 @@ configs {
     }
   }
   config {
+    key: "qns.maximum_attempt_for_wfc_recovery_failure_on_wlan_int"
+    int_value: 5
+  }
+  config {
     key: "qns.non_ims_wlan_hysteresis_timer_ms_int_array"
     int_array {
       item: 120000
@@ -1383,6 +1382,10 @@ configs {
   config {
     key: "qns.sos_transport_type_int"
     int_value: 2
+  }
+  config {
+    key: "qns.support_iwlan_barring_bool"
+    bool_value: false
   }
   config {
     key: "qns.support_service_barring_check_bool"
@@ -1460,6 +1463,10 @@ configs {
       item: 45000
       item: 0
     }
+  }
+  config {
+    key: "qns.wlan_temporarily_block_for_recovery_timer_int"
+    int_value: 60000
   }
   config {
     key: "read_only_apn_fields_string_array"
@@ -1606,5 +1613,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779887900
+  seconds: 1784113510
 }

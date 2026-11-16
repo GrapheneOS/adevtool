@@ -1,5 +1,5 @@
 canonical_name: "orange_ro"
-version: 79000000015
+version: 82000000016
 apns {
   apn {
     name: "Orange Internet"
@@ -39,6 +39,10 @@ configs {
   config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "555"
   }
   config {
     key: "hide_lte_plus_data_icon_bool"
@@ -211,5 +215,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502744
+  seconds: 1781096010
 }

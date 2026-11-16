@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="fingerprint_dialog_touch_sensor">ចុចថ្នមៗលើសេនស័រចាប់ស្នាមម្រាមដៃ</string>
+    <string name="fingerprint_dialog_touch_sensor">ប៉ះថ្នមៗលើសេនស័រចាប់ស្នាមម្រាមដៃ</string>
     <string name="settingslib_learn_more_text">ស្វែងយល់បន្ថែមអំពីការដោះសោ​ដោយប្រើ​ស្នាមម្រាមដៃ</string>
 </resources>

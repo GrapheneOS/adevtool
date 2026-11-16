@@ -1,5 +1,5 @@
 canonical_name: "lguplus_kr"
-version: 79000000001
+version: 82000000002
 apns {
   apn {
     name: "LG uplus IMS"
@@ -16,7 +16,6 @@ apns {
     type: DEFAULT
     type: MMS
     type: SUPL
-    type: FOTA
     mmsc: "http://omammsc.uplus.co.kr:9084"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
@@ -27,6 +26,19 @@ apns {
     type: IA
     protocol: IPV4V6
     roaming_protocol: IPV4V6
+  }
+  apn {
+    name: "LG uplus Tethering"
+    value: "tethering.lguplus.co.kr"
+    type: DUN
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "LG uplus OTA"
+    value: "ota.lguplus.co.kr"
+    type: FOTA
   }
 }
 configs {
@@ -176,5 +188,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1756887166
+  seconds: 1781096018
 }

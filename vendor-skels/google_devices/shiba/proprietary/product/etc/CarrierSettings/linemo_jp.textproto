@@ -1,5 +1,5 @@
 canonical_name: "linemo_jp"
-version: 79000000012
+version: 82000000013
 apns {
   apn {
     name: "IMS"
@@ -413,10 +413,6 @@ configs {
     }
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "local_disconnect_empty_ims_conference_bool"
     bool_value: true
   }
@@ -481,5 +477,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1776866396
+  seconds: 1781704703
 }

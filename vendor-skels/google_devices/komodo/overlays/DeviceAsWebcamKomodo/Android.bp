@@ -1,0 +1,1 @@
+runtime_resource_overlay { name: "DeviceAsWebcamKomodo", product_specific: true, }

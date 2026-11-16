@@ -1,5 +1,5 @@
 canonical_name: "btc_gb"
-version: 79000000016
+version: 82000000017
 apns {
   apn {
     name: "IMS"
@@ -51,6 +51,10 @@ configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
     bool_value: false
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_default_data_roaming_enabled_bool"
@@ -249,5 +253,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496792
+  seconds: 1784718187
 }

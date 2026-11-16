@@ -176,13 +176,6 @@ dex_import {
 }
 
 dex_import {
-    name: "com.google.android.camerax.extensions",
-    owner: "google_devices",
-    jars: [ "system_ext/framework/com.google.android.camerax.extensions.jar" ],
-    system_ext_specific: true,
-}
-
-dex_import {
     name: "com.google.pixel.camera.connectivity",
     owner: "google_devices",
     jars: [ "system_ext/framework/com.google.pixel.camera.connectivity.jar" ],
@@ -400,10 +393,76 @@ android_app_import {
     system_ext_specific: true,
 }
 
-prebuilt_apex {
-    name: "com.google.android.widevine-15027108-cp2a",
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.common-V6-ndk",
     owner: "google_devices",
-    src: "vendor/apex/com.google.android.widevine-15027108-cp2a.apex",
+    target: { android_arm64: { srcs: [ "system/lib64/android.hardware.audio.common-V6-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.core-V5-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "system/lib64/android.hardware.audio.core-V5-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.core.sounddose-V5-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "system/lib64/android.hardware.audio.core.sounddose-V5-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.effect-V5-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "system/lib64/android.hardware.audio.effect-V5-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.common.types-V6-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "system/lib64/android.media.audio.common.types-V6-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.eraser.types-V3-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "system/lib64/android.media.audio.eraser.types-V3-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+prebuilt_apex {
+    name: "com.google.android.widevine-15719561",
+    owner: "google_devices",
+    src: "vendor/apex/com.google.android.widevine-15719561.apex",
     prefer: true,
     soc_specific: true,
 }

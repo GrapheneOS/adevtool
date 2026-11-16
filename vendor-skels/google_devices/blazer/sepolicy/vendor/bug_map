@@ -1,4 +1,5 @@
-ramdump vendor_hw_plat_prop file b/161103878
+crash_dump vendor_slog_file dir b/535915018
+sscoredump sysfs file b/542008326ramdump vendor_hw_plat_prop file b/161103878
 ramdump public_vendor_default_prop file b/161103878
 ramdump proc_bootconfig file b/181615626
 shell vendor_intelligence_prop file b/378120929
@@ -57,7 +58,6 @@ incidentd adaptive_haptics_prop file b/483275291
 init debugfs dir b/478084600
 init debugfs file b/478084600
 init debugfs lnk_file b/483278343
-init debugfs_bootreceiver_tracing dir b/500185337
 init debugfs_wakeup_sources file b/478084600
 init proc_net_mem_max file b/509738049
 init vendor_devices_deferred_debugfs file b/478084600
@@ -86,6 +86,8 @@ servicemanager hal_thermal_default binder b/493474920
 servicemanager modem_logging_control binder b/409173006
 shared_modem_platform modem_ml_svc_sit file b/455728543
 shared_modem_platform proc_pid_max file b/455728543
+shell perfetto process b/535920197
+shell perfetto_traces_data_file file b/535920197
 su logd_iouring anon_inode b/483522093
 su modem_img_file filesystem b/483522093
 su statsd_iouring anon_inode b/455727871
@@ -101,6 +103,8 @@ system_suspend sysfs_batteryinfo file b/434564995
 systemui_app sysfs file b/487491680
 tee persist_ss_file lnk_file b/502126628
 traced statsd_atoms_list_file file b/483522425
+traced_perf gpu_device chr_file b/529549582
+traced_perf privapp_data_file dir b/527706977
 untrusted_app_34 gpu_device chr_file b/509739004
 untrusted_app_34 sysfs file b/487491690
 untrusted_app_36 proc_diskstats file b/481138855
@@ -109,5 +113,6 @@ update_engine dumpstate fifo_file b/483523429
 vendor_init debugfs_trace_marker file b/433609481
 vendor_init debugfs_tracing_instances file b/500186447
 vendor_init default_prop file b/509740232
+vendor_init default_prop property_service b/535460486
 vendor_init device_config_configuration_prop property_service b/509740232
 vendor_init proc_net_mem_max file b/509740232

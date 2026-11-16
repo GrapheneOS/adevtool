@@ -4,7 +4,7 @@
         <item>వేలి పొజిషన్‌ను మార్చండి. మీ వేలిముద్రలోని ఈ ఏరియాతో మీరు ఇప్పటికే తాకేశారు.</item>
     </array>
     <string name="fingerprint_unlock_set_unlock_password">పాస్‌వర్డ్ • వేలిముద్ర</string>
-    <string name="fingerprint_unlock_set_unlock_pattern">ఆకృతి • వేలిముద్ర</string>
+    <string name="fingerprint_unlock_set_unlock_pattern">ప్యాటర్న్ • వేలిముద్ర</string>
     <string name="fingerprint_unlock_set_unlock_pin">PIN • వేలిముద్ర</string>
     <string name="fingerprint_unlock_skip_fingerprint">వేలిముద్ర అన్‌లాక్ లేకుండా కొనసాగించండి</string>
     <string name="fingerprint_unlock_title">వేలిముద్ర అన్‌లాక్‌తో, మీ వేలిముద్రను ఉపయోగించి టాబ్లెట్‌ను అన్‌లాక్ చేయవచ్చు. భద్రతా అవసరాల దృష్ట్యా, ఈ ఆప్షన్‌కు బ్యాకప్ స్క్రీన్ లాక్ అవసరం.</string>
