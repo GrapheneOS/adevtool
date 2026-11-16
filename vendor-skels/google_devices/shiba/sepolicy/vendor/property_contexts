@@ -37,12 +37,12 @@ vendor.google.silicon. u:object_r:vendor_hetero_runtime_prop:s0
 persist.vendor.wifi.sniffer. u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.sniffer.start u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.perf_diag.start u:object_r:vendor_wifi_perf_diag_prop:s0
+persist.vendor.touch.vrr_disabled u:object_r:vendor_twoshay_prop:s0 exact bool
 vendor.touch.gti0. u:object_r:vendor_gti_prop:s0
 vendor.nos.citadel.version u:object_r:vendor_nos_citadel_version:s0
 ro.vendor.flood. u:object_r:vendor_flood_prop:s0
 vendor.perf.allow_experiments u:object_r:vendor_perf_allow_experiments_prop:s0
 vendor.thermal.allow_experiments u:object_r:vendor_thermal_allow_experiments_prop:s0
-vendor.pixel.system.phenotype.Perf__pixelmd_config u:object_r:vendor_pixelmd_config_experiment_prop:s0
 vendor.cbd. u:object_r:vendor_cbd_prop:s0
 persist.vendor.cbd. u:object_r:vendor_cbd_prop:s0
 persist.vendor.ims. u:object_r:vendor_imssvc_prop:s0

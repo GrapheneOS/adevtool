@@ -1,5 +1,5 @@
 canonical_name: "lebara_nl"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "Lebara"
@@ -38,6 +38,12 @@ configs {
     bool_value: true
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
     key: "rtt_downgrade_supported_bool"
     bool_value: true
   }
@@ -55,5 +61,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1764766940
+  seconds: 1787137442
 }

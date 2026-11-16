@@ -1,5 +1,5 @@
 canonical_name: "ee_gb"
-version: 79000000013
+version: 82000000018
 apns {
   apn {
     name: "IMS"
@@ -49,8 +49,16 @@ apns {
 }
 configs {
   config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
+  config {
     key: "carrier_cross_sim_ims_available_bool"
     bool_value: false
+  }
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_default_data_roaming_enabled_bool"
@@ -321,6 +329,10 @@ configs {
     }
   }
   config {
+    key: "nr_advanced_sa_icon_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: false
   }
@@ -339,6 +351,10 @@ configs {
   config {
     key: "qns.xcap_rat_preference_int"
     int_value: 2
+  }
+  config {
+    key: "sa_to_nsa_grace_time_sec_int"
+    int_value: 10
   }
   config {
     key: "show_4g_for_lte_data_icon_bool"
@@ -368,5 +384,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293178
+  seconds: 1787137469
 }

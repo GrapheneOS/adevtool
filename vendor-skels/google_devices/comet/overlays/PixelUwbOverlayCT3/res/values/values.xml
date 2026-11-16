@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="android_specific_timesync_supported">true</bool>
     <bool name="background_ranging_enabled">true</bool>
     <bool name="config_isDlTdoaRangingIndexesUpdateSupported">false</bool>
     <bool name="enable_16_byte_hopmodekey">true</bool>
@@ -8,4 +9,6 @@
     <bool name="enable_random_hopmodekey">true</bool>
     <bool name="is_multicast_list_update_ntf_v2_supported">true</bool>
     <bool name="is_multicast_list_update_rsp_v2_supported">true</bool>
+    <bool name="timesync_accuracy_verified">true</bool>
+    <integer name="timesync_uncertainty_override">0</integer>
 </resources>

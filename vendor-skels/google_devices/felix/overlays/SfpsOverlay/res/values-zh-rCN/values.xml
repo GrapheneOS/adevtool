@@ -20,10 +20,10 @@
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">指纹传感器在电源按钮上。</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">请轻触传感器</string>
     <string name="security_settings_fingerprint_preference_title">指纹解锁</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">指纹解锁功能会为您创建一个独一无二的指纹模型，用于验证您的身份。在设置过程中，您需要录入指纹不同部位的图像，才能创建指纹模型。</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">指纹解锁功能会为您创建专属指纹模型，以便验证身份。在设置过程中，系统需采集指纹不同部位的图像，才能创建指纹模型。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">您使用指纹解锁功能时产生的图像会用于更新您的指纹模型。系统绝不会存储创建指纹模型时所用的图像，您的指纹模型会安全地存储在手机本地，绝不外泄。整个处理过程都在您的手机上完成，安全有保证。</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">您可以随时在“设置”部分删除您的指纹模型或关闭指纹解锁功能。指纹模型会存储在手机上，直到您将其删除为止。</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">指纹解锁功能会为您的孩子创建一个独一无二的指纹模型，用于验证其身份。在设置过程中，孩子需要录入指纹不同部位的图像，才能创建指纹模型。</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">您可以随时在“设置”中删除您的指纹模型或关闭指纹解锁功能。指纹模型会存储在手机上，直至被删除。</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">指纹解锁功能会为您的孩子创建专属指纹模型，以便验证身份。在设置过程中，孩子需要录入指纹不同部位的图像，才能创建指纹模型。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">您的孩子使用指纹解锁功能时产生的图像会作为系统更新其指纹模型的依据。系统绝不会存储孩子用来创建指纹模型的图像，只会将指纹模型安全地存储在手机上，并且绝不会外泄。整个处理过程都是在手机上安全进行。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4">您和您的孩子可以随时在“设置”部分删除其指纹模型或关闭指纹解锁功能。指纹模型会存储在手机上，直到被删除为止。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_message_learn_more">"如需了解详情，请访问 &lt;a href='http://g.co/pixel/fingerprintunlock'&gt;g.co/pixel/fingerprintunlock&lt;/a&gt;。"</string>

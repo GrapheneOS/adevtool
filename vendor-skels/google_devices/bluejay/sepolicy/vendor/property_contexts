@@ -42,6 +42,7 @@ vendor.google.silicon. u:object_r:vendor_hetero_runtime_prop:s0
 persist.vendor.wifi.sniffer. u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.sniffer.start u:object_r:vendor_wifi_sniffer_prop:s0
 vendor.wifi.perf_diag.start u:object_r:vendor_wifi_perf_diag_prop:s0
+persist.vendor.touch.vrr_disabled u:object_r:vendor_twoshay_prop:s0 exact bool
 vendor.pktrouter u:object_r:vendor_ims_prop:s0
 ro.vendor.touch.dump. u:object_r:vendor_touch_dump_path_prop:s0
 vendor.nos.citadel.version u:object_r:vendor_nos_citadel_version:s0

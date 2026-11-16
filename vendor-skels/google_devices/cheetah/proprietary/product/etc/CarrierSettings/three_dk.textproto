@@ -1,5 +1,5 @@
 canonical_name: "three_dk"
-version: 79000000017
+version: 82000000019
 apns {
   apn {
     name: "3"
@@ -268,8 +268,8 @@ configs {
     int_value: 0
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
+    key: "iwlan.ike_sa_transforms_reorder_bool"
+    bool_value: false
   }
   config {
     key: "prefer_2g_bool"
@@ -314,5 +314,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293145
+  seconds: 1785323446
 }

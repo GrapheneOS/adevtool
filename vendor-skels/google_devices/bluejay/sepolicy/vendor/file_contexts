@@ -24,7 +24,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]+\.[0-9]+-service\.clearkey u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.configstore@1\.0-service u:object_r:hal_configstore_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-gto-ese2 u:object_r:hal_secure_element_st33spi_exec:s0
+/(vendor|system/vendor)/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default u:object_r:hal_oemcrypto_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm(@[0-9]+\.[0-9]+)?-service\.widevine u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/com\.google\.android\.widevine\.oemcrypto-service\.default-lazy u:object_r:hal_oemcrypto_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.ExynosHWCServiceTW@1\.0-service u:object_r:hal_vendor_hwcservice_default_exec:s0
 /dev/sg[0-9] u:object_r:sg_device:s0
 /persist(/.*)? u:object_r:persist_file:s0
@@ -369,6 +371,7 @@
 /vendor/bin/dump/dump_devfreq u:object_r:dump_devfreq_exec:s0
 /dev/acd-hotword_notification u:object_r:aoc_device:s0
 /dev/acd-chre_data_rx_nonwake u:object_r:aoc_device:s0
+/dev/acd-gnss_passthrough_ctl u:object_r:aoc_device:s0
 /vendor/bin/pixelstats-vendor u:object_r:pixelstats_vendor_exec:s0
 /vendor/bin/dump/dump_storage u:object_r:dump_storage_exec:s0
 /vendor/bin/dump/dump_sensors u:object_r:dump_sensors_exec:s0
@@ -395,6 +398,8 @@
 /vendor/bin/hw/block_queue_depth u:object_r:block_queue_depth_exec:s0
 /vendor/lib64/libedgetpu_util\.so u:object_r:same_process_hal_file:s0
 /dev/dma_heap/sensor_direct_heap u:object_r:sensor_direct_heap_device:s0
+/dev/acd-gnss_passthrough_data_tx u:object_r:aoc_device:s0
+/dev/acd-gnss_passthrough_data_rx u:object_r:aoc_device:s0
 /vendor/bin/dump/dump_fingerprint u:object_r:dump_fingerprint_exec:s0
 /vendor/bin/hw/battery_mitigation u:object_r:battery_mitigation_exec:s0
 /dev/logbuffer_maxfg_base_monitor u:object_r:logbuffer_device:s0

@@ -1,5 +1,5 @@
 canonical_name: "webbing_hk"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "Webbing"
@@ -31,6 +31,18 @@ configs {
     bool_value: true
   }
   config {
+    key: "default_vm_number_roaming_string"
+    text_value: "+85262610990"
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+85262610990"
+  }
+  config {
+    key: "force_home_network_bool"
+    bool_value: true
+  }
+  config {
     key: "imsss.xcap_over_ut_supported_rats_int_array"
     int_array {
       item: 6
@@ -50,5 +62,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819178
+  seconds: 1785323492
 }

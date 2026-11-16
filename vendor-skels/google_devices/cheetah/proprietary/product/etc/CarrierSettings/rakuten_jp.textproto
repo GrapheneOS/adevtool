@@ -1,5 +1,5 @@
 canonical_name: "rakuten_jp"
-version: 79000000019
+version: 82000000019
 apns {
   apn {
     name: "Internet"

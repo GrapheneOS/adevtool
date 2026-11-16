@@ -1,5 +1,5 @@
 canonical_name: "inland_us"
-version: 79000000002
+version: 82000000003
 apns {
   apn {
     name: "Inland"
@@ -97,6 +97,26 @@ configs {
     text_value: "X-MDN: ##LINE1##"
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
     key: "imsserviceentitlement.entitlement_server_url_string"
     text_value: "https://inland.dcc.ts43.entitlements.io3.com"
   }
@@ -162,5 +182,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1749144206
+  seconds: 1787137484
 }

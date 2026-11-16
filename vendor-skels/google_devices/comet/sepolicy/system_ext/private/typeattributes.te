@@ -14,6 +14,8 @@ typeattribute traced_tmpfs tmpfs_type;
 typeattribute ueventd_tmpfs tmpfs_type;
 typeattribute webview_zygote_tmpfs tmpfs_type;
 typeattribute zygote_tmpfs tmpfs_type;
+typeattribute aisealhostservice halclientdomain;
+typeattribute aisealhostservice hal_graphics_allocator_client;
 typeattribute artd_tmpfs tmpfs_type;
 typeattribute crosvm_domain_tmpfs tmpfs_type;
 typeattribute crosvm_vu_fs_tmpfs tmpfs_type;

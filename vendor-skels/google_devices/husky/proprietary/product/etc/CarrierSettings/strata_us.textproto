@@ -1,5 +1,5 @@
 canonical_name: "strata_us"
-version: 79000000011
+version: 82000000012
 apns {
   apn {
     name: "Rinainternet"
@@ -84,7 +84,11 @@ configs {
     key: "imsvoice.voice_qos_precondition_supported_bool"
     bool_value: false
   }
+  config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1759305448
+  seconds: 1782902357
 }

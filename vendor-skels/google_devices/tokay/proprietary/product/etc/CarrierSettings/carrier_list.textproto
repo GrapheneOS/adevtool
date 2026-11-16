@@ -5,17 +5,17 @@ entry {
   }
 }
 entry {
+  canonical_name: "amarisoft_satellite"
+  carrier_id {
+    mcc_mnc: "00101"
+    gid1: "A5A72026"
+  }
+}
+entry {
   canonical_name: "test001_amarisoft"
   carrier_id {
     mcc_mnc: "00101"
     gid1: "ABCD2025"
-  }
-}
-entry {
-  canonical_name: "amarisoft_satellite"
-  carrier_id {
-    mcc_mnc: "00101"
-    gid1: "52FF"
   }
 }
 entry {
@@ -483,6 +483,12 @@ entry {
   }
 }
 entry {
+  canonical_name: "digi_be"
+  carrier_id {
+    mcc_mnc: "20612"
+  }
+}
+entry {
   canonical_name: "citymesh_be"
   carrier_id {
     mcc_mnc: "20613"
@@ -541,6 +547,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "coopvoce_it"
+  carrier_id {
+    mcc_mnc: "20801"
+    gid1: "434F4F50FFFFFFFFFF"
+  }
+}
+entry {
   canonical_name: "webbing_hk"
   carrier_id {
     mcc_mnc: "20801"
@@ -587,6 +600,13 @@ entry {
   carrier_id {
     mcc_mnc: "20801"
     iccid: "894936"
+  }
+}
+entry {
+  canonical_name: "coopvoce_it"
+  carrier_id {
+    mcc_mnc: "20801"
+    spn: "CoopVoce"
   }
 }
 entry {
@@ -647,6 +667,48 @@ entry {
   carrier_id {
     mcc_mnc: "20809"
     imsi: "208090021"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "20809"
+    imsi: "208090073"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "20809"
+    imsi: "208090074"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "20809"
+    imsi: "208090075"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "20809"
+    imsi: "208090161"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "20809"
+    imsi: "208090162"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "20809"
+    imsi: "208090163"
   }
 }
 entry {
@@ -1885,7 +1947,6 @@ entry {
   canonical_name: "vianova_it"
   carrier_id {
     mcc_mnc: "22249"
-    spn: "vianova"
   }
 }
 entry {
@@ -3308,6 +3369,12 @@ entry {
   }
 }
 entry {
+  canonical_name: "naf3_no"
+  carrier_id {
+    mcc_mnc: "24225"
+  }
+}
+entry {
   canonical_name: "dna_fi"
   carrier_id {
     mcc_mnc: "24403"
@@ -3402,20 +3469,6 @@ entry {
   canonical_name: "bite_lv"
   carrier_id {
     mcc_mnc: "24705"
-  }
-}
-entry {
-  canonical_name: "send_ee"
-  carrier_id {
-    mcc_mnc: "24801"
-    imsi: "248010x2"
-  }
-}
-entry {
-  canonical_name: "send_ee"
-  carrier_id {
-    mcc_mnc: "24801"
-    imsi: "248010x3"
   }
 }
 entry {
@@ -3844,6 +3897,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "amigo_pt"
+  carrier_id {
+    mcc_mnc: "26801"
+    gid1: "25"
+  }
+}
+entry {
   canonical_name: "vodafone_pt"
   carrier_id {
     mcc_mnc: "26801"
@@ -4138,7 +4198,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "28010"
+  canonical_name: "epic_cy"
   carrier_id {
     mcc_mnc: "28010"
   }
@@ -4449,10 +4509,94 @@ entry {
   }
 }
 entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220520"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220521"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220522"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220718"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220719"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220720"
+  }
+}
+entry {
   canonical_name: "cape_ca"
   carrier_id {
     mcc_mnc: "302220"
     imsi: "302220723"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220724"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220725"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220726"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220727"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220728"
+  }
+}
+entry {
+  canonical_name: "dish5gsa_us"
+  carrier_id {
+    mcc_mnc: "302220"
+    imsi: "302220729"
   }
 }
 entry {
@@ -5508,6 +5652,13 @@ entry {
   }
 }
 entry {
+  canonical_name: "lexvor_us"
+  carrier_id {
+    mcc_mnc: "310240"
+    gid1: "6927"
+  }
+}
+entry {
   canonical_name: "tello_us"
   carrier_id {
     mcc_mnc: "310240"
@@ -6042,6 +6193,13 @@ entry {
   carrier_id {
     mcc_mnc: "310260"
     gid1: "6926"
+  }
+}
+entry {
+  canonical_name: "lexvor_us"
+  carrier_id {
+    mcc_mnc: "310260"
+    gid1: "6927"
   }
 }
 entry {
@@ -6999,20 +7157,6 @@ entry {
   carrier_id {
     mcc_mnc: "310599"
     gid1: "BA01450000000000"
-  }
-}
-entry {
-  canonical_name: "spectrum_us"
-  carrier_id {
-    mcc_mnc: "310599"
-    gid1: "BA01490000000000"
-  }
-}
-entry {
-  canonical_name: "cox_us"
-  carrier_id {
-    mcc_mnc: "310599"
-    gid1: "BA01570000000000"
   }
 }
 entry {
@@ -8620,6 +8764,13 @@ entry {
   canonical_name: "gigsky_us"
   carrier_id {
     mcc_mnc: "312870"
+  }
+}
+entry {
+  canonical_name: "firstnet5gsa_us"
+  carrier_id {
+    mcc_mnc: "313100"
+    gid1: "52FF"
   }
 }
 entry {
@@ -12535,63 +12686,75 @@ entry {
   }
 }
 entry {
-  canonical_name: "chinamobile_cn"
+  canonical_name: "cmcc_cn"
   carrier_id {
     mcc_mnc: "46000"
   }
 }
 entry {
-  canonical_name: "46001"
+  canonical_name: "cu_cn"
   carrier_id {
     mcc_mnc: "46001"
   }
 }
 entry {
-  canonical_name: "chinamobile_cn"
+  canonical_name: "cmcc_cn"
   carrier_id {
     mcc_mnc: "46002"
   }
 }
 entry {
-  canonical_name: "46003"
+  canonical_name: "ct_cn"
   carrier_id {
     mcc_mnc: "46003"
   }
 }
 entry {
-  canonical_name: "chinamobile_cn"
+  canonical_name: "cmcc_cn"
   carrier_id {
     mcc_mnc: "46004"
   }
 }
 entry {
-  canonical_name: "46005"
+  canonical_name: "ct_cn"
   carrier_id {
     mcc_mnc: "46005"
   }
 }
 entry {
-  canonical_name: "chinamobile_cn"
+  canonical_name: "cu_cn"
+  carrier_id {
+    mcc_mnc: "46006"
+  }
+}
+entry {
+  canonical_name: "cmcc_cn"
   carrier_id {
     mcc_mnc: "46007"
   }
 }
 entry {
-  canonical_name: "chinamobile_cn"
+  canonical_name: "cmcc_cn"
   carrier_id {
     mcc_mnc: "46008"
   }
 }
 entry {
-  canonical_name: "46009"
+  canonical_name: "cu_cn"
   carrier_id {
     mcc_mnc: "46009"
   }
 }
 entry {
-  canonical_name: "46011"
+  canonical_name: "ct_cn"
   carrier_id {
     mcc_mnc: "46011"
+  }
+}
+entry {
+  canonical_name: "ct_cn"
+  carrier_id {
+    mcc_mnc: "46012"
   }
 }
 entry {
@@ -17603,7 +17766,7 @@ entry {
   }
 }
 entry {
-  canonical_name: "pn_xx"
+  canonical_name: "airbus_es"
   carrier_id {
     mcc_mnc: "999341"
   }
@@ -17987,9 +18150,10 @@ entry {
   }
 }
 entry {
-  canonical_name: "pn_xx"
+  canonical_name: "naf3_no"
   carrier_id {
     mcc_mnc: "99940"
+    spn: "BANSHEE"
   }
 }
 entry {
@@ -21953,7 +22117,7 @@ entry {
     mcc_mnc: "999999"
   }
 }
-version: 79000000590
+version: 82000000596
 4 {
-  1: 1785465780
+  1: 1790830796
 }

@@ -1,5 +1,5 @@
 canonical_name: "bell_ca"
-version: 79000000023
+version: 82000000026
 apns {
   apn {
     name: "Bell Mobility"
@@ -147,7 +147,7 @@ configs {
   }
   config {
     key: "ims.sip_over_ipsec_enabled_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "ims.sip_timer_f_millis_int"
@@ -372,10 +372,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -495,5 +491,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293145
+  seconds: 1783493935
 }

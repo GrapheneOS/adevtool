@@ -1,5 +1,5 @@
 canonical_name: "batelco_bh"
-version: 79000000006
+version: 82000000007
 apns {
   apn {
     name: "GPRS"
@@ -89,10 +89,14 @@ configs {
     }
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1744684837
+  seconds: 1782902357
 }

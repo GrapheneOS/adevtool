@@ -3,7 +3,7 @@
     <string name="fingerprint_acquired_imager_dirty_udfps">Очистьте екран біля сканера</string>
     <string name="fingerprint_udfps_pre_enroll_runner_dialog_message">Витріть екран, щоб видалити всі сліди, плями й розводи. Це допоможе отримати чіткіші зображення відбитків пальців.</string>
     <string name="fingerprint_udfps_pre_enroll_runner_dialog_title">Витріть екран, перш ніж продовжити</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_6">"Перш ніж налаштувати відбиток пальця, приклейте на екран захисну плівку або захисне скло (за наявності), щоб розпізнавання працювало краще.
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_6">"Якщо ви плануєте наклеїти захисну плівку або скло, зробіть це перед тим, як додати відбиток пальця, щоб розпізнавання працювало краще.
 
 Радимо використовувати захисну плівку чи скло, що мають маркування Made for Google. Якщо вони не матимуть такого маркування, відбиток пальця може не розпізнаватися."</string>
     <string name="security_settings_udfps_enroll_fingertip_title">Торкніться екрана кінчиком пальця</string>

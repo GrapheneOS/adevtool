@@ -1,5 +1,5 @@
 canonical_name: "a1mpn_at"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "A1 MPN IA"
@@ -188,6 +188,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 240000
+  }
+  config {
     key: "imsvoice.voice_qos_precondition_supported_bool"
     bool_value: false
   }
@@ -249,5 +253,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772636225
+  seconds: 1787742280
 }

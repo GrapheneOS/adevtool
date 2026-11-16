@@ -1,20 +1,20 @@
 canonical_name: "fi_tmo_us"
-version: 79000000016
+version: 82000000017
 apns {
 }
 configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
     int_array {
+      item: -128
       item: -120
-      item: -114
       item: -109
       item: -100
     }
   }
   config {
     key: "additional_settings_call_waiting_visibility_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "additional_settings_caller_id_visibility_bool"
@@ -541,7 +541,7 @@ configs {
   }
   config {
     key: "imsvoice.rtp_packet_loss_rate_threshold_int"
-    int_value: 30
+    int_value: 20
   }
   config {
     key: "imsvoice.voice_on_default_bearer_supported_bool"
@@ -558,10 +558,6 @@ configs {
   config {
     key: "imsvt.video_rtp_dscp_int"
     int_value: 34
-  }
-  config {
-    key: "inflate_signal_strength_bool"
-    bool_value: true
   }
   config {
     key: "iwlan.derive_nai_from_imsi_bool"
@@ -638,8 +634,8 @@ configs {
   config {
     key: "lte_rsrp_thresholds_int_array"
     int_array {
+      item: -128
       item: -120
-      item: -114
       item: -109
       item: -100
     }
@@ -808,6 +804,18 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_supported_disaster_plmn_string_array"
+    text_array {
+      item: "310210"
+    }
+  }
+  config {
+    key: "satellite_supported_emergency_plmn_string_array"
+    text_array {
+      item: "312190"
+    }
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: false
   }
@@ -853,5 +861,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1786733301
+  seconds: 1789413105
 }

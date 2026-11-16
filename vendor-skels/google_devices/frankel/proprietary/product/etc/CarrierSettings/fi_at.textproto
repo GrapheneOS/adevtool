@@ -1,20 +1,20 @@
 canonical_name: "fi_at"
-version: 79000000012
+version: 82000000013
 apns {
 }
 configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
     int_array {
-      item: -125
+      item: -128
       item: -120
-      item: -114
       item: -109
+      item: -100
     }
   }
   config {
     key: "additional_settings_call_waiting_visibility_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "additional_settings_caller_id_visibility_bool"
@@ -421,6 +421,15 @@ configs {
     }
   }
   config {
+    key: "lte_rsrp_thresholds_int_array"
+    int_array {
+      item: -128
+      item: -120
+      item: -109
+      item: -100
+    }
+  }
+  config {
     key: "maxImageHeight"
     int_value: 1994
   }
@@ -474,8 +483,8 @@ configs {
   config {
     key: "qns.idle_eutran_rsrp_int_array"
     int_array {
-      item: -108
-      item: -115
+      item: -109
+      item: -114
     }
   }
   config {
@@ -517,8 +526,8 @@ configs {
   config {
     key: "qns.video_eutran_rsrp_int_array"
     int_array {
-      item: -108
-      item: -115
+      item: -109
+      item: -114
     }
   }
   config {
@@ -552,8 +561,8 @@ configs {
   config {
     key: "qns.voice_eutran_rsrp_int_array"
     int_array {
-      item: -108
-      item: -115
+      item: -109
+      item: -114
     }
   }
   config {
@@ -613,6 +622,10 @@ configs {
     text_value: "us"
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -638,5 +651,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1786733301
+  seconds: 1787774993
 }

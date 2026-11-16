@@ -1,5 +1,5 @@
 canonical_name: "spusu_it"
-version: 79000000004
+version: 82000000005
 apns {
   apn {
     name: "spusu"
@@ -53,6 +53,29 @@ configs {
     int_value: 0
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -80,5 +103,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1773236727
+  seconds: 1787137476
 }

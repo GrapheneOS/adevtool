@@ -1,0 +1,39 @@
+canonical_name: "csl_hk"
+version: 82000000001
+apns {
+  apn {
+    name: "1O1O"
+    value: "mobile"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    authtype: 3
+    mmsc: "http://192.168.58.171:8002"
+    mmsc_proxy: "192.168.59.51"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "SUN Mobile"
+    value: "SUNMobile"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    authtype: 3
+    mmsc: "http://192.168.58.171:8002"
+    mmsc_proxy: "192.168.59.61"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.sip_preferred_transport_int"
+    int_value: 0
+  }
+}
+last_updated {
+  seconds: 1782902378
+}

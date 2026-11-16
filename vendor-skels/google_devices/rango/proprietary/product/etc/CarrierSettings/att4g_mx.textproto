@@ -1,5 +1,5 @@
 canonical_name: "att4g_mx"
-version: 79000000013
+version: 82000000013
 apns {
   apn {
     name: "Internet"

@@ -1,5 +1,6 @@
 AdaptiveHapticsAkitaOverlay
 CellBroadcastReceiverOverlay
+DeviceAsWebcamAkita
 EuiccSupportPixelOverlay
 GlanceableHubConfigOverlay
 GlanceableHubSettingsConfigOverlay

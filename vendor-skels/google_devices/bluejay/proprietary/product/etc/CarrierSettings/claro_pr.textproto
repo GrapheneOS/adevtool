@@ -1,5 +1,5 @@
 canonical_name: "claro_pr"
-version: 79000000010
+version: 82000000010
 apns {
   apn {
     name: "Puerto Rico:Claro:LTE"

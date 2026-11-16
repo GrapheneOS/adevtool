@@ -1,5 +1,5 @@
 canonical_name: "vivo_br"
-version: 79000000003
+version: 82000000004
 apns {
   apn {
     name: "Vivo MMS"
@@ -87,10 +87,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1780502771
+  seconds: 1782902350
 }

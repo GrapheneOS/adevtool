@@ -1,5 +1,5 @@
 canonical_name: "fet_tw"
-version: 79000000015
+version: 82000000016
 apns {
   apn {
     name: "\351\201\240\345\202\263\351\233\273\344\277\241(Far EasTone) (Internet)"
@@ -264,10 +264,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.epdg_address_priority_int_array"
     int_array {
       item: 0
@@ -329,5 +325,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293178
+  seconds: 1781704711
 }

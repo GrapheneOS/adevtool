@@ -1,5 +1,5 @@
 canonical_name: "docomo_jp"
-version: 79000000008
+version: 82000000008
 apns {
   apn {
     name: "sp\343\203\242\343\203\274\343\203\211"
@@ -385,5 +385,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1785465842
+  seconds: 1785323492
 }

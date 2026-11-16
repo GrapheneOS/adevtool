@@ -1,5 +1,5 @@
 canonical_name: "verizon_generic_mvno_us"
-version: 79000000003
+version: 82000000007
 apns {
   apn {
     name: "Verizon"
@@ -826,7 +826,6 @@ configs {
   config {
     key: "imsvoice.srvcc_type_int_array"
     int_array {
-      item: 2
     }
   }
   config {
@@ -872,10 +871,6 @@ configs {
       item: "*611:+19085594899"
       item: "*86:+1MDN"
     }
-  }
-  config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
   }
   config {
     key: "iwlan.add_wifi_mac_addr_to_nai_bool"
@@ -1142,6 +1137,10 @@ configs {
     }
   }
   config {
+    key: "qns.maximum_attempt_for_wfc_recovery_failure_on_wlan_int"
+    int_value: 5
+  }
+  config {
     key: "qns.non_ims_wlan_hysteresis_timer_ms_int_array"
     int_array {
       item: 120000
@@ -1155,6 +1154,10 @@ configs {
   config {
     key: "qns.sos_transport_type_int"
     int_value: 2
+  }
+  config {
+    key: "qns.support_iwlan_barring_bool"
+    bool_value: false
   }
   config {
     key: "qns.support_service_barring_check_bool"
@@ -1232,6 +1235,10 @@ configs {
       item: 45000
       item: 0
     }
+  }
+  config {
+    key: "qns.wlan_temporarily_block_for_recovery_timer_int"
+    int_value: 60000
   }
   config {
     key: "read_only_apn_fields_string_array"
@@ -1353,6 +1360,10 @@ configs {
     bool_value: false
   }
   config {
+    key: "vzw_wfc_silent_enablement_bool"
+    bool_value: true
+  }
+  config {
     key: "wfc_emergency_address_carrier_app_string"
     text_value: "com.google.android.wfcactivation/.VzwEmergencyAddressActivity"
   }
@@ -1387,5 +1398,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779887900
+  seconds: 1787137435
 }

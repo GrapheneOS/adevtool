@@ -20,12 +20,14 @@
         <item>pl</item>
         <item>si</item>
         <item>ba</item>
+        <item>cn</item>
     </array>
     <array name="config_dynamic_routing_emergency_numbers">
-        <item>pk,01,15,115</item>
-        <item>pk,03,15</item>
-        <item>pk,06,15,115</item>
-        <item>pk,07,15,115</item>
+        <item>pk,01,15,16,115</item>
+        <item>pk,03,15,16,115</item>
+        <item>pk,04,15,16,115</item>
+        <item>pk,06,15,16,115</item>
+        <item>pk,07,15,16,115</item>
         <item>bd,01,999</item>
         <item>th,00,191,199,1669</item>
         <item>th,03,191,199,1669</item>
@@ -65,6 +67,16 @@
         <item>re,,115,119,191,196,197,116000,116111,116117</item>
         <item>si,,113</item>
         <item>ba,,122,123,124</item>
+        <item>cn,00,110,119,120,122</item>
+        <item>cn,01,110,119,120,122</item>
+        <item>cn,02,110,119,120,122</item>
+        <item>cn,04,110,119,120,122</item>
+        <item>cn,05,110,119,120,122</item>
+        <item>cn,06,110,119,120,122</item>
+        <item>cn,07,110,119,120,122</item>
+        <item>cn,08,110,119,120,122</item>
+        <item>cn,09,110,119,120,122</item>
+        <item>cn,11,110,119,120,122</item>
     </array>
     <bool name="config_enabled_lte">true</bool>
     <bool name="config_support_rtt">true</bool>

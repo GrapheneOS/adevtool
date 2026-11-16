@@ -1,5 +1,5 @@
 canonical_name: "cloudcore_ca"
-version: 79000000007
+version: 82000000008
 apns {
   apn {
     name: "Telus Tethered"
@@ -290,10 +290,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: false
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -493,5 +489,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293151
+  seconds: 1781704696
 }

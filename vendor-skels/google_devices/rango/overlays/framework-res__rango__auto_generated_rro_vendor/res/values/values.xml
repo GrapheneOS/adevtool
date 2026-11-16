@@ -309,12 +309,12 @@
         <item>1.0</item>
     </array>
     <array name="config_displayWhiteBalanceLowLightAmbientBrightnesses">
-        <item>3.0</item>
         <item>10.0</item>
+        <item>20.0</item>
     </array>
     <array name="config_displayWhiteBalanceLowLightAmbientBrightnessesStrong">
-        <item>3.0</item>
         <item>10.0</item>
+        <item>20.0</item>
     </array>
     <array name="config_displayWhiteBalanceStrongAmbientColorTemperatures">
         <item>3000</item>

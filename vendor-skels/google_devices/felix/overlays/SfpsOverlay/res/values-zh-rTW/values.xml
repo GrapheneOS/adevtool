@@ -20,8 +20,8 @@
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">指紋感應器在電源鍵上。</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">請改為輕觸感應器</string>
     <string name="security_settings_fingerprint_preference_title">指紋解鎖</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">指紋解鎖功能會建立你的專屬指紋模型，用以驗證身分。設定過程中，系統會擷取指紋不同區塊的圖像，進而建立指紋模型。</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">使用指紋解鎖功能時產生的圖像會做為系統更新指紋模型的依據。系統不會儲存建立指紋模型時使用的圖像，只會將指紋模型安全儲存在手機上，而且絕對不會傳送至他處。整個處理過程都是在手機上進行，安全有保障。</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">指紋解鎖功能會建立你的專屬指紋模型，用以驗證身分。設定過程中，系統會擷取指紋不同區塊的圖像來建立模型。</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">使用指紋解鎖功能時產生的圖像，會做為系統更新指紋模型的依據。建立模型所需的影像一律不會留存，指紋模型則會安全儲存在手機內，絕不外洩。整個處理過程都是在手機上進行，安全有保障。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">你隨時可以前往「設定」刪除指紋模型或停用指紋解鎖功能。指紋模型會儲存在手機上，直到你刪除為止。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">指紋解鎖功能會建立孩子的專屬指紋模型，用來驗證他們的身分。在設定期間，孩子必須拍攝指紋的各個部位，才能建立這個指紋模型。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">孩子使用指紋解鎖功能時產生的圖像會做為系統更新指紋模型的依據。系統絕不會儲存建立孩子指紋模型時使用的圖像，只會將指紋模型安全儲存在手機上，而且絕對不會傳送至他處。整個處理過程都是在手機上進行，安全有保障。</string>

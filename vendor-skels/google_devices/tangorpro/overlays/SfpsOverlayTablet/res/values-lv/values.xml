@@ -14,7 +14,7 @@
 
 Viegli pieskarieties pogai, to nenospiežot."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Pieskarieties barošanas pogai</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Autorizācija ar pirksta nospiedumu</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Pirksta nospieduma iestatīšana</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Paceliet pirkstu un pēc tam atkal pieskarieties. Katru reizi nedaudz pakustiniet pirkstu.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Pieskarieties vairākas reizes</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Pirksta nospieduma sensors atrodas uz barošanas pogas.</string>

@@ -1,5 +1,5 @@
 canonical_name: "no_sim"
-version: 79000000007
+version: 82000000008
 configs {
   config {
     key: "carrier_cross_sim_ims_available_bool"
@@ -278,6 +278,10 @@ configs {
     }
   }
   config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.handover_to_wwan_release_delay_second_int"
     int_value: 5
   }
@@ -490,5 +494,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1767800604
+  seconds: 1781704700
 }

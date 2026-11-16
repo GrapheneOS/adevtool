@@ -8,7 +8,7 @@
     <string name="security_settings_fingerprint_bad_calibration">修理業者に調整を依頼するか、g.co/pixel/fingerprintunlock にアクセスしてください。</string>
     <string name="security_settings_fingerprint_enroll_consent_introduction_title">指紋認証の許可</string>
     <string name="security_settings_fingerprint_enroll_finish_message">指紋認証は、スマートフォンのロック解除やアプリの本人確認に使用する回数が増えれば増えるほど精度が向上します</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">指紋認証をセットアップ</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">指紋認証を設定する</string>
     <string name="security_settings_fingerprint_preference_title">指紋認証</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">さまざまな角度から指紋を撮影して一意のモデルを作成し、本人確認に使用します。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">指紋認証を使用すると、画像を基に指紋モデルが更新されます。指紋の画像と指紋モデルはスマートフォンに安全に保存されます。この情報が外部に送信されることは一切なく、処理はすべてスマートフォン上で安全に行われます。</string>

@@ -1,0 +1,63 @@
+canonical_name: "ct_cn"
+version: 82000000001
+apns {
+  apn {
+    name: "CTNET"
+    value: "ctnet"
+    type: CBS
+    type: DEFAULT
+    type: HIPRI
+    type: FOTA
+    server: "*"
+    user: "ctnet@mycdma.cn"
+    password: "vnet.mobi"
+    authtype: 3
+  }
+  apn {
+    name: "CTWAP"
+    value: "ctwap"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: HIPRI
+    type: FOTA
+    type: CBS
+    server: "*"
+    user: "ctwap@mycdma.cn"
+    password: "vnet.mobi"
+    authtype: 3
+    mmsc: "http://mmsc.vnet.mobi"
+    mmsc_proxy: "10.0.0.200"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+  config {
+    key: "ascii_7_bit_support_for_long_message_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_apn_setting_cdma_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1785927822
+}

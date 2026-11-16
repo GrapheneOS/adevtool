@@ -57,7 +57,6 @@ ro.quick_start.device_id=bluejay
 ro.quick_start.oem_id=00e0
 ro.strongbox.manufacturer=Google
 ro.strongbox.model=Titan-M2
-ro.support_hide_display_cutout=true
 ro.support_one_handed_mode=true
 ro.thermal_warmreset=true
 ro.vendor.camera.extensions.package=com.google.android.apps.camera.services

@@ -20,7 +20,7 @@
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">指紋感應器位於開關按鈕上。</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">請改為輕觸感應器</string>
     <string name="security_settings_fingerprint_preference_title">指紋解鎖</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">「指紋解鎖」功能會為你建立獨一無二的指紋模型，以便系統驗證你的身分。在設定期間，你需要從不同角度拍攝指紋以建立此指紋模型。</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">「指紋解鎖」功能會為你建立獨一無二的指紋模型，用來驗證你的身分。在設定期間，你需要從不同角度掃瞄指紋來建立此指紋模型。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">你使用「指紋解鎖」時產生的圖片會用作系統更新指紋模型的依據。系統不會儲存你用來建立指紋模型的圖片，只會將指紋模型以安全的方式存放在平板電腦上，但絕不會傳送到平板電腦以外的地方。整個處理過程都會以安全的方式在平板電腦上進行。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">你隨時可以前往「設定」刪除指紋模型或停用「指紋解鎖」。指紋模型會儲存在平板電腦上，直到你刪除為止。</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">「指紋解鎖」功能會為你的子女建立獨一無二的指紋模型，以便系統驗證其身分。在設定期間，他們必須拍攝指紋的各個部位，才能建立這個指紋模型。</string>

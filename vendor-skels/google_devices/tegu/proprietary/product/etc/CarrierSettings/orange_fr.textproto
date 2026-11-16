@@ -1,5 +1,5 @@
 canonical_name: "orange_fr"
-version: 79000000014
+version: 82000000016
 apns {
   apn {
     name: "Orange Fr IMS"
@@ -46,6 +46,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "allow_hold_in_rtt_call_bool"
+    bool_value: false
+  }
   config {
     key: "allow_ussd_requests_via_telephony_manager_bool"
     bool_value: false
@@ -148,6 +152,7 @@ configs {
         int_array {
           item: 0
           item: 1
+          item: 3
         }
       }
     }
@@ -155,6 +160,14 @@ configs {
   config {
     key: "ims.request_uri_type_int"
     int_value: 1
+  }
+  config {
+    key: "ims.sa_disable_policy_for_emergency_int"
+    int_value: 4
+  }
+  config {
+    key: "ims.sa_disable_policy_int"
+    int_value: 4
   }
   config {
     key: "ims_reasoninfo_mapping_string_array"
@@ -539,5 +552,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293184
+  seconds: 1784718237
 }

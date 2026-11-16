@@ -1,5 +1,5 @@
 canonical_name: "sky_ie"
-version: 79000000005
+version: 82000000006
 apns {
   apn {
     name: "Sky IE Internet"
@@ -43,6 +43,12 @@ configs {
     bool_value: false
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
     key: "imsrtt.text_qos_precondition_supported_bool"
     bool_value: false
   }
@@ -80,5 +86,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1751442971
+  seconds: 1787137428
 }

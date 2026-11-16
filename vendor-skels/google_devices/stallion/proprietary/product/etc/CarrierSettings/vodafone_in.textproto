@@ -1,5 +1,5 @@
 canonical_name: "vodafone_in"
-version: 79000000008
+version: 82000000011
 apns {
   apn {
     name: "Vodafone Idea"
@@ -142,10 +142,6 @@ configs {
     int_value: 9600
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.ike_sa_transforms_reorder_bool"
     bool_value: false
   }
@@ -272,5 +268,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1763550059
+  seconds: 1789413108
 }

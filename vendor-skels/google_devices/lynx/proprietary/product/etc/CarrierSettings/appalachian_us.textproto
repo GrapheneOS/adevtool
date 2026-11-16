@@ -1,5 +1,5 @@
 canonical_name: "appalachian_us"
-version: 79000000004
+version: 82000000005
 apns {
   apn {
     name: "Appalachian"
@@ -68,6 +68,12 @@ configs {
     text_value: "X-MDN: ##LINE1##"
   }
   config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
     key: "imsserviceentitlement.entitlement_server_url_string"
     text_value: "https://aes.ekn.com"
   }
@@ -127,5 +133,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1757597031
+  seconds: 1787137449
 }

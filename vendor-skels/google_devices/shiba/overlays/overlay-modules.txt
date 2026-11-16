@@ -1,4 +1,5 @@
 CellBroadcastReceiverOverlay
+DeviceAsWebcamShiba
 EuiccSupportPixelOverlay
 GlanceableHubConfigOverlay
 GlanceableHubSettingsConfigOverlay

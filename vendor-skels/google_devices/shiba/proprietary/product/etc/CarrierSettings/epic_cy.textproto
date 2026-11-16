@@ -1,0 +1,34 @@
+canonical_name: "epic_cy"
+version: 82000000001
+apns {
+  apn {
+    name: "epic internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "epic MMS"
+    value: "mms"
+    type: MMS
+    user: "mms"
+    password: "mms"
+    mmsc: "http://mms.mtn.com.cy/mmsc"
+    mmsc_proxy: "172.24.97.1"
+    mmsc_proxy_port: "3130"
+  }
+  apn {
+    name: "epic ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+}
+last_updated {
+  seconds: 1781704703
+}

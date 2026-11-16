@@ -1,5 +1,5 @@
 canonical_name: "telia_ee"
-version: 79000000024
+version: 82000000025
 apns {
   apn {
     name: "Telia Internet"
@@ -203,6 +203,10 @@ configs {
     int_value: 330
   }
   config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.ike_rekey_hard_timer_in_sec"
     int_value: 88500
   }
@@ -275,5 +279,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293171
+  seconds: 1785323468
 }

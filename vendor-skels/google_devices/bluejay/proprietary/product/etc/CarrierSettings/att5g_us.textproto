@@ -1,5 +1,5 @@
 canonical_name: "att5g_us"
-version: 79000000027
+version: 82000000027
 apns {
   apn {
     name: "ATT Enhancedphone"

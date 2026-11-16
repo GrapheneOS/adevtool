@@ -1,5 +1,5 @@
 canonical_name: "telenor_dk"
-version: 79000000003
+version: 82000000005
 apns {
   apn {
     name: "Telenor Internet"
@@ -185,10 +185,6 @@ configs {
     int_value: 120000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 3600
   }
@@ -231,6 +227,10 @@ configs {
     int_value: 2097152
   }
   config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "qns.support_wfc_in_international_roaming"
     bool_value: false
   }
@@ -260,5 +260,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779888021
+  seconds: 1785323492
 }

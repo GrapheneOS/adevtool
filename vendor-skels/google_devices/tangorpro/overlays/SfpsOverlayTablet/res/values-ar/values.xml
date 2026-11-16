@@ -14,7 +14,7 @@
 
 المس الزر بخفة بدون الضغط عليه."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">لمس زر التشغيل</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">"ننصح بضبط ميزة \"فتح الجهاز ببصمة الإصبع\""</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">"ضبط ميزة \"فتح الجهاز ببصمة الإصبع\""</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">ارفع إصبعك عن مستشعر بصمات الإصبع ثم المسه مرة أخرى وحرِّك إصبعك قليلاً في كل مرة</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">ارفع إصبعك ثم ضعه مرة أخرى.</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">توجد أداة استشعار بصمة الإصبع على زر التشغيل.</string>

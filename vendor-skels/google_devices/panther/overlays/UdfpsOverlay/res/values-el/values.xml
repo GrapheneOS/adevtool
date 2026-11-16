@@ -8,7 +8,7 @@
     <string name="security_settings_fingerprint_bad_calibration">Επισκεφτείτε έναν πάροχο υπηρεσιών επισκευής ή τη διεύθυνση g.co/pixel/fingerprintunlock.</string>
     <string name="security_settings_fingerprint_enroll_consent_introduction_title">Επιτρέπεται ξεκλ. δακτ. αποτ.</string>
     <string name="security_settings_fingerprint_enroll_finish_message">Το Ξεκλείδωμα με δακτυλικό αποτύπωμα βελτιώνεται όσο περισσότερο το χρησιμοποιείτε για να ξεκλειδώσετε το τηλέφωνό σας ή να επαληθεύσετε την ταυτότητά σας σε εφαρμογές</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Ρύθμιση Ξεκλείδωμα με δακτυλ. αποτύπωμ.</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Ρύθμιση Ξεκλειδώμ. με δακτυλ. αποτύπωμ.</string>
     <string name="security_settings_fingerprint_preference_title">Ξεκλείδωμα με δακτ. αποτύπωμα</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Το ξεκλείδωμα με δακτυλικό αποτύπωμα δημιουργεί ένα μοναδικό μοντέλο του δακτυλικού σας αποτυπώματος για την επαλήθευση της ταυτότητάς σας. Για τη δημιουργία αυτού του μοντέλου δακτυλικού αποτυπώματος κατά τη ρύθμιση, θα ληφθούν εικόνες του δακτυλικού σας αποτυπώματος από διάφορες θέσεις.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Κατά τη χρήση του Ξεκλειδώματος με δακτυλικό αποτύπωμα, χρησιμοποιούνται εικόνες για την ενημέρωση του μοντέλου του δακτυλικού σας αποτυπώματος. Οι εικόνες και το μοντέλο του δακτυλικού σας αποτυπώματος αποθηκεύονται με ασφάλεια και παραμένουν αποκλειστικά στο τηλέφωνο. Όλη η επεξεργασία πραγματοποιείται με ασφάλεια στο τηλέφωνό σας.</string>

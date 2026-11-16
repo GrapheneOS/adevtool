@@ -1,5 +1,5 @@
 canonical_name: "wim_mx"
-version: 79000000013
+version: 82000000013
 apns {
   apn {
     name: "INTERNET_5G"

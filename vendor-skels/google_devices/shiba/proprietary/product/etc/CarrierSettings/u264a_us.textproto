@@ -1,5 +1,5 @@
 canonical_name: "u264a_us"
-version: 79000000023
+version: 82000000024
 apns {
   apn {
     name: "U+264A US"
@@ -512,6 +512,18 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_supported_disaster_plmn_string_array"
+    text_array {
+      item: "310210"
+    }
+  }
+  config {
+    key: "satellite_supported_emergency_plmn_string_array"
+    text_array {
+      item: "312190"
+    }
+  }
+  config {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
@@ -525,5 +537,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1783916699
+  seconds: 1789413089
 }

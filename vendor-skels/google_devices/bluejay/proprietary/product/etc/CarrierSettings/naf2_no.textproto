@@ -1,5 +1,5 @@
 canonical_name: "naf2_no"
-version: 79000000001
+version: 82000000001
 apns {
   apn {
     name: "mdafma"

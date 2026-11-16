@@ -14,13 +14,13 @@
 
 Düyməyə yüngülcə toxunun, aşağı basmayın."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Qidalanma düyməsinə toxunun</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Barmaq izi ilə kiliddən çıxarma ayarlayın</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Barmaqla Kiliddən Açma ayarlayın</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Qaldırın, sonra toxunun. Hər dəfə barmağı bir qədər hərəkət etdirin.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Qaldırın və təkrar toxunun</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Barmaq izi sensoru qidalanma düyməsinin üzərindədir.</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">Bunun əvəzinə sensora toxunun</string>
     <string name="security_settings_fingerprint_preference_title">Barmaq izi ilə kiliddən çıxarma</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Barmaq izi ilə kiliddən çıxarma sizi doğrulamaq üçün barmaq izinizin unikal modelini yaradır. Ayarlama zamanı bu barmaq izi modelini yaratmaq üçün müxtəlif bucaqlardan barmaq izinizin şəkillərini çəkəcəksiniz.</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Barmaqla Kiliddən Açma kimliyinizi doğrulamaq üçün barmaq izinizin unikal modelini yaradır. Ayarlama zamanı bu barmaq izi modelini yaratmaq üçün müxtəlif bucaqlardan barmaq izinizin şəkillərini çəkəcəksiniz.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Barmaq izi ilə kiliddən çıxarmadan istifadə etdikdə, barmaq izi modelinizi güncəlləmək üçün şəkillərdən istifadə olunur. Barmaq izi modelinizi yaratmaq üçün istifadə edilən şəkillər heç vaxt saxlanılmır, lakin barmaq izi modeli telefonunuzda təhlükəsiz qaydada saxlanılır və heç vaxt telefondan başqa yerə göndərilmir. Bütün emal prosesi telefonunuzda təhlükəsiz qaydada baş verir.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Ayarlarda istənilən vaxt barmaq izi modelinizi silə, yaxud Barmaq izi ilə kiliddən çıxarmanı deaktiv edə bilərsiniz. Barmaq izi modelləri siz onları silənə qədər telefonunuzda saxlanılır.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">Barmaq izi ilə kiliddən çıxarma övladınızı doğrulamaq üçün onun barmaq izinin unikal modelini yaradır. Ayarlama zamanı bu barmaq izi modelini yaratmaq üçün , müxtəlif bucaqlardan barmaq izinin şəkillərini çəkəcək.</string>

@@ -1,5 +1,5 @@
 canonical_name: "claro_co"
-version: 79000000001
+version: 82000000002
 apns {
   apn {
     name: "Web Claro CO"
@@ -42,7 +42,17 @@ configs {
     key: "carrier_volte_available_bool"
     bool_value: true
   }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.ims.mnc101.mcc732.pub.3gppnetwork.org"
+  }
 }
 last_updated {
-  seconds: 1732098885
+  seconds: 1785323451
 }

@@ -1,5 +1,5 @@
 canonical_name: "bouygues_fr"
-version: 79000000019
+version: 82000000020
 apns {
   apn {
     name: "Bouygues Telecom"
@@ -173,10 +173,6 @@ configs {
     int_value: 2
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 7400
   }
@@ -317,5 +313,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293171
+  seconds: 1781704707
 }

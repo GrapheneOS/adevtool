@@ -1,5 +1,5 @@
 canonical_name: "amarisoft_satellite"
-version: 79000000002
+version: 82000000002
 configs {
   config {
     key: "carrier_roaming_ntn_connect_type_int"
@@ -54,5 +54,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1782902338
+  seconds: 1782340313
 }

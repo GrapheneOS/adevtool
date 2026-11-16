@@ -1,5 +1,5 @@
 canonical_name: "telia_no"
-version: 79000000007
+version: 82000000010
 apns {
   apn {
     name: "Telia Internet"
@@ -233,10 +233,6 @@ configs {
     int_value: 180000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 86500
   }
@@ -254,6 +250,10 @@ configs {
   config {
     key: "iwlan.dpd_timer_sec_int"
     int_value: 330
+  }
+  config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.ike_rekey_hard_timer_in_sec"
@@ -300,10 +300,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1779293198
+  seconds: 1785323492
 }

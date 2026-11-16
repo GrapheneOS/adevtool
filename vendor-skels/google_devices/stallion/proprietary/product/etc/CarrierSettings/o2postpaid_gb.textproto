@@ -1,5 +1,5 @@
 canonical_name: "o2postpaid_gb"
-version: 79000000008
+version: 82000000012
 apns {
   apn {
     name: "O2 Pay Monthly"
@@ -29,6 +29,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
   config {
     key: "auto_retry_failed_wifi_emergency_call"
     bool_value: true
@@ -103,6 +107,10 @@ configs {
   }
   config {
     key: "emergency_messaging_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -319,6 +327,10 @@ configs {
     }
   }
   config {
+    key: "nr_advanced_sa_icon_supported_bool"
+    bool_value: true
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: false
   }
@@ -344,6 +356,10 @@ configs {
     key: "read_only_apn_types_string_array"
     text_array {
     }
+  }
+  config {
+    key: "sa_to_nsa_grace_time_sec_int"
+    int_value: 10
   }
   config {
     key: "satellite_attach_supported_bool"
@@ -379,5 +395,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293198
+  seconds: 1787137492
 }

@@ -14,13 +14,13 @@
 
 Злегка торкніться її, не натискаючи."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Торкніться кнопки живлення</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Розблокування відбитком пальця</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Розблоковуйте телефон відбитком пальця</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Піднімайте й знову торкайтеся, щоразу трохи переміщуючи палець</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Підніміть і знову торкніться</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Сканер відбитків пальців розташовано на кнопці живлення.</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_title">Натомість торкніться сканера</string>
     <string name="security_settings_fingerprint_preference_title">Розблокування відбитком пальця</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Функція розблокування відбитком пальця створює унікальну модель вашого відбитка, щоб підтверджувати вашу особу. Для цього під час налаштування потрібно створити зображення свого відбитка пальця в різних положеннях.</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">Функція розблокування відбитком пальця створює унікальну модель відбитка, щоб підтверджувати вашу особу. Для цього вам потрібно відсканувати палець у різних положеннях.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">Коли ви користуєтеся функцією розблокування відбитком пальця, модель відбитка постійно оновлюється на основі отриманих зображень. Зображення й модель надійно зберігаються на планшеті та нікуди не передаються. Усі дані безпечно обробляються на планшеті.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">Ви будь-коли можете видалити модель свого відбитка пальця або вимкнути функцію розблокування відбитком пальця в налаштуваннях. Моделі відбитків пальців зберігаються на планшеті, доки ви їх не видалите.</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">Функція розблокування відбитком пальця створює унікальну модель відбитка вашої дитини, щоб підтверджувати її особу. Для цього дитині потрібно зберегти зображення свого відбитка пальця в різних положеннях.</string>

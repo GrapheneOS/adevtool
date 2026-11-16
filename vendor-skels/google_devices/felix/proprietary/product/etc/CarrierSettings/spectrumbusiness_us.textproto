@@ -1,5 +1,5 @@
 canonical_name: "spectrumbusiness_us"
-version: 79000000011
+version: 82000000012
 apns {
   apn {
     name: "Spectrum"
@@ -501,7 +501,7 @@ configs {
   }
   config {
     key: "imsvoice.rtp_packet_loss_rate_threshold_int"
-    int_value: 30
+    int_value: 20
   }
   config {
     key: "imsvoice.voice_on_default_bearer_supported_bool"
@@ -767,6 +767,18 @@ configs {
     bool_value: true
   }
   config {
+    key: "satellite_supported_disaster_plmn_string_array"
+    text_array {
+      item: "310210"
+    }
+  }
+  config {
+    key: "satellite_supported_emergency_plmn_string_array"
+    text_array {
+      item: "312190"
+    }
+  }
+  config {
     key: "show_data_connected_roaming_notification"
     bool_value: true
   }
@@ -823,5 +835,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1783916688
+  seconds: 1789413082
 }

@@ -1,5 +1,5 @@
 canonical_name: "swisscom_li"
-version: 79000000008
+version: 82000000010
 apns {
   apn {
     name: "Swisscom MMS"
@@ -97,6 +97,10 @@ configs {
   }
   config {
     key: "enabledMMS"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -260,10 +264,6 @@ configs {
     int_value: 180000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 14500
   }
@@ -298,6 +298,10 @@ configs {
   config {
     key: "iwlan.ike_remote_id_type_int"
     int_value: 11
+  }
+  config {
+    key: "prefer_3g_visibility_bool"
+    bool_value: false
   }
   config {
     key: "qns.condition_rove_in_idle_cell_pref_home_guarding_none_string_array"
@@ -505,5 +509,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293184
+  seconds: 1782317125
 }

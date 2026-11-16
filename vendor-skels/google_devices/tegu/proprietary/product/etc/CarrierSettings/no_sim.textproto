@@ -1,5 +1,5 @@
 canonical_name: "no_sim"
-version: 79000000008
+version: 82000000009
 configs {
   config {
     key: "5g_nr_ssrsrp_thresholds_int_array"
@@ -283,6 +283,10 @@ configs {
     }
   }
   config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
     key: "iwlan.handover_to_wwan_release_delay_second_int"
     int_value: 5
   }
@@ -513,5 +517,5 @@ vendor_configs {
   }
 }
 last_updated {
-  seconds: 1767800658
+  seconds: 1781704714
 }

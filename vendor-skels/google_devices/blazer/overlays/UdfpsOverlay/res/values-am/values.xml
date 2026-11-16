@@ -11,7 +11,7 @@
     <string name="security_settings_fingerprint_enroll_introduction_title">የጣት አሻራ መክፈቻን ያዋቅሩ</string>
     <string name="security_settings_fingerprint_preference_title">በጣት አሻራ መክፈቻ</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_2">በጣት አሻራ መክፈቻ እርስዎ መሆንዎን ለማረጋገጥ የጣት አሻራዎ ልዩ ሞዴል ይፈጥራል። በሚቀናበርበት ጊዜ ይህን የጣት አሻራ ሞዴል ለመፍጠር የጣት አሻራዎ ምስሎችን ከተለያዩ ቦታዎች ያነሳሉ።</string>
-    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">በጣት አሻራ መክፈቻን ሲጠቀሙ ምስሎች የጣት አሻራዎን ሞዴል ለማዘመን ሥራ ላይ ይውላሉ። የጣት አሻራዎ ምስሎች እና ሞዴል በስልክዎ ላይ ደህንነታቸው በተጠበቀ ሁኔታ የተከማቹ ናቸው፣ እና በጭራሽ ከስልኩ አይወጡም። ሁሉም ሂደቶች በስልክዎ ላይ ደህንነቱ በተጠበቀ ሁኔታ ይከሰታል።</string>
+    <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_3">በጣት አሻራ መክፈቻን ሲጠቀሙ ምስሎች የጣት አሻራዎን ሞዴል ለማዘመን ሥራ ላይ ይውላሉ። የጣት አሻራዎ ምስሎች እና ሞዴል በስልክዎ ላይ ደኅንነታቸው በተጠበቀ ሁኔታ የተከማቹ ናቸው፣ እና በጭራሽ ከስልኩ አይወጡም። ሁሉም ሂደቶች በስልክዎ ላይ ደኅንነቱ በተጠበቀ ሁኔታ ይከሰታል።</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_4">የጣት አሻራዎን ምስሎች እና ሞዴል መሰረዝ ወይም በቅንብሮች ውስጥ በማንኛውም ጊዜ በጣት አሻራ መከፈትን ማጥፋት ይችላሉ። የጣት አሻራ ምስሎች እና ሞዴሎች እስኪሰርዟቸው ድረስ በስልኩ ላይ ይቀመጣሉ።</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_2">በጣት አሻራ መክፈቻ እነሱ መሆናቸውን ለማረጋገጥ የልጅዎን ጣት አሻራ ልዩ ሞዴል ይፈጥራል። በሚቀናበቀርበት ጊዜ ይህን የጣት አሻራ ሞዴል ለመፍጠር የጣት አሻራቸው ምስሎችን ከተለያዩ ቦታዎች ያነሳሉ።</string>
     <string name="security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3">በጣት አሻራ መክፈቻን ሲጠቀሙ ምስሎች የጣት አሻራቸውን ሞዴል ለማዘመን ሥራ ላይ ይውላሉ። የልጅዎ የጣት አሻራ ምስሎች እና ሞዴል በስልኩ ድህንነታቸው በተጠበቀ ሁኔታ የተከማቹ ናቸው፣ እና በጭራሽ ከስልኩ አይወጡም። ሁሉም ሂደቶች በስልኩ ላይ ደህንነቱ በተጠበቀ ሁኔታ ይከሰታል።</string>

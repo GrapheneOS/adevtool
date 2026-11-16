@@ -9,11 +9,11 @@
     <string name="fingerprint_unlock_title">"Grâce à Pixel Imprint, vous pouvez déverrouiller votre téléphone avec votre empreinte digitale. Pour plus de sécurité, cette option exige un verrouillage d'écran secondaire."</string>
     <string name="fingerprint_v2_delete_message">"Cela a pour effet de supprimer le modèle d'empreintes digitales associé au « %1$s » qui est stocké sur votre tablette"</string>
     <string name="security_settings_fingerprint_enroll_consent_introduction_title">Autoriser Pixel Imprint</string>
-    <string name="security_settings_fingerprint_enroll_introduction_message_unlock_disabled">"Pixel Imprint utilise vos empreintes digitales pour activer et déverrouiller votre téléphone, autoriser des achats ou vous connecter à des applis.
+    <string name="security_settings_fingerprint_enroll_introduction_message_unlock_disabled">"Avec Pixel Imprint, vous pouvez utiliser votre empreinte digitale pour autoriser des achats ou vous connecter à des applis.
 
-Choisissez avec soin les personnes dont vous ajoutez les empreintes digitales. Toutes les personnes ajoutées sur votre téléphone peuvent effectuer ces opérations.
+Toutes les personnes dont les empreintes digitales sont ajoutées peuvent effectuer ces opérations. Choisissez donc ces personnes avec soin.
 
-Remarque : Vous ne pouvez pas utiliser vos empreintes digitales pour déverrouiller cet appareil. Pour en savoir plus, communiquez avec l'administrateur de votre organisation."</string>
+Remarque : Vous ne pouvez pas utiliser votre empreinte digitale pour déverrouiller cet appareil. Pour en savoir plus, communiquez avec l'administrateur de votre organisation."</string>
     <string name="security_settings_fingerprint_enroll_introduction_title">Configurer Pixel Imprint</string>
     <string name="security_settings_fingerprint_enroll_introduction_title_unlock_disabled">Pixel Imprint</string>
     <string name="security_settings_fingerprint_preference_title">Pixel Imprint</string>

@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/google_devices/zuma/proprietary/gchips/tpu/tachyon/service/com.google.edgetpu.tachyon-service.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.npu</name>
+        <fqname>IScheduling/default</fqname>
+    </hal>
+</manifest>

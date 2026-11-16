@@ -1,5 +1,5 @@
 canonical_name: "telus_ca"
-version: 79000000027
+version: 82000000028
 apns {
   apn {
     name: "TELUS ISP"
@@ -332,10 +332,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -535,5 +531,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293151
+  seconds: 1781704696
 }

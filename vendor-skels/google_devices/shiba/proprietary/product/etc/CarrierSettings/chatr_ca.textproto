@@ -1,5 +1,5 @@
 canonical_name: "chatr_ca"
-version: 79000000021
+version: 82000000021
 apns {
   apn {
     name: "Chatr Tethering"

@@ -1,5 +1,5 @@
 canonical_name: "vodafone_is"
-version: 79000000005
+version: 82000000007
 apns {
   apn {
     name: "Vodafone Internet"
@@ -26,6 +26,14 @@ apns {
     name: "HOS"
     value: "hos"
     type: XCAP
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+  apn {
+    name: "emergency"
+    value: "EMERGENCY"
+    type: EMERGENCY
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -61,6 +69,29 @@ configs {
     bool_value: false
   }
   config {
+    key: "imsemergency.emergency_domain_preference_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_domain_preference_roaming_int_array"
+    int_array {
+      item: 2
+      item: 1
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+      item: 5
+    }
+  }
+  config {
     key: "imsss.ut_as_server_fqdn_string"
     text_value: "xcap.ims.mnc002.mcc274.pub.3gppnetwork.org"
   }
@@ -85,6 +116,10 @@ configs {
         }
       }
     }
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
@@ -123,10 +158,14 @@ configs {
     int_value: 1048576
   }
   config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
 }
 last_updated {
-  seconds: 1747202480
+  seconds: 1787137484
 }

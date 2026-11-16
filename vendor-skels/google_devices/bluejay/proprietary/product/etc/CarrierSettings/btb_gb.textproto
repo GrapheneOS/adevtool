@@ -1,5 +1,5 @@
 canonical_name: "btb_gb"
-version: 79000000015
+version: 82000000016
 apns {
   apn {
     name: "IMS"
@@ -48,6 +48,10 @@ apns {
   }
 }
 configs {
+  config {
+    key: "carrier_default_2g_protection_enabled_bool"
+    bool_value: true
+  }
   config {
     key: "carrier_default_data_roaming_enabled_bool"
     bool_value: true
@@ -245,5 +249,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1731496787
+  seconds: 1784718179
 }

@@ -14,7 +14,7 @@
 
 Kosketa painiketta kevyesti painamatta sitä alas."</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_title">Kosketa virtapainiketta</string>
-    <string name="security_settings_fingerprint_enroll_introduction_title">Ota sormenjälkiavaus käyttöön</string>
+    <string name="security_settings_fingerprint_enroll_introduction_title">Sormenjälkiavauksen käyttöönotto</string>
     <string name="security_settings_fingerprint_enroll_repeat_title">Nosta sormea ja kosketa. Liikuta sormeasi hieman joka kerralla.</string>
     <string name="security_settings_fingerprint_enroll_repeat_title_immobile_overlay">Nosta sormi ja kosketa taas</string>
     <string name="security_settings_fingerprint_enroll_touch_dialog_message">Sormenjälkitunnistin on virtapainikkeessa.</string>

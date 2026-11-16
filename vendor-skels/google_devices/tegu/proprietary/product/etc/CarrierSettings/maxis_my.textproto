@@ -1,18 +1,14 @@
 canonical_name: "maxis_my"
-version: 79000000007
+version: 82000000009
 apns {
   apn {
     name: "Maxis Internet"
     value: "unet"
     type: DEFAULT
-    type: MMS
     type: SUPL
     user: "maxis"
     password: "wap"
     authtype: 1
-    mmsc: "http://172.16.74.100:10021/mmsc"
-    mmsc_proxy: "202.75.133.49"
-    mmsc_proxy_port: "80"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
   }
@@ -63,6 +59,10 @@ configs {
   config {
     key: "carrier_supports_ss_over_ut_bool"
     bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 3
   }
   config {
     key: "carrier_volte_available_bool"
@@ -145,5 +145,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1771422504
+  seconds: 1781704714
 }

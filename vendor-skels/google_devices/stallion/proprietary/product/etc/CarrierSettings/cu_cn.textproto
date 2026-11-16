@@ -1,0 +1,62 @@
+canonical_name: "cu_cn"
+version: 82000000001
+apns {
+  apn {
+    name: "\346\262\2033G\350\277\236\346\216\245\344\272\222\350\201\224\347\275\221 (China Unicom)"
+    value: "3gnet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "\346\262\2033G\346\211\213\346\234\272\344\270\212\347\275\221 (China Unicom)"
+    value: "3gwap"
+    type: DEFAULT
+    type: SUPL
+    proxy: "10.0.0.172"
+    port: "80"
+  }
+  apn {
+    name: "\350\201\224\351\200\2322GNET\344\270\212\347\275\221 (China Unicom)"
+    value: "uninet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "\350\201\224\351\200\232\345\275\251\344\277\241 (China Unicom)"
+    value: "3gwap"
+    type: MMS
+    mmsc: "http://mmsc.myuni.com.cn"
+    mmsc_proxy: "10.0.0.172"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "\350\201\224\351\200\2322g\345\275\251\344\277\241 (China Unicom)"
+    value: "uniwap"
+    type: MMS
+    mmsc: "http://mmsc.myuni.com.cn"
+    mmsc_proxy: "10.0.0.172"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: false
+  }
+}
+last_updated {
+  seconds: 1785927872
+}

@@ -204,13 +204,6 @@ dex_import {
 }
 
 dex_import {
-    name: "com.google.android.camerax.extensions",
-    owner: "google_devices",
-    jars: [ "system_ext/framework/com.google.android.camerax.extensions.jar" ],
-    system_ext_specific: true,
-}
-
-dex_import {
     name: "com.google.input.gia.giaservicemanager",
     owner: "google_devices",
     jars: [ "system_ext/framework/com.google.input.gia.giaservicemanager.jar" ],
@@ -350,11 +343,11 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.whitechapel.audio.extension-V8-ndk.system_ext",
+    name: "vendor.google.whitechapel.audio.extension-V10-ndk.system_ext",
     owner: "google_devices",
-    stem: "vendor.google.whitechapel.audio.extension-V8-ndk",
+    stem: "vendor.google.whitechapel.audio.extension-V10-ndk",
     target: {
-        android_arm64: { srcs: [ "system_ext/lib64/vendor.google.whitechapel.audio.extension-V8-ndk.so" ] }
+        android_arm64: { srcs: [ "system_ext/lib64/vendor.google.whitechapel.audio.extension-V10-ndk.so" ] }
     },
     compile_multilib: "64",
     check_elf_files: false,
@@ -505,10 +498,76 @@ android_app_import {
     system_ext_specific: true,
 }
 
-prebuilt_apex {
-    name: "com.google.android.widevine-15027108-cp2a",
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.common-V6-ndk",
     owner: "google_devices",
-    src: "vendor/apex/com.google.android.widevine-15027108-cp2a.apex",
+    target: { android_arm64: { srcs: [ "system/lib64/android.hardware.audio.common-V6-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.core-V5-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "system/lib64/android.hardware.audio.core-V5-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.core.sounddose-V5-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "system/lib64/android.hardware.audio.core.sounddose-V5-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.effect-V5-ndk",
+    owner: "google_devices",
+    target: { android_arm64: { srcs: [ "system/lib64/android.hardware.audio.effect-V5-ndk.so" ] } },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.common.types-V6-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "system/lib64/android.media.audio.common.types-V6-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.eraser.types-V3-ndk",
+    owner: "google_devices",
+    target: {
+        android_arm64: { srcs: [ "system/lib64/android.media.audio.eraser.types-V3-ndk.so" ] }
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+}
+
+prebuilt_apex {
+    name: "com.google.android.widevine-15719561",
+    owner: "google_devices",
+    src: "vendor/apex/com.google.android.widevine-15719561.apex",
     prefer: true,
     soc_specific: true,
 }
@@ -1352,6 +1411,17 @@ cc_prebuilt_binary {
     name: "vendor.google.google_battery-service",
     owner: "google_devices",
     srcs: [ "vendor/bin/hw/vendor.google.google_battery-service" ],
+    relative_install_path: "hw",
+    check_elf_files: false,
+    prefer: true,
+    strip: { none: true },
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.google.google_battery.ekf.service",
+    owner: "google_devices",
+    srcs: [ "vendor/bin/hw/vendor.google.google_battery.ekf.service" ],
     relative_install_path: "hw",
     check_elf_files: false,
     prefer: true,

@@ -1,5 +1,5 @@
 canonical_name: "claro_br"
-version: 79000000002
+version: 82000000003
 apns {
   apn {
     name: "Java Session"
@@ -102,7 +102,11 @@ configs {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
+  config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
 }
 last_updated {
-  seconds: 1724912483
+  seconds: 1782902343
 }

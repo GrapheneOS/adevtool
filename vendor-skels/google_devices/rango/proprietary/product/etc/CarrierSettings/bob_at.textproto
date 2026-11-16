@@ -1,5 +1,5 @@
 canonical_name: "bob_at"
-version: 79000000005
+version: 82000000006
 apns {
   apn {
     name: "data.bob"
@@ -198,6 +198,10 @@ configs {
     }
   }
   config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 240000
+  }
+  config {
     key: "imsvoice.voice_qos_precondition_supported_bool"
     bool_value: false
   }
@@ -265,5 +269,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1772636232
+  seconds: 1787742288
 }

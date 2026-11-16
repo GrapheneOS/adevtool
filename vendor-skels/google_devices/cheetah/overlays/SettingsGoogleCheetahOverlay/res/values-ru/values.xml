@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="biometrics_unlock_set_unlock_password">Пароль • Отпечаток пальца • Лицо</string>
+    <string name="biometrics_unlock_set_unlock_password">Пароль • Отпечаток пальца • Фейсконтроль</string>
     <string name="biometrics_unlock_set_unlock_pattern">Графический ключ • Отпечаток • Фейсконтроль</string>
-    <string name="biometrics_unlock_set_unlock_pin">PIN-код • Отпечаток пальца • Лицо</string>
+    <string name="biometrics_unlock_set_unlock_pin">PIN-код • Отпечаток пальца • Фейсконтроль</string>
 </resources>

@@ -1,5 +1,5 @@
 require board=akita
 
-require version-bootloader=akita-17.0-15681527
-require version-baseband=g5300o-260604-260807-B-16036236
+require version-bootloader=akita-17.0-16433839
+require version-baseband=g5300o-260818-261007-B-16536936
 require partition-exists=vendor_kernel_boot

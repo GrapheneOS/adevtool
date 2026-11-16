@@ -1,7 +1,0 @@
-<config>
-    <!-- com.shannon.rcsservice -->
-    <install-in-user-type package="com.shannon.rcsservice">
-        <install-in user-type="SYSTEM" />
-        <install-in user-type="FULL" />
-    </install-in-user-type>
-</config>

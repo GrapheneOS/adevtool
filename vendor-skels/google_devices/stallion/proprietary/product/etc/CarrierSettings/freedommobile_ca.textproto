@@ -1,5 +1,5 @@
 canonical_name: "freedommobile_ca"
-version: 79000000007
+version: 82000000008
 apns {
   apn {
     name: "Internet"
@@ -246,10 +246,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 8100
   }
@@ -373,5 +369,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293198
+  seconds: 1781704721
 }

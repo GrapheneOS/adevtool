@@ -1,5 +1,5 @@
 canonical_name: "orange_es"
-version: 79000000026
+version: 82000000027
 apns {
   apn {
     name: "Orange Internet M\303\263vil"
@@ -295,10 +295,6 @@ configs {
     int_value: 60000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -422,5 +418,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293145
+  seconds: 1781704693
 }

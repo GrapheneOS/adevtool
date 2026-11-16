@@ -1,5 +1,5 @@
 canonical_name: "telavox_se"
-version: 79000000006
+version: 82000000007
 apns {
   apn {
     name: "Telavox internet"
@@ -34,6 +34,10 @@ configs {
   config {
     key: "carrier_default_wfc_ims_mode_int"
     int_value: 1
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
   }
   config {
     key: "ims.sip_over_ipsec_enabled_bool"
@@ -97,5 +101,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1770819066
+  seconds: 1785927816
 }

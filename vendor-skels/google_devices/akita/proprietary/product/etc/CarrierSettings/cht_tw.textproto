@@ -1,5 +1,5 @@
 canonical_name: "cht_tw"
-version: 79000000013
+version: 82000000014
 apns {
   apn {
     name: "\344\270\255\350\217\257\351\233\273\344\277\241(Chunghwa) (Internet)"
@@ -226,10 +226,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.dpd_timer_sec_int"
     int_value: 600
   }
@@ -273,5 +269,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779887960
+  seconds: 1781704707
 }

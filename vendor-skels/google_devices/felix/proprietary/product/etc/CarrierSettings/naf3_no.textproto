@@ -1,0 +1,29 @@
+canonical_name: "naf3_no"
+version: 82000000001
+apns {
+  apn {
+    name: "Forsvaret"
+    value: "data"
+    type: DEFAULT
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "cellular_usage_setting_int"
+    int_value: 2
+  }
+  config {
+    key: "hide_preferred_network_type_bool"
+    bool_value: true
+  }
+}
+last_updated {
+  seconds: 1787137442
+}

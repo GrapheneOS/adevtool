@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="biometrics_unlock_set_unlock_password">పాస్‌వర్డ్ • వేలిముద్ర • ముఖం</string>
-    <string name="biometrics_unlock_set_unlock_pattern">ఆకృతి • వేలిముద్ర • ముఖం</string>
+    <string name="biometrics_unlock_set_unlock_pattern">ప్యాటర్న్ • ఫింగర్ ప్రింట్ • ముఖం</string>
     <string name="biometrics_unlock_set_unlock_pin">PIN • వేలిముద్ర • ముఖం</string>
 </resources>

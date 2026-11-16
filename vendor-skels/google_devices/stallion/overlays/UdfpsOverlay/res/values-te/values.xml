@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="fingerprint_unlock_set_unlock_password">పాస్‌వర్డ్ • వేలిముద్ర</string>
-    <string name="fingerprint_unlock_set_unlock_pattern">ఆకృతి • వేలిముద్ర</string>
+    <string name="fingerprint_unlock_set_unlock_pattern">ప్యాటర్న్ • వేలిముద్ర</string>
     <string name="fingerprint_unlock_set_unlock_pin">PIN • వేలిముద్ర</string>
     <string name="fingerprint_unlock_skip_fingerprint">వేలిముద్ర అన్‌లాక్ లేకుండా కొనసాగించండి</string>
     <string name="fingerprint_unlock_title">వేలిముద్ర అన్‌లాక్‌తో, మీ వేలిముద్రను ఉపయోగించి ఫోన్‌ను అన్‌లాక్ చేయవచ్చు. సెక్యూరిటీని దృష్టిలో ఉంచుకుని, ఈ ఆప్షన్‌కు బ్యాకప్ స్క్రీన్ లాక్ అవసరం.</string>
@@ -24,10 +24,10 @@
     <string name="unlock_disable_frp_warning_content_password_fingerprint">"మీ ఫోన్‌ను పోగొట్టుకున్నా లేదా దొంగిలించబడినా దాన్ని పాస్‌వర్డ్ రక్షిస్తుంది.
 
 మీ పరికరంలో స్టోర్ అయి ఉన్న వేలిముద్ర ఇమేజ్‌లు, మోడల్‌ను ఇది తొలగిస్తుంది. యాప్‌లలో ప్రామాణీకరణ కోసం మీరు మీ వేలిముద్రను ఉపయోగించలేరు."</string>
-    <string name="unlock_disable_frp_warning_content_pattern_face_fingerprint">"మీ ఫోన్‌ను పోగొట్టుకున్నా లేదా దొంగిలించబడినా దాన్ని ఆకృతి రక్షిస్తుంది.
+    <string name="unlock_disable_frp_warning_content_pattern_face_fingerprint">"మీ ఫోన్‌ను పోగొట్టుకున్నా లేదా దొంగిలించబడినా దాన్ని ప్యాటర్న్ రక్షిస్తుంది.
 
 మీ పరికరంలో స్టోర్ అయి ఉన్న వేలిముద్ర ఇమేజ్‌లు, మోడల్‌ను ఇది తొలగిస్తుంది. మీ ఫేస్ మోడల్ కూడా శాశ్వతంగా, సురక్షితంగా తొలగించబడుతుంది. యాప్‌లలో ప్రామాణీకరణ కోసం మీరు మీ ఫేస్ లేదా వేలిముద్రను ఉపయోగించలేరు."</string>
-    <string name="unlock_disable_frp_warning_content_pattern_fingerprint">"మీ ఫోన్‌ను పోగొట్టుకున్నా లేదా దొంగిలించబడినా దాన్ని ఆకృతి రక్షిస్తుంది.
+    <string name="unlock_disable_frp_warning_content_pattern_fingerprint">"మీ ఫోన్‌ను పోగొట్టుకున్నా లేదా దొంగిలించబడినా దాన్ని ప్యాటర్న్ రక్షిస్తుంది.
 
 మీ పరికరంలో స్టోర్ అయి ఉన్న వేలిముద్ర ఇమేజ్‌లు, మోడల్‌ను ఇది తొలగిస్తుంది. యాప్‌లలో ప్రామాణీకరణ కోసం మీరు మీ వేలిముద్రను ఉపయోగించలేరు."</string>
     <string name="unlock_disable_frp_warning_content_pin_face_fingerprint">"మీ ఫోన్‌ను పోగొట్టుకున్నా లేదా దొంగిలించబడినా దాన్ని PIN రక్షిస్తుంది.

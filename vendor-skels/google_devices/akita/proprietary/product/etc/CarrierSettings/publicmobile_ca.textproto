@@ -1,5 +1,5 @@
 canonical_name: "publicmobile_ca"
-version: 79000000030
+version: 82000000031
 apns {
   apn {
     name: "Tethered Mobile Internet"
@@ -314,10 +314,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.add_ke_to_child_session_rekey_bool"
     bool_value: true
   }
@@ -517,5 +513,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293171
+  seconds: 1781704707
 }

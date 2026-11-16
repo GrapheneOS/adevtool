@@ -130,7 +130,7 @@
   </hal>
   <hal format="aidl">
     <name>com.google.hardware.pixel.display</name>
-    <version>23</version>
+    <version>23-24</version>
     <interface>
       <name>IDisplay</name>
       <instance>default</instance>
@@ -309,7 +309,7 @@
   </hal>
   <hal format="aidl">
     <name>vendor.google.whitechapel.audio.extension</name>
-    <version>7-8</version>
+    <version>9-10</version>
     <interface>
       <name>IAudioExtension</name>
       <instance>default</instance>
@@ -325,7 +325,7 @@
   </hal>
   <hal format="aidl">
     <name>vendor.google.wireless_charger</name>
-    <version>7-8</version>
+    <version>7-9</version>
     <interface>
       <name>IWirelessCharger</name>
       <instance>default</instance>

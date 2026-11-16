@@ -1,5 +1,5 @@
 canonical_name: "tele2_se"
-version: 79000000021
+version: 82000000023
 apns {
   apn {
     name: "Tele2 Internet"
@@ -68,6 +68,10 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
     bool_value: true
   }
   config {
@@ -205,10 +209,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 7200
   }
@@ -297,5 +297,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293145
+  seconds: 1785927822
 }

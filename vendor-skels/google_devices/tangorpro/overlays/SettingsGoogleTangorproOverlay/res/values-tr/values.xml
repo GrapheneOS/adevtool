@@ -4,6 +4,6 @@
     <string name="edge_to_edge_navigation_summary">Ana ekrana gitmek için alt kısımdan hızlıca yukarı kaydırın. Görev çubuğuna erişmek için alt kısımdan yavaşça yukarı kaydırın. Uygulamalar arasında geçiş yapmak için ekranın altından yukarı kaydırın, tutun ve sonra bırakın. Geri gitmek için ekranın sol veya sağ kenarından kaydırın.</string>
     <string name="fast_pair_device_not_found_other_device_description">Bu cihazı Pixel Tabletinize yaklaştırıp tekrar deneyin.</string>
     <string name="fast_pair_device_not_found_tws_headphone_description">Kulaklık kılıfını açıp Pixel Tabletinize yaklaştırın ve tekrar deneyin.</string>
-    <string name="sound_dashboard_summary">Ses</string>
+    <string name="sound_dashboard_summary">Ses düzeyi</string>
     <string name="sound_settings">Ses</string>
 </resources>

@@ -1,5 +1,5 @@
 canonical_name: "teliab2b_se"
-version: 79000000004
+version: 82000000006
 apns {
   apn {
     name: "Telia MMS"
@@ -209,10 +209,6 @@ configs {
     int_value: 180000
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 14400
   }
@@ -236,6 +232,10 @@ configs {
   config {
     key: "iwlan.dpd_timer_sec_int"
     int_value: 330
+  }
+  config {
+    key: "iwlan.ike_device_identity_supported_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.ike_rekey_hard_timer_in_sec"
@@ -326,5 +326,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1779293164
+  seconds: 1785323462
 }

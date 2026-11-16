@@ -1,5 +1,5 @@
 canonical_name: "mtel_ch"
-version: 79000000002
+version: 82000000002
 apns {
   apn {
     name: "mtel"
@@ -132,5 +132,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1780502744
+  seconds: 1780331627
 }

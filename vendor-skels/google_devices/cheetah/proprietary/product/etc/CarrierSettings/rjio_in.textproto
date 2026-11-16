@@ -1,5 +1,5 @@
 canonical_name: "rjio_in"
-version: 79000000023
+version: 82000000026
 apns {
   apn {
     name: "Jio 4G"
@@ -196,10 +196,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "is_ims_conference_size_enforced_bool"
-    bool_value: true
-  }
-  config {
     key: "iwlan.child_sa_rekey_hard_timer_sec_int"
     int_value: 86500
   }
@@ -328,5 +324,5 @@ configs {
   }
 }
 last_updated {
-  seconds: 1776866381
+  seconds: 1789413078
 }

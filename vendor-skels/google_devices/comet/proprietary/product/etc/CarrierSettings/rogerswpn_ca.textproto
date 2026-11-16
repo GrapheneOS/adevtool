@@ -1,5 +1,5 @@
 canonical_name: "rogerswpn_ca"
-version: 79000000012
+version: 82000000012
 apns {
   apn {
     name: "Rogers Internet WPN"
