@@ -147,8 +147,6 @@ PRODUCT_PACKAGES += \
     libc++.product:32 \
     libssl.vendor:64 \
     libtrusty.recovery \
-    logcatd \
-    logpersist.start \
     odm_file_contexts.recovery \
     odm_property_contexts.recovery \
     plat_file_contexts.recovery \
