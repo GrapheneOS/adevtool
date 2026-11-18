@@ -6,14 +6,14 @@ import {
   getCarrierSettingsBuildId,
   getCarrierSettingsUpdatesDir,
 } from '../blobs/carrier'
-import { BUILD_VERSION_SDK_PROP, loadPartitionProps } from '../blobs/props'
-import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, loadDeviceConfigs2, makeDeviceBuildId } from '../config/device'
+import { loadPartitionProps } from '../blobs/props'
+import { DEVICE_CONFIGS_FLAG_WITH_BUILD_ID, getDeviceBuildId, loadDeviceConfigs2 } from '../config/device'
 import { forEachDevice } from '../frontend/devices'
 import { prepareFactoryImages } from '../frontend/source'
 import { loadBuildIndex } from '../images/build-index'
 import { mapGet } from '../util/data'
 import { log } from '../util/log'
-import { Partition, PathResolver, PathResolverContext } from '../util/partitions'
+import { PathResolver, PathResolverContext } from '../util/partitions'
 
 export default class UpdateCarrierSettings extends Command {
   static description = 'download updated carrier protobuf configs.'
@@ -42,16 +42,12 @@ export default class UpdateCarrierSettings extends Command {
           const buildId = flags.buildId ?? getCarrierSettingsBuildId(config)
           const outDir = flags.out ?? getCarrierSettingsUpdatesDir(config)
           let factoryImages = await prepareFactoryImages(buildIndex, [config], [buildId])
-          let factoryImageDir = mapGet(
-            factoryImages,
-            makeDeviceBuildId(config.device.name, buildId),
-          ).unpackedFactoryImageDir
+          let factoryImageDir = mapGet(factoryImages, getDeviceBuildId(config, buildId)).unpackedFactoryImageDir
           let stockProps = await loadPartitionProps(
             new PathResolver(factoryImageDir, PathResolverContext.UNPACKED_IMAGE),
           )
-          let sdkVersion = mapGet(mapGet(stockProps, Partition.System), BUILD_VERSION_SDK_PROP)
-          const updateConfig = await fetchUpdateConfig(config.device.name, buildId, sdkVersion, flags.debug)
-          if (flags.debug) log(updateConfig)
+          const updateConfig = await fetchUpdateConfig(config.device.name, stockProps, flags.debug)
+          if (flags.debug) log(JSON.stringify(Object.fromEntries(updateConfig), null, 2))
           await downloadAllConfigs(updateConfig, outDir, flags.debug)
         } else {
           this.log(`${config.device.name} is not supported due to lack of cellular connectivity`)

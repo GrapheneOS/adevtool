@@ -23,7 +23,7 @@ import { BlobEntry } from '../blobs/entry'
 import { PseudoPath } from '../blobs/file-list'
 import { copyKernel } from '../blobs/kernel'
 import { processOverlays } from '../blobs/overlays2'
-import { BUILD_VERSION_SDK_PROP, loadPartitionProps } from '../blobs/props'
+import { loadPartitionProps } from '../blobs/props'
 import { BuildSystemPackages } from '../build/make'
 import {
   DEVICE_CONFIGS_FLAG_WITH_BUILD_ID,
@@ -71,7 +71,7 @@ import {
 } from '../util/file-tree-spec'
 import { exists, listFilesRecursive } from '../util/fs'
 import { log } from '../util/log'
-import { Partition, PathResolver } from '../util/partitions'
+import { PathResolver } from '../util/partitions'
 
 async function doDevice(
   dirs: VendorDirectories,
@@ -269,12 +269,7 @@ export default class GenerateFull extends Command {
             const csBuildId = getCarrierSettingsBuildId(config)
             const csImages = mapGet(images, getDeviceBuildId(config, csBuildId))
             const csProps = await loadPartitionProps(new PathResolver(csImages.unpackedFactoryImageDir))
-            const csUpdateConfig = await fetchUpdateConfig(
-              config.device.name,
-              csBuildId,
-              mapGet(mapGet(csProps, Partition.System), BUILD_VERSION_SDK_PROP),
-              false,
-            )
+            const csUpdateConfig = await fetchUpdateConfig(config.device.name, csProps, false)
             await downloadAllConfigs(csUpdateConfig, getCarrierSettingsUpdatesDir(config), false)
           }
 

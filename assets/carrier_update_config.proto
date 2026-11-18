@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package carrier;
+
+message CarrierUpdateConfig {
+  map<string, string> entry = 1;
+}
