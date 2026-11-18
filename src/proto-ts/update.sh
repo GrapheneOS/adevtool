@@ -11,12 +11,6 @@ protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto
     system/apex/proto/apex_manifest.proto
     #frameworks/base/proto/src/apk_parser_config.proto
 
-protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto_out vendor/adevtool/src/proto-ts \
-    vendor/adevtool/assets/request.proto
-
-protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto_out vendor/adevtool/src/proto-ts \
-    vendor/adevtool/assets/response.proto
-
 # forceLong=string is required for checkin.proto: the response carries `android_id` (fixed64) and
 # `security_token` (fixed64) which exceed Number.MAX_SAFE_INTEGER (2^53). Without forceLong=string
 # the generated `CheckinResponse.decode()` calls longToNumber() and throws "Value is larger than
@@ -44,4 +38,5 @@ protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto \
     vendor/adevtool/assets/heterodyne.proto
 
 protoc --plugin=vendor/adevtool/node_modules/.bin/protoc-gen-ts_proto --ts_proto_out vendor/adevtool/src/proto-ts \
+    vendor/adevtool/assets/carrier_update_config.proto \
     vendor/adevtool/assets/emergency_number_preferences.proto

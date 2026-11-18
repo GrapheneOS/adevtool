@@ -5,7 +5,6 @@ import path from 'path'
 
 import assert from 'assert'
 import { createWriteStream, promises as fs } from 'fs'
-import { parseInt } from 'lodash'
 import { SmartBuffer } from 'smart-buffer'
 import { promises as stream } from 'stream'
 import { DeviceConfig } from '../config/device'
@@ -15,87 +14,38 @@ import {
   CarrierSettings,
   MultiCarrierSettings,
 } from '../proto-ts/packages/apps/CarrierConfig2/src/com/google/carrier/carrier_settings'
-import { Request } from '../proto-ts/vendor/adevtool/assets/request'
-import { Response } from '../proto-ts/vendor/adevtool/assets/response'
+import { CarrierUpdateConfig } from '../proto-ts/vendor/adevtool/assets/carrier_update_config'
+import { AppRegistration, GetExperimentsAndConfigsRequest } from '../proto-ts/vendor/adevtool/assets/heterodyne'
 import { assertDefined } from '../util/data'
 import { exists, listFilesRecursive, TMP_PREFIX } from '../util/fs'
 import { log } from '../util/log'
 import { spawnAsync2, SpawnCmd } from '../util/process'
 
+import { buildPhenotypeRequest, fetchPhenotypeFlags, getPhenotypeBytesFlag } from './phenotype'
+import { PartitionProps } from './props'
+
+const CARRIER_PACKAGE = 'com.google.android.carrier'
 const PROTO_PATH = `${OS_CHECKOUT_DIR}/packages/apps/CarrierConfig2/src/com/google/carrier`
 
-export async function fetchUpdateConfig(
-  device: string,
-  build_id: string,
-  sdkVersion: string,
-  debug: boolean,
-): Promise<Map<string, string>> {
-  const requestData: Request = {
-    field1: {
-      info: {
-        int: 4,
-        deviceInfo: {
-          apilevel: parseInt(sdkVersion),
-          name: device,
-          buildId: build_id,
-          name1: device,
-          name2: device,
-          locale1: 'en',
-          locale2: 'US',
-          manufacturer1: 'Google',
-          manufacturer2: 'google',
-          name3: device,
-        },
-      },
-    },
-    field2: {
-      info: {
-        pkgname: 'com.google.android.carrier',
-      },
-    },
-  }
-  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), TMP_PREFIX))
-  if (debug) {
+export async function fetchUpdateConfig(device: string, props: PartitionProps, debug: boolean) {
+  const app = AppRegistration.fromPartial({ configPackage: { name: CARRIER_PACKAGE } })
+  const request = buildPhenotypeRequest(props, device, app)
+  const tmpDir = debug ? await fs.mkdtemp(path.join(os.tmpdir(), TMP_PREFIX)) : undefined
+  if (tmpDir !== undefined) {
     log(`tmpDir: ${tmpDir}`)
-    const outFile = path.join(tmpDir, 'requestData')
-    log(`requestData: ${outFile}`)
-    await fs.writeFile(outFile, JSON.stringify(Request.toJSON(requestData), null, 4))
+    const decoded = GetExperimentsAndConfigsRequest.decode(request)
+    await fs.writeFile(
+      path.join(tmpDir, 'requestData'),
+      JSON.stringify(GetExperimentsAndConfigsRequest.toJSON(decoded), null, 4),
+    )
+    await fs.writeFile(path.join(tmpDir, 'encodedRequestData'), request)
   }
-  const encodedRequest = Request.encode(requestData).finish()
-  if (debug) {
-    const reqFile = path.join(tmpDir, 'encodedRequestData')
-    await fs.writeFile(reqFile, encodedRequest)
-    log(`encodedRequestData: ${reqFile}`)
+  const response = await fetchPhenotypeFlags(request)
+  if (tmpDir !== undefined) {
+    await fs.writeFile(path.join(tmpDir, 'encodedResponse'), response)
   }
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-protobuf',
-    },
-    body: encodedRequest,
-  }
-  const response = await fetch(
-    'https://www.googleapis.com/experimentsandconfigs/v1/getExperimentsAndConfigs?r=6&c=1',
-    options,
-  )
-  assert(response.ok)
-  const pbResponse = Buffer.from(await response.arrayBuffer())
-  if (debug) {
-    const tmpOutFile = path.join(tmpDir, 'encodedResponse')
-    log(`encodedResponse: ${tmpOutFile}`)
-    await fs.writeFile(tmpOutFile, pbResponse)
-  }
-  let result = new Map<string, string>()
-  const decodedResponse = Response.decode(pbResponse).field1!.settings!.cfg!
-  decodedResponse.forEach(cfg => {
-    if (cfg.name === 'CarrierSettings__update_config') {
-      const updateConfig = cfg!.unk1!.n!.entry!
-      Object.keys(updateConfig).forEach(key => {
-        result.set(key, updateConfig[key])
-      })
-    }
-  })
-  return result
+  const payload = getPhenotypeBytesFlag(response, CARRIER_PACKAGE, 'CarrierSettings__update_config')
+  return new Map(Object.entries(CarrierUpdateConfig.decode(payload).entry))
 }
 
 export async function downloadAllConfigs(config: Map<string, string>, outDir: string, debug: boolean) {
