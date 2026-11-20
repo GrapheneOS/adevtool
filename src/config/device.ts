@@ -41,6 +41,16 @@ export interface PixelModemCarrierInfoOverride {
   gid2: string
 }
 
+// A config entry inserted into product/etc/CarrierSettings/<carrier>.pb (Android CarrierConfig).
+// Only text values are supported.
+export interface CarrierSettingsOverride {
+  // Carrier settings file name without the .pb extension, e.g. lguplus_kr
+  carrier: string
+  // CarrierConfig key, e.g. ims.ims_user_agent_string
+  key: string
+  text_value: string
+}
+
 export interface DeviceConfig {
   // Required
   device: {
@@ -127,6 +137,11 @@ export interface DeviceConfig {
   // Pixel-specific modem carrier_info additions; fails if the MCC/MNC already exists upstream.
   // A child config replaces an inherited entry with the same MCC/MNC, keeping other parent entries.
   pixel_modem_carrier_info_overrides: PixelModemCarrierInfoOverride[]
+
+  // CarrierSettings config additions, applied after carrier settings updates are copied; fails if the
+  // carrier settings file is missing or the key already exists upstream.
+  // A child config replaces an inherited entry with the same carrier and key, keeping other parent entries.
+  carrier_settings_overrides: CarrierSettingsOverride[]
 
   // Additional AOSP packages to include in PRODUCT_PACKAGES.
   extra_packages: string[]
@@ -283,6 +298,7 @@ const DEFAULT_CONFIG_BASE = {
   backport_files: {},
 
   pixel_modem_carrier_info_overrides: [],
+  carrier_settings_overrides: [],
 
   extra_packages: [],
 

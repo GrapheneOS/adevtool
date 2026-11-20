@@ -15,6 +15,11 @@ function mergeConfigs(base: unknown, overlay: unknown) {
         let childMccMncs = new Set(b.map(override => override.mccmnc))
         return a.filter(override => !childMccMncs.has(override.mccmnc)).concat(b)
       }
+      if (key === 'carrier_settings_overrides' && _.isArray(b)) {
+        // A child replaces the inherited entry for the same carrier and key.
+        let childKeys = new Set(b.map(override => `${override.carrier}/${override.key}`))
+        return a.filter(override => !childKeys.has(`${override.carrier}/${override.key}`)).concat(b)
+      }
       return a.concat(b)
     }
   })

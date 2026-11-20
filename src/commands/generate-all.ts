@@ -11,6 +11,7 @@ import {
   writeVersionCheckFile,
 } from '../blobs/build'
 import {
+  applyCarrierSettingsOverrides,
   decodeCarrierConfigs,
   downloadAllConfigs,
   fetchUpdateConfig,
@@ -302,6 +303,15 @@ export default class GenerateFull extends Command {
               await fs.copyFile(file, destFile)
             }
           }
+        }
+
+        if (config.device.has_cellular && config.carrier_settings_overrides.length > 0) {
+          if (flags.verbose) log('Applying carrier settings overrides')
+          await applyCarrierSettingsOverrides(
+            getCarrierSettingsVendorDir(vendorDirs),
+            config.device.name,
+            config.carrier_settings_overrides,
+          )
         }
 
         if (flags.updateSpec) {
